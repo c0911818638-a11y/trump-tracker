@@ -3,3 +3,10 @@
 - Mastodon API (https://truthsocial.com/api/v1/accounts/107780257626128497/statuses): 403 Forbidden / Host not in allowlist
 - 原因：執行環境的網路政策不允許連線至 truthsocial.com
 - 建議：將 truthsocial.com 加入環境的網路允許清單，或使用支援外部網路的執行環境
+
+[2026-06-04 03:05:07 UTC] 錯誤（第二次嘗試）：相同問題持續
+- RSS: 環境網路封鎖（Host not in allowlist）
+- Mastodon API: 環境網路封鎖（Host not in allowlist）
+- curl 直連: 環境網路封鎖（Host not in allowlist）
+- WebFetch: 403 Forbidden
+- 狀態：first_run_pending，last_seen_id.txt 尚未建立
