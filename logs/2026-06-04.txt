@@ -1,0 +1,5 @@
+[2026-06-04 02:18:25 UTC] 錯誤：無法抓取 Truth Social 貼文
+- RSS (https://truthsocial.com/@realDonaldTrump.rss): 403 Forbidden / Host not in allowlist
+- Mastodon API (https://truthsocial.com/api/v1/accounts/107780257626128497/statuses): 403 Forbidden / Host not in allowlist
+- 原因：執行環境的網路政策不允許連線至 truthsocial.com
+- 建議：將 truthsocial.com 加入環境的網路允許清單，或使用支援外部網路的執行環境
