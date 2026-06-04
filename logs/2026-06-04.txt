@@ -1,6 +1,10 @@
-[2026-06-04T06:05:48Z] 抓取失敗：Truth Social 封鎖了此執行環境的 IP
-嘗試方式：
-1. RSS: https://truthsocial.com/@realDonaldTrump.rss  -> HTTP 403 (Host not in allowlist)
-2. Mastodon API: https://truthsocial.com/api/v1/accounts/107780257626128497/statuses -> HTTP 403
-WebFetch 同樣返回 403 Forbidden。
-結論：Truth Social 封鎖了雲端伺服器 IP，需要在住宅 IP 或代理環境下執行。
+[2026-06-04 07:05:11 UTC] 監控執行失敗
+
+嘗試來源 1：https://truthsocial.com/@realDonaldTrump.rss
+結果：HTTP 403 Forbidden
+
+嘗試來源 2：https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20
+結果：HTTP 403 Forbidden
+
+原因：Truth Social 封鎖了來自伺服器端的直接 HTTP 請求（無瀏覽器 User-Agent / Cookie）。
+建議：改用需驗證的 Truth Social API token，或透過有瀏覽器環境的 scraper 服務抓取。
