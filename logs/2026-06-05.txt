@@ -1,6 +1,37 @@
-[2026-06-05T03:04:53Z] 錯誤：無法抓取 Truth Social 貼文。
-嘗試來源：
-1. https://truthsocial.com/@realDonaldTrump.rss -> HTTP 403 / Host not in allowlist
-2. https://truthsocial.com/api/v1/accounts/107780257626128497/statuses -> HTTP 403 / Host not in allowlist
-原因：執行環境網路政策封鎖 truthsocial.com 的對外連線。
-建議：在允許存取 truthsocial.com 的環境中執行此 agent，或設定代理伺服器。
+# 監控日誌 - 2026-06-05
+
+## 執行時間
+2026-06-05 05:09:51 UTC
+
+## 上次記錄貼文 ID
+116711308905000358
+
+## 嘗試方法
+
+### 方法 A：Truth Social 直接存取
+- https://truthsocial.com/@realDonaldTrump.rss -> HTTP 403
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 -> HTTP 403
+- https://truthsocial.com/@realDonaldTrump -> HTTP 403
+
+### 方法 B：WebSearch 搜尋
+- 搜尋 Trump Truth Social posts today 2026-06-05 -> 無具體貼文 ID
+- 搜尋 Trump Truth Social June 5 2026 -> 找到新聞摘要，無 ID
+
+### 方法 C：Trump Archive / trumpstruth.org
+- https://www.thetrumparchive.com/ -> HTTP 403
+- https://trumpstruth.org/ -> HTTP 403
+- https://rollcall.com/factbase/trump/topic/social/ -> HTTP 403
+
+### 新聞來源嘗試
+- ThedailyBeast, WashingtonPost, NPR, TheHill, CNN, Fox News -> 全部 HTTP 403
+
+## 已知背景資訊（來自 WebSearch 摘要）
+
+根據搜尋結果，川普在 2026 年 6 月 4 日左右發布以下相關貼文（無具體 ID）：
+- 批評眾議院通過戰爭授權決議，稱民主黨員為 Dumocrats
+- 稱投票支持決議的四位共和黨人為 GRANDSTANDERS!
+- 表示願意與伊朗最高領袖哈梅內伊會面
+- 5 月期間共發布 861 篇貼文（每日平均 27 篇）
+
+## 結論
+無法取得比 last_seen_id 更新的貼文 ID，本次不更新 state/last_seen_id.txt。
