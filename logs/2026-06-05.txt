@@ -1,0 +1,6 @@
+[2026-06-05T03:04:53Z] 錯誤：無法抓取 Truth Social 貼文。
+嘗試來源：
+1. https://truthsocial.com/@realDonaldTrump.rss -> HTTP 403 / Host not in allowlist
+2. https://truthsocial.com/api/v1/accounts/107780257626128497/statuses -> HTTP 403 / Host not in allowlist
+原因：執行環境網路政策封鎖 truthsocial.com 的對外連線。
+建議：在允許存取 truthsocial.com 的環境中執行此 agent，或設定代理伺服器。
