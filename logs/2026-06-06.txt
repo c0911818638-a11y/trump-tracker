@@ -1,25 +1,30 @@
-# 監控執行日誌 - 2026-06-06
+執行時間: 2026-06-06T05:03:50Z
+上次記錄 ID: 116696268537856000
 
-## 執行時間
-2026-06-06 UTC
+== 抓取嘗試記錄 ==
 
-## 上次記錄貼文 ID
-116696268537856000
+方法 A - Truth Social RSS:
+  URL: https://truthsocial.com/@realDonaldTrump.rss
+  結果: HTTP 403 Forbidden
 
-## 執行結果
-所有方法均無法取得新貼文
+方法 A - Truth Social API:
+  URL: https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20
+  結果: HTTP 403 Forbidden
 
-## 嘗試的方法
-- 方法 A (RSS): https://truthsocial.com/@realDonaldTrump.rss → HTTP 403
-- 方法 A (API): https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → HTTP 403
-- 方法 B (WebSearch): 搜尋 Trump Truth Social posts → 找到的貼文 ID 均早於 last_seen_id
-  - 最新搜尋到的 ID: 116625784011805994 (比 116696268537856000 舊)
-- 方法 C (Trump Archive): https://www.thetrumparchive.com/ → HTTP 403
+方法 B - WebSearch:
+  關鍵字: Trump Truth Social posts today site:truthsocial.com
+  結果: 找到貼文 URL，但無具體 ID 或貼文全文
 
-## 備用來源均回傳 HTTP 403
-NBC/CBS/CNBC/HuffPost/DailyBeast/Euronews/Snopes/FactCheck/TheHill/BuzzFeed/FactBase/TrumpsTruth
+方法 C - Trump Archive:
+  URL: https://www.thetrumparchive.com/
+  結果: HTTP 403 Forbidden
 
-## 結論
-無法確認是否有 ID > 116696268537856000 的新貼文。
-Truth Social 及多數新聞媒體封鎖爬蟲存取。
-不建立貼文檔案，僅記錄此錯誤日誌。
+其他嘗試:
+  - trumpstruth.org: HTTP 403 Forbidden
+  - rollcall.com/factbase/trump/: HTTP 403 Forbidden
+  - nbcnews/time/abc7: HTTP 403 Forbidden
+
+== 結論 ==
+Truth Social 及大多數新聞網站均封鎖外部爬蟲。
+無法取得 2026-06-06 具體貼文 ID 或全文。
+建議改用 Playwright/Selenium 瀏覽器自動化或具 Token 的 API。
