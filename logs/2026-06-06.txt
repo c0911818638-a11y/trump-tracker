@@ -1,30 +1,34 @@
-執行時間: 2026-06-06T05:03:50Z
-上次記錄 ID: 116696268537856000
+# 監控日誌 - 2026-06-06
 
-== 抓取嘗試記錄 ==
+## 上次記錄貼文 ID
+116696268537856000
 
-方法 A - Truth Social RSS:
-  URL: https://truthsocial.com/@realDonaldTrump.rss
-  結果: HTTP 403 Forbidden
+## 本次執行結果
+**狀態：無法取得新貼文**
 
-方法 A - Truth Social API:
-  URL: https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20
-  結果: HTTP 403 Forbidden
+## 嘗試方法
 
-方法 B - WebSearch:
-  關鍵字: Trump Truth Social posts today site:truthsocial.com
-  結果: 找到貼文 URL，但無具體 ID 或貼文全文
+### 方法 A - Truth Social 直接 API
+- RSS feed https://truthsocial.com/@realDonaldTrump.rss → HTTP 403
+- API endpoint statuses?limit=20 → HTTP 403
+- 環境網路政策封鎖 truthsocial.com 直連
 
-方法 C - Trump Archive:
-  URL: https://www.thetrumparchive.com/
-  結果: HTTP 403 Forbidden
+### 方法 B - WebSearch
+- 搜尋多個關鍵字，找到最新貼文 URL ID 為 116625784011805994，低於 last_seen_id
+- 無法找到 ID > 116696268537856000 的新貼文
 
-其他嘗試:
-  - trumpstruth.org: HTTP 403 Forbidden
-  - rollcall.com/factbase/trump/: HTTP 403 Forbidden
-  - nbcnews/time/abc7: HTTP 403 Forbidden
+### 方法 C - Trump Archive / 新聞
+- thetrumparchive.com, trumpstruth.org → HTTP 403
+- rollcall.com/factbase → HTTP 403
+- Daily Beast, NPR, HuffPost, Snopes, FactCheck 等 → HTTP 403
 
-== 結論 ==
-Truth Social 及大多數新聞網站均封鎖外部爬蟲。
-無法取得 2026-06-06 具體貼文 ID 或全文。
-建議改用 Playwright/Selenium 瀏覽器自動化或具 Token 的 API。
+## 背景（搜尋結果）
+2026 年 6 月初川普主要貼文主題：
+- 伊朗核協議談判（願意與最高領袖會面）
+- 加拿大 51st State
+- 攻擊深夜節目主持人 Colbert、Maher
+- Dumacrats and Media 瘋狂言論
+- 烏克蘭援助法案相關
+
+## 結論
+環境網路政策及網站 403 導致無法取得新貼文。
