@@ -1,61 +1,35 @@
-# 監控執行錯誤日誌 - 2026-06-06
+# 監控日誌 - 2026-06-06
 
-**執行時間：** 2026-06-06 (UTC)
+## 執行狀態：失敗 - 無法取得最新貼文
+
 **上次記錄 ID：** 116696268537856000
-**狀態：** 無法取得含 ID 的新貼文
+**SHA：** e374776e3fec3d4af491822a4174af017ef72737
 
----
+## 嘗試方法
 
-## 錯誤詳情
+### 方法 A：Truth Social 官方端點
+- `https://truthsocial.com/@realDonaldTrump.rss` → **403 Forbidden**
+- `https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20` → **403 Forbidden**
+- 個別貼文 URL → **403 Forbidden**
 
-### 方法 A：直接存取 Truth Social（全部失敗）
-- RSS Feed (truthsocial.com/@realDonaldTrump.rss)：HTTP 403 Forbidden
-- API Endpoint (/api/v1/accounts/107780257626128497/statuses)：HTTP 403 Forbidden
-- 直接貼文 URL：HTTP 403 Forbidden
+### 方法 B：WebSearch
+- 搜尋多個關鍵詞，取得部分摘要但無法取得 ID > 116696268537856000 的確認貼文
+- 搜尋結果最新報導約至 2026-06-03 至 2026-06-04
+- 找到的 Truth Social URL 中最高 ID：116681581361115247（比上次記錄舊）
 
-### 方法 B：WebSearch 搜尋
-- WebSearch 功能正常
-- 找到 6月4-5日貼文內容摘要，但無法取得貼文 ID
-- 找到的所有貼文 ID 均小於 last_seen_id (116696268537856000)：
-  - 116625784011805994（舊）
-  - 116540259118606629（舊）
-  - 116351998782539414（舊）
+### 方法 C：Trump Archive / 第三方網站
+- `https://www.thetrumparchive.com/` → **403 Forbidden**
+- `https://trumpstruth.org/` → **403 Forbidden**
+- `https://rollcall.com/factbase/trump/topic/social/` → **403 Forbidden**
 
-### 方法 C：其他來源（全部失敗）
-- thetrumparchive.com, trumpstruth.org：HTTP 403 Forbidden
-- 所有新聞媒體（Fox, NPR, CNN, Mediaite 等）：HTTP 403 Forbidden
-- 即使 google.com 也返回 403（執行環境層級網路封鎖）
+### 多個新聞網站
+- The Daily Beast、HuffPost、NPR、Irish Star、Mediaite、Reuters、CNN 等 → 大多 **403 Forbidden**
 
----
+## 已知近期活動（來自搜尋摘要）
+- Trump 於 2026 年 5 月創下單月 861 篇貼文記錄
+- 6 月初仍維持高頻率發文（每日約 27 篇）
+- 已知貼文主題：伊朗談判、6/24 美國 250 週年集會宣告、批評民主黨
 
-## 環境問題
-
-WebFetch 在此執行環境被完全封鎖。所有對外 HTTP 請求均返回 403。
-這是執行環境的網路政策限制，非 Truth Social 本身的問題。
-
----
-
-## 從 WebSearch 找到的近期動態（未驗證 ID）
-
-**Freedom 250 「Rally to End All Rallies」（2026-06-04 週四晚間）**
-- 貼文內容：「In celebration of our Country's 250 Year History, we will be bringing you, LIVE, the Greatest Rally, EVER! It will be special at every level — A Rally to end all Rallies!」
-- 補充：「We don't want singers with no talent, but big fees to put you to sleep... All we want is you, me, a few speakers, and the Greatest Music ever played」
-- 集會時間：2026-06-24 晚間 7 時，華盛頓特區國家廣場
-- 表演者：Lee Greenwood、Christopher Macchio、美軍樂隊
-
-**Iran 相關貼文（2026-06-01）**
-- 貼文：「Iran really wants to make a deal」、批評 Dumocrats 和某些共和黨人
-
-**2026 年 5 月統計**
-- 川普 5 月在 Truth Social 共發文 861 篇，平均每日 27 篇，創歷史新高
-
----
-
-## 結論與建議
-
-1. **last_seen_id 未更新**（保持：116696268537856000）
-2. **未建立任何貼文檔案**（無法確認新貼文 ID）
-3. **建議**：在允許網路存取的環境中重新執行，或配置 Truth Social API token
-
----
-*錯誤日誌由監控 agent 自動建立*
+## 建議
+- Truth Social 已完全封鎖爬蟲存取
+- 建議透過付費 API（如 Brandwatch、Meltwater）或人工帳號登入方式監控
