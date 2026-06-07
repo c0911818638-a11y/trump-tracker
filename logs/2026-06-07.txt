@@ -1,35 +1,16 @@
-# 監控日誌 - 2026-06-07
+日期: 2026-06-07
+執行時間: 2026-06-07T08:04:43Z
+上次記錄 ID: 116704652820480000
 
-## 執行摘要
-- 執行時間：2026-06-07
-- 上次記錄貼文 ID：116704652820480000
+錯誤記錄：
+- 方法 A (Truth Social RSS): HTTP 403 Forbidden
+- 方法 A (Truth Social API /statuses): HTTP 403 Forbidden
+- 方法 B (WebSearch: site:truthsocial.com OR site:thetrumparchive.com): 無具體貼文內容
+- 方法 B (WebSearch: 日期關鍵字搜尋): 找不到 2026-06-07 貼文原文
+- 方法 C (thetrumparchive.com): HTTP 403 Forbidden
+- 方法 C (trumpstruth.org): HTTP 403 Forbidden
+- 方法 C (rollcall.com/factbase): HTTP 403 Forbidden
+- 新聞媒體嘗試 (HuffPost/DailyBeast/Yahoo/CNBC/AlJazeera/Snopes): HTTP 403 Forbidden
+- 搜尋到的最新 ID 均小於上次記錄 ID (116704652820480000)
 
-## 資料來源嘗試結果
-
-### 方法 A：Truth Social RSS / API
-- GET https://truthsocial.com/@realDonaldTrump.rss → HTTP 403 Forbidden
-- GET https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → HTTP 403 Forbidden
-
-### 方法 B：WebSearch
-- 成功找到 2026-06-06 貼文相關報導（AI 影片）
-- 無法取得確切貼文 ID（所有新聞網站均回傳 403）
-- 參考來源：Yahoo News, Republic World, Newsweek, Salon, BusinessToday 等
-
-### 方法 C：Trump Archive
-- GET https://www.thetrumparchive.com/ → HTTP 403 Forbidden
-- GET https://trumpstruth.org/ → HTTP 403 Forbidden
-- GET https://rollcall.com/factbase/trump/topic/social/ → HTTP 403 Forbidden
-
-## 已識別貼文
-
-### 1. AI 音樂影片貼文（2026-06-06）
-- 日期：2026年6月6日（D-Day 82週年）
-- 內容：分享「Everywhere I Go They Love Donald Trump」AI 生成影片
-- 貼文 ID：無法取得
-- 已建立分析檔：posts/2026-06-06_AI_video.md
-
-## 限制說明
-本次監控受到以下限制：
-1. Truth Social 平台封鎖非授權存取（403）
-2. 大多數新聞網站對直接爬蟲請求回傳 403
-3. 無法取得貼文的確切數字 ID，故未更新 state/last_seen_id.txt
+結論：今日無法取得新貼文，跳過貼文建立。
