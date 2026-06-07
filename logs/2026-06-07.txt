@@ -1,16 +1,16 @@
 日期: 2026-06-07
-執行時間: 2026-06-07T08:04:43Z
+執行時間 (第二次): 2026-06-07T更新
 上次記錄 ID: 116704652820480000
 
-錯誤記錄：
+嘗試記錄 (第二次執行):
 - 方法 A (Truth Social RSS): HTTP 403 Forbidden
 - 方法 A (Truth Social API /statuses): HTTP 403 Forbidden
 - 方法 B (WebSearch: site:truthsocial.com OR site:thetrumparchive.com): 無具體貼文內容
-- 方法 B (WebSearch: 日期關鍵字搜尋): 找不到 2026-06-07 貼文原文
+- 方法 B (WebSearch: 今天日期搜尋): 未找到 2026-06-07 特定貼文
 - 方法 C (thetrumparchive.com): HTTP 403 Forbidden
 - 方法 C (trumpstruth.org): HTTP 403 Forbidden
 - 方法 C (rollcall.com/factbase): HTTP 403 Forbidden
-- 新聞媒體嘗試 (HuffPost/DailyBeast/Yahoo/CNBC/AlJazeera/Snopes): HTTP 403 Forbidden
-- 搜尋到的最新 ID 均小於上次記錄 ID (116704652820480000)
+- 新聞來源嘗試 (HuffPost/DailyBeast/Yahoo/CNBC/AlJazeera/Snopes/Poynter/BuzzFeed/PBS/Mediaite/Mirror/FactCheck/NPR): 大部分 HTTP 403
+- 搜尋以定 ID 比上次記錄 ID (116704652820480000) 更新的貼文
 
-結論：今日無法取得新貼文，跳過貼文建立。
+結論: 無法取得新貼文，未建立貼文分析檔案。
