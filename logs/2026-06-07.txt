@@ -1,50 +1,35 @@
-2026-06-07 Truth Social 監控錯誤日誌
-==========================================
-執行時間: 2026-06-07
-上次記錄 ID: 116704652820480000
-上次記錄 ID SHA: a79b114daafe2ebc42df5a9862ec9f1fe87c24d4
+# 監控日誌 - 2026-06-07
 
-錯誤記錄：
-----------
-[方法 A] Truth Social RSS Feed (https://truthsocial.com/@realDonaldTrump.rss)
-=> 結果: HTTP 403 Forbidden
+## 執行摘要
+- 執行時間：2026-06-07
+- 上次記錄貼文 ID：116704652820480000
 
-[方法 A] Truth Social API (https://truthsocial.com/api/v1/accounts/107780257626128497/statuses)
-=> 結果: HTTP 403 Forbidden
+## 資料來源嘗試結果
 
-[方法 A] Truth Social API min_id 參數
-=> 結果: HTTP 403 Forbidden
+### 方法 A：Truth Social RSS / API
+- GET https://truthsocial.com/@realDonaldTrump.rss → HTTP 403 Forbidden
+- GET https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → HTTP 403 Forbidden
 
-[方法 A] Truth Social 個人頁面
-=> 結果: 網路層封鎖 (Host not in allowlist)
+### 方法 B：WebSearch
+- 成功找到 2026-06-06 貼文相關報導（AI 影片）
+- 無法取得確切貼文 ID（所有新聞網站均回傳 403）
+- 參考來源：Yahoo News, Republic World, Newsweek, Salon, BusinessToday 等
 
-[方法 B] WebSearch: Trump Truth Social posts today site:truthsocial.com OR site:thetrumparchive.com
-=> 結果: 找到的貼文 ID 均早於 last_seen_id (116625784011805994 < 116704652820480000)
+### 方法 C：Trump Archive
+- GET https://www.thetrumparchive.com/ → HTTP 403 Forbidden
+- GET https://trumpstruth.org/ → HTTP 403 Forbidden
+- GET https://rollcall.com/factbase/trump/topic/social/ → HTTP 403 Forbidden
 
-[方法 B] WebSearch: Trump Truth Social posts June 7 2026
-=> 結果: 未找到今日特定貼文內容
+## 已識別貼文
 
-[方法 C] Trump Archive (https://www.thetrumparchive.com/)
-=> 結果: HTTP 403 Forbidden
+### 1. AI 音樂影片貼文（2026-06-06）
+- 日期：2026年6月6日（D-Day 82週年）
+- 內容：分享「Everywhere I Go They Love Donald Trump」AI 生成影片
+- 貼文 ID：無法取得
+- 已建立分析檔：posts/2026-06-06_AI_video.md
 
-[方法 C] Roll Call Factbase (https://rollcall.com/factbase/trump/topic/social/)
-=> 結果: HTTP 403 Forbidden
-
-[其他嘗試] Daily Trump Report Substack (June 5, 2026)
-=> 結果: HTTP 403 Forbidden（最新僅到 June 5）
-
-[其他嘗試] 多家新聞網站 (The Daily Beast, NPR, HuffPost, The Mirror,
-  Rolling Stone, Raw Story, Variety, Newsweek, Salon, ABC News, Politico,
-  FactCheck.org, CNN, Reuters, NBC News, Irish Star, BuzzFeed, Snopes)
-=> 結果: 全部 HTTP 403 Forbidden 或網路封鎖
-
-搜尋摘要（來自 WebSearch，無法確認 ID 或時間戳）：
-- 已知 Trump 近期持續大量發文（5月平均每日27則）
-- 6月初有攻擊 Stephen Colbert 的貼文
-- 6月初有伊朗談判相關貼文
-- 6月初有提到加拿大為「51st State」等
-- 以上貼文 ID 均早於 last_seen_id，無法確認新貼文
-
-結論: 無法取得比 last_seen_id (116704652820480000) 更新的貼文
-原因: truthsocial.com 被網路層封鎖；備用新聞來源均拒絕爬蟲存取
-建議: 在允許存取 truthsocial.com 的環境中重新執行此 Agent
+## 限制說明
+本次監控受到以下限制：
+1. Truth Social 平台封鎖非授權存取（403）
+2. 大多數新聞網站對直接爬蟲請求回傳 403
+3. 無法取得貼文的確切數字 ID，故未更新 state/last_seen_id.txt
