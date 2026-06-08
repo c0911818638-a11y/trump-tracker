@@ -1,41 +1,40 @@
-執行時間：2026-06-08 07:06:06 UTC
-上次記錄 ID：116704652820480000
-狀態：無法取得新貼文
+# 監控執行日誌 - 2026-06-08
 
-錯誤詳情：
-- 方法 A（RSS Feed）：https://truthsocial.com/@realDonaldTrump.rss → HTTP 403
-- 方法 A（API）：https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → HTTP 403
-- 方法 B（WebSearch）：搜尋結果僅含舊文章摘要，無法取得 ID > 116704652820480000 的新貼文
-- 方法 C（Trump Archive）：https://www.thetrumparchive.com/ → HTTP 403
-- 其他嘗試來源（Daily Beast, HuffPost, NPR, BuzzFeed, Salon, Factbase 等）：均回傳 HTTP 403
+執行時間: 2026-06-08T09:03:52Z
+上次記錄 ID: 116704652820480000
 
-結論：
-遠端執行環境的網路政策限制對大多數新聞網站的存取，無法取得 2026-06-08 當日的具體貼文 ID 及原文。
+## 嘗試方法及結果
 
-已知背景資訊（來自搜尋摘要）：
-- 川普在 2026 年 6 月持續高頻發文（平均每日 27 篇）
-- 6/6 曾分享 AI 生成音樂影片「Everybody Loves Donald Trump」
-- 近期主題包含：伊朗和平談判、加拿大「第51州」言論、攻擊「Dumacrats」
-- 因網路限制無法確認 6/8 的具體新貼文內容
+### 方法 A - Truth Social RSS
+- URL: https://truthsocial.com/@realDonaldTrump.rss
+- 結果: HTTP 403 Forbidden
 
----
+### 方法 A - Truth Social API
+- URL: https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20
+- 結果: HTTP 403 Forbidden
 
-執行時間：2026-06-08 （第二次執行）
-上次記錄 ID：116704652820480000
-狀態：無法取得新貼文
+### 方法 A - curl 直連
+- 結果: Host not in allowlist（環境網路政策封鎖）
 
-錯誤詳情：
-- 方法 A（RSS Feed）：HTTP 403 Forbidden
-- 方法 A（API）：HTTP 403 Forbidden
-- 方法 B（WebSearch）：
-  * 搜尋「Trump Truth Social posts today site:truthsocial.com OR site:thetrumparchive.com」→ 無具體貼文原文
-  * 搜尋「Trump Truth Social posts June 8 2026」→ 僅有背景資訊（5月每日27篇，近期有47篇/31分鐘發文紀錄）
-  * 搜尋「Trump Truth Social exact post text June 8 2026」→ 無結果
-  * 搜尋「Trump Truth Social post text today June 8 2026 verbatim quote」→ 無具體貼文原文
-- 方法 C（Trump Archive）：HTTP 403 Forbidden
-- 方法 C（Roll Call Factbase）：HTTP 403 Forbidden
-- Instagram/Facebook 轉載頁面：HTTP 403 Forbidden
+### 方法 B - WebSearch
+- 搜尋: Trump Truth Social posts today site:truthsocial.com OR site:thetrumparchive.com
+- 結果: 無法取得 2026-06-08 的具體貼文內容
+- 備註: 搜尋引擎未索引今日最新貼文
 
-結論：
-所有 8 種方法均告失敗。遠端執行環境的網路政策（outbound network policy）封鎖了社群媒體及新聞網站的存取。
-建議：考慮使用本地端執行或具有更寬鬆網路政策的環境來執行此監控任務。
+### 方法 C - Trump Archive
+- URL: https://www.thetrumparchive.com/
+- 結果: HTTP 403 Forbidden
+
+### 其他嘗試
+- Roll Call Factbase: HTTP 403
+- Daily Beast: HTTP 403
+- HuffPost: HTTP 403
+- Rolling Stone: HTTP 403
+- Factually.co: HTTP 403
+- Morning Honey: HTTP 403
+- NPR: HTTP 403
+- White House: HTTP 403
+
+## 結論
+所有外部來源均拒絕訪問（403 Forbidden）或被環境網路政策封鎖。
+無法取得新貼文，本次執行不更新 last_seen_id.txt。
