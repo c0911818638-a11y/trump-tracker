@@ -1,7 +1,25 @@
 # 監控執行日誌 - 2026-06-08
 
-執行時間: 2026-06-08T09:03:52Z
+## 執行紀錄
+
+---
+
+### 第 1 次執行：2026-06-08T09:03:52Z
 上次記錄 ID: 116704652820480000
+結論: 所有外部來源均返回 403 Forbidden，無法取得新貼文。
+
+---
+
+### 第 2 次執行（已完成）
+上次記錄 ID: 2026-06-08（日期型追蹤）
+新貼文已成功記錄：
+- posts/2026-06-08_001.md：「Israel and Iran must immediately stop 'shooting.'」
+- posts/2026-06-08_002.md：完整停火聲明（CEASEFIRE！）
+
+---
+
+### 第 3 次執行（本次）：2026-06-08T（目前）
+上次記錄 ID: 2026-06-08
 
 ## 嘗試方法及結果
 
@@ -13,28 +31,23 @@
 - URL: https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20
 - 結果: HTTP 403 Forbidden
 
-### 方法 A - curl 直連
-- 結果: Host not in allowlist（環境網路政策封鎖）
-
-### 方法 B - WebSearch
-- 搜尋: Trump Truth Social posts today site:truthsocial.com OR site:thetrumparchive.com
-- 結果: 無法取得 2026-06-08 的具體貼文內容
-- 備註: 搜尋引擎未索引今日最新貼文
+### 方法 B - WebSearch（多輪搜尋）
+- 搜尋關鍵字: Trump Truth Social June 8 2026（多組）
+- 結果: 確認 2026-06-08_001 和 2026-06-08_002 貼文已存在且已記錄
+- 「I call all the shots」為 6/7 Financial Times 訪談，非 Truth Social 貼文
+- 未發現今日額外的新 Truth Social 貼文
 
 ### 方法 C - Trump Archive
 - URL: https://www.thetrumparchive.com/
 - 結果: HTTP 403 Forbidden
 
-### 其他嘗試
-- Roll Call Factbase: HTTP 403
-- Daily Beast: HTTP 403
-- HuffPost: HTTP 403
-- Rolling Stone: HTTP 403
-- Factually.co: HTTP 403
-- Morning Honey: HTTP 403
-- NPR: HTTP 403
-- White House: HTTP 403
-
 ## 結論
-所有外部來源均拒絕訪問（403 Forbidden）或被環境網路政策封鎖。
-無法取得新貼文，本次執行不更新 last_seen_id.txt。
+今日兩篇貼文（停火相關）已在先前執行中完整記錄。
+本次執行未發現新的額外貼文。
+last_seen_id.txt 維持 2026-06-08，無需更新。
+
+## 背景資訊（2026-06-08 伊以局勢）
+- 伊朗於 6/7 對以色列發射彈道飛彈，為 4 月停火以來最大規模衝突
+- 川普發帖要求雙方立即停火並維持海峽封鎖
+- 川普於 FT 訪談稱「I call all the shots」，非 Truth Social 貼文
+- 目前封鎖（霍爾木茲海峽）仍在效力中
