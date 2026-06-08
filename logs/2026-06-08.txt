@@ -1,11 +1,42 @@
-執行時間: 2026-06-08 UTC
-上次記錄貼文 ID: 116704652820480000
+Trump Truth Social 監控錯誤日誌 - 2026-06-08
+==========================================
 
-錯誤記錄:
-- 方法 A: https://truthsocial.com/@realDonaldTrump.rss → HTTP 403 Forbidden
-- 方法 A: https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 → HTTP 403 Forbidden
-- 方法 B: WebSearch 無具體貼文原文，最新索引 ID 早於 last_seen_id
-- 方法 C: https://www.thetrumparchive.com/ → HTTP 403 Forbidden
-- 新聞源: thedailybeast.com, huffpost.com, poynter.org, npr.org → HTTP 403 Forbidden
+執行時間：2026-06-08 UTC
+上次記錄貼文 ID：116704652820480000
+state/last_seen_id.txt SHA：a79b114daafe2ebc42df5a9862ec9f1fe87c24d4
 
-結論: 無法取得新貼文，不建立貼文檔。
+嘗試方法與結果：
+-----------------
+
+【方法 A - Truth Social RSS】
+URL: https://truthsocial.com/@realDonaldTrump.rss
+結果: HTTP 403 Forbidden
+
+【方法 A - Truth Social API】
+URL: https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20
+結果: HTTP 403 Forbidden
+
+【方法 A - 直接 curl】
+結果: Host not in allowlist（環境網路限制）
+
+【方法 B - WebSearch】
+查詢: Trump Truth Social posts today + June 8 2026
+結果: 未找到 ID > 116704652820480000 的具體貼文
+
+【方法 C - Trump Archive】
+URL: https://www.thetrumparchive.com/
+結果: HTTP 403 Forbidden
+
+【其他網站嘗試】
+trumpstruth.org, factba.se, rollcall.com/factbase, dailytrumpreport.substack.com,
+thedailybeast.com, huffpost.com, mediaite.com, buzzfeed.com, irishstar.com,
+rollingstone.com, whitehouse.gov, cnn.com, npr.org 均返回 HTTP 403
+
+背景資訊（來自 WebSearch 摘要）：
+- 川普 2026 年平均每日發文 19 篇
+- 5 月份共發文 861 則
+- 6 月份曾在 31 分鐘內發 47 則
+- 主要話題：媒體、加拿大51州、EU貿易、AI圖片
+
+結論：環境網路限制，無法存取 Truth Social 或新聞媒體。
+last_seen_id.txt 保持不變。
