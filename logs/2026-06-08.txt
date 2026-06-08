@@ -17,3 +17,25 @@
 - 6/6 曾分享 AI 生成音樂影片「Everybody Loves Donald Trump」
 - 近期主題包含：伊朗和平談判、加拿大「第51州」言論、攻擊「Dumacrats」
 - 因網路限制無法確認 6/8 的具體新貼文內容
+
+---
+
+執行時間：2026-06-08 （第二次執行）
+上次記錄 ID：116704652820480000
+狀態：無法取得新貼文
+
+錯誤詳情：
+- 方法 A（RSS Feed）：HTTP 403 Forbidden
+- 方法 A（API）：HTTP 403 Forbidden
+- 方法 B（WebSearch）：
+  * 搜尋「Trump Truth Social posts today site:truthsocial.com OR site:thetrumparchive.com」→ 無具體貼文原文
+  * 搜尋「Trump Truth Social posts June 8 2026」→ 僅有背景資訊（5月每日27篇，近期有47篇/31分鐘發文紀錄）
+  * 搜尋「Trump Truth Social exact post text June 8 2026」→ 無結果
+  * 搜尋「Trump Truth Social post text today June 8 2026 verbatim quote」→ 無具體貼文原文
+- 方法 C（Trump Archive）：HTTP 403 Forbidden
+- 方法 C（Roll Call Factbase）：HTTP 403 Forbidden
+- Instagram/Facebook 轉載頁面：HTTP 403 Forbidden
+
+結論：
+所有 8 種方法均告失敗。遠端執行環境的網路政策（outbound network policy）封鎖了社群媒體及新聞網站的存取。
+建議：考慮使用本地端執行或具有更寬鬆網路政策的環境來執行此監控任務。
