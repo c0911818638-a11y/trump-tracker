@@ -1,42 +1,19 @@
-Trump Truth Social 監控錯誤日誌 - 2026-06-08
-==========================================
+執行時間：2026-06-08 07:06:06 UTC
+上次記錄 ID：116704652820480000
+狀態：無法取得新貼文
 
-執行時間：2026-06-08 UTC
-上次記錄貼文 ID：116704652820480000
-state/last_seen_id.txt SHA：a79b114daafe2ebc42df5a9862ec9f1fe87c24d4
+錯誤詳情：
+- 方法 A（RSS Feed）：https://truthsocial.com/@realDonaldTrump.rss → HTTP 403
+- 方法 A（API）：https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → HTTP 403
+- 方法 B（WebSearch）：搜尋結果僅含舊文章摘要，無法取得 ID > 116704652820480000 的新貼文
+- 方法 C（Trump Archive）：https://www.thetrumparchive.com/ → HTTP 403
+- 其他嘗試來源（Daily Beast, HuffPost, NPR, BuzzFeed, Salon, Factbase 等）：均回傳 HTTP 403
 
-嘗試方法與結果：
------------------
+結論：
+遠端執行環境的網路政策限制對大多數新聞網站的存取，無法取得 2026-06-08 當日的具體貼文 ID 及原文。
 
-【方法 A - Truth Social RSS】
-URL: https://truthsocial.com/@realDonaldTrump.rss
-結果: HTTP 403 Forbidden
-
-【方法 A - Truth Social API】
-URL: https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20
-結果: HTTP 403 Forbidden
-
-【方法 A - 直接 curl】
-結果: Host not in allowlist（環境網路限制）
-
-【方法 B - WebSearch】
-查詢: Trump Truth Social posts today + June 8 2026
-結果: 未找到 ID > 116704652820480000 的具體貼文
-
-【方法 C - Trump Archive】
-URL: https://www.thetrumparchive.com/
-結果: HTTP 403 Forbidden
-
-【其他網站嘗試】
-trumpstruth.org, factba.se, rollcall.com/factbase, dailytrumpreport.substack.com,
-thedailybeast.com, huffpost.com, mediaite.com, buzzfeed.com, irishstar.com,
-rollingstone.com, whitehouse.gov, cnn.com, npr.org 均返回 HTTP 403
-
-背景資訊（來自 WebSearch 摘要）：
-- 川普 2026 年平均每日發文 19 篇
-- 5 月份共發文 861 則
-- 6 月份曾在 31 分鐘內發 47 則
-- 主要話題：媒體、加拿大51州、EU貿易、AI圖片
-
-結論：環境網路限制，無法存取 Truth Social 或新聞媒體。
-last_seen_id.txt 保持不變。
+已知背景資訊（來自搜尋摘要）：
+- 川普在 2026 年 6 月持續高頻發文（平均每日 27 篇）
+- 6/6 曾分享 AI 生成音樂影片「Everybody Loves Donald Trump」
+- 近期主題包含：伊朗和平談判、加拿大「第51州」言論、攻擊「Dumacrats」
+- 因網路限制無法確認 6/8 的具體新貼文內容
