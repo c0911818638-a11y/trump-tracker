@@ -1,1 +1,23 @@
-# 監控執行日誌 2026-06-09\n\n執行時間: 2026-06-09\n上次記錄ID: 116625784011805994\n\n## 資料來源\n- truthsocial.com RSS/API: 403\n- thetrumparchive.com: 403\n- CNN ix.cnn.io: 403\n- stiles GitHub archive: 最新至2026-05-02\n- WebSearch: 找到內容但無精確ID\n\n## 已處理貼文\n1. 2026-06-01 01:02AM ET: "sit back and relax" Iran deal -> posts/2026-06-01_T060200.md\n2. 2026-06-08 05:36AM ET: "immediately stop shooting" -> posts/2026-06-08_T093600.md\n3. 2026-06-08: "immediate CEASEFIRE" -> posts/2026-06-08_ceasefire.md\n\n## 說明\nTruth Social 403封鎖，ID透過新聞多方驗證但無確切數值。使用時間戳記代替。
+# 監控執行日誌 2026-06-09
+
+執行時間: 2026-06-09T00:00:00Z
+上次記錄 ID: 2026-06-09T_final_throes_iran_deal
+
+## 資料來源錯誤記錄
+- 方法 A (RSS): https://truthsocial.com/@realDonaldTrump.rss -> HTTP 403 Forbidden
+- 方法 A (API): https://truthsocial.com/api/v1/accounts/107780257626128497/statuses -> HTTP 403 Forbidden
+- 方法 A (個別貼文 URL): HTTP 403 Forbidden
+- 方法 B (WebSearch): 搜尋結果無 2026-06-09 具體貼文內容，僅有關於伊朗談判的背景報導
+- 方法 C (Trump Archive / thetrumparchive.com): HTTP 403 Forbidden
+- 方法 C (trumpstruth.org): HTTP 403 Forbidden
+- 方法 C (Factbase rollcall): HTTP 403 Forbidden
+- 新聞來源 (DailyBeast, NBCNEWS, CNBC, Fortune, Poynter): HTTP 403 Forbidden
+
+## 結果
+無法取得 2026-06-09 新貼文，未更新 state/last_seen_id.txt。
+
+## 建議
+Truth Social 已全面封鎖外部爬蟲。可能需要：
+1. 使用已驗證的 Truth Social API token
+2. Puppeteer/Playwright 模擬瀏覽器登入
+3. 尋找可靠的第三方 API（如 RapidAPI 上的 Truth Social scraper）
