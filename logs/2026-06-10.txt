@@ -1,26 +1,41 @@
-執行時間: 2026-06-10T07:13:57Z
-狀態: 無法取得新貼文
+[2026-06-10] 監控執行記錄 - 錯誤日誌
+=====================================
+
+執行時間: 2026-06-10 (UTC)
 上次記錄 ID: 2026-06-10T_trade_deficit_record_exports
 
-錯誤詳情:
-- 方法 A (RSS): https://truthsocial.com/@realDonaldTrump.rss -> HTTP 403 Forbidden
-- 方法 A (API): https://truthsocial.com/api/v1/accounts/107780257626128497/statuses -> HTTP 403 Forbidden
-- 方法 B (WebSearch): 搜尋到 June 10 的貿易赤字/出口記錄貼文，與 last_seen_id 相符，未能確認更新貼文文字
-- 方法 B (WebSearch補充): 找到貼文 ID 116625784011805994，但無法取得內容
-- 方法 C (Trump Archive): https://www.thetrumparchive.com -> HTTP 403 Forbidden
-- followtrumpstruth.com -> HTTP 403 Forbidden
-- rollcall.com/factbase -> HTTP 403 Forbidden
-- trumpstruth.org -> HTTP 403 Forbidden
-- thehill.com -> HTTP 403 Forbidden
-- nbcnews.com -> HTTP 403 Forbidden
-- thedailybeast.com -> HTTP 403 Forbidden
-- huffpost.com -> HTTP 403 Forbidden
+## 錯誤摘要
 
-背景資訊（間接來源）:
-- 6月10日已知貼文主題：美國貿易赤字數據+出口創記錄（April 2026 BEA data）
-- 出口額創歷史新高 27.1 billion，goods exports 21.3 billion
-- 與 last_seen_id 相符，視為已記錄
-- 6月11日預計將有中美貿易協議相關貼文
-- 5月份川普平均每天發 27 則貼文（共 861 則）
+所有取得川普 Truth Social 貼文的方法均告失敗：
 
-結論: 無法確認是否有未記錄的新貼文，爬取來源全部封鎖。
+### 方法 A：直接 API 存取
+- https://truthsocial.com/@realDonaldTrump.rss → 403 Forbidden
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → 403 Forbidden
+- curl 直接存取 → Host not in allowlist（環境限制）
+
+### 方法 B：WebSearch 搜尋
+- 搜尋多個關鍵字組合，找到 June 10 最新記錄為貿易赤字/出口相關貼文（已在 last_seen_id 中）
+- 搜尋 June 10 伊朗相關 → 找到 6/9 Apache 直升機事件貼文（早於 last_seen_id）
+- 無法確認 last_seen_id 之後的明確新貼文
+
+### 方法 C：Trump Archive
+- https://www.thetrumparchive.com/ → 403 Forbidden
+- https://trumpstruth.org/ → 403 Forbidden
+
+## 背景資訊（搜尋結果彙整）
+
+- 6/9 主要事件：伊朗在荷姆茲海峽擊落美軍 Apache 直升機
+  Trump 貼文原文：「I have just been informed by our Great Military that last night
+  the Iranians shot down one of our highly sophisticated Apache Helicopters while
+  patrolling over the Strait of Hormuz. There were two pilots involved, both are
+  safe and uninjured. Nevertheless, the United States must, of necessity, respond
+  to this attack.」
+- 伊朗核武談判持續進行，川普聲稱協議「幾天內」可達成
+- 美國已對伊朗發動報復性打擊
+
+## 建議
+
+- 考慮將 truthsocial.com 加入環境網路允許清單
+- 考慮使用具備 Truth Social 存取能力的 MCP 工具
+
+last_seen_id 維持不變: 2026-06-10T_trade_deficit_record_exports
