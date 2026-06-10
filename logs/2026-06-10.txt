@@ -1,41 +1,25 @@
-[2026-06-10] 監控執行記錄 - 錯誤日誌
-=====================================
+# 川普 Truth Social 監控日誌 - 2026-06-10
 
-執行時間: 2026-06-10 (UTC)
-上次記錄 ID: 2026-06-10T_trade_deficit_record_exports
+**執行時間：** 2026-06-10 (UTC)
+**最後記錄貼文 ID：** 2026-06-10T_widening_trade_deficit_34yr_record
 
-## 錯誤摘要
+## 執行狀態：無新貼文
 
-所有取得川普 Truth Social 貼文的方法均告失敗：
+### 嘗試方法記錄
 
-### 方法 A：直接 API 存取
+**方法 A（直接 API）：失敗**
 - https://truthsocial.com/@realDonaldTrump.rss → 403 Forbidden
 - https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → 403 Forbidden
-- curl 直接存取 → Host not in allowlist（環境限制）
 
-### 方法 B：WebSearch 搜尋
-- 搜尋多個關鍵字組合，找到 June 10 最新記錄為貿易赤字/出口相關貼文（已在 last_seen_id 中）
-- 搜尋 June 10 伊朗相關 → 找到 6/9 Apache 直升機事件貼文（早於 last_seen_id）
-- 無法確認 last_seen_id 之後的明確新貼文
+**方法 B（WebSearch）：部分成功，但無新貼文**
+- 搜尋發現 trumpstruth.org/statuses/39170：Record exports post（2026-06-10 早先已記錄）
+- 搜尋發現 trumpstruth.org/statuses/39171：Widening trade deficit post = last_seen_id（已記錄）
+- 無法找到比 39171 更新的貼文（39172+ 均未被搜尋引擎索引）
 
-### 方法 C：Trump Archive
+**方法 C（thetrumparchive.com）：失敗**
 - https://www.thetrumparchive.com/ → 403 Forbidden
-- https://trumpstruth.org/ → 403 Forbidden
 
-## 背景資訊（搜尋結果彙整）
+### 結論
 
-- 6/9 主要事件：伊朗在荷姆茲海峽擊落美軍 Apache 直升機
-  Trump 貼文原文：「I have just been informed by our Great Military that last night
-  the Iranians shot down one of our highly sophisticated Apache Helicopters while
-  patrolling over the Strait of Hormuz. There were two pilots involved, both are
-  safe and uninjured. Nevertheless, the United States must, of necessity, respond
-  to this attack.」
-- 伊朗核武談判持續進行，川普聲稱協議「幾天內」可達成
-- 美國已對伊朗發動報復性打擊
-
-## 建議
-
-- 考慮將 truthsocial.com 加入環境網路允許清單
-- 考慮使用具備 Truth Social 存取能力的 MCP 工具
-
-last_seen_id 維持不變: 2026-06-10T_trade_deficit_record_exports
+今日執行無新貼文可記錄。所有外部存取途徑均受限制（403）或搜尋未發現比最後記錄 ID 更新的內容。
+下次執行建議等待搜尋引擎索引更新後再試。
