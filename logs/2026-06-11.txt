@@ -1,14 +1,43 @@
-2026-06-11 執行日誌
+=== 川普 Truth Social 監控日誌 ===
+日期：2026-06-11
+執行時間：2026-06-11T06:19:07Z
+上次記錄 ID：2026-06-11_secret-mission-hormuz-100m-barrels
 
-執行時間：2026-06-11 02:07:44 UTC
-上次記錄 ID：2026-06-11_reflecting-pool-lutnick-empty-photo
-狀態：失敗 — 無法取得今日新貼文
+=== 執行摘要 ===
+本次執行無法取得 2026-06-11 的新貼文內容。
+所有貼文抓取方法均失敗。
 
-嘗試方法：
-[失敗] 方法 A-1：https://truthsocial.com/@realDonaldTrump.rss → HTTP 403 Forbidden
-[失敗] 方法 A-2：https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 → HTTP 403 Forbidden
-[部分] 方法 B：WebSearch → 找到背景資訊但無具體 2026-06-11 貼文內容
-[失敗] 方法 C：https://www.thetrumparchive.com/ → HTTP 403 Forbidden
-[失敗] 其他來源：thedailybeast.com, rollcall.com/factbase, foxnews.com, substack → HTTP 403 Forbidden
+=== 方法嘗試記錄 ===
 
-結論：Truth Social 封鎖外部爬蟲。建議改用認證 API。
+【方法 A】Truth Social 直接存取
+- https://truthsocial.com/@realDonaldTrump.rss -> 403 Forbidden
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 -> 403 Forbidden
+結論：Truth Social 對爬蟲全面封鎖
+
+【方法 B】WebSearch 搜索
+- 搜尋結果僅顯示 2026-06-09~10 的貼文叢集
+- 最新可確認貼文：secret mission/100M barrels (2026-06-10 晚間) = 已是 last_seen_id
+- 搜索引擎尚未索引 2026-06-11 更新的 Truth Social 貼文
+
+【方法 C】新聞媒體頁面抓取
+以下網站均回傳 403 Forbidden：
+- thedailybeast.com, cnbc.com, msnbc.com, thehill.com
+- nbcnews.com, cbsnews.com, pbs.org, abc7news.com
+- euronews.com, aljazeera.com, rollcall.com
+
+=== 2026-06-11 確認發生的重大事件 ===
+1. 伊朗聯合軍事指揮部宣布關閉霍爾木茲海峽
+2. 伊朗宣布暫停與美國的停火談判
+3. 美國對伊朗發動新一輪空襲
+4. 伊朗對美軍基地（巴林、科威特、約旦）報復
+5. The Daily Beast 報導 Trump 發動新一輪大規模 Truth Social 貼文潮
+
+=== 錯誤原因 ===
+1. Truth Social 封鎖無登入爬蟲請求
+2. 主流新聞網站使用 CDN 防護，阻擋雲端 IP
+3. 搜尋引擎結果滯後，最新貼文未被索引
+
+=== 結論 ===
+last_seen_id 維持不變：2026-06-11_secret-mission-hormuz-100m-barrels
+未建立貼文分析檔案。
+下次執行建議使用代理服務或 API 存取。
