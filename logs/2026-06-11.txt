@@ -1,4 +1,4 @@
-# 川普 Truth Social 監控日誌 — 2026-06-11
+# 川普 Truth Social 監控日誌 — 2026-06-11 (第二次執行)
 
 ## 執行狀態：無法取得新貼文
 
@@ -14,26 +14,29 @@
 - GET https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 → **HTTP 403 Forbidden**
 
 ### 方法 B：WebSearch
-搜尋結果中找到的最新貼文 URL 皆早於 last_seen_id：
+搜尋取得的貼文 URL 均早於 last_seen_id：
 - 116625784011805994 < 116730670918934090 (舊)
 - 116540259118606629 < 116730670918934090 (舊)
 - 116431297579272777 < 116730670918934090 (舊)
 
-搜尋結果顯示 2026-06-10 的貼文內容（無法確認 ID 是否更新）：
+搜尋結果摘要（6/10 內容，但確認 ID 比 last_seen 舊）：
 > "Iran's Military is a complete and total mess. Much of it, like their Navy and Air Force, doesn't even exist anymore - They have been completely defeated. Iran is all talk and no action. The Bully of the Middle East is DEAD!!! They've taken too long to negotiate a deal that would have been great for them, now they will have to pay the price!!"
 
 > "The Fake News Media refuses to report how EFFECTIVE the U.S. Naval BLOCKADE is, the most successful Blockade in the history of Naval Warfare. NOTHING GETS THROUGH unless we want it to. IT IS A STEEL WALL! Iran is doing ZERO business, not paying their military, or any of their bills, and quickly becoming a FAILED NATION! ... Praise be to Allah!"
 
+> "Joe Scarborough's ever shrinking, low rated show, one of the most inaccurate detailers of truthful facts on television, is being crushed in the ratings. His show is being cut because his ratings are TERRIBLE, and Mike and Willie, who wants to be his father but doesn't have the talent, are falling further and further into the TDS Swamp!" (6:55 a.m., June 10)
+
 ### 方法 C：Trump Archive / Trump's Truth
 - https://www.thetrumparchive.com/ → **HTTP 403**
 - https://trumpstruth.org/ → **HTTP 403**
-- GitHub archive (stiles/trump-truth-social-archive) 最新資料僅到 2026-05-02
+- GitHub archive (stiles/trump-truth-social-archive) 最新更新停在 2026-05-02
 
 ---
 
 ## 結論
-Truth Social 網站封鎖所有 API 存取，搜尋引擎索引到的貼文 ID 均早於 last_seen_id。無法確認任何 ID > 116730670918934090 的新貼文。
+Truth Social 無法透過 API 存取（403），所有歸檔站點亦封鎖 WebFetch。
+網路搜尋僅能找到 ID < last_seen_id 的舊貼文。
+**未找到 ID > 116730670918934090 的新貼文。**
 
 **未更新 last_seen_id**  
-**未建立貼文分析檔**
-
+**未建立貼文檔案**
