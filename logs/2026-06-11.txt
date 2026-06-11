@@ -1,0 +1,18 @@
+日期：2026-06-11
+
+執行摘要：
+- 上次記錄 ID：2026-06-11_reflecting-pool-lutnick-empty-photo
+- 嘗試方法：
+  A) Truth Social RSS -> 403 Forbidden
+  B) Trump Archive -> 403 Forbidden
+  C) WebSearch x15+ -> 僅找到 June 10-11 已知資訊
+  D) 多家新聞媒體 WebFetch -> 全部 403 Forbidden
+
+背景資訊（已記錄，非新貼文）：
+- 2026-06-09: 伊朗擊落美軍 Apache 直升機貼文
+- 2026-06-10: Bully of the Middle East is DEAD 系列
+- 2026-06-10: Stephen A. Smith arrogant fool low IQ 貼文
+- 2026-06-10: 100 MILLION Barrels 霍爾木茲海峽貼文
+- 2026-06-11: Lutnick 反映池照片轉推 (6:20 AM ET) = last_seen_id
+
+無法確認比 last_seen_id 更新的貼文。原因：Truth Social 與主要新聞來源全部 403。
