@@ -1,43 +1,25 @@
-=== 川普 Truth Social 監控日誌 ===
-日期：2026-06-11
-執行時間：2026-06-11T06:19:07Z
-上次記錄 ID：2026-06-11_secret-mission-hormuz-100m-barrels
+Truth Social 貼文擷取失敗 - 2026-06-11
 
-=== 執行摘要 ===
-本次執行無法取得 2026-06-11 的新貼文內容。
-所有貼文抓取方法均失敗。
+執行時間: 2026-06-11 10:18:10 UTC
+上次記錄貼文 ID: 116730670918934090 (對應時間: 2026-06-11 09:04:44 UTC)
 
-=== 方法嘗試記錄 ===
+嘗試方法:
+1. [失敗 - 403] WebFetch: https://truthsocial.com/@realDonaldTrump.rss
+2. [失敗 - 403] WebFetch: https://truthsocial.com/api/v1/accounts/107780257626128497/statuses
+3. [失敗 - 網路封鎖] curl 直接 API 請求 (Host not in allowlist)
+4. [部分成功] WebSearch: 找到 June 10 貼文內容，但無 June 11 09:04 UTC 後的新貼文
+5. [失敗 - 403] thetrumparchive.com
+6. [資料過舊] GitHub stiles/trump-truth-social-archive (只到 2022)
+7. [失敗 - 403] 多篇新聞文章 (CNBC, CBS, PBS, ABC, Al Jazeera 等)
 
-【方法 A】Truth Social 直接存取
-- https://truthsocial.com/@realDonaldTrump.rss -> 403 Forbidden
-- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 -> 403 Forbidden
-結論：Truth Social 對爬蟲全面封鎖
+搜尋結果摘要 (June 10 已確認貼文，早於 last_seen_id):
+- 「Iran's Military is a complete and total mess... now they will have to pay the price!!」
+- 「The Fake News Media refuses to report how EFFECTIVE the U.S. Naval BLOCKADE is... Praise be to Allah!」
+- June 11 09:04 UTC 後之新貼文: 搜尋引擎尚未索引
 
-【方法 B】WebSearch 搜索
-- 搜尋結果僅顯示 2026-06-09~10 的貼文叢集
-- 最新可確認貼文：secret mission/100M barrels (2026-06-10 晚間) = 已是 last_seen_id
-- 搜索引擎尚未索引 2026-06-11 更新的 Truth Social 貼文
+問題診斷:
+- Truth Social API 對外部 IP 封鎖 (403 Forbidden)
+- 大多數新聞網站亦封鎖爬蟲 (403 Forbidden)
+- 網路環境出站限制 (Host not in allowlist)
 
-【方法 C】新聞媒體頁面抓取
-以下網站均回傳 403 Forbidden：
-- thedailybeast.com, cnbc.com, msnbc.com, thehill.com
-- nbcnews.com, cbsnews.com, pbs.org, abc7news.com
-- euronews.com, aljazeera.com, rollcall.com
-
-=== 2026-06-11 確認發生的重大事件 ===
-1. 伊朗聯合軍事指揮部宣布關閉霍爾木茲海峽
-2. 伊朗宣布暫停與美國的停火談判
-3. 美國對伊朗發動新一輪空襲
-4. 伊朗對美軍基地（巴林、科威特、約旦）報復
-5. The Daily Beast 報導 Trump 發動新一輪大規模 Truth Social 貼文潮
-
-=== 錯誤原因 ===
-1. Truth Social 封鎖無登入爬蟲請求
-2. 主流新聞網站使用 CDN 防護，阻擋雲端 IP
-3. 搜尋引擎結果滯後，最新貼文未被索引
-
-=== 結論 ===
-last_seen_id 維持不變：2026-06-11_secret-mission-hormuz-100m-barrels
-未建立貼文分析檔案。
-下次執行建議使用代理服務或 API 存取。
+建議: 確認執行環境是否有寬鬆的出站網路存取或設定代理。
