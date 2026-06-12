@@ -1,40 +1,25 @@
-# 監控日誌 - 2026-06-12
+# 監控錯誤日誌 - 2026-06-12
 
-## 執行結果：無法完整取得新貼文
+**執行時間：** 2026-06-12 UTC
+**last_seen_id：** 2026-06-12_116720990000000000
+**狀態：** 無法取得新貼文
 
-**上次記錄 ID：** 2026-06-12_116708622028800000
-**執行時間：** 2026-06-12
+## 錯誤記錄
 
----
+### 方法 A：WebFetch 直接存取 Truth Social
+- https://truthsocial.com/@realDonaldTrump.rss → HTTP 403 Forbidden
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 → HTTP 403 Forbidden
+- https://truthsocial.com/@realDonaldTrump/posts/[各貼文ID] → HTTP 403 Forbidden
 
-## 嘗試方法與結果
+### 方法 B：WebSearch 搜尋
+- 找到的最高貼文 ID：116625784011805994（低於 last_seen_id 116720990000000000）
+- 搜尋結果均為 2026-06-10 至 2026-06-11 的舊貼文
 
-### 方法 A：Truth Social 直接存取（全部失敗 403）
-- https://truthsocial.com/@realDonaldTrump.rss -> HTTP 403 Forbidden
-- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 -> HTTP 403 Forbidden
-
-### 方法 B：WebSearch（部分成功，但無法取得 ID > last_seen_id）
-搜尋到的近期貼文資訊（約 2026-06-11 ~ 12）：
-1. 伊朗協議取消空襲：「I have...cancelled the scheduled strikes and bombings against Iran this evening.」
-2. 海軍封鎖持續：「The Naval Blockade will remain in full force and effect until this Transaction is finalized」
-3. 世界盃警告：「The Iran National Soccer Team...for their own life and safety」
-4. 甘迺迪中心：「Cancel it, just like I canceled my involvement with the failing and unsafe to be in Kennedy Center.」
-5. 法官 Cooper：「Judge Cooper should be ashamed of himself!」
-
-問題：均無法確認 Post ID 是否 > 116708622028800000
-
-### 方法 C：Trump Archive
-- https://www.thetrumparchive.com/ -> HTTP 403 Forbidden
-
----
-
-## 今日重大背景事件（2026-06-12）
-
-1. 甘迺迪中心名稱移除截止日（法院命令），Trump 一方已於 6/11 提出上訴
-2. 伊朗協議：Trump 宣稱 Great Settlement，但伊朗與以色列均未確認
-3. 世界盃伊朗隊參賽爭議
-
----
+### 方法 C：WebFetch 嘗試替代來源
+- https://www.thetrumparchive.com/ → HTTP 403 Forbidden
+- https://trumpstruth.org/ → HTTP 403 Forbidden
+- 多家新聞來源（NPR、NBC、CBS、CNN 等）→ 全部 HTTP 403 Forbidden
 
 ## 結論
-無法確認新貼文，不建立貼文分析檔案。
+
+無法確認是否存在 ID > 116720990000000000 的新貼文。外部網站幾乎全面封鎖 WebFetch 請求（HTTP 403）。
