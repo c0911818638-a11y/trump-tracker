@@ -1,34 +1,47 @@
-# 監控執行日誌 - 2026-06-12
+# 監控日誌 2026-06-12
 
-**執行時間：** 2026-06-12T07:08:58Z
+**最後執行時間：** 2026-06-12T07:12:13Z
 **上次記錄 ID：** 2026-06-12_116708622028800000
+**SHA：** cff54eaf921df827fe67146696559c8780139682
 
-## 嘗試方法紀錄
+---
 
-### 方法 A：Truth Social 直接存取
-- https://truthsocial.com/@realDonaldTrump.rss → HTTP 403 Forbidden
-- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 → HTTP 403 Forbidden
+## 執行狀況：無法取得新貼文
 
-### 方法 B：WebSearch
-- 搜尋 "Trump Truth Social posts today site:truthsocial.com OR site:thetrumparchive.com" → 無具體帖文 ID
-- 搜尋 "Trump Truth Social June 12 2026" → 只有背景資訊，無具體 post ID
-- 多次搜尋組合 → 未能取得 2026-06-12 的具體貼文 ID 或內文
+### 方法 A - Truth Social 直接存取：全部 HTTP 403
+- RSS: https://truthsocial.com/@realDonaldTrump.rss
+- API: https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20
 
-### 方法 C：Trump Archive 及其他來源
-- https://www.thetrumparchive.com/ → HTTP 403 Forbidden
-- https://rollcall.com/factbase/trump/topic/social/ → HTTP 403 Forbidden
-- https://trumpstruth.org/ → HTTP 403 Forbidden
-- 多個新聞網站（CNBC, NPR, CNN, Axios, Reuters, PBS 等）→ HTTP 403 Forbidden
+### 方法 B - WebSearch：找到新聞報導但無可驗證 ID
+- 近期最高確認 ID：116625784011805994（低於 last_seen_id）
+- 已確認的最新新聞貼文均來自 2026-06-11，可能已在上次記錄中
 
-## 背景資訊（來自 WebSearch）
+### 方法 C - Archive 網站：全部 HTTP 403
+- thetrumparchive.com, trumpstruth.org, rollcall.com/factbase
 
-搜尋結果顯示 2026-06-11~12 的主要事件：
-- 川普於 6/11 宣布取消對伊朗空襲，稱談判「已獲伊朗最高層批准」
-- 川普聲稱協議將由 JD Vance 代表出席簽署（可能本週末在歐洲）
-- 2026-06-12：IAEA 宣布伊朗不遵守核不擴散義務（20年來首次）
-- 伊朗外交部否認協議已完成
+---
+
+## 新聞中找到的相關貼文內容摘要（2026-06-11，無法確認是否超過 last_seen_id）
+
+**貼文 1 - Kharg Island 威脅（約 06-11 早上）：**
+"At some point in the not too distant future, we will be taking Kharg Island, and other oil infrastructure points, and assume total control of their Oil and Gas Markets, much like we have with Venezuela."
+
+**貼文 2 - 威脅今晚轟炸伊朗（06-11 晚間）：**
+"The United States will be hitting Iran (Whose Navy, Air Force, Radar, Anti Aircraft, and all other forms of Defense, together with most of its offensive capability, are GONE!), VERY HARD TONIGHT"
+
+**貼文 3 - 取消空襲宣言（06-11 深夜）：**
+"Based on the fact that discussions with the Islamic Republic of Iran have been brought to the highest level of Iranian leadership and approved, I have, as President of the United States of America, cancelled the scheduled strikes and bombings against Iran this evening."
+
+**貼文 4 - 宣稱多國同意（06-11 深夜）：**
+"Discussions and final points have been, in both concept and great detail, approved by all parties involved, including the United States, Israel, Saudi Arabia, UAE, Qatar, Turkey, Pakistan, Bahrain, Kuwait, Jordan, Egypt, and others. The Naval Blockade will remain in full force and effect until this Transaction is finalized."
+
+**貼文 5 - 攻擊 Scarborough/Epstein（約 06-10 ~ 06-11）：**
+"Joe Scarborough's ever shrinking, low rated show, one of the most inaccurate detailers of truthful facts on television, is being crushed in the ratings"
+
+---
 
 ## 結論
 
-無法取得新於 last_seen_id (116708622028800000) 的具體 Truth Social 貼文 ID 及內文。
-本次執行未更新 state/last_seen_id.txt，不建立貼文分析檔。
+由於 Truth Social 及所有 archive 平台均拒絕存取（HTTP 403），
+本次執行無法確認 ID > 116708622028800000 的新貼文。
+last_seen_id 保持不變，未建立新的貼文分析檔案。
