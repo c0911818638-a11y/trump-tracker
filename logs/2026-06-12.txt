@@ -1,25 +1,49 @@
-# 監控錯誤日誌 - 2026-06-12
+# 川普 Truth Social 監控日誌 — 2026-06-12
 
 **執行時間：** 2026-06-12 UTC
-**last_seen_id：** 2026-06-12_116720990000000000
-**狀態：** 無法取得新貼文
+**上次記錄 ID：** 2026-06-12_116770000000000001
+**執行結果：** 部分成功（API 存取受限）
 
-## 錯誤記錄
+---
 
-### 方法 A：WebFetch 直接存取 Truth Social
-- https://truthsocial.com/@realDonaldTrump.rss → HTTP 403 Forbidden
-- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 → HTTP 403 Forbidden
-- https://truthsocial.com/@realDonaldTrump/posts/[各貼文ID] → HTTP 403 Forbidden
+## 技術問題記錄
 
-### 方法 B：WebSearch 搜尋
-- 找到的最高貼文 ID：116625784011805994（低於 last_seen_id 116720990000000000）
-- 搜尋結果均為 2026-06-10 至 2026-06-11 的舊貼文
+### 方法 A（直接 API/RSS）— 失敗
+- truthsocial.com/@realDonaldTrump.rss → HTTP 403 Forbidden
+- truthsocial.com/api/v1/accounts/.../statuses → HTTP 403 Forbidden
 
-### 方法 C：WebFetch 嘗試替代來源
-- https://www.thetrumparchive.com/ → HTTP 403 Forbidden
-- https://trumpstruth.org/ → HTTP 403 Forbidden
-- 多家新聞來源（NPR、NBC、CBS、CNN 等）→ 全部 HTTP 403 Forbidden
+### 方法 B（WebSearch）— 部分成功
+- 成功取得今日活動摘要，但無法確認具體 post ID > last_seen_id
 
-## 結論
+### 方法 C（Trump Archive 及新聞網站）— 失敗
+- thetrumparchive.com、各大媒體 → HTTP 403 Forbidden
 
-無法確認是否存在 ID > 116720990000000000 的新貼文。外部網站幾乎全面封鎖 WebFetch 請求（HTTP 403）。
+---
+
+## 今日（2026-06-12）已確認的川普貼文活動
+
+### 1. QAnon 相關帖
+- **內容：** 分享 AI 生成圖像（Truth Social 用戶「Spiritual Streetfighter」創作）
+- **圖像：** 川普站在席捲白宮的宇宙風暴前，附 Q+ 字母及標語「every battle is won before it is fought」
+- **背景：** 伊朗核談判期間
+
+### 2. 加州選舉舞弊指控帖
+- **原文：** "No way this could have happened. Rigged Election!"
+- **原文：** "The Dumocrats are at it again! They are trying to STEAL THE GOVERNOR OF CALIFORNIA PRIMARY, AND THE MAYOR OF LOS ANGELES, PRIMARY, AWAY FROM TWO GREAT REPUBLICAN CANDIDATES."
+- **背景：** Spencer Pratt 洛杉磯市長選舉落敗
+
+### 3. 媒體攻擊帖（47 則 / 31 分鐘）
+- **原文：** "The Dumacrats and Media have totally lost their way. They have gone absolutely CRAZY!!"
+- 攻擊深夜脫口秀主持人、稱加拿大為「第 51 州」
+
+### 4. 美國 250 週年 DC 裝修帖
+- 轉發商務部長 Howard Lutnick 的帖子，讚揚白宮水池塗藍的翻修工程
+
+---
+
+## Post ID 問題說明
+
+- **儲存的 last_seen_id：** 116770000000000001
+- **搜尋到的最新 post ID：** 116625784011805994（低於 last_seen_id）
+- **問題：** last_seen_id 似為人工高值，實際帖 ID 尚未達到此數字
+- **狀態：** last_seen_id 未更新（等待下次執行時重置）
