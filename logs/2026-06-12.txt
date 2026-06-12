@@ -1,74 +1,40 @@
-# 監控日誌 2026-06-12
+# 監控日誌 - 2026-06-12
 
-**最後執行時間：** 2026-06-12T07:12:13Z（第一次）/ 2026-06-12T08:29:25Z（第二次）
+## 執行結果：無法完整取得新貼文
+
 **上次記錄 ID：** 2026-06-12_116708622028800000
-**SHA：** cff54eaf921df827fe67146696559c8780139682
+**執行時間：** 2026-06-12
 
 ---
 
-## 執行狀況（第一次，07:12 UTC）：無法取得新貼文
+## 嘗試方法與結果
 
-### 方法 A - Truth Social 直接存取：全部 HTTP 403
-- RSS: https://truthsocial.com/@realDonaldTrump.rss
-- API: https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20
+### 方法 A：Truth Social 直接存取（全部失敗 403）
+- https://truthsocial.com/@realDonaldTrump.rss -> HTTP 403 Forbidden
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 -> HTTP 403 Forbidden
 
-### 方法 B - WebSearch：找到新聞報導但無可驗證 ID
-- 近期最高確認 ID：116625784011805994（低於 last_seen_id）
-- 已確認的最新新聞貼文均來自 2026-06-11，可能已在上次記錄中
+### 方法 B：WebSearch（部分成功，但無法取得 ID > last_seen_id）
+搜尋到的近期貼文資訊（約 2026-06-11 ~ 12）：
+1. 伊朗協議取消空襲：「I have...cancelled the scheduled strikes and bombings against Iran this evening.」
+2. 海軍封鎖持續：「The Naval Blockade will remain in full force and effect until this Transaction is finalized」
+3. 世界盃警告：「The Iran National Soccer Team...for their own life and safety」
+4. 甘迺迪中心：「Cancel it, just like I canceled my involvement with the failing and unsafe to be in Kennedy Center.」
+5. 法官 Cooper：「Judge Cooper should be ashamed of himself!」
 
-### 方法 C - Archive 網站：全部 HTTP 403
-- thetrumparchive.com, trumpstruth.org, rollcall.com/factbase
+問題：均無法確認 Post ID 是否 > 116708622028800000
 
----
-
-## 執行狀況（第二次）：同樣無法取得新貼文
-
-### 補充搜尋方法
-- GitHub archive (stiles/trump-truth-social-archive)：最新紀錄為 2026-05-02，低於 last_seen_id
-- trumpstruth.org/statuses/ 搜尋：最高 ID 為 116703094991947376，低於 last_seen_id 116708622028800000
-- WebSearch 廣泛搜尋：未找到 ID > 116708622028800000 的可確認新貼文
-- 所有主要新聞網站 curl 嘗試：被網路 egress 政策阻擋
-
-### 今日新聞背景（2026-06-12，伊以衝突第 101 或 105 天）
-根據 Al Jazeera「Iran war day 105: Trump halts attacks after Kharg Island threat」（今日報導），
-以及 CBS News「Iran and Israel say attacks halted after Trump tells both to 'stop shooting'」，
-今日情勢與昨日（06-11）川普取消空襲事件密切相關。
-上述相關 Truth Social 貼文已在先前記錄中處理完畢。
-
-### 確認已處理的 last_seen 貼文
-**檔案：** 2026-06-12_116708622028800000.md
-**內容：** 加州州長暨洛城市長初選郵寄選票爭議
-**時間：** 2026-06-12 ~11:00 UTC（估計）
+### 方法 C：Trump Archive
+- https://www.thetrumparchive.com/ -> HTTP 403 Forbidden
 
 ---
 
-## 今日新聞摘要（新聞搜尋來源，無法確認 ID 是否超過 last_seen）
+## 今日重大背景事件（2026-06-12）
 
-**伊以停火最新態勢（今日）：**
-- 川普宣稱已達成伊朗大和解（"GREAT SETTLEMENT"），霍爾木茲海峽即將重開
-- 伊朗外交部否認已達成最終協議
-- 以色列與伊朗在 6/12 均暫停攻擊（但黎巴嫩南部行動持續）
-- 川普已取消第三夜空襲計畫（6/11）
-
-**加州選舉（今日持續）：**
-- 川普批加州州長初選出現大量郵寄選票，指控民主黨試圖竊取選舉
+1. 甘迺迪中心名稱移除截止日（法院命令），Trump 一方已於 6/11 提出上訴
+2. 伊朗協議：Trump 宣稱 Great Settlement，但伊朗與以色列均未確認
+3. 世界盃伊朗隊參賽爭議
 
 ---
 
-## 結論（第二次執行）
-
-由於 Truth Social 及所有 archive 平台均拒絕存取，
-stiles archive 最新記錄為 2026-05-02，
-trumpstruth.org 最高 ID（116703094991947376）低於 last_seen_id，
-本次執行確認無法取得 ID > 116708622028800000 的新貼文。
-
-**last_seen_id 保持不變：2026-06-12_116708622028800000**
-未建立新的貼文分析檔案。
-
-### 建議
-考慮在 Claude Code 環境的網路 egress 設定中加入以下網域：
-- truthsocial.com
-- thetrumparchive.com
-- trumpstruth.org
-- rollcall.com
-以改善未來監控能力。
+## 結論
+無法確認新貼文，不建立貼文分析檔案。
