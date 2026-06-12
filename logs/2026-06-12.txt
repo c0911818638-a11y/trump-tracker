@@ -1,12 +1,12 @@
 # 監控日誌 2026-06-12
 
-**最後執行時間：** 2026-06-12T07:12:13Z
+**最後執行時間：** 2026-06-12T07:12:13Z（第一次）/ 2026-06-12T08:29:25Z（第二次）
 **上次記錄 ID：** 2026-06-12_116708622028800000
 **SHA：** cff54eaf921df827fe67146696559c8780139682
 
 ---
 
-## 執行狀況：無法取得新貼文
+## 執行狀況（第一次，07:12 UTC）：無法取得新貼文
 
 ### 方法 A - Truth Social 直接存取：全部 HTTP 403
 - RSS: https://truthsocial.com/@realDonaldTrump.rss
@@ -21,27 +21,54 @@
 
 ---
 
-## 新聞中找到的相關貼文內容摘要（2026-06-11，無法確認是否超過 last_seen_id）
+## 執行狀況（第二次）：同樣無法取得新貼文
 
-**貼文 1 - Kharg Island 威脅（約 06-11 早上）：**
-"At some point in the not too distant future, we will be taking Kharg Island, and other oil infrastructure points, and assume total control of their Oil and Gas Markets, much like we have with Venezuela."
+### 補充搜尋方法
+- GitHub archive (stiles/trump-truth-social-archive)：最新紀錄為 2026-05-02，低於 last_seen_id
+- trumpstruth.org/statuses/ 搜尋：最高 ID 為 116703094991947376，低於 last_seen_id 116708622028800000
+- WebSearch 廣泛搜尋：未找到 ID > 116708622028800000 的可確認新貼文
+- 所有主要新聞網站 curl 嘗試：被網路 egress 政策阻擋
 
-**貼文 2 - 威脅今晚轟炸伊朗（06-11 晚間）：**
-"The United States will be hitting Iran (Whose Navy, Air Force, Radar, Anti Aircraft, and all other forms of Defense, together with most of its offensive capability, are GONE!), VERY HARD TONIGHT"
+### 今日新聞背景（2026-06-12，伊以衝突第 101 或 105 天）
+根據 Al Jazeera「Iran war day 105: Trump halts attacks after Kharg Island threat」（今日報導），
+以及 CBS News「Iran and Israel say attacks halted after Trump tells both to 'stop shooting'」，
+今日情勢與昨日（06-11）川普取消空襲事件密切相關。
+上述相關 Truth Social 貼文已在先前記錄中處理完畢。
 
-**貼文 3 - 取消空襲宣言（06-11 深夜）：**
-"Based on the fact that discussions with the Islamic Republic of Iran have been brought to the highest level of Iranian leadership and approved, I have, as President of the United States of America, cancelled the scheduled strikes and bombings against Iran this evening."
-
-**貼文 4 - 宣稱多國同意（06-11 深夜）：**
-"Discussions and final points have been, in both concept and great detail, approved by all parties involved, including the United States, Israel, Saudi Arabia, UAE, Qatar, Turkey, Pakistan, Bahrain, Kuwait, Jordan, Egypt, and others. The Naval Blockade will remain in full force and effect until this Transaction is finalized."
-
-**貼文 5 - 攻擊 Scarborough/Epstein（約 06-10 ~ 06-11）：**
-"Joe Scarborough's ever shrinking, low rated show, one of the most inaccurate detailers of truthful facts on television, is being crushed in the ratings"
+### 確認已處理的 last_seen 貼文
+**檔案：** 2026-06-12_116708622028800000.md
+**內容：** 加州州長暨洛城市長初選郵寄選票爭議
+**時間：** 2026-06-12 ~11:00 UTC（估計）
 
 ---
 
-## 結論
+## 今日新聞摘要（新聞搜尋來源，無法確認 ID 是否超過 last_seen）
 
-由於 Truth Social 及所有 archive 平台均拒絕存取（HTTP 403），
-本次執行無法確認 ID > 116708622028800000 的新貼文。
-last_seen_id 保持不變，未建立新的貼文分析檔案。
+**伊以停火最新態勢（今日）：**
+- 川普宣稱已達成伊朗大和解（"GREAT SETTLEMENT"），霍爾木茲海峽即將重開
+- 伊朗外交部否認已達成最終協議
+- 以色列與伊朗在 6/12 均暫停攻擊（但黎巴嫩南部行動持續）
+- 川普已取消第三夜空襲計畫（6/11）
+
+**加州選舉（今日持續）：**
+- 川普批加州州長初選出現大量郵寄選票，指控民主黨試圖竊取選舉
+
+---
+
+## 結論（第二次執行）
+
+由於 Truth Social 及所有 archive 平台均拒絕存取，
+stiles archive 最新記錄為 2026-05-02，
+trumpstruth.org 最高 ID（116703094991947376）低於 last_seen_id，
+本次執行確認無法取得 ID > 116708622028800000 的新貼文。
+
+**last_seen_id 保持不變：2026-06-12_116708622028800000**
+未建立新的貼文分析檔案。
+
+### 建議
+考慮在 Claude Code 環境的網路 egress 設定中加入以下網域：
+- truthsocial.com
+- thetrumparchive.com
+- trumpstruth.org
+- rollcall.com
+以改善未來監控能力。
