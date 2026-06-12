@@ -1,32 +1,44 @@
-# 監控錯誤記錄 - 2026-06-12
+監控執行時間：2026-06-12
 
-執行時間: 2026-06-12T02:12:10Z
-last_seen_id: 2026-06-12_116641000000000000
-last_seen_sha: 6078652349f5cf507ff616f756b15ec94932075a
+## 狀態：部分失敗 — 無法確認新貼文
 
-## 嘗試方法摘要
+### 嘗試的方法
 
-### 方法 A - Truth Social 直接存取
+**方法 A：直接存取 Truth Social**
 - https://truthsocial.com/@realDonaldTrump.rss → HTTP 403 Forbidden
-- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → HTTP 403 Forbidden
-- 個別貼文 URL → HTTP 403 Forbidden
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 → HTTP 403 Forbidden
 
-### 方法 B - WebSearch
-- 搜尋到的最新貼文 ID: 116625784011805994 (< last_seen_id 116641000000000000)
-- 找到 June 10-11 2026 貼文（伊朗軍事行動、封鎖、取消空襲、Kharg Island 威脅）
-- 無法確認有比 last_seen_id 更新的貼文存在
+**方法 B：WebSearch**
+- 搜尋關鍵字已執行，取得部分貼文摘要
+- 問題：無法取得精確的 Truth Social 貼文 ID，無法與 last_seen_id 比較
 
-### 方法 C - Trump Archive
+**方法 C：Trump Archive 及其他存檔**
 - https://www.thetrumparchive.com/ → HTTP 403 Forbidden
 - https://trumpstruth.org/ → HTTP 403 Forbidden
-- 大多數新聞來源也返回 HTTP 403
+- 多數新聞網站（CNN、NBC、Fox、Reuters、AP、Hill 等）→ HTTP 403 Forbidden
 
-## 背景資訊（搜尋結果摘要）
-- 截至 June 11, 2026: Trump 宣布取消對伊朗空襲，伊朗和談「已獲批准」
-- 伊朗外交部否認已達成協議
-- FISA Section 702 授權延長在眾議院以 198-218 票失敗
-- Trump 每日平均發布約 19 則 Truth Social 貼文
+### 上次記錄狀態
+- last_seen_id：2026-06-12_116708622028800000
+- SHA：cff54eaf921df827fe67146696559c8780139682
 
-## 結論
-無法透過任何可用方法取得 June 12, 2026 的最新貼文（ID > 116641000000000000）。
-主要原因：Truth Social 平台及主要新聞網站均返回 HTTP 403 錯誤。
+### WebSearch 取得的近期貼文（無法確認是否比 last_seen_id 新）
+
+**[2026-06-10 07:03 ET] 伊朗威脅 - 三篇系列貼文**
+內容：宣布伊朗軍事已被摧毀、"Praise be to Allah"、嘲諷封鎖效果
+
+**[2026-06-10] FISA/ODNI 貼文**（Trump Truth 歸檔 ID: 39205）
+內容：指定 Pulte 為代理 DNI，呼籲短暫延長 FISA 702
+
+**[2026-06-11] 卡爾格島威脅貼文**
+內容：警告 VERY HARD TONIGHT，宣稱將奪取卡爾格島石油基礎設施
+
+**[2026-06-11 晚間] 取消伊朗空襲 + 宣布和平協議**
+內容：宣布取消空襲，稱伊朗、以色列等多方已批准協議框架
+
+### 今日（2026-06-12）重要背景事件
+- FIFA 世界盃：美國 vs. 巴拉圭在洛杉磯 SoFi Stadium（川普未出席）
+- FISA Section 702：眾議院已否決延期，明日（6/13）到期
+- 伊朗局勢：伊朗外交部稱協議仍是「猜測」，無最終決定
+
+### 建議
+下次執行應使用已認證 API 存取 Truth Social，或透過瀏覽器自動化工具取得精確貼文 ID。
