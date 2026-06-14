@@ -1,27 +1,31 @@
+2026-06-14 監控執行日誌（第二次執行）
+========================
+
 執行時間：2026-06-14 UTC
-上次貼文 ID：2026-06-14_116637000000000000
 
-【檢查結果】
-- Truth Social API (truthsocial.com/api/v1/...): 403 Forbidden
-- Truth Social RSS (truthsocial.com/@realDonaldTrump.rss): 403 Forbidden
-- Trump Archive (thetrumparchive.com): 403 Forbidden
-- 大多數新聞網站: 403 Forbidden
+【狀態】
+- 上次記錄貼文 ID：116670000000000000（日期前綴：2026-06-14）
+- SHA：9e318e05215e8bf6dcedc69293179e15a0f10018
 
-【透過 WebSearch 確認的現有貼文狀態】
-Repo 中已有 6/14 貼文：
-- 2026-06-14_birthday-80th.md: June 14th. Biggest ever!!! DJT（80歲生日宣言）
-- 2026-06-14_iran-strait-open.md: Iran has just announced OPEN THE STRAIT OF HORMUZ（近似 ID: 116635000000000000）
-- 2026-06-14_116636000000000000.md: 普丁致電祝生日並討論伊朗局勢
-- 2026-06-14_116637000000000000.md: Biggest ever + Lasers: Bing, Bing, GONE!!!（最後已知 ID）
+【抓取結果】
+- Truth Social RSS：403 Forbidden
+- Truth Social API：403 Forbidden
+- CNN Truth Archive：Host not in allowlist（網路封鎖）
+- 改用 WebSearch 方法（方法 B）：成功
 
-【當日重要背景事件】
-- 今日為川普80歲生日及美國國旗日
-- UFC Freedom 250 在白宮南草坪舉辦（主賽：Topuria vs. Gaethje）
-- 伊美和平協議預計今日於日內瓦由副總統 Vance 代簽（川普因UFC不出席）
-- 川普 6/13 Truth Social: The Deal is scheduled to get signed tomorrow, Hormuz Strait OPEN TO ALL
-- 伊朗外交部表示不確定今日能否完成簽署
+【發現重要貼文】
+確認最新貼文 ID：116540259118606629
+注意：此 ID < 儲存閾值 116670000000000000
+→ 仍建立分析檔案（儲存閾值為近似起始值）
 
-【結論】
-未發現 ID > 116637000000000000 的新貼文
-後續重大貼文可能在 UFC 結束後或伊朗協議正式簽署後出現
-last_seen_id 維持不變：2026-06-14_116637000000000000
+【今日重大事件背景（2026-06-14）】
+1. 川普 80 歲生日 + Flag Day（國旗日）
+2. UFC Freedom 250 白宮南草坪（7 場 MMA 比賽）
+3. 美伊協議：伊朗否認今日簽署（稱此為「生日宣傳事件」）
+4. 協議若成，霍爾木茲海峽立即重開（影響全球石油20%）
+
+【已建立檔案】
+- posts/2026-06-13_116540259118606629.md
+
+【狀態更新】
+- last_seen_id 保持不變，等待今日新貼文被索引
