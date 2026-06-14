@@ -1,0 +1,27 @@
+執行時間：2026-06-14 UTC
+上次貼文 ID：2026-06-14_116637000000000000
+
+【檢查結果】
+- Truth Social API (truthsocial.com/api/v1/...): 403 Forbidden
+- Truth Social RSS (truthsocial.com/@realDonaldTrump.rss): 403 Forbidden
+- Trump Archive (thetrumparchive.com): 403 Forbidden
+- 大多數新聞網站: 403 Forbidden
+
+【透過 WebSearch 確認的現有貼文狀態】
+Repo 中已有 6/14 貼文：
+- 2026-06-14_birthday-80th.md: June 14th. Biggest ever!!! DJT（80歲生日宣言）
+- 2026-06-14_iran-strait-open.md: Iran has just announced OPEN THE STRAIT OF HORMUZ（近似 ID: 116635000000000000）
+- 2026-06-14_116636000000000000.md: 普丁致電祝生日並討論伊朗局勢
+- 2026-06-14_116637000000000000.md: Biggest ever + Lasers: Bing, Bing, GONE!!!（最後已知 ID）
+
+【當日重要背景事件】
+- 今日為川普80歲生日及美國國旗日
+- UFC Freedom 250 在白宮南草坪舉辦（主賽：Topuria vs. Gaethje）
+- 伊美和平協議預計今日於日內瓦由副總統 Vance 代簽（川普因UFC不出席）
+- 川普 6/13 Truth Social: The Deal is scheduled to get signed tomorrow, Hormuz Strait OPEN TO ALL
+- 伊朗外交部表示不確定今日能否完成簽署
+
+【結論】
+未發現 ID > 116637000000000000 的新貼文
+後續重大貼文可能在 UFC 結束後或伊朗協議正式簽署後出現
+last_seen_id 維持不變：2026-06-14_116637000000000000
