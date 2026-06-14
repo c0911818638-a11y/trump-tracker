@@ -1,31 +1,28 @@
-2026-06-14 監控執行日誌（第二次執行）
-========================
+# 監控日誌 - 2026-06-14
 
-執行時間：2026-06-14 UTC
+**執行時間：** 2026-06-14 UTC
+**上次記錄 ID：** 2026-06-14_116683100000000003
 
-【狀態】
-- 上次記錄貼文 ID：116670000000000000（日期前綴：2026-06-14）
-- SHA：9e318e05215e8bf6dcedc69293179e15a0f10018
+## 存取狀態
 
-【抓取結果】
-- Truth Social RSS：403 Forbidden
-- Truth Social API：403 Forbidden
-- CNN Truth Archive：Host not in allowlist（網路封鎖）
-- 改用 WebSearch 方法（方法 B）：成功
+- Truth Social RSS (方法A): 403 Forbidden
+- Truth Social API (方法A): 403 Forbidden
+- WebFetch 主要新聞網站: 403 Forbidden
+- WebSearch (方法B): 部分成功（找到內容但無新貼文 ID）
+- Trump Archive (方法C): 403 Forbidden
 
-【發現重要貼文】
-確認最新貼文 ID：116540259118606629
-注意：此 ID < 儲存閾值 116670000000000000
-→ 仍建立分析檔案（儲存閾值為近似起始值）
+## 今日背景（2026-06-14 川普 80 歲生日＋國旗日）
 
-【今日重大事件背景（2026-06-14）】
-1. 川普 80 歲生日 + Flag Day（國旗日）
-2. UFC Freedom 250 白宮南草坪（7 場 MMA 比賽）
-3. 美伊協議：伊朗否認今日簽署（稱此為「生日宣傳事件」）
-4. 協議若成，霍爾木茲海峽立即重開（影響全球石油20%）
+已知最新貼文（2026-06-13，新聞引用）：
+'The Deal is scheduled to get signed tomorrow, and immediately after it is signed, the Hormuz Strait is OPEN TO ALL'
+（形容協議為 'A WALL TO NO NUCLEAR WEAPON'）
 
-【已建立檔案】
-- posts/2026-06-13_116540259118606629.md
+今日重大事件：
+1. 美伊協議原定今日簽署（伊朗方面表示時機未定）
+2. 白宮 UFC Freedom 250 格鬥賽慶生（造價 6,000 萬美元）
+3. 國旗日宣示
 
-【狀態更新】
-- last_seen_id 保持不變，等待今日新貼文被索引
+## 結論
+
+Truth Social 持續回應 403，無法確認 ID > 116683100000000003 的新貼文。
+State 檔案維持不變。
