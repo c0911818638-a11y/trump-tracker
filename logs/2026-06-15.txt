@@ -1,42 +1,50 @@
-# 川普 Truth Social 監控日誌 - 2026-06-15
+# 監控日誌 - 2026-06-15
 
-**監控時間：** 2026-06-15 UTC
-**上次記錄 ID：** 2026-06-15_116900000000000014
-**執行結果：** 未找到新貼文
+**執行時間：** 2026-06-15T06:24:25Z
+**上次記錄 ID：** 2026-06-15_116965000000000001
 
 ## 執行摘要
 
-### 取得方式嘗試結果
+### 步驟 1：讀取上次記錄 ID
+✅ 成功讀取：last_seen_id = 116965000000000001（日期：2026-06-15）
 
-- 方法 A: WebFetch Truth Social RSS / API → 失敗 (403 - 網域未在網路允許清單)
-- 方法 B: WebSearch 搜尋今日貼文 → 找到近期貼文但無法確認新 ID
-- 方法 C: WebFetch Trump Archive → 失敗 (403 - 網路封鎖)
+### 步驟 2：嘗試獲取最新貼文
 
-### 近期重要貼文背景（推斷已被上次監控記錄）
+**方法 A（WebFetch RSS/API）：**
+- truthsocial.com/@realDonaldTrump.rss → 403 Forbidden
+- truthsocial.com API → 403 Forbidden
 
-2026-06-14 伊朗協議宣布：
-"The Deal with the Islamic Republic of Iran is now complete. Congratulations to all! I hereby fully authorize the toll free opening of the Strait of Hormuz, and, simultaneously herewith, authorize the immediate removal of the United States Naval blockade. Ships of the World, start your engines. Let the oil flow!"
+**方法 B（WebSearch）：**
+- 搜尋今日（2026-06-15）貼文 → 未找到 ID > 116965000000000001 的確認新貼文
+- 現有追蹤器已捕獲所有主要 6/14 伊朗協議貼文
 
-2026-06-14 簽署預告：
-"The Deal is scheduled to get signed tomorrow, and immediately after it is signed, the Hormuz Strait is OPEN TO ALL."
+**方法 C（Trump Archive）：**
+- thetrumparchive.com → 403 Forbidden
+- trumpstruth.org → 403 Forbidden
 
-2026-06-12 QAnon 連結圖片貼文
+### 步驟 3：比較結果
 
-2026-06-12 伊朗聲明回應：
-"DISHONORABLE" - 稱伊朗停火條款說法不實
+**最後捕獲貼文（116965000000000001）內容：**
+> Israel has the right to defend itself against threats, but the attack it was responding to was very small and meaningless.
 
-## 技術問題
+**已存在的 6/15 貼文檔案：**
+- 116900000000000015: 自我功績宣揚（歷任總統都做不到）
+- 116900000000000016: 霍爾木茲週五開放細節
+- 116920000000000002: 協議帶來和平與安全
+- 116950000000000001: 霍爾木茲需掃雷後開放
+- 116965000000000001: 以色列有權自衛（Let's not blow it 片段）
 
-- truthsocial.com 被環境網路政策封鎖
-- thetrumparchive.com 同樣被封鎖
-- 多數主要新聞網站回傳 403 錯誤
+### 步驟 4：2026-06-15 重大事件（非 Truth Social 貼文）
 
-## 重要背景
+通過 WebSearch 確認的今日重大事件：
+1. **伊朗美國停火生效** - 伊朗副外長確認從週一起「永久立即」停火
+2. **川普接受《紐約時報》採訪**：稱納坦亞胡為「非常難搞的人 (very difficult guy)」，稱他「應該非常感謝我們」
+3. **協議將於 6/19 在瑞士正式簽署**
 
-- 美伊和平協議已宣告完成 (2026-06-14)
-- 正式簽署定於 2026-06-19 在瑞士日內瓦
-- 霍爾木茲海峽將於簽署後開放
+### 結論
 
-## 結論
+無法從 Truth Social 直接取得新貼文（所有 API/RSS 端點封鎖）。
+通過 WebSearch 未找到 ID > 116965000000000001 的確認新 Truth Social 貼文。
+現有追蹤器已完整涵蓋主要公告。
 
-今日未找到比 last_seen_id (116900000000000014) 更新的貼文。
+**建議：** 考慮使用有認證的 API 服務以確保未來穩定存取。
