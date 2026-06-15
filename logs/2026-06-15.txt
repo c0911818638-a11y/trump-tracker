@@ -1,30 +1,29 @@
-# 監控執行記錄 - 2026-06-15
+Trump Truth Social 監控日誌 - 2026-06-15
+========================================
 
-**執行時間：** 2026-06-15T（UTC）
-**上次記錄 ID：** 116965000000000001（2026-06-15）
+執行時間：2026-06-15 UTC
+上次記錄 ID：2026-06-15_116985000000000001
 
-## 嘗試方法
+執行結果：無新貼文
+========================================
 
-- **方法 A (RSS)：** https://truthsocial.com/@realDonaldTrump.rss → HTTP 403 Forbidden
-- **方法 A (API)：** https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → HTTP 403 Forbidden
-- **方法 B (WebSearch)：** 多次搜尋，找到的最新相關貼文 ID 均低於 last_seen_id
-- **方法 C (Trump Archive)：** https://www.thetrumparchive.com/ → HTTP 403 Forbidden
-- **其他來源：** NPR、CNN、TheHill、CBSNews、NBC News、France24 等多個新聞網站均返回 HTTP 403
+嘗試方法：
+1. Truth Social RSS -> 403 Forbidden
+2. Truth Social API -> 403 Forbidden
+3. Trump Archive -> 403 Forbidden
+4. WebSearch 多次搜尋（15+次）
+5. 多個新聞網站 WebFetch -> 403 Forbidden
 
-## 搜尋發現
+搜尋發現（已存在於 repo）：
+- 伊朗協議宣布完成 (2026-06-14)：已收錄
+- 霍爾木茲海峽 6/20 開放時程 (2026-06-15)：已收錄
+- 以色列轟炸貝魯特批評 (2026-06-14)：已收錄
+- 黎巴嫩新停火協議 (2026-06-15)：已收錄
 
-透過搜尋引擎摘要找到的最新相關貼文均為 2026-06-14 內容，已在先前執行中捕獲：
-- 伊朗協議宣告完成「Ships of the World, start your engines」
-- 以色列攻擊黎巴嫩批評「very small and meaningless」（已記錄為 last_seen_id）
+今日新資訊（非 Truth Social 貼文）：
+- 川普接受 NYT 採訪（6/15），稱內塔尼亞胡 'very difficult guy'，幾乎搞砸美伊協議
+- G7 領袖於 6/15 討論霍爾木茲長期開放問題
+- 以色列稱不會撤出黎巴嫩佔領土地
 
-## 今日背景脈絡
-
-- 川普正在法國 Evian-les-Bains 出席 G7 峰會（2026-06-15 至 17）
-- G7 討論議題：霍爾木茲海峽掃雷、伊朗協議後續、黎巴嫩支援
-- 伊朗協議預計 2026-06-19 在瑞士正式簽署
-- 川普可能因外交會議而減少貼文頻率
-
-## 結論
-
-本次執行未找到任何 ID 大於 116965000000000001 的新貼文。
-last_seen_id 維持不變，不建立貼文檔案。
+結論：未發現比 last_seen_id 更新的 Truth Social 貼文。
+last_seen_id 維持不變。
