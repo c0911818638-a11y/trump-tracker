@@ -1,0 +1,13 @@
+2026-06-16 監控執行記錄
+
+錯誤：無法取得川普最新 Truth Social 貼文。
+
+嘗試方法：
+1. WebFetch https://truthsocial.com/@realDonaldTrump.rss -> HTTP 403 Forbidden
+2. WebFetch https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 -> HTTP 403 Forbidden
+3. WebSearch "Trump Truth Social posts today site:truthsocial.com OR site:thetrumparchive.com" -> 僅有舊貼文連結,無今日具體貼文內容與 ID
+4. WebSearch "Trump Truth Social June 16 2026" -> 僅有新聞報導摘要,無可驗證的逐字貼文內容
+5. WebFetch https://trumpstruth.org/ -> HTTP 403 Forbidden
+6. WebFetch https://www.thetrumparchive.com/ -> HTTP 403 Forbidden
+
+結論：所有資料來源皆被封鎖或無法提供可驗證的今日逐字貼文內容,本次未建立貼文檔,state/last_seen_id.txt 維持不變。
