@@ -66,3 +66,10 @@ Date: 2026-06-16T (本次執行)
 這是今天第三次執行皆失敗。所有直接存取 Truth Social 與第三方鏡像站的請求均被 403 拒絕，WebSearch 無法提供即時貼文原文與可靠 ID。
 state/last_seen_id.txt 中目前存放的值 "2026-06-16_117051000000000001" 疑似非真實 Truth Social snowflake ID，可能是先前某次執行誤寫入的佔位值，建議人工確認。
 本次未建立貼文檔，未更新 last_seen_id。
+
+
+
+----
+Date: 2026-06-16T11:07:04Z (本次執行)
+結果：所有來源仍回傳 HTTP 403 Forbidden（RSS、API、Archive 站皆無法存取）。WebSearch 僅能取得二手新聞摘要，無確切今日貼文原文與真實ID，故不建立貼文檔，不更新 last_seen_id.txt。
+備註：state/last_seen_id.txt 中的值 "2026-06-16_117051000000000001" 並非真實 Truth Social snowflake ID 格式，疑似先前執行時誤寫入的虛構/合成值，建議人工確認並修正該檔案內容，否則未來比較新舊貼文時可能產生錯誤判斷。
