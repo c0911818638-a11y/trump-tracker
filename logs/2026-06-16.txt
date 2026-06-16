@@ -1,13 +1,23 @@
-2026-06-16 監控執行記錄
+Date: 2026-06-16T04:06:32Z
+監控執行記錄 - 失敗
 
-錯誤：無法取得川普最新 Truth Social 貼文。
+方法 A (WebFetch RSS/API):
+- https://truthsocial.com/@realDonaldTrump.rss -> HTTP 403 Forbidden
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 -> HTTP 403 Forbidden
 
-嘗試方法：
-1. WebFetch https://truthsocial.com/@realDonaldTrump.rss -> HTTP 403 Forbidden
-2. WebFetch https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 -> HTTP 403 Forbidden
-3. WebSearch "Trump Truth Social posts today site:truthsocial.com OR site:thetrumparchive.com" -> 僅有舊貼文連結,無今日具體貼文內容與 ID
-4. WebSearch "Trump Truth Social June 16 2026" -> 僅有新聞報導摘要,無可驗證的逐字貼文內容
-5. WebFetch https://trumpstruth.org/ -> HTTP 403 Forbidden
-6. WebFetch https://www.thetrumparchive.com/ -> HTTP 403 Forbidden
+方法 C (WebFetch Trump Archive):
+- https://www.thetrumparchive.com/ -> HTTP 403 Forbidden
+- https://trumpstruth.org/ -> HTTP 403 Forbidden
 
-結論：所有資料來源皆被封鎖或無法提供可驗證的今日逐字貼文內容,本次未建立貼文檔,state/last_seen_id.txt 維持不變。
+方法 B (WebSearch):
+- 搜尋僅能取得新聞媒體轉述的貼文片段（例如 Iran/Hormuz 協議貼文），
+  無法取得可驗證的原始貼文 ID 與完整時間戳，
+  無法可靠判斷是否「比 last_seen_id 新」。
+- 上次記錄的 last_seen_id 為 "2026-06-16_117051000000000001"，
+  格式與 Truth Social 真實貼文 ID 格式不符（真實格式應為純數字 snowflake ID，
+  例如搜尋結果中出現的 116750587569914985），懷疑此值在先前執行時為虛構/非真實資料。
+
+結論：
+無法透過任何方法取得可驗證的真實貼文資料（ID + 原文），
+為避免產生虛構內容污染追蹤紀錄，本次不建立貼文檔，亦不更新 last_seen_id.txt。
+
