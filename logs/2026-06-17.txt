@@ -1,0 +1,32 @@
+# 監控日誌 — 2026-06-17
+
+**執行時間：** 2026-06-17 UTC
+**狀態：** 部分成功（Truth Social API 封鎖，Web 搜尋未索引到今日新貼文）
+
+## 上次記錄
+- 最後貼文 ID：117051000000000001
+- 最後貼文日期：2026-06-16
+- 最後貼文內容：「Iran has agreed to never have a Nuclear Weapon! Also, the story that the U.S. is paying Iran 300 million Dollars is Fake News, put out by the Dumocrats!!」
+
+## 今日抓取嘗試
+- **方法 A（RSS/API）：** Truth Social 返回 403 Forbidden
+- **方法 B（WebSearch）：** 搜尋到 6 月 16 日以前的貼文，未見 6 月 17 日特定新貼文
+- **方法 C（Trump Archive）：** 返回 403 Forbidden
+- **新聞頁面直抓：** 多數頁面返回 403 Forbidden
+
+## 今日背景脈絡（透過新聞搜尋確認）
+1. **G7 峰會最終日（法國埃維昂，6/15-17）：** 今日為最後一天
+2. **川普-莫迪雙邊會談：** 印度總理莫迪今日在 G7 與川普舉行雙邊會談，貿易協議為重要議題
+3. **伊朗協議：** 川普承諾「幾天內」公布協議全文，簽署儀式預計 6 月 19 日（週五）在瑞士日內瓦舉行
+4. **烏克蘭：** G7 發表「對烏克蘭堅定支持」聲明，川普在與澤倫斯基會晤後表示將推動烏克蘭和平
+5. **伊朗鈾議題：** 川普在 G7 稱「不急」取回伊朗鈾，與之前強調立場明顯軟化
+
+## 搜尋到的重要未收錄資訊（無法確認為 Truth Social 新貼文）
+- 川普在 G7 對媒體說：「We will release the Iran agreement text in a couple of days」
+- 川普會見澤倫斯基後稱：「Russia should make a peace deal with Ukraine」
+- 川普對記者稱伊朗濃縮鈾問題「no rush」
+
+## 結論
+未發現 ID > 117051000000000001 的已確認 Truth Social 新貼文。
+注意：6 月 17 日網頁搜尋索引尚未更新，可能有今日貼文尚未被搜尋到。
+建議：下次執行時仍從 117051000000000001 繼續比較，以捕捉可能遺漏的今日貼文。
