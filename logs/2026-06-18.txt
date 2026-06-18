@@ -1,40 +1,36 @@
-# 監控執行日誌 - 2026-06-18
+# 監控日誌 2026-06-18（第二次執行）
 
-執行時間: 2026-06-18T09:12:39Z
-上次記錄 ID: 2026-06-18_117200000000000001
+**執行時間：** 2026-06-18 下午/晚間 (UTC)
+**最後記錄 ID：** 2026-06-18_news-sourced-1823
+**最後記錄貼文：** Oklahoma/Tedford 背書 (2026-06-18T18:23:00Z / 2:23 PM ET)
 
-## 嘗試結果
+## 搜尋結果
 
-### 方法 A：直接 API
-- truthsocial.com/@realDonaldTrump.rss → 網路封鎖（Host not in allowlist）
-- truthsocial.com/api/v1/accounts/107780257626128497/statuses → 網路封鎖
+嘗試方法：
+- Method A: truthsocial.com RSS 及 API → 403 Forbidden
+- Method B: WebSearch 多次關鍵字搜尋（約15次）
+- Method C: thetrumparchive.com → 403 Forbidden
+- 嘗試 The Hill、CNN、ABC News、NPR、Daily Beast 等 → 多數 403 Forbidden
 
-### 方法 B：WebSearch
-- 搜尋 Trump Truth Social posts today June 18 2026 → 無法取得具體貼文 ID 或全文
-- 已確認 June 17 貼文（FISA/Clayton/G7/伊朗），但均早於 last_seen_id
+## 今日已確認貼文（均在 18:23 UTC 之前，已存入 repo）
 
-### 方法 C：Trump Archive
-- thetrumparchive.com → 網路封鎖（Host not in allowlist）
-- trumpstruth.org → 網路封鎖
+1. 3:54 AM ET (07:54 UTC) - Clayton/FISA/DNI 貼文
+2. 早晨 - G7 Great Success / 伊朗核武禁止 / 霍爾木茲貼文
+3. 早晨 - 經濟 19.1 Trillion 貼文
+4. 4:42 AM ET (08:42 UTC) - These fools 批評伊朗反對者（未在 repo 明確記錄）
+5. 2:23 PM ET (18:23 UTC) - Oklahoma/Tedford 背書（last_seen_id）
 
-### 新聞網站嘗試（均返回 403 或網路封鎖）
-- NPR, CBS News, NBC News, The Hill, Fox News, Poynter, Mediaite, BuzzFeed
-- Al Jazeera, The Intercept, NOTUS, TaskAndPurpose, Military.com
+## 18:23 UTC 之後狀況
 
-## 背景資訊（來自 WebSearch）
+未找到 18:23 UTC 之後的新貼文。
+川普通常晚上 9 PM ET 後開始密集發文，下次執行可能捕捉到新貼文。
 
-根據搜尋結果，2026-06-18 (週四) 主要事件：
-- 白宮舉行退伍軍人 James Capers Jr. 榮譽勳章典禮
-- 川普剛從法國 G7 峰會返美（6/17 結束）
-- G7 達成美伊協議：暫停伊朗核計畫，霍爾木茲海峽開放
+## 今日背景資訊
 
-已在 WebSearch 中確認的 6/17 貼文（ID 未知，可能早於 last_seen_id）：
-1. [3:54 AM ET 6/17] FISA: Therefore, to add a slight bit of intrigue...
-2. [6/17] Clayton: Regarding the approval of our Great Patriot, Jay Clayton...
-3. [6/17 G7] Iran: The Deal with the Islamic Republic of Iran is now complete...
+- 川普於 6/18 凌晨 3:30 AM ET 自法國 G7 峰會返回美國
+- 主要議題：美伊協議（MOU 簽署）、FISA/SAVE America Act 綁架、Jay Clayton DNI 提名
+- 參議員 Cassidy 批評伊朗協議為「數十年最大外交失誤」
+- 參議員 Schumer 稱伊朗戰爭為「美國最大災難之一」
+- 油價下跌：美國原油 5.83/桶，布倫特原油 8.41/桶
 
-## 結論
-
-無法確認 6/18 新貼文（ID > 117200000000000001）。
-網路存取限制導致所有直接來源均無法讀取。
-未更新 last_seen_id，因無法驗證新貼文內容。
+## 狀態：無新貼文，未更新 last_seen_id
