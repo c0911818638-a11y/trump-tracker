@@ -1,38 +1,35 @@
-# 監控日誌 - 2026-06-19
+# Trump Tracker 運行日誌 - 2026-06-19
 
-**執行時間：** 2026-06-19 UTC
-**最後記錄 ID：** 2026-06-19_Juneteenth-Holidays
+## 執行時間
+2026-06-19 UTC
 
----
+## 上次記錄 ID
+2026-06-19_Juneteenth-Holidays
 
-## 監控結果
+## 步驟 1：讀取狀態
+- 成功讀取 state/last_seen_id.txt
+- 上次 ID: 2026-06-19_Juneteenth-Holidays
+- SHA: fa8273e5e7f3e32324e3e281eb98328235a0b9b6
 
-### 存取狀況
-- Truth Social RSS: HTTP 403 封鎖
-- Truth Social API: HTTP 403 封鎖
-- Trump Archive: HTTP 403 封鎖
+## 步驟 2：抓取貼文
+- 方法 A (Truth Social RSS): 403 Forbidden
+- 方法 A (Truth Social API): 403 Forbidden
+- 方法 B (WebSearch): 部分成功
+- 方法 C (Trump Archive): 403 Forbidden
 
-### 結論
-無法取得新貼文。Truth Social 封鎖所有外部存取。
+## 步驟 3：比較新舊
+最後追蹤: 2026-06-19_Juneteenth-Holidays
 
----
+### 今日重大事件（2026-06-19）
+1. 美伊瑞士後續談判取消（瑞士外交部確認）
+2. Vance 赴瑞士行程停止
+3. 伊朗警告：若美違反協議將面臨更嚴厲反應
+4. 以色列-真主黨戰鬥重燃
+5. Obama Presidential Center 向公眾開放（Juneteenth）
 
-## 今日重大背景（2026-06-19 Juneteenth）
+### 已確認但已追蹤的貼文
+- committed to PEACE / ceasefire post → 已為 2026-06-18_Iran-Ceasefire-Peace.md
+- Iran critics fools post → 已為 2026-06-18_Iran-Critics-MAGA.md
 
-### 1. 瑞士談判延期（重大）
-原定 Burgenstock 美伊談判被宣布延期。副總統 Vance 取消瑞士行程（後勤問題）。以色列對黎巴嫩南部持續攻擊，威脅伊朗和平協議。瑞士外交部確認談判暫時延期，未宣布新日期。
-
-### 2. 黎巴嫩局勢持續緊張
-以色列軍隊持續攻擊黎巴嫩南部。川普 6/18 曾在 Truth Social 發文要求完全停火：We expect a complete Ceasefire on all fronts, including Lebanon, Hezbollah, and Israel。
-
-### 3. 世界盃 2026：美國 vs 澳洲（今日重點）
-美澳今日在西雅圖 Lumen Field 對戰（美東時間 3PM）。澳洲球迷高呼反川普口號（Aussie boys are on a bender, Donald Trump is a sex offender）。川普可能在賽後發文。上次美國 vs 巴拉圭（4-1），川普曾發文恭賀。
-
-### 4. Juneteenth 2026
-今日為美國聯邦假日 Juneteenth。川普 2026 年對 Juneteenth 保持沉默（對比 2025 年的 non-working holidays 貼文，已記錄於 2026-06-19_Juneteenth-Holidays.md）。
-
----
-
-## 操作決定
-- 未更新 last_seen_id（無新確認貼文）
-- 下次執行重點：確認世界盃美澳賽果川普反應、黎巴嫩/瑞士談判最新動態
+## 結論
+Truth Social 封鎖（403），無法確認新貼文。本日未發現新未追蹤貼文。
