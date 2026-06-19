@@ -1,47 +1,15 @@
-# 監控日誌 - 2026-06-19（更新）
+執行時間: 2026-06-19 (UTC)
+狀態: 未發現新貼文
 
-**執行時間：** 2026-06-19 UTC（第二次執行）
-**上次記錄 ID：** 2026-06-19_Juneteenth-Holidays
+搜尋結果摘要:
+- Truth Social RSS/API: 403 Forbidden (無法直接存取)
+- 上次記錄 ID: 2026-06-19_Juneteenth-Holidays
+- WebSearch 搜尋多個查詢，未能確認比上次記錄更新的 Truth Social 貼文
 
-## 執行摘要
+已知近期川普活動 (非新貼文):
+- 2026-06-17: G7 峰會簽署美伊框架協議，Truth Social 貼文讚「大成功」
+- 2026-06-18: 返回途中在 Air Force One 上深夜連發約20則貼文 (6/19 凌晨抵達)
+- 2026-06-19 Juneteenth 貼文已於上次記錄
 
-本次執行未發現比上次記錄更新的貼文。
-
-## 存取嘗試記錄
-
-### 方法 A（直接 API/RSS）
-- `https://truthsocial.com/@realDonaldTrump.rss` → 403 Forbidden
-- `https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20` → 403 Forbidden
-
-### 方法 B（WebSearch）
-- 搜尋「Trump Truth Social posts today site:truthsocial.com OR site:thetrumparchive.com」
-- 搜尋「Trump Truth Social June 19 2026」
-- 搜尋「Trump truth social Juneteenth holiday June 19 2026 other posts today latest」
-- 搜尋「Trump truth social Obama Presidential Center post June 2026 text」
-- **結果：** 找到的最新貼文為「非工作假期」Juneteenth 貼文，已於上次執行記錄（last_seen_id: 2026-06-19_Juneteenth-Holidays）
-
-### 方法 C（第三方存檔）
-- `https://www.thetrumparchive.com/` → 403 Forbidden
-- `https://trumpstruth.org/` → 403 Forbidden
-- `https://trumpstruth.org/?per_page=25` → 403 Forbidden
-- 多個新聞網站（Newsweek, CBS News, Fox Business, The Hill, BET, Madison365, HuffPost, Irish Star, polymarket）→ 均為 403 Forbidden
-- `https://x.com/TrumpDailyPosts/status/2066190742503236050` → 403 Forbidden
-
-## 已知 2026-06-19 貼文（已記錄）
-
-**Juneteenth「非工作假期」貼文：**
-> "Too many non-working holidays in America. It is costing our Country $BILLIONS OF DOLLARS to keep all of these businesses closed. The workers don't want it either! Soon we'll end up having a holiday for every once working day of the year. It must change if we are going to, MAKE AMERICA GREAT AGAIN!"
-
-此貼文已於上次執行記錄（posts/2026-06-19_Juneteenth-Holidays.md），本次不重複建立。
-
-## 其他已確認貼文（非今日）
-
-- **2026-06-06：** AI 生成圖片攻擊 Obama 總統中心（加垃圾袋/帳篷），已超出記錄範圍
-- **2026-06-12前後：** 關於伊朗停火協議外洩條款的貼文
-
-## 結論
-
-- 直接存取 Truth Social 及多數新聞網站均被封鎖（403）
-- 透過 WebSearch 確認上次記錄的 Juneteenth 貼文為今日最受媒體關注的貼文
-- 未發現比 `2026-06-19_Juneteenth-Holidays` 更新的貼文
-- 建議：搜尋引擎索引可能尚未更新今日較新的貼文，下次執行時可能發現更多
+原因: Truth Social 平台禁止直接爬取，WebSearch 無法即時索引今日新貼文。
+next_run: 建議下次執行時重試。
