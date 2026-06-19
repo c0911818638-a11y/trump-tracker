@@ -1,30 +1,47 @@
-監控執行時間: 2026-06-19 (UTC)
-最後記錄貼文 ID: 2026-06-19_Juneteenth-Holidays
+# 監控日誌 - 2026-06-19（更新）
 
-=== 監控結果 ===
+**執行時間：** 2026-06-19 UTC（第二次執行）
+**上次記錄 ID：** 2026-06-19_Juneteenth-Holidays
 
-嘗試方法：
-1. Truth Social RSS (https://truthsocial.com/@realDonaldTrump.rss) → HTTP 403 拒絕
-2. Truth Social API (https://truthsocial.com/api/v1/accounts/.../statuses) → HTTP 403 拒絕
-3. Trump Archive (https://www.thetrumparchive.com/) → HTTP 403 拒絕
-4. WebSearch: 'Trump Truth Social posts today 2026-06-19' → 找到 Juneteenth 貼文（已記錄）
-5. 多次 WebSearch 搜尋更新貼文 → 未找到比 last_seen_id 更新的貼文
+## 執行摘要
 
-=== 已知今日重要事件 ===
+本次執行未發現比上次記錄更新的貼文。
 
-1. Juneteenth 貼文（已記錄）：
-   川普發文批評美國「非工作假期太多」，稱每年假期成本達數十億美元。
-   此貼文已記錄為 2026-06-19_Juneteenth-Holidays.md
+## 存取嘗試記錄
 
-2. 美伊和平協議背景：
-   原計劃 2026-06-19 在日內瓦舉行簽署儀式，
-   但川普已提前於 2026-06-17 在凡爾賽宮完成簽署。
-   相關 Truth Social 貼文於 6/14-6/17 發布，本系統已記錄。
+### 方法 A（直接 API/RSS）
+- `https://truthsocial.com/@realDonaldTrump.rss` → 403 Forbidden
+- `https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20` → 403 Forbidden
 
-=== 結論 ===
+### 方法 B（WebSearch）
+- 搜尋「Trump Truth Social posts today site:truthsocial.com OR site:thetrumparchive.com」
+- 搜尋「Trump Truth Social June 19 2026」
+- 搜尋「Trump truth social Juneteenth holiday June 19 2026 other posts today latest」
+- 搜尋「Trump truth social Obama Presidential Center post June 2026 text」
+- **結果：** 找到的最新貼文為「非工作假期」Juneteenth 貼文，已於上次執行記錄（last_seen_id: 2026-06-19_Juneteenth-Holidays）
 
-截至監控執行時間，未找到比 last_seen_id 更新的新貼文。
-Truth Social 平台直接存取被封鎖（HTTP 403），網路搜尋引擎索引可能有延遲。
-建議下次執行時繼續監控。
+### 方法 C（第三方存檔）
+- `https://www.thetrumparchive.com/` → 403 Forbidden
+- `https://trumpstruth.org/` → 403 Forbidden
+- `https://trumpstruth.org/?per_page=25` → 403 Forbidden
+- 多個新聞網站（Newsweek, CBS News, Fox Business, The Hill, BET, Madison365, HuffPost, Irish Star, polymarket）→ 均為 403 Forbidden
+- `https://x.com/TrumpDailyPosts/status/2066190742503236050` → 403 Forbidden
 
-last_seen_id 未變更: 2026-06-19_Juneteenth-Holidays
+## 已知 2026-06-19 貼文（已記錄）
+
+**Juneteenth「非工作假期」貼文：**
+> "Too many non-working holidays in America. It is costing our Country $BILLIONS OF DOLLARS to keep all of these businesses closed. The workers don't want it either! Soon we'll end up having a holiday for every once working day of the year. It must change if we are going to, MAKE AMERICA GREAT AGAIN!"
+
+此貼文已於上次執行記錄（posts/2026-06-19_Juneteenth-Holidays.md），本次不重複建立。
+
+## 其他已確認貼文（非今日）
+
+- **2026-06-06：** AI 生成圖片攻擊 Obama 總統中心（加垃圾袋/帳篷），已超出記錄範圍
+- **2026-06-12前後：** 關於伊朗停火協議外洩條款的貼文
+
+## 結論
+
+- 直接存取 Truth Social 及多數新聞網站均被封鎖（403）
+- 透過 WebSearch 確認上次記錄的 Juneteenth 貼文為今日最受媒體關注的貼文
+- 未發現比 `2026-06-19_Juneteenth-Holidays` 更新的貼文
+- 建議：搜尋引擎索引可能尚未更新今日較新的貼文，下次執行時可能發現更多
