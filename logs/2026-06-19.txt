@@ -1,15 +1,25 @@
-執行時間: 2026-06-19 (UTC)
-狀態: 未發現新貼文
+# 監控執行記錄 - 2026-06-19
 
-搜尋結果摘要:
-- Truth Social RSS/API: 403 Forbidden (無法直接存取)
-- 上次記錄 ID: 2026-06-19_Juneteenth-Holidays
-- WebSearch 搜尋多個查詢，未能確認比上次記錄更新的 Truth Social 貼文
+## 執行時間
+2026-06-19T06:09:40Z
 
-已知近期川普活動 (非新貼文):
-- 2026-06-17: G7 峰會簽署美伊框架協議，Truth Social 貼文讚「大成功」
-- 2026-06-18: 返回途中在 Air Force One 上深夜連發約20則貼文 (6/19 凌晨抵達)
-- 2026-06-19 Juneteenth 貼文已於上次記錄
+## 上次記錄的貼文 ID
+2026-06-19_Juneteenth-Holidays
 
-原因: Truth Social 平台禁止直接爬取，WebSearch 無法即時索引今日新貼文。
-next_run: 建議下次執行時重試。
+## 嘗試方法
+
+### 方法 A：直接 API 存取（失敗）
+- https://truthsocial.com/@realDonaldTrump.rss → HTTP 403 Forbidden
+- https://truthsocial.com/api/v1/accounts/.../statuses → HTTP 403 Forbidden
+
+### 方法 B：WebSearch（部分）
+- 未找到 2026-06-19 Juneteenth 之後的特定貼文
+- 近期已知貼文最新為 2026-06-17（G7 峰會相關）
+
+### 方法 C：外部存檔（失敗）
+- thetrumparchive.com → 403
+- rollcall.com/factbase → 403
+- x.com/TrumpDailyPosts → 403
+
+## 結論
+無法取得比 last_seen_id 更新的貼文，所有直接存取管道均被封鎖（HTTP 403）。
