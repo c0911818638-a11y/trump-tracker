@@ -1,37 +1,55 @@
-# 監控日誌 - 2026-06-19
+2026-06-19 監控日誌
+===================
 
-## 執行結果
-**狀態：** 今日無新貼文（已確認上次記錄貼文為最新）
+執行時間：2026-06-19 09:19:17 UTC
+最後已知貼文ID：2026-06-19_Juneteenth-Holidays
+狀態：未找到新貼文
 
-## 已記錄的最後貼文 ID
-`2026-06-19_Juneteenth-Holidays`
+---
 
-## 搜尋摘要
+【搜尋摘要】
 
-### 嘗試的方法
-- 方法 A：WebFetch Truth Social RSS → 403 Forbidden
-- 方法 A：WebFetch Truth Social API → 403 Forbidden
-- 方法 B：WebSearch（多次搜尋）→ 有結果但均為已追蹤貼文或舊資訊
-- 方法 C：WebFetch The Trump Archive → 403 Forbidden
+嘗試方法：
+- 方法A（直接抓取 Truth Social RSS 與 API）：全部回傳 HTTP 403 Forbidden
+- 方法B（WebSearch 搜尋 truthsocial.com 及 thetrumparchive.com）：無法找到今日（2026-06-19）之具體新貼文內容
+- 方法C（Trump Archive 直抓）：HTTP 403 Forbidden
 
-### 已確認今日（2026-06-19）重要事件
-1. **今日 Juneteenth 假日貼文（已追蹤）**
-   - 內容：「Too many non-working holidays in America. It is costing our Country $BILLIONS OF DOLLARS to keep all of these businesses closed...」
-   - 狀態：已存入 last_seen_id
+---
 
-2. **昨日（2026-06-18）伊朗協議系列貼文（可能已追蹤）**
-   - 「These fools, who think I haven't been tough enough on Iran...」（早晨）
-   - 「The United States is committed to PEACE...」
-   - 「We expect a complete Ceasefire on all fronts, including Lebanon, Hezbollah, and Israel.」
-   - 「The Markets are loving what is happening with Oil Prices way down, and Stocks way up.」
-   - 狀態：日期早於 last_seen_id 日期，應已於前次追蹤
+【今日重要背景資訊（2026-06-19，星期五）】
 
-3. **歐巴馬總統中心開幕（今日 Juneteenth）**
-   - 歐巴馬總統中心於今日（Juneteenth 2026）在芝加哥開幕
-   - 川普未受邀出席
-   - 未找到川普對開幕當天的新回應貼文
+1. Juneteenth 聯邦假日
+   - 上次追蹤貼文（2026-06-19_Juneteenth-Holidays）已涵蓋「非工作假日太多」相關議題
 
-### 結論
-無法直接存取 Truth Social（持續 403），無法確認是否有 Juneteenth 貼文之後的新貼文。
-多數主流新聞網站亦返回 403，無法取得即時更新內容。
-最後更新時間：2026-06-19T08:24:43Z
+2. 伊朗-美國和平協議最新發展（重大）
+   - 2026-06-17/18：川普在凡爾賽宮與伊朗總統 Pezeshkian 簽署 14 點備忘錄（MOU）
+   - 2026-06-19（今日）：
+     * 原訂於日內瓦舉行的正式簽署儀式因後勤問題取消/推遲
+     * 副總統 Vance 原定前往瑞士主持伊朗核談判，但行程被暫停
+     * 伊朗代表團因以色列-黎巴嫩軍事行動持續而拒赴瑞士
+     * 伊朗對協議發出強硬警告
+   - 60天談判窗口已從2026-06-18開始計時
+   - 霍爾木茲海峽已重新開放
+
+3. 川普-塔克卡爾森（Tucker Carlson）公開爭執持續中
+   - 2026-06-16：川普發文稱Carlson「kooky」
+   - 卡爾森否認曾向川普道歉
+
+4. 國會民主黨人要求公開川普健康記錄
+   - 眾議員 Jamie Raskin 要求白宮公開川普完整健康記錄及認知測驗結果
+   - 川普聲稱認知測驗「滿分30分」
+
+---
+
+【已確認近期川普 Truth Social 貼文（已追蹤）】
+
+- 2026-06-18 已追蹤：「The United States is committed to PEACE...」
+- 2026-06-18 已追蹤：「The trip was a Great Success...」
+- 2026-06-19 已追蹤：Juneteenth 假日貼文
+
+---
+
+【結論】
+
+所有直接抓取方式均回傳 403。搜尋引擎結果中未找到明確屬於 2026-06-19 Juneteenth 貼文之後、尚未追蹤的新貼文。
+今日最大新聞為 Vance 瑞士行程取消及伊朗對協議發出強硬警告，但未能取得川普針對此事發布的具體 Truth Social 貼文內容。
