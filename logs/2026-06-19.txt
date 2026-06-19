@@ -1,46 +1,30 @@
-2026-06-19 監控日誌
+監控執行時間: 2026-06-19 (UTC)
+最後記錄貼文 ID: 2026-06-19_Juneteenth-Holidays
 
-執行時間：2026-06-19 00:20:54 UTC
-最後追蹤 ID：2026-06-18_Iran-Critics-MAGA
+=== 監控結果 ===
 
----
+嘗試方法：
+1. Truth Social RSS (https://truthsocial.com/@realDonaldTrump.rss) → HTTP 403 拒絕
+2. Truth Social API (https://truthsocial.com/api/v1/accounts/.../statuses) → HTTP 403 拒絕
+3. Trump Archive (https://www.thetrumparchive.com/) → HTTP 403 拒絕
+4. WebSearch: 'Trump Truth Social posts today 2026-06-19' → 找到 Juneteenth 貼文（已記錄）
+5. 多次 WebSearch 搜尋更新貼文 → 未找到比 last_seen_id 更新的貼文
 
-【狀態】部分成功 - 取得今日背景資訊，但無法取得完整逐字貼文
+=== 已知今日重要事件 ===
 
-【技術問題】
-- Truth Social RSS 回傳 403 Forbidden
-- Truth Social API 回傳 403 Forbidden
-- 多家主要新聞網站（CNBC, NBC, CBS, The Daily Beast, Irish Star 等）回傳 403 Forbidden
-- 伊朗和平協議相關的多個 CNN、NPR live blog 連結皆回傳 403
+1. Juneteenth 貼文（已記錄）：
+   川普發文批評美國「非工作假期太多」，稱每年假期成本達數十億美元。
+   此貼文已記錄為 2026-06-19_Juneteenth-Holidays.md
 
-【已確認的今日（6月19日）重大事件】
+2. 美伊和平協議背景：
+   原計劃 2026-06-19 在日內瓦舉行簽署儀式，
+   但川普已提前於 2026-06-17 在凡爾賽宮完成簽署。
+   相關 Truth Social 貼文於 6/14-6/17 發布，本系統已記錄。
 
-1. 美伊和平協議正式簽署（日內瓦）
-   - 由副總統 JD Vance 和白宮顧問 Jared Kushner 代表美方
-   - 川普本人未出席日內瓦儀式
-   - 伊朗方由伊朗議會議長 Mohammad Bagher Qalibaf 出席
-   - 協議為14條款備忘錄，涵蓋：
-     * 停火
-     * 解除美國海軍封鎖
-     * 重開霍姆茲海峽
-     * 600億美元伊朗重建計畫
-     * 移除美國制裁
-     * 啟動60天核武談判期
+=== 結論 ===
 
-2. 川普對 Juneteenth 保持沉默
-   - 未在 Truth Social 提及 Juneteenth
-   - 與其以往節日致詞的慣例不同
+截至監控執行時間，未找到比 last_seen_id 更新的新貼文。
+Truth Social 平台直接存取被封鎖（HTTP 403），網路搜尋引擎索引可能有延遲。
+建議下次執行時繼續監控。
 
-3. 川普在 Truth Social 發文主題（根據新聞報導）
-   - 伊朗協議相關
-   - TikTok 期限問題（中國大陸媒體報導川普第三次延長 TikTok 期限）
-   - 聯準會主席 Jerome Powell 批評
-
-【參考的貼文（主要來自 6月14-18日）】
-- 「The Deal with the Islamic Republic of Iran is now complete. Congratulations to all! I hereby fully authorize the toll free opening of the Strait of Hormuz, and, simultaneously herewith, authorize the immediate removal of the United States Naval blockade. Ships of the World, start your engines. Let the oil flow!」（6月15日）
-- 「This Great Deal will bring Peace and Security to the whole Region.」（6月14日）
-- 「Iran has agreed to never have a Nuclear Weapon! Also, the story that the U.S. is paying Iran 300 million Dollars is Fake News, put out by the Dumocrats!!」（6月16日）
-- 「These fools, who think I haven't been tough enough on Iran, when the Stock Market Just Hit A RECORD HIGH, and Oil prices are 'tumbling' down, are either jealous, bad people, or stupid. MAKE AMERICA GREAT AGAIN!!!」（6月18日 4:32 AM，最後追蹤貼文）
-
-【建議】
-下次執行時應重新嘗試取得6月19日貼文，或在搜尋結果被更多新聞網站索引後再試。
+last_seen_id 未變更: 2026-06-19_Juneteenth-Holidays
