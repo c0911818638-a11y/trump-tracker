@@ -1,53 +1,47 @@
-# 監控日誌 - 2026-06-20
+# 川普 Truth Social 監控日誌 - 2026-06-20
 
-**執行時間：** 2026-06-20 04:11:44 UTC
-**上次記錄貼文 ID：** 2026-06-20_TrumpMeloniDoublesDown
+執行時間：2026-06-20T05:12:14Z
+上次記錄貼文 ID：2026-06-20_TrumpMeloniDoublesDown
 
-## 嘗試方法與結果
+## 抓取嘗試紀錄
 
-### 步驟 1 - 讀取 last_seen_id
-- 狀態：成功
-- 上次 ID：2026-06-20_TrumpMeloniDoublesDown
-- SHA：dca72f66806d427018bf140cf55aa52ddd9e5f74
+### 方法 A — Truth Social 直接存取
+- https://truthsocial.com/@realDonaldTrump.rss -> HTTP 403 Forbidden
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 -> HTTP 403 Forbidden
 
-### 步驟 2 - 抓取貼文嘗試
+### 方法 B — WebSearch 搜尋
+- 多次搜尋：找到當日背景脈絡，但無法確認比 last_seen_id 更新的貼文
+- 搜尋結果主要涵蓋 6 月 19 日的事件（川普-梅洛尼 G7 照片糾紛）
 
-**方法 A - Truth Social 直接存取：**
-- https://truthsocial.com/@realDonaldTrump.rss → HTTP 403 Forbidden
-- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → HTTP 403 Forbidden
+### 方法 C — Trump Archive
+- https://www.thetrumparchive.com/ -> HTTP 403 Forbidden
+- https://www.presidency.ucsb.edu/documents/app-attributes/truth-social -> HTTP 403 Forbidden
 
-**方法 B - WebSearch 搜尋：**
-- Trump Truth Social posts today site:truthsocial.com OR site:thetrumparchive.com → 無 June 20 具體貼文
-- Trump Truth Social posts June 20 2026 → 無具體貼文內容
+### 新聞網站抓取嘗試
+- NBC News, NPR, Al Jazeera, The Hill, PBS News, CBS News 等 -> 全部 HTTP 403 Forbidden
 
-**方法 C - 備用網站存取：**
-- https://www.thetrumparchive.com/ → HTTP 403 Forbidden
-- 多個新聞網站（CNN, NPR, NBC, PBS, Al Jazeera, The Hill, Newsweek, OAN, Mirror, Poynter, KNKX, RT 等）→ 均回傳 HTTP 403 Forbidden
-- x.com (@TrumpDailyPosts) → HTTP 403 Forbidden
-- instagram.com, facebook.com → HTTP 403 Forbidden
+## 背景脈絡（透過 WebSearch 整理）
 
-## 已收集的背景資訊（來自搜尋結果摘要）
+### 近期主要事件（6 月 14-20 日）
 
-透過 WebSearch 結果摘要，收集到以下近期貼文相關資訊：
+1. 美伊協議達成（約 6 月 14-19 日）
+   - 川普宣布美伊協議完成，授權霍爾木茲海峽重新開放
+   - 發文：Ships of the World, start your engines. Let the oil flow!
+   - 發文：The Deal with the Islamic Republic of Iran is now complete. Congratulations to all!
 
-近期已知貼文（早於 last_seen_id，應已記錄）：
-- 2026-06-15：The Deal with the Islamic Republic of Iran is now complete
-- 2026-06-15：Ships of the World, start your engines. Let the oil flow!
-- 2026-06-18：There is no 300 Billion Dollar payment to Iran by the U.S. Thats Fake News!
-- 2026-06-19：These fools, who think I havent been tough enough on Iran, when the Stock Market Just Hit A RECORD HIGH, and Oil prices are tumbling down, are either jealous, bad people, or stupid.
-- 2026-06-20（已記錄）：Trump-Meloni「雙倍加碼」（TrumpMeloniDoublesDown）
+2. 川普-梅洛尼 G7 照片糾紛（6 月 19 日）
+   - 川普在義大利電視台訪談宣稱梅洛尼「懇求」與他合照
+   - 梅洛尼發影片斥為「完全捏造」，聲稱「義大利從不乞求」
+   - 義大利外長塔亞尼取消赴美行程
 
-June 20 之後新貼文：
-- 未找到任何可確認的新貼文
+3. 川普回應（6 月 19-20 日）
+   - 向義大利 Corriere della Sera 表示：我以為她有勇氣，但我錯了。
+   - 本次追蹤之 last_seen_id 為 TrumpMeloniDoublesDown，顯示上一次執行已記錄此內容
 
 ## 結論
 
-由於 Truth Social 與大多數新聞網站在此執行環境中均回傳 HTTP 403 Forbidden，
-本次執行無法取得或確認 June 20 最後已記錄貼文之後的任何新貼文。
-未更新 last_seen_id.txt，未建立新貼文檔案。
+由於無法直接存取 Truth Social 及大多數新聞來源（均回傳 403），
+且 WebSearch 未能找到比上次追蹤貼文（TrumpMeloniDoublesDown）更新的內容，
+本次執行未建立新貼文分析檔案，亦未更新 state/last_seen_id.txt。
 
-## 建議
-
-1. 檢查網路存取政策，確認是否允許外部 HTTP 連線
-2. 考慮添加 Truth Social API 認證 Token
-3. 可嘗試透過其他 MCP 工具進行認證存取
+建議：下次執行時考慮使用其他 API 或帳號認證方式以存取 Truth Social。
