@@ -1,43 +1,53 @@
-# Trump Truth Social 監控日誌 - 2026-06-20
+# 監控日誌 - 2026-06-20
 
-## 執行摘要
-- 執行時間: 2026-06-20 UTC
-- 上次記錄 ID: 2026-06-19_SCGovernorCoEndorsement（2026-06-19 18:23 EDT）
-- SHA: fc753f77b6dc5b609b26459aafb35a693c1a0228
+**執行時間：** 2026-06-20 04:11:44 UTC
+**上次記錄貼文 ID：** 2026-06-20_TrumpMeloniDoublesDown
 
-## 存取嘗試結果
+## 嘗試方法與結果
 
-### 方法 A：直接 Truth Social 存取
+### 步驟 1 - 讀取 last_seen_id
+- 狀態：成功
+- 上次 ID：2026-06-20_TrumpMeloniDoublesDown
+- SHA：dca72f66806d427018bf140cf55aa52ddd9e5f74
+
+### 步驟 2 - 抓取貼文嘗試
+
+**方法 A - Truth Social 直接存取：**
 - https://truthsocial.com/@realDonaldTrump.rss → HTTP 403 Forbidden
 - https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → HTTP 403 Forbidden
-- https://truthsocial.com/@realDonaldTrump/posts/114724035571020048 → HTTP 403 Forbidden
 
-### 方法 B：WebSearch 搜尋
-- 執行多次搜尋，未能獲得 6/20 具體貼文 ID 或文字
-- 找到 6/19-20 重大新聞事件的新聞報導片段
+**方法 B - WebSearch 搜尋：**
+- Trump Truth Social posts today site:truthsocial.com OR site:thetrumparchive.com → 無 June 20 具體貼文
+- Trump Truth Social posts June 20 2026 → 無具體貼文內容
 
-### 方法 C：Trump Archive
+**方法 C - 備用網站存取：**
 - https://www.thetrumparchive.com/ → HTTP 403 Forbidden
-- https://trumpstruth.org/ → HTTP 403 Forbidden
+- 多個新聞網站（CNN, NPR, NBC, PBS, Al Jazeera, The Hill, Newsweek, OAN, Mirror, Poynter, KNKX, RT 等）→ 均回傳 HTTP 403 Forbidden
+- x.com (@TrumpDailyPosts) → HTTP 403 Forbidden
+- instagram.com, facebook.com → HTTP 403 Forbidden
 
-### 新聞報導結果
-透過 WebSearch 確認以下 6/19-20 重大事件（基於新聞片段）：
+## 已收集的背景資訊（來自搜尋結果摘要）
 
-1. 川普-Meloni 外交危機（6/19-20）
-   - 川普接受義大利 La7 採訪：稱 Meloni「哀求」與他合照
-   - 川普接受 NBC News 採訪（6/20）：「She was a big fan」繼續施壓
-   - 義大利 FM Tajani 取消 6/21-22 訪美行程
-   - MTG 公開稱川普「說謊」，罕見與 Meloni 站同一陣線
+透過 WebSearch 結果摘要，收集到以下近期貼文相關資訊：
 
-2. 伊朗協議後續（6/18-20）
-   - 美伊框架協議（6/18）引發跨黨派批評
-   - 川普早先（6/18 04:32 AM）發文稱批評者為「fools」
-   - 國會簡報持續進行中
+近期已知貼文（早於 last_seen_id，應已記錄）：
+- 2026-06-15：The Deal with the Islamic Republic of Iran is now complete
+- 2026-06-15：Ships of the World, start your engines. Let the oil flow!
+- 2026-06-18：There is no 300 Billion Dollar payment to Iran by the U.S. Thats Fake News!
+- 2026-06-19：These fools, who think I havent been tough enough on Iran, when the Stock Market Just Hit A RECORD HIGH, and Oil prices are tumbling down, are either jealous, bad people, or stupid.
+- 2026-06-20（已記錄）：Trump-Meloni「雙倍加碼」（TrumpMeloniDoublesDown）
 
-## 處理結果
-- 建立分析檔案: posts/2026-06-20_MeloniG7PhotoDispute.md（已上傳）
-- 注意：無法從 Truth Social 直接獲取貼文 ID，分析基於新聞報導
+June 20 之後新貼文：
+- 未找到任何可確認的新貼文
 
-## 注意事項
-- 本監控環境網路受限，大多數外部網站返回 HTTP 403
-- 建議：考慮使用有 Truth Social API 認證的替代監控方式
+## 結論
+
+由於 Truth Social 與大多數新聞網站在此執行環境中均回傳 HTTP 403 Forbidden，
+本次執行無法取得或確認 June 20 最後已記錄貼文之後的任何新貼文。
+未更新 last_seen_id.txt，未建立新貼文檔案。
+
+## 建議
+
+1. 檢查網路存取政策，確認是否允許外部 HTTP 連線
+2. 考慮添加 Truth Social API 認證 Token
+3. 可嘗試透過其他 MCP 工具進行認證存取
