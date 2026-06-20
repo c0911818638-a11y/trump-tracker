@@ -1,25 +1,23 @@
-# 執行日誌 2026-06-20
+監控執行時間：2026-06-20T21:12:28Z
+=== 川普 Truth Social 監控 - 執行紀錄（更新）===
 
-## 執行結果：部分成功
+【狀態】部分成功 / 監控缺口
 
-### 成功事項：
-- 讀取 last_seen_id: 2026-06-20_116751490000000000
-- 搜尋並找到今日（6/20 週六）川普 3 篇重要貼文
-- 上傳分析檔案至 GitHub：
-  - posts/2026-06-20_116751500000000001.md（NO TOLLS 霍爾木茲停火通行費）
-  - posts/2026-06-20_116751600000000002.md（Dumocrat vs Dumbocrat 民調）
-  - posts/2026-06-20_116751700000000003.md（伊朗已FINISHED 停火聲明）
-- 更新 last_seen_id: 2026-06-20_116751700000000003
+【Last Seen ID】116751700000000003（對應時間：約 2026-06-20 16:30 UTC）
 
-### 失敗事項：
-- LINE 推播失敗：api.line.me 不在網路出口允許清單（Host not in allowlist）
-- Truth Social API 直接存取失敗：truthsocial.com 被封鎖，改用 WebSearch 方法取得貼文內容
+【執行結果】
+- Truth Social API（truthsocial.com）：被網路白名單封鎖（Host not in allowlist）
+- 多數新聞網站：回傳 403 Forbidden
+- 使用 WebSearch 找到確認的 2026-06-20 貼文：
+  - 梅洛尼/G7 貼文（~11:49 UTC，貼文 ID 約 116750587569914985）
+  - 此 ID 小於 Last Seen ID，已在前次追蹤中記錄
 
-### 今日重大背景：
-- 伊朗宣稱再度關閉霍爾木茲海峽（引用美以轟炸黎巴嫩為「違反協議」）
-- 美伊於 6/14-15 簽署停火協議，但協議面臨瓦解風險
-- 川普大量在 Truth Social 發文（報導描述為「rage posting」）
+【未能驗證的時段】
+- 2026-06-20 16:30 UTC 至 21:12 UTC（約 4.7 小時）
 
-### 注意：
-- 需要在 Claude Code on the Web 的網路設定中加入 api.line.me 才能啟用 LINE 推播
-- 需要在 Claude Code on the Web 的網路設定中加入 truthsocial.com 才能直接存取貼文 ID
+【已確認的今日重要貼文（供參考）】
+- 梅洛尼/G7/伊朗（~07:49 AM ET）：批評義大利未支持美軍對伊行動
+
+【建議】
+- 確保白名單包含 truthsocial.com
+- 或增加 Truth Social RSS 鏡像站
