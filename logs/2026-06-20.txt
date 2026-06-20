@@ -1,21 +1,40 @@
-# 川普 Truth Social 監控日誌 - 2026-06-20
+日期：2026-06-20
+時間：10:16:38 UTC
 
-## 執行時間
-2026-06-20T09:19:40Z
+## 監控執行日誌
 
-## 上次記錄 ID
+### 上次記錄貼文 ID
 2026-06-20_TrumpMeloniDoublesDown
 
-## 執行結果
-本次執行未找到比上次記錄更新的新貼文
+### 嘗試方法
 
-## 資料存取情況
-- Truth Social RSS / API => HTTP 403 Forbidden
-- Trump Archive / trumpstruth.org => HTTP 403 Forbidden  
-- 所有主要新聞網站 => HTTP 403 Forbidden
-- WebSearch => 搜尋結果僅顯示至 2026-06-19 的報導
+1. 方法 A - Truth Social 直接存取
+   - https://truthsocial.com/@realDonaldTrump.rss → HTTP 403 Forbidden
+   - https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → HTTP 403 Forbidden
 
-## 已知最新動態
-- 最後已知貼文：TrumpMeloniDoublesDown（川普重申梅洛尼照片說法）
-- G7峰會川普-梅洛尼衝突進行中
-- 伊朗MOU 60天談判期進行中
+2. 方法 B - WebSearch 搜尋
+   - 多次搜尋均無法找到 TrumpMeloniDoublesDown 之後的新貼文
+
+3. 方法 C - Trump Archive 及其他新聞網站
+   - https://www.thetrumparchive.com/ → HTTP 403 Forbidden
+   - 大多數新聞網站均回傳 HTTP 403
+
+### 目前已知新聞背景（2026-06-19~20）
+
+1. 川普-梅洛尼外交危機（最新動態）
+   - 川普向義大利電視台 La7 表示梅洛尼「乞求」他合照
+   - 梅洛尼 6/19 回應：statements are completely fabricated
+   - 義大利外長塔亞尼取消原定 6/21-22 的美國訪問
+   - 川普雙倍加碼（上次記錄貼文）：She was a big fan but I do not want her as a fan
+
+2. 新空軍一號揭幕（2026-06-19）
+   - 川普揭幕卡達贈送的波音 747-8（造價 4 億美元）
+
+3. 伊朗協議後續
+   - 2026-06-15~17：美伊簽署協議，川普宣布霍爾木茲海峽重新開放
+
+### 結論
+
+無法從 Truth Social 或其他媒體來源取得比 2026-06-20_TrumpMeloniDoublesDown 更新的貼文。
+Truth Social 平台及大多數新聞網站對自動存取均回傳 403 錯誤。
+未更新 last_seen_id.txt。
