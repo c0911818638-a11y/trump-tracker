@@ -1,42 +1,30 @@
-# 川普 Truth Social 監控日誌 - 2026-06-20（第二次執行）
+# Trump Truth Social 監控日誌 - 2026-06-20
 
-## 執行時間
-2026-06-20 06:13:19 UTC
+**執行時間：** 2026-06-20T07:15:06Z
+**最後已知貼文 ID：** 2026-06-20_TrumpMeloniDoublesDown
 
-## 上次記錄貼文 ID
-2026-06-20_TrumpMeloniDoublesDown
+## 錯誤記錄
 
-## 嘗試的抓取方法
+### 方法 A：直接 API 存取
+- truthsocial.com/@realDonaldTrump.rss → **403 Forbidden（網路出口限制）**
+- truthsocial.com/api/v1/accounts/107780257626128497/statuses → **403 Forbidden（網路出口限制）**
+- 原因：truthsocial.com 未列入環境 allowlist
 
-### 方法 A - Truth Social 直接存取
-- https://truthsocial.com/@realDonaldTrump.rss -> HTTP 403 Forbidden
-- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 -> HTTP 403 Forbidden
+### 方法 B：WebSearch
+- 多次搜尋，無法找到 2026-06-20_TrumpMeloniDoublesDown 之後的具體新貼文
+- 搜尋結果僅返回 2026-06-19 及更早的內容
 
-### 方法 B - WebSearch 搜尋
-- 搜尋多組關鍵字，找到背景新聞，但無法取得 last_seen_id 最新貼文後的具體貼文文字
+### 方法 C：Trump Archive / 其他媒體
+- thetrumparchive.com → **403 Forbidden**
+- 多數主流媒體均回傳 **403 Forbidden**
 
-### 方法 C - Trump Archive
-- https://www.thetrumparchive.com/ -> HTTP 403 Forbidden
+## 近期背景（搜尋結果彙整）
 
-### 其他新聞來源（透過 WebSearch 找到）
-- NBC News, NPR, Al Jazeera, The Hill, PBS News, CBS News 等 -> 全部 HTTP 403 Forbidden
-
-## 透過 WebSearch 取得的背景資訊（6 月 14-20 日）
-
-1. 美伊初步協議（約 6 月 14-19 日）
-   - 美伊就和平協議達成初步共識，啟動 60 天談判期
-   - 貼文示例：Ships of the World, start your engines. Let the oil flow!
-   - 貼文示例：The Deal with the Islamic Republic of Iran is now complete. Congratulations to all!
-
-2. 川普-梅洛尼 G7 爭議（6 月 19-20 日）
-   - 川普接受義大利電視採訪聲稱梅洛尼「乞求」與他合影
-   - 梅洛尼反駁：「根本沒有這回事」
-   - 川普接受 Corriere della Sera 採訪回嗆：我以為她有勇氣，但我錯了
-   - 此事已被 last_seen_id 記錄為 TrumpMeloniDoublesDown，本次執行無法找到之後新貼文
-
-3. 本次執行 (2026-06-20) 截至目前時間點，未能確認有更新貼文
+- 2026-06-15：美伊協議（MOU）簽署，川普發文："Ships of the World, start your engines. Let the oil flow!"
+- 2026-06-18：川普攻擊伊朗協議批評者："These fools...are either jealous, bad people, or stupid"
+- 2026-06-19：川普-梅洛尼外交風波（義大利取消訪美行程，川普說 "I thought she had courage, but I was wrong"）
 
 ## 結論
-無法確認 TrumpMeloniDoublesDown 之後是否有新貼文。所有直接資料來源均拒絕訪問（403），WebSearch 未能提供有明確時間戳的新貼文原文，state/last_seen_id.txt 維持不變。
 
-建議：下次執行可嘗試使用 @TrumpDailyPosts 等 X/Twitter 帳號追蹤或其他未封鎖的 API 存取 Truth Social。
+truthsocial.com 被網路出口限制（egress）封鎖，本次監控無法確認是否有新貼文。
+**建議：將 truthsocial.com 加入環境 allowlist 以恢復正常監控功能。**
