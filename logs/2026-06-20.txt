@@ -1,23 +1,36 @@
-監控執行時間：2026-06-20T21:12:28Z
-=== 川普 Truth Social 監控 - 執行紀錄（更新）===
+# 監控錯誤日誌 - 2026-06-20
 
-【狀態】部分成功 / 監控缺口
+執行時間（UTC）: 2026-06-20T23:06:06Z
 
-【Last Seen ID】116751700000000003（對應時間：約 2026-06-20 16:30 UTC）
+## 錯誤摘要
 
-【執行結果】
-- Truth Social API（truthsocial.com）：被網路白名單封鎖（Host not in allowlist）
-- 多數新聞網站：回傳 403 Forbidden
-- 使用 WebSearch 找到確認的 2026-06-20 貼文：
-  - 梅洛尼/G7 貼文（~11:49 UTC，貼文 ID 約 116750587569914985）
-  - 此 ID 小於 Last Seen ID，已在前次追蹤中記錄
+本次執行無法取得川普 Truth Social 貼文，原因如下：
 
-【未能驗證的時段】
-- 2026-06-20 16:30 UTC 至 21:12 UTC（約 4.7 小時）
+### 方法 A：Truth Social RSS / API
+- https://truthsocial.com/@realDonaldTrump.rss → **Host not in allowlist**
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → **Host not in allowlist**
 
-【已確認的今日重要貼文（供參考）】
-- 梅洛尼/G7/伊朗（~07:49 AM ET）：批評義大利未支持美軍對伊行動
+### 方法 B：WebSearch
+- 搜尋工具回傳 **unavailable**（搜尋服務不可用）
 
-【建議】
-- 確保白名單包含 truthsocial.com
-- 或增加 Truth Social RSS 鏡像站
+### 方法 C：Trump Archive / 其他來源
+- https://www.thetrumparchive.com/ → **Host not in allowlist**
+- nitter.net → **Host not in allowlist**
+- 多個新聞媒體網站 → **403 Forbidden 或不可存取**
+
+## 根本原因
+
+此執行環境的網路出口政策（Network Egress Policy）未將 truthsocial.com 及相關域名加入白名單，導致所有取得貼文的方法均失敗。
+
+## LINE 通知狀態
+- api.line.me → **Host not in allowlist**（無法推播）
+
+## 建議處理方式
+
+請至 Claude Code 環境設定，將以下域名加入網路白名單：
+- truthsocial.com
+- api.line.me
+- thetrumparchive.com（備用）
+
+## 上次記錄的貼文 ID
+2026-06-20_116758500000000001
