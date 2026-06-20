@@ -1,30 +1,21 @@
-# 抓取錯誤日誌 - 2026-06-20
+# 川普 Truth Social 監控日誌 - 2026-06-20
 
-**執行時間：** 2026-06-20 UTC
-**上次記錄 ID：** 2026-06-20_TrumpMeloniDoublesDown
+## 執行時間
+2026-06-20T09:19:40Z
 
-## 嘗試方法
+## 上次記錄 ID
+2026-06-20_TrumpMeloniDoublesDown
 
-### 方法 A - Truth Social 直接存取（失敗）
-- https://truthsocial.com/@realDonaldTrump.rss → HTTP 403 Forbidden
-- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 → HTTP 403 Forbidden
+## 執行結果
+本次執行未找到比上次記錄更新的新貼文
 
-### 方法 B - WebSearch（部分成功，但無新貼文）
-找到背景資訊，但無法取得 TrumpMeloniDoublesDown 之後的具體新貼文。
+## 資料存取情況
+- Truth Social RSS / API => HTTP 403 Forbidden
+- Trump Archive / trumpstruth.org => HTTP 403 Forbidden  
+- 所有主要新聞網站 => HTTP 403 Forbidden
+- WebSearch => 搜尋結果僅顯示至 2026-06-19 的報導
 
-### 方法 C - Trump Archive 及追蹤工具（失敗）
-- https://www.thetrumparchive.com/ → HTTP 403 Forbidden
-- https://xtracker.polymarket.com → HTTP 403 Forbidden
-
-### 方法 D - 新聞網站（全部失敗）
-The Hill, NBC News, NPR, CNN, Daily Beast, AOL 等均返回 HTTP 403 Forbidden
-
-## 已知背景（來自 WebSearch）
-1. G7 峰會期間，Trump 稱 Meloni 曾跪求與他合照
-2. 2026-06-19，Meloni 否認，義大利取消 Tajani 訪美行程
-3. Trump 於 2026-06-20 加碼回應（已記錄為 TrumpMeloniDoublesDown）
-4. 未發現後續新貼文內容
-
-## 結論
-所有存取方式均被封鎖（HTTP 403）。
-last_seen_id.txt 維持不變：2026-06-20_TrumpMeloniDoublesDown
+## 已知最新動態
+- 最後已知貼文：TrumpMeloniDoublesDown（川普重申梅洛尼照片說法）
+- G7峰會川普-梅洛尼衝突進行中
+- 伊朗MOU 60天談判期進行中
