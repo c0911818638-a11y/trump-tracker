@@ -1,47 +1,42 @@
-# 川普 Truth Social 監控日誌 - 2026-06-20
+# 川普 Truth Social 監控日誌 - 2026-06-20（第二次執行）
 
-執行時間：2026-06-20T05:12:14Z
-上次記錄貼文 ID：2026-06-20_TrumpMeloniDoublesDown
+## 執行時間
+2026-06-20 06:13:19 UTC
 
-## 抓取嘗試紀錄
+## 上次記錄貼文 ID
+2026-06-20_TrumpMeloniDoublesDown
 
-### 方法 A — Truth Social 直接存取
+## 嘗試的抓取方法
+
+### 方法 A - Truth Social 直接存取
 - https://truthsocial.com/@realDonaldTrump.rss -> HTTP 403 Forbidden
 - https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 -> HTTP 403 Forbidden
 
-### 方法 B — WebSearch 搜尋
-- 多次搜尋：找到當日背景脈絡，但無法確認比 last_seen_id 更新的貼文
-- 搜尋結果主要涵蓋 6 月 19 日的事件（川普-梅洛尼 G7 照片糾紛）
+### 方法 B - WebSearch 搜尋
+- 搜尋多組關鍵字，找到背景新聞，但無法取得 last_seen_id 最新貼文後的具體貼文文字
 
-### 方法 C — Trump Archive
+### 方法 C - Trump Archive
 - https://www.thetrumparchive.com/ -> HTTP 403 Forbidden
-- https://www.presidency.ucsb.edu/documents/app-attributes/truth-social -> HTTP 403 Forbidden
 
-### 新聞網站抓取嘗試
+### 其他新聞來源（透過 WebSearch 找到）
 - NBC News, NPR, Al Jazeera, The Hill, PBS News, CBS News 等 -> 全部 HTTP 403 Forbidden
 
-## 背景脈絡（透過 WebSearch 整理）
+## 透過 WebSearch 取得的背景資訊（6 月 14-20 日）
 
-### 近期主要事件（6 月 14-20 日）
+1. 美伊初步協議（約 6 月 14-19 日）
+   - 美伊就和平協議達成初步共識，啟動 60 天談判期
+   - 貼文示例：Ships of the World, start your engines. Let the oil flow!
+   - 貼文示例：The Deal with the Islamic Republic of Iran is now complete. Congratulations to all!
 
-1. 美伊協議達成（約 6 月 14-19 日）
-   - 川普宣布美伊協議完成，授權霍爾木茲海峽重新開放
-   - 發文：Ships of the World, start your engines. Let the oil flow!
-   - 發文：The Deal with the Islamic Republic of Iran is now complete. Congratulations to all!
+2. 川普-梅洛尼 G7 爭議（6 月 19-20 日）
+   - 川普接受義大利電視採訪聲稱梅洛尼「乞求」與他合影
+   - 梅洛尼反駁：「根本沒有這回事」
+   - 川普接受 Corriere della Sera 採訪回嗆：我以為她有勇氣，但我錯了
+   - 此事已被 last_seen_id 記錄為 TrumpMeloniDoublesDown，本次執行無法找到之後新貼文
 
-2. 川普-梅洛尼 G7 照片糾紛（6 月 19 日）
-   - 川普在義大利電視台訪談宣稱梅洛尼「懇求」與他合照
-   - 梅洛尼發影片斥為「完全捏造」，聲稱「義大利從不乞求」
-   - 義大利外長塔亞尼取消赴美行程
-
-3. 川普回應（6 月 19-20 日）
-   - 向義大利 Corriere della Sera 表示：我以為她有勇氣，但我錯了。
-   - 本次追蹤之 last_seen_id 為 TrumpMeloniDoublesDown，顯示上一次執行已記錄此內容
+3. 本次執行 (2026-06-20) 截至目前時間點，未能確認有更新貼文
 
 ## 結論
+無法確認 TrumpMeloniDoublesDown 之後是否有新貼文。所有直接資料來源均拒絕訪問（403），WebSearch 未能提供有明確時間戳的新貼文原文，state/last_seen_id.txt 維持不變。
 
-由於無法直接存取 Truth Social 及大多數新聞來源（均回傳 403），
-且 WebSearch 未能找到比上次追蹤貼文（TrumpMeloniDoublesDown）更新的內容，
-本次執行未建立新貼文分析檔案，亦未更新 state/last_seen_id.txt。
-
-建議：下次執行時考慮使用其他 API 或帳號認證方式以存取 Truth Social。
+建議：下次執行可嘗試使用 @TrumpDailyPosts 等 X/Twitter 帳號追蹤或其他未封鎖的 API 存取 Truth Social。
