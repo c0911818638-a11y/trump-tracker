@@ -1,39 +1,11 @@
-# 監控執行日誌 - 2026-06-20
+2026-06-20 — 所有取得貼文的方法均失敗
 
-**執行時間：** 2026-06-20 UTC
-**上次記錄 ID：** 2026-06-20_TrumpReflectingPoolVandalism
+嘗試的方法：
+1. Method A: truthsocial.com/@realDonaldTrump.rss → HTTP 403
+2. Method A: truthsocial.com/api/v1/accounts/107780257626128497/statuses → HTTP 403
+3. Method B: WebSearch 搜尋 — 找到貼文 URL 但無法取得內容
+4. Method C: thetrumparchive.com → HTTP 403
+5. 其他嘗試網站：trumpstruth.org, harvard.edu tagteam, buzzfeed, huffpost, snopes, reuters, apnews, cnbc, aljazeera, abc7news, yahoo, mediaite, thedailybeast, theconservativetreehouse, instagram, lines.com, britannica → 全部 HTTP 403
 
-## 嘗試方法
-
-### 方法 A（直接 API/RSS）
-- https://truthsocial.com/@realDonaldTrump.rss → 403 Forbidden
-- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → 403 Forbidden
-
-### 方法 B（WebSearch）
-- 搜尋 "Trump Truth Social posts today June 20 2026" → 無當日具體新貼文
-- 搜尋 "Trump Truth Social June 20 2026" → 確認反射池貼文為最後已知貼文
-- 搜尋 "Trump Don't Buy The Book Karl June 20 2026" → 確認為 4 月 4 日的舊貼文，非新貼
-- 搜尋 "Air Force One overnight meltdown" → 確認為 6/18 返程事件（已記錄）
-
-### 方法 C（Trump Archive）
-- https://www.thetrumparchive.com/ → 403 Forbidden
-
-## 結論
-
-透過多方搜尋確認，2026-06-20 晚間 10 PM ET 的反射池破壞貼文（已記錄為 TrumpReflectingPoolVandalism）是今日最後的已知貼文。
-
-未發現比 2026-06-20_TrumpReflectingPoolVandalism 更新的貼文。
-
-不建立新貼文檔。上次記錄 ID 維持不變。
-
-## 背景資訊（本次搜尋中蒐集到的上下文）
-
-- 伊朗和平協議：6/14-15 宣布，6/19 在瑞士正式簽署，霍爾木茲海峽重新開放
-- G7 峰會：6/15-17 在法國 Évian-les-Bains 舉行
-- 6/18 Air Force One 過夜狂貼（~20 篇）：已全數記錄於 2026-06-18_news-sourced 系列
-- 6/20 已記錄貼文（共 5 篇）：
-  1. MeloniG7PhotoDispute
-  2. TrumpIranVictoryRant
-  3. TrumpMeloniDoublesDown
-  4. TrumpPowellFedRant
-  5. TrumpReflectingPoolVandalism（最後記錄）
+最後已知貼文 ID：116750587569914985
+狀態：未更新，last_seen_id.txt 維持不變
