@@ -1,44 +1,39 @@
-川普 Truth Social 監控日誌 - 2026-06-20（第二次執行）
+# 監控執行日誌 - 2026-06-20
 
-執行時間: 2026-06-20T11:10:44Z
-上次記錄 ID: 2026-06-20_TrumpMeloniDoublesDown
-SHA: dca72f66806d427018bf140cf55aa52ddd9e5f74
+**執行時間：** 2026-06-20 UTC
+**上次記錄 ID：** 2026-06-20_TrumpReflectingPoolVandalism
 
-== 嘗試方法 ==
-方法 A: truthsocial.com/@realDonaldTrump.rss → 403 Forbidden
-方法 A: truthsocial.com/api/v1/accounts/107780257626128497/statuses → 403 Forbidden
-方法 B: WebSearch (多次嘗試) → 無法取得具體貼文原文
-方法 C: thetrumparchive.com → 403 Forbidden
-方法 C: trumpstruth.org → 403 Forbidden
-方法 C: rollcall.com/factbase-twitter → 403 Forbidden
+## 嘗試方法
 
-額外嘗試的新聞網站 (均回傳 403):
-- nbcnews.com, cbsnews.com, pbs.org, npr.org, bloomberg.com
-- foxnews.com, timesofisrael.com, cnn.com, newsweek.com, newrepublic.com
-- whitehouse.gov, inquirer.com, washingtonpost.com
+### 方法 A（直接 API/RSS）
+- https://truthsocial.com/@realDonaldTrump.rss → 403 Forbidden
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → 403 Forbidden
 
-== 搜尋取得的背景資訊（無法驗證為新貼文）==
-1. 川普-梅洛尼外交危機（持續中）
-   - 川普聲稱梅洛尼在 G7 峰會「懇求」與他合影（6/19）
-   - 梅洛尼否認稱「完全是捏造」，義大利外長取消赴美訪問
-   - 川普被報導「加倍堅持」→ 已記錄為 TrumpMeloniDoublesDown（今日先前執行）
+### 方法 B（WebSearch）
+- 搜尋 "Trump Truth Social posts today June 20 2026" → 無當日具體新貼文
+- 搜尋 "Trump Truth Social June 20 2026" → 確認反射池貼文為最後已知貼文
+- 搜尋 "Trump Don't Buy The Book Karl June 20 2026" → 確認為 4 月 4 日的舊貼文，非新貼
+- 搜尋 "Air Force One overnight meltdown" → 確認為 6/18 返程事件（已記錄）
 
-2. 伊朗核談判延遲（6/20 最新）
-   - 萬斯（Vance）赴瑞士行程延遲，因黎巴嫩戰況惡化
-   - 維特科夫（Witkoff）已前往瑞士
-   - 美伊後續核協議談判推遲，原計畫週五開始
+### 方法 C（Trump Archive）
+- https://www.thetrumparchive.com/ → 403 Forbidden
 
-3. 以色列-黎巴嫩局勢
-   - 以色列與真主黨重申停火協議，但仍有零星衝突
+## 結論
 
-== 結論 ==
-本次執行（第二次）無法確認任何比 last_seen_id 更新的具體貼文。
-所有直接存取管道均遭封鎖（403 Forbidden）。
-搜尋結果僅提供新聞背景，無法取得實際貼文原文及精確時間戳。
+透過多方搜尋確認，2026-06-20 晚間 10 PM ET 的反射池破壞貼文（已記錄為 TrumpReflectingPoolVandalism）是今日最後的已知貼文。
 
-不更新 state/last_seen_id.txt（無新貼文確認）。
+未發現比 2026-06-20_TrumpReflectingPoolVandalism 更新的貼文。
 
-建議行動：
-- 評估是否需要帶有認證的 Truth Social API 存取
-- 考慮使用付費新聞 API（如 Factbase）取得即時貼文資料
-- 或設定真人/機器人輔助監控來突破反爬蟲限制
+不建立新貼文檔。上次記錄 ID 維持不變。
+
+## 背景資訊（本次搜尋中蒐集到的上下文）
+
+- 伊朗和平協議：6/14-15 宣布，6/19 在瑞士正式簽署，霍爾木茲海峽重新開放
+- G7 峰會：6/15-17 在法國 Évian-les-Bains 舉行
+- 6/18 Air Force One 過夜狂貼（~20 篇）：已全數記錄於 2026-06-18_news-sourced 系列
+- 6/20 已記錄貼文（共 5 篇）：
+  1. MeloniG7PhotoDispute
+  2. TrumpIranVictoryRant
+  3. TrumpMeloniDoublesDown
+  4. TrumpPowellFedRant
+  5. TrumpReflectingPoolVandalism（最後記錄）
