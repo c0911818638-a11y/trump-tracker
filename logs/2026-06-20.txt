@@ -1,30 +1,30 @@
-# Trump Truth Social 監控日誌 - 2026-06-20
+# 抓取錯誤日誌 - 2026-06-20
 
-**執行時間：** 2026-06-20T07:15:06Z
-**最後已知貼文 ID：** 2026-06-20_TrumpMeloniDoublesDown
+**執行時間：** 2026-06-20 UTC
+**上次記錄 ID：** 2026-06-20_TrumpMeloniDoublesDown
 
-## 錯誤記錄
+## 嘗試方法
 
-### 方法 A：直接 API 存取
-- truthsocial.com/@realDonaldTrump.rss → **403 Forbidden（網路出口限制）**
-- truthsocial.com/api/v1/accounts/107780257626128497/statuses → **403 Forbidden（網路出口限制）**
-- 原因：truthsocial.com 未列入環境 allowlist
+### 方法 A - Truth Social 直接存取（失敗）
+- https://truthsocial.com/@realDonaldTrump.rss → HTTP 403 Forbidden
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 → HTTP 403 Forbidden
 
-### 方法 B：WebSearch
-- 多次搜尋，無法找到 2026-06-20_TrumpMeloniDoublesDown 之後的具體新貼文
-- 搜尋結果僅返回 2026-06-19 及更早的內容
+### 方法 B - WebSearch（部分成功，但無新貼文）
+找到背景資訊，但無法取得 TrumpMeloniDoublesDown 之後的具體新貼文。
 
-### 方法 C：Trump Archive / 其他媒體
-- thetrumparchive.com → **403 Forbidden**
-- 多數主流媒體均回傳 **403 Forbidden**
+### 方法 C - Trump Archive 及追蹤工具（失敗）
+- https://www.thetrumparchive.com/ → HTTP 403 Forbidden
+- https://xtracker.polymarket.com → HTTP 403 Forbidden
 
-## 近期背景（搜尋結果彙整）
+### 方法 D - 新聞網站（全部失敗）
+The Hill, NBC News, NPR, CNN, Daily Beast, AOL 等均返回 HTTP 403 Forbidden
 
-- 2026-06-15：美伊協議（MOU）簽署，川普發文："Ships of the World, start your engines. Let the oil flow!"
-- 2026-06-18：川普攻擊伊朗協議批評者："These fools...are either jealous, bad people, or stupid"
-- 2026-06-19：川普-梅洛尼外交風波（義大利取消訪美行程，川普說 "I thought she had courage, but I was wrong"）
+## 已知背景（來自 WebSearch）
+1. G7 峰會期間，Trump 稱 Meloni 曾跪求與他合照
+2. 2026-06-19，Meloni 否認，義大利取消 Tajani 訪美行程
+3. Trump 於 2026-06-20 加碼回應（已記錄為 TrumpMeloniDoublesDown）
+4. 未發現後續新貼文內容
 
 ## 結論
-
-truthsocial.com 被網路出口限制（egress）封鎖，本次監控無法確認是否有新貼文。
-**建議：將 truthsocial.com 加入環境 allowlist 以恢復正常監控功能。**
+所有存取方式均被封鎖（HTTP 403）。
+last_seen_id.txt 維持不變：2026-06-20_TrumpMeloniDoublesDown
