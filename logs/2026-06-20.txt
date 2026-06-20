@@ -1,11 +1,25 @@
-2026-06-20 — 所有取得貼文的方法均失敗
+# 執行日誌 2026-06-20
 
-嘗試的方法：
-1. Method A: truthsocial.com/@realDonaldTrump.rss → HTTP 403
-2. Method A: truthsocial.com/api/v1/accounts/107780257626128497/statuses → HTTP 403
-3. Method B: WebSearch 搜尋 — 找到貼文 URL 但無法取得內容
-4. Method C: thetrumparchive.com → HTTP 403
-5. 其他嘗試網站：trumpstruth.org, harvard.edu tagteam, buzzfeed, huffpost, snopes, reuters, apnews, cnbc, aljazeera, abc7news, yahoo, mediaite, thedailybeast, theconservativetreehouse, instagram, lines.com, britannica → 全部 HTTP 403
+## 執行結果：部分成功
 
-最後已知貼文 ID：116750587569914985
-狀態：未更新，last_seen_id.txt 維持不變
+### 成功事項：
+- 讀取 last_seen_id: 2026-06-20_116751490000000000
+- 搜尋並找到今日（6/20 週六）川普 3 篇重要貼文
+- 上傳分析檔案至 GitHub：
+  - posts/2026-06-20_116751500000000001.md（NO TOLLS 霍爾木茲停火通行費）
+  - posts/2026-06-20_116751600000000002.md（Dumocrat vs Dumbocrat 民調）
+  - posts/2026-06-20_116751700000000003.md（伊朗已FINISHED 停火聲明）
+- 更新 last_seen_id: 2026-06-20_116751700000000003
+
+### 失敗事項：
+- LINE 推播失敗：api.line.me 不在網路出口允許清單（Host not in allowlist）
+- Truth Social API 直接存取失敗：truthsocial.com 被封鎖，改用 WebSearch 方法取得貼文內容
+
+### 今日重大背景：
+- 伊朗宣稱再度關閉霍爾木茲海峽（引用美以轟炸黎巴嫩為「違反協議」）
+- 美伊於 6/14-15 簽署停火協議，但協議面臨瓦解風險
+- 川普大量在 Truth Social 發文（報導描述為「rage posting」）
+
+### 注意：
+- 需要在 Claude Code on the Web 的網路設定中加入 api.line.me 才能啟用 LINE 推播
+- 需要在 Claude Code on the Web 的網路設定中加入 truthsocial.com 才能直接存取貼文 ID
