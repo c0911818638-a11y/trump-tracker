@@ -1,27 +1,24 @@
-# 執行日誌 2026-06-21
+# 監控執行日誌 2026-06-21
 
-## 執行結果
+執行時間：2026-06-21 15:14:21 UTC
+上次記錄貼文 ID：20260621_lebanon_proxies
 
-- **狀態**: 部分成功
-- **執行時間**: 2026-06-21
+## 方法嘗試記錄
 
-## 找到的新貼文
+### 方法 A：直接存取 Truth Social
+- truthsocial.com/@realDonaldTrump.rss → 403 Forbidden
+- truthsocial.com/api/v1/accounts/.../statuses → 403 Forbidden
 
-### 貼文 1: 20260621_lebanon_proxies
-- **原文**: "Iran must immediately stop their highly paid PROXIES in Lebanon from causing trouble. If they don't, we'll hit Iran very hard again, just like we did last week, only harder!!"
-- **GitHub 上傳**: 成功 (posts/2026-06-21_lebanon_proxies.md)
-- **last_seen_id 更新**: 成功 (20260621_lebanon_proxies)
+### 方法 B：WebSearch 搜尋
+找到 6/21 已知貼文（推測時序）：
+1. 父親節問候（早晨，推測早於 last_seen_id）：
+   'Happy Father's Day! Our Country is doing GREAT. Record Jobs Numbers and Stock Market, BEST ECONOMY EVER! Greatest Military in the World, by far. We are WINNING on all fronts, WINNING LIKE NEVER BEFORE. GOD BLESS YOU ALL!!! President DONALD J. TRUMP.'
+2. Lebanon proxies 警告（上午，已記錄為 last_seen_id）：
+   'Iran must immediately stop their highly paid PROXIES in Lebanon from causing trouble. If they don't, we'll hit Iran very hard again, just like we did last week, only harder!!'
 
-## LINE 通知
+### 方法 C：Trump Archive
+- thetrumparchive.com → 403 Forbidden
 
-- **狀態**: 失敗
-- **原因**: api.line.me 不在網路出口白名單中（Host not in allowlist: api.line.me）
-- **建議**: 在 Claude Code on the web 環境設定中，將 api.line.me 加入網路出口允許清單
-
-## 抓取方法說明
-
-- Truth Social RSS: 403 Forbidden
-- Truth Social API: 403 Forbidden
-- Trump Archive: 403 Forbidden
-- WebSearch: 成功找到貼文內容
-- 資料來源: CBS News, Times of Israel, NBC News, ZeroHedge (June 21, 2026 live blogs)
+## 結論
+無法確認晚於 last_seen_id 之新貼文，本次不更新狀態，不推播 LINE
+背景：Vance 赴瑞士進行美伊和談；伊朗再度關閉荷姆茲海峽；以色列持續攻擊黎巴嫩
