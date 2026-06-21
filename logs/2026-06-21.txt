@@ -1,5 +1,6 @@
 日期：2026-06-21
-執行時間：2026-06-21T06:22:46Z
+第一次執行時間：2026-06-21T06:22:46Z
+第二次執行時間：2026-06-21T07:20:00Z（本次）
 
 === 監控執行紀錄 ===
 
@@ -8,29 +9,33 @@
 
 === 資料取得方法嘗試 ===
 
-方法 A1 - Truth Social RSS：HTTP 403 Forbidden
-方法 A2 - Truth Social API：HTTP 403 Forbidden
+方法 A1 - Truth Social RSS：HTTP 403 Forbidden（truthsocial.com 不在網路允許清單）
+方法 A2 - Truth Social API：HTTP 403 Forbidden（同上）
 方法 B  - WebSearch：找到背景資訊，但無法確認 6/21 具體新貼文
 方法 C  - Trump Archive：HTTP 403 Forbidden
-方法 D  - trumpstruth.org：HTTP 403 Forbidden
-方法 E  - followtrumpstruth.com：HTTP 403 Forbidden
-方法 F  - 新聞媒體（CBS、NBC、Al Jazeera、Fox 等）：全部 HTTP 403 Forbidden
+方法 D  - 多家新聞媒體（CBS、NBC、Al Jazeera、Fox、PBS 等）：全部 HTTP 403 Forbidden
 
-=== 背景資訊（無法確認日期或貼文原文）===
+=== 已確認 6/20 貼文（均早於或等於 last_seen，已追蹤）===
 
-6/20 已追蹤貼文：
-- 梅洛尼照片爭議（6/20 早上）：批評義大利總理在 G7 多次要求合照
-- 霍爾木茲海峽關稅貼文（6/20 下午）：若 60 天內未達成最終協議，美方可能徵收通行費
+1. 梅洛尼照片爭議貼文（6/20 早上）：
+   「Italian Prime Minister Giorgia Meloni asked, over and over, for a picture with me 
+   during the G-7 meeting in France. She is doing poorly in Italy with her level of 
+   popularity... She wouldn't even let us use Italy's landing strips or runways...」
 
-6/21 已知大事（無法確認具體貼文文字）：
+2. 霍爾木茲海峽關稅貼文（6/20 下午，即 last_seen）：
+   「There will be NO TOLLS in the Hormuz Strait for 60 days during the Cease Fire Period, 
+   and there will be NO TOLLS after the 60 day period has expired, unless they are imposed 
+   by and for the United States of America...」
+
+=== 6/21 背景資訊（無法確認具體貼文文字）===
+
+- 萬斯/威特考夫等前往瑞士進行伊朗核武談判（60 天談判期）
+- 梅洛尼爭議持續：義大利外長 Tajani 取消 6/21-22 美國訪問行程
+- 梅洛尼回應：「這些持續的、無端的攻擊毫無意義」
 - 哥倫比亞總統決選（川普支持「老虎」Espriella）
-- 萬斯赴瑞士進行伊朗核武談判
-- 黎巴嫩/以色列停火後緊張局勢持續
-- 梅洛尼爭議持續發酵
+- 伊朗與美方對霍爾木茲通行費立場仍存分歧
 
 === 結論 ===
 
-所有取得方法均告失敗，無法確認 6/21 新貼文。
-
+兩次執行均確認所有存取方法告失敗，無法取得 6/21 具體新貼文。
 行動：未建立新貼文分析檔案、未更新 last_seen_id.txt、未推播 LINE。
-下次執行時應重新嘗試取得 6/20 21:00 UTC 之後的貼文。
