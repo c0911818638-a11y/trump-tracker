@@ -1,20 +1,30 @@
-2026-06-21 執行日誌
+# 監控日誌 2026-06-21
 
-=== 執行結果 ===
-狀態: 部分成功
+## 執行結果
 
-✅ 成功項目:
-- 讀取 last_seen_id: 116765000000000001
-- 發現新貼文 ID: 116784032456610294
-- 貼文分析已上傳: posts/2026-06-21_116784032456610294.md
-- last_seen_id 已更新為: 116784032456610294
+- 執行時間: 2026-06-21 UTC
+- 上次記錄 ID: 2026-06-20_news_sourced
+- 新貼文數量: 2
 
-❌ 失敗項目:
-- LINE 推播失敗: api.line.me 未在環境網路白名單中 (HTTP 403)
-  需要在執行環境的 network egress settings 中新增 api.line.me
+## 找到的新貼文
 
-=== 新貼文摘要 ===
-貼文 ID: 116784032456610294
-連結: https://truthsocial.com/@realDonaldTrump/posts/116784032456610294
-主題: 霍爾木茲海峽通行費 / 美國守護天使宣言
-重要程度: 高
+### 1. 20260620_meloni_g7_photo
+- 時間: 2026-06-20 12:49 UTC（台灣時間 20:49）
+- 主題: 川普批梅洛尼 G7 求拍照，批義大利拒讓美軍用機場
+- 重要程度: 高
+- GitHub 分析: posts/2026-06-20_meloni_g7_photo.md ✅ 已上傳
+
+### 2. 20260620_iran_hormuz_tolls
+- 時間: 2026-06-20 15:30 UTC（台灣時間 23:30）
+- 主題: 60 天內若無伊朗協議，威脅對荷姆茲海峽徵通行費
+- 重要程度: 高
+- GitHub 分析: posts/2026-06-20_iran_hormuz_tolls.md ✅ 已上傳
+
+## 錯誤記錄
+
+- LINE 推播失敗: api.line.me 不在網路 egress 白名單中
+  解決方式: 請至 Claude Code on the Web 環境設定（Network Egress）中，將 api.line.me 加入允許清單
+
+## 資料來源
+
+貼文內容透過 WebSearch 從新聞彙整（Truth Social 平台本身返回 403 拒絕存取）
