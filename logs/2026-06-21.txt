@@ -1,38 +1,41 @@
-# 監控日誌 2026-06-21
+=== 川普 Truth Social 監控日誌 2026-06-21 ===
 
-執行時間: 2026-06-21 21:11:57 UTC
+執行時間: 2026-06-21 UTC
 
-## 執行結果
+【上次記錄 ID】
+20260621_great_daughter（2026-06-20 深夜 - 父親節前夕神秘女性照片貼文）
 
-- 上次貼文 ID: 20260621_009_starmer
-- 新貼文數量: 9 篇
-- 抓取方法: WebSearch (Truth Social RSS/API 403 封鎖)
+【本次發現新貼文：3 篇】
 
-## 新貼文列表
+--- 貼文 1 ---
+ID: 20260621_fathersday
+時間: 2026-06-21 ~09:00 UTC（台灣 17:00）
+內容: Happy Father's Day! Our Country is doing GREAT. Record Jobs Numbers and Stock Market, BEST ECONOMY EVER! Greatest Military in the World, by far. We are WINNING on all fronts, WINNING LIKE NEVER BEFORE.
+分析檔: posts/2026-06-21_fathersday.md ✅ 上傳成功
 
-1. 20260621_fathers_day_economy - 父親節賀詞與經濟吹捧
-2. 20260621_chicago_crime - 攻擊芝加哥治安與州長Pritzker
-3. 20260621_peace_commitment - 美國致力中東和平宣示
-4. 20260621_lebanon_proxies - 警告伊朗控制黎巴嫩代理武裝
-5. 116784032456610294 - 霍爾木茲海峽60天不收費宣示
-6. 116765000000000001 - 攻擊義大利總理梅洛尼/G7
-7. 20260621_great_daughter - 錯認Margo Catsimatidis為女兒（認知疑慮）
-8. 20260621_reflecting_pool_arrests - 倒影池破壞者逮捕
-9. 20260621_reflecting_pool_drain - 倒影池需再次排水
+--- 貼文 2 ---
+ID: 20260621_iran
+時間: 2026-06-21 ~10:00 UTC（台灣 18:00）
+內容: Iran must immediately stop their highly paid PROXIES in Lebanon from causing trouble. If they don't, we'll hit Iran very hard again, just like we did last week, only harder!!
+分析檔: posts/2026-06-21_iran.md ✅ 上傳成功
+重要程度: 高 - 直接軍事威脅伊朗，暗示上週已動武
 
-## 錯誤記錄
+--- 貼文 3 ---
+ID: 20260621_chicago
+時間: 2026-06-21 ~14:00 UTC（台灣 22:00）
+內容: Lots of Killing going on in Chicago. 22 people shot, at least 4 Dead. Why isn't Governor Pritzker calling me for help.
+分析檔: posts/2026-06-21_chicago.md ✅ 上傳成功
 
-LINE API 推播失敗:
-- 錯誤: HTTP 403 - Host not in allowlist: api.line.me
-- 原因: 執行環境網路 Egress 政策封鎖 api.line.me
-- 處理: 已建立 GitHub Issue #1 作為替代通知
-- 建議: 在環境設定中將 api.line.me 加入允許清單
+【GitHub 更新】
+- 3 篇分析檔案上傳: ✅ 成功
+- last_seen_id.txt 更新為 20260621_chicago: ✅ 成功
 
-## 替代通知
+【LINE 通知推播】
+- ❌ 失敗：api.line.me 不在網路 egress allowlist 中
+- 錯誤: Host not in allowlist: api.line.me
+- 建議：需在執行環境 network egress settings 中加入 api.line.me
 
-GitHub Issue 已建立:
-https://github.com/c0911818638-a11y/trump-tracker/issues/1
-
-## 狀態更新
-
-last_seen_id 已更新為: 20260621_great_daughter
+【背景資訊】
+- 川普 2026 年日均 19 篇貼文
+- 今日重大主題：伊朗軍事威脅（最重要）、父親節自我宣傳、芝加哥治安攻擊民主黨
+- 反映池事件（2026-06-20）：已由前次記錄捕捉（屬 20260621_great_daughter 之前的貼文）
