@@ -7,35 +7,48 @@
 上次記錄 ID：20260620_iran_hormuz_tolls
 上次記錄 SHA：ce90f58abce44fccdcbaad082601d96ce86a6863
 
-=== 資料取得方法嘗試 ===
+=== 網路限制（關鍵問題）===
 
-方法 A1 - Truth Social RSS：HTTP 403 Forbidden（truthsocial.com 不在網路允許清單）
-方法 A2 - Truth Social API：HTTP 403 Forbidden（同上）
-方法 B  - WebSearch：找到背景資訊，但無法確認 6/21 具體新貼文
-方法 C  - Trump Archive：HTTP 403 Forbidden
-方法 D  - 多家新聞媒體（CBS、NBC、Al Jazeera、Fox、PBS 等）：全部 HTTP 403 Forbidden
+以下網域均不在環境網路允許清單中：
+- truthsocial.com（核心資料來源，完全無法存取）
+- api.line.me（LINE 通知，無法推播）
+- thetrumparchive.com（備用來源）
+- 多數新聞媒體（CBS、NBC、Al Jazeera、Fox 等）：全部 HTTP 403 Forbidden
 
-=== 已確認 6/20 貼文（均早於或等於 last_seen，已追蹤）===
+=== 已確認 6/20 貼文（via WebSearch，均早於 last_seen）===
 
 1. 梅洛尼照片爭議貼文（6/20 早上）：
-   「Italian Prime Minister Giorgia Meloni asked, over and over, for a picture with me 
-   during the G-7 meeting in France. She is doing poorly in Italy with her level of 
-   popularity... She wouldn't even let us use Italy's landing strips or runways...」
+   Trump: Italian Prime Minister Giorgia Meloni asked, over and over, for a picture
+   with me during the G-7 meeting in France. She is doing poorly in Italy with her
+   level of popularity... She wouldn't even let us use Italy's landing strips...
+   [No Thanks!!!]
 
-2. 霍爾木茲海峽關稅貼文（6/20 下午，即 last_seen）：
-   「There will be NO TOLLS in the Hormuz Strait for 60 days during the Cease Fire Period, 
-   and there will be NO TOLLS after the 60 day period has expired, unless they are imposed 
-   by and for the United States of America...」
+2. 霍爾木茲海峽關稅貼文（6/20 下午，即 last_seen = 20260620_iran_hormuz_tolls）：
+   Trump: There will be NO TOLLS in the Hormuz Strait for 60 days during the Cease
+   Fire Period, and there will be NO TOLLS after the 60 day period has expired,
+   unless they are imposed by and for the United States of America, should the deal
+   not be completed, for services rendered as the Guardian Angel to the countries
+   of the Middle East for purposes of both past, present, and future reimbursement
+   of costs.
 
 === 6/21 背景資訊（無法確認具體貼文文字）===
 
-- 萬斯/威特考夫等前往瑞士進行伊朗核武談判（60 天談判期）
+- 萬斯/威特考夫前往瑞士進行伊朗核武談判（60 天談判期）
 - 梅洛尼爭議持續：義大利外長 Tajani 取消 6/21-22 美國訪問行程
 - 梅洛尼回應：「這些持續的、無端的攻擊毫無意義」
-- 哥倫比亞總統決選（川普支持「老虎」Espriella）
-- 伊朗與美方對霍爾木茲通行費立場仍存分歧
+- 霍爾木茲通行費爭議：伊美雙方立場仍有分歧（免費 vs 服務費）
 
 === 結論 ===
 
-兩次執行均確認所有存取方法告失敗，無法取得 6/21 具體新貼文。
-行動：未建立新貼文分析檔案、未更新 last_seen_id.txt、未推播 LINE。
+所有存取方法均告失敗（網路政策限制）：
+- 無法取得 6/21 具體新貼文
+- 無法推播 LINE 通知（api.line.me 亦被封鎖）
+- 未建立新貼文分析檔案
+- 未更新 last_seen_id.txt
+
+=== 建議修復步驟 ===
+
+請至 claude.ai/code 環境設定，將以下域名加入 Network Egress Settings：
+1. truthsocial.com（主要資料來源）
+2. api.line.me（LINE 通知）
+3. thetrumparchive.com（備用資料來源）
