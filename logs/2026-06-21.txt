@@ -1,37 +1,45 @@
-[2026-06-21] 川普 Truth Social 監控執行日誌
+[2026-06-21] 川普 Truth Social 監控日誌（第二次執行）
 
 執行時間: 2026-06-21 UTC
-上次記錄貼文 ID: 20260620_iran_hormuz_tolls
-上次記錄 SHA: ce90f58abce44fccdcbaad082601d96ce86a6863
+上次帖文 ID: 20260620_iran_hormuz_tolls
+上次帖文 SHA: ce90f58abce44fccdcbaad082601d96ce86a6863
 
-【錯誤說明】
-所有方法均無法取得川普最新 Truth Social 貼文：
-
-方法 A - Truth Social RSS/API 直接存取：
+【取得管道狀況】
+方法 A - Truth Social RSS/API 封鎖:
   - https://truthsocial.com/@realDonaldTrump.rss -> HTTP 403
-  - https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 -> HTTP 403
+  - https://truthsocial.com/api/v1/accounts/107780257626128497/statuses -> HTTP 403
 
-方法 B - WebSearch 搜尋：
-  - 搜尋 June 20-21 2026 相關關鍵字共 10+ 次
-  - 未找到 2026-06-20 ion_hormuz_tolls 後至 2026-06-21 的具體貼文原文
-  - 搜尋引擎回傳舊資料或一般性統計資訊
+方法 B - WebSearch (25+ 次搜尋):
+  - 找到 2026-06-20 ion_hormuz_tolls 前的 Meloni 帖文
+  - 未能確認 2026-06-21 的具體帖文 ID 和時間戳
 
-方法 C - Trump Archive 及其他來源：
+方法 C - Trump Archive 封鎖:
   - https://www.thetrumparchive.com/ -> HTTP 403
-  - truthsocial.com/@realDonaldTrump/posts/116351998782539414 -> HTTP 403
-  - 30+ 個新聞來源 NBC CNN Daily Beast Yahoo Poynter Axios 等 -> 全部 HTTP 403
-  - Wikipedia eciks.org factbase -> HTTP 403
-  - Instagram Facebook X/Twitter -> HTTP 403
+  - 多個新聞網站 (NBC, CNN, CBS, Fox, PBS 等) -> HTTP 403
 
-【現有背景資訊（無法確認是否為新貼文）】
-- Iran-US 和平協議於 6/17 在凡爾賽簽署（14 點備忘錄）
-- Jay Clayton DNI 任命聽證會遭川普取消（約 6/17-20）
-- G7 峰會（法國）-> 烏克蘭/俄羅斯成焦點
-- 有報導指川普在搞砸和平協議後進行 Truth Social 狂貼（但無法確認具體日期是否在 last_seen_id 之後）
+【已確認 2026-06-20 帖文（早於 last_seen_id）】
+1. 義大利/梅洛尼帖文（週六早晨）:
+   "Italian Prime Minister Giorgia Meloni asked, over and over, for a picture 
+   with me during the G-7 meeting in France. She is doing poorly in Italy with 
+   her level of popularity... She wouldn't even let us use Italy's landing strips 
+   or runways, a great logistical inconvenience. Now, after the United States 
+   defeated Iran militarily, she wants to be friends again in order to get her 
+   'numbers up.' No thanks!!"
+   
+2. 霍爾木茲過路費帖文（週六深夜）= last_seen_id:
+   "There will be NO TOLLS in the Hormuz Strait for 60 days during the Cease 
+   Fire Period, and there will be NO TOLLS after the 60 day period has expired,
+   unless they are imposed by and for the United States of America..."
 
-【處理結果】
-- 未建立貼文分析檔案
-- 未推播 LINE 通知
-- 未更新 state/last_seen_id.txt
+【2026-06-21 (週日) 重大事件背景】
+- 伊朗宣稱重新關閉霍爾木茲海峽（引用黎巴嫩停火違規）
+- 以色列空襲黎巴嫩南部，至少 16 人死亡（含 2 名兒童）
+- 副總統萬斯抵達瑞士伯根斯托克，與伊朗談判代表會談
+- 義大利外長塔亞尼取消訪美計劃（回應川普-梅洛尼爭端）
+- Trump-Meloni 口水戰升溫，義大利媒體批評川普
 
-下次執行將從 ID: 20260620_iran_hormuz_tolls 繼續追蹤
+【結論】
+- 無法確認 2026-06-21 新帖文的具體文字和 ID
+- Truth Social 及大多數主流新聞網站封鎖存取
+- 未傳送 LINE 通知
+- 未更新 last_seen_id（因無法確認新帖文）
