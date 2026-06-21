@@ -1,22 +1,20 @@
-# 執行日誌 2026-06-21
+2026-06-21 執行日誌
 
-## 執行結果
-- 上次追蹤 ID：116759400000000001（2026-06-21）
-- 本次新貼文：1 篇
+=== 執行結果 ===
+狀態: 部分成功
 
-## 發現的新貼文
-- ID：116765000000000001
-- 日期：2026-06-21 上午（UTC）
-- 主題：川普攻擊義大利總理 Meloni（G7 合照爭議 + 美伊戰爭盟友批評）
-- 檔案：posts/2026-06-21_116765000000000001.md
+✅ 成功項目:
+- 讀取 last_seen_id: 116765000000000001
+- 發現新貼文 ID: 116784032456610294
+- 貼文分析已上傳: posts/2026-06-21_116784032456610294.md
+- last_seen_id 已更新為: 116784032456610294
 
-## 狀態更新
-- last_seen_id.txt 已更新為：2026-06-21_116765000000000001
+❌ 失敗項目:
+- LINE 推播失敗: api.line.me 未在環境網路白名單中 (HTTP 403)
+  需要在執行環境的 network egress settings 中新增 api.line.me
 
-## 錯誤
-- TruthSocial 直接存取：HTTP 403（已知問題，改用 WebSearch）
-- LINE API 推播失敗：api.line.me 不在 network egress allowlist 中
-  - 需要在 Claude Code on Web 環境設定中加入 api.line.me
-
-## 資料來源
-- The Hill, CBS News, Fox News, France 24, Newsweek, Al Jazeera（新聞報導重建）
+=== 新貼文摘要 ===
+貼文 ID: 116784032456610294
+連結: https://truthsocial.com/@realDonaldTrump/posts/116784032456610294
+主題: 霍爾木茲海峽通行費 / 美國守護天使宣言
+重要程度: 高
