@@ -1,54 +1,37 @@
-日期：2026-06-21
-第一次執行時間：2026-06-21T06:22:46Z
-第二次執行時間：2026-06-21T07:20:00Z（本次）
+[2026-06-21] 川普 Truth Social 監控執行日誌
 
-=== 監控執行紀錄 ===
+執行時間: 2026-06-21 UTC
+上次記錄貼文 ID: 20260620_iran_hormuz_tolls
+上次記錄 SHA: ce90f58abce44fccdcbaad082601d96ce86a6863
 
-上次記錄 ID：20260620_iran_hormuz_tolls
-上次記錄 SHA：ce90f58abce44fccdcbaad082601d96ce86a6863
+【錯誤說明】
+所有方法均無法取得川普最新 Truth Social 貼文：
 
-=== 網路限制（關鍵問題）===
+方法 A - Truth Social RSS/API 直接存取：
+  - https://truthsocial.com/@realDonaldTrump.rss -> HTTP 403
+  - https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 -> HTTP 403
 
-以下網域均不在環境網路允許清單中：
-- truthsocial.com（核心資料來源，完全無法存取）
-- api.line.me（LINE 通知，無法推播）
-- thetrumparchive.com（備用來源）
-- 多數新聞媒體（CBS、NBC、Al Jazeera、Fox 等）：全部 HTTP 403 Forbidden
+方法 B - WebSearch 搜尋：
+  - 搜尋 June 20-21 2026 相關關鍵字共 10+ 次
+  - 未找到 2026-06-20 ion_hormuz_tolls 後至 2026-06-21 的具體貼文原文
+  - 搜尋引擎回傳舊資料或一般性統計資訊
 
-=== 已確認 6/20 貼文（via WebSearch，均早於 last_seen）===
+方法 C - Trump Archive 及其他來源：
+  - https://www.thetrumparchive.com/ -> HTTP 403
+  - truthsocial.com/@realDonaldTrump/posts/116351998782539414 -> HTTP 403
+  - 30+ 個新聞來源 NBC CNN Daily Beast Yahoo Poynter Axios 等 -> 全部 HTTP 403
+  - Wikipedia eciks.org factbase -> HTTP 403
+  - Instagram Facebook X/Twitter -> HTTP 403
 
-1. 梅洛尼照片爭議貼文（6/20 早上）：
-   Trump: Italian Prime Minister Giorgia Meloni asked, over and over, for a picture
-   with me during the G-7 meeting in France. She is doing poorly in Italy with her
-   level of popularity... She wouldn't even let us use Italy's landing strips...
-   [No Thanks!!!]
+【現有背景資訊（無法確認是否為新貼文）】
+- Iran-US 和平協議於 6/17 在凡爾賽簽署（14 點備忘錄）
+- Jay Clayton DNI 任命聽證會遭川普取消（約 6/17-20）
+- G7 峰會（法國）-> 烏克蘭/俄羅斯成焦點
+- 有報導指川普在搞砸和平協議後進行 Truth Social 狂貼（但無法確認具體日期是否在 last_seen_id 之後）
 
-2. 霍爾木茲海峽關稅貼文（6/20 下午，即 last_seen = 20260620_iran_hormuz_tolls）：
-   Trump: There will be NO TOLLS in the Hormuz Strait for 60 days during the Cease
-   Fire Period, and there will be NO TOLLS after the 60 day period has expired,
-   unless they are imposed by and for the United States of America, should the deal
-   not be completed, for services rendered as the Guardian Angel to the countries
-   of the Middle East for purposes of both past, present, and future reimbursement
-   of costs.
+【處理結果】
+- 未建立貼文分析檔案
+- 未推播 LINE 通知
+- 未更新 state/last_seen_id.txt
 
-=== 6/21 背景資訊（無法確認具體貼文文字）===
-
-- 萬斯/威特考夫前往瑞士進行伊朗核武談判（60 天談判期）
-- 梅洛尼爭議持續：義大利外長 Tajani 取消 6/21-22 美國訪問行程
-- 梅洛尼回應：「這些持續的、無端的攻擊毫無意義」
-- 霍爾木茲通行費爭議：伊美雙方立場仍有分歧（免費 vs 服務費）
-
-=== 結論 ===
-
-所有存取方法均告失敗（網路政策限制）：
-- 無法取得 6/21 具體新貼文
-- 無法推播 LINE 通知（api.line.me 亦被封鎖）
-- 未建立新貼文分析檔案
-- 未更新 last_seen_id.txt
-
-=== 建議修復步驟 ===
-
-請至 claude.ai/code 環境設定，將以下域名加入 Network Egress Settings：
-1. truthsocial.com（主要資料來源）
-2. api.line.me（LINE 通知）
-3. thetrumparchive.com（備用資料來源）
+下次執行將從 ID: 20260620_iran_hormuz_tolls 繼續追蹤
