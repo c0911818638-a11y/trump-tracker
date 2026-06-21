@@ -1,64 +1,38 @@
-# 監控執行日誌 - 2026-06-21
+# 監控日誌 2026-06-21
 
-## 執行結果（第一次執行 ~18:08 UTC）
-- 狀態：部分成功（GitHub 上傳成功，LINE 推播失敗）
-- 執行時間：2026-06-21 18:08 UTC
+執行時間: 2026-06-21 21:11:57 UTC
 
-### 發現貼文（4則）
-1. Father's Day 父親節祝賀（~07:30 UTC）—重要程度：低
-2. 芝加哥槍擊事件攻擊 Pritzker（~08:15 UTC）—重要程度：低
-3. 伊朗戰爭威脅（~09:00 UTC）—重要程度：高 ⭐
-   原文：Iran must immediately stop their highly paid PROXIES in Lebanon from causing trouble. If they don't, we'll hit Iran very hard again, just like we did last week, only harder!!
-4. 倒影池破壞事件連發多則（~10:30 UTC）—重要程度：中
+## 執行結果
 
-### LINE 推播結果：失敗 ❌
-錯誤：Host not in allowlist: api.line.me
+- 上次貼文 ID: 20260621_009_starmer
+- 新貼文數量: 9 篇
+- 抓取方法: WebSearch (Truth Social RSS/API 403 封鎖)
 
----
+## 新貼文列表
 
-## 執行結果（第二次執行 ~19:09 UTC）
-- 狀態：部分成功（GitHub 上傳成功，LINE 推播失敗）
-- 起始 last_seen_id：20260621_004_reflectingpool
+1. 20260621_fathers_day_economy - 父親節賀詞與經濟吹捧
+2. 20260621_chicago_crime - 攻擊芝加哥治安與州長Pritzker
+3. 20260621_peace_commitment - 美國致力中東和平宣示
+4. 20260621_lebanon_proxies - 警告伊朗控制黎巴嫩代理武裝
+5. 116784032456610294 - 霍爾木茲海峽60天不收費宣示
+6. 116765000000000001 - 攻擊義大利總理梅洛尼/G7
+7. 20260621_great_daughter - 錯認Margo Catsimatidis為女兒（認知疑慮）
+8. 20260621_reflecting_pool_arrests - 倒影池破壞者逮捕
+9. 20260621_reflecting_pool_drain - 倒影池需再次排水
 
-### 發現貼文（5則）
-5. Father's Day 經濟宣示（v2）—重要程度：低
-6. 芝加哥犯罪（v2）—重要程度：低
-7. 伊朗代理軍威脅（黎巴嫩）—重要程度：高 ⭐
-8. 伊朗/Obama 批評（~07:00 UTC）—重要程度：中
-9. 英國首相 Starmer 將辭職（18:40 UTC）—重要程度：高 ⭐
-   原文：Keir Starmer will resign as Prime Minister of The United Kingdom. He failed badly on two very important subjects- IMMIGRATION AND ENERGY (OPEN NORTH SEA OIL!). I wish him well!
+## 錯誤記錄
 
-### LINE 推播結果：失敗 ❌
-錯誤：Host not in allowlist: api.line.me
-更新 last_seen_id → 20260621_009_starmer
+LINE API 推播失敗:
+- 錯誤: HTTP 403 - Host not in allowlist: api.line.me
+- 原因: 執行環境網路 Egress 政策封鎖 api.line.me
+- 處理: 已建立 GitHub Issue #1 作為替代通知
+- 建議: 在環境設定中將 api.line.me 加入允許清單
 
----
+## 替代通知
 
-## 執行結果（第三次執行 ~20:20 UTC）
-- 狀態：無新貼文確認（GitHub 正常，LINE 封鎖）
-- 起始 last_seen_id：20260621_009_starmer
-- 搜尋方式：WebSearch（Truth Social/RSS 返回 403）
-- 結果：未發現 19:09 UTC 後的新確認貼文
+GitHub Issue 已建立:
+https://github.com/c0911818638-a11y/trump-tracker/issues/1
 
-### LINE 推播結果：失敗 ❌
-錯誤：Host not in allowlist: api.line.me（再次確認）
+## 狀態更新
 
----
-
-## ⚠️ 重要警告：LINE 通知已全日失效
-
-今日（2026-06-21）所有執行均無法推播 LINE 通知。
-用戶尚未收到今日任何重要貼文通知，包括：
-- 🚨 川普威脅對伊朗發動更強軍事打擊
-- 🚨 川普預告英國首相 Starmer 辭職
-
-**修復方法：**
-請前往 Claude Code on the Web → 環境設定 → Network Egress Settings
-加入：api.line.me
-
-## 已追蹤貼文總計（2026-06-21）
-序列編號貼文：009 則（001-009）
-非序列貼文：另含 Meloni、Hormuz tolls、reflecting pool 等多則
-
-## 當前 last_seen_id
-20260621_009_starmer
+last_seen_id 已更新為: 20260621_great_daughter
