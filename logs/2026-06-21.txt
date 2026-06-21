@@ -1,24 +1,42 @@
-2026-06-21 Trump Tracker Run Log
-=================================
-執行時間: 2026-06-21 UTC
+# 監控執行日誌 - 2026-06-21
 
-步驟1: 讀取 last_seen_id
-  上次ID: 20260621_chicago_crime
-  SHA: c47b50f54801b63cd5623d9bcc083313e5236f30
+## 執行結果
+- 狀態：部分成功（GitHub 上傳成功，LINE 推播失敗）
+- 執行時間：2026-06-21 UTC
 
-步驟2: 抓取川普貼文
-  方法A (RSS/API): 失敗 - 403 Forbidden
-  方法B (WebSearch): 成功 - 找到新貼文
+## 上次記錄
+- last_seen_id: 20260621_great_daughter（2026-06-20 21:55 UTC 川普誤發「great daughter」貼文）
 
-步驟3: 找到 2 篇新貼文（比 chicago_crime 更新）:
-  1. 20260621_reflecting_pool_arrests - 倒影池更多逮捕宣告
-  2. 20260621_great_daughter - 神秘女性「了不起的女兒」貼文
+## 本次發現新貼文（4則）
 
-步驟4-5: 分析完成並上傳至 GitHub:
-  posts/2026-06-21_reflecting_pool_arrests.md - OK
-  posts/2026-06-21_great_daughter.md - OK
-  state/last_seen_id.txt -> 20260621_great_daughter - OK
+### 1. Father's Day 父親節祝賀（2026-06-21 ~07:30 UTC）
+原文：Happy Father's Day! Our Country is doing GREAT. Record Jobs Numbers and Stock Market, BEST ECONOMY EVER!...
+重要程度：低
 
-步驟6: LINE 推播
-  錯誤: Host not in allowlist: api.line.me
-  需要在環境網路設定中加入 api.line.me 白名單
+### 2. 芝加哥槍擊事件攻擊 Pritzker（2026-06-21 ~08:15 UTC）
+原文：Lots of Killing going on in Chicago. 22 people shot, at least 4 Dead. Why isn't Governor Pritzker calling me for help
+重要程度：低
+
+### 3. 伊朗戰爭威脅（2026-06-21 ~09:00 UTC）⭐ 重要
+原文：Iran must immediately stop their highly paid PROXIES in Lebanon from causing trouble. If they don't, we'll hit Iran very hard again, just like we did last week, only harder!!
+重要程度：高
+
+### 4. 倒影池破壞事件連發多則（2026-06-21 ~10:30 UTC）
+原文：Who would do such a thing? These are very serious crimes having to do with the destruction of National Monuments...（連發4則）
+重要程度：中
+
+## GitHub 上傳結果
+- posts/2026-06-21_001_fathersday.md：成功
+- posts/2026-06-21_002_chicago.md：成功
+- posts/2026-06-21_003_iran.md：成功
+- posts/2026-06-21_004_reflectingpool.md：成功
+- state/last_seen_id.txt 更新為：20260621_004_reflectingpool：成功
+
+## LINE 推播結果
+- 狀態：失敗
+- 錯誤：Host not in allowlist: api.line.me
+- 需要在網路出口設定中加入 api.line.me
+
+## 需要處理
+1. 請至 Claude Code 環境設定中，將 api.line.me 加入網路出口 allowlist
+2. 最重要的未推播通知：伊朗戰爭威脅貼文（重要程度：高）
