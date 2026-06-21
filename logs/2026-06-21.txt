@@ -1,42 +1,64 @@
 # 監控執行日誌 - 2026-06-21
 
-## 執行結果
+## 執行結果（第一次執行 ~18:08 UTC）
 - 狀態：部分成功（GitHub 上傳成功，LINE 推播失敗）
-- 執行時間：2026-06-21 UTC
+- 執行時間：2026-06-21 18:08 UTC
 
-## 上次記錄
-- last_seen_id: 20260621_great_daughter（2026-06-20 21:55 UTC 川普誤發「great daughter」貼文）
+### 發現貼文（4則）
+1. Father's Day 父親節祝賀（~07:30 UTC）—重要程度：低
+2. 芝加哥槍擊事件攻擊 Pritzker（~08:15 UTC）—重要程度：低
+3. 伊朗戰爭威脅（~09:00 UTC）—重要程度：高 ⭐
+   原文：Iran must immediately stop their highly paid PROXIES in Lebanon from causing trouble. If they don't, we'll hit Iran very hard again, just like we did last week, only harder!!
+4. 倒影池破壞事件連發多則（~10:30 UTC）—重要程度：中
 
-## 本次發現新貼文（4則）
+### LINE 推播結果：失敗 ❌
+錯誤：Host not in allowlist: api.line.me
 
-### 1. Father's Day 父親節祝賀（2026-06-21 ~07:30 UTC）
-原文：Happy Father's Day! Our Country is doing GREAT. Record Jobs Numbers and Stock Market, BEST ECONOMY EVER!...
-重要程度：低
+---
 
-### 2. 芝加哥槍擊事件攻擊 Pritzker（2026-06-21 ~08:15 UTC）
-原文：Lots of Killing going on in Chicago. 22 people shot, at least 4 Dead. Why isn't Governor Pritzker calling me for help
-重要程度：低
+## 執行結果（第二次執行 ~19:09 UTC）
+- 狀態：部分成功（GitHub 上傳成功，LINE 推播失敗）
+- 起始 last_seen_id：20260621_004_reflectingpool
 
-### 3. 伊朗戰爭威脅（2026-06-21 ~09:00 UTC）⭐ 重要
-原文：Iran must immediately stop their highly paid PROXIES in Lebanon from causing trouble. If they don't, we'll hit Iran very hard again, just like we did last week, only harder!!
-重要程度：高
+### 發現貼文（5則）
+5. Father's Day 經濟宣示（v2）—重要程度：低
+6. 芝加哥犯罪（v2）—重要程度：低
+7. 伊朗代理軍威脅（黎巴嫩）—重要程度：高 ⭐
+8. 伊朗/Obama 批評（~07:00 UTC）—重要程度：中
+9. 英國首相 Starmer 將辭職（18:40 UTC）—重要程度：高 ⭐
+   原文：Keir Starmer will resign as Prime Minister of The United Kingdom. He failed badly on two very important subjects- IMMIGRATION AND ENERGY (OPEN NORTH SEA OIL!). I wish him well!
 
-### 4. 倒影池破壞事件連發多則（2026-06-21 ~10:30 UTC）
-原文：Who would do such a thing? These are very serious crimes having to do with the destruction of National Monuments...（連發4則）
-重要程度：中
+### LINE 推播結果：失敗 ❌
+錯誤：Host not in allowlist: api.line.me
+更新 last_seen_id → 20260621_009_starmer
 
-## GitHub 上傳結果
-- posts/2026-06-21_001_fathersday.md：成功
-- posts/2026-06-21_002_chicago.md：成功
-- posts/2026-06-21_003_iran.md：成功
-- posts/2026-06-21_004_reflectingpool.md：成功
-- state/last_seen_id.txt 更新為：20260621_004_reflectingpool：成功
+---
 
-## LINE 推播結果
-- 狀態：失敗
-- 錯誤：Host not in allowlist: api.line.me
-- 需要在網路出口設定中加入 api.line.me
+## 執行結果（第三次執行 ~20:20 UTC）
+- 狀態：無新貼文確認（GitHub 正常，LINE 封鎖）
+- 起始 last_seen_id：20260621_009_starmer
+- 搜尋方式：WebSearch（Truth Social/RSS 返回 403）
+- 結果：未發現 19:09 UTC 後的新確認貼文
 
-## 需要處理
-1. 請至 Claude Code 環境設定中，將 api.line.me 加入網路出口 allowlist
-2. 最重要的未推播通知：伊朗戰爭威脅貼文（重要程度：高）
+### LINE 推播結果：失敗 ❌
+錯誤：Host not in allowlist: api.line.me（再次確認）
+
+---
+
+## ⚠️ 重要警告：LINE 通知已全日失效
+
+今日（2026-06-21）所有執行均無法推播 LINE 通知。
+用戶尚未收到今日任何重要貼文通知，包括：
+- 🚨 川普威脅對伊朗發動更強軍事打擊
+- 🚨 川普預告英國首相 Starmer 辭職
+
+**修復方法：**
+請前往 Claude Code on the Web → 環境設定 → Network Egress Settings
+加入：api.line.me
+
+## 已追蹤貼文總計（2026-06-21）
+序列編號貼文：009 則（001-009）
+非序列貼文：另含 Meloni、Hormuz tolls、reflecting pool 等多則
+
+## 當前 last_seen_id
+20260621_009_starmer
