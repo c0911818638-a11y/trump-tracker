@@ -1,41 +1,7 @@
-=== 川普 Truth Social 監控日誌 2026-06-21 ===
-
-執行時間: 2026-06-21 UTC
-
-【上次記錄 ID】
-20260621_great_daughter（2026-06-20 深夜 - 父親節前夕神秘女性照片貼文）
-
-【本次發現新貼文：3 篇】
-
---- 貼文 1 ---
-ID: 20260621_fathersday
-時間: 2026-06-21 ~09:00 UTC（台灣 17:00）
-內容: Happy Father's Day! Our Country is doing GREAT. Record Jobs Numbers and Stock Market, BEST ECONOMY EVER! Greatest Military in the World, by far. We are WINNING on all fronts, WINNING LIKE NEVER BEFORE.
-分析檔: posts/2026-06-21_fathersday.md ✅ 上傳成功
-
---- 貼文 2 ---
-ID: 20260621_iran
-時間: 2026-06-21 ~10:00 UTC（台灣 18:00）
-內容: Iran must immediately stop their highly paid PROXIES in Lebanon from causing trouble. If they don't, we'll hit Iran very hard again, just like we did last week, only harder!!
-分析檔: posts/2026-06-21_iran.md ✅ 上傳成功
-重要程度: 高 - 直接軍事威脅伊朗，暗示上週已動武
-
---- 貼文 3 ---
-ID: 20260621_chicago
-時間: 2026-06-21 ~14:00 UTC（台灣 22:00）
-內容: Lots of Killing going on in Chicago. 22 people shot, at least 4 Dead. Why isn't Governor Pritzker calling me for help.
-分析檔: posts/2026-06-21_chicago.md ✅ 上傳成功
-
-【GitHub 更新】
-- 3 篇分析檔案上傳: ✅ 成功
-- last_seen_id.txt 更新為 20260621_chicago: ✅ 成功
-
-【LINE 通知推播】
-- ❌ 失敗：api.line.me 不在網路 egress allowlist 中
-- 錯誤: Host not in allowlist: api.line.me
-- 建議：需在執行環境 network egress settings 中加入 api.line.me
-
-【背景資訊】
-- 川普 2026 年日均 19 篇貼文
-- 今日重大主題：伊朗軍事威脅（最重要）、父親節自我宣傳、芝加哥治安攻擊民主黨
-- 反映池事件（2026-06-20）：已由前次記錄捕捉（屬 20260621_great_daughter 之前的貼文）
+[2026-06-21] 監控執行完成
+狀態: 找到 2 篇新貼文
+- 20260621_starmer: 川普預告英國首相史達默辭職
+- 20260621_reflecting_pool: 川普夜間連發倒映池遭破壞系列文
+GitHub 上傳: 成功
+last_seen_id 更新: 20260621_reflecting_pool
+LINE 推播: 失敗 (api.line.me 不在網路出口允許清單，需在環境設定加入)
