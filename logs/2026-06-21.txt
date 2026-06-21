@@ -1,1 +1,27 @@
-Trump Tracker Run Log: 2026-06-21. 找到2篇新貼文(reflecting_pool_arrests, reflecting_pool_drain)，已上傳GitHub，但LINE推播失敗（api.line.me 不在網路出口白名單）。
+# 執行日誌 2026-06-21
+
+## 執行結果
+
+- **狀態**: 部分成功
+- **執行時間**: 2026-06-21
+
+## 找到的新貼文
+
+### 貼文 1: 20260621_lebanon_proxies
+- **原文**: "Iran must immediately stop their highly paid PROXIES in Lebanon from causing trouble. If they don't, we'll hit Iran very hard again, just like we did last week, only harder!!"
+- **GitHub 上傳**: 成功 (posts/2026-06-21_lebanon_proxies.md)
+- **last_seen_id 更新**: 成功 (20260621_lebanon_proxies)
+
+## LINE 通知
+
+- **狀態**: 失敗
+- **原因**: api.line.me 不在網路出口白名單中（Host not in allowlist: api.line.me）
+- **建議**: 在 Claude Code on the web 環境設定中，將 api.line.me 加入網路出口允許清單
+
+## 抓取方法說明
+
+- Truth Social RSS: 403 Forbidden
+- Truth Social API: 403 Forbidden
+- Trump Archive: 403 Forbidden
+- WebSearch: 成功找到貼文內容
+- 資料來源: CBS News, Times of Israel, NBC News, ZeroHedge (June 21, 2026 live blogs)
