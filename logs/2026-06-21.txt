@@ -1,29 +1,24 @@
-# 監控執行日誌 - 2026-06-21
+2026-06-21 Trump Tracker Run Log
+=================================
+執行時間: 2026-06-21 UTC
 
-## 執行狀態：部分成功
+步驟1: 讀取 last_seen_id
+  上次ID: 20260621_chicago_crime
+  SHA: c47b50f54801b63cd5623d9bcc083313e5236f30
 
-### ✅ 成功事項
-- 成功讀取 last_seen_id: 20260621_lebanon_proxies
-- 成功透過 WebSearch 取得川普 Truth Social 新貼文
-- 成功建立 3 篇新貼文中文分析並上傳至 GitHub：
-  1. posts/2026-06-21_20260621_peace_commitment.md
-  2. posts/2026-06-21_20260621_fathers_day_economy.md
-  3. posts/2026-06-21_20260621_chicago_crime.md
-- 成功更新 last_seen_id 至: 20260621_chicago_crime
+步驟2: 抓取川普貼文
+  方法A (RSS/API): 失敗 - 403 Forbidden
+  方法B (WebSearch): 成功 - 找到新貼文
 
-### ❌ 失敗事項
-- LINE 推播通知失敗
-  - 錯誤：Host not in allowlist: api.line.me
-  - 原因：遠端執行環境網路出口限制，api.line.me 不在允許清單中
-  - 建議：請至環境設定的 Network Egress 加入 api.line.me 主機
+步驟3: 找到 2 篇新貼文（比 chicago_crime 更新）:
+  1. 20260621_reflecting_pool_arrests - 倒影池更多逮捕宣告
+  2. 20260621_great_daughter - 神秘女性「了不起的女兒」貼文
 
-### 新貼文（共 3 篇）
-1. 和平承諾：The United States is committed to PEACE... (美伊和平談判相關)
-2. 父親節經濟誇耀：Happy Father's Day! Our Country is doing GREAT... (父親節政治宣傳)
-3. 芝加哥治安：Lots of Killing going on in Chicago... (攻擊民主黨治安管理)
+步驟4-5: 分析完成並上傳至 GitHub:
+  posts/2026-06-21_reflecting_pool_arrests.md - OK
+  posts/2026-06-21_great_daughter.md - OK
+  state/last_seen_id.txt -> 20260621_great_daughter - OK
 
-### 搜尋方法
-- 方法 A (RSS)：失敗 (403 Forbidden)
-- 方法 A2 (API)：失敗 (403 Forbidden)
-- 方法 B (WebSearch)：成功
-- 方法 C (Trump Archive)：失敗 (403 Forbidden)
+步驟6: LINE 推播
+  錯誤: Host not in allowlist: api.line.me
+  需要在環境網路設定中加入 api.line.me 白名單
