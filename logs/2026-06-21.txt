@@ -1,24 +1,29 @@
-# 監控執行日誌 2026-06-21
+# 監控執行日誌 - 2026-06-21
 
-執行時間：2026-06-21 15:14:21 UTC
-上次記錄貼文 ID：20260621_lebanon_proxies
+## 執行狀態：部分成功
 
-## 方法嘗試記錄
+### ✅ 成功事項
+- 成功讀取 last_seen_id: 20260621_lebanon_proxies
+- 成功透過 WebSearch 取得川普 Truth Social 新貼文
+- 成功建立 3 篇新貼文中文分析並上傳至 GitHub：
+  1. posts/2026-06-21_20260621_peace_commitment.md
+  2. posts/2026-06-21_20260621_fathers_day_economy.md
+  3. posts/2026-06-21_20260621_chicago_crime.md
+- 成功更新 last_seen_id 至: 20260621_chicago_crime
 
-### 方法 A：直接存取 Truth Social
-- truthsocial.com/@realDonaldTrump.rss → 403 Forbidden
-- truthsocial.com/api/v1/accounts/.../statuses → 403 Forbidden
+### ❌ 失敗事項
+- LINE 推播通知失敗
+  - 錯誤：Host not in allowlist: api.line.me
+  - 原因：遠端執行環境網路出口限制，api.line.me 不在允許清單中
+  - 建議：請至環境設定的 Network Egress 加入 api.line.me 主機
 
-### 方法 B：WebSearch 搜尋
-找到 6/21 已知貼文（推測時序）：
-1. 父親節問候（早晨，推測早於 last_seen_id）：
-   'Happy Father's Day! Our Country is doing GREAT. Record Jobs Numbers and Stock Market, BEST ECONOMY EVER! Greatest Military in the World, by far. We are WINNING on all fronts, WINNING LIKE NEVER BEFORE. GOD BLESS YOU ALL!!! President DONALD J. TRUMP.'
-2. Lebanon proxies 警告（上午，已記錄為 last_seen_id）：
-   'Iran must immediately stop their highly paid PROXIES in Lebanon from causing trouble. If they don't, we'll hit Iran very hard again, just like we did last week, only harder!!'
+### 新貼文（共 3 篇）
+1. 和平承諾：The United States is committed to PEACE... (美伊和平談判相關)
+2. 父親節經濟誇耀：Happy Father's Day! Our Country is doing GREAT... (父親節政治宣傳)
+3. 芝加哥治安：Lots of Killing going on in Chicago... (攻擊民主黨治安管理)
 
-### 方法 C：Trump Archive
-- thetrumparchive.com → 403 Forbidden
-
-## 結論
-無法確認晚於 last_seen_id 之新貼文，本次不更新狀態，不推播 LINE
-背景：Vance 赴瑞士進行美伊和談；伊朗再度關閉荷姆茲海峽；以色列持續攻擊黎巴嫩
+### 搜尋方法
+- 方法 A (RSS)：失敗 (403 Forbidden)
+- 方法 A2 (API)：失敗 (403 Forbidden)
+- 方法 B (WebSearch)：成功
+- 方法 C (Trump Archive)：失敗 (403 Forbidden)
