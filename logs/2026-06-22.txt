@@ -1,19 +1,14 @@
-[2026-06-22 06:18 UTC] 監控執行完畢
+2026-06-22 執行日誌
 
-✅ 成功項目：
-- 讀取 last_seen_id: 20260622_reflecting_pool_39422
-- 透過 WebSearch 找到新貼文 (Truth Social RSS/API 皆返回 403)
-- 分析文件上傳至 posts/2026-06-22_relax_01am.md
-- last_seen_id 更新為: 20260622_relax_01am
+執行結果：找到 3 篇新貼文（June 20-21, 2026）
+GitHub 上傳：成功（3 篇分析檔案）
+last_seen_id 更新：成功（20260622_NYT_morning）
 
-❌ 失敗項目：
-- LINE API 推播失敗: "Host not in allowlist: api.line.me"
-  原因: 執行環境網路 egress 設定未允許 api.line.me
-  解決方式: 在 Claude Code 環境設定中將 api.line.me 加入 egress 允許清單
+LINE 推播狀態：失敗
+原因：HOST NOT IN ALLOWLIST: api.line.me
+需要在環境的 Network Egress Settings 中允許 api.line.me
 
-📋 本次找到的新貼文:
-- 時間: 2026-06-22 01:02 UTC
-- 內容: "Just sit back and relax, it will all work out well in the end. It always does!"
-- 背景: 美伊瑞士和談（Vance 出席）、IRGC 威脅再封鎖荷姆茲海峽
-
-🔍 資料來源: WebSearch (Truth Social 直接 API/RSS 均回 403)
+新貼文摘要：
+1. 2026-06-20: 霍爾木茲「守護天使」——美國威脅對中東收取服務費
+2. 2026-06-21 17:00ET: 怒批紐約時報「腐敗懦夫」——伊朗戰爭成果論戰
+3. 2026-06-21 18:30ET: 稱紐時報導「叛國」並威脅更新數十億美元訴訟
