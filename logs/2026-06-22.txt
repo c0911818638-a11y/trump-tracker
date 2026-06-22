@@ -1,11 +1,20 @@
-2026-06-22 12:16 UTC
+# 執行日誌 2026-06-22（最終更新）
 
-執行摘要：
-- 找到 2 篇新貼文（20260622_post4_iran-done, 20260622_post5_nyt-treasonous）
-- GitHub 分析文件上傳：成功
-- last_seen_id.txt 更新：成功（→ 20260622_post5_nyt-treasonous）
-- LINE 推播：失敗（Host not in allowlist: api.line.me，需在網路出口設定中加入 api.line.me）
+## 本次執行時間
+2026-06-22 13:17:15 UTC
 
-新貼文摘要：
-Post4: 川普稱伊朗軍事已DONE，霍爾木茲開通石油暢流
-Post5: 川普稱《紐約時報》伊朗報導是叛國行為，威脅擴大訴訟
+## 狀態更新
+- 上次記錄 ID：20260622_post5_nyt-treasonous
+- 本次更新 ID：20260622_evening_spree ✅
+
+## 本次執行發現
+所有 6/22 新貼文均已由前次執行建立分析檔案。
+狀態文件落後，本次已修正更新至 20260622_evening_spree。
+
+## 重要貼文摘要（post5 之後）
+1. netanyahu_leak_39416：高重要 - 通話錄音洩漏
+2. iran_lebanon_threat_39421：高重要 - 軍事威脅
+3. evening_spree：中重要 - 31分鐘47篇瘋狂發文
+
+## LINE 通知
+❌ api.line.me 不在網路出口白名單 - 無法推播
