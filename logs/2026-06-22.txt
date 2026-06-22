@@ -1,12 +1,11 @@
-2026-06-22 監控執行日誌
+2026-06-22 12:16 UTC
 
-[錯誤] LINE API (api.line.me) 被網路出口規則封鎖，無法推播通知。
-請在環境的網路出口設定中加入 api.line.me。
+執行摘要：
+- 找到 2 篇新貼文（20260622_post4_iran-done, 20260622_post5_nyt-treasonous）
+- GitHub 分析文件上傳：成功
+- last_seen_id.txt 更新：成功（→ 20260622_post5_nyt-treasonous）
+- LINE 推播：失敗（Host not in allowlist: api.line.me，需在網路出口設定中加入 api.line.me）
 
-[成功] 已找到並分析以下新貼文：
-1. 2026-06-22_iran_hezbollah.md - 伊朗/真主黨軍事威脅（重要程度：高）
-2. 2026-06-21_reflecting_pool.md - 反射水池破壞指控（重要程度：中）
-3. 2026-06-22_evening_spree.md - 31分鐘47篇連發狂潮（重要程度：中）
-
-[成功] 三篇分析已上傳至 GitHub Repo
-[成功] state/last_seen_id.txt 已更新為: 20260622_evening_spree
+新貼文摘要：
+Post4: 川普稱伊朗軍事已DONE，霍爾木茲開通石油暢流
+Post5: 川普稱《紐約時報》伊朗報導是叛國行為，威脅擴大訴訟
