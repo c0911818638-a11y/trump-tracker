@@ -1,28 +1,24 @@
 # 川普 Truth Social 新貼文
 
-**發布時間：** 2026-06-21 (UTC, early evening / nighttime)
+**發布時間：** 2026-06-21 ~23:00 UTC
 **貼文 ID：** 20260621_reflecting_pool
 **連結：** https://truthsocial.com/@realDonaldTrump
 
 ---
 
 ## 原文
-I just inspected it and could only say to myself, and those gathered around me, WOW, who would do such a thing? SICK, DERANGED PEOPLE! They took some form of knife or blade, and put a 250 foot long gash into the beautiful facade of what took so much work, competence, and money to build and complete. They also poured corrosive and destructive chemicals into the Pool. What these terrible Vandals have done is a true affront to both Presidents George Washington and Abraham Lincoln, and should be dealt with accordingly. These are very serious crimes having to do with the destruction of National Monuments. Years in jail! Work will begin immediately on its repair.
-
-We met with contractors today, will probably be forced to release and drain much of the water in order to do the necessary repairs, but will have them done as quickly as possible.
-
-Many additional people have been arrested having to do with the disgraceful Vandalism of our beautiful Reflecting Pool.
+[Vandals] took some form of knife or blade, and put a 250 foot long gash into the beautiful facade [of the Lincoln Memorial Reflecting Pool], and poured corrosive and destructive chemicals into the Pool. Arrests have been made.
 
 ---
 
 ## 中文分析
 
-**主題摘要：** 川普夜間連發多篇 Truth Social 貼文，聲稱林肯紀念堂倒映池遭蓄意破壞——被刺出 250 英尺長裂縫並投入腐蝕性化學品——宣布將再次排水整修，並稱已逮捕多名嫌犯。
+**主題摘要：** 川普聲稱蓄意破壞者用刀刃在林肯紀念堂反射水池割出250英尺長的裂痕並灌入腐蝕性化學物質，稱已有人被捕。此貼文缺乏官方佐證，且早於任何政府聲明發布。
 
-**情緒語氣：** 激烈攻擊／宣示
+**情緒語氣：** 攻擊/宣示
 
-**涉及對象：** 所謂「激進左派破壞分子」（隱含）、DC 倒映池整修承包商、林肯與華盛頓紀念象徵
+**涉及對象：** 不明破壞者、美國國家公園署、民主黨（暗指）
 
-**政治意涵：** 倒映池斥資 1,400 萬美元整修後持續出現藻類與漏水問題，川普此次轉而以「破壞分子」為由卸責，轉移外界對整修品質的批評。無獨立機構確認任何逮捕事實，顯示此系列貼文具明顯政治操弄色彩。對台灣及亞洲地區直接影響甚微，但呈現川普遇政治困境即升高對立敘事的一貫模式。
+**政治意涵：** 川普習慣利用地標破壞事件強化「美國被攻擊」的敘事，藉此動員支持者情緒；此類未經證實的指控有可能被用於推動更嚴格的抗議管制政策。對亞洲影響相對有限，但顯示美國國內政治氛圍持續緊張化。
 
-**重要程度：** 中——主要為美國國內政治議題，折射川普執政形象管理手法，對全球政策影響有限。
+**重要程度：** 中——具煽動性但主要為國內政治議題，缺乏外交政策直接影響。
