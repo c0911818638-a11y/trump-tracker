@@ -1,15 +1,38 @@
-LINE API 推播失敗 - api.line.me 不在網路白名單中。
+# 監控日誌 2026-06-22
 
-已成功完成：
-- 抓取今日川普 Truth Social 貼文（父親節相關）
-- 建立 4 篇中文分析，上傳至 GitHub
-  1. 2026-06-22_fathers_day_economy_39419.md - 父親節經濟宣言
-  2. 2026-06-22_chicago_crime_39420.md - 芝加哥犯罪攻擊貼文
-  3. 2026-06-22_iran_lebanon_threat_39421.md - 父親節伊朗/黎巴嫩威脅（重要！）
-  4. 2026-06-22_reflecting_pool_39422.md - 倒影池破壞聲稱
-- 更新 state/last_seen_id.txt -> 20260622_reflecting_pool_39422
+## 執行時間
+2026-06-22 UTC
 
-未能完成：
-- LINE 推播（api.line.me 網路受限）
+## 上次記錄 ID
+20260622_reflecting_pool_39422
 
-請在 Claude Code on the Web 環境設定中，將 api.line.me 加入 egress allowlist。
+## 執行狀態
+監控執行完成，但無法確認新貼文存在。
+
+## 原因
+1. Truth Social 網站直接存取：HTTP 403 Forbidden
+2. Truth Social RSS 端點：HTTP 403 Forbidden  
+3. Truth Social API 端點：HTTP 403 Forbidden
+4. 大多數新聞網站（NBC、ABC、Fox、CNN、BBC等）：HTTP 403 Forbidden
+5. 網路搜尋取得貼文摘要，但無法確認是否比 last_seen_id 新
+
+## 已知近期貼文（可能已於前次執行中記錄）
+
+### 映水池相關（2026-06-21 17:32 EDT = 2026-06-22 05:32 Taiwan Time）
+- "Work will begin immediately on fixing the seriously vandalized Reflecting Pool. I just inspected it and could only say to myself, and those gathered around me, WOW, who would do such a thing? SICK, DERANGED PEOPLE!"
+- "We met with contractors today, will probably be forced to release and drain much of the water in order to do the necessary repairs, but will have them done as quickly as possible."
+
+### 伊朗/黎巴嫩相關（2026-06-21 09:42 AM EDT）
+- "Iran must immediately stop their highly paid PROXIES in Lebanon from causing trouble. If they don't, we'll hit Iran very hard again, just like we did last week, only harder!!!"
+
+### 義大利/梅洛尼相關（2026-06-20~21）
+- "After spending Trillions of Dollars on NATO, Italy, and its Prime Minister, wouldn't even think of becoming involved with the Islamic Republic of Iran and their very serious Nuclear Threat. For decades, we defend them but, when tested, they are not there to defend us, and the rest of the World. Not good!"
+- "She is doing poorly in Italy with her level of popularity... Now, after the United States defeated Iran militarily, she wants to be friends again in order to get her 'numbers up.' No thanks!!"
+
+## 結論
+以上所有貼文均早於或與 last_seen_id (20260622_reflecting_pool_39422) 相同時間，
+因此視為已追蹤。無新貼文需通報。
+
+## 建議
+考慮使用 Apify Truth Social Scraper API 或其他第三方工具，
+以提升未來監控的可靠性。
