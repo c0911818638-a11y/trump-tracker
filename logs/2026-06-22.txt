@@ -1,21 +1,15 @@
-# 執行日誌 2026-06-22
+LINE API 推播失敗 - api.line.me 不在網路白名單中。
 
-## 執行時間
-2026-06-22 UTC
+已成功完成：
+- 抓取今日川普 Truth Social 貼文（父親節相關）
+- 建立 4 篇中文分析，上傳至 GitHub
+  1. 2026-06-22_fathers_day_economy_39419.md - 父親節經濟宣言
+  2. 2026-06-22_chicago_crime_39420.md - 芝加哥犯罪攻擊貼文
+  3. 2026-06-22_iran_lebanon_threat_39421.md - 父親節伊朗/黎巴嫩威脅（重要！）
+  4. 2026-06-22_reflecting_pool_39422.md - 倒影池破壞聲稱
+- 更新 state/last_seen_id.txt -> 20260622_reflecting_pool_39422
 
-## 結果摘要
-- GitHub 新貼文分析：成功上傳 5 篇
-- last_seen_id.txt 更新：成功（新 ID: 20260622_iran_fake_news_39418）
-- LINE 推播通知：失敗（api.line.me 未在網路白名單中）
+未能完成：
+- LINE 推播（api.line.me 網路受限）
 
-## 本次找到的新貼文（自 20260621_keir_starmer_39413 之後）
-
-1. 20260621_reflecting_pool_39414 - 反射池破壞事件（重要程度：低）
-2. 20260621_iran_hezbollah_39415 - 威脅伊朗黎巴嫩代理（重要程度：高）
-3. 20260622_netanyahu_leak_39416 - 內唐亞胡洩漏通話回應（重要程度：高）
-4. 20260622_california_hilton_39417 - 加州希爾頓背書（重要程度：低）
-5. 20260622_iran_fake_news_39418 - 伊朗假新聞循環貼（重要程度：中）
-
-## 錯誤詳情
-LINE API (api.line.me) 被環境網路 egress 政策封鎖。
-需在遠端執行環境設定中，將 api.line.me 加入允許清單。
+請在 Claude Code on the Web 環境設定中，將 api.line.me 加入 egress allowlist。
