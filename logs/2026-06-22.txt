@@ -1,38 +1,19 @@
-# 監控日誌 2026-06-22
+[2026-06-22 06:18 UTC] 監控執行完畢
 
-## 執行時間
-2026-06-22 UTC
+✅ 成功項目：
+- 讀取 last_seen_id: 20260622_reflecting_pool_39422
+- 透過 WebSearch 找到新貼文 (Truth Social RSS/API 皆返回 403)
+- 分析文件上傳至 posts/2026-06-22_relax_01am.md
+- last_seen_id 更新為: 20260622_relax_01am
 
-## 上次記錄 ID
-20260622_reflecting_pool_39422
+❌ 失敗項目：
+- LINE API 推播失敗: "Host not in allowlist: api.line.me"
+  原因: 執行環境網路 egress 設定未允許 api.line.me
+  解決方式: 在 Claude Code 環境設定中將 api.line.me 加入 egress 允許清單
 
-## 執行狀態
-監控執行完成，但無法確認新貼文存在。
+📋 本次找到的新貼文:
+- 時間: 2026-06-22 01:02 UTC
+- 內容: "Just sit back and relax, it will all work out well in the end. It always does!"
+- 背景: 美伊瑞士和談（Vance 出席）、IRGC 威脅再封鎖荷姆茲海峽
 
-## 原因
-1. Truth Social 網站直接存取：HTTP 403 Forbidden
-2. Truth Social RSS 端點：HTTP 403 Forbidden  
-3. Truth Social API 端點：HTTP 403 Forbidden
-4. 大多數新聞網站（NBC、ABC、Fox、CNN、BBC等）：HTTP 403 Forbidden
-5. 網路搜尋取得貼文摘要，但無法確認是否比 last_seen_id 新
-
-## 已知近期貼文（可能已於前次執行中記錄）
-
-### 映水池相關（2026-06-21 17:32 EDT = 2026-06-22 05:32 Taiwan Time）
-- "Work will begin immediately on fixing the seriously vandalized Reflecting Pool. I just inspected it and could only say to myself, and those gathered around me, WOW, who would do such a thing? SICK, DERANGED PEOPLE!"
-- "We met with contractors today, will probably be forced to release and drain much of the water in order to do the necessary repairs, but will have them done as quickly as possible."
-
-### 伊朗/黎巴嫩相關（2026-06-21 09:42 AM EDT）
-- "Iran must immediately stop their highly paid PROXIES in Lebanon from causing trouble. If they don't, we'll hit Iran very hard again, just like we did last week, only harder!!!"
-
-### 義大利/梅洛尼相關（2026-06-20~21）
-- "After spending Trillions of Dollars on NATO, Italy, and its Prime Minister, wouldn't even think of becoming involved with the Islamic Republic of Iran and their very serious Nuclear Threat. For decades, we defend them but, when tested, they are not there to defend us, and the rest of the World. Not good!"
-- "She is doing poorly in Italy with her level of popularity... Now, after the United States defeated Iran militarily, she wants to be friends again in order to get her 'numbers up.' No thanks!!"
-
-## 結論
-以上所有貼文均早於或與 last_seen_id (20260622_reflecting_pool_39422) 相同時間，
-因此視為已追蹤。無新貼文需通報。
-
-## 建議
-考慮使用 Apify Truth Social Scraper API 或其他第三方工具，
-以提升未來監控的可靠性。
+🔍 資料來源: WebSearch (Truth Social 直接 API/RSS 均回 403)
