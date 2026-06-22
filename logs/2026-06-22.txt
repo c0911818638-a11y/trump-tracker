@@ -1,14 +1,12 @@
-2026-06-22 執行日誌
+2026-06-22 監控執行日誌
 
-執行結果：找到 3 篇新貼文（June 20-21, 2026）
-GitHub 上傳：成功（3 篇分析檔案）
-last_seen_id 更新：成功（20260622_NYT_morning）
+[錯誤] LINE API (api.line.me) 被網路出口規則封鎖，無法推播通知。
+請在環境的網路出口設定中加入 api.line.me。
 
-LINE 推播狀態：失敗
-原因：HOST NOT IN ALLOWLIST: api.line.me
-需要在環境的 Network Egress Settings 中允許 api.line.me
+[成功] 已找到並分析以下新貼文：
+1. 2026-06-22_iran_hezbollah.md - 伊朗/真主黨軍事威脅（重要程度：高）
+2. 2026-06-21_reflecting_pool.md - 反射水池破壞指控（重要程度：中）
+3. 2026-06-22_evening_spree.md - 31分鐘47篇連發狂潮（重要程度：中）
 
-新貼文摘要：
-1. 2026-06-20: 霍爾木茲「守護天使」——美國威脅對中東收取服務費
-2. 2026-06-21 17:00ET: 怒批紐約時報「腐敗懦夫」——伊朗戰爭成果論戰
-3. 2026-06-21 18:30ET: 稱紐時報導「叛國」並威脅更新數十億美元訴訟
+[成功] 三篇分析已上傳至 GitHub Repo
+[成功] state/last_seen_id.txt 已更新為: 20260622_evening_spree
