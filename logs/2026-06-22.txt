@@ -1,9 +1,21 @@
-2026-06-22 執行日誌
-=====================
-狀態：部分成功（LINE 推播失敗）
-錯誤：api.line.me 不在網路出口白名單 (Host not in allowlist)
-處理貼文數：3 篇新貼文（reflpool_5, reflpool_6, reflpool_7）
-GitHub 上傳：成功（3 篇分析檔案 + last_seen_id 更新）
-LINE 推播：失敗（網路政策封鎖 api.line.me）
+# 監控日誌 2026-06-22
 
-解決方式：請在 Claude Code on the web 環境設定中，將 api.line.me 加入 Network Egress 白名單。
+## 執行結果
+- 執行時間: 2026-06-22
+- 上次記錄 ID: 20260622_reflpool_7
+- 新貼文數量: 4 篇
+- GitHub 上傳: 成功 (4/4)
+- LINE 通知: 失敗
+
+## 錯誤詳情
+LINE API (api.line.me) 被網路出口政策封鎖。
+錯誤訊息: Host not in allowlist: api.line.me. Add this host to your network egress settings to allow access.
+
+## 新貼文摘要
+1. 2026-06-22_ts_001.md - NYT伊朗戰爭回應 (高重要度)
+2. 2026-06-22_ts_002.md - 稱NYT報導叛國並威脅訴訟 (高重要度)
+3. 2026-06-22_ts_003.md - 反射池指控ABC記者Jonathan Karl (中重要度)
+4. 2026-06-22_ts_004.md - 反射池250英尺刀痕威脅10年監禁 (中重要度)
+
+## 解決方案
+請至 Claude Code on the Web 環境設定，將 api.line.me 加入網路出口白名單。
