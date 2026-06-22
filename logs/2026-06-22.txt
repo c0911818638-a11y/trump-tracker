@@ -1,28 +1,21 @@
-日期：2026-06-22
-執行時間：2026-06-22T02:11:41Z
+# 執行日誌 2026-06-22
 
-## 搜尋狀態
+## 執行時間
+2026-06-22 UTC
 
-**上次記錄 ID：** 20260621_keir_starmer_39413
-**上次記錄時間：** 2026-06-21 09:59 AM EST
+## 結果摘要
+- GitHub 新貼文分析：成功上傳 5 篇
+- last_seen_id.txt 更新：成功（新 ID: 20260622_iran_fake_news_39418）
+- LINE 推播通知：失敗（api.line.me 未在網路白名單中）
 
-## 方法嘗試結果
+## 本次找到的新貼文（自 20260621_keir_starmer_39413 之後）
 
-- 方法 A (Truth Social RSS)：❌ HTTP 403 禁止
-- 方法 A (Truth Social API)：❌ HTTP 403 禁止
-- 方法 B (WebSearch)：⚠️ 搜尋結果僅返回 6/21 的 Starmer 貼文，無法確認 6/22 新貼文
-- 方法 C (Trump Archive)：❌ HTTP 403 禁止
-- 方法 C (Trump's Truth)：❌ HTTP 403 禁止
-- 備用搜尋 (The Daily Beast, Mediaite, Fox News, NPR 等)：❌ 多數網站 HTTP 403 禁止
+1. 20260621_reflecting_pool_39414 - 反射池破壞事件（重要程度：低）
+2. 20260621_iran_hezbollah_39415 - 威脅伊朗黎巴嫩代理（重要程度：高）
+3. 20260622_netanyahu_leak_39416 - 內唐亞胡洩漏通話回應（重要程度：高）
+4. 20260622_california_hilton_39417 - 加州希爾頓背書（重要程度：低）
+5. 20260622_iran_fake_news_39418 - 伊朗假新聞循環貼（重要程度：中）
 
-## 已知最新貼文
-
-**ID：** 20260621_keir_starmer_39413
-**時間：** 2026-06-21 09:59 AM EST
-**內容：** "Keir Starmer will resign as Prime Minister of The United Kingdom. He failed badly on two very important subjects- IMMIGRATION AND ENERGY (OPEN NORTH SEA OIL!). I wish him well! President DJT."
-
-## 結論
-
-截至本次執行，無法確認 2026-06-22 是否有新貼文。
-Truth Social 及多數新聞網站返回 403 錯誤，搜尋結果亦未顯示任何 6/22 的新貼文。
-last_seen_id 維持不變，不推播 LINE 通知。
+## 錯誤詳情
+LINE API (api.line.me) 被環境網路 egress 政策封鎖。
+需在遠端執行環境設定中，將 api.line.me 加入允許清單。
