@@ -1,21 +1,9 @@
-# 執行日誌 2026-06-22
+2026-06-22 執行日誌
+=====================
+狀態：部分成功（LINE 推播失敗）
+錯誤：api.line.me 不在網路出口白名單 (Host not in allowlist)
+處理貼文數：3 篇新貼文（reflpool_5, reflpool_6, reflpool_7）
+GitHub 上傳：成功（3 篇分析檔案 + last_seen_id 更新）
+LINE 推播：失敗（網路政策封鎖 api.line.me）
 
-## 執行狀態
-- [✅] 步驟1: 讀取 last_seen_id = 20260622_reflpool_3
-- [✅] 步驟2: 透過 WebSearch 取得貼文（Truth Social RSS/API 被 403 封鎖）
-- [✅] 步驟3: 找到 3 篇新貼文
-- [✅] 步驟4: 完成中文分析
-- [✅] 步驟5: 上傳分析至 GitHub
-  - posts/2026-06-21_nyt_iran_1.md
-  - posts/2026-06-21_nyt_iran_2.md
-  - posts/2026-06-22_reflpool_4.md
-  - 更新 state/last_seen_id.txt = 20260622_reflpool_4
-- [❌] 步驟6: LINE 推播失敗
-  - 錯誤: Host not in allowlist: api.line.me
-  - 原因: 遠端執行環境網路政策未允許連線至 api.line.me
-  - 建議: 在環境設定中將 api.line.me 加入 egress 白名單
-
-## 新貼文摘要
-1. 2026-06-21: 川普以伊朗軍事崩潰反駁紐約時報，稱記者為「懦夫」
-2. 2026-06-21: 川普稱紐約時報伊朗報導「叛國」，威脅擴大數十億美元訴訟
-3. 2026-06-22: 川普警告倒影池破壞者面臨10年重刑，暗指詹姆斯科米
+解決方式：請在 Claude Code on the web 環境設定中，將 api.line.me 加入 Network Egress 白名單。
