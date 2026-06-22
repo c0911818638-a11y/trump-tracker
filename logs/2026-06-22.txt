@@ -1,7 +1,28 @@
-Run Date: 2026-06-22
-Status: No new posts found
-Method: WebSearch (Truth Social 403, Trump Archive 403)
-Last Known Post: 20260621_keir_starmer_39413
-Note: Most recent confirmed post was June 21, 2026 - Trump stated 'Keir Starmer will resign as Prime Minister of The United Kingdom. He failed badly on two very important subjects- IMMIGRATION AND ENERGY (OPEN NORTH SEA OIL!). I wish him well!'
-Search results show no new posts from June 22, 2026 indexed yet.
-Action: Ended silently, no LINE notification sent.
+日期：2026-06-22
+執行時間：2026-06-22T02:11:41Z
+
+## 搜尋狀態
+
+**上次記錄 ID：** 20260621_keir_starmer_39413
+**上次記錄時間：** 2026-06-21 09:59 AM EST
+
+## 方法嘗試結果
+
+- 方法 A (Truth Social RSS)：❌ HTTP 403 禁止
+- 方法 A (Truth Social API)：❌ HTTP 403 禁止
+- 方法 B (WebSearch)：⚠️ 搜尋結果僅返回 6/21 的 Starmer 貼文，無法確認 6/22 新貼文
+- 方法 C (Trump Archive)：❌ HTTP 403 禁止
+- 方法 C (Trump's Truth)：❌ HTTP 403 禁止
+- 備用搜尋 (The Daily Beast, Mediaite, Fox News, NPR 等)：❌ 多數網站 HTTP 403 禁止
+
+## 已知最新貼文
+
+**ID：** 20260621_keir_starmer_39413
+**時間：** 2026-06-21 09:59 AM EST
+**內容：** "Keir Starmer will resign as Prime Minister of The United Kingdom. He failed badly on two very important subjects- IMMIGRATION AND ENERGY (OPEN NORTH SEA OIL!). I wish him well! President DJT."
+
+## 結論
+
+截至本次執行，無法確認 2026-06-22 是否有新貼文。
+Truth Social 及多數新聞網站返回 403 錯誤，搜尋結果亦未顯示任何 6/22 的新貼文。
+last_seen_id 維持不變，不推播 LINE 通知。
