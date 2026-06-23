@@ -1,33 +1,28 @@
-2026-06-23 監控執行日誌
-====================
+# 2026-06-23 監控執行記錄
 
-執行時間: 2026-06-23 UTC
+執行時間：2026-06-23 UTC
 
-步驟1: 讀取 last_seen_id.txt → 20260623_ts_006 (SHA: c833361e7a51d21711cde4c66fa74c74be7c3b70)
+## 結果摘要
+- 上次記錄 ID：20260623_ts_009
+- 新發現貼文：1 篇（ts_010）
+- 新 last_seen_id：20260623_ts_010
 
-步驟2: 抓取貼文
-- 方法A: truthsocial.com RSS → 403 Forbidden (封鎖)
-- 方法A: truthsocial.com API → 403 Forbidden (封鎖)
-- 方法B: WebSearch → 成功取得新聞報導內容
-- 方法C: thetrumparchive.com → 403 Forbidden (封鎖)
+## 新貼文列表
+1. ts_010: 2026-06-23 21:15 ET - 川普轉發 Fox News Hegseth 反 DEI 演講文章
 
-步驟3: 比較
-- 已處理: 20260623_ts_006 (6篇)
-- 新發現: 3篇晚間大規模發文潮貼文
+## 資料來源限制
+- truthsocial.com: HTTP 403（拒絕存取）
+- thetrumparchive.com: HTTP 403
+- 多數新聞網站: HTTP 403
+- 使用 WebSearch 間接取得貼文內容
 
-步驟4: 分析完成 (3篇)
+## LINE 推播
+- 狀態：失敗
+- 錯誤：Host not in allowlist: api.line.me
+- 原因：遠端執行環境網路出口策略限制
+- 建議：在環境設定中新增 api.line.me 至允許清單
 
-步驟5: GitHub 上傳成功
-- posts/2026-06-23_ts_007.md → 上傳成功
-- posts/2026-06-23_ts_008.md → 上傳成功
-- posts/2026-06-23_ts_009.md → 上傳成功
-- state/last_seen_id.txt → 更新為 20260623_ts_009
+## GitHub 更新
+- posts/2026-06-23_ts_010.md: 已上傳
+- state/last_seen_id.txt: 已更新至 20260623_ts_010
 
-步驟6: LINE 推播失敗
-- 錯誤: api.line.me Host not in allowlist (網路限制)
-- 需要在環境設定中加入 api.line.me 至 egress allowlist
-
-新貼文摘要:
-1. 20260623_ts_007: 川普47篇大規模發文潮，伊朗和平談判破裂【重要程度：高】
-2. 20260623_ts_008: "I am an innocent man who has been horribly treated"【重要程度：低】
-3. 20260623_ts_009: 深夜亨特拜登/綠能/伊朗媒體批評組合貼文【重要程度：中】
