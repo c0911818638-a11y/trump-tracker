@@ -1,18 +1,41 @@
-# 執行日誌 2026-06-23
+監控執行日誌 - 2026-06-23
+=================================================
+執行時間: 2026-06-23 06:21:13 UTC
+上次記錄 ID: 20260623_ts_003
+SHA: f1707143f26be420810b9cf1374fbffa996c0dd9
 
-## 執行結果
-- 上次追蹤 ID: 20260623_ts_001
-- 發現新貼文: 2 篇
-  - 20260623_ts_002: 川普宣布以色列-伊朗停戰（12日戰爭結束）
-  - 20260623_ts_003: 川普發「PEACE!」貼文
-- GitHub 上傳: 成功
-- last_seen_id 更新: 成功 (20260623_ts_003)
+=== 嘗試方法與結果 ===
 
-## 錯誤
-- LINE 推播失敗: api.line.me Host not in allowlist（網路 egress 政策限制）
-- Truth Social 直接存取: 失敗（403 Forbidden）
-- 貼文來源: WebSearch 聚合新聞報導
+【方法 A】Truth Social 直接存取
+  - https://truthsocial.com/@realDonaldTrump.rss → 403 Forbidden
+  - https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → 403 Forbidden
 
-## 新貼文摘要
-貼文1 (ts_002): 川普宣布以伊停戰，12日戰爭結束，重要程度高
-貼文2 (ts_003): 川普發PEACE貼文，宣稱以伊同時向他喊和平，重要程度高
+【方法 B】WebSearch 搜尋
+  - 搜尋: Trump Truth Social posts today 2026-06-23
+  - 結果: 找到 2026年6月21-22日（週六、日）的貼文摘要，但無法確認6月23日（週二）之後的新貼文
+  - 近期已知貼文（多為6月21-22日，可能已於前次追蹤中記錄）：
+    1. 反射池汙損貼文系列（6/21）：逮捕破壞者、250英尺割裂
+    2. 威脅伊朗代理人（6/22）：立即停止代理人活動否則更猛烈打擊
+    3. 攻擊紐約時報系列（6/22）：叛國罪、腐敗懦夫
+    4. 預測英國首相 Starmer 辭職（6/22）
+    5. 伊朗核查 Nuclear Honesty（6/22）：Major Weapons Inspections
+    6. 伊朗戰爭迷因圖（6/22深夜）：Obama政策 vs Trump政策對比
+
+【方法 C】Trump Archive
+  - https://www.thetrumparchive.com/ → 403 Forbidden
+
+【新聞媒體存取】
+  - The Daily Beast, CNN, NBC, CBS, ABC, NPR, PBS, WashPost, NYT, Fox News,
+    Al Jazeera, The Hill, New Republic, Mediaite, Poynter, Washington Times,
+    Tribune India, Times of Israel, WION, Swissinfo, Yahoo News, AOL → 全部 403 Forbidden
+
+=== 結論 ===
+無法透過任何管道取得可驗證的新貼文（超過 last_seen_id: 20260623_ts_003）。
+Truth Social 與主要新聞平台均拒絕存取。
+WebSearch 摘要顯示的貼文均為 6/21-22 期間，很可能已在前次執行中追蹤。
+今日（6/23 週二）暫無可確認的新貼文資料。
+
+=== 動作 ===
+- 未建立貼文分析檔案
+- 未更新 last_seen_id.txt
+- 未推播 LINE 通知
