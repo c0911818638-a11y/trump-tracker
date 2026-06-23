@@ -1,1 +1,18 @@
-2026-06-23 run log. Found 2 posts (20260622_ts_001, 20260622_ts_002). LINE blocked: api.line.me not in egress allowlist.
+# 執行日誌 2026-06-23
+
+## 執行結果
+- 上次追蹤 ID: 20260623_ts_001
+- 發現新貼文: 2 篇
+  - 20260623_ts_002: 川普宣布以色列-伊朗停戰（12日戰爭結束）
+  - 20260623_ts_003: 川普發「PEACE!」貼文
+- GitHub 上傳: 成功
+- last_seen_id 更新: 成功 (20260623_ts_003)
+
+## 錯誤
+- LINE 推播失敗: api.line.me Host not in allowlist（網路 egress 政策限制）
+- Truth Social 直接存取: 失敗（403 Forbidden）
+- 貼文來源: WebSearch 聚合新聞報導
+
+## 新貼文摘要
+貼文1 (ts_002): 川普宣布以伊停戰，12日戰爭結束，重要程度高
+貼文2 (ts_003): 川普發PEACE貼文，宣稱以伊同時向他喊和平，重要程度高
