@@ -1,3 +1,42 @@
-2026-06-23
-OK: posts/2026-06-23_ts006.md uploaded
-FAIL: LINE push blocked - api.line.me not in egress allowlist
+# 川普 Truth Social 監控日誌 — 2026-06-23
+
+執行時間：2026-06-23 09:23:36 UTC
+
+## 執行結果
+
+**狀態：** 無新貼文（未超過 last_seen_id）
+
+**上次記錄 ID：** 20260623_ts_006
+**文件 SHA：** c833361e7a51d21711cde4c66fa74c74be7c3b70
+
+## 已知狀況
+
+本次執行嘗試以下方法取得最新貼文：
+
+### 方法 A（Truth Social API / RSS）— 失敗
+- https://truthsocial.com/@realDonaldTrump.rss 回傳 403 Forbidden
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses 回傳 403 Forbidden
+
+### 方法 B（WebSearch）— 部分成功
+- 搜尋到的貼文內容均在 ts_001~ts_006 範圍內（已追蹤）
+- 今日主要新聞週期：美伊停火（ts_002~ts_005）、核查聲明（ts_006）
+- 南卡羅來納州初選決選（6/23）結果尚未公布
+- 多數新聞網站回傳 403 Forbidden
+
+### 方法 C（Trump Archive）— 失敗
+- https://www.thetrumparchive.com/ 回傳 403 Forbidden
+- stiles/trump-truth-social-archive 最後更新至 2026-05-02，資料過期
+
+## 已追蹤貼文摘要（今日）
+
+ts_001: 伊朗將同意接受重大武器核查（核誠信）
+ts_002: 正式停火聲明（12/24小時時間表）
+ts_003: 以色列與伊朗同時向川普求和
+ts_004: 命令以色列撤回飛行員、停止投彈
+ts_005: 停火正式生效
+ts_006: 二次核查聲明（瑞士談判結束後）
+
+## 結論
+
+last_seen_id 維持 20260623_ts_006，不推播 LINE 通知。
+下次執行應可捕捉南卡選舉結果相關貼文及週一晚間發文。
