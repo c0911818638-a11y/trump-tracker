@@ -1,28 +1,14 @@
-# 2026-06-23 監控執行記錄
+[2026-06-23 14:11 UTC] 監控執行記錄
 
-執行時間：2026-06-23 UTC
+狀態：部分成功
 
-## 結果摘要
-- 上次記錄 ID：20260623_ts_009
-- 新發現貼文：1 篇（ts_010）
-- 新 last_seen_id：20260623_ts_010
+1. 讀取 last_seen_id: 20260623_ts_010 (OK)
+2. 抓取貼文: TruthSocial RSS/API 403，改用 WebSearch 成功
+3. 發現新貼文: 20260623_ts_011
+   - 主題：伊朗核查同意 + 霍爾木茲海峽解封
+4. 分析上傳至 GitHub: OK (posts/2026-06-23_20260623_ts_011.md)
+5. 更新 last_seen_id: 20260623_ts_011 (OK)
+6. LINE 推播: 失敗 - api.line.me 不在網路 egress 白名單
 
-## 新貼文列表
-1. ts_010: 2026-06-23 21:15 ET - 川普轉發 Fox News Hegseth 反 DEI 演講文章
-
-## 資料來源限制
-- truthsocial.com: HTTP 403（拒絕存取）
-- thetrumparchive.com: HTTP 403
-- 多數新聞網站: HTTP 403
-- 使用 WebSearch 間接取得貼文內容
-
-## LINE 推播
-- 狀態：失敗
-- 錯誤：Host not in allowlist: api.line.me
-- 原因：遠端執行環境網路出口策略限制
-- 建議：在環境設定中新增 api.line.me 至允許清單
-
-## GitHub 更新
-- posts/2026-06-23_ts_010.md: 已上傳
-- state/last_seen_id.txt: 已更新至 20260623_ts_010
-
+錯誤：Host not in allowlist: api.line.me
+解決方案：請在環境設定中將 api.line.me 加入 egress 白名單
