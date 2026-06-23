@@ -1,14 +1,28 @@
-[2026-06-23 14:11 UTC] 監控執行記錄
+# 執行日誌 2026-06-23
 
-狀態：部分成功
+**執行時間：** 2026-06-23T15:14:00Z
+**狀態：** 部分成功
 
-1. 讀取 last_seen_id: 20260623_ts_010 (OK)
-2. 抓取貼文: TruthSocial RSS/API 403，改用 WebSearch 成功
-3. 發現新貼文: 20260623_ts_011
-   - 主題：伊朗核查同意 + 霍爾木茲海峽解封
-4. 分析上傳至 GitHub: OK (posts/2026-06-23_20260623_ts_011.md)
-5. 更新 last_seen_id: 20260623_ts_011 (OK)
-6. LINE 推播: 失敗 - api.line.me 不在網路 egress 白名單
+## 完成項目
+- [x] 讀取 last_seen_id: 20260623_ts_011
+- [x] 透過 WebSearch 蒐集今日川普貼文
+- [x] 上傳分析檔案:
+  - posts/2026-06-23_20260623_ts_012.md（伊朗核查/霍爾木茲）
+  - posts/2026-06-23_20260623_ts_013.md（伊朗警告）
+- [x] 更新 last_seen_id: 20260623_ts_013
 
-錯誤：Host not in allowlist: api.line.me
-解決方案：請在環境設定中將 api.line.me 加入 egress 白名單
+## 失敗項目
+- [ ] LINE 推播失敗 - api.line.me 不在網路 egress 允許清單中
+
+## 新貼文摘要
+
+### Post 012: 伊朗核查/霍爾木茲海峽解封（重要程度：高）
+川普宣稱伊朗同意最高級別核查，解除霍爾木茲封鎖；伊朗否認協議內容
+
+### Post 013: 伊朗警告（重要程度：中）
+「If Iran doesn't live up to their agreement, I will do what I have to do」
+
+## 資料來源
+- 方法 A (RSS/API)：失敗（403）
+- 方法 B (WebSearch)：成功
+- 方法 C (Trump Archive)：失敗（403）
