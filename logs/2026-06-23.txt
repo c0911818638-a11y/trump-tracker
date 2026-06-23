@@ -1,0 +1,17 @@
+Unable to fetch Trump Truth Social posts (2026-06-23)
+
+Methods attempted:
+1. [FAILED 403] https://truthsocial.com/@realDonaldTrump.rss
+2. [FAILED 403] https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20
+3. [PARTIAL] WebSearch - only found posts from June 21-22, no verifiable June 23 posts
+4. [FAILED 403] https://www.thetrumparchive.com/
+5. [FAILED 403] https://trumpstruth.org/
+6. [FAILED 403] Multiple news outlets (Daily Beast, CBS, NBC, NPR, The Hill, etc.)
+
+Background context found (most recent = June 22, 2026):
+- Trump attacked NYT in 3 posts over Iran war coverage (called them 'TREASONOUS')
+- Trump post: 'Everybody is fully aware that Iran will agree to have Major Weapons Inspections in order to ensure Nuclear Honesty long into the future.'
+- Iran negotiations ongoing in Switzerland with JD Vance representing US
+
+last_seen_id: 20260623_ts_001
+run_time: 2026-06-23T01:11:07Z
