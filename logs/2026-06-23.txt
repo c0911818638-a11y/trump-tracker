@@ -1,28 +1,17 @@
 # 執行日誌 2026-06-23
 
-**執行時間：** 2026-06-23T15:14:00Z
-**狀態：** 部分成功
+## 執行結果
+- 上次記錄貼文 ID: 20260623_ts_013
+- 找到新貼文: 1 篇 (20260623_ts_014)
+- GitHub 上傳: 成功 (posts/2026-06-23_20260623_ts_014.md)
+- last_seen_id 更新: 成功 (20260623_ts_014)
+- LINE 通知: 失敗 (網路封鎖)
 
-## 完成項目
-- [x] 讀取 last_seen_id: 20260623_ts_011
-- [x] 透過 WebSearch 蒐集今日川普貼文
-- [x] 上傳分析檔案:
-  - posts/2026-06-23_20260623_ts_012.md（伊朗核查/霍爾木茲）
-  - posts/2026-06-23_20260623_ts_013.md（伊朗警告）
-- [x] 更新 last_seen_id: 20260623_ts_013
-
-## 失敗項目
-- [ ] LINE 推播失敗 - api.line.me 不在網路 egress 允許清單中
+## 錯誤詳情
+LINE API (api.line.me) 被網路出口設定封鎖 (403 Host not in allowlist)。
+需要將 api.line.me 加入 Claude Code on the web 的 network egress allowlist。
 
 ## 新貼文摘要
-
-### Post 012: 伊朗核查/霍爾木茲海峽解封（重要程度：高）
-川普宣稱伊朗同意最高級別核查，解除霍爾木茲封鎖；伊朗否認協議內容
-
-### Post 013: 伊朗警告（重要程度：中）
-「If Iran doesn't live up to their agreement, I will do what I have to do」
-
-## 資料來源
-- 方法 A (RSS/API)：失敗（403）
-- 方法 B (WebSearch)：成功
-- 方法 C (Trump Archive)：失敗（403）
+貼文 ID: 20260623_ts_014
+原文: 19 Millions Barrels of Oil flowed out of the Hormuz Strait yesterday, an all time RECORD. Oil prices are tumbling down, and the World is a much safer place!!!
+發布時間: 2026-06-23 18:28 UTC
