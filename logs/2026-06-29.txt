@@ -1,0 +1,31 @@
+# 2026-06-29 執行日誌
+
+## 執行結果
+
+- ✅ 成功讀取 last_seen_id: 20260628_ts_001
+- ✅ 成功抓取川普最新貼文（via WebSearch/WebFetch）
+- ✅ 發現 2 篇新貼文：
+  - 20260629_ts_001: 伊朗「滅國」威脅貼文
+  - 20260629_ts_002: 36分鐘60+篇發文狂潮
+- ✅ 成功上傳分析到 GitHub (posts/2026-06-29_*.md)
+- ✅ 成功更新 last_seen_id: 20260629_ts_002
+- ❌ LINE 通知推播失敗
+
+## 錯誤詳情
+
+LINE API (api.line.me) 被環境 egress 政策封鎖。
+錯誤訊息: "Host not in allowlist: api.line.me. Add this host to your network egress settings to allow access."
+
+需在 Claude Code 網路設定中將 api.line.me 加入允許清單。
+
+## 新貼文摘要
+
+### 貼文 1: 伊朗「滅國」威脅
+- 時間: 2026-06-28 21:23 ET
+- 內容: 美軍空襲伊朗導彈地點，川普威脅伊朗政權「將不復存在」
+- 重要程度: 高
+
+### 貼文 2: 60+篇發文狂潮
+- 時間: 2026-06-28 21:23-21:59 ET（36分鐘）
+- 內容: 攻擊歐巴馬、卡尼、紐森、瓦爾茲、奧馬爾，轉發2020選舉陰謀論
+- 重要程度: 中
