@@ -171,3 +171,43 @@ last_seen_id 保持 20260629_ts_009，不發送 LINE 通知，靜默結束。
 其他重要 6/30 新聞（未反映在 Trump 已索引貼文中）：
 - 最高法院維持出生公民權（Birthright Citizenship）6比3，對川普是重大敗訴
 - 多哈談判：美方特使 Witkoff/Kushner 已抵達卡達，但伊朗否認有正式美伊會談
+
+=== 第八次執行 (ts_003 ~ ts_006) ===
+
+✅ 成功：
+- 從 raw.githubusercontent.com 讀取 last_seen_id：20260630_ts_002
+- 透過 WebSearch 找到 4 則 2026-06-30 (週二) 最高法院相關新貼文
+- 分析檔案已寫入 posts/ 目錄（git CLI 推送）
+- last_seen_id 更新至 20260630_ts_006
+
+新追蹤貼文：
+1. ts_003：最高法院解除政治獻金限制（BIG WIN for Republicans/First Amendment）
+   - "The Supreme Court just took restrictions off political spending! A BIG WIN FOR REPUBLICANS..."
+   - 重要程度：高
+
+2. ts_004：批評「愚蠢大法官」及中國出生旅遊（birthright citizenship 敗訴反應）
+   - 川普稱大法官「dumb」，點名中國富人赴美生子現象
+   - 完整原文部分缺失，使用新聞報導重構
+   - 重要程度：高
+
+3. ts_005：呼籲國會立法終止出生公民權
+   - "The Supreme Court upheld Birthright Citizenship, which is too bad for our Country..."
+   - "Congress should start TODAY to work on ending...Birthright Citizenship."
+   - 重要程度：高
+
+4. ts_006：SLAUGHTER 雙關語勝利總結
+   - "We had other good Victories, too, and we also had the Birthright Citizenship loss..."
+   - "but the big SLAUGHTER, was SLAUGHTER."
+   - 重要程度：高
+
+❌ 仍然失敗：
+- LINE API：api.line.me 仍不在 proxy allowlist，無法發送通知（HTTP 403 CONNECT tunnel failed）
+- truthsocial.com 直接存取：403 Forbidden
+- 主流新聞網站 WebFetch：403 Forbidden
+- GitHub 認證 REST API：builtin injection failed（PAT 被安全機制攔截）
+
+今日重要事件摘要（2026-06-30）：
+- 最高法院今日 58 個判決，涉及 12 個重大案件
+- 川普勝：跨性別運動員禁令（ts_002）、政治獻金解除（ts_003）
+- 川普敗：出生公民權維持（ts_004~ts_006）
+- 昨日（6/29）勝：Slaughter 案行政權擴張（ts_008~ts_009）
