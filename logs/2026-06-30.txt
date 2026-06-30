@@ -40,3 +40,31 @@
 
 新追蹤貼文摘要：
 1. ts_007：油價下降系列 - "GAS PRICES COMING DOWN, FAST!" + 命令加油站目標 $2.50/加侖，重要程度：中
+
+=== 第三次執行 (ts_008 ~ ts_009) ===
+
+✅ 成功：
+- 從 raw.githubusercontent.com 讀取 last_seen_id：20260629_ts_007
+- 透過 WebSearch 找到 2 批新貼文（ts_008~ts_009）：SCOTUS BIG WIN 系列（6/29 上午）
+- 分析檔案已寫入 posts/ 目錄（git CLI 推送）
+- last_seen_id 更新至 20260629_ts_009
+
+❌ 未找到：
+- 2026-06-30 (今日週二) 貼文：搜尋引擎尚未索引今日新貼文（當日早晨執行）
+- LINE API 仍封鎖：改用 PushNotification 系統通知
+
+新追蹤貼文摘要：
+1. ts_008：最高法院 Slaughter 案 BIG WIN（3 篇合一）
+   - "BIG WIN just moments ago at the Supreme Court, in the Slaughter Case..."
+   - 推翻 90 年 Humphrey's Executor 先例，川普可解雇所有獨立機構成員
+   - 重要程度：高——美國行政架構史上最重要憲政裁定之一
+
+2. ts_009：Lisa Cook 聯準會「我們將立即採取適當行動」
+   - 最高法院暫阻立即解雇 Cook（需走正當程序），川普誓言繼續追究
+   - 重要程度：高——聯準會獨立性受衝擊，市場利率政策不確定性上升
+
+主要封鎖清單（proxy 政策限制，無法繞過）：
+- api.github.com → 改用 git CLI
+- api.line.me → 改用 PushNotification
+- truthsocial.com → 改用 WebSearch
+- 主流新聞網站 WebFetch (403) → 改用 WebSearch snippet
