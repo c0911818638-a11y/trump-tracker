@@ -1,23 +1,21 @@
-# 執行記錄 2026-07-07
+2026-07-07 監控日誌
 
-## 狀態：部分成功
+執行結果：成功取得新貼文，GitHub 推送成功，LINE 推播失敗
 
-### 已完成
-- ✅ 讀取 last_seen_id: 20260706_ts_004
-- ✅ 搜尋新貼文（WebSearch / 方法B）
-- ✅ 分析 3 篇新貼文（July 6 發文潮）
-  - 20260706_ts_005: 油價/沃爾瑪降價宣示
-  - 20260706_ts_006: 歐巴馬空軍一號塗鴉 PS 圖
-  - 20260706_ts_007: 七月四日活動取消建議推翻告白
-- ✅ 上傳分析至 GitHub（posts/2026-07-06_*.md）
-- ✅ 更新 last_seen_id → 20260707_ts_000
+新貼文（共 3 篇）：
+- 20260707_ts_001: 軍費/Reconciliation 3.0 貼文（00:58 UTC）
+- 20260707_ts_002: 頭巾幼童/明尼蘇達州轉發攻擊貼文（上午 UTC）
+- 20260707_ts_003: Freedom250 宣傳影片（出發土耳其前）
 
-### 失敗
-- ❌ LINE 推播失敗：api.line.me 被網路安全政策（egress policy）封鎖
-  - 錯誤：Host not in allowlist: api.line.me
-  - 需要將 api.line.me 加入 egress 白名單後才能推播
+GitHub 更新：
+- 推送 3 篇新分析至 posts/ 目錄
+- state/last_seen_id.txt 更新為 20260707_ts_003
 
-### 備注
-- 今日（7/7）川普正在土耳其安卡拉參加 NATO 峰會，預計下午抵達、與艾爾多安雙邊會談
-- Truth Social API（truthsocial.com）同樣被封鎖，改用 WebSearch 搜尋新聞摘要
-- 7/6 發文潮共 100+ 篇，本次僅捕捉到 3 篇有足夠內文的貼文
+錯誤：
+- LINE API (api.line.me) 被 proxy 封鎖（HTTP 403），無法推播通知
+  - proxy 政策不允許連線至 api.line.me:443
+
+資料來源限制：
+- truthsocial.com RSS/API 均回傳 403，無法直接存取
+- 透過 WebSearch 搜集新聞報導重建貼文內容
+- 無法取得真實 Truth Social 貼文 ID，使用序號 ID 替代
