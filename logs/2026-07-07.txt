@@ -1,0 +1,23 @@
+# 執行記錄 2026-07-07
+
+## 狀態：部分成功
+
+### 已完成
+- ✅ 讀取 last_seen_id: 20260706_ts_004
+- ✅ 搜尋新貼文（WebSearch / 方法B）
+- ✅ 分析 3 篇新貼文（July 6 發文潮）
+  - 20260706_ts_005: 油價/沃爾瑪降價宣示
+  - 20260706_ts_006: 歐巴馬空軍一號塗鴉 PS 圖
+  - 20260706_ts_007: 七月四日活動取消建議推翻告白
+- ✅ 上傳分析至 GitHub（posts/2026-07-06_*.md）
+- ✅ 更新 last_seen_id → 20260707_ts_000
+
+### 失敗
+- ❌ LINE 推播失敗：api.line.me 被網路安全政策（egress policy）封鎖
+  - 錯誤：Host not in allowlist: api.line.me
+  - 需要將 api.line.me 加入 egress 白名單後才能推播
+
+### 備注
+- 今日（7/7）川普正在土耳其安卡拉參加 NATO 峰會，預計下午抵達、與艾爾多安雙邊會談
+- Truth Social API（truthsocial.com）同樣被封鎖，改用 WebSearch 搜尋新聞摘要
+- 7/6 發文潮共 100+ 篇，本次僅捕捉到 3 篇有足夠內文的貼文
