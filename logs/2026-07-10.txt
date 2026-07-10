@@ -1,0 +1,35 @@
+[2026-07-10] 執行紀錄
+
+狀態：未發現新貼文
+- ✅ 讀取 last_seen_id: 20260709_ts_005
+- ⚠️ 嘗試抓取川普 Truth Social 貼文（所有方法）
+
+抓取方法嘗試結果：
+- ❌ 方法 A: truthsocial.com/@realDonaldTrump.rss → HTTP 403
+- ❌ 方法 A: truthsocial.com/api/v1/accounts/107780257626128497/statuses → HTTP 403
+- ⚠️ 方法 B: WebSearch 多次嘗試 → 僅找到 July 8-9 的舊貼文資訊（已收錄於 ts_001~ts_005）
+- ❌ 方法 C: thetrumparchive.com / trumpstruth.org → HTTP 403
+- ❌ 其他媒體新聞頁面：大量 403 Forbidden
+
+重要發現（無法確認是否為新貼文）：
+- 發現 Truth Social URL: https://truthsocial.com/@realDonaldTrump/posts/116835841525431179
+  此 URL 持續出現於搜尋結果，但所有直接存取嘗試均 403 失敗
+  上次執行（2026-07-09）亦發現此 URL 但無法取得內容
+
+今日背景新聞（可能相關的川普言行）：
+- 川普從土耳其安卡拉 NATO 峰會返回（July 9）
+- 伊朗停火宣告「結束」（July 8，已捕獲在 ts_001~ts_002）
+- 川普威脅切斷對西班牙貿易（July 8 峰會記者會）
+- 川普與澤倫斯基會面，宣布愛國者飛彈生產授權（July 8-9，峰會）
+- 川普出生公民權案宣布要求最高法院重審（July 9，已捕獲為 ts_005）
+- 目前無法找到 July 10 的具體新 Truth Social 文字內容
+
+決定：
+- 未更新 state/last_seen_id.txt（無確認新貼文）
+- 未建立貼文分析檔案
+- 未推播 LINE 通知
+- ❌ LINE 推播：api.line.me 持續被 egress proxy 封鎖（HTTP 403 Forbidden）
+
+結論：
+無法確認 20260709_ts_005 之後的新貼文，靜默結束。
+下次執行應繼續以 last_seen_id = 20260709_ts_005 為基準重試。
