@@ -33,3 +33,48 @@
 結論：
 無法確認 20260709_ts_005 之後的新貼文，靜默結束。
 下次執行應繼續以 last_seen_id = 20260709_ts_005 為基準重試。
+
+---
+
+[2026-07-10 第二次執行]
+
+狀態：確認新貼文存在但無法取得內容
+- ✅ 讀取 last_seen_id: 20260709_ts_005 (URL: https://truthsocial.com/@realDonaldTrump/posts/116750814874397998)
+- ✅ git clone 成功（git 協議可用，GitHub API session 限制不影響 git 操作）
+
+新發現：
+- ⚠️ 確認 URL https://truthsocial.com/@realDonaldTrump/posts/116835841525431179 的貼文 ID (116835841525431179)
+  大於 ts_005 的 ID (116750814874397998)，代表此為新貼文，但內容仍無法存取（403）
+- 此 URL 在搜尋引擎快取中反覆出現，但內容未被索引
+
+本次執行的完整搜尋範圍：
+- ❌ truthsocial.com (RSS + API) → HTTP 403（egress proxy 封鎖）
+- ❌ thetrumparchive.com / trumpstruth.org → HTTP 403
+- ❌ x.com/@TrumpTruthOnX, @TruthTrumpPosts → HTTP 403
+- ❌ Yahoo News, HuffPost, NBC, NPR, Fox News, Daily Beast 等主流媒體 → HTTP 403
+- ❌ whitehouse.gov, Wikipedia → HTTP 403
+- ⚠️ WebSearch → 最新搜尋結果仍停在 July 8-9 的貼文，無 July 10 具體內容
+- ✅ 可存取的新資訊（透過 WebSearch 摘要）：
+  * 川普回國後（July 9-10）持續關注最高法院出生公民權裁決
+  * 西班牙因提供 NATO 貢獻數據後，川普語調軟化（已不再威脅貿易禁令）
+  * 「16-post 深夜連環發文」關於伊朗、移民、選舉舞弊（已在 ts_001 記錄）
+
+技術問題：
+- GitHub REST API: 403 "GitHub access to this repository is not enabled for this session"
+- git 協議（HTTPS clone/push）: ✅ 可正常運作（已成功 clone）
+- LINE API (api.line.me): 持續 403 Forbidden（egress proxy 封鎖）
+
+決定：
+- 未更新 state/last_seen_id.txt（無法取得確認新貼文的文字內容）
+- 未建立貼文分析檔案（無法取得貼文原文）
+- 未推播 LINE 通知（LINE API 被封鎖且無確認貼文內容）
+- 更新本 log 後 git push 記錄
+
+⚠️ 系統限制持續存在：
+- egress proxy 封鎖 truthsocial.com 和大多數新聞媒體網站
+- LINE 推播功能完全喪失（api.line.me 被封鎖）
+- 建議：檢查 egress proxy 白名單設定，或透過其他方式取得 TruthSocial 貼文資料
+
+結論（第二次執行）：
+已確認 last_seen_id 之後存在至少一篇新貼文（URL: posts/116835841525431179），
+但因所有資料來源均被 egress proxy 封鎖，無法取得貼文內容進行分析或推播。
