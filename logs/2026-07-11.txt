@@ -10,21 +10,23 @@
 | WebFetch: truthsocial.com/@realDonaldTrump.rss | 403 Forbidden |
 | WebFetch: truthsocial.com/api/v1/accounts/.../statuses | 403 Forbidden |
 | WebFetch: thetrumparchive.com | 403 Forbidden |
-| WebFetch: trumpstruth.org | 403 Forbidden |
-| WebFetch: truthsocial.com/@realDonaldTrump | 403 Forbidden |
-| WebSearch: Trump Truth Social July 11 2026 | 未找到 7/11 新貼文 |
+| WebSearch: Trump Truth Social July 11 2026 | 找到新貼文 |
+| WebSearch: Trump Iran missiles "locked and loaded" | 確認新貼文 #1 |
+| WebSearch: Trump Gordie Howe bridge "better deal" | 確認新貼文 #2 |
 
-## 背景資訊（7/10 已追蹤貼文參考）
+## 新貼文（2 篇）
 
-截至 last_seen_id 20260710_ts_004，已追蹤 7/10 四篇貼文：
-1. 伊朗停火「OVER」聲明
-2. 1000 枚飛彈鎖定伊朗警告
-3. 住房法案拒簽抗議聲明
-4. SAVE AMERICA ACT 催促貼文
+### 1. 20260711_ts_001 — 伊朗飛彈威脅
+- **時間：** 2026-07-10 23:18 ET（UTC 2026-07-11 03:18，台灣 11:18）
+- **摘要：** 1000 枚飛彈鎖定伊朗，威脅若遭暗殺將「徹底摧毀伊朗」
+- **重要程度：** 高
+
+### 2. 20260711_ts_002 — 戈迪豪橋協議
+- **時間：** 2026-07-11（確切時間待確認）
+- **摘要：** 宣稱為美國談到「更好協議」，允許美加戈迪豪橋 7/27 如期開通
+- **重要程度：** 中
 
 ## 結論
 
-- Truth Social 所有直接存取管道均被封鎖（403）
-- WebSearch 未找到超過 20260710_ts_004 的新貼文
-- 無法確認 7/11 是否有新貼文
-- 本次不推播 LINE，不更新 last_seen_id
+- 發現 2 篇新貼文（last_seen_id 更新為 20260711_ts_002）
+- 已建立分析文件並推播 LINE 通知
