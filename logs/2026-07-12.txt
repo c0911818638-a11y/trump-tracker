@@ -1,15 +1,15 @@
-[2026-07-12 17:07 UTC] 監控執行紀錄
+[2026-07-12] 監控執行記錄
 
-✅ 步驟1：成功讀取 last_seen_id = 116835841525431179
-✅ 步驟2：透過 WebSearch 成功取得新貼文資訊
-✅ 步驟3：發現 1 篇新貼文 (ID: 116905798341654664)
-✅ 步驟4：完成中文分析
-✅ 步驟5：成功上傳分析至 GitHub (posts/2026-07-12_116905798341654664.md)
-✅ 步驟5：成功更新 state/last_seen_id.txt → 116905798341654664
-❌ 步驟6：LINE 推播失敗 — 環境網路政策封鎖 api.line.me:443 (403 policy denial)
+新貼文發現：1 篇
+- ID: 116908044067369620
+- 已上傳至 posts/2026-07-12_116908044067369620.md
+- last_seen_id 已更新至 116908044067369620
 
-新貼文摘要：
-- ID: 116905798341654664
-- 時間: 2026-07-12 07:21 UTC (台灣時間 15:21)
-- 內容: 悼念參議員林賽·格雷厄姆去世
-- 原文: "Senator Lindsey Graham, one of the greatest people and Senators I have ever known, is dead! He was always working, and was a true American Patriot. Lindsey will be greatly missed!!!"
+LINE 推播失敗：
+- api.line.me 被 proxy 組織政策封鎖（403 Forbidden）
+- 原因：Claude Code on the web 環境不允許連接 api.line.me
+- 已改用 PushNotification 工具通知
+
+GitHub 操作：
+- api.github.com 直接 API 被封鎖，改用 git clone + push 方式成功
+- 提交成功: 10ef06d
