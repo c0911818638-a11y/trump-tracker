@@ -1,29 +1,24 @@
-2026-07-12 監控執行紀錄
-========================================
-執行時間：2026-07-12（台灣時間）
-上次 ID：20260711_ts_002
+2026-07-12 執行日誌
 
-【抓取結果】
-- Truth Social API: 403 被封鎖
-- RSS feed: 403 被封鎖
-- WebSearch: 成功（搜尋新聞來源）
-- trumpstruth.org: 403 被封鎖，但透過 Google 快取取得資料
+【執行結果】
+上次記錄 ID：20260711_ts_005
+本次發現新貼文：3 篇
 
-【新貼文發現】3 篇（20260711_ts_003 ~ ts_005）
-
-ts_003: 棕欄灘機場更名慶賀（2026-07-11 08:16 ET）
-ts_004: Maggot Hagerman 攻擊 + Walter Reed 健康聲稱（2026-07-11 12:23 ET）
-ts_005: 選舉大勝 86% + BEST POLITICAL ATHLETE（2026-07-11 下午）
+新貼文清單：
+1. 20260711_ts_006 - 哈伯曼攻擊/沃爾特里德體檢宣言（2026-07-11 下午）
+2. 20260711_ts_007 - 反共宣言（2026-07-11 16:55 UTC）
+3. 20260712_ts_001 - 葛瑞姆哀悼（2026-07-12 03:21 UTC）
 
 【GitHub 上傳】
-- ts_003: 成功上傳
-- ts_004: 成功上傳
-- ts_005: 成功上傳
-- last_seen_id.txt: 更新至 20260711_ts_005
+✅ 成功 - 3 篇分析檔已推送至 GitHub
+✅ state/last_seen_id.txt 已更新為 20260712_ts_001
 
 【LINE 推播】
-- 錯誤：api.line.me 不在環境網路允許列表（Host not in allowlist）
-- 無法發送 LINE 通知
+❌ 失敗 - api.line.me 不在此環境的網路白名單內
+錯誤：Host not in allowlist: api.line.me. Add this host to your network egress settings to allow access.
+需要在 Claude Code 環境的 network egress settings 中加入 api.line.me
 
-【July 12 貼文】
-- 搜尋結果未發現 July 12 新貼文（截至本次執行時間）
+【資料來源】
+- Web Search（Mediaite、The Hill、NBC News、NPR、US News 等多家媒體）
+- trumpstruth.org 確認 ID
+- GitHub 本地克隆讀取 state 文件
