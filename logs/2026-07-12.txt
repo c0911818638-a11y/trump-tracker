@@ -1,24 +1,6 @@
-2026-07-12 執行日誌
+2026-07-12 監控日誌
 
-【執行結果】
-上次記錄 ID：20260711_ts_005
-本次發現新貼文：3 篇
-
-新貼文清單：
-1. 20260711_ts_006 - 哈伯曼攻擊/沃爾特里德體檢宣言（2026-07-11 下午）
-2. 20260711_ts_007 - 反共宣言（2026-07-11 16:55 UTC）
-3. 20260712_ts_001 - 葛瑞姆哀悼（2026-07-12 03:21 UTC）
-
-【GitHub 上傳】
-✅ 成功 - 3 篇分析檔已推送至 GitHub
-✅ state/last_seen_id.txt 已更新為 20260712_ts_001
-
-【LINE 推播】
-❌ 失敗 - api.line.me 不在此環境的網路白名單內
-錯誤：Host not in allowlist: api.line.me. Add this host to your network egress settings to allow access.
-需要在 Claude Code 環境的 network egress settings 中加入 api.line.me
-
-【資料來源】
-- Web Search（Mediaite、The Hill、NBC News、NPR、US News 等多家媒體）
-- trumpstruth.org 確認 ID
-- GitHub 本地克隆讀取 state 文件
+✅ 新貼文發現: 116835841525431179 (Lindsey Graham 去世悼念)
+✅ 分析檔案已上傳至 GitHub: posts/2026-07-12_116835841525431179.md
+✅ last_seen_id 已更新至 116835841525431179
+❌ LINE 推播失敗: api.line.me 被網路政策封鎖（proxy 403 Forbidden）
