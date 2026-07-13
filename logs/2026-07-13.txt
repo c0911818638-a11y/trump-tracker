@@ -1,17 +1,21 @@
 [2026-07-13] 監控執行日誌
 
-✅ GitHub 狀態讀取成功：last_seen_id = 116908044067369620 (2026-07-12 ~12:53 UTC)
+✅ GitHub 狀態讀取成功：last_seen_id = 20260713_ts_001 (Michael Savage 反共影片轉發)
 
-✅ 貼文抓取：Truth Social API/RSS 回傳 403，改用 WebSearch 方法成功
+✅ 貼文抓取嘗試（共三輪）：
+  方法 A（WebFetch RSS）：403 Forbidden
+  方法 A（WebFetch API）：403 Forbidden
+  方法 B（WebSearch）：成功執行，未發現 20260713_ts_001 之後的新貼文
+  方法 C（Trump Archive）：403 Forbidden
 
-✅ 新貼文發現 (2篇)：
-  1. 2026-07-12_20260712_ts_002.md - 59%支持率 / Ben Domenech 感謝帖
-  2. 2026-07-13_20260713_ts_001.md - 麥可·薩維奇反共視頻轉發（批評紐約市長曼達尼）
+ℹ️ 今日已追蹤貼文（本輪執行前）：
+  1. 2026-07-12_20260712_ts_001.md - 葛瑞姆去世哀悼帖
+  2. 2026-07-12_116835841525431179.md / 116905798341654664.md / 116908044067369620.md - 葛瑞姆相關系列貼文
+  3. 2026-07-12_20260712_ts_002.md - 59% 支持率 / Ben Domenech 感謝帖
+  4. 2026-07-13_20260713_ts_001.md - 麥可·薩維奇 49 分鐘反共影片轉發
 
-✅ GitHub 上傳成功：commit d20194e，已推送至 main
+ℹ️ 本輪結果：無新貼文發現，last_seen_id 維持 20260713_ts_001，不更新。
 
-✅ last_seen_id.txt 更新為：20260713_ts_001
-
-❌ LINE 推播失敗：api.line.me:443 被 egress policy 封鎖 (403 CONNECT rejected)
-   → 無法送達 LINE 通知，請用戶自行至 GitHub 查看新貼文
-
+⚠️ LINE 推播：因無新貼文，本輪跳過推播。
+   備注：前次執行 LINE 推播仍受 api.line.me:443 egress policy 封鎖，
+         若需接收通知請至 GitHub 查看 posts/ 目錄。
