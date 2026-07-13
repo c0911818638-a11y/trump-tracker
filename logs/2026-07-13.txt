@@ -1,7 +1,7 @@
 # 監控日誌 2026-07-13
 
 ## 執行時間
-- 台灣時間：2026-07-13（週一）
+- 台灣時間：2026-07-13（週一）下午
 - UTC：2026-07-13
 
 ## 上次記錄貼文
@@ -10,19 +10,58 @@
 - 內容：川普宣布降半旗悼念林賽·葛瑞姆參議員
 
 ## 本次執行結果
-狀態：無法確認新貼文（網路限制）
+狀態：無法確認新貼文 ID（網路限制持續），但確認今日（週一）有重大事件
 
-### 網路限制
-- truthsocial.com 不在網路出口許可清單
-- 大多數新聞網站被 403 阻擋
-- 僅 GitHub API（直接連線）與 WebSearch 可用
+---
 
-### 搜尋發現
-所有通過 WebSearch 找到的近期帖子（均已在前次記錄中處理）：
-- 2026-07-11 23:18 ET：伊朗威脅帖（1000 Missiles...）
-- 2026-07-11 12:23 ET：哈伯曼批評帖 + Walter Reed 認知測試
-- 2026-07-12 03:21 UTC：葛瑞姆去世帖
-- 2026-07-12 12:53 UTC：降半旗帖（最後已記錄 ID: 116908044067369620）
+## 網路限制
+- truthsocial.com：403 封鎖
+- 大多數新聞網站（CBS News、NBC、CNN、Reuters、BBC、Fox News 等）：403 封鎖
+- 僅 WebSearch 可取得部分搜尋結果摘要
 
-### 建議
-將 truthsocial.com 加入網路出口許可清單
+---
+
+## 今日（2026-07-13 週一）發現的重大事件
+
+### 1. 美軍對伊朗發動新一輪空襲
+- 來源：CBS News 標題「Trump orders new round of strikes to 'hold Iranian forces accountable,' CENTCOM says as two sides exchange threats」
+- 來源：Times of Israel 2026-07-13 即時更新（liveblog-july-13-2026）
+- CENTCOM 聲明：已開始對伊朗發動新一輪空襲，以繼續削弱其在荷姆茲海峽的攻擊能力
+- 川普的 Truth Social 貼文：據 WebSearch 搜尋結果片段，「both Iran and Israel are...」（Forbes Facebook 引用，來源：「In a Truth Social post early on Monday, Trump wrote ... that both Iran and Israel are...」）
+- 但無法獲取完整貼文文字及 Truth Social 貼文 ID
+
+### 2. 疑似新貼文（Forbes 引用，週一早晨）
+- Forbes 在 Facebook 上引用：「In a Truth Social post early on Monday, Trump wrote ... that both Iran and Israel are...」
+- 推測內容：與伊朗和以色列軍事局勢相關
+- 狀態：無法確認完整文字及貼文 ID
+
+### 3. Republic World 引用（週一）
+- 「US President Donald Trump claimed on Monday that there has already been a regime...」
+- 可能涉及伊朗政權更迭議題，但無法獲取完整內容
+
+---
+
+## 已知近期背景（前次記錄後的發展）
+- 2026-07-10 (週五)：川普宣布「Cease Fire is OVER」
+- 2026-07-11 (週六)：「1000 Missiles are Locked and Loaded」貼文
+- 2026-07-12 (週日)：林賽·葛瑞姆逝世→悼文→降半旗命令（最後記錄 ID：116908044067369620）
+- 2026-07-12：川普在採訪中表示荷姆茲海峽「is open」
+- 2026-07-13 (今天)：CENTCOM 對伊朗發動新一輪空襲
+
+---
+
+## 結論
+- 由於網路限制，無法確認任何新貼文的 Truth Social ID
+- 今日明確有重大事件（美軍新一輪伊朗空襲），川普很可能在 Truth Social 發文
+- 無法更新 last_seen_id
+- 建議：將 truthsocial.com 和主要新聞網站加入網路出口許可清單
+
+---
+
+## 建議後續行動
+將以下域名加入網路許可清單：
+- truthsocial.com
+- nbcnews.com
+- cbsnews.com
+- reuters.com
+- apnews.com
