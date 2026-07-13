@@ -102,3 +102,32 @@
 ## LINE 推播狀態
 - api.line.me：被代理伺服器封鎖（HTTP 403）
 - 無法從此環境推播 LINE 通知
+
+---
+
+# 第三次執行補充（本次）
+
+## 新增確認資訊
+
+### Forbes 週一早晨貼文引用（可能完整內容）
+- Forbes Facebook：「In a Truth Social post early on Monday, Trump wrote that both Iran and Israel are...」
+- Yahoo News 結果摘要顯示：「Both sides, Israel and Iran, are looking to do an immediate CEASEFIRE! Final negotiations on 'Peace' are proceeding, subject to ignorance or stupidity getting in its way. The Blockade will remain in place, and in full force and effect, until a 'Final Deal' is reached.」
+- 注：此段引用可能是 6 月較早帖子，或為 7/13 新帖，仍待確認
+
+### Republic World（週一）引用
+- 「US President Donald Trump claimed on Monday that there has already been a regime change in Iran」
+- 川普聲稱伊朗已發生政權更迭
+
+### 今日伊朗局勢（Times of Israel July 13 Liveblog）
+- 伊朗向巴林、阿曼、科威特、約旦等鄰近海灣國家發射導彈（警報響起）
+- 美伊雙方均宣稱控制荷姆茲海峽
+
+### 軍機照片貼文（Tribune India + Newsweek 確認）
+- Trump 在 Truth Social 分享：B-2A Spirit 戰略轟炸機、B-1B Lancer 戰略轟炸機、F-22A Raptor 戰鬥機、VC-25B「Bridge」（卡達贈機）被 F-22 護送
+- 兩張 F-22A Raptor 照片，一張 B-2A + B-1B 合照，一張 VC-25B 護送照
+
+## 第三次執行結論
+- 共 3 次執行均無法取得 Truth Social 貼文 ID（>116908044067369620）
+- 確認今日（7/13）川普至少有以下主題貼文：①伊朗-以色列停火談判②軍機/打擊照片分享③可能的政權更迭宣稱
+- LINE API 持續封鎖，無法推播
+- 建議將 api.line.me 及主要新聞網站加入網路許可清單
