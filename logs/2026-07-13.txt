@@ -19,3 +19,25 @@
 ⚠️ LINE 推播：因無新貼文，本輪跳過推播。
    備注：前次執行 LINE 推播仍受 api.line.me:443 egress policy 封鎖，
          若需接收通知請至 GitHub 查看 posts/ 目錄。
+
+---
+
+[2026-07-13 第二輪執行] 監控執行日誌（約 11:10 UTC）
+
+✅ last_seen_id 確認：20260713_ts_001（Michael Savage 49分鐘反共影片）
+
+✅ 貼文抓取嘗試（多輪）：
+  方法 A（WebFetch RSS/API）：403 Forbidden（egress policy 封鎖）
+  方法 B（WebSearch 多次）：已搜尋 Trump Truth Social July 13 2026 多個關鍵字組合
+  方法 C（Trump Archive / trumpstruth.org / theconservativetreehouse）：403 Forbidden
+
+📋 WebSearch 發現之今日資訊：
+  - 葛瑞姆（Lindsey Graham）於 7/11 晚間（主動脈破裂）過世，已於前次追蹤
+  - 川普 7/13 凌晨3:21 AM 發哀悼帖（已於 2026-07-12 系列中記錄）
+  - 川普轉發 Michael Savage 49 分鐘影片（已記錄為 20260713_ts_001）
+  - 未發現 20260713_ts_001 之後有新貼文之明確證據
+
+ℹ️ 本輪結果：無新貼文，last_seen_id 維持 20260713_ts_001，不更新 GitHub state。
+
+⚠️ LINE 推播：無新貼文，跳過。
+   備注：api.line.me 仍受 egress policy 封鎖。
