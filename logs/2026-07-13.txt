@@ -111,3 +111,43 @@
 ℹ️ 本輪結果：確認無新貼文。last_seen_id 維持 20260713_ts_001 不變。
 
 ⚠️ LINE 推播：無新貼文，跳過。
+
+---
+
+[2026-07-13 第五輪執行] 監控執行日誌（UTC 時間約 15:xx）
+
+✅ 狀態讀取：last_seen_id = 20260713_ts_003（荷姆茲海峽守護者+20%通行費）
+
+✅ GitHub 存取：透過 git clone + raw.githubusercontent.com 成功讀取
+   - api.github.com 仍受 Claude Code session policy 封鎖（403）
+   - raw.githubusercontent.com 正常可讀
+
+✅ 貼文抓取（全面多輪搜尋）：
+  方法 A（WebFetch RSS/API）：403 Forbidden
+  方法 B（WebSearch 15+ 組合）：大規模搜尋，確認結果如下：
+  方法 C（多個新聞源）：403 Forbidden
+
+📋 本輪確認今日 7/13 帖文清單（所有已知）：
+  ✅ ts_001（已記錄）：川普轉發 Michael Savage 49分鐘反共影片
+  ✅ ts_002（已記錄）：「荷姆茲海峽重啟伊朗封鎖令」
+  ✅ ts_003（已記錄）：「美國成為荷姆茲海峽守護者，收取20%通行費」
+
+📋 調查確認的假陽性（非新帖文）：
+  ❌ Forbes Facebook「both Iran and Israel early Monday」→ 確認為 2026-06-08（6月8日也是星期一）的帖文，已在 posts/ 目錄中記錄
+  ❌ WIO News「Iran's new regime preside」→ 確認為 2026-04-01 的帖文（新伊朗政權要求停火）
+  ❌ 「Thank you for your attention to this matter!」→ 確認為 ts_003 原帖文結尾（前次抓取可能截斷），非獨立帖文
+
+📋 今日重要背景（非新帖）：
+  🎗️ 2026-07-13 = 巴特勒暗殺未遂 2 週年（川普在 Fox & Friends 電話採訪中談及）
+  ⚔️ 美伊衝突再度升溫：停火徹底崩潰，美軍對伊朗目標發動新一輪打擊
+  🏳️ 林賽·葛瑞姆參議員（2026-07-11 主動脈破裂去世）降旗令持續執行至週六
+  🌊 伊朗向美軍艦艇發射飛彈及無人機（報復）
+
+ℹ️ 本輪結果：確認無新帖文（ts_003 已是最新）。
+   last_seen_id 維持 20260713_ts_003 不變，不更新 GitHub state。
+
+⚠️ LINE 推播：無新帖文，本輪跳過推播。
+
+🔒 注意事項：
+   - api.github.com 受 Claude Code session policy 封鎖，改用 git clone/push
+   - api.line.me 受 egress policy 封鎖（歷次確認），推播功能無法使用
