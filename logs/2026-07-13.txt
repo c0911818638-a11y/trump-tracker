@@ -1,12 +1,18 @@
-[2026-07-13 17:15 UTC] 監控執行記錄
+=== 2026-07-13 執行日誌 ===
 
-✅ 讀取 last_seen_id: 20260713_ts_003
-✅ 搜尋新貼文：透過 WebSearch 取得（Truth Social 直連 403）
-✅ 發現 2 篇新貼文:
-   - 20260713_ts_004: 格雷厄姆妹妹接任南卡臨時參議員建議
-   - 20260713_ts_005: CLARITY Act 加密貨幣法案 + 反中科技競爭
-✅ 上傳分析檔案至 GitHub (posts/ 目錄)
-✅ 更新 state/last_seen_id.txt -> 20260713_ts_005
-❌ LINE 推播失敗: api.line.me:443 被代理政策封鎖 (403 connect_rejected)
+【成功】
+- 讀取 last_seen_id: 20260713_ts_005
+- 透過 WebSearch 找到 2 篇新貼文（ts_006, ts_007）
+- 建立分析文件並成功 git push 至 GitHub
 
-注意：川普今日共發布約 35 篇貼文（9:00 AM 開始，90 分鐘內），本次僅追蹤最具政治意義的 2 篇新貼文。
+【新貼文】
+1. 20260713_ts_006: 感謝 Dr. Phil / 深層政府從不沉睡
+2. 20260713_ts_007: 反射池搭配 F-35 照片
+
+【錯誤】
+- GitHub API (https://api.github.com): 被代理攔截（403）→ 改用 git clone/push 解決
+- Truth Social 直接抓取 (truthsocial.com): 403 → 改用 WebSearch 解決
+- LINE API (api.line.me): 被代理封鎖（403 Forbidden），無法推播通知
+  → 需要管理員開放 api.line.me 的出站存取
+
+【更新後 last_seen_id】20260713_ts_007
