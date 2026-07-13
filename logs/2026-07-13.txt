@@ -1,18 +1,25 @@
-=== 2026-07-13 執行日誌 ===
+2026-07-13 23:10 UTC - TrumpTracker 執行日誌
 
-【成功】
-- 讀取 last_seen_id: 20260713_ts_005
-- 透過 WebSearch 找到 2 篇新貼文（ts_006, ts_007）
-- 建立分析文件並成功 git push 至 GitHub
-
-【新貼文】
-1. 20260713_ts_006: 感謝 Dr. Phil / 深層政府從不沉睡
-2. 20260713_ts_007: 反射池搭配 F-35 照片
+【執行結果】
+✅ 成功從 GitHub Repo 讀取上次 ID：20260713_ts_014
+✅ 成功透過 WebSearch/WebSearch 取得今日川普貼文
+✅ 成功建立 7 篇新貼文分析（ts_015~ts_021）
+✅ 成功推送至 GitHub repo (c0911818638-a11y/trump-tracker)
 
 【錯誤】
-- GitHub API (https://api.github.com): 被代理攔截（403）→ 改用 git clone/push 解決
-- Truth Social 直接抓取 (truthsocial.com): 403 → 改用 WebSearch 解決
-- LINE API (api.line.me): 被代理封鎖（403 Forbidden），無法推播通知
-  → 需要管理員開放 api.line.me 的出站存取
+❌ LINE API 推播失敗
+   原因：沙盒執行環境的網路政策封鎖 api.line.me:443（proxy 403）
+   影響：用戶未收到 LINE 通知
 
-【更新後 last_seen_id】20260713_ts_007
+【新貼文摘要】
+- ts_015: 感謝Dr. Phil（低重要性）
+- ts_016: 倒影池F-35照片（低重要性）
+- ts_017: 宣告荷姆茲守護者 + 重啟伊朗封鎖 + 20%過境費（高重要性）
+- ts_018: 荷姆茲海峽對非伊朗船隻開放（中重要性）
+- ts_019: 推薦Darline Graham出任南卡臨時參議員（中重要性）
+- ts_020: 呼籲通過CLARITY Act，警告中國加密/AI競爭（高重要性）
+- ts_021: 宣布週四7/16晚9時發表全國演說（高重要性）
+
+【注意事項】
+川普今日共發布約35篇貼文，本次僅捕獲最重要的7篇。
+Truth Social 及 thetrumparchive.com 均返回 403，需依賴 WebSearch 間接取得內容。
