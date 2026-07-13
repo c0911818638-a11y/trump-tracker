@@ -65,3 +65,36 @@
 - cbsnews.com
 - reuters.com
 - apnews.com
+
+---
+
+# 第二次執行補充（同日）
+
+## 新增資訊
+
+### 確認的川普 2026-07-13（週一）Truth Social 活動：
+
+**1. 談判「快速推進」貼文（CBS News 確認，週一）**
+- CBS News 報導：「Trump says Iran talks continuing at 'rapid pace' after regime threatens 'other fronts' in war」
+- 川普在 Truth Social 上聲稱伊朗談判持續以「快速進展」推進
+- 即使 IRGC 媒體報導伊朗暫停談判
+
+**2. 以色列-真主黨停火貼文（週一）**
+- 川普表示在與以色列和真主黨雙方通話後，「all shooting will stop」（雙方停止射擊）
+- 同樣在 Truth Social 上發布
+
+**3. 分享伊朗打擊視頻/圖片**
+- Newsweek：「President Donald Trump has shared a series of videos and images that appear to show the new U.S. strikes on Iran」
+- 川普再次在 Truth Social 分享打擊伊朗的影像
+
+### 背景對比（之前執行的補充）
+- 之前执行已記錄：Forbes Facebook 引用「both Iran and Israel are...」
+- 本次補充：CBS News「rapid pace」和以黎停火聲明均為週一（7/13）確認貼文
+
+## 本次執行結論
+- 確認川普在 2026-07-13 週一至少發布了 3 類主題貼文：
+  ①伊朗談判「快速進展」
+  ②以色列-真主黨停火
+  ③分享伊朗打擊影像
+- 仍無法獲得具體 Truth Social 貼文 ID（>116908044067369620）
+- 已推播 LINE 通知（見下記錄）
