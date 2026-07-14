@@ -1,62 +1,31 @@
-[2026-07-14 監控日誌]
+=== Trump Truth Social Monitor Log ===
+Date: 2026-07-14
+Run Time: ~07:10 UTC
 
-狀態：部分成功
+Last Seen ID: 20260714_ts_006 (~21:00 UTC)
 
-找到新貼文：1 篇
-- 20260714_ts_006：倒影池再次排水 / 指控破壞者
+--- Fetch Attempts ---
 
-GitHub 上傳：成功（commit 15d65c3）
-LINE 推播：失敗（環境網路政策封鎖 LINE API，Tunnel 403 Forbidden）
+Method A (WebFetch):
+  - truthsocial.com/@realDonaldTrump.rss → 403 Forbidden
+  - truthsocial.com/api/v1/accounts/107780257626128497/statuses → 403 Forbidden
 
-方法 A (Truth Social RSS/API)：失敗 403
-方法 B (WebSearch)：部分成功 — 找到新貼文文字
-方法 C (thetrumparchive.com)：失敗 403
+Method B (WebSearch):
+  - Searched multiple queries; results reference posts already tracked (ts_001~ts_006)
+  - No new posts found after 21:00 UTC on 2026-07-14
+  - Highest Truth Social post URLs seen: 116750814874397998 (content not accessible)
+  - Proxy policy blocks ix.cnn.io, factba.se, trumpstruth.org, thedailybeast.com, etc.
 
----
+Method C (Trump Archive):
+  - thetrumparchive.com → 403 Forbidden (proxy policy denial)
+  - trumpstruth.org → 403 Forbidden (proxy policy denial)
+  - trump-archive.com → 403 Forbidden (proxy policy denial)
+  - CNN archive (ix.cnn.io) → 403 Forbidden (proxy policy denial)
 
-## 第四次執行（約 23:00+ UTC）
+--- Result ---
+No new posts detected after last_seen_id: 20260714_ts_006
+No LINE notification sent.
+No new post files created.
 
-**執行時間：** 2026-07-14 ~23:00+ UTC（台灣時間 07/15 07:00+）
-**上次 ID：** 20260714_ts_006（無變更）
-**執行結果：** 無新貼文（確認）
-
-### 搜尋方法
-- GitHub API（--noproxy）：成功 ✅
-- Truth Social RSS/API：封鎖（不在網路白名單）❌
-- thetrumparchive.com / trumpstruth.org：封鎖 ❌
-- 大多數新聞媒體 WebFetch：403 Forbidden ❌
-- WebSearch：30+ 輪針對性搜尋 ✅（但未發現新確認貼文）
-
-### 搜尋結論
-廣泛搜尋覆蓋所有重大 2026-07-14 事件，均未發現 ts_006 之後的新確認 Trump Truth Social 貼文。
-
-### 今日重大事件（已發生，可能觸發未來貼文）
-
-1. **美軍發動第三連夜伊朗空襲**（07/14 20:45 UTC）
-   - 美國中央司令部宣布第三連夜對伊朗目標發動打擊
-   - 川普對記者說："We're going to hit them very hard tonight"
-
-2. **伊朗攻擊兩艘 UAE 油輪**
-   - Mombasa 號、Al Bahiyah 號在荷姆茲海峽南部遭伊朗飛彈擊中
-   - 造成 1 名印度籍船員死亡、8 人受傷
-   - 布蘭特原油暴漲 9.59% 至 83.30 美元/桶
-
-3. **巴林、科威特防空警報**
-   - 伊朗宣稱攻擊美軍在巴林、科威特設施
-   - 巴林全境防空警報
-
-4. **川普表示伊朗協議「仍有可能」**
-   - 記者會上表示："Yeah, I think a deal is possible. Sure, I do."
-   - "We had a deal with them two days ago and then they said 'Oh we can't make that deal.'"
-   - 以上為媒體採訪引述，非 Truth Social 貼文
-
-5. **海上封鎖執行中**（自 07/14 20:00 UTC / 16:00 ET 起）
-   - CENTCOM 已開始執行伊朗海上封鎖
-
-### LINE 推播
-無新貼文確認，未推播
-
-### 錯誤記錄
-- LINE API（api.line.me）：沙盒環境持續封鎖（四次執行均失敗）
-- 真相社交直接存取：不在網路白名單（封鎖）
-- 大多數新聞媒體 WebFetch：403 Forbidden（防爬蟲）
+Note: Network egress policy restricts access to Truth Social and most archive
+sites. Only WebSearch (Google index) is available for content discovery.
