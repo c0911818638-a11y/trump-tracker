@@ -29,3 +29,48 @@ No new post files created.
 
 Note: Network egress policy restricts access to Truth Social and most archive
 sites. Only WebSearch (Google index) is available for content discovery.
+
+---
+
+=== 第二次執行（Run #2 of 2026-07-14 date） ===
+Run Time: 2026-07-14 (automated scheduled run)
+
+Last Seen ID: 20260714_ts_006 (~21:00 UTC)
+
+--- Fetch Attempts ---
+
+Method A (WebFetch):
+  - truthsocial.com/@realDonaldTrump.rss → 403 Forbidden
+  - truthsocial.com/api/v1/accounts/107780257626128497/statuses → 403 Forbidden
+
+Method B (WebSearch):
+  - 20+ rounds of targeted searches across multiple query angles
+  - Searches covered: Iran Bahrain attack, IRGC Fifth Fleet, Hormuz closure,
+    Trump "deal possible", late night posts, specific post IDs, TrumpTruthOnX,
+    trumpstruth.org statuses ~40000+, various date/time filters
+  - Note: Post URL 116835841525431179 found in search indexes (higher ID than
+    previous max 116750814874397998) but content not accessible via WebFetch (403)
+    or WebSearch snippets. Could be a new post or a search index artifact.
+  - No confirmed new post TEXT found after ts_006 from any news source
+
+Method C (Archives):
+  - trumpstruth.org → 403 Forbidden (proxy policy denial)
+  - thetrumparchive.com → 403 Forbidden (proxy policy denial)
+  - All major news live blogs (CBS, CNN, NBC, France24, ABC, Euronews) → 403 Forbidden
+
+--- Today's Confirmed Events (July 14, 2026) ---
+  - US third night of strikes on Iran (Bushehr, Chabahar, Jask, Konarak, Kish Island)
+  - Iran IRGC struck US Fifth Fleet base in Bahrain (residential buildings, comms center)
+  - Iran struck bases in Kuwait (Arifjan, Ali Al Salem) and Jordan
+  - UAE tankers (Mombasa, Al Bahiyah) hit by Iranian missiles in Hormuz (1 dead, 8 injured)
+  - Hormuz blockade executed at 20:00 UTC (16:00 ET) by CENTCOM
+  - Hormuz traffic reduced to ~34 ships/day (vs 88 normal)
+  - Trump told reporters: "Yeah, I think a deal is possible. Sure, I do."
+    (verbal statement in Oval Office, NOT confirmed as a Truth Social post)
+  - No confirmed new Truth Social posts found from Trump after ts_006 (~21:00 UTC)
+
+--- Result ---
+No new posts detected after last_seen_id: 20260714_ts_006
+No LINE notification sent.
+No new post files created.
+last_seen_id.txt unchanged.
