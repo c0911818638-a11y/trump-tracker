@@ -1,25 +1,13 @@
-[2026-07-14 監控執行紀錄]
+[2026-07-14 23:10 UTC] 監控執行記錄
 
-執行時間: 2026-07-14 UTC
+【狀態】成功找到並上傳1篇新貼文
+【新貼文】20260714_ts_018 — East Wing Northern Facade — A match for the White House!
+【GitHub】成功推送至 c0911818638-a11y/trump-tracker (commit e2fe301)
+【LINE 通知】失敗 — api.line.me 被 Anthropic CCR 代理政策封鎖 (403 policy denial)
+【說明】代理伺服器 (127.0.0.1:46305) 封鎖了對 api.line.me:443 的連線，為組織網路政策限制，無法繞過。
+【建議】LINE 通知功能需要在不受代理限制的環境（如本機 cron job 或 GitHub Actions）執行才能正常運作。
 
-=== 步驟摘要 ===
-1. 讀取 last_seen_id: 20260714_ts_010 (成功，透過 raw.githubusercontent.com)
-2. GitHub API (api.github.com): 被 proxy 封鎖，改用 git clone 方式
-3. 抓取 Truth Social 貼文:
-   - truthsocial.com RSS: 403 Forbidden
-   - truthsocial.com API: 403 Forbidden
-   - thetrumparchive.com: 403 Forbidden
-   - WebSearch: 成功取得部分內容
-   - 多數新聞網站: 403 Forbidden (thedailybeast.com, thehill.com, nbcnews.com 等)
-4. 找到新貼文: 1 篇 (20260714_ts_011 - Darline Graham 參議員推薦)
-5. 上傳至 GitHub: 成功 (git push)
-6. LINE 推播 (api.line.me): 被 proxy 封鎖 (403) - 無法推播
-
-=== 已發現新貼文 ===
-ts_011: 川普推薦 Darline Graham Nordone 出任南卡臨時參議員
-- 原文: "I recommended, to Governor Henry McMaster, Lindsey Graham's wonderful sister, Darline, to serve as interim Senator from the Great State of South Carolina."
-- 重要程度: 高
-
-=== 封鎖資訊 ===
-- api.line.me: 被 egress policy 封鎖 (403 from proxy)
-- 建議: 需在 egress policy 中允許 api.line.me:443
+【今日重要貼文摘要（依 trumpstruth.org 資料）】
+- ts_001~ts_017：已於上次執行記錄，涵蓋霍爾木茲通行費→撤回、伊朗封鎖聲明、油流順暢/軍事致敬
+- ts_018（新）：白宮東翼北側立面翻修完工展示，重要程度低
+- 其他 40039-40051 號貼文：多為轉發（RT）他人貼文
