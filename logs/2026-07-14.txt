@@ -1,22 +1,10 @@
-=== 監控執行日誌 2026-07-14 ===
+2026-07-14 執行摘要
+=====================
+狀態: 部分成功
 
-[成功] GitHub repo clone 成功
-[成功] 上次記錄 ID: 20260714_ts_007
-[成功] WebSearch 取得新貼文資訊
+成功: 讀取 last_seen_id 20260714_ts_008 → 找到2篇新貼文(ts_009/ts_010) → GitHub上傳成功 → 狀態更新至ts_010
+失敗: LINE推播 (api.line.me 不在環境 network allowlist, 需加入egress設定)
 
-新貼文 (20260714_ts_008):
-- 主題: 川普宣布週四全國演說 (07/17 21:00 ET)
-- 原文: "Donald Trump will be making a Speech to the Nation on Thursday evening, at 9 P.M. Eastern. Thank you for your attention to this matter!"
-
-[成功] 分析檔案已上傳: posts/2026-07-14_20260714_ts_008.md
-[成功] state/last_seen_id.txt 已更新為 20260714_ts_008
-[成功] GitHub push 完成
-
-[失敗] LINE 推播失敗: api.line.me 被環境網路政策封鎖 (403 Forbidden)
-       須由管理員在 Claude Code 環境允許 api.line.me 的 outbound HTTPS
-
-=== 資料來源 ===
-- https://thenationaldesk.com (Speech to the Nation 宣告)
-- https://www.aljazeera.com (霍爾木茲海峽守護者)
-- https://www.cnbc.com (20% 通行費)
-- https://www.axios.com (伊朗封鎖)
+新貼文:
+ts_009 (13:05 UTC): 川普攻擊ABC主播David Muir「倒影池假新聞」
+ts_010 (13:20 UTC): 川普吹噓DC 60座紀念碑翻新、Washington最安全
