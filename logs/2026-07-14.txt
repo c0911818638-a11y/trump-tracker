@@ -1,19 +1,13 @@
-2026-07-14 監控日誌
+[2026-07-14 監控日誌]
 
-狀態: 部分成功
-- GitHub 上傳: 成功 (5篇新貼文 + state 更新)
-- LINE 推播: 失敗 (api.line.me 被 session egress proxy 封鎖 — 403 Forbidden)
+狀態：部分成功
 
-新貼文數量: 5篇
-上次 ID: 20260713_ts_021
-本次最新 ID: 20260714_ts_005
+找到新貼文：1 篇
+- 20260714_ts_006：倒影池再次排水 / 指控破壞者
 
-新貼文清單:
-1. 20260714_ts_001 - 林賽·格雷厄姆逝世/降半旗
-2. 20260714_ts_002 - 霍爾木茲海峽/重啟伊朗封鎖
-3. 20260714_ts_003 - 宣布美國為「霍爾木茲海峽守護者」/20%通行費
-4. 20260714_ts_004 - 感謝Dr. Phil/深層政府
-5. 20260714_ts_005 - 反射水池/F-35
+GitHub 上傳：成功（commit 15d65c3）
+LINE 推播：失敗（環境網路政策封鎖 LINE API，Tunnel 403 Forbidden）
 
-LINE 推播錯誤: CONNECT tunnel failed (HTTP 403) — api.line.me 未在 egress 白名單
-建議: 在 Claude Code web session 的環境設定中將 api.line.me 加入允許清單
+方法 A (Truth Social RSS/API)：失敗 403
+方法 B (WebSearch)：部分成功 — 找到新貼文文字
+方法 C (thetrumparchive.com)：失敗 403
