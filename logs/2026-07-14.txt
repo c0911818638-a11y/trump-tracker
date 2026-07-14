@@ -1,107 +1,40 @@
-=== Trump Truth Social Monitor Log ===
-Date: 2026-07-14
-Run Time: ~07:10 UTC
+# 監控日誌 - 2026-07-14
 
-Last Seen ID: 20260714_ts_006 (~21:00 UTC)
+**執行時間:** 2026-07-14 UTC
+**上次貼文 ID:** 20260714_ts_006
+**狀態:** 未發現新貼文
 
---- Fetch Attempts ---
+## 當前追蹤狀況
 
-Method A (WebFetch):
-  - truthsocial.com/@realDonaldTrump.rss → 403 Forbidden
-  - truthsocial.com/api/v1/accounts/107780257626128497/statuses → 403 Forbidden
+### 已追蹤（2026-07-14）：
+- ts_001: 林賽·格雷厄姆逝世，全美降半旗（約09:05 UTC）
+- ts_002: 霍爾木茲海峽封鎖宣告（約09:15 UTC）
+- ts_003: 「霍爾木茲海峽守護者」+ 20%通行費（約09:20 UTC）
+- ts_004: 菲爾博士/深層政府（約09:35 UTC）
+- ts_005: 倒影池展示F-35（約09:50 UTC）
+- ts_006: 倒影池排水/修復破壞（約21:00 UTC）
 
-Method B (WebSearch):
-  - Searched multiple queries; results reference posts already tracked (ts_001~ts_006)
-  - No new posts found after 21:00 UTC on 2026-07-14
-  - Highest Truth Social post URLs seen: 116750814874397998 (content not accessible)
-  - Proxy policy blocks ix.cnn.io, factba.se, trumpstruth.org, thedailybeast.com, etc.
+## 本次搜索結果
 
-Method C (Trump Archive):
-  - thetrumparchive.com → 403 Forbidden (proxy policy denial)
-  - trumpstruth.org → 403 Forbidden (proxy policy denial)
-  - trump-archive.com → 403 Forbidden (proxy policy denial)
-  - CNN archive (ix.cnn.io) → 403 Forbidden (proxy policy denial)
+嘗試方法：
+1. Truth Social RSS/API → 403（存取拒絕）
+2. WebSearch 多次搜索 → 返回已追蹤貼文
+3. WebFetch 新聞網站 → 403（所有主要新聞網站）
+4. X/Twitter 轉推帳號 → 403
+5. Trump archive 網站 → 403
 
---- Result ---
-No new posts detected after last_seen_id: 20260714_ts_006
-No LINE notification sent.
-No new post files created.
+## 重要背景事件（未確認 Truth Social 貼文）
 
-Note: Network egress policy restricts access to Truth Social and most archive
-sites. Only WebSearch (Google index) is available for content discovery.
+根據搜索結果，2026-07-14 17:00 UTC 後發生：
+- 美軍第四輪伊朗打擊行動開始（繼7/11、7/12、7/13夜間後第四次）
+- 伊朗攻擊巴林（Juffair 美軍基地）及約旦
+- 波斯灣通行量下降超過50%
+- 美伊談判陷入僵局
+- 川普宣布週四（7/16）晚9時東部時間向全國發表演說（已追蹤為2026-07-13_ts_021）
 
----
+## 建議
 
-=== 第二次執行（Run #2 of 2026-07-14 date） ===
-Run Time: 2026-07-14 (automated scheduled run)
-
-Last Seen ID: 20260714_ts_006 (~21:00 UTC)
-
---- Fetch Attempts ---
-
-Method A (WebFetch):
-  - truthsocial.com/@realDonaldTrump.rss → 403 Forbidden
-  - truthsocial.com/api/v1/accounts/107780257626128497/statuses → 403 Forbidden
-
-Method B (WebSearch):
-  - 20+ rounds of targeted searches across multiple query angles
-  - Searches covered: Iran Bahrain attack, IRGC Fifth Fleet, Hormuz closure,
-    Trump "deal possible", late night posts, specific post IDs, TrumpTruthOnX,
-    trumpstruth.org statuses ~40000+, various date/time filters
-  - Note: Post URL 116835841525431179 found in search indexes (higher ID than
-    previous max 116750814874397998) but content not accessible via WebFetch (403)
-    or WebSearch snippets. Could be a new post or a search index artifact.
-  - No confirmed new post TEXT found after ts_006 from any news source
-
-Method C (Archives):
-  - trumpstruth.org → 403 Forbidden (proxy policy denial)
-  - thetrumparchive.com → 403 Forbidden (proxy policy denial)
-  - All major news live blogs (CBS, CNN, NBC, France24, ABC, Euronews) → 403 Forbidden
-
---- Today's Confirmed Events (July 14, 2026) ---
-  - US third night of strikes on Iran (Bushehr, Chabahar, Jask, Konarak, Kish Island)
-  - Iran IRGC struck US Fifth Fleet base in Bahrain (residential buildings, comms center)
-  - Iran struck bases in Kuwait (Arifjan, Ali Al Salem) and Jordan
-  - UAE tankers (Mombasa, Al Bahiyah) hit by Iranian missiles in Hormuz (1 dead, 8 injured)
-  - Hormuz blockade executed at 20:00 UTC (16:00 ET) by CENTCOM
-  - Hormuz traffic reduced to ~34 ships/day (vs 88 normal)
-  - Trump told reporters: "Yeah, I think a deal is possible. Sure, I do."
-    (verbal statement in Oval Office, NOT confirmed as a Truth Social post)
-  - No confirmed new Truth Social posts found from Trump after ts_006 (~21:00 UTC)
-
---- Result ---
-No new posts detected after last_seen_id: 20260714_ts_006
-No LINE notification sent.
-No new post files created.
-last_seen_id.txt unchanged.
-
----
-
-=== 第三次執行（Run #3 of 2026-07-14） ===
-Run Time: 2026-07-14 (automated scheduled run)
-
-Last Seen ID: 20260714_ts_006 (~21:00 UTC)
-
---- Fetch Attempts ---
-
-Method A (WebFetch):
-  - truthsocial.com/@realDonaldTrump.rss → 403 Forbidden
-  - truthsocial.com/api/v1/accounts/107780257626128497/statuses → 403 Forbidden
-
-Method B (WebSearch):
-  - Multiple targeted queries for new posts after ts_006
-  - Searched: Iran Bahrain attack + Truth Social, deal possible Iran July 14, 
-    Hormuz blockade activation new post, latest Trump post tonight July 14
-  - Confirmed: No new Truth Social posts found after Reflecting Pool post (ts_006)
-  - Post 116835841525431179 confirmed as July 10 post (tracked as 2026-07-10_116835841525431179.md)
-  - Trump verbal quote ("Yeah, I think a deal is possible") was press pool statement, not TS post
-
-Method C (Archives):
-  - thetrumparchive.com → 403 Forbidden
-  - trumpstruth.org → 403 Forbidden
-
---- Result ---
-No new posts detected after last_seen_id: 20260714_ts_006
-No LINE notification sent.
-No new post files created.
-last_seen_id.txt unchanged.
+下次執行時重點搜索：
+- 川普對伊朗攻擊巴林/約旦的回應貼文
+- 第四夜打擊的 Truth Social 貼文
+- 週四演說前的相關貼文
