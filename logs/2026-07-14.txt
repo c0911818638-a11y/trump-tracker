@@ -74,3 +74,34 @@ No new posts detected after last_seen_id: 20260714_ts_006
 No LINE notification sent.
 No new post files created.
 last_seen_id.txt unchanged.
+
+---
+
+=== 第三次執行（Run #3 of 2026-07-14） ===
+Run Time: 2026-07-14 (automated scheduled run)
+
+Last Seen ID: 20260714_ts_006 (~21:00 UTC)
+
+--- Fetch Attempts ---
+
+Method A (WebFetch):
+  - truthsocial.com/@realDonaldTrump.rss → 403 Forbidden
+  - truthsocial.com/api/v1/accounts/107780257626128497/statuses → 403 Forbidden
+
+Method B (WebSearch):
+  - Multiple targeted queries for new posts after ts_006
+  - Searched: Iran Bahrain attack + Truth Social, deal possible Iran July 14, 
+    Hormuz blockade activation new post, latest Trump post tonight July 14
+  - Confirmed: No new Truth Social posts found after Reflecting Pool post (ts_006)
+  - Post 116835841525431179 confirmed as July 10 post (tracked as 2026-07-10_116835841525431179.md)
+  - Trump verbal quote ("Yeah, I think a deal is possible") was press pool statement, not TS post
+
+Method C (Archives):
+  - thetrumparchive.com → 403 Forbidden
+  - trumpstruth.org → 403 Forbidden
+
+--- Result ---
+No new posts detected after last_seen_id: 20260714_ts_006
+No LINE notification sent.
+No new post files created.
+last_seen_id.txt unchanged.
