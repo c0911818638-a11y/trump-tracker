@@ -1,10 +1,25 @@
-2026-07-14 執行摘要
-=====================
-狀態: 部分成功
+[2026-07-14 監控執行紀錄]
 
-成功: 讀取 last_seen_id 20260714_ts_008 → 找到2篇新貼文(ts_009/ts_010) → GitHub上傳成功 → 狀態更新至ts_010
-失敗: LINE推播 (api.line.me 不在環境 network allowlist, 需加入egress設定)
+執行時間: 2026-07-14 UTC
 
-新貼文:
-ts_009 (13:05 UTC): 川普攻擊ABC主播David Muir「倒影池假新聞」
-ts_010 (13:20 UTC): 川普吹噓DC 60座紀念碑翻新、Washington最安全
+=== 步驟摘要 ===
+1. 讀取 last_seen_id: 20260714_ts_010 (成功，透過 raw.githubusercontent.com)
+2. GitHub API (api.github.com): 被 proxy 封鎖，改用 git clone 方式
+3. 抓取 Truth Social 貼文:
+   - truthsocial.com RSS: 403 Forbidden
+   - truthsocial.com API: 403 Forbidden
+   - thetrumparchive.com: 403 Forbidden
+   - WebSearch: 成功取得部分內容
+   - 多數新聞網站: 403 Forbidden (thedailybeast.com, thehill.com, nbcnews.com 等)
+4. 找到新貼文: 1 篇 (20260714_ts_011 - Darline Graham 參議員推薦)
+5. 上傳至 GitHub: 成功 (git push)
+6. LINE 推播 (api.line.me): 被 proxy 封鎖 (403) - 無法推播
+
+=== 已發現新貼文 ===
+ts_011: 川普推薦 Darline Graham Nordone 出任南卡臨時參議員
+- 原文: "I recommended, to Governor Henry McMaster, Lindsey Graham's wonderful sister, Darline, to serve as interim Senator from the Great State of South Carolina."
+- 重要程度: 高
+
+=== 封鎖資訊 ===
+- api.line.me: 被 egress policy 封鎖 (403 from proxy)
+- 建議: 需在 egress policy 中允許 api.line.me:443
