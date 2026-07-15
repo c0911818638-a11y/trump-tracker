@@ -1,0 +1,18 @@
+[2026-07-15 執行記錄]
+
+狀態：部分成功
+- last_seen_id 讀取：✅ 20260714_ts_019
+- 貼文抓取：✅ 透過 WebSearch 彙整新聞來源
+- 新貼文發現：✅ 3 篇 (ts_020, ts_021, ts_022)
+- GitHub 上傳：✅ 已 push 至 c0911818638-a11y/trump-tracker
+- last_seen_id 更新：✅ 20260714_ts_022
+- LINE 通知：❌ 失敗 — api.line.me 被 proxy 封鎖 (403 Forbidden)
+
+錯誤說明：
+  本執行環境 egress proxy 不允許對 api.line.me 的連線。
+  LINE 推播需在不受出口限制的環境中執行，或改用支援的通知服務。
+
+新貼文摘要：
+  ts_020: Todd Blanche「PHENOMENAL」AG確認施壓文 (trumpstruth.org/statuses/40052)
+  ts_021: 霍爾木茲通行費逆轉 — 改以灣區投資協議取代 20% 費用
+  ts_022: 霍爾木茲對所有非伊朗船隻開放 + 對伊「TOTAL DESTRUCTION」警告
