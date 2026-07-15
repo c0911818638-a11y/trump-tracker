@@ -1,18 +1,28 @@
-[2026-07-15 執行記錄]
+[2026-07-15] Trump Tracker 執行日誌
 
-狀態：部分成功
-- last_seen_id 讀取：✅ 20260714_ts_019
-- 貼文抓取：✅ 透過 WebSearch 彙整新聞來源
-- 新貼文發現：✅ 3 篇 (ts_020, ts_021, ts_022)
-- GitHub 上傳：✅ 已 push 至 c0911818638-a11y/trump-tracker
-- last_seen_id 更新：✅ 20260714_ts_022
-- LINE 通知：❌ 失敗 — api.line.me 被 proxy 封鎖 (403 Forbidden)
+執行時間: 2026-07-15 UTC
 
-錯誤說明：
-  本執行環境 egress proxy 不允許對 api.line.me 的連線。
-  LINE 推播需在不受出口限制的環境中執行，或改用支援的通知服務。
+狀態: 部分成功
 
-新貼文摘要：
-  ts_020: Todd Blanche「PHENOMENAL」AG確認施壓文 (trumpstruth.org/statuses/40052)
-  ts_021: 霍爾木茲通行費逆轉 — 改以灣區投資協議取代 20% 費用
-  ts_022: 霍爾木茲對所有非伊朗船隻開放 + 對伊「TOTAL DESTRUCTION」警告
+=== GitHub 操作 ===
+✅ 成功讀取 last_seen_id.txt（20260714_ts_022）
+✅ 成功 clone 儲存庫
+✅ 新增 3 篇新貼文分析至 posts/
+✅ 更新 state/last_seen_id.txt → 20260715_ts_003
+✅ 成功 push 至 GitHub
+
+=== 新貼文 ===
+1. 20260715_ts_001: 伊朗電廠橋梁威脅（2026-07-15 02:00 UTC）
+2. 20260715_ts_002: 選舉誠信演說「重大消息」（2026-07-15 12:00 UTC）
+3. 20260715_ts_003: 亨利·奎拉爾批評貼文（2026-07-14 22:00 UTC）
+
+=== LINE 通知 ===
+❌ 失敗：api.line.me:443 被代理政策封鎖（connect_rejected: gateway answered 403）
+   原因：此執行環境的出站網路政策不允許連接 api.line.me
+   建議：聯繫環境管理員開放 api.line.me 的出站連線，或在不同的網路環境中執行 LINE 推播
+
+=== 資料來源 ===
+- Truth Social 直接存取: 403 Forbidden
+- thetrumparchive.com: 403 Forbidden  
+- trumpstruth.org: 403 Forbidden
+- 新聞來源彙整: NBC News, NPR, The Hill, Forbes, Pravda EN, AP7AM
