@@ -1,28 +1,51 @@
 [2026-07-15] Trump Tracker 執行日誌
 
-執行時間: 2026-07-15 UTC
+執行時間: 2026-07-15 UTC（兩次執行）
 
 狀態: 部分成功
 
-=== GitHub 操作 ===
+=== 第一次執行 ===
+
+GitHub 操作:
 ✅ 成功讀取 last_seen_id.txt（20260714_ts_022）
 ✅ 成功 clone 儲存庫
 ✅ 新增 3 篇新貼文分析至 posts/
 ✅ 更新 state/last_seen_id.txt → 20260715_ts_003
 ✅ 成功 push 至 GitHub
 
-=== 新貼文 ===
+新貼文:
 1. 20260715_ts_001: 伊朗電廠橋梁威脅（2026-07-15 02:00 UTC）
 2. 20260715_ts_002: 選舉誠信演說「重大消息」（2026-07-15 12:00 UTC）
 3. 20260715_ts_003: 亨利·奎拉爾批評貼文（2026-07-14 22:00 UTC）
 
-=== LINE 通知 ===
-❌ 失敗：api.line.me:443 被代理政策封鎖（connect_rejected: gateway answered 403）
+LINE 通知: ❌ 失敗（api.line.me:443 被代理政策封鎖）
+
+=== 第二次執行 ===
+
+GitHub 操作:
+✅ 成功讀取 last_seen_id.txt（20260715_ts_003）
+✅ 成功 clone 儲存庫
+✅ 新增 2 篇新貼文分析至 posts/
+✅ 更新 state/last_seen_id.txt → 20260715_ts_005
+✅ 成功 push 至 GitHub（commit 96c79d3）
+
+新貼文:
+4. 20260715_ts_004: 夏令時間永久化——《陽光保護法》眾院通過（2026-07-15 約 14:00 UTC）
+5. 20260715_ts_005: FBI返回葛蘭姆住所——川普斥「浪費時間」（2026-07-15 約 15:30 UTC）
+
+LINE 通知: ❌ 失敗（api.line.me:443 被代理政策封鎖，curl exit 56）
    原因：此執行環境的出站網路政策不允許連接 api.line.me
-   建議：聯繫環境管理員開放 api.line.me 的出站連線，或在不同的網路環境中執行 LINE 推播
+   建議：聯繫環境管理員開放 api.line.me 的出站連線，或改用 GitHub Actions 執行 LINE 推播
+
+=== 今日重要事件摘要 ===
+- 伊朗戰爭：美軍完成連續三夜空襲，川普宣告美國為「霍爾木茲守護者」但隨後撤回通行費計畫改為灣國投資協議
+- 林賽·葛蘭姆（Lindsey Graham）辭世（7/12，享年71歲，主動脈剝離），其妹達琳·諾德尼接任南卡羅萊納州參議員
+- 川普選舉誠信演說預告（7/17 週四 21:00 ET）
+- 眾院通過《陽光保護法》（308-117），夏令時間永久化待參院審議
 
 === 資料來源 ===
-- Truth Social 直接存取: 403 Forbidden
-- thetrumparchive.com: 403 Forbidden  
+- Truth Social 直接存取: 403 Forbidden（代理政策封鎖）
+- thetrumparchive.com: 403 Forbidden
 - trumpstruth.org: 403 Forbidden
-- 新聞來源彙整: NBC News, NPR, The Hill, Forbes, Pravda EN, AP7AM
+- 新聞來源彙整: NBC News (rcna587234, rcna587383), NPR, The Hill, Fox News,
+  Western Journal, CNN Politics, CBS News, Al Jazeera, PBS NewsHour
