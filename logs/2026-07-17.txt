@@ -1,0 +1,35 @@
+[2026-07-17] 川普 Truth Social 貼文監控執行日誌
+
+執行時間：2026-07-17 UTC
+上次追蹤 ID：20260716_ts_021（2026-07-17 01:05 EDT / 台灣 2026-07-17 13:05）
+
+【方法 A】Truth Social RSS / API
+  - https://truthsocial.com/@realDonaldTrump.rss → HTTP 403
+  - https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → HTTP 403
+
+【方法 B】WebSearch 搜尋
+  - 搜尋 "Trump Truth Social posts today July 17 2026 site:truthsocial.com" → 無可用 post 內文
+  - 搜尋多次不同關鍵字組合 → 僅取得新聞報導摘要，無具體新 post 文字內容
+
+【方法 C】Trump Archive 備援
+  - https://www.thetrumparchive.com/ → HTTP 403
+  - https://trumpstruth.org/ → HTTP 403
+  - trumpstruth.org 個別 statuses 頁面 → HTTP 403
+
+【補充資訊 — 無法驗證的新 post】
+  trumpstruth.org 搜尋結果顯示最高 status 約 40086，對應 2026-07-16 posts，
+  未見 2026-07-17 以後的新 post 編入索引。
+  
+【今日重要背景（來自搜尋結果，非直接 post 來源）】
+  - 川普昨晚（2026-07-16 21:00 EDT）於白宮東廳發表黃金時段全國演說
+  - 主題：選舉誠信、選票機器安全漏洞
+  - 主要宣稱：中國竊取「2.2 億份美國選民資料」
+  - 推動 SAVE America Act 通過
+  - 對不播出演說的電視台威脅吊銷執照
+  - Trump Media（TMTG）宣布 "Truth API" 付費數據服務（給華爾街交易商）
+
+【結論】
+  所有直接取得 Truth Social 貼文的方法均告失敗（403 封鎖）。
+  無法確認是否存在比 20260716_ts_021 更新的貼文。
+  未建立新 post 檔案，未更新 last_seen_id，未推播 LINE 通知。
+  建議：下次執行時嘗試同樣流程，或確認是否需要更換 API 存取方式。
