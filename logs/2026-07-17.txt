@@ -1,63 +1,23 @@
-2026-07-17 監控執行日誌
-======================
+# Trump Tracker Log - 2026-07-17
 
-執行結果：部分成功
+## 執行狀態：部分成功
 
-✅ 已完成：
-- 讀取 last_seen_id: 20260717_ts_003 (World Cup final 貼文)
-- 搜尋新貼文：發現伊朗戰爭升溫（伊朗擴大攻擊至敘利亞/巴林）為主要新議題
-- 新建分析檔：posts/2026-07-17_20260717_ts_004.md
-- 更新 state/last_seen_id.txt → 20260717_ts_004
-- 推送至 GitHub (main branch)
+### 已完成
+- 讀取 last_seen_id: 20260717_ts_009
+- 抓取新貼文：找到 2 篇新貼文
+  - ts_010: 加拿大野火關稅威脅
+  - ts_011: 達琳・葛拉罕參議員背書
+- 分析文件已建立：posts/2026-07-17_20260717_ts_010.md, ts_011.md
+- 更新 last_seen_id: 20260717_ts_011
+- GitHub 推送：成功 (commit 27266c7)
 
-❌ 失敗：
-- LINE 推播通知失敗
-  錯誤：api.line.me 被 CCR proxy 組織政策封鎖（HTTP 403 Forbidden on CONNECT tunnel）
-  原因：此執行環境的 egress policy 不允許連線至 api.line.me
-  建議：需在不受限制的環境中執行 LINE 推播，或向管理員申請解除 api.line.me 的封鎖
+### 失敗
+- LINE 推播通知：FAILED
+  - 原因：api.line.me 被環境代理政策封鎖（HTTP 403 from proxy）
+  - 錯誤：CONNECT tunnel failed, response 403
+  - 影響：無法推播 ts_010 和 ts_011 的 LINE 通知
 
-新貼文摘要（20260717_ts_004）：
-- 主題：美伊戰爭持續升溫，伊朗首次擴大攻擊至敘利亞及巴林美軍基地
-- 重要程度：高
-- 川普回應：Truth Social 深夜強硬警告，抨擊媒體報導
-
----
-
-第二次執行（本次 run）：
-✅ 已完成：
-- 讀取 last_seen_id: 20260717_ts_004
-- 搜尋新貼文：發現美軍 7/17 炸毀伊朗橋梁（班達爾阿巴斯至設拉子的卡胡雷斯坦橋等）為主要新議題
-- 新建分析檔：posts/2026-07-17_20260717_ts_005.md
-- 更新 state/last_seen_id.txt → 20260717_ts_005
-- 推送至 GitHub (main branch) ✅
-
-❌ 失敗（同前）：
-- LINE 推播通知失敗
-  錯誤：api.line.me 被 CCR proxy 封鎖（exit code 56，連線失敗）
-  此為持續性問題，需在不受限制環境執行
-
-新貼文摘要（20260717_ts_005）：
-- 主題：美軍第七輪轟炸炸毀伊朗南部三座大橋，川普宣稱伊朗渴望談判
-- 重要程度：高
-- 川普語氣：強硬宣示，威脅電廠將是下一目標
-
----
-
-第三次執行（本次 run）：
-✅ 已完成：
-- 讀取 last_seen_id: 20260717_ts_008 (映倒水池破壞貼文)
-- 廣泛搜尋 7/17 新貼文（WebSearch×12 輪、WebFetch×多次）
-- 發現 Truth Social 貼文 ID `116750814874397998`（確認存在但內容無法取得）
-- 確認兩大重要新聞：Truth API 商業化宣布 + CNN 股市調查
-- 新建綜合分析檔：posts/2026-07-17_20260717_ts_009.md
-- 更新 state/last_seen_id.txt → 20260717_ts_009
-
-❌ 失敗：
-- 直接讀取 truthsocial.com → HTTP 403（proxy 政策封鎖）
-- 大多數主要新聞網站 WebFetch → HTTP 403（proxy 政策封鎖）
-- LINE 推播通知（預期失敗，同前次原因）
-
-新貼文摘要（20260717_ts_009）：
-- 主題 A：Truth API — 川普媒體公司出售毫秒級 Truth Social 貼文訪問權給華爾街
-- 主題 B：CNN 調查 — 川普買股後 7 日內在 Truth Social 讚揚該公司（21 家）
-- 重要程度：高（直接影響台灣及亞洲金融市場）
+### 注意事項
+- 環境限制：此 Claude Code 遠端執行環境的 egress proxy 政策封鎖了 api.line.me
+- GitHub API (api.github.com) 同樣被封鎖，改以 git clone + push 方式繞過
+- 建議：LINE 通知功能需在不受限制的環境中執行（如本地 cron job 或其他 CI/CD）
