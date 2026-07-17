@@ -1,35 +1,22 @@
-[2026-07-17] 川普 Truth Social 貼文監控執行日誌
+2026-07-17 監控執行日誌
+======================
 
-執行時間：2026-07-17 UTC
-上次追蹤 ID：20260716_ts_021（2026-07-17 01:05 EDT / 台灣 2026-07-17 13:05）
+執行結果：部分成功
 
-【方法 A】Truth Social RSS / API
-  - https://truthsocial.com/@realDonaldTrump.rss → HTTP 403
-  - https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → HTTP 403
+✅ 已完成：
+- 讀取 last_seen_id: 20260717_ts_003 (World Cup final 貼文)
+- 搜尋新貼文：發現伊朗戰爭升溫（伊朗擴大攻擊至敘利亞/巴林）為主要新議題
+- 新建分析檔：posts/2026-07-17_20260717_ts_004.md
+- 更新 state/last_seen_id.txt → 20260717_ts_004
+- 推送至 GitHub (main branch)
 
-【方法 B】WebSearch 搜尋
-  - 搜尋 "Trump Truth Social posts today July 17 2026 site:truthsocial.com" → 無可用 post 內文
-  - 搜尋多次不同關鍵字組合 → 僅取得新聞報導摘要，無具體新 post 文字內容
+❌ 失敗：
+- LINE 推播通知失敗
+  錯誤：api.line.me 被 CCR proxy 組織政策封鎖（HTTP 403 Forbidden on CONNECT tunnel）
+  原因：此執行環境的 egress policy 不允許連線至 api.line.me
+  建議：需在不受限制的環境中執行 LINE 推播，或向管理員申請解除 api.line.me 的封鎖
 
-【方法 C】Trump Archive 備援
-  - https://www.thetrumparchive.com/ → HTTP 403
-  - https://trumpstruth.org/ → HTTP 403
-  - trumpstruth.org 個別 statuses 頁面 → HTTP 403
-
-【補充資訊 — 無法驗證的新 post】
-  trumpstruth.org 搜尋結果顯示最高 status 約 40086，對應 2026-07-16 posts，
-  未見 2026-07-17 以後的新 post 編入索引。
-  
-【今日重要背景（來自搜尋結果，非直接 post 來源）】
-  - 川普昨晚（2026-07-16 21:00 EDT）於白宮東廳發表黃金時段全國演說
-  - 主題：選舉誠信、選票機器安全漏洞
-  - 主要宣稱：中國竊取「2.2 億份美國選民資料」
-  - 推動 SAVE America Act 通過
-  - 對不播出演說的電視台威脅吊銷執照
-  - Trump Media（TMTG）宣布 "Truth API" 付費數據服務（給華爾街交易商）
-
-【結論】
-  所有直接取得 Truth Social 貼文的方法均告失敗（403 封鎖）。
-  無法確認是否存在比 20260716_ts_021 更新的貼文。
-  未建立新 post 檔案，未更新 last_seen_id，未推播 LINE 通知。
-  建議：下次執行時嘗試同樣流程，或確認是否需要更換 API 存取方式。
+新貼文摘要（20260717_ts_004）：
+- 主題：美伊戰爭持續升溫，伊朗首次擴大攻擊至敘利亞及巴林美軍基地
+- 重要程度：高
+- 川普回應：Truth Social 深夜強硬警告，抨擊媒體報導
