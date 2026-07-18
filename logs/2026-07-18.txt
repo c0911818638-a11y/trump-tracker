@@ -1,15 +1,30 @@
-[2026-07-18 UTC] 監控執行報告
+# Trump Tracker 執行日誌 - 2026-07-18
 
-✅ 成功項目：
-- 讀取 last_seen_id: 20260717_ts_018 (Tim Sheehy post)
-- 抓取貼文：透過 WebSearch/WebFetch 搜集新貼文資訊
-- 上傳分析：posts/2026-07-18_20260718_ts_001.md（美軍約旦陣亡）
-- 上傳分析：posts/2026-07-18_20260718_ts_002.md（FIFA世界盃）
-- 更新 last_seen_id: 20260718_ts_002
+## 執行時間
+2026-07-18 23:07 UTC
 
-❌ 失敗項目：
-- LINE 推播失敗（api.line.me 不在 egress 允許清單）
+## 執行結果
 
-📝 本次新增貼文：
-1. 20260718_ts_001: 2名美軍在約旦遭伊朗攻擊陣亡，川普誓言復仇（重要程度：高）
-2. 20260718_ts_002: 川普出席FIFA世界盃招待典禮，稱「美國贏了」（重要程度：中）
+### 成功項目
+- [OK] 讀取 last_seen_id.txt：20260718_ts_002
+- [OK] 搜尋新貼文（使用 WebSearch，Truth Social 與大多數新聞網站因 egress policy 被封鎖）
+- [OK] 發現 1 篇新貼文：20260718_ts_003（伊朗宣布中止 MOU）
+- [OK] 建立分析檔：posts/2026-07-18_20260718_ts_003.md
+- [OK] 更新 state/last_seen_id.txt → 20260718_ts_003
+- [OK] 推送至 GitHub（git push 成功）
+
+### 失敗項目
+- [FAIL] LINE 推播通知：api.line.me 被 egress policy 封鎖（HTTP 403 from proxy CONNECT）
+- [FAIL] 直接存取 Truth Social：truthsocial.com 被 egress policy 封鎖
+- [FAIL] 大多數新聞網站 WebFetch：egress policy 封鎖
+
+### 使用替代方法
+- GitHub: git clone with PAT 成功（替代 GitHub API）
+- 貼文內容: WebSearch 重建（替代直接 Truth Social 存取）
+- LINE 通知: 改用 PushNotification 工具（系統內建）
+
+## 新貼文摘要
+**貼文 ID:** 20260718_ts_003
+**主題:** 伊朗宣布中止 MOU（諒解備忘錄），美軍完成第七夜連續空襲
+**發布時間:** 2026-07-18 22:40 UTC（台灣時間 2026-07-19 06:40）
+**重要程度:** 高
