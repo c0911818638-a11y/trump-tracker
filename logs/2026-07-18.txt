@@ -1,0 +1,42 @@
+# 監控記錄 2026-07-18
+
+**執行時間（台灣時間）：** 2026-07-18
+**上次記錄 ID：** 20260717_ts_015
+
+## 執行結果
+
+無新貼文確認。
+
+## 嘗試方法
+
+### 方法 A：直接讀取 Truth Social
+- https://truthsocial.com/@realDonaldTrump.rss → **HTTP 403 Forbidden（代理政策封鎖）**
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → **HTTP 403 Forbidden**
+
+### 方法 B：WebSearch 搜尋
+- 已執行多次不同關鍵字搜尋
+- 搜尋引擎索引最新 Truth Social 貼文 ID 為 116918963238538617（解碼為 2026-07-14 15:09 UTC）
+- 搜尋結果中 7 月 17 日已知貼文：
+  - 07:52 AM ET：「Great reviews on speech last night. Big audience. Pass THE SAVE AMERICA ACT!!! Thank you!」
+  - 09:36 AM ET：「Election integrity documents are available for review here: https://www.whitehouse.gov」
+  - 09:46 AM ET：「The Reflecting Pool, so badly damaged by Deranged Vandals, has been emptied...」
+  - ~15:40 ET (ts_015)：六月 CPI 通膨數據（已記錄）
+- **7 月 17 日下午 3:40 ET 之後及 7 月 18 日：未找到任何新貼文索引**
+
+### 方法 C：第三方存檔
+- https://www.thetrumparchive.com/ → **HTTP 403 Forbidden**
+- https://trumpstruth.org/ → **HTTP 403 Forbidden**
+- https://web.archive.org/ → **不允許存取**
+- 20+ 新聞網站（CNN, NBC, Fortune, Mirror, HuffPost, Yahoo 等）→ **全部 HTTP 403 Forbidden**
+
+## 結論
+
+- 代理政策封鎖絕大多數外部網站
+- 搜尋引擎索引落後約 3-4 天（最新索引的 Truth Social 貼文 ID 來自 7/14）
+- **無法確認 2026-07-17 15:40 ET 之後是否有新貼文**
+- 本次未更新 state/last_seen_id.txt，未推播 LINE
+
+## 備註
+
+Truth Social Mastodon 格式 ID 解碼方式（實測驗證）：
+post_id >> 16 = Unix 時間戳（毫秒，自 1970-01-01 UTC）
