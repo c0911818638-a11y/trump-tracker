@@ -1,125 +1,22 @@
-# 監控記錄 2026-07-18
+[2026-07-18 UTC] 監控執行報告
 
-**執行時間（台灣時間）：** 2026-07-18
-**上次記錄 ID：** 20260717_ts_015
+✅ 成功項目：
+- 從 GitHub 讀取上次記錄 ID：20260717_ts_015
+- 透過 WebSearch 找到 3 篇新貼文（ts_016, ts_017, ts_018）
+- 建立中文分析檔案並推送至 GitHub
 
-## 執行結果
+📋 新貼文摘要：
+- ts_016: 加拿大野火關稅威脅（2026-07-17 21:18 EDT）
+- ts_017: Darline Graham 背書（2026-07-17 晚間）
+- ts_018: Tim Sheehy 讚揚（2026-07-17 22:18 EDT）
 
-無新貼文確認。
+⚠️ 受限項目：
+- trumpstruth.org → 代理政策封鎖（403）
+- api.line.me → 代理政策封鎖（403），LINE 通知無法發送
+- 多數新聞網站 WebFetch → 代理封鎖（403）
+- truthsocial.com 直接 API → 403
+- 2026-07-18 當天貼文（今日）：因所有直接 API 被封鎖，搜尋結果僅確認到 7/17 晚間貼文；7/18 有重大新聞（美軍2員陣亡約旦），但未取得具體川普 Truth Social 貼文文字
 
-## 嘗試方法
-
-### 方法 A：直接讀取 Truth Social
-- https://truthsocial.com/@realDonaldTrump.rss → **HTTP 403 Forbidden（代理政策封鎖）**
-- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → **HTTP 403 Forbidden**
-
-### 方法 B：WebSearch 搜尋
-- 已執行多次不同關鍵字搜尋
-- 搜尋引擎索引最新 Truth Social 貼文 ID 為 116918963238538617（解碼為 2026-07-14 15:09 UTC）
-- 搜尋結果中 7 月 17 日已知貼文：
-  - 07:52 AM ET：「Great reviews on speech last night. Big audience. Pass THE SAVE AMERICA ACT!!! Thank you!」
-  - 09:36 AM ET：「Election integrity documents are available for review here: https://www.whitehouse.gov」
-  - 09:46 AM ET：「The Reflecting Pool, so badly damaged by Deranged Vandals, has been emptied...」
-  - ~15:40 ET (ts_015)：六月 CPI 通膨數據（已記錄）
-- **7 月 17 日下午 3:40 ET 之後及 7 月 18 日：未找到任何新貼文索引**
-
-### 方法 C：第三方存檔
-- https://www.thetrumparchive.com/ → **HTTP 403 Forbidden**
-- https://trumpstruth.org/ → **HTTP 403 Forbidden**
-- https://web.archive.org/ → **不允許存取**
-- 20+ 新聞網站（CNN, NBC, Fortune, Mirror, HuffPost, Yahoo 等）→ **全部 HTTP 403 Forbidden**
-
-## 結論
-
-- 代理政策封鎖絕大多數外部網站
-- 搜尋引擎索引落後約 3-4 天（最新索引的 Truth Social 貼文 ID 來自 7/14）
-- **無法確認 2026-07-17 15:40 ET 之後是否有新貼文**
-- 本次未更新 state/last_seen_id.txt，未推播 LINE
-
----
-
-## 第二次執行（同日稍晚）
-
-**執行時間（台灣時間）：** 2026-07-18 下午
-**上次記錄 ID：** 20260717_ts_015（未變更）
-
-### 額外搜尋結果
-
-- 確認 `20260717_ts_011`（達琳・葛拉罕完整任期背書）已由先前執行記錄
-- 確認 `20260717_ts_012`（TSMC 2650億美元投資）已記錄（3:30 PM ET）
-- 今日（2026-07-18）主要新聞為 Trump Media 宣佈「Truth API」付費數據服務（$100,000/月），屬公司商業新聞，非川普個人 Truth Social 貼文
-- 搜尋新聞頭條：NBC, CNN, CNBC, Fortune, Bloomberg, The Hill, Axios, NBC live blog（rcna587892, rcna587234）均 HTTP 403 Forbidden
-- 7 月 17 日晚間及 7 月 18 日：**無新貼文確認**
-
-### 7 月 17-18 日已知重大事件（未見 Truth Social 貼文）
-- 美軍在伊朗南部完成第三連夜空襲（壓制霍爾木茲海峽控制）
-- 川普召開記者會，指控中國干擾 2020 年選舉（解密文件）
-- Trump Media 宣佈 Truth API 付費服務（8月1日上線）
-
-**結論：本次執行未發現新貼文，無更新，無推播。**
-
-## 備註
-
-Truth Social Mastodon 格式 ID 解碼方式（實測驗證）：
-post_id >> 16 = Unix 時間戳（毫秒，自 1970-01-01 UTC）
-
-## 第三次執行（同日稍晚）
-
-**執行時間（台灣時間）：** 2026-07-18
-**上次記錄 ID：** 20260717_ts_015（未變更）
-
-### 執行結果：無新貼文，靜默結束
-
-### 抓取嘗試
-- 方法A：truthsocial.com RSS / API → **HTTP 403 Forbidden**
-- 方法B：WebSearch（8+ 次不同關鍵字）→ **無確認新貼文**
-  - 搜尋引擎最新索引 Truth Social 帖約為 7/14 UTC
-  - 今日（7/18）主要新聞仍為 Truth API 付費服務（$60K-$100K/月）
-  - trumpstruth.org status 40102+ 無索引
-- 方法C：trumpstruth.org / thetrumparchive.com → **HTTP 403 Forbidden**
-
-### LINE API 測試
-- api.line.me → **HTTP 403 Forbidden（代理政策持續封鎖）**
-
-### 結論
-- 第六次執行確認：2026-07-17 15:40 ET (ts_015) 之後無新貼文
-- last_seen_id.txt 維持 20260717_ts_015 不變
-- 無 LINE 推播
-
-### 當日累計
-- 執行次數：6 次
-- 新發現貼文：0 篇（僅第一次執行發現 ts_012–ts_015 共 4 篇）
-- LINE 通知成功：**0 篇**（api.line.me 全日封鎖）
-- 建議：api.line.me 需加入環境代理白名單
-
----
-
-## 第七次執行（2026-07-18 深夜）
-
-### 執行狀態：無新貼文，靜默結束
-
-- 讀取 last_seen_id: 20260717_ts_015（確認正確）
-- 抓取嘗試：
-  - 方法A：truthsocial.com RSS / API → 403 封鎖
-  - 方法B：WebSearch 廣泛搜尋（20+ 次不同關鍵字）
-    - "Trump Truth Social July 18 2026" → 無確認新貼文
-    - "Trump truth social 116835841525431179" → 為舊帖（6月）
-    - "Trump World Cup truth social post July 18" → 僅確認世界盃接待會（口頭發言，非 TS 貼文）
-    - trumpstruth.org status 40102+ → 無索引
-    - 廣泛新聞搜尋：Canada wildfire = ts_010；Darline Graham = ts_011；TSMC = ts_012；CPI = ts_015（均已記錄）
-  - 方法C：trumpstruth.org → proxy 403 封鎖
-  - 嘗試 20+ 新聞來源（CBS, NBC, Yahoo, Reuters, Hill, HuffPost 等）→ 全部 403 封鎖
-- 新聞背景（今日 7/18 主要事件，未見新 Truth Social 帖）：
-  - **FIFA 世界盃接待會**：川普於特朗普大廈接待 FIFA 主席英凡提諾，口頭稱本屆世界盃為「史上最成功體育賽事」；7/19（週六）決賽出席確認（阿根廷 vs 西班牙，MetLife 體育場）
-  - **伊朗戰事**：美軍完成第七輪打擊，壓制霍爾木茲海峽，尚未見 Truth Social 聲明
-  - **Truth API 服務**：Trump Media 付費訂閱方案（$6-10萬/月）持續為今日頭條
-  - **選舉安全後續**：DHS 部長 Mullin 威脅各州後，輿論反應持續，無新川普帖
-- LINE API 狀態：api.line.me → 403 Forbidden（代理持續封鎖）
-- 新貼文：**無**
-- 無 LINE 推播，last_seen_id.txt 維持 20260717_ts_015 不變
-
-### 當日累計（截至第七次執行）
-- 執行次數：7 次
-- 新發現貼文：0 篇（新增）；第一次執行共 4 篇（ts_012–ts_015）
-- LINE 通知成功：**0 篇**（api.line.me 全日 403 封鎖）
-- 預測：世界盃決賽（7/19）川普出席可能觸發新 Truth Social 貼文，建議明日繼續監控
+🔄 下次執行建議：
+- 解除 api.line.me 和 trumpstruth.org 的代理限制
+- 新 last_seen_id：20260717_ts_018
