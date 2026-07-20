@@ -36,3 +36,23 @@
   - 2026-07-16：川普發表全國電視演說，公開涉及中國干預 2020 選舉的解密文件
   - 2026-07-16：Truth Social 宣布推出「Truth API」付費資料服務，將於 8/1 提供給機構投資者
   - 上次川普已知發文時間：2026-07-19 20:38 EDT（台灣時間 2026-07-20 08:38）
+
+---
+【第六次執行記錄】（本次）
+
+執行時間：2026-07-20 UTC（台灣時間下午）
+搜尋嘗試：
+  - WebSearch "Trump Truth Social posts today July 20 2026" → 無新貼文
+  - WebSearch "Trump Truth Social July 20 2026 latest news" → 最新仍止於 7/19
+  - WebSearch "Trump statement Truth Social July 20 2026" → 僅找到 Conservative Treehouse 政治彙整頁（403 無法存取）
+  - WebSearch "Trump truth social post Monday morning July 20 2026" → 找到 Forbes Facebook 引述「both Iran and Israel are...」但無法確認是否為今日
+  - WebSearch "truth social early on monday trump Iran Israel 2026" → 引述為 6 月或更早期貼文
+  - WebFetch 直接存取 truthsocial.com/@realDonaldTrump/posts/116750587569914985 → HTTP 403
+  - WebSearch "Trump truth social today July 20 2026 Iran Hormuz World Cup" → 無 7/20 貼文
+
+結論：今日多次執行均無法偵測到新貼文。可能原因：
+  1. 川普今日 UTC 早晨尚未發文
+  2. 新貼文尚未被搜尋引擎收錄（時間滯後效應）
+  3. 代理政策封鎖直接存取管道
+
+不更新 last_seen_id.txt，不建立新貼文分析檔，不推播 LINE。
