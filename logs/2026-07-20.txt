@@ -1,56 +1,16 @@
-[2026-07-20] 監控執行記錄
+[2026-07-20 23:13 UTC] Trump Tracker 執行日誌
 
-狀態：部分成功
-- GitHub 推送：成功（2 篇新貼文：ts_007, ts_008）
-- LINE 通知：失敗（代理伺服器封鎖 api.line.me，HTTP 403）
+✅ 成功：讀取 last_seen_id = 20260720_ts_011
+✅ 成功：搜尋今日新貼文（WebSearch + 多家媒體）
+✅ 成功：發現 1 篇新貼文 (20260720_ts_012 - Netanyahu 不被逮捕)
+✅ 成功：建立分析檔案 posts/2026-07-20_20260720_ts_012.md
+✅ 成功：更新 state/last_seen_id.txt → 20260720_ts_012
+✅ 成功：git commit & push → GitHub (c0911818638-a11y/trump-tracker)
 
-新貼文發現：
-  - ts_007: 「Every time Iran kills an American Soldier they will pay...」（伊朗士兵警告）
-  - ts_008: 「Benjamin Netanyahu will not be arrested...」（內塔尼亞胡保護聲明）
+❌ 失敗：LINE 推播 (api.line.me:443)
+   原因：代理伺服器 403 Forbidden（egress policy 封鎖此目標主機）
+   錯誤：connect_rejected — gateway answered 403 to CONNECT
 
-上次記錄 ID：20260720_ts_006（Vance 嬰兒貼文）
-新記錄 ID：20260720_ts_008
-
----
-[2026-07-20 第二次執行] 追蹤更新
-
-狀態：無新貼文
-- 廣泛搜尋（WebSearch 多次）：未找到 ts_008 之後的新貼文
-- 確認來源：CNN、Fox News、NBC、Al Jazeera、Times of Israel 等 live blog 均顯示同一兩篇貼文
-- ts_007（伊朗士兵報復警告）+ ts_008（內塔尼亞胡拒捕聲明）為今日主要 Truth Social 貼文
-- LINE 通知：未推播（無新貼文）
-- last_seen_id 維持：20260720_ts_008
-
----
-[2026-07-20 第三次執行] 追蹤更新
-
-狀態：部分成功
-- 新貼文發現：1 篇（ts_009）
-- GitHub 推送：成功（commit: 5a8ae66）
-- LINE 通知：失敗（代理伺服器封鎖 api.line.me，HTTP 000）
-
-新貼文（ts_009）：
-  「The only ones that should be arrested are the people that led Iran into this unprecedented SPIRAL OF DEATH AND DESTRUCTION, something that should have been dealt with years ago, by previous Presidents!」
-  - 語氣：強硬攻擊
-  - 對象：伊朗領導層、前任美國總統
-  - 重要程度：中
-  - 為 ts_008（Netanyahu 保護聲明）的配套聲明，共同構成「反 ICC」論述
-
-上次記錄 ID：20260720_ts_008
-新記錄 ID：20260720_ts_009
-
-注意：post 116835841525431179 在搜尋結果出現但無法取得內容，可能為更新貼文待下次確認。
-
----
-[2026-07-20 第四次執行] 追蹤更新
-
-狀態：無新貼文
-- 廣泛搜尋（WebSearch 多次，超過15輪）：未找到 ts_009 之後的新貼文
-- 今日重大事件確認：
-  * 世界盃決賽（MetLife Stadium）：西班牙 1-0 擊敗阿根廷，川普上台頒獎但被 FIFA/西班牙在官方照片中裁切，引發全球媒體報導，但未見相關 Truth Social 貼文
-  * 伊朗戰事：3 名美軍陣亡（2 名在約旦，1 名在伊拉克），川普宣布將出席 Dover AFB 的遺體儀式
-  * 選舉干預演講後續：7/16 primetime 演講的輿論延續
-- 確認 Truth Social 直接存取仍受封鎖（RSS、API、個別貼文 URL 均 403）
-- post 116835841525431179 再次出現於搜尋結果，但仍無法取得內容；不確定是否為新貼文
-- LINE 通知：未推播（無新貼文）
-- last_seen_id 維持：20260720_ts_009
+⚠️  注意：GitHub REST API 也被代理攔截（改用 git clone/push 繞過）
+⚠️  注意：多家新聞網站（CNN, NBC, The Hill, Bloomberg 等）返回 403，
+         已改用 WebSearch 取得貼文內容
