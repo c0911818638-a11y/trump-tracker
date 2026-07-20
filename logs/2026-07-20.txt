@@ -1,24 +1,86 @@
-[2026-07-20 監控記錄]
+# 監控日誌 — 2026-07-20
 
-執行時間：2026-07-20（第二次執行，當天）
-上次記錄 ID：20260720_ts_005
+執行時間: 2026-07-20（UTC）
+上次已知 ID: 20260720_ts_005
 
-搜尋方法：
-- 方法A：WebFetch RSS / API → 403 Forbidden
-- 方法B：WebSearch（多組關鍵字）→ 未發現 ts_005 之後的新貼文
-- 方法C：WebFetch Trump Archive → 403 Forbidden
+---
 
-今日已記錄貼文（ts_001～ts_005）：
-1. 20260720_ts_001：以色列/伊朗停火談判進行中
-2. 20260720_ts_002：霍爾木茲海峽開放 + 重啟伊朗封鎖令
-3. 20260720_ts_003：最高法院 Slaughter Case 勝訴（總統解僱權）
-4. 20260720_ts_004：系列「美國偉大州博覽會」貼文
-5. 20260720_ts_005：倒影池與 F-35 照片
+## 執行狀況
 
-今日背景事件（未發現新貼文覆蓋）：
-- 賈里德·庫什納與史蒂夫·維特科夫赴卡達多哈進行伊朗談判
-- 伊朗方面對庫什納/維特科夫態度冷淡（據 Naked Capitalism 報導）
-- 霍爾木茲海峽交通量低於正常水平
+### 步驟 1：讀取 last_seen_id
+✅ 成功：last_seen_id = 20260720_ts_005
 
-結論：WebFetch 全面被403封鎖，WebSearch 未發現 ts_005 之後的可確認新貼文。
-本次執行無新貼文，靜默結束。
+### 步驟 2：嘗試抓取最新貼文
+
+**方法 A：Truth Social RSS / API**
+- https://truthsocial.com/@realDonaldTrump.rss → HTTP 403
+- https://truthsocial.com/api/v1/accounts/.../statuses → HTTP 403
+
+**方法 B：WebSearch**
+- 搜尋："Trump Truth Social posts today July 20 2026"
+- 搜尋："Trump Truth Social July 20 2026 Iran soldiers Air Force One"
+- 結果：無法找到 ts_005 之後的具體貼文內容
+
+**方法 C：Trump Archive 及其他**
+- https://thetrumparchive.com/ → HTTP 403
+- https://trumpstruth.org/ → HTTP 403
+- https://www.trumpstruth.org/?sort=desc → HTTP 403
+- https://rollcall.com/factbase-twitter/ → HTTP 403
+- https://theconservativetreehouse.com/blog/... → HTTP 403
+- https://www.thebulwark.com/... → HTTP 403
+- NBC / CNN / Forbes 直接抓取 → HTTP 403
+- 所有新聞網站直連皆被 Proxy 封鎖（HTTP 403）
+
+### 步驟 3：比較新舊
+- last_seen_id: 20260720_ts_005
+- 無法確認任何比 ts_005 更新的貼文
+
+---
+
+## 今日（2026-07-20）重要新聞背景（透過 WebSearch 摘要）
+
+1. **油價與汽油**：美國全國汽油均價時隔一個月重新突破 $4/加侖（6月17日後首次），因美伊戰爭再度升溫所致。
+   - 來源：Fortune、NBC News
+
+2. **美軍陣亡確認**：五角大廈公布約旦遭伊朗攻擊陣亡的兩名士兵身份：
+   - 1LT Tyler James Feehan（25歲，夏威夷）
+   - PVT Isabella Gonzales（19歲，德克薩斯州 Carrollton）
+   - 另有第三名士兵7/19在伊拉克拆除伊朗無人機殘骸時殉職
+   - 來源：CNN、NBC News
+
+3. **美軍第九夜空襲伊朗**：美軍完成第九連續夜對伊朗的空襲。霍爾木茲海峽有一艘船起火，油價升至 $90/桶以上。
+   - 來源：NBC、The Hill Live Updates
+
+4. **空軍一號安全升級**：川普在 Joint Base Andrews 對記者說，卡達贈送的新 Air Force One 將在大約一個月內送去進行「maxed out」安全升級（補充導彈防禦系統），以回應《紐約時報》關於缺乏防禦系統的報導。
+   - 來源：Forbes、CNN、Bloomberg
+
+5. **世界盃**：西班牙在加時賽以 1-0 擊敗阿根廷，贏得 2026 FIFA 世界盃冠軍（7/19 決賽於紐澤西）。川普出席觀賽並頒獎，但在頒獎台上不肯離開，引發尷尬場面。
+   - 來源：US News、New Republic
+
+6. **JD Vance 兒子誕生**：副總統 JD Vance 之妻 Usha Vance（40歲）7/19-20 生下第四子 Alec Neel Vance，是1870年代以來首位在丈夫任副總統期間生產的女性。
+   - 來源：NBC News
+
+---
+
+## 已確認的今日 ts_001 貼文來源
+
+Forbes（Facebook）確認：「In a Truth Social post early on Monday, Trump wrote that both Iran and Israel are looking to do an immediate CEASEFIRE」
+→ 與 tracker ts_001 內容吻合，確認 ts_001 為本日有效貼文。
+
+---
+
+## 結論
+
+- 無法從任何來源確認比 ts_005 更新的具體貼文
+- 未更新 last_seen_id
+- 未建立新貼文檔案
+- 未推播 LINE 通知（無確認新貼文）
+- 建議：可能需要等待新聞報導更新，或從 Truth Social 直接存取（需繞過 403）
+
+---
+
+## 技術記錄
+
+所有直連（WebFetch）皆受環境 Proxy 封鎖（HTTP 403）。
+WebSearch 摘要提供新聞背景，但無法取得貼文原文。
+建議未來嘗試使用已認證的 API 或 MCP 工具存取 Truth Social。
