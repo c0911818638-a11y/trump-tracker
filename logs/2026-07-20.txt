@@ -20,3 +20,23 @@
 - ts_007（伊朗士兵報復警告）+ ts_008（內塔尼亞胡拒捕聲明）為今日主要 Truth Social 貼文
 - LINE 通知：未推播（無新貼文）
 - last_seen_id 維持：20260720_ts_008
+
+---
+[2026-07-20 第三次執行] 追蹤更新
+
+狀態：部分成功
+- 新貼文發現：1 篇（ts_009）
+- GitHub 推送：成功（commit: 5a8ae66）
+- LINE 通知：失敗（代理伺服器封鎖 api.line.me，HTTP 000）
+
+新貼文（ts_009）：
+  「The only ones that should be arrested are the people that led Iran into this unprecedented SPIRAL OF DEATH AND DESTRUCTION, something that should have been dealt with years ago, by previous Presidents!」
+  - 語氣：強硬攻擊
+  - 對象：伊朗領導層、前任美國總統
+  - 重要程度：中
+  - 為 ts_008（Netanyahu 保護聲明）的配套聲明，共同構成「反 ICC」論述
+
+上次記錄 ID：20260720_ts_008
+新記錄 ID：20260720_ts_009
+
+注意：post 116835841525431179 在搜尋結果出現但無法取得內容，可能為更新貼文待下次確認。
