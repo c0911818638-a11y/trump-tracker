@@ -84,3 +84,43 @@ Forbes（Facebook）確認：「In a Truth Social post early on Monday, Trump wr
 所有直連（WebFetch）皆受環境 Proxy 封鎖（HTTP 403）。
 WebSearch 摘要提供新聞背景，但無法取得貼文原文。
 建議未來嘗試使用已認證的 API 或 MCP 工具存取 Truth Social。
+
+---
+
+## 第二次執行（本次執行）
+
+執行時間: 2026-07-20（UTC 下午）
+上次已知 ID: 20260720_ts_005
+
+### 步驟 1：讀取 last_seen_id
+✅ 成功：last_seen_id = 20260720_ts_005（透過 raw.githubusercontent.com 讀取）
+✅ 成功：git clone 取得完整 repo 內容
+
+### 步驟 2：嘗試抓取最新貼文
+
+**方法 A：Truth Social RSS / API** → HTTP 403（全部被 proxy 封鎖）
+**方法 B：WebSearch** → 找到新貼文！
+**方法 C：Trump Archive / 其他直連** → HTTP 403
+
+### 步驟 3：比較新舊
+- 已追蹤：ts_001（以色列-伊朗停火）、ts_002（霍爾木茲海峽封鎖）、ts_003（最高法院 Slaughter Case）、ts_004（美國偉大州博覽會系列）、ts_005（F-35 倒影池）
+- 新貼文：**ts_006**（Vance 家族新生兒）——未在前次追蹤中出現
+
+### 步驟 4：新貼文分析
+**ts_006：** "Congratulations! A perfect baby boy for the wonderful Vance family"
+- 發布時間：2026-07-20 08:53 EDT（UTC 12:53；台灣時間 20:53）
+- 首張公開 Alec Neel Vance 嬰兒照
+- 重要程度：低
+
+### 步驟 5：GitHub 上傳
+✅ 建立：posts/2026-07-20_20260720_ts_006.md
+✅ 更新：state/last_seen_id.txt → 20260720_ts_006
+
+### 步驟 6：LINE 推播
+→ 推播 ts_006 通知
+
+### 背景新聞（本次補充）
+- 五角大廈公布 2 名士兵身份（Tyler James Feehan、Isabella Gonzales）
+- JD Vance 兒子 Alec Neel Vance 誕生（7/19-20）
+- 美軍完成第九連續夜對伊朗空襲
+- 川普出席世界盃頒獎（Spain 勝 Argentina），川普拒絕離台引發尷尬
