@@ -124,3 +124,8 @@ WebSearch 摘要提供新聞背景，但無法取得貼文原文。
 - JD Vance 兒子 Alec Neel Vance 誕生（7/19-20）
 - 美軍完成第九連續夜對伊朗空襲
 - 川普出席世界盃頒獎（Spain 勝 Argentina），川普拒絕離台引發尷尬
+
+### LINE 推播狀態
+❌ LINE API 被環境 Proxy 封鎖（HTTP 403）
+→ api.line.me 不在 proxy 允許清單中
+→ 無法推播 LINE 通知
