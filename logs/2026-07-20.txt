@@ -32,8 +32,39 @@
   - 至少 16 名美軍士兵在衝突中陣亡（截至 2026-07-19）
   - 川普 7/19 最後確認貼文：呼籲共和黨將伊朗納入對俄制裁法案（IMPORTANT!!）
 
-結論：
+結論（第一次執行）：
   - 無法取得 2026-07-20 川普 Truth Social 新貼文
   - 未建立貼文分析檔案
   - 未推播 LINE 通知
   - 下次執行時請重新嘗試
+
+---
+
+【第二次執行記錄】2026-07-20 01:17 UTC
+
+代理封鎖確認（recentRelayFailures）：
+  - trumpstruth.org:443 → 403 policy denial（代理政策封鎖）
+  - api.line.me:443 → 403 policy denial（LINE 推播也被封鎖）
+
+補充搜尋結果：
+  - Bloomberg (2026-07-19)："Trump Is Silent So Far on Iran Strategy as US Death Toll Hits 17"
+    → 確認川普在美軍傷亡後首日（7/19 Sunday）保持沉默
+  - 20260719_ts_003 是川普 7/19 唯一確認貼文（士兵陣亡後第一篇）
+  - 美伊戰爭最新：美軍已連續第 8 夜空襲，共 17 名美軍士兵陣亡
+  - 伊朗攻擊科威特 Camp Udairi 及 Ali Al Salem 空軍基地（卡米卡澤無人機）
+  - 美軍攻擊伊朗核設施，科威特海水淡化廠受波及
+  - Forbes Facebook「In a Truth Social post early on Monday, Trump wrote that both Iran and Israel are...」
+    → 比對後確認此為 2026-06-08（六月的 Monday），非 7/20 新貼文
+  - 未發現 7/20 任何川普新貼文的確切原文
+
+環境限制（確認）：
+  - 出站代理封鎖清單包含：truthsocial.com、trumpstruth.org、api.line.me、
+    所有主要新聞網站（CNN、NBC、BBC、Al Jazeera、Bloomberg、NYT 等）
+  - 可用通道：raw.githubusercontent.com（讀取）、git HTTPS（clone/push）
+
+結論（第二次執行）：
+  - 無新貼文可確認（7/20 至今）
+  - last_seen_id.txt 維持不變：20260719_ts_003
+  - 未建立貼文分析檔案
+  - LINE 推播被代理封鎖，無法推送通知
+  - 請使用 PushNotification 工具告知使用者系統狀況
