@@ -10,3 +10,13 @@
 
 上次記錄 ID：20260720_ts_006（Vance 嬰兒貼文）
 新記錄 ID：20260720_ts_008
+
+---
+[2026-07-20 第二次執行] 追蹤更新
+
+狀態：無新貼文
+- 廣泛搜尋（WebSearch 多次）：未找到 ts_008 之後的新貼文
+- 確認來源：CNN、Fox News、NBC、Al Jazeera、Times of Israel 等 live blog 均顯示同一兩篇貼文
+- ts_007（伊朗士兵報復警告）+ ts_008（內塔尼亞胡拒捕聲明）為今日主要 Truth Social 貼文
+- LINE 通知：未推播（無新貼文）
+- last_seen_id 維持：20260720_ts_008
