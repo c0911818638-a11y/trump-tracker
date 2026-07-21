@@ -109,3 +109,40 @@
 - 川普今日重大聲明均來自白宮會議口頭（非 Truth Social）
 - **不推播 LINE 通知**（符合「若無新貼文，靜默結束」規則）
 - **last_seen_id 維持：20260720_ts_014**
+
+---
+
+## 第三次執行（本次，約 19:30 UTC）
+
+**執行時間：** 2026-07-21 ~19:30 UTC
+
+### 搜尋狀態
+
+**方法 A：Truth Social 直接存取**
+- truthsocial.com → 403 Forbidden（代理封鎖）
+
+**方法 B：WebSearch（多輪）**
+- 搜尋 "Trump Truth Social July 21 2026" → 找到 July 20 貼文報導，無 July 21 新貼文
+- 搜尋 "Trump Truth Social Iran Lebanon tariff July 21" → 確認 July 21 重大事件均為白宮口頭聲明，非 Truth Social 貼文：
+  * 川普與黎巴嫩總統 Joseph Aoun 白宮會面（口頭聲明）
+  * 川普提及威脅伊朗 Pickaxe Mountain 核設施（口頭聲明）
+  * 加拿大總理 Carney 致電川普（口頭後聲明）
+  * USTR Greer 警告新 Section 301 關稅即將到來（CNBC 採訪）
+- 搜尋 "Trump Truth Social Brazil tariff July 21" → 巴西 25% 關稅公告為 7/16，非今日新貼文
+
+**方法 C：Trump Archive**
+- 所有存檔網站（trumpstruth.org, thetrumparchive.com）→ 403 Forbidden
+
+### 結論
+
+**未找到任何 2026-07-21 新 Truth Social 貼文**
+
+- last_seen_id 維持：`20260720_ts_014`
+- 未建立新貼文分析檔案
+- 未推播 LINE 通知（無新貼文；且 api.line.me 自 2026-07-20 起持續 403 Forbidden）
+
+### 系統狀態（持續問題）
+- ❌ **LINE API（api.line.me）：403 Forbidden** — 自 2026-07-20 開始封鎖，今日第三次執行仍無法推播。即使有新貼文也無法通知使用者。
+- ❌ GitHub REST API：封鎖，改用 git clone/push
+- ✅ WebSearch：正常
+- ✅ git push（使用 PAT）：正常
