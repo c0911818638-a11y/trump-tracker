@@ -1,9 +1,12 @@
 # Trump Truth Social 監控日誌 - 2026-07-21
 
-**執行時間：** 2026-07-21 15:16:06 UTC
+**第一次執行：** 2026-07-21 15:16:06 UTC
+**第二次執行：** 2026-07-21 (本次)
 **上次記錄 ID：** 20260720_ts_014
 
-## 執行狀況
+---
+
+## 第一次執行（15:16 UTC）
 
 ### 方法 A：Truth Social RSS / API
 - URL: https://truthsocial.com/@realDonaldTrump.rss → 失敗（Host not in allowlist）
@@ -16,18 +19,49 @@
   - 6:18 PM ET：與英國新首相 Andy Burnham 通話
   - 早上：關於伊朗攻擊
 - July 21, 2026 貼文：無法確認任何新貼文
-  - 搜尋結果多為 July 20 加拿大關稅公告的後續報導
-  - 無法透過新聞引文取得 July 21 具體 Truth Social 原文
 
 ### 方法 C：Trump Archive
 - URL: https://www.thetrumparchive.com/ → 失敗（403 Forbidden）
 
-## 主要新聞背景（July 20-21, 2026）
-- 加拿大關稅：川普宣佈對加拿大部分商品加徵 50% 關稅，30 天後生效（8/19）
-- 伊朗：美軍持續對伊朗發動攻擊，第 10 個連續夜晚
-- 英國：新首相 Andy Burnham 上任，川普通話並支持北海油田開發
+---
+
+## 第二次執行（本次）
+
+### 已確認 July 20 貼文涵蓋範圍（20260720_ts_001 至 _014）：
+- ts_001：以色列-伊朗停火談判
+- ts_005：倒影池與 F-35 戰鬥機照片
+- ts_010：伊朗殺美軍士兵將付出代價（傳達給 Hegseth / 參謀首長）
+- ts_011：加拿大汽車/酒精/乳製品歧視美國 → 50% 關稅（已追蹤）
+- ts_012：以色列總理 Netanyahu 保護聲明
+- ts_014：與英國新首相 Andy Burnham 電話（最後一篇）
+
+### 方法 A：Truth Social（直接存取）
+- 所有 truthsocial.com 網址 → 403 Forbidden（代理不允許）
+
+### 方法 B：WebSearch（7 次不同搜尋）
+- 搜尋 "Trump Truth Social July 21 2026"、"July 21 2026 posts"、verbatim 引文等
+- 所有搜尋結果均指向 July 20 貼文或與 Truth Social 服務本身相關新聞
+- 確認 July 21 主要新聞：
+  * 美國準備對幾十個國家徵新關稅（10% 全球關稅本週到期）
+  * Trump Media 計劃向華爾街收費最高 $100,000/月提早存取 Truth Social 貼文
+  * 加拿大 50% 關稅正式實施（已於 ts_011 追蹤）
+  * 美伊停火談判持續
+
+### 方法 C：Trump Archive / 其他存檔網站
+- https://www.thetrumparchive.com/ → 403 Forbidden
+- https://trumpstruth.org/ → 403 Forbidden
+- https://trump-archive.com/archive → 403 Forbidden
+- https://x.com/TrumpTruthOnX → 403 Forbidden
+
+### 新聞網站存取嘗試（所有失敗）：
+- Al Jazeera、NPR、Axios、CNBC、CNN、Washington Post、Yahoo Finance、France24 → 全部 403 Forbidden
+
+---
 
 ## 結論
-無法確認 July 21, 2026 是否存在新貼文（相較於 last_seen_id: 20260720_ts_014）。
-truthsocial.com 域名不在網路許可清單內，無法直接存取。
-未推播 LINE 通知，last_seen_id 維持不變。
+- truthsocial.com 及所有主要 Trump 貼文存檔網站均不在網路許可清單內
+- 無法透過 WebSearch 找到 July 21, 2026 的具體 Truth Social 原文
+- 加拿大 50% 關稅公告已於 ts_011 (July 20) 追蹤，不重複
+- **未找到任何 July 21 新貼文**
+- 未推播 LINE 通知
+- last_seen_id 維持不變：20260720_ts_014
