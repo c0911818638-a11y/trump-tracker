@@ -142,3 +142,43 @@
 步驟5: LINE 推播
   → 環境 proxy 持續封鎖 api.line.me (403)
   → 無新貼文，靜默結束
+
+---
+
+[2026-07-21 第五次執行]
+====================================
+
+步驟1: 讀取 last_seen_id
+  ✓ 方法：git clone (GitHub API 被環境 proxy 封鎖)
+  結果：last_seen_id = 20260720_ts_014 (英相伯納姆通電話, 7/20 18:18 EDT, trumpstruth.org/statuses/40161)
+
+步驟2: 抓取最新貼文（新增約 25 次 WebSearch/WebFetch 嘗試，本次執行累計嘗試 25 次）
+  ✗ Truth Social RSS/API (403 proxy 封鎖)
+  ✗ truthsocial.com 各頁面 (403 proxy 封鎖)
+  ✗ thetrumparchive.com / trumpstruth.org (403)
+  ✗ 新聞網站 (403): CNN、NBC、CNBC、PBS、Reuters、BBC、AP、The Hill、Fox News、New Republic、AOL、Daily Beast、Mirror、Yahoo、Newsweek、US News、Sunday Guardian、MEXC、White House 等
+  ✓ WebSearch 搜索持續回傳部分資訊，但無 7/21 新貼文原文
+
+步驟3: 新貼文比較
+  本次執行新確認：
+  ✓ LiveUAMap（iran.liveuamap.com/en/2026/8-july-21-...）確認：川普7/21早上（UTC約8:00）正在 Truth Social 上傳美軍打擊伊朗影片（視頻貼文，非文字貼文）
+  ✓ 確認 ts_007+ts_010 = "Every time Iran kills an American Soldier they will pay for that killing many times over!" 已收錄（7/20）
+  ✓ 確認 ts_013 = 116750814874397998（Carafano 引言，7/20）
+  ✓ 確認 ts_014 = trumpstruth.org/statuses/40161（英相電話，7/20 18:18 EDT）
+  ✗ 無法取得任何 7/21 新貼文的具體原文、正式 ID、或可驗證時間戳
+
+步驟4: 結論
+  → 五次執行累計超過 105 次搜尋/抓取嘗試，仍無法取得 status/40161 之後新貼文具體原文
+  → 已確認川普7/21在 Truth Social 活躍（上傳影片），但影片貼文無可引用文字
+  → last_seen_id 維持不變：20260720_ts_014
+  → 不新增貼文檔案
+
+步驟5: LINE 推播
+  → 環境 proxy 持續封鎖 api.line.me (403)
+  → 無可驗證新文字貼文，靜默結束（不推播）
+
+今日新增背景資訊（無對應 Truth Social 原文可驗證）：
+  - 川普7/21早上在 Truth Social 上傳美伊戰爭打擊影片（LiveUAMap UTC 8:00 確認）
+  - 白宮網站顯示 7/21 有更新內容（具體聲明無法存取）
+  - 美軍在7/21完成第10夜連續對伊朗打擊（CENTCOM 主要目標：飛彈/無人機儲存設施、沿岸雷達站）
+  - 加拿大野火煙霧相關貼文（"must of necessity be added to the TARIFFS"）已確認為7/17-18發文（早於 last_seen_id）
