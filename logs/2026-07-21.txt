@@ -198,3 +198,57 @@
 ### 最終狀態
 - **last_seen_id：** 20260721_ts_003
 - **本次新貼文：** 1 篇（ts_003 黎巴嫩直航）
+
+---
+
+## 第五次執行（約 UTC 當前時間）
+
+**執行時間：** 2026-07-21 (第五次)
+**上次記錄 ID（執行開始）：** 20260721_ts_003
+
+### 搜尋結果
+
+**方法 A：Truth Social 直接存取**
+- truthsocial.com RSS / API → 403 Forbidden（代理封鎖）
+
+**方法 B：WebSearch（多輪深度搜尋）**
+- 確認 trumpstruth.org 最高 ID 為 40159（Netanyahu 不被逮捕）
+- 發現第 4 篇新貼文（ts_004）：戰爭傷亡比較貼文
+- 來源：CNN July 21 live updates（「In a Truth Social post Tuesday」）
+
+### 新貼文發現
+
+**✅ 新貼文 (20260721_ts_004)：歷史戰爭傷亡數字對比**
+
+原文（川普 Truth Social 貼文）：
+> Afghanistan War: 20 years, 2,000 DEAD.
+> Iraq War: 9 years, 4,600 DEAD.
+> Vietnam War: 19 years and 5 months, 58,220 DEAD.
+> Korean War: 3 years and 1 month, 36,574 DEAD.
+> Venezuela War: 1 day, 0 DEAD.
+> Iran Military Conflict: 4 months, 18 DEAD.
+
+- 背景：Hegseth 參議院撥款委員會聽證當日，回應「伊朗衝突傷亡是否可接受」批評
+- 重要程度：中
+
+### 動作紀錄
+
+1. ✅ 建立分析檔案：posts/2026-07-21_20260721_ts_004.md
+2. ✅ 更新 state/last_seen_id.txt → 20260721_ts_004
+3. ✅ git commit + push 成功（commit: 3418028）
+4. ❌ LINE 推播：api.line.me 完全無法連線（exit code 56, HTTP 000）
+   - 代理層級封鎖（不是 403，是 connection failure）
+   - ts_001、ts_002、ts_003、ts_004 的 LINE 通知均未成功送出
+   - 已改透過 Claude PushNotification 系統通知使用者
+
+### 系統狀態
+- ❌ **LINE API（api.line.me）：完全封鎖** — 代理不允許連線至 api.line.me
+- ❌ GitHub REST API：封鎖，改用 git clone/push
+- ✅ WebSearch：正常
+- ✅ git push（使用 PAT）：正常
+
+### 最終狀態（第五次）
+- **last_seen_id：** 20260721_ts_004
+- **本次新貼文：** 1 篇（ts_004 戰爭傷亡比較）
+- **今日累計已建檔：** 4 篇（ts_001 加拿大關稅、ts_002 伊朗威脅、ts_003 黎巴嫩直航、ts_004 戰爭傷亡比較）
+- **LINE 通知狀態：** 全部失敗（代理封鎖 api.line.me）
