@@ -182,3 +182,43 @@
   - 白宮網站顯示 7/21 有更新內容（具體聲明無法存取）
   - 美軍在7/21完成第10夜連續對伊朗打擊（CENTCOM 主要目標：飛彈/無人機儲存設施、沿岸雷達站）
   - 加拿大野火煙霧相關貼文（"must of necessity be added to the TARIFFS"）已確認為7/17-18發文（早於 last_seen_id）
+
+---
+
+[2026-07-21 第六次執行]
+====================================
+
+步驟1: 讀取 last_seen_id
+  ✓ 方法：git clone (GitHub API 被環境 proxy 封鎖)
+  結果：last_seen_id = 20260720_ts_014 (英相伯納姆通電話, 7/20 18:18 EDT, trumpstruth.org/statuses/40161)
+
+步驟2: 抓取最新貼文（新增約 25 次 WebSearch/WebFetch 嘗試）
+  ✗ Truth Social RSS/API (403)
+  ✗ truthsocial.com 各頁面 (403)
+  ✗ thetrumparchive.com / trumpstruth.org (403)
+  ✗ 新聞網站 (403): NPR, KPBS, The Hill, Time, ABC News, Yahoo Finance, Breitbart, NBC News, White House, CNN, CNBC 等
+  ✓ WebSearch 搜索確認 7/21 Canada 關稅聲明但無新 Truth Social 貼文原文
+
+步驟3: 新貼文比較
+  本次執行確認：
+  ✓ 7/21 重大事件：川普簽署 3 份 Section 338 對加拿大關稅聲明（50%，針對汽車、酒精、乳製品，30天後生效）
+  ✓ 找到 trumpstruth.org/statuses 最高為 40161（= ts_014，UK PM 伯納姆，7/20）
+  ✓ 確認「must of necessity」加拿大關稅貼文 = 7/17 野火煙霧貼文（已被早前執行捕獲）
+  ✓ LINE API 確認封鎖（curl 回傳 exit code 56, HTTP 000）
+  ✗ 六次執行累計超過 130 次搜尋/抓取嘗試，確認今日無可取得新貼文具體原文
+
+步驟4: 結論
+  → last_seen_id 維持不變：20260720_ts_014
+  → 不新增貼文檔案
+
+步驟5: LINE 推播
+  → LINE API 持續不可達 (curl exit 56, HTTP 000)
+  → 無新貼文，靜默結束
+
+今日 7/21 重大背景（無對應 Truth Social 新貼文原文）：
+  - 川普簽署 Section 338 對加拿大 50% 關稅聲明（汽車/酒精/乳製品，30天後生效）
+  - 美軍完成第 10 夜對伊朗連續軍事打擊
+  - 科威特/巴林/約旦持續攔截伊朗飛彈無人機
+  - 川普在 Truth Social 上傳伊朗打擊影片（視頻貼文，無可引用文字）
+  - 胡賽武裝宣布對沙烏地阿拉伯船運實施海上封鎖
+
