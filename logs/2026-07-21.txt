@@ -26,3 +26,43 @@
   ✗ 失敗：環境 proxy (127.0.0.1:39555) 封鎖 api.line.me (HTTP 403)
   → 已用系統 PushNotification 工具替代通知
 
+---
+
+[2026-07-21 第二次執行]
+====================================
+
+步驟1: 讀取 last_seen_id
+  ✓ 方法：git clone (GitHub API 被環境 proxy 封鎖)
+  結果：last_seen_id = 20260720_ts_014 (英相伯納姆通電話, 7/20 18:18 EDT, status/40161)
+
+步驟2: 抓取最新貼文 (廣泛搜索，共約 30 次 WebSearch/WebFetch 嘗試)
+  ✗ Truth Social RSS (403)
+  ✗ Truth Social API (403)
+  ✗ truthsocial.com 各頁面 (403)
+  ✗ trumpstruth.org (403)
+  ✗ 多家新聞網站 (403): NBC, ABC, CNN, Axios, Yahoo, The Hill, Forbes, OAN, Mediaite, TheNationalPulse 等
+  ✓ WebSearch 搜索獲得部分資訊
+
+步驟3: 新貼文比較
+  關鍵發現：
+  ✓ 確認 status/40158 ("Every time Iran kills an American Soldier...")
+     = 7/20 EDT 約 13:00（早於 ts_013=status/40160），已被先前執行捕獲
+  ✓ 確認 7/21 新聞事件：川普簽署 3 份加拿大 Section 338 關稅聲明（50%，涉及汽車、酒精、乳製品）
+  ✓ 確認 7/21：兩名美軍陣亡身份公布（Isabella Gonzales, 19, TX; Tyler Feehan, 25, HI, 在約旦遭伊朗攻擊）
+  ✓ 確認 7/21：川普在 Truth Social 上傳伊朗打擊影片（liveuamap.com 來源）
+  ✗ 無法取得 7/21 任何新貼文的具體原文和 ID（所有來源返回 403 或搜索無結果）
+
+步驟4: 結論
+  → 未找到 last_seen_id(20260720_ts_014) 之後的新貼文具體原文
+  → last_seen_id 維持不變：20260720_ts_014
+  → 不新增貼文檔案
+
+步驟5: LINE 推播
+  → 無新貼文，靜默結束（不推播）
+
+今日重大新聞背景（未能取得對應 Truth Social 原文）：
+  - 川普簽署對加拿大 50% 關稅聲明（汽車、酒精、乳製品，30天後生效）
+  - 伊朗在約旦攻擊美軍基地，2名士兵陣亡身份公布
+  - 川普在 Truth Social 上傳美軍伊朗打擊影片（具體貼文無法取得）
+  - 卡達贈送的新空軍一號將送去進行「最高安全規格」升級
+
