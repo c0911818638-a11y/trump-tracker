@@ -65,3 +65,47 @@
 - **未找到任何 July 21 新貼文**
 - 未推播 LINE 通知
 - last_seen_id 維持不變：20260720_ts_014
+
+---
+
+## 第二次執行（本次）
+
+**執行時間：** 2026-07-21 17:17:10 UTC
+
+### 搜尋範圍擴大：第二輪深度調查
+
+**July 21 主要新聞事件（非 Truth Social 貼文）：**
+
+1. **川普與黎巴嫩總統 Joseph Aoun 在白宮會面**
+   - 川普表示若黎巴嫩總統要求，他願意與真主黨（Hezbollah）談話
+   - 川普說：「我和所有人談，若黎巴嫩總統想讓我跟真主黨談，我會談。」
+   - **來源：《華盛頓郵報》、《以色列時報》直播（July 21 liveblog）**
+   - ⚠️ 此為口頭聲明（白宮記者會），非 Truth Social 貼文
+
+2. **川普威脅攻擊伊朗「鎬山」（Pickaxe Mountain）核設施**
+   - 川普在白宮會面時說美國「很快、非常重地」打擊伊朗 Pickaxe Mountain
+   - **來源：CNN July 21 live updates、JNS、HotAir（2026-07-21）**
+   - ⚠️ 此為白宮會議口頭聲明，非 Truth Social 貼文
+
+3. **加拿大總理 Carney 致電川普（July 21 早上）**
+   - 雙方同意「在未來數週加強談判」（加拿大 50% 關稅背景下）
+   - **來源：多家媒體 July 21 報導**
+   - ⚠️ 此為電話後聲明，非 Truth Social 貼文
+
+4. **Greer 暗示新 Section 301 關稅即將來臨（July 21）**
+   - 美國貿易代表 Greer 在 CNBC Squawk Box 上說「很快就會有行動」
+   - 針對逾 60 個國家的 Section 301 新關稅（10% 全球關稅本週到期）
+   - ⚠️ 此為媒體採訪，非 Truth Social 貼文
+
+### Truth Social 直接存取狀態：
+- truthsocial.com → 403 Forbidden（代理封鎖）
+- trumpstruth.org → 403 Forbidden
+- thetrumparchive.com → 403 Forbidden
+- GitHub REST API → 403 Forbidden（代理封鎖，改用 git 操作）
+- api.line.me → 403 Forbidden（代理封鎖，無法推播 LINE）
+
+### 結論：
+- **未找到任何 July 21, 2026 新 Truth Social 貼文**
+- 川普今日重大聲明均來自白宮會議口頭（非 Truth Social）
+- **不推播 LINE 通知**（符合「若無新貼文，靜默結束」規則）
+- **last_seen_id 維持：20260720_ts_014**
