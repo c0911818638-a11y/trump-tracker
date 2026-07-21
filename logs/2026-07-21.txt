@@ -252,3 +252,57 @@
 - **本次新貼文：** 1 篇（ts_004 戰爭傷亡比較）
 - **今日累計已建檔：** 4 篇（ts_001 加拿大關稅、ts_002 伊朗威脅、ts_003 黎巴嫩直航、ts_004 戰爭傷亡比較）
 - **LINE 通知狀態：** 全部失敗（代理封鎖 api.line.me）
+
+---
+
+## 第六次執行（2026-07-21 23:09 UTC）
+
+**執行時間：** 2026-07-21 23:09 UTC（台灣時間 2026-07-22 07:09）
+**上次記錄 ID（執行開始）：** 20260721_ts_004
+
+### 搜尋流程
+
+**方法 A：Truth Social 直接存取**
+- truthsocial.com RSS / API → 403 Forbidden（代理封鎖）
+
+**方法 B：WebSearch（多輪深度搜尋）**
+- 搜尋 "Trump Truth Social July 21 2026 latest tonight evening"
+- 搜尋 "Trump Truth Social post Tuesday July 21 2026 afternoon evening new announcement"
+- 搜尋 "Trump Truth Social post Hegseth hearing Senate Iran tariff Section 301 July 21 2026"
+- 搜尋 "Trump Truth Social post Netanyahu Israel Iran Lebanon agreement July 21 2026"
+- 搜尋 '"Truth Social" Trump post evening July 21 2026 "GREAT" OR "BEAUTIFUL" OR tariff'
+- 搜尋 "Trump Truth Social wildfire Canada tariff 'must of necessity' July 2026"（確認為7/17舊貼文）
+- 搜尋 "Trump 'Section 338' Canada tariff Truth Social post July 2026"（確認為7/20 ts_001已記錄）
+- 搜尋 "Trump Truth Social post tariff Brazil Section 301 new tariffs July 21 2026"（巴西25%關稅為7/16舊貼文）
+
+**方法 C：Trump Archive**
+- 所有存檔網站 → 403 Forbidden（代理封鎖）
+
+### 7月21日已知貼文狀況（共4篇，已全部追蹤）
+
+| ID | 主題 | 狀態 |
+|---|---|---|
+| 20260721_ts_001 | 加拿大 Section 338 50% 關稅（葡萄酒/汽車/乳品） | ✅ 已記錄 |
+| 20260721_ts_002 | 伊朗每殺美軍將付出數倍代價（指令傳達 Hegseth/Caine） | ✅ 已記錄 |
+| 20260721_ts_003 | 開放美國直航黎巴嫩（Aoun 白宮訪問後） | ✅ 已記錄 |
+| 20260721_ts_004 | 歷史戰爭傷亡比較（阿富汗/伊拉克/越戰/韓戰/伊朗） | ✅ 已記錄 |
+
+### 結論
+
+**未找到任何 2026-07-21 23:09 UTC 之前的新 Truth Social 貼文（ts_004 之後）**
+
+- last_seen_id 維持：`20260721_ts_004`
+- 未建立新貼文分析檔案
+- 未推播 LINE 通知（無新貼文 + api.line.me 持續封鎖）
+
+### 系統狀態
+- ❌ **LINE API（api.line.me）：持續封鎖** — 代理層完全不允許連線
+- ❌ GitHub REST API：封鎖，改用 git clone/push
+- ✅ WebSearch：正常（找到但無 ts_004 後新貼文）
+- ✅ git push（使用 PAT）：正常
+
+### 今日（7/21）累計已追蹤貼文
+1. **ts_001** — 加拿大 Section 338 50% 關稅 🇨🇦
+2. **ts_002** — 伊朗殺美軍必付代價 ⚠️
+3. **ts_003** — 美國直航黎巴嫩解禁 ✈️
+4. **ts_004** — 歷史戰爭傷亡比較 📊
