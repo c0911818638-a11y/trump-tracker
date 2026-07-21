@@ -1,0 +1,28 @@
+[2026-07-21] Trump Tracker Run Log
+====================================
+
+步驟1: 讀取 last_seen_id
+  ✓ 方法：git clone (GitHub API 被環境 proxy 封鎖)
+  結果：last_seen_id = 20260720_ts_012 (Netanyahu 貼文, 7/20 12:50 EDT)
+
+步驟2: 抓取最新貼文
+  ✗ Truth Social RSS (403)
+  ✗ Truth Social API (403)
+  ✗ truthsocial.com WebFetch (403)
+  ✗ thetrumparchive.com (403)
+  ✗ trumpstruth.org WebFetch (403)
+  ✓ WebSearch 搜索成功找到 2 篇新貼文
+
+步驟3-4: 新貼文識別與分析
+  ✓ 20260720_ts_013: 卡拉法諾中東強勢論 (7/20 13:56 EDT, status/40160)
+  ✓ 20260720_ts_014: 英相伯納姆首通電話 (7/20 18:18 EDT, status/40161)
+  ✗ 2026-07-21 貼文：搜索未找到任何 7/21 新貼文
+
+步驟5: GitHub 上傳
+  ✓ 推送成功至 c0911818638-a11y/trump-tracker
+  ✓ last_seen_id 已更新為 20260720_ts_014
+
+步驟6: LINE 推播
+  ✗ 失敗：環境 proxy (127.0.0.1:39555) 封鎖 api.line.me (HTTP 403)
+  → 已用系統 PushNotification 工具替代通知
+
