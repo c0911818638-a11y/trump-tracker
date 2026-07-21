@@ -107,3 +107,38 @@
   - CNBC 7/21：市場關注川普對加拿大關稅策略（Section 338，8月16日生效）
   - 胡賽武裝宣布對沙烏地阿拉伯船運實施海上封鎖（最新升級）
   - Air France 暫停利雅德、杜拜航班至8/2（黎巴嫩航班亦延長暫停）
+
+---
+
+[2026-07-21 第四次執行]
+====================================
+
+步驟1: 讀取 last_seen_id
+  ✓ 方法：git clone (GitHub API 被環境 proxy 封鎖)
+  結果：last_seen_id = 20260720_ts_014 (英相伯納姆通電話, 7/20 18:18 EDT, status/40161)
+
+步驟2: 抓取最新貼文（新增搜索約 20 次 WebSearch/WebFetch 嘗試）
+  ✗ Truth Social RSS/API (403)
+  ✗ truthsocial.com 各頁面 (403)
+  ✗ thetrumparchive.com / trumpstruth.org (403)
+  ✗ 新聞網站 (403): CNN、NBC、CNBC、The Hill、Yahoo、Daily Beast、FXStreet、Mitrade 等
+  ✗ 社群平台 (403): Facebook、Instagram、X/Twitter
+  ✓ WebSearch 搜索持續回傳 7/20 既有貼文，無 7/21 新內容
+
+步驟3: 新貼文比較
+  交叉驗證確認（新增）：
+  ✓ FXStreet 文章 URL 含 "202607201704" → 伊朗報復貼文屬 7/20 17:04 UTC，已收錄於 ts_007/ts_010
+  ✓ Mitrade 文章 "Trump declares retaliation automatic" (URL含20260721) 為 7/21 新聞報導 7/20 舊貼文
+  ✓ 加拿大關稅貼文 "Canada has long and unjustly discriminated..." = ts_011 (7/20，已捕獲)
+  ✓ Netanyahu/伊朗貼文組合 = ts_008+ts_009+ts_012 (7/20，已捕獲)
+  ✓ 伊朗封鎖/霍爾木茲貼文 = ts_001+ts_002 (7/20，已捕獲)
+  ✗ 無法發現任何 ts_014 之後的新貼文
+
+步驟4: 結論
+  → 四次執行累計超過 80 次搜尋/抓取嘗試，確認今日無可取得 ts_014 之後新貼文原文
+  → last_seen_id 維持不變：20260720_ts_014
+  → 不新增貼文檔案
+
+步驟5: LINE 推播
+  → 環境 proxy 持續封鎖 api.line.me (403)
+  → 無新貼文，靜默結束
