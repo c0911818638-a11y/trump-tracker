@@ -146,3 +146,55 @@
 - ❌ GitHub REST API：封鎖，改用 git clone/push
 - ✅ WebSearch：正常
 - ✅ git push（使用 PAT）：正常
+
+---
+
+## 第四次執行（本次，約 UTC 當前時間）
+
+**執行時間：** 2026-07-21 （本次）
+**上次記錄 ID（執行開始）：** 20260721_ts_002
+
+### 搜尋流程
+
+**方法 A：Truth Social 直接存取**
+- truthsocial.com RSS / API → 403 Forbidden（代理封鎖）
+
+**方法 B：WebSearch（多輪深度搜尋）**
+- 搜尋 "Trump Truth Social July 21 2026" → 多輪搜尋確認重大活動
+- 重要新發現：
+  * 川普與黎巴嫩總統 Joseph Aoun 白宮橢圓辦公室會面
+  * 川普在 Truth Social 發文宣布開放美國直航黎巴嫩（40年來首次）
+  * 川普揚言「很快」打擊伊朗 Pickaxe Mountain 核設施（白宮口頭聲明）
+  * 加拿大 50% 關稅新聞（已在 ts_001 記錄）
+
+**方法 C：Trump Archive**
+- 所有存檔網站 → 403 Forbidden
+
+### 新貼文發現
+
+**✅ 新貼文 (20260721_ts_003)：開放美國直航黎巴嫩**
+
+原文：
+> "After meeting with the President of Lebanon, Joseph Aoun, who has done a remarkable job working to transform his Country, I am hereby directing my Administration to allow all US airline carriers to fly directly to Lebanon so that Americans can easily visit this beautiful land. Hopefully, other Countries will do the same. Enjoy!"
+
+- 發布時間：約 2026-07-21 UTC 20:23 / 台灣時間 2026-07-22 04:23
+- 來源確認：AP、al-monitor、the961.com、Jewish Insider
+- 背景：美黎40年飛航禁令解除，配合 Aoun 白宮訪問
+- 重要程度：中
+
+### 動作紀錄
+
+1. ✅ 建立分析檔案：posts/2026-07-21_20260721_ts_003.md
+2. ✅ 更新 state/last_seen_id.txt → 20260721_ts_003
+3. ✅ git commit + push 成功
+4. ❌ LINE 推播（api.line.me 403 Forbidden — 代理封鎖）
+
+### 系統狀態
+- ❌ **LINE API（api.line.me）：403 Forbidden** — 持續封鎖，無法推播
+- ❌ GitHub REST API：封鎖，改用 git clone/push
+- ✅ WebSearch：正常
+- ✅ git push（使用 PAT）：正常
+
+### 最終狀態
+- **last_seen_id：** 20260721_ts_003
+- **本次新貼文：** 1 篇（ts_003 黎巴嫩直航）
