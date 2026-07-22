@@ -225,3 +225,45 @@
 - USTR Greer：新關稅對 60 國「很快」落地
 - ⚡ **【最新】** 伊朗攻擊科威特、巴林美軍基地，3名美軍陣亡（7/22）
 - 川普 Pickaxe Mountain 核設施打擊威脅持續，各媒體 7/22 詳細報導
+
+---
+
+## 第四次執行（本次，約 UTC 當天稍後）
+
+**執行時間：** 2026-07-22 UTC（第四次）
+**上次記錄 ID（執行開始）：** 20260722_ts_002
+
+### 搜尋流程
+
+**方法 A：Truth Social 直接存取**
+- 全部端點 → 403 Forbidden（代理封鎖）
+
+**方法 B：WebSearch（15+ 輪深度搜尋）**
+- 搜尋橋梁電廠貼文後新貼文 → 找到 Dover AFB 出席確認
+- 搜尋 "Trump 'honor our heroes' Dover Truth Social July 22 2026" → 多家媒體確認
+- ABC News（id=134979766）、Yahoo News、The Hill 均引述此貼文
+
+**方法 C：Trump Archive / trumpstruth.org / thetrumparchive.com**
+- 全部 → 403 Forbidden（代理封鎖）
+
+### 新發現貼文
+
+#### ts_003（NEW）：Dover AFB 英雄致敬
+- **原文**："Heading to Dover Air Force Base to HONOR OUR HEROES!"
+- **時間**：2026-07-22，美東早晨（UTC 下午）
+- **背景**：出席 4 名伊朗戰爭陣亡美軍士兵遺體返鄉儀式
+- **重要程度**：中
+
+### 行動
+
+✅ 已建立 posts/2026-07-22_ts_003.md
+✅ 已更新 state/last_seen_id.txt → 20260722_ts_003
+⬜ LINE 通知：待嘗試推播
+
+---
+
+## 今日（7/22）累計已追蹤貼文（最終）
+
+1. **ts_001（高重要度）** — 學名藥階梯式關稅（零→100%→200%，8/1起）💊
+2. **ts_002（極高重要度）** — 伊朗每擊一船，炸毀一橋或電廠（含德黑蘭附近）🚨
+3. **ts_003（中重要度）** — 前往多佛空軍基地向陣亡英雄致敬 🫡
