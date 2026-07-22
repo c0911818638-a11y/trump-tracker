@@ -22,3 +22,9 @@ ts_003: 前往多佛空軍基地出席陣亡士兵遺體移交儀式
 
 === 結論 ===
 無新貼文 → 不推播 LINE，靜默結束。
+
+=== 2026-07-22 監控執行紀錄（深夜補充） ===
+新貼文識別：ts_004（Gen. Caine 影片），ts_005（Freedom 250 Grand Prix AI 影片）
+GitHub 上傳：成功（posts/2026-07-22_ts_004.md、posts/2026-07-22_ts_005.md，commit 7af5c2d）
+last_seen_id 更新為：20260722_ts_005
+LINE API 推播：FAILED — api.line.me:443 被 egress proxy 封鎖（HTTP 403 Forbidden）
