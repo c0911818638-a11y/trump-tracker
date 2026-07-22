@@ -147,3 +147,81 @@
 - 巴西 25% Section 301 關稅 7/22 生效
 - Section 122（10%全球關稅）7/24 到期，Section 301 接替
 - USTR Greer：新關稅對 60 國「很快」（expect action soon）——可能今明兩天
+
+---
+
+## 第三次執行（本次，約 12-15 UTC）
+
+**執行時間：** 2026-07-22 UTC（第三次）
+**上次記錄 ID（執行開始）：** 20260722_ts_001
+
+### 搜尋流程
+
+**方法 A：Truth Social 直接存取**
+- 全部端點 → 403 Forbidden（代理封鎖）
+
+**方法 B：WebSearch（20+ 輪搜尋）**
+- 學名藥關稅後續分析大量出現，多家媒體（CNBC、France24、BusinessToday 等）確認 ts_001 為 7/22 發文
+- 搜尋「Trump Truth Social July 22 2026 new post」→ 無法找到 ts_001 之後的具體貼文文字
+
+**方法 C：Trump Archive / trumpstruth.org / thetrumparchive.com**
+- 全部 → 403 Forbidden（代理封鎖）
+
+### 今日（7/22）重大伊朗戰爭最新動態（非 Truth Social 貼文，背景資訊）
+
+| 事件 | 說明 |
+|---|---|
+| 🇮🇷 伊朗新一波攻擊 | 7/22 伊朗聲稱攻擊科威特美軍基地（ABC News 直播標題）|
+| ✈️ 科威特攔截 | 科威特武裝部隊正積極攔截飛彈與無人機 |
+| 🚨 巴林警報 | 巴林防空警報啟動 |
+| 🛡️ 約旦攔截 | 約旦擊落 8/10 枚伊朗飛彈，2枚落入偏遠地區無傷亡 |
+| ⚠️ 沙特預警 | 沙烏地阿拉伯東部（達曼）民防預警發布 |
+| ☠️ 美軍傷亡 | Yahoo News：科威特伊朗攻擊造成 3 名美軍陣亡 |
+| 🏔️ Pickaxe Mountain | 川普 7/21 表示「很快」打擊此伊朗核設施，7/22 各大媒體詳細分析該設施 |
+
+### ABC News 直播 entryId（顯示今日可能有新貼文，但無法確認文字）
+
+根據 ABC News 直播（id=134907987）：
+- entryId=134912751：「Trump says US hit Iran 'hard' in honor of service members killed」
+- entryId=134924141：「Trump says Iran 'will pay' for killing US troops」
+
+⚠️ 以上條目標題指向今日新聲明，但因 abc news.go.com 代理封鎖（403），無法確認是否為 Truth Social 貼文或口頭聲明，亦無法取得全文。
+
+### The Hill 今日直播（可能為今日新貼文）
+
+- 標題：「Live updates: US hits Iran to retaliate for 3 military casualties; House faces marathon week」
+- URL 顯示今日重大軍事行動：美軍報復伊朗攻擊、3名軍人陣亡
+- 同樣因 403 無法確認川普 Truth Social 文字
+
+### 已排除的舊貼文（確認非今日新貼文）
+
+- 「Afghanistan War: 20 years, 2,000 DEAD...」戰爭傷亡比較 → 已確認為 **20260721_ts_004**（前一次執行已追蹤）
+- 「Every time Iran kills an American Soldier...」自動報復 → 已確認為 **20260721 系列貼文**
+- 英國 PM Burnham 會話（North Sea Oil） → 已確認為 **20260720 貼文**
+- Air Force One Mildenhall 之旅 → 已確認為 **20260708/09 貼文**
+
+### 結論
+
+**本次執行未找到任何 20260722_ts_001 之後的確認新 Truth Social 貼文**
+
+可能原因：
+- 今日伊朗攻擊的川普回應可能為口頭聲明（向記者發言），非 Truth Social 貼文
+- 或 Truth Social 貼文尚未被搜尋引擎索引
+- 或代理封鎖導致新聞來源不可存取
+
+**動作：**
+- 未建立新貼文分析檔案
+- last_seen_id 維持：`20260722_ts_001`
+- ❌ LINE 通知：api.line.me 持續封鎖
+
+---
+
+## 今日（7/22）累計已追蹤貼文（更新）
+1. **ts_001（高重要度）** — 學名藥階梯式關稅（零→100%→200%，8/1起，逼製藥業回流美國）💊
+
+## 今日重要背景（非貼文，持續更新）
+- 巴西 25% Section 301 關稅 7/22 生效
+- Section 122（10%全球關稅）7/24 到期，Section 301 接替
+- USTR Greer：新關稅對 60 國「很快」落地
+- ⚡ **【最新】** 伊朗攻擊科威特、巴林美軍基地，3名美軍陣亡（7/22）
+- 川普 Pickaxe Mountain 核設施打擊威脅持續，各媒體 7/22 詳細報導
