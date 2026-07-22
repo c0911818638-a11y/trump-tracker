@@ -74,3 +74,76 @@
 - ❌ GitHub REST API：封鎖，改用 git clone/push
 - ✅ WebSearch：正常（找到但無 July 22 新貼文）
 - ✅ git push（使用 PAT）：正常
+
+---
+
+## 第二次執行（本次，約 11:09 UTC）
+
+**執行時間：** 2026-07-22 11:09 UTC（台灣時間 2026-07-22 19:09）
+**上次記錄 ID（執行開始）：** 20260722_ts_001
+
+### 背景說明
+前次執行（第一次）記錄 last_seen_id = 20260721_ts_004，但後續執行已找到並記錄：
+- **20260722_ts_001**：學名藥階梯式關稅政策（零關稅2年→100%→200%，8月1日起生效）
+  - 來源：CNBC、France24、trumpstruth.org #40182
+  - 重要程度：**高**
+
+### 本次搜尋流程（尋找 ts_001 之後的新貼文）
+
+**方法 A：Truth Social 直接存取**
+- truthsocial.com RSS / API / 個人頁面 → 全部 403 Forbidden（代理封鎖）
+
+**方法 B：WebSearch（多輪深度搜尋，15+ 次）**
+- 搜尋 "Trump Truth Social July 22 2026" → 僅返回學名藥關稅新聞（已追蹤）
+- 搜尋 "Trump 'Truth Social' Wednesday July 22 2026 tariff Iran economy" → 無新貼文
+- 搜尋 "Trump Truth Social post today July 22 2026 Section 301 countries" → 無具體新貼文
+- 搜尋 "Trump new tariff announcement July 22 2026" → 背景新聞：Section 301 對60國關稅即將落地
+- 搜尋 "Trump Truth Social Iran nuclear deal July 22 2026" → 無新貼文（伊朗新聞為口頭聲明）
+- 搜尋 "Trump Truth Social 'August 1' tariff no extension 2026" → 2025年舊貼文（非今日）
+- 搜尋 "Trump truth social 20 countries August 1 tariff 2026" → CBS 報導（確認2026/8/1截止仍有效）
+
+**方法 C：Trump Archive**
+- 所有存檔網站 → 403 Forbidden（代理封鎖）
+
+### July 22 重要背景新聞（非 Truth Social 貼文）
+
+| 事件 | 說明 |
+|---|---|
+| 🇧🇷 巴西 25% Section 301 關稅 | 今日（7/22）生效，7/16公告，非新貼文 |
+| 📊 Section 122（10%全球關稅） | 7/24 到期，Section 301 接替（10-12.5%，60國）|
+| 🇯🇵 美日貿易協定 | 15% 關稅，7/22 相關新聞（2025年協議延伸）|
+| 🌍 對數十個國家的新關稅 | PoliticalWire 7/22 報導：USTR 準備在 7/24 前落地 |
+| 💊 學名藥關稅 | **已追蹤（ts_001）** ✅ |
+
+### 結論
+
+**未找到任何 20260722_ts_001 之後的新 Truth Social 貼文**
+
+可能原因：
+- 美國東部時間今早川普可能尚未發更多文（11 AM UTC = 7 AM ET）
+- Section 301 新關稅官方公告可能來自 USTR，非 Truth Social
+- 搜尋引擎可能尚未索引最新貼文
+
+**動作：**
+- 未建立新貼文分析檔案
+- last_seen_id 維持：`20260722_ts_001`
+- ❌ LINE 通知嘗試：api.line.me 連線失敗（exit code 56，代理封鎖）
+
+---
+
+## 系統狀態（持續問題）
+- ❌ **LINE API（api.line.me）：完全封鎖** — 代理層不允許連線，exit code 56
+  - ts_001（學名藥關稅，高重要度）LINE 通知未成功送出
+- ❌ GitHub REST API：封鎖，改用 git clone/push
+- ✅ WebSearch：正常
+- ✅ git clone/push（使用 PAT）：正常
+
+---
+
+## 今日（7/22）累計已追蹤貼文
+1. **ts_001（高重要度）** — 學名藥階梯式關稅（零→100%→200%，8/1起，逼製藥業回流美國）💊
+
+## 今日重要事件背景（非貼文，供參考）
+- 巴西 25% Section 301 關稅 7/22 生效
+- Section 122（10%全球關稅）7/24 到期，Section 301 接替
+- USTR Greer：新關稅對 60 國「很快」（expect action soon）——可能今明兩天
