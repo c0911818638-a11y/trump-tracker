@@ -1,0 +1,76 @@
+# Trump Truth Social 監控日誌 - 2026-07-22
+
+**執行時間：** 2026-07-22 UTC（第一次）
+**上次記錄 ID（執行開始）：** 20260721_ts_004
+
+---
+
+## 搜尋流程
+
+### 方法 A：Truth Social 直接存取
+- URL: https://truthsocial.com/@realDonaldTrump.rss → 403 Forbidden（代理封鎖）
+- URL: https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → 403 Forbidden（代理封鎖）
+- URL: https://truthsocial.com/@realDonaldTrump → 403 Forbidden（代理封鎖）
+
+### 方法 B：WebSearch（多輪深度搜尋）
+- 搜尋 "Trump Truth Social post July 22 2026" → 返回 July 20-21 內容，無 July 22 新貼文
+- 搜尋 "Trump Truth Social 'July 22' 2026 text content posted" → 無 July 22 具體貼文
+- 搜尋 "Trump news today July 22 2026 tariff Iran trade announcement" → 返回 July 21 新聞
+- 搜尋 "Trump 'Truth Social' post Wednesday 'July 22' 2026" → 無 July 22 具體貼文
+- 搜尋 "Trump Truth Social July 22 2026 Section 122 tariff Iran Pickaxe Mountain" → 無 July 22 具體貼文
+- 搜尋 "Trump news latest today July 22 Iran Section 301 tariff new announcement 2026" → 返回 July 21 內容
+- 搜尋 "breaking news Trump July 22 2026" → 返回 July 21 內容（伊朗、黎巴嫩、Houthis）
+- 搜尋 "Trump Truth Social today 2026-07-22" → 無新貼文
+- 搜尋 "Trump 'Truth Social' OR 'posted' July 22 2026" → 無 July 22 具體貼文
+
+### 方法 C：Trump Archive
+- https://www.thetrumparchive.com/ → 403 Forbidden（代理封鎖）
+- https://trumpstruth.org/ → 403 Forbidden（代理封鎖）
+- https://trumpstruth.org/?per_page=100 → 403 Forbidden（代理封鎖）
+
+### 其他嘗試
+- Fox News live blog July 22 → 403 Forbidden
+- Times of Israel July 22 liveblog → 403 Forbidden
+- Yahoo News July 22 articles → 403 Forbidden
+- NBC News live blog → 403 Forbidden
+
+---
+
+## 搜尋結果摘要
+
+### 搜尋結果返回的最新貼文（仍為 July 21）：
+
+已確認 July 21 貼文（已全部在 20260721_ts_001~004 記錄）：
+1. 加拿大 Section 338 50% 關稅（葡萄酒/汽車/乳品）→ ts_001
+2. 伊朗每殺美軍將付出數倍代價（Hegseth/Caine 指令）→ ts_002
+3. 開放美國直航黎巴嫩（Aoun 白宮訪問後）→ ts_003
+4. 歷史戰爭傷亡比較（阿富汗/伊拉克/越戰/韓戰/委內瑞拉/伊朗）→ ts_004
+
+### July 22 相關背景新聞（非 Truth Social 貼文）：
+- Section 122 關稅（10%全球關稅）即將於 2026-07-24 到期，後續走向待觀察
+- USTR Greer 暗示新 Section 301 關稅即將對約 60 個國家徵收（涵蓋 99.4% 美國貿易量）
+- 美伊軍事衝突持續，川普揚言「很快」打擊 Pickaxe Mountain 核設施
+- Times of Israel / Fox News July 22 直播尚未被搜尋引擎索引（可能仍在早晨）
+
+---
+
+## 結論
+
+**未找到任何 2026-07-22 新 Truth Social 貼文**
+
+可能原因：
+- 今日美國時間仍在早晨，川普尚未發文
+- July 22 貼文尚未被搜尋引擎索引
+
+**動作：**
+- 未建立新貼文分析檔案
+- last_seen_id 維持：`20260721_ts_004`
+- 未推播 LINE 通知（無新貼文 + api.line.me 持續封鎖）
+
+---
+
+## 系統狀態（持續問題）
+- ❌ **LINE API（api.line.me）：持續封鎖** — 代理層完全不允許連線
+- ❌ GitHub REST API：封鎖，改用 git clone/push
+- ✅ WebSearch：正常（找到但無 July 22 新貼文）
+- ✅ git push（使用 PAT）：正常
