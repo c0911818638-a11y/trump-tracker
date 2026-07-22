@@ -1,80 +1,21 @@
-[2026-07-22] Trump Truth Social 監控日誌
+=== 2026-07-22 trump-tracker 執行日誌 ===
+執行時間: 2026-07-22 23:08 UTC
 
-執行時間：2026-07-22（台灣時間下午/晚間）
+【成功】
+- 已讀取 last_seen_id: 20260722_ts_005
+- 搜尋新貼文：發現 3 篇新貼文（ts_006, ts_007, ts_008）
+- 已上傳分析檔案至 GitHub（push 成功）
+- last_seen_id 已更新為: 20260722_ts_008
 
-=== 已記錄貼文（本次執行前）===
-last_seen_id: 20260722_ts_003
+【新貼文清單】
+- ts_006 (40084): 亞塞拜然 Aliyev「和平之人」轉貼，2026-07-23 01:06 ET
+- ts_007 (40085): 賓州100億美元國防工業基礎投資轉貼，2026-07-23 01:06 ET
+- ts_008: 榮譽勳章授獎影片，2026-07-23 01:30 ET
 
-ts_001: 學名藥關稅政策（2026-08-01起2年零關稅→100%→200%）
-ts_002: 伊朗/荷姆茲海峽威脅（每次攻擊船隻→炸毀一座橋或電廠，含德黑蘭）
-        Truth Social URL: https://truthsocial.com/@realDonaldTrump/116963738416841583
-ts_003: 前往多佛空軍基地出席陣亡士兵遺體移交儀式
+【失敗】
+- LINE 推播失敗: api.line.me 被 proxy 403 封鎖（不在本 session 的 egress policy 允許清單中）
+  curl: (56) CONNECT tunnel failed, response 403
 
-=== 本次執行結果 ===
-搜尋方法：WebSearch（多次）
-搜尋結果：未發現 ts_003 之後的新貼文
-
-川普當日其他活動：
-- 出席多佛AFB Dignified Transfer（4名陣亡士兵）
-- 前往喬治亞州瑪麗埃塔 Wheeler High School 推廣 Trump Accounts 計劃（下午2PM EDT）
-
-未發現 Wheeler High School 活動後的新 Truth Social 貼文。
-
-=== 結論 ===
-無新貼文 → 不推播 LINE，靜默結束。
-
-=== 2026-07-22 監控執行紀錄（深夜補充） ===
-新貼文識別：ts_004（Gen. Caine 影片），ts_005（Freedom 250 Grand Prix AI 影片）
-GitHub 上傳：成功（posts/2026-07-22_ts_004.md、posts/2026-07-22_ts_005.md，commit 7af5c2d）
-last_seen_id 更新為：20260722_ts_005
-LINE API 推播：FAILED — api.line.me:443 被 egress proxy 封鎖（HTTP 403 Forbidden）
-
-=== 2026-07-22 第六次執行（20:13 UTC / 04:13 EDT） ===
-執行時間：2026-07-22 20:13 UTC
-last_seen_id 讀取：20260722_ts_005（Freedom 250 Grand Prix，深夜 01:04 AM ET）
-搜尋方法：WebSearch（多次，9+ 次搜尋）
-新貼文搜尋結果：未發現 ts_005 之後的新貼文
-
-本次搜尋涵蓋範圍：
-- 伊朗戰爭動態（Pickaxe Mountain 核設施威脅）
-- 喬治亞州 Marietta 競選活動（下午 3PM EDT Wheeler High School）
-- 關稅 / 最高法院動態
-- Trump Accounts 計劃推廣
-
-川普本日主要活動：
-- 上午：發布 Truth Social 貼文（已記錄 ts_001-ts_005）
-- 出席多佛AFB 陣亡士兵遺體移交儀式
-- 下午：飛往喬治亞州 Marietta 演講（Trump Accounts / 期中選舉輔選）
-- 向媒體聲稱將於「很快」攻擊伊朗 Pickaxe Mountain 核設施（口頭聲明，非 Truth Social）
-
-結論：無新貼文 → 不推播 LINE，靜默結束
-LINE API 狀態：仍封鎖（HTTP 000，代理封鎖 api.line.me）
-
-=== 2026-07-22 第七次執行（21:09 UTC / 17:09 EDT） ===
-執行時間：2026-07-22 21:09 UTC
-last_seen_id 讀取：20260722_ts_005（Freedom 250 Grand Prix AI 影片）
-搜尋方法：WebSearch（多次，10+ 次搜尋）+ WebFetch（多次嘗試，多數被 403 封鎖）
-
-本次搜尋涵蓋範圍：
-- 伊朗/荷姆茲海峽最新動態（美軍擴大打擊範圍至大不里士附近）
-- 川普喬治亞州 Marietta Wheeler High School 演講（Trump Accounts）後動態
-- 川普對喬治亞州長 Kemp 的 Truth Social 攻擊（查核：確認為 2024 年 8 月事件，非 2026/07/22）
-- 沙烏地阿拉伯核協議、Houthis 威脅、黎巴嫩直航（均為已記錄範疇內）
-- 尋找任何新的川普 Truth Social 貼文
-
-新貼文搜尋結果：未發現 ts_005 之後的新貼文
-
-背景說明：
-- 川普於 17:09 EDT 仍應在喬治亞州或返回途中（演講預定 3PM EDT）
-- GitHub API 被 egress proxy 封鎖（HTTP 403），但透過 git HTTPS+PAT 可正常存取
-- LINE API（api.line.me）仍被 egress proxy 封鎖
-
-今日已記錄重大事件（供參考）：
-- ts_001：學名藥階梯關稅（8/1起零關稅→2年後100%→200%）
-- ts_002：伊朗荷姆茲橋梁電廠威脅（今日最重大貼文）
-- ts_003：前往多佛 AFB 致敬陣亡將士
-- ts_004：轉發聯合參謀長主席 Dan Caine 演講影片（深夜 13 連發首篇）
-- ts_005：Freedom 250 Grand Prix AI 影片（深夜 01:04 AM ET）
-
-結論：無新貼文 → 不推播 LINE，靜默結束
-LINE API 狀態：仍封鎖（egress proxy 封鎖 api.line.me:443）
+【說明】
+LINE 通知無法從此遠端執行環境直接發送。
+GitHub 上傳已完成，分析資料已儲存。
