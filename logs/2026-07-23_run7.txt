@@ -1,0 +1,38 @@
+[2026-07-23 自動執行紀錄 - Run 7]
+
+執行時間: 2026-07-23 UTC
+
+=== 步驟1：讀取上次記錄 ===
+last_seen_id: 20260723_ts_007（今日第7篇）
+
+=== 步驟2：抓取貼文 ===
+- Truth Social RSS: 403 Forbidden
+- Truth Social API: 403 Forbidden
+- WebSearch (多次): 已搜尋胡賽威脅、沙烏地核協議、亞伯拉罕協議、關稅到期等主題
+- Trump Archive / thetrumparchive.com: 403 Forbidden
+- The Last Refuge / Conservative Treehouse: 403 Forbidden
+
+=== 步驟3：比較新舊 ===
+已記錄至: 20260723_ts_007
+搜尋結果顯示的貼文均為已追蹤內容：
+  - ts_001: CNN攻擊相關
+  - ts_002: 伊朗/胡賽威脅
+  - ts_003: 沙烏地核協議+亞伯拉罕協議（早期版）
+  - ts_004: 深夜13則連發 (Dan Caine/IndyCar/TikTok)
+  - ts_005: 賓州 100 億美元國防投資
+  - ts_006: 胡賽警告 + 伊朗責任 (10:20 EDT)
+  - ts_007: 沙烏地核協議 + 亞伯拉罕協議（正式附加條件版）
+
+新發現: 無
+
+=== 執行結果 ===
+- 新貼文: 0 篇
+- GitHub: 無更新（僅寫入本日誌）
+- LINE: 不推播（無新貼文）
+
+=== 備註 ===
+今日重大事件（已追蹤）：
+1. 胡賽武裝攻擊沙烏地兩艘油輪（Encelia號 + Layla號）→ 川普發出嚴厲警告
+2. 美沙民用核能協議獲批准，但附加「必須加入亞伯拉罕協議」條件
+3. 10% 全球關稅將於 2026-07-24 到期，Section 301 強迫勞動關稅待實施
+LINE推播持續受 Anthropic Claude Code 雲端環境 egress proxy 封鎖（已知問題）。
