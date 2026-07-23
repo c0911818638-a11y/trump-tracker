@@ -1,72 +1,17 @@
-監控執行記錄 - 2026-07-23
-=========================
+[2026-07-23] 執行記錄
 
-執行時間: 2026-07-23
+狀態：部分成功
+- GitHub 讀取 last_seen_id：成功（20260723_ts_002）
+- 抓取 Truth Social RSS：失敗（403 Forbidden）
+- 抓取 Truth Social API：失敗（403 Forbidden）
+- WebSearch 搜尋新貼文：成功
+- 發現新貼文：1 篇（20260723_ts_003）
+  - 主題：沙烏地阿拉伯核能協議 + 亞伯拉罕協議前提
+- 分析檔案建立：成功（posts/2026-07-23_ts_003.md）
+- GitHub 推送：成功（commit d4053de）
+- last_seen_id 更新：成功（→ 20260723_ts_003）
+- LINE 推播：失敗（環境 proxy 封鎖 api.line.me:443，HTTP 403）
 
-【步驟 1】讀取上次貼文 ID
-✅ 上次記錄 ID: 20260722_ts_008（2026-07-23 01:30am ET，深夜連發最後一篇）
-
-【步驟 2】抓取最新貼文
-❌ 方法 A（Truth Social RSS）: HTTP 403
-❌ 方法 A（Truth Social API）: HTTP 403
-✅ 方法 B（WebSearch）: 成功取得日期 2026-07-23 的相關報導
-❌ 方法 C（Trump Archive）: HTTP 403
-
-【步驟 3-4】識別並分析新貼文
-✅ 識別到 2 篇新貼文（基於 2026-07-23 新聞報導）：
-   - 20260723_ts_001: Trump vs CNN（回應 CNN 事實查核）
-   - 20260723_ts_002: 伊朗衝突升級（胡賽武裝攻沙烏地油輪，油價逼近 98 美元）
-
-【步驟 5】上傳至 GitHub
-✅ 成功推送至 c0911818638-a11y/trump-tracker
-   新增: posts/2026-07-23_ts_001.md
-   新增: posts/2026-07-23_ts_002.md
-   更新: state/last_seen_id.txt → 20260723_ts_002
-
-【步驟 6】LINE 推播
-❌ 失敗：api.line.me:443 被網路政策封鎖（connect_rejected, policy denial）
-   錯誤: Proxy 返回 403，api.line.me 不在本工作階段的出站白名單內
-
-【備注】
-- 今日重大事件: 胡賽武裝攻擊沙烏地 Layla/Encelia 油輪，油價逼近 98 美元
-- 伊朗戰爭第 12 次連續夜間打擊完成
-- 拉夫羅夫-盧比奧馬尼拉會談（35 分鐘）
-- CNN 發布川普伊朗戰爭 4 大聲明事實查核
-- last_seen_id 已更新至 20260723_ts_002
-
----
-
-第二次執行記錄 - 2026-07-23（自動排程）
-=========================
-
-執行時間: 2026-07-23 (UTC 當前時間)
-
-【步驟 1】讀取上次貼文 ID
-✅ 上次記錄 ID: 20260723_ts_002
-
-【步驟 2-3】抓取最新貼文並比較
-❌ 方法 A（Truth Social RSS/API）: HTTP 403
-✅ 方法 B（WebSearch + WebFetch）: 已嘗試多組搜尋
-❌ 方法 C（Trump Archive）: HTTP 403
-
-【搜尋結果摘要】
-未發現 20260723_ts_002 之後的新確認貼文。
-
-已確認的 2026-07-23 重大事件（延續前次紀錄）：
-- 伊朗攻擊科威特與約旦美軍基地（新升級）
-- 盧比奧表示伊朗將「付出代價」（馬尼拉 ASEAN 發言）
-- 拉夫羅夫-盧比奧馬尼拉會談結束
-- 川普Tesla股票大額買入（50-100萬美元）
-- 晚間 Truth Social 活躍（具體貼文文字無法確認）
-
-川普說伊朗「尚未準備好談判，但很快就會」（來源：Times of Israel Jul 22 live blog，
-可能係美東時間7/22晚發言，並非新 Truth Social 文字貼文）
-
-【步驟 6】LINE 推播（補發前次失敗通知）
-❌ 再次失敗：api.line.me 仍在本工作階段出站黑名單
-   curl exit code 56（Proxy CONNECT aborted）
-
-【結論】
-- 無新確認貼文（last_seen_id 維持 20260723_ts_002）
-- LINE 推播持續失敗（前次兩篇新貼文的通知尚未送達）
-- 建議：需要在允許 LINE API 的工作階段中重新推播
+錯誤詳情：
+curl: (56) CONNECT tunnel failed, response 403
+proxy: http://127.0.0.1:33631 封鎖 api.line.me 連線
