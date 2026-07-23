@@ -1,0 +1,53 @@
+[2026-07-23 自動執行紀錄 - Run 8]
+
+執行時間: 2026-07-23 UTC（台灣時間 2026-07-24）
+
+=== 步驟1：讀取上次記錄 ===
+last_seen_id: 20260723_ts_007（今日第7篇）
+git clone 成功（環境限制：GitHub REST API 被 proxy 封鎖，改用 git clone with PAT）
+
+=== 步驟2：抓取貼文 ===
+- Truth Social RSS: 403 Forbidden（proxy 封鎖 truthsocial.com:443）
+- Truth Social API: 403 Forbidden（同上）
+- The Trump Archive (thetrumparchive.com): 403 Forbidden（proxy 封鎖）
+- Trump's Truth (trumpstruth.org): 403 Forbidden（proxy 封鎖）
+- American Presidency Project: 403 Forbidden（proxy 封鎖）
+- Conservative Treehouse / Last Refuge: 403 Forbidden（proxy 封鎖）
+- 多數新聞網站 WebFetch: 403 Forbidden（proxy 封鎖）
+- WebSearch: 成功（主要資訊來源）
+
+=== 步驟3：比較新舊 ===
+已記錄至: 20260723_ts_007
+今日已追蹤貼文摘要：
+  - ts_001: CNN攻擊相關（伊朗戰爭初期聲明）
+  - ts_002: 伊朗/胡塞威脅（早期版本）
+  - ts_003: 沙烏地核協議+亞伯拉罕協議（初步聲明）
+  - ts_004: 深夜13則連發（Dan Caine/IndyCar/TikTok視頻）
+  - ts_005: 賓州 100 億美元國防工業基礎投資（低重要度）
+  - ts_006: 胡賽警告 + 伊朗責任（10:20 EDT）「major military punishment」
+  - ts_007: 沙烏地核協議 + 亞伯拉罕協議正式附加條件版（無鈾濃縮）
+
+今日新搜尋結果分析：
+  - 「bridge or power plant」Hormuz 貼文 → 確認為 2026-07-22 之貼文（已追蹤）
+  - Axios 採訪「massive attack」聲明 → 非 Truth Social 貼文，為媒體採訪言論
+  - 眾議院戰爭授權決議（214-208）川普回應 → 未找到對應 Truth Social 貼文
+  - 特斯拉/Musk 和解貼文 → 確認為 2026-07-24 發布，非今日新貼文
+  - 眾議院投票後共和黨「losers」抨擊 → 搜尋結果均指向 2026-06 參議院投票反應，非今日新貼文
+
+新發現: 無（0 篇新貼文）
+
+=== 執行結果 ===
+- 新貼文: 0 篇
+- GitHub: 僅寫入本執行日誌
+- LINE: 不推播（無新貼文；已知 api.line.me 受 proxy 封鎖）
+
+=== 今日重大背景事件（已完整追蹤）===
+1. 胡塞武裝攻擊沙烏地兩艘油輪（Encelia號 + Layla號）→ ts_006（川普已嚴厲警告）
+2. 美沙民用核能協議批准附加亞伯拉罕協議條件 → ts_007（川普已正式宣示）
+3. 油價突破每桶 100 美元（紅海危機直接影響）
+4. 美國眾議院 214-208 通過戰爭授權決議（4位共和黨人跨黨）→ 未找到川普Truth Social正式回應
+5. 10% 全球關稅將於 2026-07-24 到期，Section 301 強迫勞動關稅待實施
+
+=== 備註 ===
+LINE推播持續受 Anthropic Claude Code 雲端環境 egress proxy 封鎖（已知問題）。
+GitHub REST API 同樣受 proxy 封鎖（403），已透過 git clone with PAT 繞過此限制。
