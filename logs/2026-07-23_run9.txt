@@ -1,0 +1,74 @@
+[2026-07-23 自動執行紀錄 - Run 9]
+
+執行時間: 2026-07-23 UTC（台灣時間 2026-07-24）
+
+=== 步驟1：讀取上次記錄 ===
+last_seen_id: 20260723_ts_007（今日第7篇）
+git clone 成功（環境限制：GitHub REST API 被 proxy 封鎖，改用 git clone with PAT）
+
+=== 步驟2：抓取貼文 ===
+- Truth Social RSS: 403 Forbidden（proxy 封鎖 truthsocial.com:443）
+- Truth Social API: 403 Forbidden（同上）
+- The Trump Archive (thetrumparchive.com): 403 Forbidden（proxy 封鎖）
+- Trump's Truth (trumpstruth.org): 403 Forbidden（proxy 封鎖）
+- 多數新聞網站 WebFetch: 403 Forbidden（proxy 封鎖）
+- WebSearch: 成功（主要資訊來源）
+
+=== 步驟3：比較新舊 ===
+已記錄至: 20260723_ts_007（沙烏地核協議+亞伯拉罕協議正式條件版）
+今日已追蹤貼文摘要：
+  - ts_001: CNN攻擊相關（伊朗戰爭初期聲明）
+  - ts_002: 伊朗/胡塞威脅（早期版本）
+  - ts_003: 沙烏地核協議+亞伯拉罕協議（初步聲明）
+  - ts_004: 深夜13則連發（Dan Caine/IndyCar/TikTok視頻）
+  - ts_005: 賓州 100 億美元國防工業基礎投資（低重要度）
+  - ts_006: 胡賽警告 + 伊朗責任（10:20 EDT）「major military punishment」
+  - ts_007: 沙烏地核協議 + 亞伯拉罕協議正式附加條件版（無鈾濃縮）
+
+=== 步驟4：新貼文搜尋結果 ===
+**新發現：1 篇（ts_008）**
+
+眾議院 214-208 戰爭授權表決後，川普發文怒斥4名共和黨叛票眾議員：
+
+確認新貼文 ts_008：
+- 主題：眾議院伊朗戰爭授權決議 214-208，4名共和黨叛票（Massie/Fitzpatrick/Barrett/Davidson）
+- 川普稱其為「Four Republican Losers」
+- 批評投票「poorly timed and meaningless War Powers Act Vote」
+- 指責「provided aid and comfort to the Enemy」
+- 來源：Raw Story「Trump rages against four 'Republican losers' who checked his Iran war powers」（2026-07-23）
+
+⚠️ 注意：原文部分重建（exact text partially reconstructed from news quotes）。
+Truth Social 本體無法直接存取（403），原文以新聞引述確認關鍵語句。
+
+搜尋排除項目（已確認為舊貼文或非Truth Social發文）：
+- 「應維持伊朗戰爭」的媒體採訪言論 → 媒體採訪，非Truth Social
+- Tesla/Musk 和解帖 → 確認為 2026-07-24 發布，非今日
+- 泛化關稅預告 → 已在更早時間點（7/21）追蹤
+- 眾議院股票交易法案（豁免川普3600筆Q1交易）→ 無相關Truth Social帖
+
+=== 步驟5：GitHub 上傳 ===
+已建立分析文件: posts/2026-07-23_ts_008.md
+已更新: state/last_seen_id.txt → 20260723_ts_008
+已建立本執行日誌: logs/2026-07-23_run9.txt
+透過 git push 上傳（已知 GitHub REST API 受 proxy 封鎖，改用 git with PAT）
+
+=== 步驟6：LINE 推播 ===
+api.line.me 受 Anthropic 雲端環境 egress proxy 封鎖（exit code 56，已知問題）
+LINE 推播失敗——無法送達
+
+=== 執行結果 ===
+- 新貼文: 1 篇（20260723_ts_008）
+- GitHub: 已上傳分析文件（透過 git push）
+- LINE: 推播失敗（proxy 封鎖 api.line.me）
+
+=== 今日重大事件總結（至 Run 9 為止，完整追蹤）===
+1. 胡塞攻擊沙烏地兩艘油輪（Encelia+Layla）→ ts_006（川普嚴厲警告）
+2. 美沙民用核協議+亞伯拉罕協議附加條件 → ts_007（川普正式宣示）
+3. 眾議院 214-208 通過限制伊朗戰爭授權決議（4共和黨叛票）→ ts_008（川普怒斥「Losers」）【本次新追蹤】
+4. 參議院 47-49 阻止同類決議（川普在參議院仍保持控制）
+5. 油價突破每桶 100 美元（紅海危機）
+10% 全球關稅已到期，Section 301 強迫勞動關稅待 2026-07-24 實施
+
+=== 備註 ===
+LINE推播持續受 Anthropic Claude Code 雲端環境 egress proxy 封鎖（已知問題，需用戶另行解決）。
+GitHub REST API 同樣受 proxy 封鎖（403），已透過 git clone/push with PAT 繞過此限制。
