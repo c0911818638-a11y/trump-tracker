@@ -1,62 +1,57 @@
-監控執行日期：2026-07-23
-執行時間：UTC（定時任務）
-上次記錄 ID：20260722_ts_008（2026-07-23 01:30 AM ET 榮譽勳章影片）
+=== 川普 Truth Social 監控日誌 ===
+日期：2026-07-23
+執行時間：UTC 約 2026-07-23（台灣時間 2026-07-23）
 
-【搜尋嘗試】
-方法 A：truthsocial.com RSS/API → 403 Forbidden（代理封鎖）
-方法 B：WebSearch 搜尋多個查詢組合
-方法 C：thetrumparchive.com → 403 Forbidden（代理封鎖）
-方法 D：trumpstruth.org → 403 Forbidden（代理封鎖）
+【上次記錄 ID】
+20260722_ts_008
+（2026-07-23 01:30 ET / 台灣時間 2026-07-23 13:30 – 榮譽勳章授獎影片）
 
-【搜尋結果】
-已搜尋 15+ 次查詢，針對 2026-07-23 新貼文。
+【本次執行結果】
+狀態：無法取得新貼文
 
-確認已知情況（非新貼文，均已在既有 ts_001~ts_008 中記錄）：
-- 2026-07-22 ts_001：學名藥階梯關稅政策（8/1 起兩年零關稅 → 100% → 200%）
-- 2026-07-22 ts_002：伊朗霍爾木茲海峽威脅（炸橋梁/電廠）
-- 2026-07-22 ts_003：Dover AFB「HONOR OUR HEROES」
-- 2026-07-22 ts_004~008：深夜 11:12pm–1:30am ET 連發系列（將軍演講、IndyCar等）
+【方法嘗試結果】
+方法A – WebFetch Truth Social RSS (https://truthsocial.com/@realDonaldTrump.rss)：
+  → 403 Forbidden（proxy 封鎖）
 
-2026-07-23 當日重大事件（未見對應 Truth Social 貼文）：
-- 川普購買 Tesla 股票 $500k–$1M（7/23）→ 相關 Truth Social 貼文在 7/24
-- Section 122 全球 10% 關稅明日（7/24）到期 → Section 301 替代關稅預計宣布
-- 美軍對伊朗第 12 連夜空襲繼續進行
+方法A – WebFetch Truth Social API (/api/v1/accounts/.../statuses)：
+  → 403 Forbidden（proxy 封鎖）
 
-【結論】
-無法確認 7/23 有新貼文（超過 1:30 AM ET ts_008 之後）。
-Truth Social 及相關存檔網站均被代理封鎖，無法直接存取。
-Web 搜尋結果顯示 7/23 US 日間無已報導的新貼文。
+方法B – WebSearch 搜尋（多次嘗試不同關鍵字）：
+  → 成功取得部分背景資訊，但未找到 2026-07-23 01:30 ET 之後的新貼文
 
-【處理】
-根據指示：若無新貼文，不推播，靜默結束。
+方法C – WebFetch thetrumparchive.com：
+  → 403 Forbidden（proxy 封鎖）
 
-【第二次執行確認（同日）】
-執行時間：2026-07-23（UTC）
-結果：確認同上，無新貼文。
-搜尋方法 A–C 結果一致（403 或無新內容）。
-注：預計 7/24 會有川普關於 Elon/Tesla 和解的貼文，以及 Section 122 關稅到期後新政策公告。
+方法C – WebFetch trumpstruth.org：
+  → 403 Forbidden（proxy 封鎖）
 
-【第三次執行確認（同日）】
-執行時間：2026-07-23 UTC（定時任務第三次觸發）
-搜尋範圍：15+ 次查詢，涵蓋伊朗/停火、Tesla/Elon、Section 122 關稅、Tucker Carlson、White House 聲明
-方法 A：truthsocial.com RSS/API → 403 Forbidden
-方法 B：WebSearch（Reuters/AP/Forbes/Times of Israel/CNN 等）→ 無 7/23 日間新貼文
-方法 C：thetrumparchive.com / trumpstruth.org → 403 Forbidden
+GitHub API（curl）：
+  → 被 Claude Code on the web proxy 攔截，回傳「GitHub access not enabled for this session」
 
-確認新情報（尚未成 Truth Social 貼文）：
-- 7/23 Trump 購入 Tesla 股票 $500k–$1M（已知，貼文預計 7/24）
-- 7/24 Section 122 到期 → Section 301 替代關稅預計 12.5% 覆蓋 46 國（公告待 7/24）
-- Trump-Carlson 鬥爭持續中，預計 7/24 有和解貼文（"I want Elon to THRIVE"）
+說明：本次執行環境（Claude Code on the web scheduled task）的 egress proxy
+封鎖了幾乎所有外部新聞與社群媒體網站，包含 Truth Social、CNN、NBC、BBC、
+The Daily Beast、Huffpost、theconservativetreehouse.com 等。
+GitHub API 亦被攔截（已改用 git clone 方式讀取 repo 狀態）。
 
-結論：7/23 ts_008（凌晨 1:30 AM ET）後，無可確認的新 Truth Social 貼文。
-處理：根據指示，無新貼文不推播，靜默結束。
+【背景資訊（來自 WebSearch 搜尋結果摘要，無法確認為 07/23 01:30 ET 之後的新貼文）】
+- 美軍於 2026-07-22/23 執行第 12 次連夜伊朗空襲
+- 川普於 07/23 購入約 50-100 萬美元特斯拉股票（無 Truth Social 貼文確認）
+- 伊朗核協議談判：川普稱「他們尚未準備好，但很快會準備好」
+  （此為 07/22 喬治亞州 Marietta 演講言論，非 Truth Social 貼文）
+- 2026-07-24 預計將有川普關於馬斯克/特斯拉「THRIVE」的貼文
 
-【第四次執行確認（同日）】
-執行時間：2026-07-23 UTC（定時任務第四次觸發）
-搜尋範圍：多個 WebSearch 查詢，涵蓋 Tesla/Elon、伊朗、關稅、Truth Social 今日最新
-方法 A：truthsocial.com RSS/API → 403 Forbidden
-方法 B：WebSearch → 無 7/23 新貼文（搜尋結果重複引用 7/24 預期 Elon/Tesla 貼文）
-方法 C：thetrumparchive.com / x.com/@TrumpTruthOnX → 403 Forbidden
+【已確認為舊貼文（非新貼文）】
+- 「35,152 is the new number just released by Homeland Security...」
+  （trumpstruth.org/statuses/40191，2026-07-21 23:32 ET 發布，早於 last_seen_id）
 
-結論：7/23 ts_008（凌晨 1:30 AM ET）後，確認無新 Truth Social 貼文。
-處理：根據指示，無新貼文不推播，靜默結束。
+【處置】
+- 未建立新貼文分析檔案
+- 未更新 state/last_seen_id.txt
+- 未推播 LINE 通知
+
+【建議】
+若要確保監控連續性，建議在環境設定中允許以下 egress 目標：
+  - truthsocial.com
+  - trumpstruth.org
+  - 主流新聞網站（CNN、NBC、CBS、Fox News 等）
+
