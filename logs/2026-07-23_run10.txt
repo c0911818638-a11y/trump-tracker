@@ -1,0 +1,63 @@
+[2026-07-23 自動執行紀錄 - Run 10]
+
+執行時間: 2026-07-23 UTC（台灣時間 2026-07-24）
+
+=== 步驟1：讀取上次記錄 ===
+last_seen_id: 20260723_ts_009（今日第9篇）
+git clone 成功（環境限制：GitHub REST API 被 proxy 封鎖，改用 git clone with PAT）
+
+=== 步驟2：抓取貼文 ===
+- Truth Social RSS (.rss): 403 Forbidden（proxy 封鎖）
+- Truth Social API: 403 Forbidden（proxy 封鎖）
+- The Trump Archive: 403 Forbidden（proxy 封鎖）
+- Trump's Truth (trumpstruth.org): 403 Forbidden（proxy 封鎖）
+- 多數新聞網站 WebFetch: 403 Forbidden（proxy 封鎖）
+- WebSearch: 成功（主要資訊來源）
+
+=== 步驟3：比較新舊 ===
+已記錄至: 20260723_ts_009（川普第二次單獨攻擊 Massie「第三流、LOSER」）
+今日已追蹤貼文總計：9 篇（ts_001 至 ts_009）
+
+=== 步驟4：新貼文搜尋結果 ===
+**新發現：0 篇**
+
+搜尋涵蓋主題：
+1. 強迫勞動關稅（60 國，10-12.5%）：USTR 官方公告，未發現川普個人 Truth Social 貼文
+2. Tesla/Musk 和解貼文：再次確認為 2026-07-24 發布（「The following day」）
+3. 伊朗「massive attack」：為媒體採訪聲明，非 Truth Social 貼文
+4. 衛星/深夜貼文：未發現 ts_009 後新貼文
+5. 喬治亞州 Kemp 攻擊：原始事件為 2024 年，非今日新貼文
+
+**今日完整貼文追蹤摘要（ts_001–ts_009）：**
+- ts_001: 攻擊 CNN 伊朗戰爭假新聞
+- ts_002: 胡塞攻擊沙烏地油輪 + 油價飆升
+- ts_003: 美沙民用核協議 + 亞伯拉罕協議條件（初版）
+- ts_004: 深夜13則連發（防衛/IndyCar/TikTok視頻）
+- ts_005: 賓州 100 億美元國防工業基礎投資
+- ts_006: 川普警告胡塞 + 威脅伊朗「major military punishment」
+- ts_007: 美沙核協議 + 亞伯拉罕協議正式附加條件版
+- ts_008: 抨擊4位共和黨叛票眾議員（Massie/Fitzpatrick/Barrett/Davidson）「Losers」
+- ts_009: 再次單獨攻擊 Massie「third rate」「LOSER」
+
+=== 步驟5：GitHub ===
+- 無新文件需上傳
+- last_seen_id.txt 維持 20260723_ts_009 不變
+- 寫入今次執行日誌: logs/2026-07-23_run10.txt
+- 透過 git push 上傳日誌
+
+=== 步驟6：LINE 推播 ===
+無新貼文，不推播（靜默結束）
+備註：api.line.me 持續受 Anthropic 雲端環境 egress proxy 封鎖
+
+=== 執行結果 ===
+- 新貼文: 0 篇
+- GitHub: 日誌已上傳
+- LINE: 不推播
+
+=== 今日重大事件總結（最終，至 Run 10）===
+1. 胡塞攻擊沙烏地兩艘油輪（Encelia+Layla）→ 川普威脅伊朗重大軍事懲罰 [ts_006]
+2. 美沙民用核協議 + 必須加入亞伯拉罕協議 [ts_003/ts_007]
+3. 眾議院 214-208 通過限制伊朗戰爭授權決議（4共和黨叛票）→ 川普怒斥「Losers」[ts_008]
+4. 川普再次單獨定點攻擊 Thomas Massie「third rate LOSER」[ts_009]
+5. 強迫勞動關稅（60 國）→ 2026-07-24 00:01 EDT 生效（非 Truth Social 貼文）
+6. 川普買入 Tesla 股票 $50 萬–$100 萬（→ Musk 和解帖預期 2026-07-24 發布）
