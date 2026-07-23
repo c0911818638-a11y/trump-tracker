@@ -1,17 +1,16 @@
-[2026-07-23] 執行記錄
+[2026-07-23] Trump Tracker 執行日誌
 
-狀態：部分成功
-- GitHub 讀取 last_seen_id：成功（20260723_ts_002）
-- 抓取 Truth Social RSS：失敗（403 Forbidden）
-- 抓取 Truth Social API：失敗（403 Forbidden）
-- WebSearch 搜尋新貼文：成功
-- 發現新貼文：1 篇（20260723_ts_003）
-  - 主題：沙烏地阿拉伯核能協議 + 亞伯拉罕協議前提
-- 分析檔案建立：成功（posts/2026-07-23_ts_003.md）
-- GitHub 推送：成功（commit d4053de）
-- last_seen_id 更新：成功（→ 20260723_ts_003）
-- LINE 推播：失敗（環境 proxy 封鎖 api.line.me:443，HTTP 403）
+✅ GitHub 讀取 last_seen_id.txt：20260723_ts_004
+✅ 新貼文偵測：1 篇新貼文（20260723_ts_005）
+✅ 分析完成：posts/2026-07-23_ts_005.md
+✅ GitHub 推送成功：commit 05ad8d6
+✅ last_seen_id.txt 更新為：20260723_ts_005
 
-錯誤詳情：
-curl: (56) CONNECT tunnel failed, response 403
-proxy: http://127.0.0.1:33631 封鎖 api.line.me 連線
+❌ LINE 推播失敗：proxy 以 403 Forbidden 封鎖 api.line.me
+   原因：環境網路政策禁止連線 LINE Messaging API
+   解決方式：無（組織政策限制），已改以 PushNotification 工具通知
+
+新貼文摘要：
+- 20260723_ts_005：2026-07-24 01:06 EDT
+  川普深夜分享 Breitbart 報導：賓州近 100 億美元國防工業基礎投資
+  重要程度：低
