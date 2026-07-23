@@ -1,0 +1,42 @@
+[2026-07-23 自動執行紀錄 - Run 11]
+
+執行時間: 2026-07-23 UTC
+
+=== 步驟1：讀取上次記錄 ===
+last_seen_id: 20260723_ts_009（今日第9篇）
+git clone 成功（環境限制：GitHub REST API 被 proxy 封鎖，改用 git clone with PAT）
+
+=== 步驟2：抓取貼文 ===
+- Truth Social RSS (.rss): 403 Forbidden（proxy 封鎖）
+- Truth Social API: 403 Forbidden（proxy 封鎖）
+- The Trump Archive: 403 Forbidden（proxy 封鎖）
+- Trump's Truth (trumpstruth.org): 403 Forbidden（proxy 封鎖）
+- 多數新聞網站 WebFetch: 403 Forbidden（proxy 封鎖）
+- WebSearch: 成功（主要資訊來源）
+
+=== 步驟3：比較新舊 ===
+已記錄至: 20260723_ts_009（川普第二次單獨攻擊 Massie「第三流、LOSER」）
+今日已追蹤貼文總計：9 篇（ts_001 至 ts_009）
+
+=== 步驟4：新貼文搜尋結果 ===
+**新發現：1 篇**
+
+■ 20260723_ts_010（補追蹤）：
+  - 主題：NJ 非公民選民 35,152 人 + SAVE America Act 動員
+  - 原文：「35,152 is the new number just released by Homeland Security of non-citizens registered to vote in New Jersey. These are just the ones that got caught. The real numbers will prove to be many times this amount. They are all Dumocrats! Republicans, get smart and straighten out our Crooked Elections! Pass The Save America Act!!!」
+  - 來源：trumpstruth.org/statuses/40191；Gateway Pundit；Twitchy（2026-07-23）
+  - 說明：此帖原為 7/22 貼文（搜尋元資料顯示「1 day ago」），在前次所有追蹤執行中均未被收錄，本次補追蹤
+
+搜尋涵蓋其他主題（未發現新帖）：
+1. Trump Truth Social 晚間/深夜新帖（ts_009 之後）：未發現
+2. Tesla/Musk 文章：確認為 2026-07-24 發布
+3. SAVE Act 立法最新進展：僅白宮口頭聲明（非 Truth Social 貼文）
+4. 其他選舉/NJ 相關帖：僅 ts_010 一篇
+
+=== 步驟5：GitHub 更新 ===
+- posts/2026-07-23_ts_010.md：上傳成功
+- state/last_seen_id.txt：更新至 20260723_ts_010
+- Git push: 執行中
+
+=== 步驟6：LINE 推播 ===
+- 執行狀態：嘗試中（api.line.me 在多次執行中均遭 proxy 403 封鎖）
