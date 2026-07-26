@@ -2,8 +2,8 @@ name: Fetch Trump Posts and Notify LINE
 
 on:
   schedule:
-    - cron: '3 * * * *'   # 每小時第 3 分鐘執行
-  workflow_dispatch:        # 手動觸發
+    - cron: '3 * * * *'
+  workflow_dispatch:
 
 jobs:
   fetch:
@@ -14,10 +14,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Playwright
+        run: |
+          npm init -y
+          npm install playwright
+          npx playwright install chromium --with-deps
+
       - name: Fetch new posts
         id: fetch
         run: |
-          python3 scripts/fetch_posts.py 2>&1
+          node scripts/fetch_posts.js 2>&1
           NEW_FILES=$(git status --porcelain posts/ | grep '^??' | awk '{print $2}' | tr '\n' ' ')
           echo "new_files=$NEW_FILES" >> $GITHUB_OUTPUT
           echo "Found new files: $NEW_FILES"
