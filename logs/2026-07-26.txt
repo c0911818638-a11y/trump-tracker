@@ -3,6 +3,44 @@
 
 ---
 
+RUN 6 (2026-07-26 sixth pass):
+================================
+Status: NO NEW POSTS
+
+Search methods attempted:
+- WebFetch truthsocial.com RSS/API: 403 Forbidden (proxy blocked)
+- WebFetch thetrumparchive.com / trumpstruth.org: 403 Forbidden
+- WebFetch multiple news sites (CNN, CNBC, Yahoo, Daily Beast, Forbes, NBC, WaPo, AOL): 403 Forbidden
+- WebSearch "Trump Truth Social July 26 2026 latest today": no new posts indexed
+- WebSearch "Trump Truth Social post July 26 2026 Iran EU tariff": no July 26 posts found
+- WebSearch "Trump wrote/posted on Truth Social July 25-26 2026": confirmed last post is 20260725_ts_001
+
+Background context (consistent with Runs 1-5):
+- No new Iran strikes announced July 25-26 (military pause continues)
+- Trump said Iran "loves to make a deal" but not ready (Friday press remarks)
+- Netanyahu to visit White House Tuesday July 28
+- 60-country forced labor tariffs (10-12.5%) effective Aug 1 under Section 301
+- Trump tariff coverage focuses on July 23-25 actions already captured in repo
+- Sunday July 26: historically lower Trump Truth Social posting day
+
+LINE notification retry: FAILED (6th consecutive failure)
+- curl exit code 56, HTTP 000
+- Proxy blocking outbound CONNECT to api.line.me:443
+- 3 posts STILL have undelivered LINE notifications:
+  * 20260724_ts_005 (Alaska voter rolls — LOW)
+  * 20260724_ts_006 (Loomer/Zelensky — HIGH)
+  * 20260725_ts_001 (forced labor tariffs 60 countries — HIGH)
+
+Conclusion: No new posts since 20260725_ts_001.
+State file unchanged (last_seen_id remains 20260725_ts_001).
+
+URGENT: LINE API proxy block is a persistent infrastructure issue.
+User must either:
+1. Whitelist api.line.me:443 in proxy allowlist, OR
+2. Switch to alternative notification channel
+
+---
+
 RUN 5 (2026-07-26 fifth pass):
 ================================
 Status: NO NEW POSTS
