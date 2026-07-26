@@ -64,3 +64,31 @@
 - 背景 Agent 跨 77 次工具調用確認同樣結論：所有外部資源均被 proxy 封鎖
 - 可取得的最新已知狀態：伊朗談判10天暫停中，川普宣布「進展非常順利」
 - 不推播 LINE，靜默結束
+
+---
+
+2026-07-26 最新執行記錄（摩洛哥貼文後）
+
+🔍 確認發現
+- last_seen_id: 20260726_ts_002（摩洛哥 King Mohammed VI 貼文，9:46 AM ET）
+- 確認存在較新貼文時間點：11:16 AM ET、11:43 AM ET（來源：trumpstruth.org 存檔）
+- 早間貼文（5:21 AM、5:22 AM、5:23 AM、9:11 AM、9:39 AM）早於 ts_002，已涵蓋於先前執行
+
+❌ 新貼文內容無法取得
+- Truth Social RSS → 403
+- Truth Social API → 403
+- Trump Archive (thetrumparchive.com, trumpstruth.org, trump.fm) → 403
+- X.com 鏡像帳號 (@TrumpTruthOnX, @TruthTrumpPosts) → 403
+- 各大新聞網站 (NBC/CNN/Fox/AOL/WSJ/CNBC/Time等) → 403
+- WebSearch：11:16 AM 和 11:43 AM 貼文確認存在，但文字內容未被搜尋引擎索引
+- 可能相關背景：傳川普當日或就 EU 關稅延長期限有新公告（AOL/Yahoo報導提及，但無法確認發布時間）
+
+📊 本次執行結論
+- 未能取得 11:16 AM 和 11:43 AM 的貼文內容
+- last_seen_id 維持 20260726_ts_002，不更新
+- 不建立新貼文分析檔案，不推播 LINE
+- 建議：GitHub Actions 或 Playwright 腳本應能突破 proxy 限制取得這些貼文
+
+🌐 今日已記錄貼文
+- ts_001: 美伊停火 10 天公告（早間）→ 高重要度
+- ts_002: 感謝摩洛哥國王 Mohammed VI，期待走 Great Highway（9:46 AM）→ 中重要度
