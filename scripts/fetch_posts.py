@@ -9,6 +9,8 @@ from datetime import datetime, timezone, timedelta
 ACCOUNT_ID = "107780257626128497"
 BASE = "https://truthsocial.com"
 TOKEN_FILE = "state/app_token.txt"
+CLIENT_ID = "poyi1210"
+CLIENT_SECRET = "Abc12345"
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
@@ -33,23 +35,13 @@ def get_token():
     if os.path.exists(TOKEN_FILE):
         token = open(TOKEN_FILE).read().strip()
         if token:
-            print(f"Using cached token")
+            print("Using cached token")
             return token
 
-    print("Registering app...")
-    app = post(f"{BASE}/api/v1/apps", {
-        "client_name": "trump-tracker",
-        "redirect_uris": "urn:ietf:wg:oauth:2.0:oob",
-        "scopes": "read",
-        "website": "https://github.com/c0911818638-a11y/trump-tracker"
-    })
-    client_id = app["client_id"]
-    client_secret = app["client_secret"]
-    print(f"App registered. Getting token...")
-
+    print("Getting app token...")
     tok = post(f"{BASE}/oauth/token", {
-        "client_id": client_id,
-        "client_secret": client_secret,
+        "client_id": CLIENT_ID,
+        "client_secret": CLIENT_SECRET,
         "grant_type": "client_credentials",
         "scope": "read"
     })
