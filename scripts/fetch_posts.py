@@ -1,6 +1,5 @@
 import json
 import urllib.request
-import urllib.parse
 import sys
 import os
 import re
@@ -8,48 +7,18 @@ from datetime import datetime, timezone, timedelta
 
 ACCOUNT_ID = "107780257626128497"
 BASE = "https://truthsocial.com"
-TOKEN_FILE = "state/app_token.txt"
-CLIENT_ID = "poyi1210"
-CLIENT_SECRET = "Abc12345"
+BEARER_TOKEN = "SOy4INfwedBfuwjjErgWILeyTm1x9_3DHz91xT_8Q88"
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
     "Accept": "application/json",
+    "Authorization": f"Bearer {BEARER_TOKEN}",
 }
 
-def post(url, data):
-    body = urllib.parse.urlencode(data).encode()
-    req = urllib.request.Request(url, data=body, headers={**HEADERS, "Content-Type": "application/x-www-form-urlencoded"})
+def get(url):
+    req = urllib.request.Request(url, headers=HEADERS)
     with urllib.request.urlopen(req, timeout=30) as r:
         return json.loads(r.read())
-
-def get(url, token=None):
-    h = {**HEADERS}
-    if token:
-        h["Authorization"] = f"Bearer {token}"
-    req = urllib.request.Request(url, headers=h)
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return json.loads(r.read())
-
-def get_token():
-    if os.path.exists(TOKEN_FILE):
-        token = open(TOKEN_FILE).read().strip()
-        if token:
-            print("Using cached token")
-            return token
-
-    print("Getting app token...")
-    tok = post(f"{BASE}/oauth/token", {
-        "client_id": CLIENT_ID,
-        "client_secret": CLIENT_SECRET,
-        "grant_type": "client_credentials",
-        "scope": "read"
-    })
-    token = tok["access_token"]
-    os.makedirs("state", exist_ok=True)
-    open(TOKEN_FILE, "w").write(token)
-    print("Token saved.")
-    return token
 
 def strip_html(text):
     text = re.sub(r'<br\s*/?>', '\n', text, flags=re.IGNORECASE)
@@ -59,10 +28,10 @@ def strip_html(text):
 def utc_to_tw(dt):
     return dt.astimezone(timezone(timedelta(hours=8)))
 
-# Get token and fetch posts
-token = get_token()
+print("Fetching posts with bearer token...")
 url = f"{BASE}/api/v1/accounts/{ACCOUNT_ID}/statuses?limit=20"
-data = get(url, token)
+data = get(url)
+print(f"Fetched {len(data)} posts")
 
 last_seen_id = open("state/last_seen_id.txt").read().strip()
 print(f"Last seen ID: {last_seen_id}")
