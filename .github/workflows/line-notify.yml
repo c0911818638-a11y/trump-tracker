@@ -1,0 +1,89 @@
+name: LINE Notify on New Post
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'posts/**.md'
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Get new post files
+        id: newfiles
+        run: |
+          NEW_FILES=$(git diff --name-only HEAD~1 HEAD -- 'posts/*.md' | head -5)
+          echo "files=$NEW_FILES" >> $GITHUB_OUTPUT
+          echo "Found new post files: $NEW_FILES"
+
+      - name: Send LINE notification
+        if: steps.newfiles.outputs.files != ''
+        env:
+          LINE_TOKEN: "V84gtH934S/Zzb0ufad1BYIrc2Ragbl/dwpS1Ow1/HASDOnZQDf0ChxsfzCMnmiPsDX+dn+TBKvKUpYLtj+4DlB/z85OOSMRrihBUFKv3qgN5V7XxJGGFdwd4/fgh5muWVbz/jX1ljNMvkZLbmt8YgdB04t89/1O/w1cDnyilFU="
+          LINE_USER_ID: "U146a1184296176ef7e1c610df6a42e2a"
+        run: |
+          for FILE in ${{ steps.newfiles.outputs.files }}; do
+            echo "Processing: $FILE"
+
+            # Extract fields from markdown
+            PUBLISH_TIME=$(grep -m1 '^\*\*發布時間：\*\*' "$FILE" | sed 's/\*\*發布時間：\*\* //')
+            POST_ID=$(grep -m1 '^\*\*貼文 ID：\*\*' "$FILE" | sed 's/\*\*貼文 ID：\*\* //')
+            SUMMARY=$(grep -A1 '^\*\*主題摘要：\*\*' "$FILE" | tail -1 | sed 's/\*\*主題摘要：\*\* //')
+            TONE=$(grep -m1 '^\*\*情緒語氣：\*\*' "$FILE" | sed 's/\*\*情緒語氣：\*\* //')
+            TARGET=$(grep -m1 '^\*\*涉及對象：\*\*' "$FILE" | sed 's/\*\*涉及對象：\*\* //')
+            IMPACT=$(grep -m1 '^\*\*政治意涵：\*\*' "$FILE" | sed 's/\*\*政治意涵：\*\* //')
+            IMPORTANCE=$(grep -m1 '^\*\*重要程度：\*\*' "$FILE" | sed 's/\*\*重要程度：\*\* //')
+
+            # Convert UTC to Taiwan time (UTC+8) using Python
+            TW_TIME=$(python3 -c "
+          import re, sys
+          t = '''$PUBLISH_TIME'''
+          print(t.strip() if t.strip() else 'N/A')
+          ")
+
+            MSG="🇺🇸 川普新發文
+
+⏰ ${PUBLISH_TIME} (UTC) / $(python3 -c "
+          from datetime import datetime, timezone, timedelta
+          import re
+          t = '$PUBLISH_TIME'
+          try:
+              dt = datetime.strptime(t.strip(), '%Y-%m-%dT%H:%M:%SZ').replace(tzinfo=timezone.utc)
+              tw = dt.astimezone(timezone(timedelta(hours=8)))
+              print(tw.strftime('%Y-%m-%d %H:%M') + ' (台灣)')
+          except:
+              print('台灣時間轉換失敗')
+          ")
+
+📝 摘要：${SUMMARY}
+😠 語氣：${TONE}
+🎯 對象：${TARGET}
+🌏 影響：${IMPACT}
+⭐ 重要程度：${IMPORTANCE}
+
+🔗 https://truthsocial.com/@realDonaldTrump/${POST_ID}"
+
+            MSG_JSON=$(python3 -c "import sys,json; print(json.dumps(sys.stdin.read()))" <<< "$MSG")
+
+            HTTP_STATUS=$(curl -s -o /tmp/line_resp.txt -w "%{http_code}" \
+              -X POST https://api.line.me/v2/bot/message/push \
+              -H "Authorization: Bearer $LINE_TOKEN" \
+              -H "Content-Type: application/json" \
+              -d "{\"to\": \"$LINE_USER_ID\", \"messages\": [{\"type\": \"text\", \"text\": $MSG_JSON}]}")
+
+            echo "LINE API response: $HTTP_STATUS"
+            cat /tmp/line_resp.txt
+
+            if [ "$HTTP_STATUS" = "200" ]; then
+              echo "✅ LINE notification sent for $FILE"
+            else
+              echo "❌ LINE notification failed: HTTP $HTTP_STATUS"
+              exit 1
+            fi
+          done
