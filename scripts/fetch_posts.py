@@ -1,24 +1,63 @@
 import json
 import urllib.request
-import urllib.error
+import urllib.parse
 import sys
 import os
 import re
-import xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
-from email.utils import parsedate_to_datetime
 
 ACCOUNT_ID = "107780257626128497"
-RSS_URL = "https://truthsocial.com/@realDonaldTrump.rss"
-API_URL = f"https://truthsocial.com/api/v1/accounts/{ACCOUNT_ID}/statuses?limit=20"
+BASE = "https://truthsocial.com"
+TOKEN_FILE = "state/app_token.txt"
 
-BROWSER_HEADERS = {
+HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Accept-Language": "en-US,en;q=0.9",
-    "Accept-Encoding": "gzip, deflate, br",
-    "Connection": "keep-alive",
+    "Accept": "application/json",
 }
+
+def post(url, data):
+    body = urllib.parse.urlencode(data).encode()
+    req = urllib.request.Request(url, data=body, headers={**HEADERS, "Content-Type": "application/x-www-form-urlencoded"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return json.loads(r.read())
+
+def get(url, token=None):
+    h = {**HEADERS}
+    if token:
+        h["Authorization"] = f"Bearer {token}"
+    req = urllib.request.Request(url, headers=h)
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return json.loads(r.read())
+
+def get_token():
+    if os.path.exists(TOKEN_FILE):
+        token = open(TOKEN_FILE).read().strip()
+        if token:
+            print(f"Using cached token")
+            return token
+
+    print("Registering app...")
+    app = post(f"{BASE}/api/v1/apps", {
+        "client_name": "trump-tracker",
+        "redirect_uris": "urn:ietf:wg:oauth:2.0:oob",
+        "scopes": "read",
+        "website": "https://github.com/c0911818638-a11y/trump-tracker"
+    })
+    client_id = app["client_id"]
+    client_secret = app["client_secret"]
+    print(f"App registered. Getting token...")
+
+    tok = post(f"{BASE}/oauth/token", {
+        "client_id": client_id,
+        "client_secret": client_secret,
+        "grant_type": "client_credentials",
+        "scope": "read"
+    })
+    token = tok["access_token"]
+    os.makedirs("state", exist_ok=True)
+    open(TOKEN_FILE, "w").write(token)
+    print("Token saved.")
+    return token
 
 def strip_html(text):
     text = re.sub(r'<br\s*/?>', '\n', text, flags=re.IGNORECASE)
@@ -28,59 +67,24 @@ def strip_html(text):
 def utc_to_tw(dt):
     return dt.astimezone(timezone(timedelta(hours=8)))
 
-def fetch_rss():
-    print("Trying RSS feed...")
-    headers = {**BROWSER_HEADERS, "Accept": "application/rss+xml,application/xml,text/xml;q=0.9,*/*;q=0.8"}
-    req = urllib.request.Request(RSS_URL, headers=headers)
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        data = resp.read()
-    root = ET.fromstring(data)
-    ns = {'content': 'http://purl.org/rss/1.0/modules/content/'}
-    posts = []
-    for item in root.findall('.//item'):
-        link = item.findtext('link', '')
-        post_id = link.rstrip('/').split('/')[-1]
-        pub_date = item.findtext('pubDate', '')
-        dt = parsedate_to_datetime(pub_date).astimezone(timezone.utc)
-        content_encoded = item.find('content:encoded', ns)
-        raw = content_encoded.text if content_encoded is not None else item.findtext('description', '')
-        text = strip_html(raw or '')
-        posts.append({"id": post_id, "created_at": dt, "content": text})
-    return posts
+# Get token and fetch posts
+token = get_token()
+url = f"{BASE}/api/v1/accounts/{ACCOUNT_ID}/statuses?limit=20"
+data = get(url, token)
 
-def fetch_api():
-    print("Trying API...")
-    headers = {**BROWSER_HEADERS, "Accept": "application/json"}
-    req = urllib.request.Request(API_URL, headers=headers)
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        data = json.loads(resp.read())
-    posts = []
-    for p in data:
-        if p.get('reblog'):
-            continue
-        dt = datetime.strptime(p['created_at'], '%Y-%m-%dT%H:%M:%S.%fZ').replace(tzinfo=timezone.utc)
-        posts.append({"id": p['id'], "created_at": dt, "content": strip_html(p.get('content', ''))})
-    return posts
-
-# Try RSS first, then API
-posts = None
-for method in [fetch_rss, fetch_api]:
-    try:
-        posts = method()
-        print(f"Success: {len(posts)} posts fetched")
-        break
-    except Exception as e:
-        print(f"Failed: {e}")
-
-if not posts:
-    print("All fetch methods failed.")
-    sys.exit(1)
-
-last_seen_id = open('state/last_seen_id.txt').read().strip()
+last_seen_id = open("state/last_seen_id.txt").read().strip()
 print(f"Last seen ID: {last_seen_id}")
 
-new_posts = [p for p in posts if p['id'] > last_seen_id]
-new_posts.sort(key=lambda p: p['id'])
+new_posts = []
+for p in data:
+    if p["id"] <= last_seen_id:
+        break
+    if p.get("reblog"):
+        continue
+    dt = datetime.strptime(p["created_at"], "%Y-%m-%dT%H:%M:%S.%fZ").replace(tzinfo=timezone.utc)
+    new_posts.append({"id": p["id"], "created_at": dt, "content": strip_html(p.get("content", ""))})
+
+new_posts.sort(key=lambda p: p["id"])
 print(f"New posts: {len(new_posts)}")
 
 if not new_posts:
@@ -88,11 +92,10 @@ if not new_posts:
     sys.exit(0)
 
 for p in new_posts:
-    post_id = p['id']
-    created_at = p['created_at']
-    content = p['content']
+    post_id = p["id"]
+    created_at = p["created_at"]
     tw_time = utc_to_tw(created_at)
-    date_str = tw_time.strftime('%Y-%m-%d')
+    date_str = tw_time.strftime("%Y-%m-%d")
     filename = f"posts/{date_str}_{post_id}.md"
 
     md = f"""# 川普 Truth Social 新貼文
@@ -104,7 +107,7 @@ for p in new_posts:
 ---
 
 ## 原文
-{content}
+{p['content']}
 
 ---
 
@@ -116,12 +119,12 @@ for p in new_posts:
 **政治意涵：** （待分析）
 **重要程度：** （待分析）
 """
-    os.makedirs('posts', exist_ok=True)
-    with open(filename, 'w', encoding='utf-8') as f:
+    os.makedirs("posts", exist_ok=True)
+    with open(filename, "w", encoding="utf-8") as f:
         f.write(md)
     print(f"Created: {filename}")
 
-newest_id = new_posts[-1]['id']
-with open('state/last_seen_id.txt', 'w') as f:
+newest_id = new_posts[-1]["id"]
+with open("state/last_seen_id.txt", "w") as f:
     f.write(newest_id)
 print(f"Updated last_seen_id: {newest_id}")
