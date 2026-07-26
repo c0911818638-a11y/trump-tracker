@@ -30,3 +30,18 @@
 - 多個新聞網站 (CNN/NBC/Fox 等) → 403
 - 無新貼文資料可取得
 - 不推播 LINE，靜默結束
+
+---
+
+2026-07-26 第三次執行記錄
+
+❌ 所有取得貼文的方法均失敗（代理伺服器封鎖所有外部網域，HTTP 403）
+- last_seen_id: 20260726_ts_001
+- Truth Social RSS → 403
+- Truth Social API → 403
+- Trump Archive → 403
+- theconservativetreehouse.com → 403
+- trumpstruth.org → 403
+- X.com 鏡像帳號 → 403
+- WebSearch：無法取得今日具體貼文內容
+- 不推播 LINE，靜默結束
