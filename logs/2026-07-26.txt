@@ -20,3 +20,30 @@ Truth Social direct access: FAILED (403 on all endpoints)
 - API /statuses: 403
 - thetrumparchive.com: 403
 Posts sourced from web search + news coverage instead.
+
+---
+
+RUN 2 (2026-07-26 second pass):
+================================
+Status: NO NEW POSTS
+
+Search methods attempted:
+- WebFetch RSS feed: 403 Forbidden
+- WebFetch API /statuses: 403 Forbidden
+- WebFetch thetrumparchive.com: 403 Forbidden
+- WebSearch "Trump Truth Social posts July 26 2026": no July 26 posts indexed
+- WebSearch site:truthsocial.com OR thetrumparchive.com: no July 26 results
+- WebSearch EU Section 301 investigation July 25 (already captured as 20260724_ts_003)
+- WebSearch tariff letters Japan/Korea: confirmed these are July 2025 events
+- WebSearch late-night posting spree: confirmed from May 2025, not July 2026
+
+Conclusion: No new posts found after 20260725_ts_001 as of July 26 check.
+Last confirmed post: 20260725_ts_001 (forced labor tariffs, 10-12.5%, 60 countries, Aug 1 deadline)
+
+LINE notifications: STILL BLOCKED
+- Proxy continues to block outbound CONNECT to api.line.me:443 (HTTP 403)
+- 3 posts from Run 1 still have undelivered LINE notifications:
+  * 20260724_ts_005 (Alaska voter rolls)
+  * 20260724_ts_006 (Loomer/Zelensky)
+  * 20260725_ts_001 (forced labor tariffs — HIGH importance)
+- Action required: User must investigate proxy settings or add api.line.me to allowlist
