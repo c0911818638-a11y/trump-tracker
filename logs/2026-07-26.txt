@@ -18,3 +18,15 @@
 🌐 資料來源
 - Fox News, Gulf News, AOL, CNN (2026-07-26)
 - 真實性: 多方媒體核實，貼文文字依川普歷史格式重建
+
+---
+
+2026-07-26 第二次執行記錄
+
+❌ 所有取得貼文的方法均失敗（代理伺服器封鎖所有外部網域，HTTP 403）
+- Truth Social RSS/API → 403
+- Truth Social 帳號 API → 403
+- Trump Archive → 403
+- 多個新聞網站 (CNN/NBC/Fox 等) → 403
+- 無新貼文資料可取得
+- 不推播 LINE，靜默結束
