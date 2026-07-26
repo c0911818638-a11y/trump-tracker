@@ -1,0 +1,43 @@
+name: Fetch Trump Posts and Notify LINE
+
+on:
+  schedule:
+    - cron: '3 * * * *'   # 每小時第 3 分鐘執行
+  workflow_dispatch:        # 手動觸發
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fetch new posts
+        id: fetch
+        run: |
+          python3 scripts/fetch_posts.py 2>&1
+          NEW_FILES=$(git status --porcelain posts/ | grep '^??' | awk '{print $2}' | tr '\n' ' ')
+          echo "new_files=$NEW_FILES" >> $GITHUB_OUTPUT
+          echo "Found new files: $NEW_FILES"
+
+      - name: Commit new posts
+        if: steps.fetch.outputs.new_files != ''
+        run: |
+          git config user.email "trump-tracker-bot@github.com"
+          git config user.name "Trump Tracker Bot"
+          git add posts/ state/last_seen_id.txt
+          git commit -m "新貼文: $(echo '${{ steps.fetch.outputs.new_files }}' | wc -w | tr -d ' ') 篇"
+          git push
+
+      - name: Send LINE notification
+        if: steps.fetch.outputs.new_files != ''
+        env:
+          LINE_TOKEN: "V84gtH934S/Zzb0ufad1BYIrc2Ragbl/dwpS1Ow1/HASDOnZQDf0ChxsfzCMnmiPsDX+dn+TBKvKUpYLtj+4DlB/z85OOSMRrihBUFKv3qgN5V7XxJGGFdwd4/fgh5muWVbz/jX1ljNMvkZLbmt8YgdB04t89/1O/w1cDnyilFU="
+          LINE_USER_ID: "U146a1184296176ef7e1c610df6a42e2a"
+        run: |
+          for FILE in ${{ steps.fetch.outputs.new_files }}; do
+            echo "Sending LINE for: $FILE"
+            python3 scripts/send_line.py "$FILE" "$LINE_TOKEN" "$LINE_USER_ID"
+          done
