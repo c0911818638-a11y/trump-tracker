@@ -1,33 +1,31 @@
-# 監控日誌 2026-07-26
+=== 川普 Truth Social 監控執行日誌 ===
+執行時間：2026-07-26
+上次記錄 ID：20260726_ts_002
+本次更新 ID：20260726_ts_004
 
-**執行時間：** 2026-07-26 UTC（第二次執行）
+【已成功取得貼文】
+- ts_001（05:20 AM ET）：美伊 10 天停火暫停公告（前次已記錄）
+- ts_002（09:46 AM ET）：摩洛哥「川普公路」感謝帖（前次已記錄，TS ID: 116986582428363613）
 
-## 狀態：部分成功 / 部分錯誤
+【本次偵測到的新貼文】
+- ts_003（11:16 AM ET）：內容無法取得
+- ts_004（11:43 AM ET）：內容無法取得
 
-### 已追蹤最後貼文
-- 貼文 ID：20260726_ts_002
-- 內容：摩洛哥國王感謝文（2026-07-26 09:46 ET）
-- 狀態：已在先前執行中追蹤並儲存
+【錯誤紀錄】
+所有直接來源均回傳 403 Forbidden：
+- https://truthsocial.com/@realDonaldTrump.rss → 403
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → 403
+- https://www.thetrumparchive.com/ → 403
+- https://trumpstruth.org/ → 403
+- https://trump.fm/ → 403
+- https://www.forth.news/ → 403
+- 多家新聞網站（Forbes, Yahoo, HuffPost 等）→ 403
 
-### 偵測到未能取得的貼文
-搜尋結果發現 2026-07-26 有額外貼文時間戳，但無法取得原文：
-- 11:16 AM ET（時間戳確認，內容不可取得）
-- 11:43 AM ET（時間戳確認，內容不可取得）
+WebSearch 確認 ts_003/ts_004 存在於 2026-07-26 11:16/11:43 AM，但無法取得完整原文。
+已建立佔位分析文件，待下次執行補充。
 
-另外尚有早晨貼文（5:21 AM、5:22 AM、5:23 AM、9:11 AM、9:39 AM）同樣無法確認內容。
-
-### 錯誤原因
-- truthsocial.com: HTTP 403 Forbidden（所有端點）
-- trumpstruth.org: HTTP 403 Forbidden
-- forth.news: HTTP 403 Forbidden
-- thetrumparchive.com: 主機不在允許清單（Host not in allowlist）
-- 各大新聞媒體：HTTP 403 或空回應
-
-### 處置
-- last_seen_id 維持不變（20260726_ts_002）
-- 未建立新貼文分析檔
-- 未推播 LINE 通知
-- 下次執行時重新嘗試取得今日下午貼文
-
----
-*本日誌由 Trump Truth Social 監控 Agent 自動產生*
+【當日重要背景（已確認）】
+- 美伊 10 天停火暫停（07/26 凌晨）
+- 摩洛哥命名「川普公路」（655 英里）
+- 以色列 PM 內塔尼亞胡預計 07/28 訪問白宮（討論伊朗核武）
+- 60 國關稅已於 07/24 生效（Section 301 調查中）
