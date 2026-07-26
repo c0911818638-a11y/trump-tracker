@@ -23,6 +23,27 @@ Posts sourced from web search + news coverage instead.
 
 ---
 
+RUN 3 (2026-07-26 third pass):
+================================
+Status: NO NEW POSTS
+
+Search methods attempted:
+- WebFetch truthsocial.com RSS/API: 403 Forbidden (proxy blocked)
+- WebFetch multiple news archives: 403 Forbidden
+- WebSearch "Trump Truth Social July 26 2026": no new posts indexed
+- WebSearch Iran deal/ceasefire July 26: confirms military pause since July 25
+- WebSearch tariffs/Trump announcements July 26: no new post content found
+
+Conclusion: No new posts found after 20260725_ts_001.
+July 26 is Sunday; Trump appears to be at Doral ahead of Monday press conference.
+Background context: US-Iran ceasefire pause continues; diplomacy gaining momentum.
+
+LINE notifications: STILL BLOCKED
+- Proxy HTTP 403 on CONNECT tunnel to api.line.me:443
+- 3 undelivered notifications remain pending from July 24-25 posts
+
+---
+
 RUN 2 (2026-07-26 second pass):
 ================================
 Status: NO NEW POSTS
