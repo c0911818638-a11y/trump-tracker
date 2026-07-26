@@ -29,63 +29,6 @@ jobs:
           LINE_USER_ID: "U146a1184296176ef7e1c610df6a42e2a"
         run: |
           for FILE in ${{ steps.newfiles.outputs.files }}; do
-            echo "Processing: $FILE"
-
-            PUBLISH_TIME=$(grep -m1 '\*\*發布時間' "$FILE" | sed 's/.*：\*\* *//')
-            POST_ID=$(grep -m1 '\*\*貼文 ID' "$FILE" | sed 's/.*：\*\* *//')
-            SUMMARY=$(grep -m1 '\*\*主題摘要' "$FILE" | sed 's/.*：\*\* *//')
-            TONE=$(grep -m1 '\*\*情緒語氣' "$FILE" | sed 's/.*：\*\* *//')
-            TARGET=$(grep -m1 '\*\*涉及對象' "$FILE" | sed 's/.*：\*\* *//')
-            IMPACT=$(grep -m1 '\*\*政治意涵' "$FILE" | sed 's/.*：\*\* *//')
-            IMPORTANCE=$(grep -m1 '\*\*重要程度' "$FILE" | sed 's/.*：\*\* *//')
-
-            TW_TIME=$(python3 -c "
-from datetime import datetime, timezone, timedelta
-t = '$PUBLISH_TIME'.strip()
-try:
-    dt = datetime.strptime(t, '%Y-%m-%dT%H:%M:%SZ').replace(tzinfo=timezone.utc)
-    tw = dt.astimezone(timezone(timedelta(hours=8)))
-    print(tw.strftime('%Y-%m-%d %H:%M'))
-except:
-    print(t)
-")
-
-            python3 - <<PYEOF
-import json, subprocess, os
-
-msg = """🇺🇸 川普新發文
-
-⏰ ${TW_TIME} (台灣時間)
-📝 摘要：${SUMMARY}
-😠 語氣：${TONE}
-🎯 對象：${TARGET}
-🌏 影響：${IMPACT}
-⭐ 重要程度：${IMPORTANCE}
-
-🔗 https://truthsocial.com/@realDonaldTrump/${POST_ID}"""
-
-payload = json.dumps({
-    "to": os.environ["LINE_USER_ID"],
-    "messages": [{"type": "text", "text": msg}]
-})
-
-with open("/tmp/line_payload.json", "w") as f:
-    f.write(payload)
-PYEOF
-
-            HTTP_STATUS=$(curl -s -o /tmp/line_resp.txt -w "%{http_code}" \
-              -X POST https://api.line.me/v2/bot/message/push \
-              -H "Authorization: Bearer $LINE_TOKEN" \
-              -H "Content-Type: application/json" \
-              -d @/tmp/line_payload.json)
-
-            echo "LINE response: $HTTP_STATUS"
-            cat /tmp/line_resp.txt
-
-            if [ "$HTTP_STATUS" = "200" ]; then
-              echo "✅ Sent for $FILE"
-            else
-              echo "❌ Failed: HTTP $HTTP_STATUS"
-              exit 1
-            fi
+            echo "Sending LINE for: $FILE"
+            python3 scripts/send_line.py "$FILE" "$LINE_TOKEN" "$LINE_USER_ID"
           done
