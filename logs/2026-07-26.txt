@@ -3,6 +3,39 @@
 
 ---
 
+RUN 5 (2026-07-26 fifth pass):
+================================
+Status: NO NEW POSTS
+
+Search methods attempted:
+- curl truthsocial.com RSS: 403 Forbidden (proxy blocked)
+- curl truthsocial.com API /statuses: 403 Forbidden
+- WebFetch thetrumparchive.com: 403 Forbidden
+- WebFetch trumpstruth.org: 403 Forbidden
+- WebFetch multiple news sites (Yahoo, CNN, The Hill, mediaite.com, rawstory.com): 403 Forbidden
+- WebSearch "Trump Truth Social July 26 2026": no new posts found
+- WebSearch "Trump Truth Social July 25 2026 post text": confirmed tariff post was last
+- WebSearch Iran/tariffs/Canada/Gordie Howe: confirmed Canada bridge post was July 24 (already captured as 20260724_ts_004 or prior)
+- WebSearch "locked and loaded" Iran: confirmed this was verbal press statement, not Truth Social post, July 25
+
+New information gathered this run:
+- Trump said at press conference on Friday (Jul 25): "We're locked and loaded" on Iran (verbal, not Truth Social)
+- Trump considering full-scale Iran war if US doesn't get "100% of what we want" (Saturday verbal statement)
+- Netanyahu to meet Trump at White House Tuesday July 28
+- US military pause on Iran strikes since July 25 (14 days of strikes ended)
+- Tariffs (10-12.5% forced labor) took effect under Section 301; Aug 1 deadline stands
+- Canada Gordie Howe Bridge post: confirmed dated July 24 (already in repo)
+
+LINE notification retry: FAILED
+- api.line.me still blocked by proxy HTTP 403 on CONNECT tunnel
+- Same failure as Runs 1-4
+
+Conclusion: No new Truth Social posts since 20260725_ts_001.
+Today is Sunday; Trump relatively quiet on Truth Social.
+Next expected activity: Monday morning or around Netanyahu visit (July 28).
+
+---
+
 RUN 4 (2026-07-26 fourth pass):
 ================================
 Status: NO NEW POSTS
