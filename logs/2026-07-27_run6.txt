@@ -1,0 +1,45 @@
+【監控執行記錄】2026-07-28 (Run 6)
+
+執行時間：2026-07-27 18:55 UTC（台灣時間 2026-07-28 02:55）
+上次記錄貼文 ID：20260728_ts_003
+最新貼文 ID：20260728_ts_006
+
+---
+
+【資料擷取結果】
+
+方法 A（WebFetch 直接存取）：
+- https://truthsocial.com/@realDonaldTrump.rss → 403 Forbidden
+- https://truthsocial.com/api/v1/ → 403 Forbidden
+
+方法 B（WebSearch 搜尋）：
+✅ 成功取得 7/27 AI 圖片轟炸詳情（43 則，11:16 AM–5:16 PM ET）
+✅ 確認凱特蘭·柯林斯 × 狄倫·穆蘭尼首發貼文文字
+✅ 確認 Trump 2028 恐怖海報「Give the Enemy Nightmares」
+✅ 確認晚間貼文：布蘭登·吉爾 / 傑克·史密斯攻擊（約 10 PM ET）
+✅ 確認林賽·格雷漢姆於 2026-07-12 因主動脈剝離去世
+
+方法 C（Trump Archive 等）：
+- https://www.thetrumparchive.com/ → 403 Forbidden
+
+---
+
+【新貼文上傳】
+
+新增 3 則分析文：
+1. posts/2026-07-28_ts_004.md — 凱特蘭·柯林斯 AI 換臉圖開場貼（11:16 AM ET）
+2. posts/2026-07-28_ts_005.md — Trump 2028 恐怖海報 + 攻擊史普林斯汀/克里斯蒂等
+3. posts/2026-07-28_ts_006.md — 布蘭登·吉爾讚揚 + 傑克·史密斯「偽證」攻擊（10 PM ET）
+
+state/last_seen_id.txt 更新為：20260728_ts_006
+
+LINE 通知：由 GitHub Actions line-notify.yml 自動處理（push 觸發）
+
+---
+
+【重要背景更新】
+
+林賽·格雷漢姆參議員確認於 2026-07-12 去世（71 歲，主動脈剝離），
+已補充進 ts_004 背景分析中。
+WHCA 補辦晚宴確認於 2026-07-25 舉行，川普出席，為此次 AI 轟炸導火線。
+
