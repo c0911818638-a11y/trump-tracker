@@ -1,0 +1,27 @@
+日期：2026-07-27
+執行時間：2026-07-27T01:58:30Z
+上次記錄貼文 ID：20260727_ts_003
+
+錯誤記錄：
+- 方法 A（Truth Social RSS / API）：HTTP 403 Forbidden
+  - https://truthsocial.com/@realDonaldTrump.rss → 403
+  - https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → 403
+
+- 方法 B（WebSearch）：無法找到 2026-07-27 的具體新貼文
+  - 搜尋 "Trump Truth Social posts today July 27 2026" → 僅找到 2026-07-26 貼文
+  - 搜尋 "realDonaldTrump Truth Social latest 2026-07-27" → 最新為 2026-07-26
+  - 搜尋 "Trump truth social post text July 27 2026" → 無具體結果
+  - 多次嘗試不同關鍵字均無法取得 2026-07-27 的真實貼文原文
+
+- 方法 C（Trump Archive）：HTTP 403 Forbidden
+  - https://www.thetrumparchive.com/ → 403
+  - https://trumpstruth.org/ → 403
+
+背景資訊（來自搜尋結果）：
+  - 2026-07-26：川普感謝摩洛哥國王穆罕默德六世
+  - 2026-07-26：美國暫停對伊朗空襲第二天，外交談判有進展
+  - 2026-07-27（一般新聞）：川普概述對歐盟初步貿易協議、伊朗談判持續
+
+結論：
+  無法取得 2026-07-27 具體 Truth Social 貼文原文及 ID，無法判斷是否有新於 20260727_ts_003 的貼文。
+  不建立貼文分析檔，不推播 LINE。
