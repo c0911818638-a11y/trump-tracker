@@ -1,0 +1,58 @@
+【監控執行記錄】2026-07-28
+
+執行時間：2026-07-28（台灣時間）
+上次記錄貼文 ID：20260728_ts_002
+最新貼文 ID：（無更新）
+
+---
+
+【資料擷取嘗試】
+
+方法 A（WebFetch 直接存取）：
+- https://truthsocial.com/@realDonaldTrump.rss → 403 Forbidden
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → 403 Forbidden
+
+方法 B（WebSearch 搜尋）：
+- 搜尋 "Trump Truth Social posts today site:truthsocial.com" → 無 7/28 下午新帖
+- 搜尋 "Trump Truth Social July 28 2026" → 回傳 7/27 週日發帖資訊（已記錄於 ts_001~007）
+- 搜尋 "Trump Truth Social Monday July 28 2026 afternoon" → 無新帖資訊
+- 搜尋 "Trump 43 posts Truth Social July 27" → 確認週日帖文已完整記錄
+- 搜尋多個關鍵字組合 → 均未發現超出 20260728_ts_002 之新貼文
+
+方法 C（Trump Archive / TrumpMeter）：
+- https://www.thetrumparchive.com/ → 403 Forbidden
+- https://www.trumpmeter.live/ → 403 Forbidden
+- https://trumpstruth.org/ → 403 Forbidden
+
+新聞文章嘗試：
+- Forbes, Yahoo News, HuffPost, Daily Beast, The Nightly 等多數返回 403
+- 成功透過 WebFetch 讀取 GitHub raw 內容及 GitHub API
+
+---
+
+【比對結果】
+
+已記錄範圍（截至 20260728_ts_002）：
+- 2026-07-27 貼文（週日）：ts_001 至 ts_007（共 7 批，含深夜/凌晨/上午/下午/晚間/深夜）
+  - 00:54 - 01:04 ET: 伊朗「軍事勝利」、Lightning McQueen、Reconciliation 3.0、Freedom 250
+  - 05:22 - 05:23 ET: 早晨帖文
+  - 上午–下午: SAVE Act、伊朗談判、關稅通知
+  - 下午（11:16am - 5:16pm ET）: 43則 AI 圖片（Kaitlan Collins、伊朗威脅、Trump 2028、JFK/華盛頓穿越）
+  - 傍晚–夜間: Brandon Gill（Fox News）稱讚
+  - 深夜（凌晨 1:27 AM）: Jim Rickards 投資推廣
+
+- 2026-07-28 貼文（週一早晨）：ts_001、ts_002（共 2 批）
+  - 09:00 - 10:30 ET: 最高法院大勝（Trump v. Slaughter）、夜間脫口秀 AI 嘲諷、Talarico、Joe Rogan × UFC
+  - ~10:00 ET: 伊朗 AI 威脅圖（哈爾克島、"It's Our Tanker Now!"）
+
+2026-07-28 10:30 ET 之後：
+→ 透過多種方法搜尋，**未發現**可確認為新發布之 Truth Social 貼文
+
+---
+
+【結論】
+
+本次監控執行未發現超出 20260728_ts_002 之新貼文。
+- 未新增貼文分析檔案
+- 未更新 last_seen_id.txt
+- GitHub Actions LINE 通知未觸發
