@@ -1,57 +1,13 @@
-# Trump Truth Social 監控日誌 — 2026-07-27
-
-**執行時間：** 2026-07-27 15:13:07 UTC
-**執行狀態：** ⚠️ 部分完成（資料來源受限，補捕一則）
-
----
-
-## 執行摘要
-
-### 步驟 1 — 讀取上次記錄 ID
-- **上次記錄 ID：** 20260728_ts_003（SHA: 62b70950fdd0e4c8e8090b5823a23f7421ca0487）
-- 對應檔案：posts/2026-07-28_ts_003.md（川普-納坦雅胡/澤倫斯基白宮會面、格雷漢姆葬禮）
-- 注意：此 ID 指向未來事件（當前時間為 14:55 UTC，July 28 會議尚未發生）
-
-### 步驟 2 — 貼文抓取嘗試
-直接資料來源均回傳 403 Forbidden：
-- FAIL: truthsocial.com RSS → 403
-- FAIL: truthsocial.com API → 403
-- FAIL: thetrumparchive.com → 403
-- FAIL: trumpstruth.org → 403
-- OK: WebSearch（方法 B）→ 成功取得新聞摘要
-
-### 步驟 3 — 比對結果
-新發現且未捕捉的貼文：
-- 20260727_ts_008：最高法院敗訴反應（E. Jean Carroll 500萬賠償維持、密西西比郵寄選票案失利）
-- 此貼文存在於 ts_003（早晨）與 ts_004（下午）之間的空白段
-- 已透過 Yahoo News / HuffPost / MSN 新聞摘要確認內容
-
-### 步驟 4 — 新貼文分析
-已建立：posts/2026-07-27_ts_008.md
-- 內容：最高法院雙失利（Carroll 案 + 密西西比選票案）
-- 川普貼文原文已收錄
-- 中文政治影響分析已完成
-
-### 步驟 5 — GitHub 上傳
-- OK: posts/2026-07-27_ts_008.md 已成功上傳
-- SKIP: last_seen_id 未更新（20260727_ts_008 < 20260728_ts_003，不降格）
-
-### 步驟 6 — LINE 通知
-由 GitHub Actions 自動觸發，本步驟不執行。
-
----
-
-## 系統警告
-last_seen_id 時間基準異常：前次 agent 執行時可能超前捕捉了未發生的 July 28 事件。
-建議確認 posts/2026-07-28_ts_001.md 至 ts_003.md 是否為真實捕捉或預測性內容。
-
----
-
-## 錯誤記錄
-[14:55 UTC] Truth Social RSS: HTTP 403
-[14:55 UTC] Truth Social API: HTTP 403
-[14:56 UTC] thetrumparchive.com: HTTP 403
-[14:56 UTC] trumpstruth.org: HTTP 403
-[15:05 UTC] WebSearch 成功：找到 ts_008 空白貼文
-[15:10 UTC] posts/2026-07-27_ts_008.md 已上傳至 GitHub
-[15:12 UTC] logs/2026-07-27.txt 更新
+[2026-07-27 16:58:28 UTC] 監控執行完成
+上次記錄 ID: 20260728_ts_003
+本次搜尋結果:
+  - Truth Social RSS (403 封鎖)
+  - Truth Social API (403 封鎖)
+  - Trump Archive (403 封鎖)
+  - WebSearch 取得貼文 (2026-07-26 ~ 2026-07-27 ET)
+    - 2026-07-26 21:56 ET: Brandon Gill / Jack Smith
+    - 2026-07-27 01:27 ET: Midterm Meltdown 連結
+    - 2026-07-27 09:01 ET: 參議院/阻撓議事
+    - 2026-07-27 09:16 ET: 廢除阻撓議事
+比較結果: 所有搜尋到的貼文均早於 last_seen_id，無新貼文
+動作: 無 (不上傳貼文，不更新 last_seen_id)
