@@ -1,0 +1,66 @@
+【監控執行記錄】2026-07-28 (Run 5)
+
+執行時間：2026-07-27 19:59 UTC（台灣時間 2026-07-28 03:59）
+上次記錄貼文 ID：20260728_ts_006
+最新貼文 ID：20260728_ts_007
+
+---
+
+【資料擷取結果】
+
+方法 A（WebFetch 直接存取）：
+- https://truthsocial.com/@realDonaldTrump.rss → 403 Forbidden
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 → 403 Forbidden
+
+方法 B（WebSearch 多輪搜尋）：
+✅ 確認 7/27 週日 43 則 AI 圖片轟炸已完整涵蓋（ts_004、ts_005）
+✅ 確認深夜 Brandon Gill / 傑克·史密斯帖已涵蓋（ts_006）
+✅ 新發現：1:27 AM ET 週一凌晨吉姆·里卡茲投資推廣影片（Yahoo News / Daily Beast 來源）
+   → 搜尋關鍵字："Trump Truth Social Jim Rickards 1:27 AM video Monday July 28 2026"
+✅ 確認 7/28 ET 日間尚無確認新政策貼文（搜尋 "Trump Truth Social Tuesday July 28 2026 morning"）
+
+方法 C（Trump Archive 等）：
+- https://trumpstruth.org/ → 403 Forbidden
+- https://www.thetrumparchive.com/ → 403 Forbidden
+
+---
+
+【新貼文上傳】
+
+新增 1 則分析文：
+1. posts/2026-07-28_ts_007.md — 吉姆·里卡茲前 CIA 顧問投資推廣影片（凌晨 1:27 AM ET）
+   - 主題：川普 Truth Social 分享商業投資 infomercial，涉及聯邦礦產稀土投資機會
+   - 重要性：「現任總統為商業產品背書」的倫理爭議，與 Truth Social 機構訂閱商業化同步
+
+state/last_seen_id.txt 更新為：20260728_ts_007
+
+LINE 通知：由 GitHub Actions line-notify.yml 自動處理（push 觸發）
+
+---
+
+【背景情報更新】
+
+一、伊朗停火動態（7/27 最新）：
+- CNN 直播報導：Trump says US halted strikes on Iran at Tehran's request
+- 伊朗主動要求停火談判（"They asked us very nicely, 'Please stop, let's meet.'"）
+- 石油價格下跌、股票期貨漲逾 500 點
+- 14 點停火協議前景持續推進中
+
+二、Section 301 關稅（7/24 生效）：
+- 覆蓋 60 個貿易夥伴，稅率 10–12.5%
+- 取代原臨時 10% 基準關稅
+- 川普對伊朗貿易夥伴另追加 25% 關稅威脅
+
+三、Truth Social 機構訂閱計畫（7/16–18 宣布）：
+- 每月 10 萬美元提供機構客戶優先毫秒級獲取川普帖文
+- 8 月 1 日起正式啟動
+- 共和黨部分成員批評此為總統職位商業化
+
+---
+
+【結論】
+
+本次執行（Run 5）發現 1 則新增貼文（吉姆·里卡茲凌晨投資推廣影片），為 ts_001–006 未涵蓋之新內容。
+- 已建立 posts/2026-07-28_ts_007.md
+- last_seen_id.txt 更新為 20260728_ts_007
+- GitHub Actions LINE 通知將於 push 後自動觸發
