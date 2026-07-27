@@ -1,0 +1,27 @@
+【監控日誌】2026-07-28 Run 6
+執行時間：2026-07-28（UTC）
+上次貼文ID：20260728_ts_007
+本次貼文ID：20260728_ts_008
+
+【新貼文摘要】
+發現1則新貼文複合分析（ts_008），涵蓋：
+1. 川普訪問通用汽車密西根試車場（Milford Proving Ground）後發帖，宣傳「美國製造業回流」
+2. 白宮7月28日正式對60餘個貿易夥伴啟動新一波Section 301關稅（10-12.5%）
+3. "Tariff's my favorite word" 關稅宣傳與密西根選舉動員貼文
+
+【資料來源】
+- 方法A：Truth Social RSS/API 均返回 403（封鎖）
+- 方法B：WebSearch 搜尋成功取得 2026-07-27/28 貼文相關新聞報導
+- 方法C：trumpstruth.org 返回 403
+- GitHub API：環境代理攔截 403，改用 git clone 方式成功存取倉庫
+
+【已確認已捕獲的貼文（2026-07-27~28）】
+- 2026-07-27 ts_001-008：含最高法院 Carroll 案、SAVE Act、Thune/廢除阻撓辯論、住房法案否決、核塵立場、彈藥否認、傑克·史密斯、深夜8則帖文等
+- 2026-07-28 ts_001-007：含最高法院 BIG WIN（Trump v. Slaughter）、AI 伊朗圖片延續、納坦雅胡「MAKE A DEAL!」、Jim Rickards 投資影片等
+
+【未找到的貼文】
+- 週二（7月28日）下午納坦雅胡峰會後之深夜貼文：搜尋未發現特定新內容
+- 搜尋覆蓋範圍：約15次 WebSearch + 20次 WebFetch 嘗試（多數返回403）
+
+【LINE通知】
+由 GitHub Actions line-notify.yml 自動處理。
