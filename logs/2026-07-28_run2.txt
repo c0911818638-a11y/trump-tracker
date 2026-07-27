@@ -1,0 +1,62 @@
+【監控執行記錄】2026-07-28 Run 2
+
+執行時間：2026-07-27 UTC（台灣時間 2026-07-28）
+上次記錄貼文 ID：20260728_ts_003
+最新貼文 ID：（無更新）
+
+---
+
+【資料擷取嘗試】
+
+方法 A（WebFetch 直接存取）：
+- https://truthsocial.com/@realDonaldTrump.rss → 403 Forbidden
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 → 403 Forbidden
+
+方法 B（WebSearch 多輪搜尋）：
+- "Trump Truth Social posts today July 27 2026" → 回傳 7/27 AI 圖片轟炸報導（已記錄）
+- "Trump Truth Social July 28 2026 latest" → 均回傳已記錄內容
+- "Trump Truth Social 43 times July 27 2026" → 確認週日發帖事件已完整記錄（ts_001-007）
+- "Trump Truth Social Monday July 28 2026 after Netanyahu" → 未發現超出 ts_003 之新帖
+- "Trump Truth Social Iran deal July 28 2026 afternoon" → 無新帖確認
+- "Trump Truth Social post text July 28 2026 new" → 無新帖確認
+- "Trump 'SPIRAL OF DEATH'" → 確認為 7/20 舊帖，非新貼文
+- "Trump 8 random late-night posts" → 確認為早期貼文（川普 79 歲時期），非 7/28
+
+方法 C（Trump Archive / 第三方存檔）：
+- https://www.thetrumparchive.com/ → 403 Forbidden
+- https://trumpstruth.org/ → 403 Forbidden
+
+新聞文章嘗試：
+- Forbes, Yahoo News, HuffPost, Daily Beast, The Nightly, AOL, Mirror US → 403 Forbidden
+- Times of Israel Liveblog → 403 Forbidden
+- Fox News Live Blog → 403 Forbidden
+- NBC News Live Blog → 403 Forbidden
+
+---
+
+【已確認之最新動態摘要（ts_003 涵蓋範圍確認）】
+
+ts_003 已完整記錄以下事件（2026-07-28 ET 白天）：
+1. 川普-納坦雅胡白宮峰會：「Had a very good meeting with Prime Minister Netanyahu」
+2. 伊朗核設施消除最後通牒：「Their Nuclear facilities WILL BE ELIMINATED!」
+3. 林賽格雷漢姆葬禮後追悼貼文：「Lindsey was right... MAKE A DEAL!」
+4. 川普-澤倫斯基白宮會面：「Just met with President Zelensky... More to come!」
+
+以上為截至本次監控時間可取得之最新已知貼文。
+
+---
+
+【背景資訊（確認、無需新增貼文）】
+
+7月28日 ET 下午起無可確認的新貼文資訊。
+搜尋引擎結果均指向已記錄事件（ts_001～ts_003），無超出 last_seen_id 之新帖。
+
+---
+
+【結論】
+
+本次監控執行（Run 2）未發現超出 20260728_ts_003 之新貼文。
+- 未新增貼文分析檔案
+- 未更新 last_seen_id.txt（維持：20260728_ts_003）
+- GitHub Actions LINE 通知未觸發
+- 下次預期有效執行：等待川普於納坦雅胡/澤倫斯基會後之後續反應貼文或夜間/深夜發帖
