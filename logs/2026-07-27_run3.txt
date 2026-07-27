@@ -1,0 +1,37 @@
+【監控執行日誌】2026-07-27 第三次排程執行
+
+執行時間：2026-07-27T08:00:27Z
+上次已記錄 ID：20260727_ts_007
+
+【抓取嘗試記錄】
+
+方法 A（Truth Social 直接存取）：
+  - https://truthsocial.com/@realDonaldTrump.rss → HTTP 403 Forbidden
+  - https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → HTTP 403 Forbidden
+
+方法 B（WebSearch）：
+  - 搜尋「Trump Truth Social July 28 2026 morning new」→ 僅找到已知 ts_007（1:27 AM 週一 Jim Rickards 影片）
+  - 搜尋「Trump Truth Social Monday July 28 2026」→ 無新貼文資訊
+  - 搜尋「Trump Truth Social July 27 2026 AI JFK George Washington」→ 確認 AI 發帖狂潮（43 則，11:16 AM–5:16 PM ET）已涵蓋於 ts_003–ts_006
+  - 搜尋「Trump Truth Social "July 28" 2026 post new latest」→ 無 7/28 新貼文
+
+方法 C（Trump Archive / 第三方站點）：
+  - https://trumpstruth.org/ → HTTP 403 Forbidden
+  - https://www.thetrumparchive.com/ → HTTP 403 Forbidden
+  - 各新聞網站（Forbes、HuffPost、Yahoo News、Raw Story、Daily Beast、AOL、AOL Canada）→ HTTP 403 Forbidden
+
+【已確認的 7/27 週日全日貼文彙整（搜尋結果推斷）】
+- 00:54–01:04 ET：ts_001（伊朗軍事成功影片、AI 混剪 Cars、Reconciliation 3.0）
+- 05:22–05:23 ET：ts_002（伊莉莎白・沃倫 SAVE America Act、18 則連發）
+- 11:16 AM–5:16 PM ET：ts_003–ts_006（43 則 AI 圖片：JFK 合影、George Washington/Jefferson/Hamilton「America First」、Trump X Washington 電影海報、Trump 2028 宣傳、伊朗戰爭 Meme 等）
+- 約 22:00 ET：Brandon Gill 讚美帖（已含於 ts_006 或 ts_007）
+- 01:27 AM 週一：ts_007（Jim Rickards 投資建議影片）
+
+【結論】
+
+本次執行未發現新於 20260727_ts_007 的 Truth Social 貼文。
+1:27 AM 週一的 Jim Rickards 影片為目前最新已記錄貼文。
+搜尋結果中無任何 7/28 週一的後續貼文。
+
+last_seen_id 維持不變：20260727_ts_007
+不建立新貼文分析檔，不推播 LINE。
