@@ -1,0 +1,61 @@
+【監控執行記錄】2026-07-28 Run 3
+
+執行時間：2026-07-27 UTC（台灣時間 2026-07-28）
+上次記錄貼文 ID：20260728_ts_003
+最新貼文 ID：（無更新）
+
+---
+
+【資料擷取嘗試】
+
+方法 A（WebFetch 直接存取）：
+- https://truthsocial.com/@realDonaldTrump.rss → 403 Forbidden
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 → 403 Forbidden
+
+方法 B（WebSearch 多輪搜尋，本次新增嘗試）：
+- "Trump Truth Social posts today July 27 2026 site:truthsocial.com OR site:thetrumparchive.com" → 無直接貼文
+- "Trump Truth Social July 27 2026 latest post statement" → 回傳 Forbes 7/27 AI 圖片報導（43則，已涵蓋於 ts_001/ts_002）
+- "Trump Truth Social AI images JFK George Washington July 27 2026" → 確認 7/27 週日 AI 圖片細節（包含 Kaitlan Collins/JFK/Washington/2028 主題）
+- "Trump Truth Social "Brandon Gill" "Trey Gowdy" July 27 2026" → 找到 Sunday 晚間貼文內容
+- "Trump Truth Social July 28 2026 evening night latest statement" → 未發現超出 ts_003 之新帖
+- "Trump Russia sanctions Zelensky July 28 2026" → Yahoo 文章（144716430）日期不明，內容可能為 2025/04/26 舊帖
+- "Trump Truth Social Putin banking secondary sanctions" → 確認為 2025/04/26（梵蒂岡/教皇葬禮後），非新帖
+- "Trump Franklin Graham letter heaven shed blood" → 確認為 2026/03（棕枝主日），非新帖
+- "Trump Truth Social 160 posts late night blitz July 2026" → 確認為 2025/12 事件，非新帖
+
+方法 C（第三方 Trump 存檔）：
+- https://trumpstruth.org/ → 403 Forbidden
+- https://supertrumptracker.com/ → 403 Forbidden
+- https://www.thetrumparchive.com/ → 403 Forbidden
+- https://truthsocial.com/@realDonaldTrump/posts/116351998782539414 → 403 Forbidden
+
+新聞文章嘗試（均 403 Forbidden）：
+- Forbes, Yahoo News, HuffPost, Daily Beast, Newsweek, Mediaite, AOL, Mirror US
+- The Hill, NBC News, Time, NOTUS, IBTimes UK
+
+---
+
+【本次新發現（確認為已知事件，不構成新貼文）】
+
+一、7/27 週日 AI 圖片轟炸細節（已涵蓋於 ts_001/ts_002）：
+- 首帖 11:16 AM ET：AI 圖片將 CNN 主播 Kaitlan Collins 描繪為跨性別活動家 Dylan Mulvaney
+- 含 JFK 白宮前合影（無說明文字）
+- 「America First」海報：川普被 Washington/Jefferson/Hamilton 圍繞
+- George Washington 懸崖獲救圖：「The past was about to change, history was about to be saved」
+- 最後一帖：AI 電影海報「Trump X Washington」
+- 「Trump 2028」主題系列
+
+二、7/27 週日晚間 Brandon Gill 貼文（已涵蓋於 ts_001 語境）：
+「Congressman Brandon Gill (Texas!) was Fantastic tonight on the Trey Gowdy Show, especially as he talked about Deranged Jack Smith and his illegitimate Witch Hunt. The Deranged One stone cold lied before Congress, and worse. He destroyed many lives. Hopefully he will be treated accordingly!」
+
+三、ts_003 涵蓋確認：納坦雅胡、澤倫斯基會面、格雷漢姆葬禮後貼文、伊朗核武最後通牒——均已完整記錄
+
+---
+
+【結論】
+
+本次監控執行（Run 3）未發現超出 20260728_ts_003 之確認新貼文。
+- 未新增貼文分析檔案
+- 未更新 last_seen_id.txt（維持：20260728_ts_003）
+- GitHub Actions LINE 通知未觸發
+- 備注：多次搜尋均指向 ts_003 已涵蓋之 7/28 ET 下午事件；7/28 ET 晚間是否有新貼文待下次執行確認
