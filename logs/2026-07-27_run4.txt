@@ -1,0 +1,61 @@
+【監控執行記錄】2026-07-27 run4
+
+執行時間：2026-07-27 11:02 UTC（台灣時間 2026-07-27 19:02）
+上次記錄貼文 ID：20260728_ts_002
+
+---
+
+【資料擷取嘗試】
+
+方法 A（WebFetch 直接存取）：
+- https://truthsocial.com/@realDonaldTrump.rss → 403 Forbidden
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → 403 Forbidden
+- https://www.thetrumparchive.com/ → 403 Forbidden
+- https://trumpstruth.org/ → 403 Forbidden
+- 所有新聞文章 URL → 403 Forbidden（環境網路政策限制）
+
+方法 B（WebSearch 搜尋）：
+- 搜尋 "Trump Truth Social posts today site:truthsocial.com OR site:thetrumparchive.com"
+  → 回傳 2026-07-27 週日 43 則 AI 圖片貼文資訊（已於先前執行中記錄完畢）
+- 搜尋 "Trump Truth Social July 27 2026"
+  → 確認 11:16am–5:16pm ET 發帖群已完整記錄至 ts_001~ts_007 及 20260728_ts_001~002
+
+---
+
+【搜尋摘要】
+
+WebSearch 返回的最新貼文內容與先前執行（10:02 UTC）已記錄相同，無新增內容：
+
+1. 2026-07-27 AI 圖片轟炸（43則，11:16am–5:16pm ET）—— 已記錄
+   - Kaitlan Collins/Dylan Mulvaney AI 圖
+   - 伊朗「STRIKE ON KHARG」AI 圖
+   - 「It is our oil tanker now!」AI 圖
+   - 「NO MORE ENGINES」AI 圖
+   - Trump 2028 AI 圖（多則）
+   - JFK 與川普同框 AI 圖
+   - 「Trump X Washington: A Time Travel Epic」電影海報 AI 圖
+   - 深夜喜劇演員乞丐圖（Colbert、Kimmel、Fallon）
+   - Chris Christie/Springsteen「Bored in the USA」AI 圖
+   - 「Dr Trump」AI 圖
+   - 川普與 von der Leyen 通話文字帖
+
+2. 2026-07-28 早晨帖文 —— 已記錄（20260728_ts_001、ts_002）
+   - 最高法院 Trump v. Slaughter 大勝
+   - 伊朗 AI 威脅圖繼續
+
+---
+
+【比對結果】
+
+未發現超出 20260728_ts_002 之新貼文。
+
+本次執行與上次（10:02 UTC）結果一致：所有可查詢到的最新內容均已完整記錄。
+
+---
+
+【結論】
+
+- 未新增貼文分析檔案
+- last_seen_id 維持：20260728_ts_002
+- GitHub Actions LINE 通知未觸發
+- 下次排程執行將繼續監控新內容
