@@ -1,0 +1,40 @@
+【監控執行日誌】2026-07-27 排程執行
+
+執行時間：2026-07-27 UTC
+上次已記錄 ID：20260727_ts_004
+
+【抓取嘗試記錄】
+
+方法 A（Truth Social 直接存取）：
+  - https://truthsocial.com/@realDonaldTrump.rss → HTTP 403 Forbidden
+  - https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → HTTP 403 Forbidden
+
+方法 B（WebSearch）：
+  - 搜尋「Trump Truth Social posts today 2026-07-27」→ 未找到 ts_004 之後的新貼文
+  - 搜尋「Trump Truth Social July 27 2026 evening night」→ 未找到新內容
+  - 多次搜尋均只返回已記錄在 ts_001~ts_004 中的內容
+
+方法 C（Trump Archive / 第三方站點）：
+  - https://trumpstruth.org/ → HTTP 403 Forbidden
+  - https://www.thetrumparchive.com/ → HTTP 403 Forbidden
+  - https://trumpstruth.org/statuses/40272 → HTTP 403 Forbidden
+  - https://trumpstruth.org/statuses/40280 → HTTP 403 Forbidden
+  - 各主要新聞網站（Times of Israel、Newsweek、The Mirror、Mediaite、NBC、AOL、Al Jazeera 等）→ HTTP 403 Forbidden
+
+【結論】
+
+本次執行未能取得 ts_004（2026-07-27 下午 ET）之後的新貼文。
+可能原因：
+1. 當前尚無新貼文（午後~傍晚間發文頻率較低）
+2. 新貼文尚未被搜尋引擎索引
+3. 所有存取 Truth Social 及存檔站點的請求均受 403 封鎖
+
+已記錄 ts_004 內容涵蓋至：
+  - 伊朗/以色列停火談判（「Final negotiations proceeding」）
+  - 廢除阻撓辯論最強催促（含債務上限）
+  - 住房法案否決威脅
+  - 納坦雅胡逮捕豁免重申
+
+last_seen_id 維持不變：20260727_ts_004
+下次排程執行時繼續監控。
+
