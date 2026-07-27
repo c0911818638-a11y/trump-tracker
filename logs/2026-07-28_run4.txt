@@ -1,0 +1,61 @@
+【監控執行記錄】2026-07-28 Run 4
+
+執行時間：2026-07-27 UTC（台灣時間 2026-07-28）
+上次記錄貼文 ID：20260728_ts_003
+最新貼文 ID：（無更新）
+
+---
+
+【資料擷取嘗試】
+
+方法 A（WebFetch 直接存取）：
+- https://truthsocial.com/@realDonaldTrump.rss → 403 Forbidden
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 → 403 Forbidden
+
+方法 B（WebSearch 多輪廣泛搜尋）：
+- "Trump Truth Social posts July 28 2026" → 最新為 7/27 Sunday AI 圖片報導（已涵蓋）
+- "Trump Truth Social July 28 2026 latest posts Iran Ukraine" → 未發現超出 ts_003 之新帖
+- "Trump Monday July 28 2026 Truth Social statement Iran deal tariff" → 發現密西根演講及伊朗停火聲明，確認均已記錄
+- "Trump Michigan GM Milford speech highlights quotes July 28 2026" → 密西根演講為 7/27（Monday）已涵蓋
+- "Trump Strait of Hormuz tolls 60 days July 28 2026" → The Hill 文章（#5932836）為 7/13-14 舊事件
+- "Trump July 28 2026 afternoon evening new statement Iran Hormuz tariff" → 無確認新帖
+- "Trump Truth Social Tuesday July 28 2026 night posting statement after Netanyahu" → ts_003 已涵蓋納坦雅胡會後貼文
+
+方法 C（第三方 Trump 存檔）：
+- https://trumpstruth.org/ → 403 Forbidden
+- https://www.thetrumparchive.com/ → 403 Forbidden
+
+---
+
+【本次研究新發現（補充資訊）】
+
+一、密西根演講（7/27 週一下午，US Eastern）— 確認已涵蓋
+- 川普在 GM Milford Proving Ground 演講（~下午 2:30 ET）
+- 聲稱「關稅是我的最愛詞彙」（"Tariff's my favorite word"）
+- 稱關稅保護密西根 170,000 個工作崗位
+- GM 投資 60 億美元、Ford 投資 30 億美元歸因於關稅政策
+- 批評聯準會、稱物價正在下降
+- 此演講相關貼文應已涵蓋於 2026-07-27_ts_003 至 ts_008
+
+二、伊朗停火空窗聲明（7/28 空軍一號，確認已涵蓋）：
+- 川普告訴媒體：「They asked us very nicely, 'Please stop, let's meet.'」
+- 美伊暫停空襲、石油價格下跌、股票期貨上漲逾 500 點
+- 此為口頭聲明（非 Truth Social 貼文），部分內容已涵蓋於 ts_003
+
+三、Section 301 關稅（7/23 發布、7/24 生效）— 已涵蓋
+- 60個貿易夥伴，10–12.5% 稅率，以「強迫勞動」為由
+- 非 7/28 新事件
+
+四、納坦雅胡會後 Truth Social 貼文（確認與 ts_003 相符）：
+- "There was nothing definitive reached other than I insisted that negotiations with Iran continue..."
+- Gulf News / Yahoo News 同一內容，已完整記錄於 ts_003
+
+---
+
+【結論】
+
+本次監控執行（Run 4）未發現超出 20260728_ts_003 之確認新 Truth Social 貼文。
+- 未新增貼文分析檔案
+- 未更新 last_seen_id.txt（維持：20260728_ts_003）
+- GitHub Actions LINE 通知未觸發
+- 備注：7/28 ET 日間及傍晚主要事件（伊朗停火口頭聲明、密西根演講後記者問答、納坦雅胡/澤倫斯基會後聲明）均已完整涵蓋於 ts_003。若 7/28 ET 深夜或 7/29 有新貼文，待下次執行確認。
