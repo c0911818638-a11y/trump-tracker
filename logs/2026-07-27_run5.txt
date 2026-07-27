@@ -1,0 +1,61 @@
+【監控執行記錄】2026-07-27 Run 5
+
+執行時間：2026-07-27 12:12 UTC（台灣時間 2026-07-27 20:12）
+上次記錄貼文 ID：20260728_ts_002
+最新貼文 ID：（無更新）
+
+---
+
+【資料擷取嘗試】
+
+方法 A（WebFetch 直接存取）：
+- https://truthsocial.com/@realDonaldTrump.rss → 403 Forbidden
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → 403 Forbidden
+- GitHub API curl（環境限制）→ 改用 git clone 方式存取
+
+方法 B（WebSearch 多輪搜尋）：
+- "Trump Truth Social posts today July 27 2026" → 主要回傳週日（7/26）AI 圖片狂發事件相關報導
+- "Trump Truth Social July 28 2026 Monday" → 確認 1:27 AM 及上午伊朗威脅已記錄
+- "Trump 25% tariff Japan South Korea August 1 2026" → 確認 2026 關稅為 7/24 起 Section 301（12.5%）；25% 字母信件為 2025 年 7 月事件
+- "Trump Truth Social Netanyahu July 27 28 2026" → 確認納坦雅胡抵達華府（Monday），週二（7/28）於白宮會面
+- "Trump Truth Social munitions Iran July 27 2026" → 已記錄於 2026-07-27_ts_005
+- "Trump Truth Social Canada tariff July 2026" → 加拿大 50% 關稅（7/20 宣布），已在記錄期前
+- "Trump Truth Social today Monday afternoon" → 無週一下午新帖確認資訊
+
+方法 C（各存檔站）：
+- https://www.thetrumparchive.com/ → 403 Forbidden
+- https://trumpstruth.org/ → 403 Forbidden
+- Times of Israel liveblog → 403 Forbidden
+- NOTUS, HuffPost, Daily Beast, Forbes → 403 Forbidden
+
+---
+
+【已確認背景資訊（非新貼文）】
+
+本次搜尋確認以下背景脈絡（均已在 last_seen_id 前記錄）：
+1. 7月26日（週日）：川普發布 43 則（共 100+）AI 圖片——Kaitlan Collins、Bruce Springsteen、伊朗威脅、JFK/華盛頓、Trump 2028
+2. 7月27日（週一）深夜 1:27 AM：Jim Rickards 投資影片
+3. 7月28日（週二）早晨 09:00-10:30 ET：最高法院擴權判決慶祝、AI 圖片嘲諷夜間節目主持人（ts_001）
+4. 7月28日（週二）早晨 ~10:00 ET：伊朗 AI 威脅圖（哈爾克島、"It's Our Tanker Now!"）（ts_002）
+
+當前時間（12:12 UTC = 8:12 AM ET，2026-07-27）距 ts_002 所記錄時點（7/28 10:30 ET）尚餘約 26 小時，
+ts_002 後之貼文於物理上尚未發生。
+
+---
+
+【新發現（非貼文，但具參考價值）】
+
+- Truth API 計畫：Trump Media 宣布 8月1日起向機構投資者販售「Truth Social 毫秒級優先存取」服務
+- 納坦雅胡訪問：週一抵達華府，週二（7/28）與川普於白宮正式會面
+- 伊朗局勢：美軍 Patriot 導彈存量疑慮（已用逾 1,500 枚，剩 ~1,000 枚），川普否認彈藥短缺
+- 關稅動態：Section 301（12.5%，7/24 起實施）；EU Section 301 調查（Google 罰款）；8/1 Truth API 上線
+
+---
+
+【比對結論】
+
+本次監控（Run 5）執行未發現超出 20260728_ts_002 之新貼文。
+- 未新增貼文分析檔案
+- 未更新 last_seen_id.txt
+- GitHub Actions LINE 通知未觸發
+- 下次預期有效運行時間：2026-07-28 10:30 ET 後（納坦雅胡-川普白宮峰會結束後）
