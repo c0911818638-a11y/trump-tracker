@@ -1,0 +1,62 @@
+【監控日誌】2026-07-28 Run 7
+執行時間：2026-07-27 22:57 UTC（台灣時間 2026-07-28 06:57）
+上次貼文ID：20260728_ts_008
+本次貼文ID：20260728_ts_008（無變動）
+
+---
+
+【資料擷取結果】
+
+方法 A（WebFetch 直接存取）：
+- https://truthsocial.com/@realDonaldTrump.rss → 403 Forbidden
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 → 403 Forbidden
+
+方法 B（WebSearch 多輪搜尋）：
+✅ 確認 7/26 週日 43 則 AI 圖片轟炸已完整記錄（ts_004/005）
+✅ 確認 7/27 凌晨 Jim Rickards 投資影片已記錄（ts_007）
+✅ 確認 7/27 GM 密西根試車場訪問＋Section 301 關稅已記錄（ts_008）
+✅ 新搜尋確認：7/27（ET 下午至傍晚）尚無可確認的新貼文
+
+方法 C（Trump Archive 等）：
+- https://trumpstruth.org/ → 403 Forbidden
+- https://www.thetrumparchive.com/ → 403 Forbidden
+
+GitHub API：
+- 環境代理攔截 GitHub API 呼叫（403）
+- 改用 git clone 方式成功存取倉庫
+
+---
+
+【本次搜尋涵蓋範圍】
+
+搜尋主題：
+1. Trump Truth Social 貼文 7/27 下午至今（Michigan GM 演講後）
+2. 伊朗停火談判相關貼文（重大進展報導）
+3. 納坦雅胡赴華府會面前夕相關貼文
+4. Monday 晚間新貼文（Fox News 收視後）
+
+主要發現（新資訊，非新貼文）：
+- 伊朗-美國停火談判「重大進展」已報導（Times of Israel, 7/27）
+  但未找到川普 Truth Social 相應發文
+- 納坦雅胡週一（7/27）搭機赴華盛頓，預計週二（7/28）與川普會面
+  相關 Truth Social 貼文尚未出現（時間點確認：目前美東時間 18:57）
+- 川普接受 Axios 採訪表示：「我們正與伊朗進行深度談判，若失敗將恢復強力軍事行動」
+  此為媒體採訪，非 Truth Social 帖文
+- "Strike on Kharg"（攻擊哈爾克島）AI 圖帖：確認為 7/26（週日）發布，已涵蓋
+- "Guardians of the World"（世界守護天使）AI 圖帖：確認為 7/26（週日），已涵蓋
+
+---
+
+【時間節點分析】
+目前美東時間：18:57（下午 6:57）
+川普典型晚間貼文時間：21:00–23:59 ET（收看 Fox News 後）
+本次執行在典型晚間發文時間窗口之前，未發現新帖屬正常預期結果。
+
+---
+
+【結論】
+無新貼文超出 ts_008 範圍。last_seen_id.txt 維持不變（20260728_ts_008）。
+下次執行預計可捕獲：川普週一晚間 Fox News 後貼文、週二納坦雅胡會面後貼文。
+
+【LINE 通知】
+本次無新貼文，不觸發 GitHub Actions 推播。
