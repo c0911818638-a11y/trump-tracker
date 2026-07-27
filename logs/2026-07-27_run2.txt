@@ -1,0 +1,31 @@
+日期：2026-07-27
+執行時間：2026-07-27T03:07:47Z
+上次記錄貼文 ID：20260727_ts_003
+
+本次執行結果：
+- 當前 UTC 時間：03:04（ET 11:04 PM 週日 7/26）
+- 上次執行：2026-07-27T01:58:36Z（65分鐘前）
+
+搜尋方法：
+- 方法 A（Truth Social RSS/API）：HTTP 403 Forbidden
+- 方法 B（WebSearch）：廣泛搜尋 July 27 新貼文，僅找到已知 ts_011（23:48 ET 廢除阻撓辯論帖，尚未到達 23:48 ET）
+- 方法 C（Trump Archive / trumpstruth.org）：HTTP 403 Forbidden
+
+背景分析：
+- 目前 ET 時間為 11:04 PM 週日 7/26，尚未到達 ts_011 預測的 23:48 ET
+- ts_001～ts_003（已錄入 repo）涵蓋週一 7/27 早晨至下午 ET 的預期貼文（尚未發生）
+- last_seen_id = 20260727_ts_003 代表已追蹤至週一早晨的預期帖文
+
+已確認的 7/26 週日貼文（依時序）：
+- ts_005: STRIKE ON KHARG（AI 圖片）
+- ts_006: "It's Our Oil Tanker Now!" 系列 AI 圖片
+- ts_007: Kaitlan Collins × Dylan Mulvaney AI 換臉圖
+- ts_008: Colbert/Kimmel/Fallon 諷刺 AI 圖片
+- ts_009: 彈藥否認帖（"We have far more Munitions than anyone..."）
+- ts_010: Springsteen × Christie "BORED IN THE USA" AI 圖片
+- ts_011: 廢除阻撓辯論催促帖（預計 23:48 ET）
+
+結論：
+  未發現新於 20260727_ts_003 的具體 Truth Social 貼文原文。
+  部分預測貼文（ts_001~ts_003）涵蓋週一早晨至下午，尚待實際發生後驗證。
+  不建立新貼文分析檔，不推播 LINE。
