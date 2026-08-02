@@ -62,8 +62,9 @@ function stripHtml(html) {
   fs.mkdirSync('posts', { recursive: true });
   for (const p of newPosts) {
     const dt = new Date(p.created_at);
-    const twDt = new Date(dt.getTime() + 8 * 3600 * 1000);
-    const dateStr = twDt.toISOString().slice(0, 10);
+    // 用美東時間 (America/New_York) 標記日期，對應川普實際發文日。
+    // 若用台灣時間，川普晚間發文會跨日變成台灣隔天，造成混淆。
+    const dateStr = dt.toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
     const filename = `posts/${dateStr}_${p.id}.md`;
     const content = stripHtml(p.content || '');
 

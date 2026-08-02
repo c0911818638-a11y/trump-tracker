@@ -4,6 +4,11 @@ import sys
 import os
 import re
 from datetime import datetime, timezone, timedelta
+try:
+    from zoneinfo import ZoneInfo
+    ET_TZ = ZoneInfo("America/New_York")
+except ImportError:
+    ET_TZ = None  # fallback below
 
 ACCOUNT_ID = "107780257626128497"
 BASE = "https://truthsocial.com"
@@ -29,8 +34,16 @@ def strip_html(text):
     text = re.sub(r'<[^>]+>', '', text)
     return text.strip()
 
-def utc_to_tw(dt):
-    return dt.astimezone(timezone(timedelta(hours=8)))
+def utc_to_et(dt):
+    """轉換為美東時間 (America/New_York)，用於檔名日期標記。
+    川普在美東時間發文，檔名用美東日期才不會出現「跨日」到台灣隔天的問題。"""
+    if ET_TZ:
+        return dt.astimezone(ET_TZ)
+    # Fallback: 夏令時 EDT = UTC-4，冬令時 EST = UTC-5
+    month = dt.month
+    is_dst = 3 <= month <= 11
+    offset = timedelta(hours=-4 if is_dst else -5)
+    return dt.astimezone(timezone(offset))
 
 print("Fetching posts with bearer token...")
 url = f"{BASE}/api/v1/accounts/{ACCOUNT_ID}/statuses?limit=20"
@@ -59,8 +72,8 @@ if not new_posts:
 for p in new_posts:
     post_id = p["id"]
     created_at = p["created_at"]
-    tw_time = utc_to_tw(created_at)
-    date_str = tw_time.strftime("%Y-%m-%d")
+    et_time = utc_to_et(created_at)
+    date_str = et_time.strftime("%Y-%m-%d")  # 美東日期，對應川普實際發文日
     filename = f"posts/{date_str}_{post_id}.md"
 
     md = f"""# 川普 Truth Social 新貼文
