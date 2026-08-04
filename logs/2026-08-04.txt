@@ -27,3 +27,44 @@
 
 無法確認 ts_086 之後有新貼文，本次執行未更新 last_seen_id 及貼文目錄，未推播 LINE。
 下次排程執行時將重新嘗試取得新貼文。
+
+---
+
+## 執行記錄 — Run 25（自動排程，最新）
+
+**執行時間：** 2026-08-04 UTC
+**最後追蹤 ID：** 20260804_ts_088（由前次成功執行記錄）
+**執行結果：** 未發現新貼文（無法取得原始貼文內容）
+
+### 嘗試方法
+
+| 方法 | 嘗試目標 | 結果 |
+|------|----------|------|
+| 方法 A | truthsocial.com/@realDonaldTrump.rss | 403 Forbidden |
+| 方法 A | truthsocial.com/api/v1/accounts/.../statuses | 403 Forbidden |
+| 方法 B | WebSearch: Trump Truth Social today August 4 2026 | 未找到 ts_088 之後的新貼文 |
+| 方法 B | WebSearch: Trump 洛杉磯 RNC 晚宴 Newsom 貿易協議 初選 | 未找到新貼文文字 |
+| 方法 C | thetrumparchive.com | 403 Forbidden |
+| 方法 C | trumpstruth.org | 403 Forbidden |
+| 補充 | conservativetreehouse.com（每日政治帖）| 403 Forbidden |
+| 補充 | whitehouse.gov/releases | 403 Forbidden |
+| 補充 | 多個新聞網站（Fortune, NBC, FOX, CNN…）| 403 Forbidden |
+
+### 今日已追蹤摘要（ts_085～ts_088，前次成功執行）
+
+- ts_085：美伊最後通牒警告（「斬首前最後機會」）
+- ts_086：川普飛赴洛杉磯 RNC 籌款行程
+- ts_087：霍爾木茲貨輪遇襲 + 貝森特「今明達成協議」
+- ts_088：川普抵洛杉磯 RNC 晚宴、砲轟紐薩姆
+
+### 今日背景（WebSearch 搜尋結果）
+
+- 華盛頓州 2026 初選（8/4）：WA-03 John Braun（共和黨，川普背書）vs Marie Gluesenkamp Perez（民主黨）
+- 川普在 Rancho Palos Verdes 出席 RNC 晚宴（太平洋時間 18:30），鎖定紐薩姆
+- 距 2026 年期中選舉剩 91 天
+- Truth Social API 付費服務（月費最高 10 萬美元）持續引發爭議，國會提案立法禁止
+- 川普批准 Section 301 對 EU 科技公司調查（7/24 舊貼，已追蹤）
+
+### 結論
+
+ts_088 之後無法確認新貼文，本次執行未更新 last_seen_id 及貼文目錄，未推播 LINE。
