@@ -68,3 +68,55 @@
 ### 結論
 
 ts_088 之後無法確認新貼文，本次執行未更新 last_seen_id 及貼文目錄，未推播 LINE。
+
+---
+
+## 執行記錄 — Run 26（自動排程）
+
+**執行時間：** 2026-08-04 UTC（密西根初選夜晚間）
+**最後追蹤 ID：** 20260804_ts_090（由 repo 讀取）
+**執行結果：** 未發現 ts_090 之後的新貼文
+
+### 嘗試方法
+
+| 方法 | 嘗試目標 | 結果 |
+|------|----------|------|
+| 方法 A | truthsocial.com/@realDonaldTrump.rss | 403 Forbidden |
+| 方法 A | truthsocial.com/api/v1/accounts/.../statuses | 403 Forbidden |
+| 方法 B | WebSearch: Trump Truth Social posts today August 4 2026（15+ 次搜尋） | 無 ts_090 後新貼文 |
+| 方法 B | WebSearch: Michigan primary results winner August 4 2026 | 初選結果尚未呼叫 |
+| 方法 B | WebSearch: trumpstruth.org statuses 40500-40510 | 40500=Baumgartner（已追蹤）、40501=McKinney（已追蹤） |
+| 方法 C | thetrumparchive.com | 403 Forbidden |
+| 方法 C | trumpstruth.org | 403 Forbidden |
+
+### 已確認 ts_089–ts_090 內容（前次執行已建立）
+
+- **ts_089：** 布蘭奇 AG 提名司法委員會 12-10 通過、5 州初選投票日開始、伊朗「斬首前最後機會」警告
+- **ts_090：** 霍爾木茲「Minoan Pioneer」貨輪遇襲（一名船員失蹤）、美伊談判深度混亂、密西根初選開票夜（詹姆斯領先）
+
+### 搜尋摘要
+
+| 搜尋內容 | 結果 |
+|---|---|
+| 密西根初選最終結果 | 結果仍在計票中，尚無 AP 呼叫 |
+| 川普賀電/賀文（Michigan wins） | 未發現新貼文 |
+| 伊朗協議最新進展 | 無新 Truth Social 貼文（霍爾木茲情勢已在 ts_090 記錄） |
+| trumpstruth.org 狀態 40502–40510 | 未能取得（搜尋未返回相關結果） |
+| 整體今晚新貼文 | 初選結果尚在開票，川普暫無新貼文 |
+
+### 今日背景（初選夜情況）
+
+- **密西根共和黨州長初選**：John James 大幅領先 Perry Johnson，尚未呼叫
+- **密西根民主黨參院初選**：Haley Stevens vs Abdul El-Sayed，結果待出
+- **華盛頓州初選**：McKinney（WA-4）、Baumgartner（WA-5）均為川普背書，郵寄投票結果進行中
+- **堪薩斯州、維吉尼亞州、密蘇里州**：各選區同步計票中
+- **伊朗局勢**：「Minoan Pioneer」遇擊後，美伊談判更加複雜
+
+### 結論
+
+**ts_090 之後無新 Truth Social 貼文可追蹤。**
+
+初選仍在開票，川普暫未發出賀文。last_seen_id.txt 維持 `20260804_ts_090` 不變，未建立新貼文分析檔，不觸發 LINE 推播。下次排程執行時（初選結果出爐後）可能出現賀文。
+
+*Run 26 | WebSearch（15+ 輪）+ git clone 讀取 repo 狀態*
+*執行 Agent：Claude Sonnet 4.6 scheduled task*
