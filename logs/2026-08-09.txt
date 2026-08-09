@@ -76,3 +76,43 @@
 ### 結論
 
 出口代理持續封鎖 truthsocial.com 及主要新聞來源，本次執行再次無法取得 ts_40669 之後的新貼文。last_seen_id.txt 維持 `20260808_ts_40669` 不變，未建立分析檔，不推播 LINE。
+
+---
+
+## 執行記錄 — Run 3（自動排程）
+
+**執行時間：** 2026-08-09 13:08:48 UTC
+**最後追蹤 ID：** 20260808_ts_40669（未變動）
+**執行結果：** 無法取得 ts_40669 之後的新貼文
+
+### 本次新增發現
+
+| 方法 | 結果 |
+|------|------|
+| GitHub API --noproxy 繞過 | 成功（可讀寫 GitHub） |
+| truthsocial.com | EGRESS_BLOCKED |
+| thetrumparchive.com / trumpstruth.org | EGRESS_BLOCKED |
+| WebSearch x10+ 次 | 未能找到 ts_40669 之後的貼文 |
+| skysports.com（高爾夫相關文章）| EGRESS_BLOCKED |
+
+### 今日背景情報（WebSearch 間接取得）
+
+川普 2026-08-09 行程：
+- 上午：Trump National Golf Club Bedminster 行政時間
+- 下午：返回白宮
+- 晚上 7:15 PM：抵達白宮 in-town pool call
+
+未確認是否為新貼文的相關動態（可能發生在 ts_40669 之後）：
+- 關於伊朗戰爭報道指控 WaPo 叛國（約 8/7 週四）
+- 伊朗相關貼文仍持續
+
+已知 Aug 8 貼文（部分早於 ts_40669）：
+- 7:07 AM ts_40657: Eric Schmitt is a STAR!!!
+- 7:09 AM、7:10 AM：未知內容
+- 1:08 PM：未知內容
+
+### 結論
+
+出口代理持續封鎖 truthsocial.com 及主要新聞來源。
+本次發現可繞過代理訪問 GitHub API（--noproxy 旗標）。
+未找到 ts_40669 之後的確定新貼文，last_seen_id.txt 維持不變，未建立分析檔，不推播 LINE。
