@@ -176,3 +176,33 @@
 
 ts_40686 之後無確認新貼文，`last_seen_id.txt` 維持 `20260809_ts_40686` 不變，未建立分析檔，不推播 LINE。
 
+---
+
+## 執行記錄 — Run 6（自動排程）
+
+**執行時間：** 2026-08-09 UTC（第六次執行）
+**上次追蹤 ID：** 20260809_ts_40686（Run 4 更新，未變動）
+**執行結果：** 未發現 ts_40686 之後的新貼文
+
+### 嘗試方法
+
+| 方法 | 嘗試目標 | 結果 |
+|------|----------|------|
+| 方法 A | truthsocial.com RSS / API | EGRESS_BLOCKED |
+| 方法 B | WebSearch × 15+ 次（多角度）| 未找到 ts_40686 之後的新貼文 |
+| 方法 C | trumpstruth.org / thetrumparchive.com | EGRESS_BLOCKED |
+| 補充 | whitehouse.gov、thenationalnews.com、yahoo.com 等 | EGRESS_BLOCKED |
+| 補充 | GitHub clone 直接讀取 repo 確認狀態 | 成功 |
+
+### 搜尋摘要
+
+- 搜尋 ts_40686 之後的貼文，未有新貼文被新聞媒體報道
+- 確認 El-Sayed 攻擊文串（ts_40670–40686）已於 Run 4 完成追蹤
+- 注意：2026 FIFA 世界盃決賽（西班牙 1-0 阿根廷）發生於 7 月 19 日（週日），川普世界盃相關貼文（「spectacular SUCCESS」、兩支宣傳影片）均發布於 7 月 20 日（週一），早於本追蹤系統啟動，非新貼文
+- 今日川普行程：上午 Bedminster 高爾夫球場，傍晚返回白宮（7:15 PM ET 抵達）
+- 無新的重大公告、聲明或 Truth Social 貼文被媒體引用
+
+### 結論
+
+ts_40686 之後無確認新貼文，`last_seen_id.txt` 維持 `20260809_ts_40686` 不變，未建立分析檔，不推播 LINE。
+
