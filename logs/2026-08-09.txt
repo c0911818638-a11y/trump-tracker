@@ -1,48 +1,38 @@
-日期：2026-08-09
-執行時間：2026-08-09T08:58 UTC
+# Trump Truth Social 監控日誌 - 2026-08-09
 
-錯誤記錄：無法取得 Truth Social 最新貼文
+## 執行時間
+2026-08-09 10:03:50 UTC
 
-== 嘗試方法及結果 ==
+## 上次記錄的貼文 ID
+20260808_ts_40669
 
-方法 A：Truth Social API
-  URL: https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20
-  結果：403 Forbidden（網路代理封鎖 truthsocial.com）
+## 嘗試的方法
 
-方法 A'：Truth Social RSS
-  URL: https://truthsocial.com/@realDonaldTrump.rss
-  結果：403 Forbidden（同上）
+### 方法 A：Truth Social 直接訪問
+- https://truthsocial.com/@realDonaldTrump.rss → EGRESS_BLOCKED
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → EGRESS_BLOCKED
 
-方法 B：WebSearch 搜尋
-  關鍵字：Trump Truth Social posts August 9 2026
-  結果：未找到 2026-08-09 的具體貼文內容
-  最新可找到的資料：2026-08-08（貼文 ID 40669 及更早）
+### 方法 B：WebSearch
+- 搜尋結果顯示 2026-08-08 有貼文（7:07 AM、7:09 AM、7:10 AM、1:08 PM）
+- 確認一篇："Eric Schmitt is a STAR!!!" (7:07 AM)
+- 其餘貼文內容無法從搜尋結果取得
 
-方法 C：Trump Archive
-  URL: https://www.thetrumparchive.com/
-  結果：403 Forbidden（代理封鎖）
+### 方法 C：第三方來源
+- https://trumpstruth.org → EGRESS_BLOCKED
+- https://www.thetrumparchive.com → EGRESS_BLOCKED
+- https://trumpstruth.org/statuses/40670 → EGRESS_BLOCKED
+- https://www.trumpmeter.live → EGRESS_BLOCKED
+- https://www.presidency.ucsb.edu → EGRESS_BLOCKED
 
-方法 C'：trumpstruth.org
-  URL: https://trumpstruth.org/
-  結果：403 Forbidden（代理封鎖）
+### 其他新聞網站（全部被封鎖）
+- nbcnews.com, foxnews.com, cnn.com, bloomberg.com, forbes.com
+- axios.com, thehill.com, npr.org, aljazeera.com, cnbc.com
+- washingtontimes.com, timesofisrael.com, thedailybeast.com
+- rt.com, france24.com, oann.com, time.com
 
-== 封鎖的網域 ==
-- truthsocial.com
-- thetrumparchive.com
-- trumpstruth.org
-- nbcnews.com, abcnews.com, cbsnews.com
-- yahoo.com, aol.com
-- slate.com, variety.com
-- thedailybeast.com, atlantablackstar.com
-- x.com (Twitter)
+## 錯誤原因
+網路出口代理（egress proxy）封鎖了對 truthsocial.com 及絕大多數新聞網站的訪問。
+無法可靠地識別 last_seen_id（20260808_ts_40669）之後的新貼文。
 
-== 可存取資源 ==
-- WebSearch（Bing/Google）：可使用，但找不到今日貼文
-- GitHub：API 被 session 攔截，但 git clone/push 正常
-
-== 當前狀態 ==
-最後已處理貼文 ID：20260808_ts_40669（2026-08-08）
-搜尋結果顯示 2026-08-09 尚無新貼文被索引，
-或川普今日（美東時間凌晨）尚未發文。
-
-不推播 LINE，不建立分析檔。
+## 結論
+無法取得新貼文，不建立分析檔案，不推播 LINE。
