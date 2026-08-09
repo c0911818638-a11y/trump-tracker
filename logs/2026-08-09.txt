@@ -206,3 +206,35 @@ ts_40686 之後無確認新貼文，`last_seen_id.txt` 維持 `20260809_ts_40686
 
 ts_40686 之後無確認新貼文，`last_seen_id.txt` 維持 `20260809_ts_40686` 不變，未建立分析檔，不推播 LINE。
 
+
+---
+
+## 執行記錄 — Run 8（自動排程）
+
+**執行時間：** 2026-08-09 UTC（第八次執行）
+**上次追蹤 ID：** 20260809_ts_40686（未變動）
+**執行結果：** 無法取得新貼文（代理封鎖）
+
+### 嘗試方法
+
+| 方法 | 嘗試目標 | 結果 |
+|------|----------|------|
+| 方法 A | truthsocial.com RSS / API | EGRESS_BLOCKED |
+| 方法 B | WebSearch × 10+ 次（多角度）| 未找到 ts_40686 之後的新貼文 |
+| 方法 C | trumpstruth.org / thetrumparchive.com | EGRESS_BLOCKED |
+| 補充 | thedailybeast, rawstory, thehill, breitbart, justthenews 等 | EGRESS_BLOCKED |
+| 補充 | washingtonpost, nbcnews, cbsnews, cnbc, slate, variety, npr | EGRESS_BLOCKED |
+| 補充 | rollcall.com, trumptruth.org, rsbnetwork.com | EGRESS_BLOCKED |
+| 補充 | x.com (TrumpTruthOnX) | EGRESS_BLOCKED |
+
+### 搜尋摘要
+
+- 搜尋「Trump Truth Social post August 9 2026 after noon/evening」：無新貼文
+- 搜尋 ID「40687 OR 40688 OR 40689 OR 40690」：未找到相關頁面
+- 搜尋「Trump truth social new post」最新結果仍指向 August 8-9 上午的貼文（已追蹤）
+- 確認：所有搜尋結果均指向已於 Run 4 追蹤的 El-Sayed 攻擊文串（40670-40686）
+
+### 結論
+
+網路出口代理封鎖持續。ts_40686 之後無確認新貼文，`last_seen_id.txt` 維持 `20260809_ts_40686` 不變，未建立分析檔，不推播 LINE。
+
