@@ -147,3 +147,32 @@
 - 更新 `state/last_seen_id.txt`：20260808_ts_40669 → 20260809_ts_40686
 - 推送至 GitHub，LINE 通知由 GitHub Actions 自動觸發
 
+---
+
+## 執行記錄 — Run 5（自動排程）
+
+**執行時間：** 2026-08-09 16:09 UTC（第五次執行）
+**上次追蹤 ID：** 20260809_ts_40686（Run 4 更新）
+**執行結果：** 未發現 ts_40686 之後的新貼文
+
+### 嘗試方法
+
+| 方法 | 嘗試目標 | 結果 |
+|------|----------|------|
+| 方法 A | truthsocial.com RSS / API | EGRESS_BLOCKED |
+| 方法 B | WebSearch × 20+ 次 | 未找到 ts_40686 之後的新貼文 |
+| 方法 C | trumpstruth.org / thetrumparchive.com | EGRESS_BLOCKED |
+| 補充 | 多家新聞網站（thedailybeast, rawstory, mediaite 等）| EGRESS_BLOCKED |
+| 補充 | GitHub clone 直接讀取 repo 確認 Run 4 已完成 | 成功 |
+
+### 搜尋摘要
+
+- 確認 2026-08-09 為星期日（August 8 為星期六）
+- 確認 Run 4 已捕捉 El-Sayed 貼文串（ts_40670–40686），已建立 `posts/2026-08-09_40670-40686.md`
+- 搜尋 2026-08-09 下午新貼文：無重大新貼文被新聞媒體報道
+- 川普行程：上午 Bedminster 高爾夫球場，下午返回白宮（晚間 7:15 PM 抵達）
+
+### 結論
+
+ts_40686 之後無確認新貼文，`last_seen_id.txt` 維持 `20260809_ts_40686` 不變，未建立分析檔，不推播 LINE。
+
