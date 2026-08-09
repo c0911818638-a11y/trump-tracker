@@ -36,3 +36,43 @@
 
 ## 結論
 無法取得新貼文，不建立分析檔案，不推播 LINE。
+
+---
+
+## 執行記錄 — Run 2（自動排程）
+
+**執行時間：** 2026-08-09 UTC（第二次執行）
+**最後追蹤 ID：** 20260808_ts_40669（未變動）
+**執行結果：** 同樣無法取得新貼文
+
+### 嘗試方法
+
+| 方法 | 嘗試目標 | 結果 |
+|------|----------|------|
+| 方法 A | truthsocial.com RSS / API | EGRESS_BLOCKED |
+| 方法 B | WebSearch × 15+ 次 | 未找到 ts_40669 之後的新貼文內容 |
+| 方法 C | trumpstruth.org / thetrumparchive.com / trumpmeter.live | EGRESS_BLOCKED |
+| 補充 | theconservativetreehouse.com（每日政治帖）| EGRESS_BLOCKED |
+| 補充 | whitehouse.gov, reuters.com, npr.org, cnbc.com 等 | EGRESS_BLOCKED |
+| 補充 | germany.news-pravda.com（發現含 2026-08-09 Trump Truth Social 標題）| EGRESS_BLOCKED |
+| 補充 | axios.com, variety.com, cbsnews.com, nbcnews.com | EGRESS_BLOCKED |
+
+### 搜尋摘要（WebSearch 仍有部分資訊）
+
+| 搜尋內容 | 結果摘要 |
+|---|---|
+| 2026-08-08 貼文 | 確認 7:07 AM "Eric Schmitt is a STAR!!!" (status 40657)、7:09 AM、7:10 AM (40659)、1:08 PM (時間戳不明) |
+| 2026-08-09 貼文 | 無法從任何搜尋結果中取得 |
+| trumpstruth.org status 40670+ | 搜尋未返回任何 40670 以後的帖子 |
+| whitehouse.gov ICYMI 聲明（出現於搜尋）| 網域封鎖，無法讀取 |
+
+### 背景資訊（WebSearch 間接取得）
+
+- Truth Social API 付費服務（最高月費 $10 萬）已於 8/1 正式上線，提供機構客戶毫秒級早讀
+- 川普媒體（TMTG）Q1 2026 淨銷售 $871,200，淨虧損 $405.9 百萬
+- 伊朗局勢仍持續，美伊談判與 Houthi 問題交纏
+- 白宮公布新一批貿易夥伴關稅（取代臨時 10% 稅率）
+
+### 結論
+
+出口代理持續封鎖 truthsocial.com 及主要新聞來源，本次執行再次無法取得 ts_40669 之後的新貼文。last_seen_id.txt 維持 `20260808_ts_40669` 不變，未建立分析檔，不推播 LINE。
