@@ -1,23 +1,48 @@
-[2026-08-09 07:55 UTC] 監控執行記錄
+日期：2026-08-09
+執行時間：2026-08-09T08:58 UTC
 
-狀態：無法確認是否有新貼文
+錯誤記錄：無法取得 Truth Social 最新貼文
 
-執行結果：
-- last_seen_id: 20260808_ts_40669 (2026-08-08 20:49 UTC)
-- 嘗試方法 A：truthsocial.com RSS/API → EGRESS_BLOCKED（被 proxy 封鎖）
-- 嘗試方法 A：truthsocial.com API v1 → EGRESS_BLOCKED
-- 嘗試方法 B：WebSearch 搜尋 Trump Truth Social August 9 2026 → 未找到 40669 之後的新貼文
-  - 多次搜尋關鍵詞組合均無結果
-- 嘗試方法 C：thetrumparchive.com → EGRESS_BLOCKED
-- 嘗試 trumpstruth.org 個別頁面（40670, 40671 等）→ EGRESS_BLOCKED
-- 嘗試多個新聞網站（NBC, CBS, WashPost, NYT, Axios, Poynter 等）→ 全部 EGRESS_BLOCKED
-- 已確認：截至 2026-08-08 20:49 UTC，最後一則貼文 ID 為 40669
+== 嘗試方法及結果 ==
 
-結論：
-  網路出口代理封鎖大多數新聞/社群媒體網站。
-  WebSearch 未發現 2026-08-09 的新貼文。
-  可能原因：(1) 川普今日尚未發文；(2) 貼文尚未被搜尋引擎索引。
-  不建立新貼文分析檔，不推播 LINE。
-  last_seen_id 維持 20260808_ts_40669 不變。
+方法 A：Truth Social API
+  URL: https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20
+  結果：403 Forbidden（網路代理封鎖 truthsocial.com）
 
-下次執行：繼續監控 40669 之後的新貼文。
+方法 A'：Truth Social RSS
+  URL: https://truthsocial.com/@realDonaldTrump.rss
+  結果：403 Forbidden（同上）
+
+方法 B：WebSearch 搜尋
+  關鍵字：Trump Truth Social posts August 9 2026
+  結果：未找到 2026-08-09 的具體貼文內容
+  最新可找到的資料：2026-08-08（貼文 ID 40669 及更早）
+
+方法 C：Trump Archive
+  URL: https://www.thetrumparchive.com/
+  結果：403 Forbidden（代理封鎖）
+
+方法 C'：trumpstruth.org
+  URL: https://trumpstruth.org/
+  結果：403 Forbidden（代理封鎖）
+
+== 封鎖的網域 ==
+- truthsocial.com
+- thetrumparchive.com
+- trumpstruth.org
+- nbcnews.com, abcnews.com, cbsnews.com
+- yahoo.com, aol.com
+- slate.com, variety.com
+- thedailybeast.com, atlantablackstar.com
+- x.com (Twitter)
+
+== 可存取資源 ==
+- WebSearch（Bing/Google）：可使用，但找不到今日貼文
+- GitHub：API 被 session 攔截，但 git clone/push 正常
+
+== 當前狀態 ==
+最後已處理貼文 ID：20260808_ts_40669（2026-08-08）
+搜尋結果顯示 2026-08-09 尚無新貼文被索引，
+或川普今日（美東時間凌晨）尚未發文。
+
+不推播 LINE，不建立分析檔。
