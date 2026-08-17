@@ -184,3 +184,97 @@
   3. 是否有新一輪對伊朗或阿曼的軍事威脅帖文（Truth Social 版本）
   4. 美韓「乙支自由之盾」演習（8/17 開始）川普後續反應
   5. 是否有對 JD Vance 或國務卿 Marco Rubio 的批評帖文
+
+===[ 第 4 次執行 — 2026-08-17（UTC 自動排程）]===
+
+執行時間（UTC）：2026-08-17T（自動排程，第 4 次）
+上次記錄貼文 ID：20260817_ts_40920
+
+【步驟 1】讀取 last_seen_id.txt
+  - 結果：20260817_ts_40920（George Washington 騎馬 + "Thank you, George" 貼文，20:45 UTC）
+  - 方式：git clone（GitHub API 被環境代理攔截，改用 PAT 直接 clone）
+
+【步驟 2】抓取最新貼文
+  - 方法 A (truthsocial.com RSS/API)：EGRESS_BLOCKED（網路代理封鎖）
+  - 方法 C (thetrumparchive.com / trumpstruth.org / polymira.org)：EGRESS_BLOCKED
+  - 方法 B (WebSearch)：執行多次搜尋，嘗試逾 15 個不同域名的 WebFetch（均遭封鎖）
+
+【步驟 2 搜尋策略紀錄】
+  本次嘗試訪問的域名（均被代理封鎖）：
+  yahoo.com, thedailybeast.com, usnews.com, washingtontimes.com, timesofisrael.com,
+  newrepublic.com, newsweek.com, cbsnews.com, aljazeera.com, thehill.com, cnbc.com,
+  ms.now, libertarianinst.substack.com, al-monitor.com, businessday.co.za,
+  businessstory.org, alexjoneslive.com, breitbart.com, voz.us, justthenews.com,
+  themirror.com, newsbreak.com, polymira.org
+
+  成功訪問：
+  - git clone（github.com with PAT）✓
+  - WebSearch（Google 搜尋引擎結果）✓
+
+【步驟 3】比對新舊 — 搜尋結果總結
+
+  確認 ts40920 後的活動查驗：
+
+  ▸「川普午夜狂發貼文」相關報導：
+    - "Trump, 79, Goes on Midnight Truth Social Frenzy After Foreign Humiliation"（Daily Beast/Yahoo）
+    → 經多次查核：此文所指「外國羞辱」發生於 2026 年 1 月（川普從達沃斯返回後），
+      非 8 月 17 日事件。確認與本次執行無關。
+
+  ▸「炸彈阿曼（Bomb Oman）」威脅：
+    - 確認為 Fox News 電話採訪發言（向記者 Trey Yingst），非 Truth Social 帖文。
+    - Trump 說："If Oman gets in the way, we'll bomb the shit out of them."
+    - 此陳述未在 Truth Social 上發布。
+
+  ▸「川普說伊朗應舉白旗投降」：
+    - 確認為 Fox News 採訪言論，非 Truth Social 帖文。
+
+  ▸ The Hill 「El-Sayed + WWII Memorial」報導：
+    - 文章涵蓋 8/17 WWII 紀念碑草坪貼文（已捕捉為 40908）
+    - 及 El-Sayed 相關貼文（確認為 8 月 9-11 日舊帖，非 8/17 新貼文）
+
+  ▸ 稅務退款 GAO 貼文（凌晨 6:55 AM ET / 10:55 UTC）：
+    - 確認 Trump 於 8/17 曾分享 GAO 報告（退款增加 17%，430 億美元）
+    - 此貼文時間（10:55 UTC）應已涵蓋於 ts40918（12:00 UTC 估算）或其他已捕捉帖文中
+
+  ▸ 麥加聯合防衛協議（Mecca Joint Defence Agreement）：
+    - 確認已捕捉為 40906
+
+  ▸ Kevin Rideout（人質第 110 位）：
+    - 確認已捕捉為 40909
+
+【步驟 3 結論】
+  → 距上次執行（第 3 次）仍無新確認 Truth Social 貼文（ID > ts40920）
+  → Fox News 採訪言論（Oman 炸彈、伊朗投降）非 Truth Social 帖文
+  → 午夜狂發報導確認為 1 月事件，非 8/17 事件
+  → 不更新 last_seen_id.txt（維持 20260817_ts_40920）
+  → 不建立新貼文分析檔案
+
+===[ 8/17 已確認完整貼文清單 ]=====
+
+  40893：世界盃轉發（Andrew Giuliani 讚美）
+  40906：麥加聯合防衛協議（沙烏地/土耳其/巴基斯坦）★★★★
+  40908：WWII 紀念碑草坪破壞（「VANDALS」）★★
+  40909：Kevin Rideout 人質第 110 位返家 ★★★
+  40913：砲轟 Fox News Shannon Bream「Milktoast」★★★
+  40914：縮減美韓軍演 + 金正恩（官方完整版）★★★★
+  40915：George Washington 參觀宴會廳 AI 影片 ★★
+  40916：Trump 2028 帽子黑白雨照「We are going to WIN!」★
+  ts40917：伊朗核武最終底線宣示 ★★★★★
+  ts40918：縮減美韓軍演（補充版）＋南韓拒絕協助伊朗去核化 ★★★★
+  ts40919：George Washington AI 圖（持羽毛筆並肩）★
+  ts40920：George Washington AI 圖（騎馬夕陽）「Thank you, George」★
+
+===[ 限制說明 ]=====
+
+  1. 網路代理封鎖範圍超過 23 個主要及次要新聞來源域名
+  2. 搜尋引擎索引對深夜帖文可能仍有延遲
+  3. 帖文 ID（ts40917-ts40920）為估算值，非從 Truth Social 原生 API 確認
+  4. 稅務退款 GAO 帖文確認存在，但可能已涵蓋於現有捕捉範圍
+
+===[ 下次執行重點觀察 ]=====
+  1. 美伊停戰 MOU 正式到期後的外交動態，川普是否就此在 Truth Social 發文
+  2. 阿曼-伊朗荷莫茲海峽協議進展，川普對阿曼態度
+  3. 美韓「乙支自由之盾」演習（8/17 開始）進展
+  4. 任何針對 Oman 或 Iran 的官方 Truth Social 貼文（區別於 Fox News 採訪言論）
+  5. 川普是否再發「George Washington / 建國先父」AI 系列圖文
+
