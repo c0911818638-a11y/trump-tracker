@@ -58,3 +58,66 @@
   1. 網路代理持續封鎖 truthsocial.com、trumpstruth.org、多數新聞域名
   2. 貼文 ID 40891、40892 為估算值（依發布時間及前後序列推算），非從 trumpstruth.org 直接確認
   3. 40892「南韓/伊朗」內容能否確認為獨立一帖仍待查驗——部分來源將兩段合為同一貼文報導
+
+===[ 第 2 次執行 — 2026-08-17（UTC 自動排程）]===
+
+執行時間（UTC）：2026-08-17T（自動排程，第 2 次）
+上次記錄貼文 ID：20260817_ts_40920（George Washington 騎馬 + "Thank you, George" 貼文，20:45 UTC）
+
+【步驟 1】讀取 last_seen_id.txt
+  - 結果：20260817_ts_40920
+  - 方式：git clone（GitHub API 被環境代理攔截，改用 PAT 直接 clone）
+
+【步驟 2】抓取最新貼文
+  - 方法 A (truthsocial.com RSS/API)：EGRESS_BLOCKED
+  - 方法 C (thetrumparchive.com / trumpstruth.org)：EGRESS_BLOCKED
+  - 方法 B (WebSearch)：成功執行多次搜尋（約 15 次搜尋 + 多次 WebFetch 嘗試）
+
+【步驟 3】比對新舊 — 搜尋結果分析
+
+  確認已捕捉的 8/17 貼文（ts40917～ts40920）：
+  ▸ ts40917（07:30 UTC）：伊朗核武宣示——"The number one Goal is, and always will be, that Iran cannot have a Nuclear Weapon"
+  ▸ ts40918（12:00 UTC）：美韓軍演削減 + 金正恩關係聲明（含「南韓拒伊朗去核，No thanks!」）
+  ▸ ts40919（20:22 UTC）：George Washington AI 圖（持羽毛筆並肩）
+  ▸ ts40920（20:45 UTC）：George Washington AI 圖（騎馬夕陽）+ "Thank you, George"
+
+  本次搜尋發現的「後 ts40920」活動跡象：
+  ▸ Daily Beast 標題：「Trump, 79, Goes on Midnight Truth Social Frenzy After Foreign Humiliation」
+    → 「外國羞辱」推估為：阿曼宣布與伊朗就霍爾木茲海峽達成繞過美國的通行協議
+    → 原文無法擷取（egress proxy 封鎖 thedailybeast.com）
+  ▸ Yahoo News：「Trump's wild midnight Truth Social posting binge features over 150 messages」
+    → 無法確認是否為 8/17 深夜（egress proxy 封鎖 yahoo.com）
+  ▸ Mirror US：「Donald Trump posts unhinged late night frenzy on Truth Social with 13 posts in 15 mins」
+    → 無法確認日期（egress proxy 封鎖 themirror.com）
+  ▸ AOL：「Trump shares 8 random late-night posts on Truth Social as Middle East burns」
+    → 無法確認是否為 8/17（egress proxy 封鎖 aol.com）
+
+【步驟 3 結論】
+  → 未能從可訪問來源中確認任何 ts40920 之後的具體貼文內容
+  → 有多方跡象顯示 8/17 深夜確有發文高峰（與阿曼-伊朗霍爾木茲協議相關），但無法取得具體貼文文字
+  → 貼文文字和 ID 均未確認
+  → 不更新 last_seen_id.txt（維持 20260817_ts_40920）
+  → 不建立新貼文分析檔案
+
+【搜尋結果摘要（8/17 已知脈絡）】
+
+  阿曼-伊朗協議（霍爾木茲）：
+  - 60 天 MOU 於 8/17 屆滿，伊朗宣布與阿曼達成霍爾木茲通行協議
+  - 川普在 Fox News 訪談威脅：「If Oman gets in the way, we'll bomb the s*** out of them」（非 Truth Social 貼文）
+  - 此為「外國羞辱」事件，可能觸發深夜 Truth Social 發文潮
+
+  深夜發文高峰指標：
+  - 搜尋結果標題顯示有大量深夜貼文（150+）
+  - 包含伊朗戰場、Melania 貼文、政治攻擊等多樣內容
+  - 目前搜尋引擎尚未充分索引這些深夜貼文的具體文字
+
+===[ 執行限制 ]=====
+  1. 代理封鎖：thedailybeast.com、yahoo.com、rawstory.com、foxnews.com、cnbc.com、cnn.com、washingtonpost.com、themirror.com、aol.com 等主要新聞來源均無法訪問
+  2. 搜尋引擎索引延遲：深夜貼文（UTC 21:00+）可能尚未被充分索引
+  3. 上次 ID 為估算值（ts40920 非 Truth Social 原生 ID）
+
+===[ 下次執行重點觀察 ]=====
+  1. 8/17 深夜 Truth Social 大量貼文（關鍵字：阿曼、伊朗、霍爾木茲、投降）
+  2. 川普對阿曼-伊朗霍爾木茲協議的官方 Truth Social 反應
+  3. 是否出現新一輪對伊朗的軍事威脅（炸彈/攻擊）貼文
+  4. 是否有針對 JD Vance 的貼文（副總統對停戰條件立場）
