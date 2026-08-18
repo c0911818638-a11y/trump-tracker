@@ -1,17 +1,25 @@
-日期: 2026-08-18
-執行時間: 2026-08-18 05:58:00 UTC
+[2026-08-18] 監控執行日誌
 
-錯誤記錄：
-- 方法A：truthsocial.com 網域被代理封鎖 (EGRESS_BLOCKED)
-- 方法B：WebSearch 搜尋結果未找到 2026-08-18 的具體貼文 ID 及全文內容
-  - 搜尋了 'Trump Truth Social posts today site:truthsocial.com OR site:thetrumparchive.com'
-  - 搜尋了 'Trump Truth Social August 18 2026 latest posts statement'
-  - 搜尋了 '"realDonaldTrump" Truth Social post "August 18" 2026'
-  - 各搜尋結果僅提及 8/17 的貼文（伊朗核武、稅務退款），無 8/18 完整貼文
-- 方法C：thetrumparchive.com、trumpstruth.org、rollcall.com 均被代理封鎖 (EGRESS_BLOCKED)
-- 其他嘗試網域均被封鎖：nbcnews.com、cnn.com、cnbc.com、npr.org、wikipedia.org、yahoo.com
+執行時間：2026-08-18（佛羅里達州初選日）
+最後已知貼文 ID：40949
 
-上次已記錄的貼文 ID：20260818_40940
-今日新貼文：無法取得（所有資料來源不可存取）
+【抓取結果】
+方法A：truthsocial.com — 被 egress proxy 封鎖（403 Forbidden）
+方法B：WebSearch — 僅能取得舊貼文摘要，未找到 ID > 40949 的新貼文
+方法C：thetrumparchive.com — 被 egress proxy 封鎖（403 Forbidden）
+        trumpstruth.org — 被 egress proxy 封鎖（403 Forbidden）
+        tagteam.harvard.edu — 被 egress proxy 封鎖（403 Forbidden）
+        presidency.ucsb.edu — 被 egress proxy 封鎖（403 Forbidden）
+        所有主要新聞網站（foxnews.com、newsweek.com、rawstory.com 等）均被封鎖
 
-不建立貼文分析檔，不推播 LINE。
+【WebSearch 搜尋到的背景資訊（無法確認為新貼文）】
+- 2026-08-17：川普發布 AI 生成的與喬治·華盛頓合照（騎馬、簽文件）
+- 2026-08-17：川普發布「Trump 2028」帽子圖片，附文「We are going to win」
+- 2026-08-17：川普發布稅退款統計文章（GAO：退稅增加 17%）
+- 2026-08-17：川普發文稱伊朗不得擁有核武器
+- 2026-08-18（選舉日）：已追蹤之 ID 40932 Byron Donalds 背書、ID 40949 Catalina Lauf 背書
+- 尚未找到 ID > 40949 的新貼文
+
+【結論】
+網路代理封鎖導致無法直接讀取新貼文，WebSearch 搜尋結果中尚未出現比 ID 40949 更新的貼文索引。
+未建立新貼文分析檔，未更新 last_seen_id.txt，未推播 LINE 通知。
