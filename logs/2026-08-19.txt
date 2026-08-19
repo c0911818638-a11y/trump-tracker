@@ -1,32 +1,15 @@
-# 執行日誌 - 2026-08-19
+[2026-08-19] 執行失敗記錄
 
-## 執行時間
-2026-08-19（第二次執行）
+錯誤原因：
+- truthsocial.com 被網路 egress proxy 封鎖（EGRESS_BLOCKED）
+- thetrumparchive.com 被網路 egress proxy 封鎖（EGRESS_BLOCKED）
+- WebSearch 僅回傳連結，無貼文內容
 
-## 上次記錄貼文 ID（執行前）
-20260819_40956
+嘗試方法：
+1. WebFetch: https://truthsocial.com/@realDonaldTrump.rss → EGRESS_BLOCKED
+2. WebFetch: https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 → EGRESS_BLOCKED
+3. WebFetch: https://www.thetrumparchive.com/ → EGRESS_BLOCKED
+4. WebSearch: 'Trump Truth Social posts today' → 僅回傳頁面連結，無貼文內容
 
-## 執行結果
-
-### 方法 A (WebFetch - truthsocial.com)
-失敗：EGRESS_BLOCKED
-
-### 方法 B (WebSearch)
-成功取得部分貼文內容，透過多次搜尋確認新貼文
-
-### 新貼文
-發現並分析 2 篇新貼文：
-
-1. **貼文 40961** - Lindsey Graham 戴 Trump 2028 帽子
-   - 發布時間：2026-08-18 晚上（美東時間）
-   - 重要程度：低
-
-2. **貼文 40963** - 美加關稅協議：暫停 50% 關稅三天，提及 Keystone XL 輸油管道
-   - 發布時間：2026-08-18 約 22:00 ET
-   - 重要程度：高
-
-## 更新後 last_seen_id
-20260818_40963
-
-## GitHub 推播
-成功，LINE 通知由 GitHub Actions 自動觸發
+未建立貼文分析檔，未發送 LINE 通知。
+last_seen_id 維持不變：20260818_40963
