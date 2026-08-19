@@ -1,12 +1,19 @@
-# 川普 Truth Social 監控日誌 - 2026-08-19
+# 錯誤日誌 - 2026-08-19
 
-執行時間：2026-08-19 00:01:13 UTC
-上次捕獲 ID：20260818_40955
-對應貼文：Chris Garten/Indiana Pro Tempore（2026-08-18 18:32 UTC）
+## 執行時間
+2026-08-19T01:57:50Z
 
-結果：無新貼文
+## 上次記錄貼文 ID
+20260819_40956
 
-搜尋範圍：2026-08-18 18:32 UTC 之後至本次執行時
-已嘗試方法：WebSearch 多關鍵字搜尋今日最新貼文
+## 錯誤詳情
 
-結論：本次執行未發現 ID > 40955 的新貼文。last_seen_id 維持不變。不建立貼文檔，不推播 LINE。
+所有取得 Trump Truth Social 貼文的方法均失敗：
+
+- **方法 A** (WebFetch - truthsocial.com RSS/API)：EGRESS_BLOCKED
+- **方法 B** (WebSearch)：未能取得具體貼文內容，大多數新聞網站均被代理封鎖
+- **方法 C** (WebFetch - thetrumparchive.com)：EGRESS_BLOCKED
+
+## 結論
+
+由於網路出口代理限制，無法取得今日貼文內容。本次執行未更新 last_seen_id.txt，不發送 LINE 通知。
