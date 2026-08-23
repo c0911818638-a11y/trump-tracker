@@ -1,24 +1,17 @@
-監控執行時間：2026-08-23
-執行結果：未發現新貼文（第二次執行）
-last_seen_id：41128
+[2026-08-23] Trump Truth Social 監控日誌
 
-嘗試方式：
-- WebFetch: truthsocial.com RSS → EGRESS_BLOCKED
-- WebFetch: truthsocial.com API → EGRESS_BLOCKED
-- WebSearch: 多次搜尋今日新貼文
-- WebFetch: thetrumparchive.com → EGRESS_BLOCKED
-- WebFetch: trumpstruth.org → EGRESS_BLOCKED
-- WebFetch: france24.com, abc.net.au, foxbusiness.com 等 → EGRESS_BLOCKED
+執行時間：2026-08-23 UTC
+上次紀錄 ID：41128
 
-搜尋結果摘要：
-今日（2026-08-23）已確認的最新貼文仍為 ID 41128（Canada 關稅貼文，01:06 UTC），
-以及 ID 41126（Mark Levin 藍州貼文，00:18 UTC）。兩者均已在前次執行中完成分析並上傳。
-目前未發現 ID > 41128 之新貼文。
+搜尋結果：
+- 方法 A（直接 RSS/API）：失敗，truthsocial.com 被代理封鎖
+- 方法 B（WebSearch）：搜尋到的最新貼文為 ID 41126（00:18 UTC）和 41128（01:06 UTC），均已於上次執行中記錄
+- 方法 C（thetrumparchive.com）：失敗，被代理封鎖
 
-背景資訊：
-- Freedom 250 Grand Prix 於今日（2026-08-23）在華盛頓DC國家廣場舉行
-- 川普預計乘坐「總統座車（The Beast）」繞行賽道一圈，並與梅拉妮亞觀賽
-- 美加貿易戰持續升溫：加拿大宣佈將以「一元換一元」方式報復美國50%關稅
-- 本次執行未發現賽後新貼文（可能尚未發布或搜尋引擎尚未索引）
+額外資訊：
+- Forth.news 報導 "Trump Reposts Own Content on Truth Social, No New Policy Announcements"
+  顯示 2026-08-23 川普主要重發舊內容，無新政策宣告
+- 美加關稅衝突持續（美對加實施 50% 關稅，加拿大宣布 9/8 起反制）
+- ID 41128 後無可驗證的新原創貼文
 
-注意：如有新貼文在稍後美東時間發布，下次排程執行時將自動捕捉。
+結論：無新貼文需處理，state/last_seen_id.txt 維持 41128 不變。
