@@ -64,4 +64,24 @@
 - 方法 C（thetrumparchive.com）：失敗，被代理封鎖
 
 結論：ID 41130 後無新貼文。last_seen_id 維持 41130，不更新 state，不推播 LINE。
+---
+[2026-08-23 第五次執行]
+
+執行時間：2026-08-23 UTC（排程觸發）
+上次紀錄 ID：41130
+
+搜尋結果：
+- 方法 A（truthsocial.com RSS/API）：失敗，被代理封鎖
+- 方法 B（WebSearch）：
+  - 確認 41126-41130 均已記錄，為今日（UTC）最早貼文
+  - 搜尋「Trump Truth Social August 23 2026 afternoon posts」：未發現 ID > 41130 新貼文
+  - Freedom 250 IndyCar 大獎賽於 DC 舉行，Trump 揮旗起跑（「The track is wonderful」）
+  - 相關 Truth Social AI 影片貼文屬 2026-07-16 舊帖（ID 40083），非今日新貼
+  - 之前誤判的「Wild Sunday Posting Spree」（Kaitlan Collins、FAFO 油輪、Star Trek、Dr Trump 等）係 2026-07-26 舊聞
+  - 今日 Forth.news 確認：主要重發舊內容，無新政策宣告
+- 方法 C（thetrumparchive.com）：失敗，被代理封鎖
+
+今日背景：Freedom 250 DC、加拿大 9/8 反制關稅、牛肉進口放寬、伊朗制裁擴大
+
+結論：ID 41130 後無新可確認貼文。維持 last_seen_id 41130，不推播。
 
