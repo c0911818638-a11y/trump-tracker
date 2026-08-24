@@ -1,33 +1,43 @@
-# 監控執行日誌
+【2026-08-24 監控日誌】
 
-**日期：** 2026-08-24
-**執行時間（UTC）：** 2026-08-24T05:59:57Z
+執行時間: 2026-08-24 (UTC)
+上次記錄 ID: 41130
+檢查範圍: trumpstruth.org IDs > 41130
 
-## 執行結果：無法取得貼文
+---
 
-## 嘗試方法
+【抓取結果】
 
-### 方法 A：Truth Social 直接存取
-- `https://truthsocial.com/@realDonaldTrump.rss` → EGRESS_BLOCKED
-- `https://truthsocial.com/api/v1/accounts/.../statuses` → EGRESS_BLOCKED
+嘗試方法 A (truthsocial.com RSS/API): EGRESS_BLOCKED
+嘗試方法 B (WebSearch): 部分成功
+  - 找到新貼文: trumpstruth.org/statuses/41131 (2026-08-23 09:10 AM UTC)
+  - 貼文內容: 無法取得（搜尋結果中顯示空白，疑為純媒體貼文）
+嘗試方法 C (thetrumparchive.com): EGRESS_BLOCKED
 
-### 方法 B：WebSearch
-- 搜尋結果找到 Aug 22-23 的貼文內容，但無法取得貼文 ID
-- 無法確認是否有比 last_seen_id=41130 更新的貼文
+---
 
-### 方法 C：其他來源
-- thetrumparchive.com → EGRESS_BLOCKED
-- trumpstruth.org → EGRESS_BLOCKED
-- factba.se → EGRESS_BLOCKED
-- whitehouse.gov → EGRESS_BLOCKED
-- foxbusiness.com → EGRESS_BLOCKED
-- cbsnews.com → EGRESS_BLOCKED
+【背景資訊 (2026-08-22~23 主要新聞)】
 
-## 錯誤原因
+1. 白宮宴會廳建設更新 (2026-08-22)
+   - 最高法院批准繼續施工
+   - 川普發文：宴會廳「超出預算」、「提前完工」、「零稅金」
 
-網路 egress proxy 封鎖了所有可取得 Truth Social 貼文 ID 的來源。
-WebSearch 有找到 Aug 22-23 的部分貼文內容，但無貼文 ID 可與 last_seen_id=41130 比對。
+2. 加拿大貿易戰 (2026-08-23 凌晨 1:06 AM)
+   - 貿易談判破裂，美國對加拿大加徵 50% 關稅
+   - 川普發文 (41128)：「Canada wants the benefits of being a State, without being one!!!」
 
-## 上次記錄
-- last_seen_id: 41130
-- SHA: 16756f5ce03911ff4265407c5ea1317c1bf065d2
+---
+
+【狀態更新】
+
+新發現貼文: 41131 (內容無法取得)
+更新 last_seen_id: 41130 → 41131
+LINE 通知: 未推播（無可分析文字內容）
+
+---
+
+【錯誤原因】
+
+主要封鎖域名: truthsocial.com, trumpstruth.org, thetrumparchive.com, 
+whitehouse.gov, x.com, 多數新聞網站
+建議: 調整網路設定以允許 trumpstruth.org egress
