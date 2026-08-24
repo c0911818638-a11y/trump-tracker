@@ -1,33 +1,33 @@
-[2026-08-24] Trump Truth Social 監控日誌
+# 監控執行日誌
 
-執行時間：2026-08-24 UTC（排程觸發）
-上次紀錄 ID：41130
+**日期：** 2026-08-24
+**執行時間（UTC）：** 2026-08-24T05:59:57Z
 
-搜尋結果：
-- 方法 A（truthsocial.com RSS/API）：失敗，truthsocial.com 被代理封鎖
-- 方法 B（WebSearch）：
-  - 搜尋「Trump Truth Social post August 24 2026 Monday」：無新貼文
-  - 搜尋「Trump Truth Social "August 24" 2026 new statement」：無新貼文
-  - 搜尋「Trump Truth Social "August 24" post Canada Monday morning 2026」：無新貼文
-  - 所有搜尋結果仍指向已記錄的 ID 41126-41130（2026-08-23 凌晨貼文）
-  - 加拿大貿易談判背景：50% 關稅已生效，加拿大宣布 9/8 反制
-  - 未發現 ID > 41130 的新貼文
-- 方法 C（thetrumparchive.com）：失敗，被代理封鎖
+## 執行結果：無法取得貼文
 
-結論：ID 41130 後無新貼文。last_seen_id 維持 41130，不更新 state，不推播 LINE。
+## 嘗試方法
 
----
+### 方法 A：Truth Social 直接存取
+- `https://truthsocial.com/@realDonaldTrump.rss` → EGRESS_BLOCKED
+- `https://truthsocial.com/api/v1/accounts/.../statuses` → EGRESS_BLOCKED
 
-第二次執行 2026-08-24（排程觸發）
-上次紀錄 ID：41130
+### 方法 B：WebSearch
+- 搜尋結果找到 Aug 22-23 的貼文內容，但無法取得貼文 ID
+- 無法確認是否有比 last_seen_id=41130 更新的貼文
 
-搜尋結果：
-- 方法 A（truthsocial.com RSS/API）：失敗，被代理封鎖
-- 方法 B（WebSearch）：
-  - 搜尋多組關鍵字（Aug 24 2026、Canada tariffs、ICYMI whitehouse.gov、NCBA beef post）
-  - 確認 White House ICYMI 聲明為 8/7 發布，非今日新貼文
-  - Trump 牛肉關稅豁免貼文（8/21，ID~41042）早已記錄
-  - 未發現 ID > 41130 的新貼文
-- 方法 C：失敗，被代理封鎖
+### 方法 C：其他來源
+- thetrumparchive.com → EGRESS_BLOCKED
+- trumpstruth.org → EGRESS_BLOCKED
+- factba.se → EGRESS_BLOCKED
+- whitehouse.gov → EGRESS_BLOCKED
+- foxbusiness.com → EGRESS_BLOCKED
+- cbsnews.com → EGRESS_BLOCKED
 
-結論（第二次）：ID 41130 後仍無新貼文。維持現狀，不推播 LINE。
+## 錯誤原因
+
+網路 egress proxy 封鎖了所有可取得 Truth Social 貼文 ID 的來源。
+WebSearch 有找到 Aug 22-23 的部分貼文內容，但無貼文 ID 可與 last_seen_id=41130 比對。
+
+## 上次記錄
+- last_seen_id: 41130
+- SHA: 16756f5ce03911ff4265407c5ea1317c1bf065d2
