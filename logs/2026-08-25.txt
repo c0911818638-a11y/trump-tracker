@@ -1,0 +1,29 @@
+[2026-08-25] 監控執行記錄
+
+【執行時間】2026-08-25 UTC
+
+【上次記錄 ID】117153533157754664（對應 2026-08-24 09:38 AM ET 加拿大 50% 關稅貼文）
+
+【資料取得方式】
+- 方法 A（WebFetch truthsocial.com RSS/API）：失敗 — EGRESS_BLOCKED
+- 方法 C（WebFetch thetrumparchive.com / trumpstruth.org）：失敗 — EGRESS_BLOCKED
+- 方法 B（WebSearch）：成功 — 取得 2026-08-25 凌晨深夜發文資訊
+
+【找到新貼文】
+1. 2026-08-25 04:30–05:20 UTC（美東 12:30–1:20 AM）
+   - 8 則 AI 生成轉發貼文
+   - 主題：喬治·華盛頓 AI 圖/美國革命、伊朗、期中選舉、庇護城市、西方文明
+   - 代表性文字：「WE FOUGHT A REVOLUTION AND WORKED TO GIVE YOU PEOPLE FREEDOM. DON'T SIT BACK AND GIVE IT AWAY TO TERRORISTS POSING AS A POLITICAL PARTY」
+   - 資料來源：The Daily Beast、Raw Story (2026-08-25)
+
+【操作結果】
+- 分析檔案：posts/2026-08-25_AIspree_GeorgeWashington.md 建立並 commit push
+- last_seen_id.txt：因網路限制無法取得 Truth Social Snowflake ID，暫不更新（保持 117153533157754664）
+- LINE 通知由 GitHub Actions (line-notify.yml) 自動觸發
+
+【執行限制】
+- 大多數新聞網站及 Truth Social 直接存取受 egress proxy 封鎖
+- 無法取得 2026-08-25 貼文的實際 Truth Social Snowflake ID
+- 從 WebSearch 結果推斷約有 8 則新貼文（均為 AI 生成轉發）
+
+Run time: 2026-08-25T（UTC）
