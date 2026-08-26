@@ -1,0 +1,39 @@
+# 監控日誌 - 2026-08-26
+
+## 執行時間
+2026-08-26 (UTC) — 自動排程觸發
+
+## 上次記錄的貼文 ID
+117260000000000000
+
+## 錯誤紀錄
+
+所有方法均無法取得川普 Truth Social 貼文：
+
+### 方法 A：直接存取 Truth Social
+- https://truthsocial.com/@realDonaldTrump.rss → EGRESS_BLOCKED（網路代理封鎖）
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 → EGRESS_BLOCKED
+
+### 方法 B：WebSearch 搜尋
+- 執行 WebSearch 搜尋："Trump Truth Social posts today site:truthsocial.com OR site:thetrumparchive.com"
+- 結果：無法找到 2026-08-26 當日的具體貼文內容
+- 背景新聞：Trump Media 銷售 Truth Social API 早期存取服務，每月 $6 萬至 $10 萬
+
+### 方法 C：Trump Archive
+- https://www.thetrumparchive.com/ → EGRESS_BLOCKED
+- https://trumpstruth.org/ → EGRESS_BLOCKED
+- https://www.presidency.ucsb.edu/ → EGRESS_BLOCKED
+
+### 其他嘗試
+- forth.news → EGRESS_BLOCKED
+- variety.com → EGRESS_BLOCKED
+- www.cnn.com → EGRESS_BLOCKED
+- www.npr.org → EGRESS_BLOCKED
+- www.nbcnews.com → EGRESS_BLOCKED
+- tech.yahoo.com → EGRESS_BLOCKED
+- thedailyrecord.com → EGRESS_BLOCKED
+
+## 結論
+執行環境的網路代理（egress proxy）封鎖了所有相關域名。
+無法取得今日川普貼文，不建立分析檔案，不推播 LINE 通知。
+last_seen_id.txt 維持不變（117260000000000000）。
