@@ -75,3 +75,38 @@ last_seen_id.txt 維持不變（117260000000000000）。
 不建立分析檔案，不推播 LINE 通知。
 
 *執行時間：2026-08-26 下午（UTC）*
+
+---
+
+## 第三次執行 — 2026-08-26 晚間（UTC）
+
+**上次記錄的貼文 ID：** 117295000000000001
+（對應 7:32 AM Mike Johnson 讚揚 + 11:38-11:43 AM SAVE Act 三連貼，已由前次執行建立 `posts/2026-08-26_SAVE-Act-MikeJohnson.md`）
+
+### 方法 A：Truth Social 直接存取
+- https://truthsocial.com/@realDonaldTrump.rss → EGRESS_BLOCKED
+
+### 方法 B：WebSearch 多輪搜尋
+搜尋查詢包含：
+- "Trump Truth Social posts today August 26 2026"
+- "Trump Truth Social August 26 2026 afternoon evening new"
+- "Trump Mojtaba Khamenei Truth Social post August 26 2026"
+- "trumpstruth 41285 41290 41295 41300"
+
+**WebSearch 結果摘要：**
+- 確認 posts 已收錄涵蓋：Mike Johnson（7:32 UTC）、SAVE Act（11:38-11:43 UTC）
+- 川普於 Glenn Beck 廣播節目表示莫吉塔巴·哈梅內伊「重傷但未死」→ 係廣播訪談，非 Truth Social 貼文
+- 未發現任何 last_seen_id 117295000000000001 之後的可確認新 Truth Social 貼文
+
+### 比對結果
+repo 已收錄（2026-08-26 全日）：
+- `2026-08-26_41214plus_overnight-spree.md`（60+ 篇過夜發文）
+- `2026-08-26_election-wins-Mazzei-Graham.md`（奧克拉荷馬+南卡選舉勝利）
+- `2026-08-26_SAVE-Act-MikeJohnson.md`（SAVE Act 投票 + 讚揚 Johnson）
+
+### 結論
+無新增川普 Truth Social 貼文。
+last_seen_id.txt 維持不變（117295000000000001）。
+不建立分析檔案，不推播 LINE 通知。
+
+*執行時間：2026-08-26 晚間（UTC）*
