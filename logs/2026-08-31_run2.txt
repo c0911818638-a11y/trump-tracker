@@ -1,0 +1,44 @@
+# 監控日誌 2026-08-31（第二次執行）
+
+**執行時間：** 2026-08-31 ~07:00 UTC（2026-08-31 ~03:00 ET）
+**上次記錄 ID：** 117450000000000001（第一次執行結束時設定）
+
+## 執行結果：發現 1 篇新貼文
+
+### 搜尋方式
+- Truth Social 直接存取：被代理封鎖（EGRESS_BLOCKED）
+- truthsocial.com RSS：被代理封鎖
+- thetrumparchive.com：被代理封鎖
+- trumpstruth.org：被代理封鎖
+- WebSearch + 新聞報導分析：成功
+
+### 發現的新貼文
+
+**哈爾格島 AI 影片貼文**（trumpstruth.org/statuses/41408）
+- 發布時間：2026-08-30 22:19 ET（02:19 UTC 8/31）
+- 原文：「Kharg Island being blown to smithereens!!! President DJT」
+- 搭配 AI 生成影片
+- 重要程度：高（涉及全球油價、美伊軍事升級）
+- 建立分析檔：`posts/2026-08-31_Kharg-Island-AI-video.md`
+
+### August 31 動態（未確認為獨立 Truth Social 貼文）
+- 川普接受 Fox News 訪問（8/31 日間）：「If I weren't president, Israel would be gone. There would be no Israel and there would probably be no Middle East.」（宣示其對以色列的戰略重要性）
+- 川普稱「their Navy is gone and the air force is gone and their leaders are gone」（伊朗軍事能力已摧毀）
+- 上述言論來源為電視訪問，非確認為獨立 Truth Social 貼文
+
+### 搜尋未發現的內容
+- 8/31 早晨 ET（03:00–07:00 UTC）期間無可確認的新 Truth Social 貼文
+- IRGC 宣稱報復聲明屬伊方回應，非川普貼文
+
+## 更新
+
+- last_seen_id：更新為 117460000000000001（涵蓋 8/30 深夜至 8/31 早晨）
+- 新增分析檔：`posts/2026-08-31_Kharg-Island-AI-video.md`
+- LINE 通知：由 GitHub Actions 自動處理
+
+## 背景資訊
+
+- 美國對伊朗軍事打擊（為 7 月停火破裂後首次）：針對涉嫌在霍爾木茲海峽布雷的伊朗軍事目標
+- 伊朗 IRGC 聲稱將報復
+- 哈爾格島約佔伊朗原油出口 90%
+- 川普 AI 影片被媒體確認為合成內容，無實際攻擊證據
