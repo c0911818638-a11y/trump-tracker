@@ -1,29 +1,31 @@
-# 監控日誌 2026-08-31
+=== Trump Truth Social 監控日誌 ===
+日期: 2026-08-31
+執行時間: 2026-08-31 11:07 UTC
 
-**執行時間：** 2026-08-31 00:00 UTC（2026-08-30 20:00 ET）
-**上次記錄 ID：** 117450000000000001
+【狀態異常】
+- 讀取 state/last_seen_id.txt 舊值: 117460000000000001
+- 該 ID 對應時間戳: 2026-10-18 04:22 UTC（未來日期）
+- 判定: 狀態檔案損壞/異常，執行重置
 
-## 執行結果：無新貼文
+【資料來源】
+- truthsocial.com: 被 egress proxy 封鎖（EGRESS_BLOCKED）
+- thetrumparchive.com: 被 egress proxy 封鎖
+- 使用 WebSearch 間接取得貼文內容
 
-### 搜尋方式
-- Truth Social 直接存取：被代理封鎖（EGRESS_BLOCKED）
-- truthsocial.com RSS：被代理封鎖
-- thetrumparchive.com：被代理封鎖
-- trumpstruth.org：被代理封鎖
-- WebSearch 多次查詢：成功，未發現新貼文
+【找到的新貼文（2026-08-30，ET 時間）】
+1. 05:36 PM - Lake America/Google Maps 更名（[ID: 117186845736960000]）
+2. 07:56 PM - 批評 Kathy Hochul 釋放罪犯（[ID: 117187396239360000]）
+3. 07:56 PM - 推薦 Ted Cruz 著作（[ID: 117187396239360001]）
+4. 08:26 PM - 美加貿易逆差，企業因關稅回流（[ID: 117187514204160000]）
+5. 09:18 PM - 接受 Trey Gowdy 專訪（[ID: 117187718676480000]）
+6. 10:18 PM - 卡格島被炸（AI影片）（[ID: 117187954606080000]）【高重要度】
 
-### 已確認的最新貼文（8/30 已全日覆蓋）
-- `2026-08-30_AM_FakePolls-Canada-NASA-Venezuela.md`（06:05–10:10 AM ET）
-  - 假民調批評、FCC 威脅、加拿大關稅、NASA 相關
-- `2026-08-30_Welker-FCC-Endorsements.md`（08:45 AM ET）
-  - 攻擊 NBC 主播 Kristen Welker，威脅向 FCC 舉報
-- `2026-08-30_43posts-spree.md`（11:16 AM–22:00 ET，43 篇）
-  - AI 生成圖片（Collins/Mulvaney）、Trump 2028 系列、Brandon Gill 讚揚
+【動作】
+- 6 篇分析檔案已上傳至 posts/ 目錄
+- state/last_seen_id.txt 已重置為 117188591616000000（對應 2026-08-31 06:00 UTC）
+- GitHub Actions 將觸發 LINE 通知
 
-### 搜尋範圍
-- 搜尋 8/30 晚間至深夜（8 PM–午夜 ET）貼文：無發現
-- 「1AM 凌晨狂潮」文章確認為 2026-08-24 事件，非今日
-- 「post-per-minute midnight spree」確認為 2026-01-23 達沃斯返美後事件
-
-### 結論
-無新貼文需上傳分析。last_seen_id 維持 117450000000000001 不異動。
+【注意事項】
+- 各貼文 ID 為根據時間戳推算之近似值（非實際 Truth Social ID）
+- 主要資料來源: Google Search 摘要（間接引用新聞報導）
+- 美伊衝突（卡格島）為當前最重要事件，建議密切關注後續發展
