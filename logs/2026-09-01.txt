@@ -1,0 +1,52 @@
+Trump Truth Social 監控錯誤日誌
+日期：2026-09-01
+執行時間：UTC 自動排程
+
+==============================
+步驟 1：讀取上次記錄 - 成功
+==============================
+last_seen_id: 117195669504000000
+SHA: 6e507336823aeb25f506602da0022118921e2901
+（透過 GitHub Raw 內容 URL 存取成功）
+
+==============================
+步驟 2：抓取最新貼文 - 失敗
+==============================
+嘗試的所有方法：
+
+[方法 A]
+- https://truthsocial.com/@realDonaldTrump.rss → 被網路出口代理封鎖（EGRESS_BLOCKED）
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → 被網路出口代理封鎖（EGRESS_BLOCKED）
+
+[方法 B] WebSearch 搜尋
+- 搜尋結果僅找到 2026-08-30 的貼文（Kharg Island、Trey Gowdy 採訪、美加貿易、Kathy Hochul、Ted Cruz 書籍）
+- 無法取得實際貼文 ID，無法與 last_seen_id 比較
+- 未找到 2026-09-01 的任何新貼文
+
+[方法 C]
+- https://www.thetrumparchive.com/ → 被網路出口代理封鎖（EGRESS_BLOCKED）
+- https://trumpstruth.org/ → 被網路出口代理封鎖（EGRESS_BLOCKED）
+
+[其他嘗試的網址均被封鎖]
+- www.whitehouse.gov, www.npr.org, thehill.com, rollcall.com
+- www.foxnews.com, www.cnbc.com, www.yahoo.com, tech.yahoo.com
+- en.wikipedia.org, joehoft.com, littlethings.com
+- x.com, www.aol.com, www.newsweek.com
+- theconservativetreehouse.com
+
+==============================
+結論
+==============================
+本次執行環境的網路出口代理封鎖了幾乎所有新聞媒體和社群媒體網站的存取，
+僅 GitHub API（使用 --proxy "" 繞過 session proxy）可以正常運作。
+
+無法確定是否有新於 last_seen_id (117195669504000000) 的貼文。
+依步驟 7 規定：不建立貼文分析檔，不推播 LINE 通知。
+last_seen_id 維持不變。
+
+==============================
+建議
+==============================
+若需確保監控正常運作，建議：
+1. 調整環境的網路出口政策以允許存取 truthsocial.com
+2. 或設定可存取的中介服務（RSS 代理、資料庫備份等）
