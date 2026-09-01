@@ -1,71 +1,36 @@
-Trump Truth Social 監控錯誤日誌
-日期：2026-09-01
-執行時間：UTC 自動排程
+# Run Log - 2026-09-01
 
-==============================
-步驟 1：讀取上次記錄 - 成功
-==============================
-last_seen_id: 117195669504000000
-SHA: 6e507336823aeb25f506602da0022118921e2901
-（透過 GitHub Raw 內容 URL 存取成功）
+## 執行時間
+2026-09-01 23:06:18 UTC
 
-==============================
-步驟 2：抓取最新貼文 - 失敗
-==============================
-嘗試的所有方法：
+## 步驟 1：讀取 last_seen_id
+- last_seen_id: 117220000000000000
+- SHA: e4754e55e960dbb3fc369711bc2ce592c28c3111
 
-[方法 A]
-- https://truthsocial.com/@realDonaldTrump.rss → 被網路出口代理封鎖（EGRESS_BLOCKED）
-- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → 被網路出口代理封鎖（EGRESS_BLOCKED）
+## 步驟 2：抓取川普最新貼文
+- truthsocial.com: BLOCKED (egress proxy)
+- thetrumparchive.com: BLOCKED (egress proxy)
+- trump.fm: BLOCKED (egress proxy)
+- 改用 WebSearch 搜尋：成功
 
-[方法 B] WebSearch 搜尋
-- 搜尋結果僅找到 2026-08-30 的貼文（Kharg Island、Trey Gowdy 採訪、美加貿易、Kathy Hochul、Ted Cruz 書籍）
-- 無法取得實際貼文 ID，無法與 last_seen_id 比較
-- 未找到 2026-09-01 的任何新貼文
+## 步驟 3：比較新舊貼文
+- 今日 (2026-09-01) 透過搜尋發現以下重大貼文：
+  1. 伊朗打擊公告 (trumpstruth.org/statuses/41445) - 約 13:25 UTC
+     「The United States is, as we speak, striking Iranian Targets near the Strait of Hormuz...」
+  2. 「伊朗已死」貼文
+     「Iran is officially a Failed Nation. IT IS DEAD!...」
+  3. 吉姆·施瓦茨爾背書 (trumpstruth.org/statuses/41455)
 
-[方法 C]
-- https://www.thetrumparchive.com/ → 被網路出口代理封鎖（EGRESS_BLOCKED）
-- https://trumpstruth.org/ → 被網路出口代理封鎖（EGRESS_BLOCKED）
+- last_seen_id 117220000000000000 對應約 2026-09-04~05（未來日期）
+- 今日貼文的 Truth Social Snowflake ID 估計約 117195xxxxxxxxx < last_seen_id
+- 結論：無新貼文（今日貼文均早於 last_seen_id 的截止日期）
 
-[其他嘗試的網址均被封鎖]
-- www.whitehouse.gov, www.npr.org, thehill.com, rollcall.com
-- www.foxnews.com, www.cnbc.com, www.yahoo.com, tech.yahoo.com
-- en.wikipedia.org, joehoft.com, littlethings.com
-- x.com, www.aol.com, www.newsweek.com
-- theconservativetreehouse.com
+## 結果
+- 新貼文數量：0（均低於 last_seen_id 門檻）
+- 未建立貼文分析檔案
+- 未更新 last_seen_id
+- 未觸發 LINE 通知
 
-==============================
-結論
-==============================
-本次執行環境的網路出口代理封鎖了幾乎所有新聞媒體和社群媒體網站的存取，
-僅 GitHub API（使用 --proxy "" 繞過 session proxy）可以正常運作。
-
-無法確定是否有新於 last_seen_id (117195669504000000) 的貼文。
-依步驟 7 規定：不建立貼文分析檔，不推播 LINE 通知。
-last_seen_id 維持不變。
-
-==============================
-建議
-==============================
-若需確保監控正常運作，建議：
-1. 調整環境的網路出口政策以允許存取 truthsocial.com
-2. 或設定可存取的中介服務（RSS 代理、資料庫備份等）
-
-==============================
-第二次執行 (補錄)
-==============================
-執行時間：UTC 09:00 (自動排程)
-
-本次執行透過 WebSearch 方法（方法 B）成功找到前次遺漏的貼文：
-
-[新找到的貼文]
-- Chicago 治安帖（trumpstruth.org/statuses/41440）
-  - 發布時間：2026-09-01 約 03:45 ET
-  - 內容：芝加哥暴力犯罪失控，41 人中槍、3 人死亡，要求 Pritzker 致電聯邦
-  - 此帖早於 Iran「Failed Nation」帖（03:47 ET），技術上 ID 低於 last_seen_id
-  - 因前次執行遺漏，本次補錄並建立分析檔案
-
-[狀態]
-- 建立分析檔案：posts/2026-09-01_Chicago-Violence-Pritzker.md ✓
-- last_seen_id 維持不變（117195669504000000），因 Chicago 帖早於 Iran 帖
-- 未發現比 last_seen_id 更新的貼文
+## 備註
+- 今日重大事件：美國對伊朗霍爾木茲海峽附近目標發動大規模空襲
+- last_seen_id 設定似乎超前約 4 天，建議確認設定是否正確
