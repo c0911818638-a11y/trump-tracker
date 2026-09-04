@@ -1,0 +1,48 @@
+=== 川普 Truth Social 監控日誌 - 2026-09-04 第三次執行 ===
+執行時間: 2026-09-04（UTC）
+執行方式: 排程任務 (scheduled task)
+
+【步驟 1】讀取 last_seen_id
+- 讀取方式: git clone（GitHub API 因 session 授權限制，改用 git clone）
+- 上次 ID: 117241200000000000（對應 2026-09-03 11:00 UTC，最後一篇貼文）
+- 前兩次執行（run1, run2）均於就業報告發布前完成，無新貼文
+
+【步驟 2】抓取最新貼文
+- truthsocial.com RSS/API: EGRESS_BLOCKED（網域封鎖）
+- thetrumparchive.com: EGRESS_BLOCKED
+- trumpstruth.org: EGRESS_BLOCKED
+- WebSearch: 執行多輪廣泛搜尋
+
+【步驟 3】比較分析
+本次搜尋新發現（run1/run2 之後新發布的貼文）：
+
+2026-09-04 新貼文確認：
+1. 就業/降息威脅貼文（約 12:30 UTC，就業報告 8:30 AM ET 後）：
+   "Great jobs number just announced, breaking all estimates (except mine!) by double and triple...
+   EMPLOYERS ADDED 162,000 JOB IN AUGUST...Get SMART, Kevin..."
+   來源：CNBC 2026-09-04 報導確認
+
+2. SAVE AMERICA ACT 貼文（時間未知）：
+   "PASS THE SAVE AMERICA ACT!!!"
+   來源：多個搜尋結果確認，含 TheHill、Fox News
+
+說明：Truth Social、thetrumparchive.com、trumpstruth.org 均被網路代理封鎖，
+      無法取得精確貼文 ID（snowflake ID），故使用關鍵字命名檔案。
+
+【步驟 4】中文分析
+- 貼文 1：2026-09-04_Jobs162k-FedRates.md（關稅威脅+降息要求）→ 重要程度：高
+- 貼文 2：2026-09-04_SaveAmericaAct.md（選舉法施壓）→ 重要程度：中
+
+【步驟 5】GitHub 上傳
+- 新增貼文分析: posts/2026-09-04_Jobs162k-FedRates.md
+- 新增貼文分析: posts/2026-09-04_SaveAmericaAct.md
+- 新增日誌: logs/2026-09-04_run3.txt
+- 更新 last_seen_id: 維持 117241200000000000（因無法取得精確新貼文 ID，
+  若貼文 ID 低估，下次執行可能重複分析——但 GitHub Actions 重複 push 同名檔案可安全覆蓋）
+- 執行 git push
+
+【步驟 6】LINE 通知
+- 2 篇新貼文已 push 至 GitHub
+- .github/workflows/line-notify.yml 應自動觸發推播 LINE
+
+【結果】: 發現 2 篇新貼文（就業/降息貿易威脅、SAVE AMERICA ACT）/ 分析完成並上傳
