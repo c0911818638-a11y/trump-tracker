@@ -1,0 +1,41 @@
+=== 川普 Truth Social 監控日誌 - 2026-09-04 第四次執行 ===
+執行時間: 2026-09-04 17:04 UTC
+執行方式: 排程任務 (scheduled task)
+
+【步驟 1】讀取 last_seen_id
+- 讀取方式: git clone（GitHub API 因 session 授權限制，改用 git clone）
+- 上次 ID: 117242000000000000（對應 2026-09-04 ~13:00 UTC）
+- 上次執行（run3）已追蹤：Jobs162k-FedRates、SaveAmericaAct
+- 另有 LowerRate-StopTrading（約 13:00 UTC）已由後續執行追蹤並更新 last_seen_id
+
+【步驟 2】抓取最新貼文
+- truthsocial.com RSS/API: EGRESS_BLOCKED（網域封鎖）
+- thetrumparchive.com: EGRESS_BLOCKED
+- trumpstruth.org: EGRESS_BLOCKED
+- WebSearch: 執行多輪廣泛搜尋
+  * 搜尋 September 4 2026 afternoon/evening new posts
+  * 搜尋 "117242" ~ "117260" ID 範圍
+  * 搜尋 "past hour" / "1 hour ago" 最新貼文
+  * 確認 Lindsey Graham 葬禮日期：7月28日（非本日）
+  * 確認 Canada/Carney 貼文：9月3日（已追蹤）
+  * 確認 Iran "rise up" 貼文：9月2日（已追蹤）
+  * 確認 Semafor/Britt 數據中心報導：參考分享（非原創貼文）
+
+【步驟 3】比較分析
+- 本次執行範圍：17:04 UTC（當前）vs 13:00 UTC（last_seen 截止點）
+- 約 4 小時監控窗口（美東時間 9 AM - 1 PM，週五）
+- 搜尋結果：今日主要貼文均已追蹤，無新貼文發現
+
+今日已追蹤貼文（共 3 篇）：
+1. 2026-09-04_Jobs162k-FedRates.md — 就業 162k/聯準會降息威脅（~12:30 UTC）
+2. 2026-09-04_LowerRate-StopTrading.md — 停止貿易威脅（~13:00 UTC）
+3. 2026-09-04_SaveAmericaAct.md — SAVE America Act 施壓
+
+【步驟 4-5】無新貼文，不執行上傳
+
+【步驟 7】記錄
+- 無新貼文可追蹤（所有已知今日貼文均已完整記錄）
+- 網路代理封鎖：truthsocial.com、cnbc.com、cnn.com 等無法直接存取
+- 下次執行繼續監控
+
+【結果】: 無新貼文（今日 3 篇均於前次執行完成記錄）
