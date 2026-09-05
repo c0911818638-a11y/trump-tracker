@@ -60,3 +60,24 @@
 - 原因: 網路出口代理封鎖所有 Truth Social 相關存取
 - last_seen_id 維持不變: 2026-09-05_20260905000
 - 建議: 考慮設置可被此代理允許的替代資料來源
+
+=== 第二次執行紀錄 ===
+執行時間: 2026-09-05 UTC（排程第二次觸發）
+
+【額外發現】Maria Bartiromo 相關貼文（已超出 last_seen_id 範圍）
+- 發現貼文時間: 2026-09-04（週四晚間）
+- 原文: "I can't believe Maria Bartiromo is no longer going to have her great show(s) on FoxNews/Business. Three different shows, always number one. Maria is a total professional, and a true warrior. Her fans, of which there are many, will not be happy."
+- 背景: Fox News 於 9/3 宣布解除 Bartiromo 合約，川普在 9/4 晚間發文表達震驚
+- 判定: 此貼文日期（9/4）早於 last_seen_id（2026-09-05_20260905000），視為已處理，不另建檔
+
+【今日搜尋結果摘要（2026-09-05）】
+- 所有 Truth Social 直接存取網域均被 EGRESS_BLOCKED
+- WebSearch 多次搜尋：仍無 9 月 5 日具體貼文
+- 最新貼文資訊停留在 9 月 4 日
+
+【結論】
+- 任務狀態: 完成（無新貼文可處理）
+- last_seen_id 維持: 2026-09-05_20260905000
+- 已檢查連結: truthsocial.com, thetrumparchive.com, trumpstruth.org, whitehouse.gov,
+  yahoo.com, foxnews.com, time.com, aljazeera.com, nbcnews.com, cbsnews.com,
+  rollcall.com, x.com, instagram.com（均被封鎖）
