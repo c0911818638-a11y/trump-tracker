@@ -81,3 +81,32 @@
 - 已檢查連結: truthsocial.com, thetrumparchive.com, trumpstruth.org, whitehouse.gov,
   yahoo.com, foxnews.com, time.com, aljazeera.com, nbcnews.com, cbsnews.com,
   rollcall.com, x.com, instagram.com（均被封鎖）
+
+=== 第三次執行紀錄 ===
+執行時間: 2026-09-05 UTC（排程第三次觸發）
+
+【新增貼文發現】
+
+本次執行成功找到 2026-09-05 的新貼文，共 2 篇：
+
+貼文 1: FOMC-Clowns-Warsh
+- 來源: CNBC 2026-09-05《Trump turns up the heat on Warsh as Fed rate hike looms》
+- 內容重點: 川普稱 FOMC 成員為「clowns」，同時稱讚 Warsh 試圖「do the right thing」
+- 政治意義: 首次採取「批 FOMC、護 Warsh」雙軌策略
+- 檔案: posts/2026-09-05_FOMC-Clowns-Warsh.md
+
+貼文 2: Stupidity-Inflation-Trade
+- 來源: Fortune 2026-09-05《Trump says 'Stupidity causes inflation' and threatens to stop trade》
+- 內容重點: 「Stupidity causes inflation」聲明，再次威脅對順差國停止貿易
+- 政治意義: 連續第二天以貿易為籌碼施壓聯準會
+- 檔案: posts/2026-09-05_Stupidity-Inflation-Trade.md
+
+【狀態更新】
+- last_seen_id: 2026-09-05_20260905002（從 20260905000 更新）
+- 新貼文已推送至 GitHub（若推送成功）
+- LINE 通知由 GitHub Actions 自動處理
+
+【技術說明】
+- Truth Social 直接存取仍受 EGRESS_BLOCKED 封鎖
+- 本次透過 WebSearch 搜尋結果摘要成功找到 9/5 貼文線索
+- 部分貼文為根據多方新聞報導重構，確切原文待確認
