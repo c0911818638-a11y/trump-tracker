@@ -1,11 +1,11 @@
-監控日誌 - 2026-09-06
+監控日誌 - 2026-09-06（第二次執行）
 ======================
 
-執行時間：2026-09-06（UTC）
+執行時間：2026-09-06 UTC（第二次執行）
 上次已知貼文：2026-09-05_20260905002
 
 【本次監控結果】
-狀態：未發現可確認的新貼文
+狀態：無法取得可確認的新貼文原文
 
 【嘗試的存取方法】
 1. truthsocial.com/@realDonaldTrump.rss → 403 Forbidden（egress proxy 封鎖）
@@ -13,21 +13,35 @@
 3. thetrumparchive.com → 封鎖
 4. trumpstruth.org → 封鎖
 5. WebSearch → 可搜尋，但大多數新聞網站均被 proxy 封鎖
-6. 多家新聞網站（CNN、CNBC、Fox News、NBC News、ABC News、Yahoo News 等）→ 均被封鎖
+6. CNN、ABC News、Fox News、NPR、Yahoo News、NBC News 等 → 均被封鎖
+7. The Jerusalem Post、The National News、Western Journal → 封鎖
 
-【已知的 2026-09-05 後半段重大事件】
-- 美國軍隊擊沉3艘伊朗油輪（M/T Downy、M/T Stark 1、M/T Kylo/Noxen）
-  回應：伊朗IRGC向美海軍艦艇發射彈道飛彈
-- 川普在橢圓辦公室口頭聲明：可能很快打擊伊朗「Pickaxe Mountain」核設施
-- 川普多次表示伊朗戰爭是「small potatoes」（小事一樁）
+【已知的 2026-09-05 後續重大事件（無法確認是否有對應 Truth Social 貼文）】
+
+事件一：美軍擊沉三艘伊朗油輪（September 5, 2026）
+- CENTCOM 確認擊沉 M/T Downy、M/T Stark 1、M/T Kylo/Noxen 三艘伊朗油輪
+- CENTCOM 聲明：「你對我們兩艘軍艦開火，我們對你三艘加倍奉還」
+- 伊朗 IRGC 回應：向美國海軍艦艇發射彈道飛彈
+- 川普對記者口頭評論：「intermittent strikes」、「We control Hormuz very strongly」
+- 是否有對應 Truth Social 貼文：未能確認
+
+事件二：川普在長島警察學院演講（September 5, 2026，週五）
+- 川普宣稱將於戰後宣布霍爾木茲海峽為美國領土
+- 「After we finish defeating Iran, I'll be declaring the Hormuz Strait a territory of the United States」
+- 是否有對應 Truth Social 貼文：未能確認
+
+事件三：川普再次威脅打擊「Pickaxe Mountain」（September 5, 2026）
+- 橢圓辦公室聲明：「We may hit Pickaxe Mountain very soon」
+- 是否有對應 Truth Social 貼文：未能確認
+
+事件四：September 6（今日）
+- 未發現任何確認的 Truth Social 新貼文
 
 【未能確認的資訊】
-- 川普是否在 Truth Social 發文討論 2026-09-05 油輪打擊事件
-  （新聞報導顯示相關言論主要為對記者的口頭聲明，而非 Truth Social 貼文）
-- 是否存在 ID 大於 20260905002 的新貼文
-- 2026-09-06 是否有新貼文
+- 9月5日油輪打擊後川普是否在 Truth Social 發文（約 ID 41514+）
+- 9月6日是否有新貼文
 
-【已記錄的現有貼文】
+【已記錄的現有貼文（最新）】
 - 2026-09-05_FOMC-Clowns-Warsh.md（聯準會/FOMC 相關）
 - 2026-09-05_Stupidity-Inflation-Trade.md（通膨/貿易相關）
 
@@ -35,3 +49,6 @@
 由於主要數據來源（Truth Social 及大多數新聞網站）因網路 egress proxy 政策無法存取，
 本次監控無法確認新貼文。
 state/last_seen_id.txt 未更新，保持：2026-09-05_20260905002
+
+【備注】
+本次為 2026-09-06 第二次執行，更新了已知事件的調查結果。
