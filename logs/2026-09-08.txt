@@ -1,0 +1,47 @@
+=== 川普 Truth Social 監控日誌 ===
+日期：2026-09-08
+執行時間：UTC
+
+【狀態】無法取得新貼文 — 網路 egress proxy 阻擋所有來源
+
+【嘗試方法】
+
+方法 A（WebFetch 直接存取）：
+  - https://truthsocial.com/@realDonaldTrump.rss → 錯誤：EGRESS_BLOCKED（domain: truthsocial.com）
+  - https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → 同上
+
+方法 B（WebSearch 搜尋）：
+  - 搜尋"Trump Truth Social posts September 8 2026" → 僅取得背景資訊，無特定貼文 ID 或完整文字
+  - 嘗試多個搜尋關鍵字（Canada tariffs、Dallas convention、新貼文等）→ 結果仍來自 Aug-Sep 7 期間
+
+方法 C（WebFetch Trump Archive）：
+  - https://www.thetrumparchive.com/ → EGRESS_BLOCKED（domain: www.thetrumparchive.com）
+  - https://trumpstruth.org/ → EGRESS_BLOCKED
+
+其他嘗試（均被 egress proxy 阻擋）：
+  - x.com, cnbc.com, foxnews.com, foxbusiness.com, nbcnews.com
+  - cbsnews.com, thehill.com, axios.com, redstate.com, newsweek.com
+  - np.org, abc7chicago.com, yahoo.com, laist.com, pbs.org
+  - whitehouse.gov, gop.com, rollcall.com, texastribune.org
+  - dallasnews.com, dallasexpress.com, wikipedia.org, cp24.com
+  - aljazeera.com, blakes.com, canada.ca, 及其他多個域名
+
+【上次記錄貼文 ID】20260907006（2026-09-07 Bombardier/加拿大貼文）
+
+【今日背景情報（僅供參考，非確認的新貼文）】
+  - 加拿大報復性關稅今日（2026-09-08）生效：對 700+ 種美國商品課徵 15-50% 關稅（C$276 億），
+    針對鋼鐵、乳製品、家電、農業設備、紙漿/紙張、電子品等，與美國「以美元對美元」。
+  - 背景：美加貿易談判於 2026-08-22 破裂，Carney 宣布 9/8 起實施報復。
+  - 川普的 Truth Social 連結（已記錄，非今日新貼文）：
+    * 2026-09-07：「NO MORE SELLING BOMBARDIER IN THE UNITED STATES!」
+    * 2026-09-06：加拿大美元匯率「不可接受」
+    * 2026-09-06：「Canada-Dollar-Imbalance」
+  - 達拉斯 GOP 期中選舉大會：2026-09-09～10，川普將出席夜一演講。
+  - 川普對教宗 Leo 的批評（持續中，非今日新內容）。
+
+【結論】
+  由於所有存取方法均被 egress proxy 阻擋，無法取得 2026-09-08 的新貼文。
+  不建立貼文分析檔，不推播 LINE 通知。
+  last_seen_id.txt 維持不變（20260907006）。
+
+【下次執行】建議再次嘗試取得 2026-09-08 的貼文。
