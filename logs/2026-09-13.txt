@@ -20,3 +20,28 @@
 3. 後台存取限制（大多數新聞/存檔網站被 proxy 封鎖）
 
 last_seen_id 未更新，無新貼文檔案建立，未觸發 LINE 通知。
+
+---
+
+【第二次執行 - 2026-09-13 UTC】
+最後已知 ID：2026-09-12_20260912001
+
+【抓取結果】
+- 嘗試方法 A（RSS/API）：truthsocial.com 被 egress proxy 封鎖
+- 嘗試方法 B（WebSearch）：搜尋多組關鍵字，未找到 2026-09-13 的新貼文
+- 嘗試方法 C（Trump Archive）：thetrumparchive.com、trumpstruth.org、kadoa.com 等被 proxy 封鎖
+
+【背景資訊】
+- 愛爾蘭公開賽（Amgen Irish Open）決賽日於 2026-09-13 進行，Shane Lowry 領先進入最終輪
+- 川普出席決賽，預計頒獎，已引起廣泛媒體報導
+- 川普曾與 Rory McIlroy 合打（McIlroy 2026 美名人賽衛冕冠軍）
+- Eric Trump 稱 McIlroy 為「朋友」，協助主辦愛爾蘭公開賽
+
+【搜索到的 Trump Truth Social 貼文（未超過 last_seen_id）】
+- 最近已知貼文：2026-09-12 "Such a great golfer. Too bad I have very little time to play!!!"（已收錄）
+- WebSearch 搜尋多組關鍵字，未找到日期更新的貼文
+
+【結論】
+第二次搜尋完成，無新貼文。
+可能原因：川普在愛爾蘭觀賽期間活動繁忙，較少發文於 Truth Social。
+last_seen_id 維持 2026-09-12_20260912001，無新貼文檔案，無 LINE 通知。
