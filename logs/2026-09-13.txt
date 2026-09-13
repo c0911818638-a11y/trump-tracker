@@ -1,0 +1,13 @@
+監控執行時間：2026-09-13 05:57:34 UTC
+最後已記錄貼文 ID：2026-09-12_20260912001
+來源嘗試結果：
+  - truthsocial.com RSS：被 egress proxy 封鎖
+  - thetrumparchive.com：被 egress proxy 封鎖
+  - trumpstruth.org：被 egress proxy 封鎖（但可透過 WebSearch 間接查詢）
+  - WebSearch 搜尋結果：找不到 2026-09-13 的新貼文
+最後已知貼文：
+  - ID: 41699 (trumpstruth.org)
+  - 日期: 2026-09-12 05:06 UTC
+  - 內容: "Such a great golfer. Too bad I have very little time to play!!!"
+  - 狀態：已記錄於 posts/2026-09-12_20260912001_Such-Great-Golfer-NoTime-Play.md
+結論：目前無新貼文，last_seen_id.txt 維持不變。
