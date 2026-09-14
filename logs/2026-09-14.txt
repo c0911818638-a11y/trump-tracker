@@ -1,80 +1,27 @@
-【2026-09-14 監控執行日誌】
+# 監控日誌 - 2026-09-14
 
-執行時間（UTC）：2026-09-14（自動排程第一次 + 第二次）
+**時間：** 2026-09-14T06:58:25Z
+**狀態：** 無法取得貼文
 
-## 執行狀態：無新貼文
+## 錯誤說明
 
-### 上次記錄
-- 最後貼文 ID：2026-09-13_20260913010
-- 最後貼文主題：Iran Epoch Times "Not Even Close" Winning War
-- 記錄時間：2026-09-13（上次執行）
+本次執行嘗試了以下方法但均失敗：
 
----
-
-### 嘗試方法與結果
-
-1. **GitHub API（REST）**
-   - 結果：代理封鎖（已改用 Git clone 繞過）
-   - last_seen_id.txt 讀取：成功（Git clone 取得）
-
-2. **方法 A - WebFetch 直接存取**
+1. **方法 A - WebFetch RSS/API**
    - https://truthsocial.com/@realDonaldTrump.rss → EGRESS_BLOCKED
    - https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → EGRESS_BLOCKED
+
+2. **方法 B - WebSearch 搜尋**
+   - 搜尋 "Trump Truth Social posts September 14 2026" → 僅找到至 2026-09-13 的貼文
+   - 多次搜尋均未找到 2026-09-14 的新貼文
+
+3. **方法 C - Trump Archive**
    - https://www.thetrumparchive.com/ → EGRESS_BLOCKED
    - https://www.trumpstruth.org/ → EGRESS_BLOCKED
-   - https://www.oann.com → EGRESS_BLOCKED
-   - https://www.presidency.ucsb.edu → EGRESS_BLOCKED
+   - https://www.presidency.ucsb.edu/documents/app-attributes/truth-social → EGRESS_BLOCKED
 
-3. **方法 B - WebSearch（5 次搜尋）**
-   - 搜尋「Trump Truth Social September 14 2026」：無 2026-09-14 貼文，最新仍為 2026-09-13
-   - 搜尋「Trump Truth Social White House Ballroom Iran September 13 2026」：
-     找到 trumpstruth.org statuses 41702–41709（全部為 2026-09-13）
-   - 搜尋「Trump Truth Social September 13 2026 statuses 41708–41712」：
-     statuses 41710–41712 無索引，表示無新貼文
-   - 搜尋「Trump Truth Social September 14 2026 latest」：無新貼文
+## 結論
 
-4. **方法 C - Trump Archive**
-   - 已確認 trumpstruth.org 可訪問搜尋摘要（透過 WebSearch 摘要）
-   - 最新確認貼文：statuses/41709（2026-09-13，伊朗 WSJ 文章）
-
----
-
-### 已知 2026-09-13 最新 10 篇貼文（全數已收錄）
-
-| 序號 | 主題 | 時間（EST 約略） |
-|------|------|------|
-| 001 | RT 9/11 倒影池整修 NYT 報導 | 上午 |
-| 002 | 白宮倒影池修繕圖片 | 上午 |
-| 003 | 白宮新宴會廳「史上最偉大的禮物」 | 下午 3:32 |
-| 004 | 白宮宴會廳新古典主義渲染圖 | 下午 |
-| 005 | 伊朗經濟緊縮 WSJ 報導 | 下午 6:43 |
-| 006 | 影片貼文 | 晚上 |
-| 007 | 影片貼文 #2 | 晚上 |
-| 008 | 貼文（內容不明） | 晚上 |
-| 009 | DronePort 概念圖（白宮宴會廳·夜晚·煙火） | 晚上 7:52 |
-| 010 | 伊朗戰爭「幾乎沒有對手」大紀元報導 | 晚上 |
-
----
-
-### 結論
-
-- 搜尋完成，未發現比 `2026-09-13_20260913010` 更新的 Truth Social 貼文
-- 可能原因：
-  1. 2026-09-14 目前無新貼文
-  2. 貼文尚未被搜尋引擎收錄（今日過早）
-- **last_seen_id 維持不變：`2026-09-13_20260913010`**
-- 未建立新貼文分析檔案
-- 未觸發 LINE 通知
-
----
-
-### 第二次執行補充（2026-09-14 自動排程）
-
-**額外搜尋結果：**
-- WebSearch「Trump Truth Social September 14 2026 post」：無新貼文
-- WebSearch「site:trumpstruth.org statuses 2026」：最新仍為 statuses/41706（2026-09-13）
-- WebSearch「TrumpTruthOnX September 14 2026」：無 Sep 14 貼文
-- WebSearch「Trump Truth Social today 2026 latest post」：最新仍為 2026-09-13
-- x.com/TrumpTruthOnX → EGRESS_BLOCKED
-
-**結論：** 確認 2026-09-14 截至本次執行時間仍無新貼文。last_seen_id 維持不變。
+網路代理封鎖了 truthsocial.com、thetrumparchive.com、trumpstruth.org、presidency.ucsb.edu 等主要來源。
+Web Search 結果顯示最新存檔貼文為 2026-09-13，尚未找到 2026-09-14 的新貼文。
+上次記錄的貼文 ID：2026-09-13_20260913010
