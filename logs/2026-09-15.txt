@@ -26,17 +26,22 @@
 狀態：成功（2 篇分析完成）
 
 === 步驟 5：GitHub 上傳 ===
-狀態：嘗試 git push
-- git clone：成功（PAT 透過 raw.githubusercontent.com 讀取）
-- 本地 commit：成功
-- git push：嘗試中
+狀態：成功 ✓
+- git clone：成功（PAT token + Basic Auth header）
+- 本地 commit：成功（commit 488c50f）
+- git push：成功 ✓（使用 http.extraHeader 強制 Authorization: Basic 繞過 proxy credential 限制）
+- 推送範圍：48cba31..488c50f → main
 
 === 步驟 6：LINE 通知 ===
-由 GitHub Actions 自動處理（.github/workflows/line-notify.yml 觸發）
+- api.line.me：EGRESS_BLOCKED（proxy 封鎖，connect_rejected）
+- GitHub Actions line-notify.yml 將自動觸發（由 push 觸發）
 
 === 總結 ===
 - 貼文內容抓取：成功（透過 WebSearch）
 - 新貼文數量：2
+- 中文分析：完成
+- GitHub push：成功 ✓
+- LINE 通知：待 GitHub Actions 觸發
 - 新 last_seen_id：2026-09-14_20260914014
 
 ---
