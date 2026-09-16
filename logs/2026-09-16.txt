@@ -68,3 +68,51 @@ September 16 貼文：尚未被搜尋引擎索引（川普今日在 Gastonia 造
 last_seen_id 更新為：2026-09-15_20260915007
 GitHub push：成功
 LINE 通知：由 GitHub Actions 自動處理
+
+===============================================================
+
+第三次執行（同日，UTC September 16）
+last_seen_id 起點：2026-09-15_20260915007
+
+【嘗試方法】
+
+方法 A (WebFetch)：
+- https://truthsocial.com/@realDonaldTrump.rss → EGRESS_BLOCKED
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 → EGRESS_BLOCKED
+
+方法 B (WebSearch)：
+- 多次搜尋含日期、人名、事件等不同關鍵字組合
+
+方法 C (WebFetch 其他來源)：
+- https://www.thetrumparchive.com/ → EGRESS_BLOCKED
+- https://trumpstruth.org → EGRESS_BLOCKED
+- 所有主流新聞網站（Poynter, HuffPost, Daily Beast, CBS, Fox, NBC, Hill 等）→ 全部 EGRESS_BLOCKED
+
+【已確認情報（透過 WebSearch 摘要）】
+
+本次執行 WebSearch 取得以下已確認資訊：
+
+▸ 2026-09-16（星期三）晚間，川普在 Truth Social 展開大規模貼文狂潮：
+  - 美東時間 9:23 PM ~ 9:59 PM：36 分鐘內 48 篇貼文
+  - 當晚 9 PM 時段及次日清晨 5 AM ET 合計超過 60 篇
+  - 報導來源：Poynter.org, The Daily Beast, 多家媒體
+
+▸ 貼文主題（確認涉及但無法取得逐字原文）：
+  1. 攻擊前總統 Obama——指控「叛國罪（treason）」、呼籲逮捕
+  2. 繼續散布 2020 年選舉被竊的陰謀論
+  3. 攻擊加拿大總理 Carney（加美貿易談判破裂背景）
+  4. 攻擊加州州長 Newsom（稱「Crooked Governors」）
+  5. 攻擊明尼蘇達州長 Walz（Walz 宣布不競選連任後大肆抨擊）
+  6. 攻擊明尼蘇達州眾議員 Ilhan Omar（涉索馬利亞詐欺指控）
+  7. 攻擊 Alex Pretti（遭聯邦探員擊斃的明尼阿波利斯 ICU 護士）
+
+▸ trumpstruth.org 最高已索引狀態：#41743（2026-09-15）
+  → 2026-09-16 貼文尚未被搜尋引擎索引（貼文時間美東 9-10 PM = UTC 凌晨 1-2 AM，可能索引延遲）
+
+【結論】
+
+2026-09-16 貼文存在已被多方媒體報導確認，但目前無法透過任何可用管道取得逐字原文或具體貼文 ID。
+不建立貼文存檔（避免無原文的不準確分析）。
+last_seen_id 維持 2026-09-15_20260915007（等待下次執行可取得逐字內容時再更新）。
+
+結果：確認貼文存在但無法取得原文，不推播 LINE 通知，更新錯誤日誌。
