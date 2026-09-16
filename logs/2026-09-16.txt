@@ -41,6 +41,30 @@ last_seen_id：2026-09-15_20260915002
 已知背景：川普當日於北卡羅來納州 Gastonia 為參議員候選人 Michael Whatley 舉行造勢晚會（預計 7pm ET），
 FED 利率決策週，SCOTUS 郵寄選票議題持續延燒。
 
-下次執行建議：24 小時後再次嘗試，或待搜尋引擎完成索引後。
-
 結果：無新貼文可分析，不推播 LINE 通知。
+
+===============================================================
+
+第二次執行（同日稍後）
+last_seen_id 起點：2026-09-15_20260915004
+
+【找到新貼文】
+
+透過 WebSearch 成功找到 3 篇 2026-09-15 的新貼文（trumpstruth #41742 之後）：
+
+1. trumpstruth #41743 — 影片貼文（September 15，時間未確認）
+   → 存檔為 20260915005_Video-Post-GastoniaRally.md
+
+2. trumpstruth ~#41744 — Charles Payne 書籍背書（September 15, ~15:11 ET）
+   內容：為 Fox News 主持人 Charles Payne 新書《Undeniable Windfalls》背書
+   → 存檔為 20260915006_CharlesPayne-UndenialbleWindfalls-Endorsement.md
+
+3. trumpstruth ~#41745 — 分享《華盛頓郵報》伊朗洩密文章（September 15, ~22:19 ET）
+   內容：轉貼 WaPo 文章 "What the disloyal leaks about Iran prove about Trump"
+   → 存檔為 20260915007_Iran-DisloyalLeaks-WashingtonPost.md
+
+September 16 貼文：尚未被搜尋引擎索引（川普今日在 Gastonia 造勢，7pm ET 演講）
+
+last_seen_id 更新為：2026-09-15_20260915007
+GitHub push：成功
+LINE 通知：由 GitHub Actions 自動處理
