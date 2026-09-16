@@ -173,3 +173,74 @@ last_seen_id 起點：2026-09-15_20260915007
 
 last_seen_id 維持 2026-09-15_20260915007。
 結果：不建立新貼文存檔，不推播 LINE，更新日誌。
+
+===============================================================
+
+第五次執行（同日，UTC September 16）
+last_seen_id 起點：2026-09-16_20260916003
+
+【嘗試方法】
+
+方法 A (WebFetch)：
+- https://truthsocial.com/@realDonaldTrump.rss → EGRESS_BLOCKED
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 → EGRESS_BLOCKED
+
+方法 B (WebSearch)：
+- 多次搜尋含日期、貼文 ID、人名、事件等不同關鍵字組合（合計 15+ 次）
+- 嘗試搜尋 Alex Pretti、Obama treason、Crooked Governors、Walz 不競選連任、Ilhan Omar、Canada Carney、Fed 升息等
+
+方法 C (WebFetch 其他來源)：
+- https://www.thetrumparchive.com/ → EGRESS_BLOCKED
+- https://trumpstruth.org → EGRESS_BLOCKED
+- https://www.poynter.org → EGRESS_BLOCKED
+- https://www.thedailybeast.com → EGRESS_BLOCKED
+- https://www.yahoo.com → EGRESS_BLOCKED
+- https://gizmodo.com → EGRESS_BLOCKED
+- https://www.foxbusiness.com → EGRESS_BLOCKED
+- https://crooksandliars.com → EGRESS_BLOCKED
+- https://www.msn.com → EGRESS_BLOCKED
+- https://newrepublic.com → EGRESS_BLOCKED
+- https://www.alternet.org → EGRESS_BLOCKED
+- https://www.facebook.com → EGRESS_BLOCKED
+
+【git clone 成功】
+透過 git clone https://ghp_[PAT]@github.com/c0911818638-a11y/trump-tracker.git 成功取得本地工作副本
+
+【本次執行新增確認情報（透過 WebSearch 摘要）】
+
+▸ Poynter（2026-09-16 發布）事實查核確認本次 9/16 午夜狂潮具體內容：
+  - 虛假貼文：「Walmart is about to shut 250 of its 303 California stores because of
+    the state's $22 per hour minimum wage」（加州實際最低工資為 $16.90，Walmart 否認）
+  - CNN 事實查核員 Daniel Dale 稱此為「late-night nonsense-posting spree」
+  - Governor Newsom 辦公室回應：「You mean the President is lying? He would never!」
+
+▸ 其他已確認主題（無逐字原文）：
+  - 攻擊前總統 Obama（涉叛國罪、逮捕呼籲——可能為重貼先前帖文）
+  - 攻擊加拿大總理 Carney（可能為重貼 9/3 帖文：「Just watch!」威脅）
+  - 攻擊 Governor Newsom（偽造 cartel 故事、Walmart 謠言）
+  - 攻擊 Governor Walz（與 Ilhan Omar 合謀詐欺）
+  - 攻擊 Rep. Ilhan Omar（叫囂驅逐至索馬利亞）
+  - Alex Pretti 相關帖文（可能為重貼 1/30 帖文）
+  - 2020 年大選陰謀論
+  - 稱讚 Melania
+
+▸ 帖文規模：
+  - 美東 9:23 PM ~ 9:59 PM：36 分鐘內 48 篇
+  - 加上 5 AM ET 繼續段：共 60+ 篇（以 respost 為主）
+  - 貼文時間對應 UTC 9/17 凌晨 1:23 AM ~ 1:59 AM
+
+▸ trumpstruth.org 索引狀況：
+  - WebSearch 顯示最高索引仍為 #41743（截至本次執行）
+  - 9/16 ET 午夜帖文尚未被搜尋引擎索引
+
+【結論】
+
+情況與前次執行相同：9/16 ET 深夜帖文存在確認（多媒體來源），但所有有逐字原文的
+可訪問媒體（Poynter, Daily Beast, Yahoo, Alternet 等）均被 EGRESS_BLOCKED。
+Walmart 謊言貼文（Poynter 事實查核）為本次唯一能確認「在 9/16 午夜狂潮中發布」
+的帖文，但仍無法取得其逐字原文（僅知其虛假主張內容）。
+
+依據前次決策方針（不建立無原文的貼文存檔），本次維持相同策略。
+last_seen_id 維持 2026-09-16_20260916003。
+
+結果：確認貼文存在但仍無法取得原文，不推播 LINE，更新日誌。
