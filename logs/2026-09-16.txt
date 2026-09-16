@@ -116,3 +116,60 @@ last_seen_id 起點：2026-09-15_20260915007
 last_seen_id 維持 2026-09-15_20260915007（等待下次執行可取得逐字內容時再更新）。
 
 結果：確認貼文存在但無法取得原文，不推播 LINE 通知，更新錯誤日誌。
+
+===============================================================
+
+第四次執行（同日，UTC September 16）
+last_seen_id 起點：2026-09-15_20260915007
+
+【嘗試方法】
+
+方法 A (WebFetch)：
+- https://truthsocial.com/@realDonaldTrump.rss → EGRESS_BLOCKED
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 → EGRESS_BLOCKED
+
+方法 B (WebSearch)：
+- 多次搜尋不同關鍵字組合（日期、引號、人名、事件）
+- 嘗試搜尋 Alex Pretti, Obama treason, Crooked Governors, Poynter article 等關鍵字
+
+方法 C (WebFetch 其他來源)：
+- https://www.thetrumparchive.com/ → EGRESS_BLOCKED
+- https://trumpstruth.org → EGRESS_BLOCKED
+- https://www.yahoo.com → EGRESS_BLOCKED
+- https://www.poynter.org → EGRESS_BLOCKED
+- https://news.meaww.com → EGRESS_BLOCKED
+- https://wfin.com → EGRESS_BLOCKED
+- https://www.foxnews.com → EGRESS_BLOCKED
+- https://www.cbsnews.com → EGRESS_BLOCKED
+- https://polymarket.com → EGRESS_BLOCKED
+- https://www.kadoa.com → EGRESS_BLOCKED
+- https://www.presidency.ucsb.edu → EGRESS_BLOCKED
+- https://www.whitehouse.gov → EGRESS_BLOCKED
+
+【本次執行新增確認情報（透過 WebSearch 摘要）】
+
+▸ Poynter 文章確認發布日期為 2026-09-16，報導川普前晚（ET）的貼文狂潮
+  - 36 分鐘內 48 篇（9:23 PM ~ 9:59 PM ET）
+  - CNN 記者 Daniel Dale 稱為「late-night nonsense-posting spree」
+
+▸ 攻擊 Obama 的推文已確認（但時間點為 May 12, 2026 的報導，非 9/16 原文）
+  轉貼文引用：「Arrest them all. Prosecute them all. Incarcerate them all at once for
+  treachery, treason and seditious conspiracy to overthrow the United States government.
+  But first Barack Obama.」
+
+▸ 攻擊 Alex Pretti 的推文已確認（1/30/2026 Trump 原文，本次貼文可能為重提/轉貼）
+  Trump 原文：「Agitator and, perhaps, insurrectionist, Alex Pretti's stock has gone
+  way down with the just released video of him screaming and spitting in the face of
+  a very calm and under control ICE Officer...」
+
+▸ 「Crooked Governors」Walz/Newsom 貼文確認（12/31/2025 原文，本次貼文可能重提）
+
+▸ 搜尋引擎對 9/16 ET 晚貼文的索引仍有延遲，trumpstruth.org 最高索引仍為 #41743
+
+【結論】
+
+狀況與前次執行相同：貼文存在確認，但無法取得 9/16 ET 晚貼文的逐字原文或 ID。
+部分引用文字屬早期貼文轉貼，無法確認為新的 9/16 原創內容。
+
+last_seen_id 維持 2026-09-15_20260915007。
+結果：不建立新貼文存檔，不推播 LINE，更新日誌。
