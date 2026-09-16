@@ -1,0 +1,46 @@
+2026-09-16 監控執行記錄
+======================
+
+執行時間：2026-09-16（UTC）
+last_seen_id：2026-09-15_20260915002
+
+【嘗試方法】
+
+方法 A (WebFetch)：
+- https://truthsocial.com/@realDonaldTrump.rss → EGRESS_BLOCKED
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 → 未嘗試（同域名已知封鎖）
+
+方法 B (WebSearch)：
+- 搜尋 "Trump Truth Social posts today September 16 2026" → 無 Sep 16 結果
+- 搜尋 "Trump Truth Social September 16 2026" → 無 Sep 16 結果
+- 多次不同關鍵字搜尋 → 搜尋引擎僅顯示至 2026-09-14 的已索引貼文
+
+方法 C (WebFetch 其他來源)：
+- https://www.thetrumparchive.com/ → EGRESS_BLOCKED
+- https://trumpstruth.org → EGRESS_BLOCKED
+- https://www.kadoa.com/potus/truth → EGRESS_BLOCKED
+- https://www.presidency.ucsb.edu → EGRESS_BLOCKED
+- https://theconservativetreehouse.com → EGRESS_BLOCKED
+- https://x.com/TrumpTruthOnX → EGRESS_BLOCKED
+- https://www.cnbc.com → EGRESS_BLOCKED
+- https://www.cnn.com → EGRESS_BLOCKED
+- https://www.whitehouse.gov → EGRESS_BLOCKED
+- https://polymarket.com → EGRESS_BLOCKED
+- https://abc11.com → EGRESS_BLOCKED
+- https://www.wral.com → EGRESS_BLOCKED
+- https://www.wbtv.com → EGRESS_BLOCKED
+- https://en.wikipedia.org → EGRESS_BLOCKED
+- https://substack.com → EGRESS_BLOCKED
+- https://www.facebook.com → EGRESS_BLOCKED
+
+【結論】
+搜尋引擎索引顯示最新可見的 trumpstruth.org 狀態為 #41739（2026-09-14）。
+2026-09-15 的 2 篇 SCOTUS 貼文已在前次執行追蹤。
+2026-09-16 貼文尚未被任何可用搜尋引擎索引，或本次執行時間點當日美東時間尚早。
+
+已知背景：川普當日於北卡羅來納州 Gastonia 為參議員候選人 Michael Whatley 舉行造勢晚會（預計 7pm ET），
+FED 利率決策週，SCOTUS 郵寄選票議題持續延燒。
+
+下次執行建議：24 小時後再次嘗試，或待搜尋引擎完成索引後。
+
+結果：無新貼文可分析，不推播 LINE 通知。
