@@ -1,103 +1,40 @@
-# 2026-09-17 監控日誌（第二次執行更新）
+監控日誌 — 2026-09-17
 
 執行時間：2026-09-17 UTC
-上次記錄貼文 ID：2026-09-16_20260916003
+上次紀錄 ID：2026-09-16_20260916004
 
-## 嘗試方法
+=== 結果摘要 ===
 
-### 方法 A：Truth Social API / RSS
-- URL: https://truthsocial.com/@realDonaldTrump.rss
-- URL: https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20
-- 結果：EGRESS_BLOCKED — 代理伺服器組織政策封鎖此域名，無法連線
+[新貼文：4篇]（均為 2026-09-16 晚間補錄，trumpstruth.org #41753–#41758）
 
-### 方法 B：WebSearch 搜尋
-- 多次搜尋 Trump Truth Social September 16-17, 2026 相關關鍵字
-- 成功透過搜尋結果摘要取得 trumpstruth.org 狀態 ID 及部分貼文內容
+- 20260916005: RT-VictorDavisHanson-CounterRevolution-MAGA（轉發書籍推廣）
+- 20260916006: Sep16-ImagePost-Unknown（圖片貼文，內容未確認）
+- 20260916007: RT-Unknown-Retruth（轉發貼文，內容未確認）
+- 20260916008: IwoJima-Memorial-Renovation-Image（硫磺島戰役紀念碑修繕圖片）
 
-### 方法 C：Trump Archive / trumpstruth.org
-- 結果：EGRESS_BLOCKED — 代理伺服器封鎖此域名
-- 透過 WebSearch 取得 trumpstruth.org 狀態摘要
+新 last_seen_id：2026-09-16_20260916008
 
-### GitHub 讀取
-- 方法：git clone（使用 PAT）
-- 結果：成功讀取 state/last_seen_id.txt（2026-09-16_20260916003）
+=== 2026-09-17 貼文狀態 ===
 
-## 新貼文發現（本次執行）
+今日為美國憲法日（Constitution Day），川普已於 9/11–9/12 發布史密森尼博物館
+喬治華盛頓雕像相關貼文（已被前次監控週期捕獲），並於 9/16 宣布 9/17–9/23 為
+憲法週。
 
-### 新貼文（已建立分析檔案）
-1. **2026-09-16_20260916004**：「First-Ever Midterm RNC Garnered Over 100 Million Live Stream Views」
-   - trumpstruth.org status: 41752
-   - 首次共和黨期中選舉 RNC 直播突破 1 億次收視（Facebook/TikTok/YouTube/有線電視）
-   - 已建立分析檔案：posts/2026-09-16_20260916004_RNC-Dallas-Midterm-100Million-Views.md
-   - 已更新 last_seen_id → 2026-09-16_20260916004
+截至本次執行，搜尋引擎尚未索引任何 2026-09-17 新貼文。可能原因：
+1. 搜尋引擎收錄延遲（通常需數小時至數天）
+2. 川普尚未於今日（UTC 時區早段）發文
+3. Truth Social / 相關存檔網站（trumpstruth.org、thetrumparchive.com）
+   因本環境網路政策封鎖，無法直接存取
 
-### 其他 2026-09-16 貼文（無可追蹤文字內容）
-- Status 41748：影片貼文（2026-09-16 下午，無文字）
-- Status 41749：RT（轉發 truthsocial status 117282599441012397）
-- Status 41756：圖片貼文「The Hoax Buster」（2026-09-16 22:35，圖片為主）
-- Status 41757：RT @realDonaldTrump（2026-09-16 晚間）
+=== 封鎖網域 ===
 
-## 2026-09-17（憲法日）狀態
+以下網域因環境網路政策封鎖，無法直接存取：
+- truthsocial.com
+- www.thetrumparchive.com
+- www.trumpstruth.org（部分搜尋快取可用）
+- www.pbs.org、www.oann.com、thehill.com、www.whitehouse.gov 等
+- x.com（Twitter）
 
-- 川普已於 9 月 11 日發文（已追蹤：20260911004），要求史密森尼學會在憲法日前安裝喬治華盛頓雕像
-- 川普發布憲法週公告（White House 公文，非 Truth Social 貼文）
-- 搜尋結果截至本次執行，2026-09-17 暫無新 Truth Social 文字貼文已建立搜尋索引
+=== 建議 ===
 
-## 結論
-
-本次執行找到 1 篇新文字貼文（20260916004），已建立分析檔案並更新 last_seen_id。
-GitHub Actions 將自動觸發 LINE 推播。
-
-===============================================================
-
-第二次執行（UTC September 17, 2026）
-last_seen_id 起點：2026-09-16_20260916004
-
-【嘗試方法】
-
-方法 A (WebFetch)：
-- https://truthsocial.com/@realDonaldTrump.rss → EGRESS_BLOCKED
-- https://truthsocial.com/api/v1/accounts/.../statuses → EGRESS_BLOCKED
-
-方法 B (WebSearch)：
-- 搜尋 "Trump Truth Social September 17 2026 new posts"
-- 搜尋 "Trump Truth Social September 17 2026 Constitution Day all posts"
-- 搜尋 "site:trumpstruth.org September 17, 2026"
-- 搜尋 "trumpstruth.org 41759 41761 41763 41765"
-- 多次搜尋，均未發現新的 2026-09-17 貼文已被搜尋引擎索引
-
-方法 C (WebFetch 其他來源)：
-- www.rawstory.com → EGRESS_BLOCKED
-- www.pbs.org → EGRESS_BLOCKED
-- www.oann.com → EGRESS_BLOCKED
-- fortune.com → EGRESS_BLOCKED
-- tech.yahoo.com → EGRESS_BLOCKED
-- kadoa.com → EGRESS_BLOCKED
-- www.trumpstruth.org → EGRESS_BLOCKED
-
-【git clone 成功】
-透過 git clone 成功取得本地工作副本並確認 last_seen_id。
-
-【已確認情報】
-
-▸ trumpstruth.org 最高索引狀態：#41758（2026-09-16，Iwo Jima 圖片貼文）
-  → 所有索引中最新的均為 2026-09-16 的圖片/影片/RT 貼文
-
-▸ 2026-09-17 貼文狀況：
-  - 搜尋引擎查詢 "September 17, 2026" 僅返回 trumpstruth.org 的 #41695-41696
-    （這兩篇是 2026-09-11 的貼文，文字中提及「Constitution Day, September 17, 2026」）
-  - 史密森尼學會/華盛頓雕像貼文 (#41696) 已於 2026-09-11 追蹤為 20260911004
-  - 確認 posts/2026-09-11_20260911004_Smithsonian-Washington-Colossus-Constitution-Day.md 已存在
-
-▸ 2026-09-16 後續貼文（後先前執行已記錄，均無文字內容）：
-  - #41753：RT（無文字）
-  - #41755：影片貼文（無文字）
-  - #41756：圖片貼文「The Hoax Buster」（圖片為主，無原文）
-  - #41757：RT（無文字）
-  - #41758：Iwo Jima 圖片貼文（圖片為主，無文字）
-
-【結論】
-
-2026-09-17 迄今（UTC 執行時間）搜尋引擎中尚無新 Truth Social 文字貼文索引。
-last_seen_id 維持 2026-09-16_20260916004。
-不建立新貼文存檔，不推播 LINE 通知。
+下次監控週期（預計數小時後）再次執行，以捕獲今日憲法日貼文。
