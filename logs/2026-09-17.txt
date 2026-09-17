@@ -47,3 +47,57 @@
 
 本次執行找到 1 篇新文字貼文（20260916004），已建立分析檔案並更新 last_seen_id。
 GitHub Actions 將自動觸發 LINE 推播。
+
+===============================================================
+
+第二次執行（UTC September 17, 2026）
+last_seen_id 起點：2026-09-16_20260916004
+
+【嘗試方法】
+
+方法 A (WebFetch)：
+- https://truthsocial.com/@realDonaldTrump.rss → EGRESS_BLOCKED
+- https://truthsocial.com/api/v1/accounts/.../statuses → EGRESS_BLOCKED
+
+方法 B (WebSearch)：
+- 搜尋 "Trump Truth Social September 17 2026 new posts"
+- 搜尋 "Trump Truth Social September 17 2026 Constitution Day all posts"
+- 搜尋 "site:trumpstruth.org September 17, 2026"
+- 搜尋 "trumpstruth.org 41759 41761 41763 41765"
+- 多次搜尋，均未發現新的 2026-09-17 貼文已被搜尋引擎索引
+
+方法 C (WebFetch 其他來源)：
+- www.rawstory.com → EGRESS_BLOCKED
+- www.pbs.org → EGRESS_BLOCKED
+- www.oann.com → EGRESS_BLOCKED
+- fortune.com → EGRESS_BLOCKED
+- tech.yahoo.com → EGRESS_BLOCKED
+- kadoa.com → EGRESS_BLOCKED
+- www.trumpstruth.org → EGRESS_BLOCKED
+
+【git clone 成功】
+透過 git clone 成功取得本地工作副本並確認 last_seen_id。
+
+【已確認情報】
+
+▸ trumpstruth.org 最高索引狀態：#41758（2026-09-16，Iwo Jima 圖片貼文）
+  → 所有索引中最新的均為 2026-09-16 的圖片/影片/RT 貼文
+
+▸ 2026-09-17 貼文狀況：
+  - 搜尋引擎查詢 "September 17, 2026" 僅返回 trumpstruth.org 的 #41695-41696
+    （這兩篇是 2026-09-11 的貼文，文字中提及「Constitution Day, September 17, 2026」）
+  - 史密森尼學會/華盛頓雕像貼文 (#41696) 已於 2026-09-11 追蹤為 20260911004
+  - 確認 posts/2026-09-11_20260911004_Smithsonian-Washington-Colossus-Constitution-Day.md 已存在
+
+▸ 2026-09-16 後續貼文（後先前執行已記錄，均無文字內容）：
+  - #41753：RT（無文字）
+  - #41755：影片貼文（無文字）
+  - #41756：圖片貼文「The Hoax Buster」（圖片為主，無原文）
+  - #41757：RT（無文字）
+  - #41758：Iwo Jima 圖片貼文（圖片為主，無文字）
+
+【結論】
+
+2026-09-17 迄今（UTC 執行時間）搜尋引擎中尚無新 Truth Social 文字貼文索引。
+last_seen_id 維持 2026-09-16_20260916004。
+不建立新貼文存檔，不推播 LINE 通知。
