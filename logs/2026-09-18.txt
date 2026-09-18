@@ -1,0 +1,24 @@
+執行時間: 2026-09-18T01:00:40Z
+執行結果: 未發現新貼文
+
+---
+嘗試方法:
+[失敗] 方法A: truthsocial.com RSS feed → EGRESS_BLOCKED (truthsocial.com)
+[失敗] 方法A: Truth Social API v1/accounts/107780257626128497/statuses → EGRESS_BLOCKED
+[失敗] 方法B: WebSearch → 未找到 2026-09-18 貼文
+[失敗] 方法C: thetrumparchive.com → EGRESS_BLOCKED
+[失敗] trumpstruth.org (直接) → EGRESS_BLOCKED
+[成功] WebSearch 交叉比對 trumpstruth.org 索引
+
+---
+查詢結果:
+- trumpstruth.org 最新存檔: status 41768 (2026-09-17，image post)
+- last_seen_id: 2026-09-17_20260917010
+- 2026-09-18 新貼文數量: 0
+- 結論: 今日無新貼文（或尚未被搜尋索引收錄）
+
+---
+背景資訊:
+- Xi Jinping 預計本月來訪白宮 (Trump-Xi 第二次 2026 峰會)
+- 美國中期選舉約 6 週後舉行
+- 川普近期貼文主題: 經濟數據圖表 (Will Cain Show)、農業法案、憲法日、波蘭
