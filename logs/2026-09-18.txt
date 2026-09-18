@@ -22,3 +22,40 @@
 - Xi Jinping 預計本月來訪白宮 (Trump-Xi 第二次 2026 峰會)
 - 美國中期選舉約 6 週後舉行
 - 川普近期貼文主題: 經濟數據圖表 (Will Cain Show)、農業法案、憲法日、波蘭
+
+===== 第二次執行 =====
+
+執行時間: 2026-09-18T19:10:00Z（預估）
+執行結果: 發現 13 篇新貼文
+
+---
+嘗試方法:
+[失敗] 方法A: truthsocial.com RSS feed → EGRESS_BLOCKED
+[失敗] 方法A: Truth Social API → EGRESS_BLOCKED
+[失敗] 方法C: thetrumparchive.com → EGRESS_BLOCKED
+[失敗] trumpstruth.org (直接) → EGRESS_BLOCKED
+[成功] 方法B: WebSearch → 找到多篇 2026-09-18 貼文
+[成功] GitHub raw content → 讀取 last_seen_id.txt（2026-09-18_20260918001）
+[成功] git clone → 直接使用 PAT 克隆倉庫並推送
+
+---
+新發現貼文（trumpstruth 狀態 41781–41799）:
+- 20260918002 (#41781): CNN 批評 "Unwatchable and Failing CNN"
+- 20260918003 (#41782): RT 共和黨支持率 95%
+- 20260918004 (~#41784): 禁止 CNN/MSNOW/Politico 進入白宮（重大事件）
+- 20260918005 (#41783): 背書 Dan S. Sullivan（阿拉斯加參議員）
+- 20260918006 (#41785): 背書 Ashley Moody（佛羅里達參議員）
+- 20260918007 (#41786): 背書 Mike Rogers（密西根參議員）
+- 20260918008 (#41792): 背書 Monica De La Cruz（德克薩斯眾議員）
+- 20260918009 (#41793): 背書 Stacy Garrity（賓州州長）
+- 20260918010 (#41795): 背書 Pete Ricketts（內布拉斯加參議員）
+- 20260918011 (#41796): 背書 Michael Whatley（北卡參議員）
+- 20260918012 (#41797): 背書 Laurie Buckhout（北卡眾議員）
+- 20260918013 (#41798): RT 共和黨支持率 95%（重複）
+- 20260918014 (#41799): 影片貼文（內容未知）
+
+---
+今日重點事件:
+- 【高重要度】川普宣布即時禁止 CNN、MSNOW、Politico 進入白宮，創現代史先例
+- 【高重要度】連續 8 則選舉背書，針對中期選舉關鍵州參議員及州長席次
+- last_seen_id 更新至: 2026-09-18_20260918014
