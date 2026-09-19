@@ -1,0 +1,23 @@
+監控執行時間: 2026-09-19 UTC
+上次記錄貼文 ID: 2026-09-19_20260919001
+
+=== 檢查結果 ===
+
+已讀取 state/last_seen_id.txt: 2026-09-19_20260919001
+（對應 trumpstruth.org 狀態 #41805，2026-09-19 早上「黃金時代」影片貼文）
+
+資料來源嘗試:
+- truthsocial.com RSS: 被 proxy 封鎖 (EGRESS_BLOCKED)
+- thetrumparchive.com: 被 proxy 封鎖 (EGRESS_BLOCKED)
+- trumpstruth.org: 被 proxy 封鎖（但透過 WebSearch 取得搜尋摘要）
+- WebSearch: 搜尋到 trumpstruth.org 狀態 #41805（已捕獲）
+
+搜尋範圍: trumpstruth.org 狀態 41806+ 及 2026年9月19日 下午/晚間新貼文
+結果: 未發現任何 #41805 之後的新貼文
+
+=== 結論 ===
+
+無新貼文。last_seen_id 維持不變: 2026-09-19_20260919001
+
+注意: GitHub API (api.github.com) 在本 session 中被 proxy 封鎖，
+改用 git clone + push 方式操作 repo。
