@@ -124,3 +124,50 @@ LINE 推播: 無（無新貼文）
 
 last_seen_id: 維持不變（2026-09-21_20260921005）
 LINE 推播: 無（無新貼文）
+
+---
+
+===== 第五次監控執行 =====
+
+執行時間: 2026-09-21 UTC（定期排程，第五次）
+上次記錄貼文 ID（執行前）: 2026-09-21_20260921005
+（對應 trumpstruth.org 狀態 #41826，2026-09-21 07:53 UTC「Free Press/Fake News/Cancer」貼文）
+
+背景資訊: 今日重大事件
+- 媒體禁令訴訟：CNN、MS NOW、Politico 於週一上午提起《第一修正案》訴訟
+- 訴訟分配法官：聯邦法官提摩西·凱利（Timothy Kelly，Trump 任命，2018 年裁定恢復 Acosta 記者證）
+- 聽證訂於：2026-09-23（週三）
+- UNGA 高峰週：2026-09-22 起，川普預計明日於 UNGA 發表演說
+- 習近平國事訪問：預計 2026-09-24（週三）抵達
+
+嘗試方法:
+[失敗] 方法A: truthsocial.com RSS → EGRESS_BLOCKED
+[失敗] 方法A: Truth Social API → EGRESS_BLOCKED
+[失敗] 方法B-C: thetrumparchive.com → EGRESS_BLOCKED
+[失敗] trumpstruth.org 直接存取 → EGRESS_BLOCKED
+[失敗] GitHub API (api.github.com) → Session 限制（需 add_repo）
+[成功] git clone（https + PAT） → 成功讀取本地倉庫
+[成功] WebSearch → 多次搜尋，發現新貼文
+
+搜尋關鍵字:
+  * "Trump Truth Social posts today September 21 2026 CNN First Amendment"
+  * "Trump Truth Social 'Tim Kelly' 'Jim Acosta' September 21 2026"
+  * "Trump Truth Social 'FAKE NEWS IS A THREAT TO DEMOCRACY' September 2026"
+  * "Trump Truth Social September 21 2026 new afternoon posts media lawsuit"
+
+新貼文發現（2篇）:
+
+[貼文 006] 20260921006
+  時間: 2026-09-21 週一下午（訴訟提起後，具體時間待確認）
+  內容: "FAKE NEWS IS A THREAT TO DEMOCRACY" 相關貼文，援引「以86%拿下全民票、獲94%負面報導」
+  來源: Mediaite "Trump Rages About Lawsuit Filed by Media He Banned: 'FAKE NEWS IS A THREAT TO DEMOCRACY'"
+  檔案: posts/2026-09-21_20260921006_FakeNews-ThreatToDemocracy-SwingStates-86Percent.md
+
+[貼文 007] 20260921007
+  時間: 2026-09-21 週一下午（法官分配後）
+  內容: 攻擊法官 Tim Kelly、預告上訴，稱 Acosta「已從地球上消失」
+  來源: Raw Story "Trump fumes as judge 'sadly appointed by Trump' will hear new lawsuit"
+  檔案: posts/2026-09-21_20260921007_JudgeTimKelly-JimAcosta-MediaBanLawsuit-Appeal.md
+
+last_seen_id: 更新為 2026-09-21_20260921007
+LINE 推播: 由 GitHub Actions (line-notify.yml) 自動觸發
