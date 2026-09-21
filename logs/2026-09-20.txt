@@ -66,3 +66,14 @@ commits 確認:
 - 23:08:06Z 新增 posts/2026-09-20_20260920007_HisHemisphere-Greenland-Globe-Image.md
 last_seen_id 更新為: 2026-09-20_20260920007
 GitHub Actions LINE Notify 已觸發（23:08:08Z），但顯示 failure（預先存在問題）。
+
+=== 監控執行（定期排程）===
+執行時間: 2026-09-20 23:58:09 UTC
+方法 A：truthsocial.com — EGRESS_BLOCKED（網路政策封鎖）
+方法 B：WebSearch 搜尋 trumpstruth.org ——成功取得結果
+方法 C：thetrumparchive.com — EGRESS_BLOCKED
+
+最新貼文確認: trumpstruth.org #41818（His Hemisphere 圖片，2026-09-20）
+系統記錄最後 ID: 2026-09-20_20260920007
+
+結論: 無新貼文，無需上傳，無需更新 last_seen_id。
