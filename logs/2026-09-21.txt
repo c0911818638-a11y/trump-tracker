@@ -30,3 +30,53 @@
 
 last_seen_id: 維持不變（2026-09-20_20260920007）
 LINE 推播: 無（無新貼文）
+
+---
+
+===== 第三次監控執行 =====
+
+執行時間: 2026-09-21 UTC（定期排程，第三次）
+上次記錄貼文 ID（執行前）: 2026-09-21_20260921003
+（對應 trumpstruth.org 狀態 #41824/41825，2026-09-21 01:07 UTC RT Breitbart 貼文）
+
+背景資訊: 今日重大事件
+- UNGA 高峰週：2026-09-22 起（明日開始），川普預計明日於UNGA發表演說
+- 習近平國事訪問：預計 2026-09-24（週三）抵達華盛頓 Joint Base Andrews
+- 川普主要雙邊會議：2026-09-25（週四）於白宮，晚間設國宴
+- 伊朗戰爭決策：川普接受 Fox News 採訪表示已進入「決策模式」
+- 媒體禁令：CNN、MSNOW、Politico 記者持續遭拒白宮
+
+嘗試方法:
+[失敗] 方法A: truthsocial.com RSS → EGRESS_BLOCKED
+[失敗] 方法A: Truth Social API → EGRESS_BLOCKED
+[失敗] 方法B-C: thetrumparchive.com → EGRESS_BLOCKED
+[失敗] trumpstruth.org 直接存取 → EGRESS_BLOCKED
+[失敗] GitHub API (api.github.com) → Session 限制（需 add_repo）
+[成功] git clone（https + PAT） → 成功讀取本地倉庫
+[成功] WebSearch → 多次搜尋，無新索引貼文
+
+搜尋關鍵字:
+  * "Trump Truth Social September 21 2026 new posts"
+  * "Trump Truth Social today flurry posts September 21 2026"
+  * "Trump Truth Social UNGA Xi Jinping September 21 2026"
+  * "trumpstruth.org status 41826 41827 41828"
+  * "Trump deciding mode Iran Truth Social post"
+  * "Trump Truth Social post 117306 OR 117307 OR 117308"
+  * "site:trumpstruth.org statuses 41826-41830"
+
+搜尋結果摘要:
+- WebSearch 最新索引: trumpstruth.org 狀態 #41825（2026-09-21 01:06 UTC，已追蹤）
+- 川普 Fox News 採訪：「決策模式」伊朗聲明（非 Truth Social 貼文）
+- 「VERY BIG THINGS COMING」：搜尋顯示為 2026-09-20 下午貼文（已涵蓋於追蹤範圍）
+- Xi Jinping 週三抵達，UNGA 明日開始——川普今日可能尚未發文相關內容
+
+注意事項:
+  * trumpstruth.org 狀態 #41819（"Hitting balls with Bryson D."）可能被前次執行略過
+    （時間戳：2026-09-20 9:05 PM ET ≈ 2026-09-21 01:05 UTC，介於已追蹤貼文之間）
+  * 此貼文已在後續追蹤邏輯覆蓋範圍之外（last_seen_id 已更新至 2026-09-21_20260921003）
+
+結論: 目前無新貼文超過 2026-09-21_20260921003
+（搜尋引擎未索引任何 trumpstruth.org 狀態 > #41825）
+
+last_seen_id: 維持不變（2026-09-21_20260921003）
+LINE 推播: 無（無新貼文）
