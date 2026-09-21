@@ -1,0 +1,32 @@
+===== 監控執行 =====
+
+執行時間: 2026-09-21T UTC（定期排程）
+上次記錄貼文 ID（執行前）: 2026-09-20_20260920007
+（對應 trumpstruth.org 狀態 #41818，2026-09-20「His Hemisphere」格陵蘭地球儀圖片貼文）
+
+---
+嘗試方法:
+[失敗] 方法A: truthsocial.com RSS feed → EGRESS_BLOCKED (truthsocial.com)
+[失敗] 方法A: Truth Social API → EGRESS_BLOCKED
+[失敗] 方法B-C: thetrumparchive.com → EGRESS_BLOCKED
+[失敗] trumpstruth.org (直接) → EGRESS_BLOCKED
+[成功] WebSearch → 搜尋到 trumpstruth.org 最新存檔
+[成功] GitHub raw content → 讀取 state/last_seen_id.txt
+[成功] git clone → 成功克隆倉庫（https + PAT）
+
+---
+查詢結果:
+- trumpstruth.org 最新存檔（搜尋引擎索引）: 狀態 #41818（2026-09-20，His Hemisphere 圖片貼文）
+- 搜尋 2026-09-21 貼文: 未找到任何新貼文
+- 嘗試關鍵字:
+  * "Trump Truth Social September 21 2026"
+  * "Trump Truth Social post today September 21 2026 text content"
+  * "Trump Truth Social statement September 21 2026"
+  * "trumpstruth.org status 41819 41820 41821"
+  * "Trump Truth Social news today September 21 2026"
+
+結論: 今日（2026-09-21）目前未發現新貼文
+（可能原因：川普尚未發文，或貼文尚未被搜尋引擎索引收錄）
+
+last_seen_id: 維持不變（2026-09-20_20260920007）
+LINE 推播: 無（無新貼文）
