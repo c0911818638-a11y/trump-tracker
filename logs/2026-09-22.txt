@@ -1,0 +1,79 @@
+===== 監控執行 =====
+
+執行時間: 2026-09-22T UTC（定期排程）
+上次記錄貼文 ID（執行前）: 2026-09-22_20260922004
+（對應 trumpstruth.org 狀態 #41841 附近，2026-09-22「Johnny Damon / DJTSPORTS MLB TotalWinner」貼文）
+
+---
+嘗試方法:
+
+[失敗] 方法A: truthsocial.com RSS feed → EGRESS_BLOCKED (truthsocial.com)
+[失敗] 方法A: Truth Social API (api v1 statuses) → EGRESS_BLOCKED (truthsocial.com)
+[失敗] 方法C: thetrumparchive.com → EGRESS_BLOCKED
+[失敗] trumpstruth.org 直接存取 → EGRESS_BLOCKED
+[失敗] 多個新聞網站（CNN、NBC、NPR、Fox News、BBC、Yahoo、Business Standard、
+        Daily Beast、The Hill、Atlantic Black Star、Atlanta Black Star、
+        Reality Tea、AllAfrica、Rev.com、whitehouse.gov）→ 全部 EGRESS_BLOCKED
+[失敗] GitHub API (api.github.com) → Session 限制（需 add_repo）
+[成功] git clone（https + PAT） → 成功克隆倉庫並讀取本地倉庫
+[部分成功] WebSearch → 搜尋到背景資訊，但未能取得 20260922004 之後的具體新貼文
+
+---
+背景資訊（今日重大事件 2026-09-22）:
+
+- UNGA 81st 高峰週正式開始（2026-09-22 至 2026-09-28）
+- 川普 UNGA 演說：今日稍晚（巴西總統之後），主題預計涵蓋伊朗、烏克蘭、移民
+- 川普-澤連斯基會面：預計今日於紐約
+- 川普-習近平峰會：預計 2026-09-24（週三）
+- Trump TV 上線：2026-09-21 正式啟播（24小時串流）
+- CNN、MS NOW、Politico 媒體禁令：訴訟聽證預計 2026-09-23
+
+---
+搜尋關鍵字（方法B）:
+
+* "Trump Truth Social posts today September 22 2026 latest"
+* "Trump Truth Social September 22 2026"
+* "Trump Truth Social UNGA speech September 22 2026"
+* "Trump Truth Social "September 22" 2026 post text new announcement"
+* "Trump UNGA speech highlights quotes 'America first' September 22 2026"
+* "Trump Truth Social post UNGA speech September 22 2026 new"
+* "Trump Truth Social today Monday September 22 UNGA week New York"
+* "Trump new post September 22 2026 announced Truth Social latest news today"
+* "Trump Truth Social Iran deal offer post September 22 2026 text"
+* "Trump Truth Social 'tariffs' OR 'China' OR 'Ukraine' post text September 22 2026"
+* "Trump Truth Social UNGA Ukraine Russia Iran war peace September 22 2026 post"
+* "Trump 100% tariff China Truth Social post September 22 2026"
+* "Trump Truth Social 'rein things in' AI regulation markets stocks September 22 2026"
+
+---
+搜尋結果摘要:
+
+透過 WebSearch 找到部分背景資訊，但無法確認 ID 20260922004 之後的具體新貼文：
+
+1. 「SICK conspiracy / AI / Data Centers / China」貼文 → 確認為 2026-09-14（已超出追蹤範圍）
+2. 「DOJ will rein in AI / We will be careful」貼文 → 確認為 2026-09-21（已追蹤範圍）
+3. 「His Hemisphere」圖片貼文 → 已歸檔（20260920007）
+4. 「Free Press / Fake News」貼文 → 已歸檔（20260921005 / 006 / 007）
+5. 「1AM Posting Frenzy」：確認為 2026-09-21 凌晨（已歸檔）
+6. 「100% Tariff on China」：確認為 2025-10-10（早期歸檔）
+7. 「National Garden of American Heroes」：確認為 2026-05（早期歸檔）
+
+未確認是否存在的新貼文（20260922005 及之後）：
+- UNGA 演說相關 Truth Social 貼文（可能存在但無法取得具體文本）
+- 澤連斯基會面相關貼文（可能存在但無法取得）
+- 媒體/訴訟後續貼文（無法確認）
+
+---
+結論:
+
+今日（2026-09-22）因所有直接存取管道遭 EGRESS_BLOCKED，
+無法確認並取得 last_seen_id（20260922004）之後的新貼文。
+
+WebSearch 雖提供大量背景資訊（UNGA、川習峰會、伊朗談判等），
+但搜尋引擎返回的片段不足以構成可信的新貼文記錄，
+故依步驟 7 規定，不建立貼文檔案，不推播 LINE。
+
+last_seen_id: 維持不變（2026-09-22_20260922004）
+LINE 推播: 無（無法確認新貼文）
+
+注意: 建議在網路限制解除後重新執行監控，補捉今日 UNGA 週期間的貼文。
