@@ -1,0 +1,35 @@
+執行時間: 2026-09-22 (run4)
+last_seen_id: 2026-09-22_20260922005
+
+=== 步驟 1：讀取狀態 ===
+last_seen_id = 2026-09-22_20260922005
+（最後追蹤: munitions post, 07:14 UTC）
+
+=== 步驟 2：抓取貼文 ===
+方法 A: truthsocial.com — BLOCKED (EGRESS_BLOCKED)
+方法 B: WebSearch 搜尋多次:
+  - "Trump Truth Social posts today September 22 2026"
+  - "Trump Truth Social September 22 2026 UN UNGA Iran annihilate"
+  - "Trump Truth Social post afternoon evening September 22 2026"
+  - "Trump Truth Social 'it went very well' Iran meeting"
+方法 C: thetrumparchive.com — BLOCKED (EGRESS_BLOCKED)
+         trumpstruth.org — BLOCKED (EGRESS_BLOCKED)
+         presidency.ucsb.edu — BLOCKED (EGRESS_BLOCKED)
+
+=== 步驟 3：比較結果 ===
+已確認貼文: 最新為 #41842 (munitions, 07:14 UTC) = 已追蹤
+無新貼文文字可確認（trumpstruth.org 未有 41843+ 索引）
+
+=== 背景資訊 (未成 Truth Social 貼文) ===
+今日主要事件（UNGA Day）:
+1. UN 演說: 威脅「annihilate」伊朗，提出中期選舉後談判
+2. 美伊3小時會談 (Witkoff/Kushner)，「it went very well」
+3. Trump TV 24/7 直播頻道今日正式啟動
+4. CNN vs Trump 憑證爭議 - Trump 在 UN 嘲諷 CNN
+5. 法院審理媒體禁令案
+
+=== 結論 ===
+無 20260922005 之後的新確認 Truth Social 文字貼文。
+川普今日以 UNGA 演說/記者問答為主要溝通形式。
+維持 last_seen_id = 2026-09-22_20260922005。
+無新貼文檔建立，不推播 LINE。
