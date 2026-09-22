@@ -1,0 +1,47 @@
+===== 監控執行 (Run 5) =====
+
+執行時間: 2026-09-22T UTC（定期排程）
+上次記錄貼文 ID（執行前）: 2026-09-22_20260922005
+（對應 trumpstruth.org 狀態 #41842，2026-09-22 07:14 UTC「Munitions/Cowards/Traitors」貼文）
+
+---
+嘗試方法:
+
+[失敗] 方法A: truthsocial.com RSS feed → EGRESS_BLOCKED (truthsocial.com)
+[失敗] 方法A: Truth Social API (api v1 statuses) → EGRESS_BLOCKED (truthsocial.com)
+[失敗] 方法C: thetrumparchive.com → EGRESS_BLOCKED
+[失敗] trumpstruth.org 直接存取 → EGRESS_BLOCKED
+[失敗] 多數新聞網站（CNN、NBC、NPR、Fox、CNBC、PBS等）→ 全部 EGRESS_BLOCKED
+[失敗] GitHub API (api.github.com) → Session 限制（需 add_repo）
+[成功] raw.githubusercontent.com → 成功讀取 state/last_seen_id.txt
+[成功] git clone（https + PAT credential helper）→ 成功克隆倉庫
+[部分成功] WebSearch (方法B) → 搜尋到背景資訊，確認最新索引貼文為 #41842
+
+---
+搜尋結果摘要:
+
+WebSearch 搜尋確認：
+* trumpstruth.org/statuses/41841 = Johnny Damon post (2026-09-22, 12:00 AM)  → 已歸檔為 20260922004
+* trumpstruth.org/statuses/41842 = Munitions post (2026-09-22, 07:14 AM) → 已歸檔為 20260922005
+* 搜尋 41843-41846：無結果（尚未索引）
+
+今日重大事件（UNGA 第 81 屆，2026-09-22）:
+- 川普聯合國大會演說：威脅「annihilate」伊朗，或談判中期選後
+- AI 命名：提議 "super intelligence" 取代 "artificial intelligence"
+- 美伊3小時會談 (Witkoff/Kushner)，「it went very well」
+- Trump-Zelenskyy 雙邊會談：考慮中止俄羅斯柴油出口禁令
+- 美國-丹麥-格陵蘭安全協議簽署
+- Trump TV 24/7 直播頻道正式上線（Monday 晚間）
+- Trump TV 啟動因直播誤放 Melania 花絮而引發笑柄
+
+---
+結論:
+
+今日（2026-09-22）已確認 last_seen_id 為 20260922005（#41842）。
+搜尋引擎最新索引仍為 #41842，UNGA 演說後川普可能尚未在 Truth Social 發文，
+或發文尚未被搜尋引擎索引。
+
+無 20260922005 之後的新確認 Truth Social 貼文。
+last_seen_id: 維持不變（2026-09-22_20260922005）
+新貼文檔案: 無
+LINE 推播: 無
