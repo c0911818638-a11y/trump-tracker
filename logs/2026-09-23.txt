@@ -1,0 +1,30 @@
+監控記錄 - 2026-09-23
+
+執行時間：2026-09-23 UTC（自動排程）
+最後已知貼文 ID：2026-09-22_20260922005
+最後已知 Archive 狀態 ID：trumpstruth.org/statuses/41842
+
+嘗試方法：
+- 方法 A（WebFetch truthsocial.com RSS）：失敗 - 網路代理封鎖域名
+- 方法 A（WebFetch Truth Social API）：失敗 - 網路代理封鎖域名
+- 方法 B（WebSearch）：成功 - 使用關鍵字搜尋
+- 方法 C（WebFetch thetrumparchive.com）：失敗 - 網路代理封鎖域名
+- 方法 C（WebFetch trumpstruth.org）：失敗 - 網路代理封鎖域名
+
+搜尋結果：
+- 透過 WebSearch 確認 2026-09-22 最後已知貼文為 status/41842
+  「The cowards and traitors would love to say the United States is low on munitions...」
+  發布時間：2026-09-22 07:14 UTC
+- 2026-09-22：川普出席聯合國大會（UNGA）演說，主要發言涵蓋伊朗「毀滅或談判」及 AI 更名「Super Intelligence」
+  上述為公開演說內容，非 Truth Social 貼文
+- 搜尋未發現 2026-09-22 07:14 UTC 之後的新 Truth Social 貼文
+- 搜尋未發現 2026-09-23 的貼文
+
+結論：
+無新貼文（last_seen_id 維持不變：2026-09-22_20260922005）
+未建立新分析檔案，無 LINE 推播觸發
+
+注意事項：
+- GitHub API 被此 session 代理封鎖，改用 git clone 方式存取
+- truthsocial.com、trumpstruth.org、thetrumparchive.com 均被代理封鎖
+- WebSearch 為本次唯一可用的貼文取得方式
