@@ -28,3 +28,22 @@
 - GitHub API 被此 session 代理封鎖，改用 git clone 方式存取
 - truthsocial.com、trumpstruth.org、thetrumparchive.com 均被代理封鎖
 - WebSearch 為本次唯一可用的貼文取得方式
+
+---
+
+第二次執行記錄：2026-09-23 UTC（自動排程）
+
+嘗試方法（同上次執行）：
+- 方法 A（WebFetch truthsocial.com RSS）：失敗 - 網路代理封鎖域名
+- 方法 B（WebSearch）：成功 - 多次搜尋確認
+- 方法 C（WebFetch trumpstruth.org / thetrumparchive.com）：失敗 - 代理封鎖
+
+搜尋結果：
+- WebSearch 搜尋「Trump Truth Social September 23 2026」未發現新貼文
+- 搜尋「Trump Truth Social UN General Assembly September 23 2026」：
+  最新已知為 2026-09-22 UNGA 演說（「毀滅或談判」伊朗），
+  演說後無新 Truth Social 貼文被公開索引
+- trumpstruth.org/statuses/41843 及以後號碼：搜尋無結果
+- 確認 status/41842 仍為最後已知貼文
+
+結論：無新貼文，last_seen_id 不變（2026-09-22_20260922005）
