@@ -47,3 +47,32 @@
 - 確認 status/41842 仍為最後已知貼文
 
 結論：無新貼文，last_seen_id 不變（2026-09-22_20260922005）
+
+---
+
+第三次執行記錄：2026-09-23 UTC（自動排程）
+
+執行時間前 last_seen_id：2026-09-23_20260923002
+（對應 trumpstruth.org/statuses/41848，FakeNews 諷刺影片）
+
+嘗試方法：
+- 方法 A（WebFetch truthsocial.com RSS/API）：失敗 - 網路代理封鎖域名
+- 方法 B（WebSearch）：成功 - 多次搜尋
+- 方法 C（WebFetch trumpstruth.org / thetrumparchive.com）：失敗 - 代理封鎖
+- GitHub API：被代理封鎖，改用 git clone 方式操作
+
+搜尋結果：
+- 新發現 trumpstruth.org/statuses/41843（內容未能確定，搜尋引擎無索引）
+- 新發現 trumpstruth.org/statuses/41844：川普午夜攻擊 CNN 凱特蘭·柯林斯
+  原文：「All of the SLEAZEBAGS, like Third Rate "Reporter," Kaitlan Collins, of Fake News CNN...
+  sick, treasonous, and demented! The "good news" is that they have a great, for them, and totally
+  disloyal Judge. MAKE AMERICA GREAT AGAIN!」
+  發布時間：2026-09-22 23:53 ET（= 2026-09-23 03:53 UTC）
+  背景：繼 UNGA 現場衝突及白宮媒體禁令法院訴訟後，川普午夜在 Truth Social 激烈攻擊柯林斯
+
+處理結果：
+- status/41843：內容未知（搜尋引擎尚未索引），本次跳過
+- status/41844 → 建立 posts/2026-09-23_20260923003_KaitlanCollins-SLEAZEBAGS-CNN-UN-MediaBan-Midnight.md
+- last_seen_id 更新至：2026-09-23_20260923003
+
+結論：發現 1 篇新貼文（status/41844），已建立分析檔案並推播 LINE
