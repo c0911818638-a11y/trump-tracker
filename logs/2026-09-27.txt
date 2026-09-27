@@ -1,0 +1,27 @@
+【執行時間】2026-09-27 約 07:00 UTC（美東時間凌晨 3:00）
+
+【上次記錄 ID】2026-09-27_20260927001
+
+【抓取嘗試結果】
+- 方法 A：truthsocial.com → EGRESS_BLOCKED（代理政策封鎖）
+- 方法 A：truthsocial.com API → EGRESS_BLOCKED
+- 方法 B：WebSearch 搜尋 → 無法確認比 20260927001 更新的貼文
+- 方法 C：thetrumparchive.com → EGRESS_BLOCKED
+- 方法 C：trumpstruth.org → EGRESS_BLOCKED
+- 輔助：presidency.ucsb.edu → EGRESS_BLOCKED
+- 輔助：大多數新聞網站（Fox、NBC、CBS、NPR、BBC 等）→ EGRESS_BLOCKED
+
+【搜尋結果摘要】
+- trumpstruth.org 最新歸檔貼文 ID：41970（2026-09-26）
+- 搜尋結果未顯示任何 2026-09-27 超過 20260927001 的新貼文
+- 川普今日主要活動：聯合國大會高層週（主要演講為 9/22），霍爾木茲海峽/伊朗問題（已於 9/26 系列貼文中涵蓋）
+
+【結論】
+未發現比 20260927001（Sacred-WhiteHouse-CNN-MSDNC）更新的貼文。
+last_seen_id.txt 維持不變：2026-09-27_20260927001
+本次執行無新貼文檔案建立，無 LINE 推播。
+
+【注意】
+由於代理封鎖，無法直接存取 Truth Social 或任何貼文歸檔網站。
+本結論基於 WebSearch 搜尋片段，可能存在誤差。
+下次執行應重新嘗試所有方法。
