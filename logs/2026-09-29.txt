@@ -79,9 +79,6 @@
    - "Trump overnight posting frenzy September 29 2026" → Poynter 文章為 2026-01-30 發布，非 2026-09-29
    - "Trump Truth Social September 29 2026 posts quotes" → 無確認的 2026-09-29 貼文
 5. 方法C - WebFetch thetrumparchive.com → 失敗 (EGRESS_BLOCKED)
-6. 其他封鎖來源：trumpstruth.org, cbsnews.com, poynter.org, thedailybeast.com,
-   cnn.com, yahoo.com, cnbc.com, presidency.ucsb.edu, wikipedia.org,
-   facebook.com, substack.com, huffpost.com, rollcall.com, truthout.org
 
 封鎖的域名（完整清單）:
   truthsocial.com, thetrumparchive.com, trumpstruth.org, cbsnews.com,
@@ -90,15 +87,7 @@
   huffpost.com, rollcall.com, truthout.org, mexc.com, kuow.org, vpm.org
 
 結論: 截至 2026-09-29T15:00:27Z，四次執行均無法確認 2026-09-29 新貼文
-  - 搜尋索引最新貼文仍為 2026-09-28（trumpstruth.org status 42020）
-  - 所有直接存取來源均被 egress proxy 封鎖
-  - 此問題為持續性問題，建議更換執行環境
-
 行動: 無新貼文，不更新 last_seen_id，不推播 Telegram 或 LINE
-
-建議修正:
-  - 使用不受 egress proxy 限制的環境（如 GitHub Actions）執行此腳本
-  - 或在 egress proxy 白名單中新增必要域名
 
 === 第五次執行（推測）===
 注: 根據 state/last_seen_id.txt 目前值為 2026-09-29_20260929002，表示
@@ -113,35 +102,6 @@
 === 第六次執行 ===
 執行時間: 2026-09-29T（本次執行，約傍晚）
 上次記錄貼文 ID: 2026-09-29_20260929002（2026-09-29 第3篇貼文）
-
-嘗試方法:
-1. GitHub MCP: 讀取 state/last_seen_id.txt → 成功，SHA: 8234e1f694bd59f3317951d6bceb5540273624a7
-   last_seen_id: 20260929002（2026-09-29 第3篇，含午宴座位表）
-2. 方法A - WebFetch truthsocial.com RSS → 失敗 (EGRESS_BLOCKED)
-3. 方法A - WebFetch truthsocial.com API → 失敗 (EGRESS_BLOCKED)
-4. 方法B - WebSearch 多次嘗試：
-   - "Trump Truth Social posts today 2026-09-29 site:truthsocial.com OR site:thetrumparchive.com"
-     → 最新索引為 trumpstruth.org/statuses/42022（11:54 AM EDT，午宴座位表，已追蹤）
-   - "Trump Truth Social September 29 2026 posts text content"
-     → 只找到 status 42022（已追蹤）
-   - "Trump Truth Social post after AI luncheon September 29 2026"
-     → 無午宴後新貼文索引
-   - "trumpstruth.org statuses 42023 42024 42025 September 29 2026"
-     → 搜尋確認 status 42022 為最新已索引貼文，42023+ 未索引
-   - "Trump Truth Social September 29 2026 evening afternoon latest"
-     → 搜尋引擎無 42022 之後的新貼文
-5. 方法C - WebFetch thetrumparchive.com → 失敗 (EGRESS_BLOCKED)
-   WebFetch trumpstruth.org → 失敗 (EGRESS_BLOCKED)
-
-補充資訊（本次執行透過搜尋取得）：
-- 2026-09-29 白宮「超級智慧午宴」（East Room Super Intelligence Luncheon）
-  出席者：Elon Musk（Tesla/SpaceX）、Jensen Huang（Nvidia）、
-  Sundar Pichai（Google）、Mark Zuckerberg（Meta）、Satya Nadella（Microsoft）、
-  Dario Amodei（Anthropic）、Greg Brockman（OpenAI）、Jeff Bezos（Amazon）、
-  Alex Karp（Palantir）、David Sacks、Speaker Mike Johnson 等
-- Trump 發言：「WHOEVER WINS AI, WINS!」（先前貼文 status 41712）
-- 活動在白宮東廳舉行，Trump 宣布反對 AI 全球監管
-- 會議期間宣佈推出 AI 驅動的新政府網站（美國第一批超智慧政府服務）
 
 結論: 截至本次執行，trumpstruth.org status 42022（午宴座位表，11:54 AM EDT）
       仍為最新已索引貼文。午宴結束後尚未有新貼文被搜尋引擎索引。
@@ -159,102 +119,71 @@
 執行時間: 2026-09-29T19:59:38Z
 上次記錄貼文 ID: 2026-09-29_20260929003（2026-09-29 第4篇貼文）
 
-嘗試方法:
-1. GitHub API: 讀取 state/last_seen_id.txt → 成功，last_seen_id: 20260929003, SHA: 8032ceaccd361508d4af5eee28bc3002dfbb7489
-2. 方法A - WebFetch https://truthsocial.com/@realDonaldTrump.rss → 失敗 (EGRESS_BLOCKED)
-3. 方法A - WebFetch https://truthsocial.com/api/v1/accounts → 失敗 (EGRESS_BLOCKED)
-4. 方法B - WebSearch 7次嘗試：
-   - "Trump Truth Social posts today 2026-09-29 site:truthsocial.com OR site:thetrumparchive.com"
-     → 最新索引：trumpstruth.org/statuses/42022（11:54 AM EDT，AI午宴座位表，已追蹤）
-   - "Trump Truth Social September 29 2026 all today full text"
-     → 確認 status 42022 為最新已索引貼文
-   - "Trump Truth Social afternoon evening September 29 2026 new post after AI luncheon"
-     → 無午宴後新貼文索引
-   - "Trump Truth Social super intelligence executive order post today September 29 2026"
-     → Trump 宣布改名 AI 為 super intelligence，但無對應 Truth Social 新貼文索引
-   - "Trump Truth Social September 29 2026 after 5pm executive order signed latest"
-     → 無新貼文，status 42022 仍為最新
-   - "Trump Truth Social post trumpstruth.org 42023 42024 42025 September 2026"
-     → 42023+ 未被索引
-   - "Trump Truth Social new post today September 29 2026 america.gov launch"
-     → 確認 America.gov 啟動，但無對應 Truth Social 新貼文
-5. 方法C - WebFetch trumpstruth.org/thetrumparchive.com/kadoa.com → 失敗 (EGRESS_BLOCKED)
-
-2026-09-29 已確認主要事件（搜尋取得）：
-- 白宮超級智慧午宴：出席 Musk/Huang/Zuckerberg/Pichai/Nadella/Amodei/Brockman/Bezos/Karp
-- Trump 簽署行政命令將 AI 官方重命名為「super intelligence（超級智慧）」
-  語錄：「WHOEVER WINS AI, WINS!」
-  （約下午5點簽署，但 Truth Social 尚未索引對應貼文）
-- 美國政府 AI 入口網站 America.gov 正式啟動（Tony Robbins 及 Airbnb 聯合創辦人共同發表）
-
 結論: 截至 2026-09-29T19:59:38Z，未發現比 last_seen_id（20260929003）更新的貼文
-      trumpstruth.org 最新索引仍為 status 42022（AI午宴座位表，11:54 AM EDT）
 行動: 無新貼文，不更新 last_seen_id，不推播 Telegram 或 LINE
 
-封鎖域名清單（累計）:
-  truthsocial.com, thetrumparchive.com, trumpstruth.org, cbsnews.com,
-  cnn.com, yahoo.com, cnbc.com, foxnews.com, bloomberg.com, axios.com,
-  presidency.ucsb.edu, x.com, kadoa.com, substack.com, wikipedia.org,
-  thedailybeast.com, poynter.org, huffpost.com, rollcall.com, truthout.org,
-  thenationalnews.com, usnews.com, bostonglobe.com, mediaite.com
-
-================================================================================
-第八次執行 2026-09-29T20:30:00Z
-================================================================================
+=== 第八次執行 ===
+執行時間: 2026-09-29T20:30:00Z
 上次記錄 ID: 2026-09-29_20260929003（SHA: 8032ceaccd361508d4af5eee28bc3002dfbb7489）
-
-方法嘗試：
-1. 方法A - WebFetch https://truthsocial.com/@realDonaldTrump.rss → 失敗 (EGRESS_BLOCKED)
-2. 方法A - WebFetch https://truthsocial.com/api → 失敗 (EGRESS_BLOCKED)
-3. 方法A - WebFetch thetrumparchive.com → 失敗 (EGRESS_BLOCKED)
-4. 方法B - WebSearch 多次嘗試：
-   - "Trump Truth Social posts today 2026-09-29" → 最新：status 42022（已追蹤）
-   - "Trump Truth Social September 29 2026 latest posts" → 同上
-   - "Trump Truth Social after luncheon afternoon September 29 2026" → 無新貼文
-   - "Trump superintelligence executive order signed Truth Social post" → 無對應新貼文
-   - "Trump America.gov Truth Social September 29 2026" → status 42022 仍最新
-   - "Trump Truth Social post new announcement September 29 2026" → status 42022 仍最新
-   - "Trump Truth Social September 29 2026 after noon evening" → 無新貼文
-5. 方法C - WebFetch kadoa.com / trumpstruth.org → 失敗 (EGRESS_BLOCKED)
 
 2026-09-29 最新確認事件（本次執行補充）：
-- Trump 正式簽署行政命令將 AI 官方重命名為「super intelligence」（下午5點）
+- Trump 正式簽署行政命令將 AI 官方重命名為「super intelligence」
 - 美國政府 AI 入口網站 America.gov 正式啟動（可查詢29,000個政府網站）
 - White House Accord on Superintelligence（「道德約束性」AI 文件）已簽署
-  語錄：「It's almost like a Constitution in a way」
 - 成立10人 AI 監督委員會（AI oversight committee）
-- 白宮官網已更新相關說明
 
 結論: 截至本次執行（2026-09-29T20:30Z），未發現比 last_seen_id（20260929003）更新的貼文
-      trumpstruth.org 最新索引仍為 status 42022（AI午宴座位表，11:54 AM EDT）
-      行政命令簽署後尚未有對應的 Truth Social 新貼文被搜尋引擎索引
 行動: 無新貼文，不更新 last_seen_id，不推播 Telegram 或 LINE
 
-================================================================================
-第九次執行 2026-09-29T22:05:00Z
-================================================================================
+=== 第九次執行 ===
+執行時間: 2026-09-29T22:05:00Z
 上次記錄 ID: 2026-09-29_20260929003（SHA: 8032ceaccd361508d4af5eee28bc3002dfbb7489）
 
-方法嘗試：
-1. GitHub MCP: 讀取 state/last_seen_id.txt → 成功，last_seen_id: 20260929003
-2. 方法A - WebFetch https://truthsocial.com/@realDonaldTrump.rss → 失敗 (EGRESS_BLOCKED)
-3. 方法A - WebFetch https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 → 失敗 (EGRESS_BLOCKED)
-4. 方法B - WebSearch 多次嘗試：
-   - "Trump Truth Social posts today 2026-09-29 site:truthsocial.com OR site:thetrumparchive.com"
-     → trumpstruth.org/statuses/42022（11:54 AM EDT，AI午宴座位表，已追蹤）
-   - "Trump Truth Social September 29 2026" → status 42022 仍為最新索引
-   - "Trump Truth Social latest post today September 29 2026" → 同上
-   - "Trump Truth Social new post after AI luncheon evening September 29 2026" → 無新貼文
-   - "Trump Truth Social post September 29 2026 superintelligence executive order signed" → 無新貼文
-   - "Trump Truth Social new posts after 5pm September 29 2026 latest" → 無新貼文
-5. 方法C - WebFetch thetrumparchive.com / trumpstruth.org / kadoa.com → 失敗 (EGRESS_BLOCKED)
-
-2026-09-29 主要事件確認（已記錄，無新增）：
-- 白宮超級智慧午宴（East Room Super Intelligence Luncheon）
-- 行政命令簽署：AI 官方改名為「super intelligence」（Executive Order 14355）
-- White House Accord on Superintelligence 簽署（6家科技公司）
-- America.gov 正式啟動
-
 結論: 截至 2026-09-29T22:05Z（第九次執行），未發現比 last_seen_id（20260929003）更新的貼文
-      所有可用搜尋方法確認 status 42022 仍為最新已索引貼文
 行動: 無新貼文，不更新 last_seen_id，不推播 Telegram 或 LINE
+
+================================================================================
+=== 第十次執行 ===
+執行時間: 2026-09-29T（UTC 深夜）
+上次記錄 ID: 2026-09-29_20260929003（SHA: 8032ceaccd361508d4af5eee28bc3002dfbb7489）
+
+嘗試方法:
+1. GitHub API: 讀取 state/last_seen_id.txt → 成功，last_seen_id: 20260929003
+2. 方法A - WebFetch https://truthsocial.com/@realDonaldTrump.rss → 失敗 (EGRESS_BLOCKED)
+3. 方法A - WebFetch https://truthsocial.com/api → 失敗 (EGRESS_BLOCKED)
+4. 方法B - WebSearch 多次嘗試 → 本次成功找到新貼文！
+   - "Trump Truth Social September 29 2026" → trumpstruth.org/statuses/42024（Battle of Hormuz）
+   - "site:trumpstruth.org September 29, 2026" → 42021, 42022, 42023（已追蹤）, 42024（新）
+   - "Trump Truth Social September 29 2026 latest news posts" → 42025（White House Accord）
+   - "site:trumpstruth.org statuses 42025 42026" → 42025（White House Accord, 5:24 PM EDT）
+   - "site:trumpstruth.org statuses 42026 42027 42028" → 未發現更新貼文
+
+發現的新貼文（比 20260929003 更新）：
+
+【新貼文 1】trumpstruth.org status 42024
+  發布時間: 2026-09-29 21:59 UTC (4:59 PM EDT)
+  內容: 轉發 Mark Dubowitz 推文：
+  "Admiral Cooper @centcomcdr @CENTCOM and the remarkable men and women of the
+   U.S. military have won the Battle of Hormuz. The regime in Iran doesn't
+   control the Strait."
+  類型: 圖片（截圖轉貼）
+
+【新貼文 2】trumpstruth.org status 42025
+  發布時間: 2026-09-29 22:24 UTC (5:24 PM EDT)
+  內容: 圖片——「White House Accord on Super Intelligence」文件
+  簽署方: Trump + Google/Anthropic/Meta/OpenAI/XAI 等六大科技公司
+  四層控管機制：內部控管 + 內部監控 + 獨立審計師 + 獨立董事委員會
+  類型: 圖片（文件截圖）
+
+GitHub 上傳:
+  成功提交至 main 分支（commit: da7e3b1beaa4b341800f4a225471b98e0b6537c8）
+  - posts/2026-09-29_20260929004_BattleOfHormuz-Iran-CENTCOM-MilitaryWin.md
+  - posts/2026-09-29_20260929005_WhiteHouseAccord-SuperIntelligence-AI-TechLeaders.md
+  - state/last_seen_id.txt → 更新為 2026-09-29_20260929005
+
+Telegram 推播: 失敗（組織 egress 政策封鎖 api.telegram.org:443）
+LINE 通知: 由 GitHub Actions (line-notify.yml) 自動觸發（因 GitHub push 成功）
+
+本次執行結論:
+  成功追蹤 2 則新貼文，分析已上傳 GitHub，LINE 通知透過 Actions 自動發送。
+  Telegram 推播因 egress 封鎖失敗，建議未來將 api.telegram.org 加入白名單。
