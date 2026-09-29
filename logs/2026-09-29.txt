@@ -1,119 +1,17 @@
-# Trump Truth Social 監控日誌 - 2026-09-29（合併多次執行記錄）
+監控執行記錄 - 2026-09-29
 
----
+執行時間: 2026-09-29T10:57:58Z
+上次記錄貼文 ID: 2026-09-29_20260928018
+狀態: 未發現新貼文
 
-## 第一次執行（約 07:00 UTC / 美東凌晨 03:00）
+嘗試方法:
+1. WebFetch https://truthsocial.com/@realDonaldTrump.rss → 失敗 (EGRESS_BLOCKED)
+2. WebFetch https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → 失敗 (EGRESS_BLOCKED)
+3. WebFetch https://www.thetrumparchive.com/ → 失敗 (EGRESS_BLOCKED)
+4. WebFetch https://www.trumpstruth.org/ → 失敗 (EGRESS_BLOCKED)
+5. WebFetch https://www.kadoa.com/potus/truth → 失敗 (EGRESS_BLOCKED)
+6. WebFetch https://www.presidency.ucsb.edu/documents/truth-social-posts-september-29-2026 → 失敗 (EGRESS_BLOCKED)
+7. WebSearch 多次嘗試 → 最新搜尋結果為 2026-09-28 的貼文，未找到 2026-09-29 新貼文
 
-【上次記錄 ID】2026-09-28_20260928005
-
-【抓取嘗試結果】
-- 方法 A：truthsocial.com RSS → EGRESS_BLOCKED（代理政策封鎖）
-- 方法 A：truthsocial.com API → EGRESS_BLOCKED
-- 方法 B：WebSearch → 無 2026-09-29 貼文
-- 方法 C：thetrumparchive.com → EGRESS_BLOCKED
-- 方法 C：trumpstruth.org → EGRESS_BLOCKED
-
-【結論】未發現新貼文。last_seen_id 維持不變。
-
----
-
-## 最新執行（2026-09-29 05:59 UTC / 美東凌晨 01:59）
-
-【上次記錄 ID】2026-09-28_20260928013（中間有另一次執行更新至此）
-
-【狀態】未發現新貼文
-
-【嘗試方法】
-- 方法 A：truthsocial.com RSS/API → EGRESS_BLOCKED
-- 方法 B：多次 WebSearch：
-  - "Trump Truth Social posts today September 29 2026" → 無結果
-  - "Trump Truth Social September 29 2026" → 無結果
-  - site:trumpstruth.org September 29 2026 → 最新僅至 2026-09-28（ID 42020）
-  - "Trump Truth Social September 29 2026 text content" → 無結果
-  - site:truthsocial.com realDonaldTrump posts September 29 2026 → 無結果
-- 方法 C：thetrumparchive.com、trumpstruth.org、presidency.ucsb.edu → 全部 EGRESS_BLOCKED
-- 多個新聞網站（CNBC、NBC、Fox News、Yahoo、Newsweek、Al Jazeera 等）→ EGRESS_BLOCKED
-
-【搜尋發現（2026-09-28 貼文，供參考）】
-已在 2026-09-28 追蹤範圍內的重要貼文：
-1. "Final Battle" 影片貼文（trumpstruth.org #42016）
-   - 川普步行走廊配詭異音樂，聲稱「最後一戰」，要消滅深層政府、全球主義者、共產主義者
-   - 由政府資金製作，引發爭議（CNN：「川普以政府資金冒充強人」）
-2. 5000 美元紅利承諾（trumpstruth.org #42020 附近）
-   - 「因為關稅，我們正獲取數千億美元利潤。如果共和黨贏得眾議院和參議院，我可以提供每位成年人 5000 美元」
-3. 期中選舉訊息
-   - 「我們還有五週就到選舉了。國會控制權懸而未決。」
-
-【2026-09-28 重大政治背景】
-- 美中峰會後關稅協議（600 億美元商品關稅削減）
-- 60 億美元出口管制豁免協議
-- 川普否認提議對台武器銷售換中方重申不武力統一
-
-【結論】
-執行時間為美東凌晨約 2 時，川普通常不在此時間發文。
-截至執行時，無任何 2026-09-29 新貼文在搜尋引擎中被索引。
-last_seen_id.txt 維持不變：2026-09-28_20260928013
-本次執行無新貼文分析，無 Telegram/LINE 推播。
-
-【技術限制】
-代理封鎖幾乎所有外部域名（除 WebSearch 搜尋結果片段外）。
-下次執行應嘗試相同方法；若川普早上開始發文應可被搜尋引擎收錄。
-
----
-
-## 第三次執行（2026-09-29 約 09:00 UTC）
-
-【上次記錄 ID】2026-09-28_20260928013
-
-【抓取嘗試結果】
-- 方法 A：truthsocial.com RSS → EGRESS_BLOCKED
-- 方法 A：truthsocial.com API → EGRESS_BLOCKED
-- 方法 B：WebSearch 多次嘗試：
-  - "Trump Truth Social September 29 2026" → 最新仍為 Sept 28 貼文
-  - "Trump news September 29 2026 statement" → 白宮 Sept 28 鋼鐵廠公告
-  - "Trump Truth Social post today September 29 2026 morning" → 無 Sept 29 貼文
-- 方法 C：trumpstruth.org、thetrumparchive.com、所有新聞網站 → EGRESS_BLOCKED
-
-【搜尋發現補充資訊（Sept 28 貼文）】
-- 白宮 Sept 28 公告：愛荷華州 150 億美元鋼鐵廠（Mesabi Metallics）
-  - 「這些鋼鐵將在美國開採、熔煉、製造，這是非常不尋常的事。」
-  - 「我在就職後不久，對所有外國鋼鐵徵收 50% 的強力關稅，現在我們的鋼鐵業正在蓬勃復甦。」
-- Sept 28 影片「long term, not midterm」（~20 小時前）：
-  - 「身為史上最非凡國家的總統，我無意讓危險繼續積累。我不相信讓問題繼續腐爛。」
-
-【結論】
-截至本次執行時（UTC 上午）仍無 2026-09-29 新貼文被搜尋引擎收錄。
-所有外部來源（除 WebSearch 片段）均被 egress proxy 封鎖。
-無新貼文可分析，不執行推播。
-
----
-
-## 第四次執行（2026-09-29 09:02 UTC）
-
-【上次記錄 ID】2026-09-29_20260928016（前次執行已更新）
-
-【抓取嘗試結果】
-- 方法 A：truthsocial.com RSS → EGRESS_BLOCKED
-- 方法 B：WebSearch 多次嘗試（成功取得片段資訊）
-- 方法 C：trumpstruth.org、thetrumparchive.com → EGRESS_BLOCKED
-
-【發現新貼文 2 則（2026-09-28 下午/晚間）】
-
-1. 貼文 #20260928017（trumpstruth status 42018）
-   時間: 2026-09-28 17:34 UTC
-   原文: "Axios just released a story that 'Trump' offered Sanctions Relief and Frozen Funds to Iran. This is untrue. I offered them NOTHING! Axios' story, like most others, is a HOAX..."
-   分析: 川普否認伊朗讓步，媒體攻擊語氣。重要程度：高。
-
-2. 貼文 #20260928018（trumpstruth status 42019）
-   時間: 2026-09-28 22:33 UTC
-   原文: "The Protect College Sport Act just passed in the U.S. Senate by a vote of 77-22. This is a really big deal..."
-   分析: 跨黨派77-22通過大學體育保護法，樂觀宣示語氣。重要程度：中。
-
-【步驟 5 - GitHub push】成功（curl 被 proxy 封鎖，改用 MCP GitHub 工具）
-  - posts/2026-09-28_20260928017_Iran-Axios-NOTHING-Hoax-Sanctions.md ✅
-  - posts/2026-09-28_20260928018_ProtectCollegeSportsAct-Senate-77-22.md ✅
-  - state/last_seen_id.txt 更新為 2026-09-29_20260928018 ✅
-
-【步驟 6 - Telegram 推播】失敗：egress proxy 封鎖 api.telegram.org（CONNECT tunnel failed, HTTP 403）
-
-【步驟 7 - LINE 通知】GitHub push 成功，GitHub Actions workflow 應自動觸發
+結論: 截至本次執行，未發現比 last_seen_id (20260928018) 更新的貼文
+行動: 無新貼文，不更新 last_seen_id，不推播通知
