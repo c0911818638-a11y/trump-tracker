@@ -40,8 +40,6 @@
    - 11:00 PM: MAGA 支持率（99% 選票，98% 認可）(trumpstruth.org ID: 42020)
 
 結論: 截至本次執行（2026-09-29），未發現新貼文
-   - 搜尋來源最新貼文仍為 2026-09-28，尚無 2026-09-29 貼文被索引
-   - trumpstruth.org 最高 ID 42020 = 2026-09-28 最後一篇
 行動: 無新貼文，不更新 last_seen_id，不推播 Telegram 或 LINE
 
 === 第三次執行 ===
@@ -62,10 +60,42 @@
    WebFetch https://www.kadoa.com/potus/truth → 失敗 (EGRESS_BLOCKED)
 6. WebFetch https://www.presidency.ucsb.edu/documents/app-attributes/truth-social → 失敗 (EGRESS_BLOCKED)
 7. WebFetch https://heathercoxrichardson.substack.com/p/september-28-2026 → 失敗 (EGRESS_BLOCKED)
-8. WebFetch https://theconservativetreehouse.com/blog/2026/09/29/... → 失敗 (EGRESS_BLOCKED)
-9. 已確認 trumpstruth.org 最高 ID: 42020（2026-09-28），無更新
+8. 已確認 trumpstruth.org 最高 ID: 42020（2026-09-28），無更新
 
 結論: 截至 2026-09-29T12:58:48Z，所有可用方法均未發現 2026-09-29 新貼文
-   - 搜尋索引最新貼文日期仍為 2026-09-28
-   - 所有直接存取來源均被 egress proxy 封鎖
 行動: 無新貼文，不更新 last_seen_id，不推播 Telegram 或 LINE
+
+=== 第四次執行 ===
+執行時間: 2026-09-29T15:00:27Z
+上次記錄貼文 ID: 2026-09-29_20260928018（2026-09-28 第18篇貼文）
+
+嘗試方法:
+1. GitHub API: 讀取 state/last_seen_id.txt → 成功，last_seen_id: 20260928018
+2. 方法A - WebFetch truthsocial.com RSS → 失敗 (EGRESS_BLOCKED)
+3. 方法A - WebFetch truthsocial.com API → 失敗 (EGRESS_BLOCKED)
+4. 方法B - WebSearch 多次嘗試：
+   - "Trump Truth Social posts today September 29 2026" → 無 2026-09-29 結果
+   - "Trump Truth Social September 29 2026 latest posts" → trumpstruth.org 最新仍為 42020（2026-09-28）
+   - "Trump overnight posting frenzy September 29 2026" → Poynter 文章為 2026-01-30 發布，非 2026-09-29
+   - "Trump Truth Social September 29 2026 posts quotes" → 無確認的 2026-09-29 貼文
+5. 方法C - WebFetch thetrumparchive.com → 失敗 (EGRESS_BLOCKED)
+6. 其他封鎖來源：trumpstruth.org, cbsnews.com, poynter.org, thedailybeast.com,
+   cnn.com, yahoo.com, cnbc.com, presidency.ucsb.edu, wikipedia.org,
+   facebook.com, substack.com, huffpost.com, rollcall.com, truthout.org
+
+封鎖的域名（完整清單）:
+  truthsocial.com, thetrumparchive.com, trumpstruth.org, cbsnews.com,
+  poynter.org, thedailybeast.com, cnn.com, yahoo.com, cnbc.com,
+  presidency.ucsb.edu, wikipedia.org, facebook.com, substack.com,
+  huffpost.com, rollcall.com, truthout.org, mexc.com, kuow.org, vpm.org
+
+結論: 截至 2026-09-29T15:00:27Z，四次執行均無法確認 2026-09-29 新貼文
+  - 搜尋索引最新貼文仍為 2026-09-28（trumpstruth.org status 42020）
+  - 所有直接存取來源均被 egress proxy 封鎖
+  - 此問題為持續性問題，建議更換執行環境
+
+行動: 無新貼文，不更新 last_seen_id，不推播 Telegram 或 LINE
+
+建議修正:
+  - 使用不受 egress proxy 限制的環境（如 GitHub Actions）執行此腳本
+  - 或在 egress proxy 白名單中新增必要域名
