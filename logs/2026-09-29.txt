@@ -154,3 +154,46 @@
   presidency.ucsb.edu, x.com, abc17news.com, krdo.com, townhall.com,
   wjr.com, thenationalnews.com, news.sbs.co.kr, floridapolitics.com,
   kadoa.com, trumpstruth.org
+
+=== 第七次執行 ===
+執行時間: 2026-09-29T19:59:38Z
+上次記錄貼文 ID: 2026-09-29_20260929003（2026-09-29 第4篇貼文）
+
+嘗試方法:
+1. GitHub API: 讀取 state/last_seen_id.txt → 成功，last_seen_id: 20260929003, SHA: 8032ceaccd361508d4af5eee28bc3002dfbb7489
+2. 方法A - WebFetch https://truthsocial.com/@realDonaldTrump.rss → 失敗 (EGRESS_BLOCKED)
+3. 方法A - WebFetch https://truthsocial.com/api/v1/accounts → 失敗 (EGRESS_BLOCKED)
+4. 方法B - WebSearch 7次嘗試：
+   - "Trump Truth Social posts today 2026-09-29 site:truthsocial.com OR site:thetrumparchive.com"
+     → 最新索引：trumpstruth.org/statuses/42022（11:54 AM EDT，AI午宴座位表，已追蹤）
+   - "Trump Truth Social September 29 2026 all today full text"
+     → 確認 status 42022 為最新已索引貼文
+   - "Trump Truth Social afternoon evening September 29 2026 new post after AI luncheon"
+     → 無午宴後新貼文索引
+   - "Trump Truth Social super intelligence executive order post today September 29 2026"
+     → Trump 宣布改名 AI 為 super intelligence，但無對應 Truth Social 新貼文索引
+   - "Trump Truth Social September 29 2026 after 5pm executive order signed latest"
+     → 無新貼文，status 42022 仍為最新
+   - "Trump Truth Social post trumpstruth.org 42023 42024 42025 September 2026"
+     → 42023+ 未被索引
+   - "Trump Truth Social new post today September 29 2026 america.gov launch"
+     → 確認 America.gov 啟動，但無對應 Truth Social 新貼文
+5. 方法C - WebFetch trumpstruth.org/thetrumparchive.com/kadoa.com → 失敗 (EGRESS_BLOCKED)
+
+2026-09-29 已確認主要事件（搜尋取得）：
+- 白宮超級智慧午宴：出席 Musk/Huang/Zuckerberg/Pichai/Nadella/Amodei/Brockman/Bezos/Karp
+- Trump 簽署行政命令將 AI 官方重命名為「super intelligence（超級智慧）」
+  語錄：「WHOEVER WINS AI, WINS!」
+  （約下午5點簽署，但 Truth Social 尚未索引對應貼文）
+- 美國政府 AI 入口網站 America.gov 正式啟動（Tony Robbins 及 Airbnb 聯合創辦人共同發表）
+
+結論: 截至 2026-09-29T19:59:38Z，未發現比 last_seen_id（20260929003）更新的貼文
+      trumpstruth.org 最新索引仍為 status 42022（AI午宴座位表，11:54 AM EDT）
+行動: 無新貼文，不更新 last_seen_id，不推播 Telegram 或 LINE
+
+封鎖域名清單（累計）:
+  truthsocial.com, thetrumparchive.com, trumpstruth.org, cbsnews.com,
+  cnn.com, yahoo.com, cnbc.com, foxnews.com, bloomberg.com, axios.com,
+  presidency.ucsb.edu, x.com, kadoa.com, substack.com, wikipedia.org,
+  thedailybeast.com, poynter.org, huffpost.com, rollcall.com, truthout.org,
+  thenationalnews.com, usnews.com, bostonglobe.com, mediaite.com
