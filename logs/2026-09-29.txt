@@ -58,3 +58,30 @@ last_seen_id.txt 維持不變：2026-09-28_20260928013
 【技術限制】
 代理封鎖幾乎所有外部域名（除 WebSearch 搜尋結果片段外）。
 下次執行應嘗試相同方法；若川普早上開始發文應可被搜尋引擎收錄。
+
+---
+
+## 第三次執行（2026-09-29 約 09:00 UTC）
+
+【上次記錄 ID】2026-09-28_20260928013
+
+【抓取嘗試結果】
+- 方法 A：truthsocial.com RSS → EGRESS_BLOCKED
+- 方法 A：truthsocial.com API → EGRESS_BLOCKED
+- 方法 B：WebSearch 多次嘗試：
+  - "Trump Truth Social September 29 2026" → 最新仍為 Sept 28 貼文
+  - "Trump news September 29 2026 statement" → 白宮 Sept 28 鋼鐵廠公告
+  - "Trump Truth Social post today September 29 2026 morning" → 無 Sept 29 貼文
+- 方法 C：trumpstruth.org、thetrumparchive.com、所有新聞網站 → EGRESS_BLOCKED
+
+【搜尋發現補充資訊（Sept 28 貼文）】
+- 白宮 Sept 28 公告：愛荷華州 150 億美元鋼鐵廠（Mesabi Metallics）
+  - 「這些鋼鐵將在美國開採、熔煉、製造，這是非常不尋常的事。」
+  - 「我在就職後不久，對所有外國鋼鐵徵收 50% 的強力關稅，現在我們的鋼鐵業正在蓬勃復甦。」
+- Sept 28 影片「long term, not midterm」（~20 小時前）：
+  - 「身為史上最非凡國家的總統，我無意讓危險繼續積累。我不相信讓問題繼續腐爛。」
+
+【結論】
+截至本次執行時（UTC 上午）仍無 2026-09-29 新貼文被搜尋引擎收錄。
+所有外部來源（除 WebSearch 片段）均被 egress proxy 封鎖。
+無新貼文可分析，不執行推播。
