@@ -1,38 +1,60 @@
-【執行時間】2026-09-29 約 07:00 UTC（美東時間凌晨 3:00）
+# Trump Truth Social 監控日誌 - 2026-09-29（合併多次執行記錄）
+
+---
+
+## 第一次執行（約 07:00 UTC / 美東凌晨 03:00）
 
 【上次記錄 ID】2026-09-28_20260928005
 
 【抓取嘗試結果】
 - 方法 A：truthsocial.com RSS → EGRESS_BLOCKED（代理政策封鎖）
 - 方法 A：truthsocial.com API → EGRESS_BLOCKED
-- 方法 B：WebSearch 搜尋 「Trump Truth Social posts today 2026-09-29」→ 無 2026-09-29 貼文
-- 方法 B：WebSearch 搜尋「Trump Truth Social September 29 2026 latest post」→ 最新歸檔僅至 2026-09-28
-- 方法 B：WebSearch 搜尋「Trump Truth Social today tariff China」→ 無 2026-09-29 貼文
+- 方法 B：WebSearch → 無 2026-09-29 貼文
 - 方法 C：thetrumparchive.com → EGRESS_BLOCKED
 - 方法 C：trumpstruth.org → EGRESS_BLOCKED
-- 輔助：presidency.ucsb.edu → EGRESS_BLOCKED
-- 輔助：kadoa.com → EGRESS_BLOCKED
-- 輔助：cnbc.com → EGRESS_BLOCKED
-- 輔助：大多數新聞網站 → EGRESS_BLOCKED
 
-【搜尋結果摘要】
-- trumpstruth.org 最新歸檔貼文：ID 42007（2026-09-28）
-- 2026-09-28 已知貼文：42001, 42002, 42004, 42005, 42007（皆為影片貼文）
-- 搜尋結果未顯示任何 2026-09-29 的新貼文
-- 川普近期重大活動背景：
-  * 2026-09-24/26：川普-習近平白宮峰會
-  * 2026-09-26/28：美中關稅協議（300億美元互惠減稅）
-  * 2026-09-27/28：美方提議對中國出售武器爭議（大使 Perdue 透露，川普否認）
-  * 2026-09-28：CNN 報導美中達成 600 億美元商品關稅削減協議
+【結論】未發現新貼文。last_seen_id 維持不變。
+
+---
+
+## 最新執行（2026-09-29 05:59 UTC / 美東凌晨 01:59）
+
+【上次記錄 ID】2026-09-28_20260928013（中間有另一次執行更新至此）
+
+【狀態】未發現新貼文
+
+【嘗試方法】
+- 方法 A：truthsocial.com RSS/API → EGRESS_BLOCKED
+- 方法 B：多次 WebSearch：
+  - "Trump Truth Social posts today September 29 2026" → 無結果
+  - "Trump Truth Social September 29 2026" → 無結果
+  - site:trumpstruth.org September 29 2026 → 最新僅至 2026-09-28（ID 42020）
+  - "Trump Truth Social September 29 2026 text content" → 無結果
+  - site:truthsocial.com realDonaldTrump posts September 29 2026 → 無結果
+- 方法 C：thetrumparchive.com、trumpstruth.org、presidency.ucsb.edu → 全部 EGRESS_BLOCKED
+- 多個新聞網站（CNBC、NBC、Fox News、Yahoo、Newsweek、Al Jazeera 等）→ EGRESS_BLOCKED
+
+【搜尋發現（2026-09-28 貼文，供參考）】
+已在 2026-09-28 追蹤範圍內的重要貼文：
+1. "Final Battle" 影片貼文（trumpstruth.org #42016）
+   - 川普步行走廊配詭異音樂，聲稱「最後一戰」，要消滅深層政府、全球主義者、共產主義者
+   - 由政府資金製作，引發爭議（CNN：「川普以政府資金冒充強人」）
+2. 5000 美元紅利承諾（trumpstruth.org #42020 附近）
+   - 「因為關稅，我們正獲取數千億美元利潤。如果共和黨贏得眾議院和參議院，我可以提供每位成年人 5000 美元」
+3. 期中選舉訊息
+   - 「我們還有五週就到選舉了。國會控制權懸而未決。」
+
+【2026-09-28 重大政治背景】
+- 美中峰會後關稅協議（600 億美元商品關稅削減）
+- 60 億美元出口管制豁免協議
+- 川普否認提議對台武器銷售換中方重申不武力統一
 
 【結論】
-未發現比 20260928005 更新的貼文。
-搜尋到的最新歸檔貼文為 2026-09-28 影片貼文（trumpstruth.org status/42007）。
-2026-09-29 目前（約 UTC 07:00）尚無新貼文被搜尋引擎索引。
-last_seen_id.txt 維持不變：2026-09-28_20260928005
-本次執行無新貼文檔案建立，無 Telegram/LINE 推播。
+執行時間為美東凌晨約 2 時，川普通常不在此時間發文。
+截至執行時，無任何 2026-09-29 新貼文在搜尋引擎中被索引。
+last_seen_id.txt 維持不變：2026-09-28_20260928013
+本次執行無新貼文分析，無 Telegram/LINE 推播。
 
-【注意】
-由於代理封鎖，無法直接存取 Truth Social 或任何貼文歸檔網站。
-本結論基於 WebSearch 搜尋片段，可能存在誤差。
-下次執行應重新嘗試所有方法。
+【技術限制】
+代理封鎖幾乎所有外部域名（除 WebSearch 搜尋結果片段外）。
+下次執行應嘗試相同方法；若川普早上開始發文應可被搜尋引擎收錄。
