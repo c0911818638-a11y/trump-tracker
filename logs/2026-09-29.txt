@@ -117,3 +117,38 @@ last_seen_id.txt 維持不變：2026-09-28_20260928013
 【步驟 6 - Telegram 推播】失敗：egress proxy 封鎖 api.telegram.org（CONNECT tunnel failed, HTTP 403）
 
 【步驟 7 - LINE 通知】GitHub push 成功，GitHub Actions workflow 應自動觸發
+
+---
+
+## 第五次執行（2026-09-29 10:00 UTC / 美東上午 06:00）
+
+【上次記錄 ID】2026-09-29_20260928018（第四次執行已更新）
+
+【抓取嘗試結果】
+- 方法 A：truthsocial.com RSS → EGRESS_BLOCKED
+- 方法 A：truthsocial.com API → EGRESS_BLOCKED
+- 方法 B：WebSearch 多次嘗試：
+  - "Trump Truth Social posts September 29 2026" → 最新仍為 Sept 28 貼文（trumpstruth ID 42020）
+  - "Trump Truth Social September 29 2026" → 無 Sept 29 貼文
+  - "Trump news statement September 29 2026" → 白宮 Sept 28 鋼鐵廠公告
+  - "Trump overnight posts September 29 2026" → 12:26-12:29 AM 為影像貼文（無文字內容）
+  - "Trump Truth Social statuses 42021-42025" → 無結果（表示 Sept 29 貼文尚未被索引）
+- 方法 C：trumpstruth.org、thetrumparchive.com、presidency.ucsb.edu → EGRESS_BLOCKED
+
+【新貼文比對結果】
+截至 2026-09-29 10:00 UTC，未發現任何新貼文（ID > 20260928018）。
+搜尋顯示最新 trumpstruth.org 存檔 ID 仍為 42020（2026-09-28）。
+凌晨 12:26-12:29 AM 貼文為影像/影片貼文，無文字內容，無法分析。
+
+【步驟 6 - Telegram 重試推播】
+嘗試重試第四次執行未成功的 Telegram 推播（貼文 20260928017、20260928018）。
+結果：失敗——api.telegram.org 被 egress proxy 封鎖（CONNECT tunnel failed, HTTP 403）
+代理伺服器政策持續封鎖 Telegram API。
+
+【步驟 7 - LINE 通知】
+LINE 通知應已由第四次執行觸發的 GitHub Actions 自動處理。
+
+【結論】
+本次執行（第五次）無新貼文可分析。
+所有外部 API 連線仍受 egress proxy 嚴格限制。
+Telegram 推播管道持續無法使用（代理封鎖）。
