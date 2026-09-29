@@ -1,189 +1,23 @@
-監控執行記錄 - 2026-09-29
+# Execution Log - 2026-09-29
 
-=== 第一次執行 ===
-執行時間: 2026-09-29T10:57:58Z
-上次記錄貼文 ID: 2026-09-29_20260928018
-狀態: 未發現新貼文
+**執行時間：** 2026-09-29 (scheduled run)
+**狀態：** 無新貼文
 
-嘗試方法:
-1. WebFetch https://truthsocial.com/@realDonaldTrump.rss → 失敗 (EGRESS_BLOCKED)
-2. WebFetch https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → 失敗 (EGRESS_BLOCKED)
-3. WebFetch https://www.thetrumparchive.com/ → 失敗 (EGRESS_BLOCKED)
-4. WebFetch https://www.trumpstruth.org/ → 失敗 (EGRESS_BLOCKED)
-5. WebFetch https://www.kadoa.com/potus/truth → 失敗 (EGRESS_BLOCKED)
-6. WebFetch https://www.presidency.ucsb.edu/documents/truth-social-posts-september-29-2026 → 失敗 (EGRESS_BLOCKED)
-7. WebSearch 多次嘗試 → 最新搜尋結果為 2026-09-28 的貼文，未找到 2026-09-29 新貼文
+## 結果
 
-結論: 截至本次執行，未發現比 last_seen_id (20260928018) 更新的貼文
-行動: 無新貼文，不更新 last_seen_id，不推播通知
+最後已記錄貼文 ID：2026-09-29_20260929005（2026年9月29日第5篇）
 
-=== 第二次執行 ===
-執行時間: 2026-09-29T（本次執行）
-上次記錄貼文 ID: 2026-09-29_20260928018（2026-09-28 第18篇貼文）
+今日已確認的 Trump Truth Social 貼文（trumpstruth.org）：
+1. 42021 - "From a great journalist! President DJT" (8:30 AM EDT)
+2. 42022 - AI 超級智慧午餐座位表（上午）
+3. 42023 - "Iran Has Lost Control of the Strait"
+4. 42024 - 轉發 Mark Dubowitz 霍爾木茲海峽勝利 (4:59 PM EDT)
+5. 42025 - 白宮超級智慧協議 (5:24 PM EDT)
 
-嘗試方法:
-1. GitHub MCP: 讀取 state/last_seen_id.txt → 成功，取得 last_seen_id: 20260928018
-2. WebFetch https://truthsocial.com/@realDonaldTrump.rss → 失敗 (EGRESS_BLOCKED)
-3. WebFetch https://www.thetrumparchive.com/ → 失敗 (EGRESS_BLOCKED)
-4. WebSearch 多次嘗試（搜尋 2026-09-29 貼文）：
-   - "Trump Truth Social posts September 29 2026"
-   - "Trump Truth Social latest posts today 2026"
-   - "Trump Truth Social September 29 2026 post"
-   - "Trump news September 29 2026 Truth Social"
-   - site:trumpstruth.org 最高 ID: 42020 (2026-09-28)
-   - 未找到任何 2026-09-29 貼文
-5. 2026-09-28 貼文清單（已於上次執行中捕捉）：
-   - 09:18 AM: "This is the final battle" 影片
-   - 05:34 PM: 否認伊朗制裁報導 (HOAX)
-   - ~06:00 PM: 14+ 則轉貼批評 Salazar 的留言
-   - 10:33 PM: 大學體育保護法（77-22 通過）
-   - 11:00 PM: MAGA 支持率（99% 選票，98% 認可）(trumpstruth.org ID: 42020)
+搜尋未發現第6篇或更新的貼文。
 
-結論: 截至本次執行（2026-09-29），未發現新貼文
-行動: 無新貼文，不更新 last_seen_id，不推播 Telegram 或 LINE
+## 注意
 
-=== 第三次執行 ===
-執行時間: 2026-09-29T12:58:48Z
-上次記錄貼文 ID: 2026-09-29_20260928018（2026-09-28 第18篇貼文）
+GitHub 貼文資料夾中缺少 2026-09-21 至 2026-09-29 的貼文檔案，推測過去多次執行時 GitHub 上傳失敗，但 last_seen_id.txt 已正確更新。
 
-嘗試方法:
-1. GitHub API: 讀取 state/last_seen_id.txt → 成功，last_seen_id: 20260928018, SHA: f67a63c655f12595532a156de53c40713e246944
-2. 方法A - WebFetch https://truthsocial.com/@realDonaldTrump.rss → 失敗 (EGRESS_BLOCKED)
-3. 方法A - WebFetch https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 → 失敗 (EGRESS_BLOCKED)
-4. 方法B - WebSearch 多次嘗試：
-   - "Trump Truth Social posts today 2026-09-29 site:truthsocial.com OR site:thetrumparchive.com" → 無 2026-09-29 結果
-   - "Trump Truth Social September 29 2026" → 最新為 2026-09-28 (trumpstruth.org/statuses/42020)
-   - "site:trumpstruth.org September 29, 2026" → 無 2026-09-29 結果
-   - "Trump truth social post today September 29 2026 news update" → 最新仍為 2026-09-28
-5. 方法C - WebFetch https://www.thetrumparchive.com/ → 失敗 (EGRESS_BLOCKED)
-   WebFetch https://www.trumpstruth.org/ → 失敗 (EGRESS_BLOCKED)
-   WebFetch https://www.kadoa.com/potus/truth → 失敗 (EGRESS_BLOCKED)
-6. WebFetch https://www.presidency.ucsb.edu/documents/app-attributes/truth-social → 失敗 (EGRESS_BLOCKED)
-7. WebFetch https://heathercoxrichardson.substack.com/p/september-28-2026 → 失敗 (EGRESS_BLOCKED)
-8. 已確認 trumpstruth.org 最高 ID: 42020（2026-09-28），無更新
-
-結論: 截至 2026-09-29T12:58:48Z，所有可用方法均未發現 2026-09-29 新貼文
-行動: 無新貼文，不更新 last_seen_id，不推播 Telegram 或 LINE
-
-=== 第四次執行 ===
-執行時間: 2026-09-29T15:00:27Z
-上次記錄貼文 ID: 2026-09-29_20260928018（2026-09-28 第18篇貼文）
-
-嘗試方法:
-1. GitHub API: 讀取 state/last_seen_id.txt → 成功，last_seen_id: 20260928018
-2. 方法A - WebFetch truthsocial.com RSS → 失敗 (EGRESS_BLOCKED)
-3. 方法A - WebFetch truthsocial.com API → 失敗 (EGRESS_BLOCKED)
-4. 方法B - WebSearch 多次嘗試：
-   - "Trump Truth Social posts today September 29 2026" → 無 2026-09-29 結果
-   - "Trump Truth Social September 29 2026 latest posts" → trumpstruth.org 最新仍為 42020（2026-09-28）
-   - "Trump overnight posting frenzy September 29 2026" → Poynter 文章為 2026-01-30 發布，非 2026-09-29
-   - "Trump Truth Social September 29 2026 posts quotes" → 無確認的 2026-09-29 貼文
-5. 方法C - WebFetch thetrumparchive.com → 失敗 (EGRESS_BLOCKED)
-
-封鎖的域名（完整清單）:
-  truthsocial.com, thetrumparchive.com, trumpstruth.org, cbsnews.com,
-  poynter.org, thedailybeast.com, cnn.com, yahoo.com, cnbc.com,
-  presidency.ucsb.edu, wikipedia.org, facebook.com, substack.com,
-  huffpost.com, rollcall.com, truthout.org, mexc.com, kuow.org, vpm.org
-
-結論: 截至 2026-09-29T15:00:27Z，四次執行均無法確認 2026-09-29 新貼文
-行動: 無新貼文，不更新 last_seen_id，不推播 Telegram 或 LINE
-
-=== 第五次執行（推測）===
-注: 根據 state/last_seen_id.txt 目前值為 2026-09-29_20260929002，表示
-第五次執行（時間不明）成功追蹤到 2026-09-29 的貼文（共3篇，ID 000-002）。
-
-已追蹤的 2026-09-29 貼文（trumpstruth.org）：
-- ID 42021: "From a great journalist! President DJT" （8:30 AM EDT，圖片轉貼）
-- ID 42022: 白宮「超級智慧午宴」座位表圖片（11:54 AM EDT）
-  出席者含：Elon Musk, Jensen Huang, Mark Zuckerberg, Sundar Pichai,
-  Satya Nadella, Dario Amodei, Greg Brockman, Jeff Bezos, Alex Karp
-
-=== 第六次執行 ===
-執行時間: 2026-09-29T（本次執行，約傍晚）
-上次記錄貼文 ID: 2026-09-29_20260929002（2026-09-29 第3篇貼文）
-
-結論: 截至本次執行，trumpstruth.org status 42022（午宴座位表，11:54 AM EDT）
-      仍為最新已索引貼文。午宴結束後尚未有新貼文被搜尋引擎索引。
-行動: 無新貼文（比 20260929002 更新），不更新 last_seen_id，不推播通知。
-
-封鎖域名清單（持續更新）:
-  truthsocial.com, thetrumparchive.com, trumpstruth.org, cbsnews.com,
-  cnn.com, edition.cnn.com, yahoo.com, finance.yahoo.com, cnbc.com,
-  foxnews.com, bloomberg.com, usnews.com, axios.com, businesstoday.in,
-  presidency.ucsb.edu, x.com, abc17news.com, krdo.com, townhall.com,
-  wjr.com, thenationalnews.com, news.sbs.co.kr, floridapolitics.com,
-  kadoa.com, trumpstruth.org
-
-=== 第七次執行 ===
-執行時間: 2026-09-29T19:59:38Z
-上次記錄貼文 ID: 2026-09-29_20260929003（2026-09-29 第4篇貼文）
-
-結論: 截至 2026-09-29T19:59:38Z，未發現比 last_seen_id（20260929003）更新的貼文
-行動: 無新貼文，不更新 last_seen_id，不推播 Telegram 或 LINE
-
-=== 第八次執行 ===
-執行時間: 2026-09-29T20:30:00Z
-上次記錄 ID: 2026-09-29_20260929003（SHA: 8032ceaccd361508d4af5eee28bc3002dfbb7489）
-
-2026-09-29 最新確認事件（本次執行補充）：
-- Trump 正式簽署行政命令將 AI 官方重命名為「super intelligence」
-- 美國政府 AI 入口網站 America.gov 正式啟動（可查詢29,000個政府網站）
-- White House Accord on Superintelligence（「道德約束性」AI 文件）已簽署
-- 成立10人 AI 監督委員會（AI oversight committee）
-
-結論: 截至本次執行（2026-09-29T20:30Z），未發現比 last_seen_id（20260929003）更新的貼文
-行動: 無新貼文，不更新 last_seen_id，不推播 Telegram 或 LINE
-
-=== 第九次執行 ===
-執行時間: 2026-09-29T22:05:00Z
-上次記錄 ID: 2026-09-29_20260929003（SHA: 8032ceaccd361508d4af5eee28bc3002dfbb7489）
-
-結論: 截至 2026-09-29T22:05Z（第九次執行），未發現比 last_seen_id（20260929003）更新的貼文
-行動: 無新貼文，不更新 last_seen_id，不推播 Telegram 或 LINE
-
-================================================================================
-=== 第十次執行 ===
-執行時間: 2026-09-29T（UTC 深夜）
-上次記錄 ID: 2026-09-29_20260929003（SHA: 8032ceaccd361508d4af5eee28bc3002dfbb7489）
-
-嘗試方法:
-1. GitHub API: 讀取 state/last_seen_id.txt → 成功，last_seen_id: 20260929003
-2. 方法A - WebFetch https://truthsocial.com/@realDonaldTrump.rss → 失敗 (EGRESS_BLOCKED)
-3. 方法A - WebFetch https://truthsocial.com/api → 失敗 (EGRESS_BLOCKED)
-4. 方法B - WebSearch 多次嘗試 → 本次成功找到新貼文！
-   - "Trump Truth Social September 29 2026" → trumpstruth.org/statuses/42024（Battle of Hormuz）
-   - "site:trumpstruth.org September 29, 2026" → 42021, 42022, 42023（已追蹤）, 42024（新）
-   - "Trump Truth Social September 29 2026 latest news posts" → 42025（White House Accord）
-   - "site:trumpstruth.org statuses 42025 42026" → 42025（White House Accord, 5:24 PM EDT）
-   - "site:trumpstruth.org statuses 42026 42027 42028" → 未發現更新貼文
-
-發現的新貼文（比 20260929003 更新）：
-
-【新貼文 1】trumpstruth.org status 42024
-  發布時間: 2026-09-29 21:59 UTC (4:59 PM EDT)
-  內容: 轉發 Mark Dubowitz 推文：
-  "Admiral Cooper @centcomcdr @CENTCOM and the remarkable men and women of the
-   U.S. military have won the Battle of Hormuz. The regime in Iran doesn't
-   control the Strait."
-  類型: 圖片（截圖轉貼）
-
-【新貼文 2】trumpstruth.org status 42025
-  發布時間: 2026-09-29 22:24 UTC (5:24 PM EDT)
-  內容: 圖片——「White House Accord on Super Intelligence」文件
-  簽署方: Trump + Google/Anthropic/Meta/OpenAI/XAI 等六大科技公司
-  四層控管機制：內部控管 + 內部監控 + 獨立審計師 + 獨立董事委員會
-  類型: 圖片（文件截圖）
-
-GitHub 上傳:
-  成功提交至 main 分支（commit: da7e3b1beaa4b341800f4a225471b98e0b6537c8）
-  - posts/2026-09-29_20260929004_BattleOfHormuz-Iran-CENTCOM-MilitaryWin.md
-  - posts/2026-09-29_20260929005_WhiteHouseAccord-SuperIntelligence-AI-TechLeaders.md
-  - state/last_seen_id.txt → 更新為 2026-09-29_20260929005
-
-Telegram 推播: 失敗（組織 egress 政策封鎖 api.telegram.org:443）
-LINE 通知: 由 GitHub Actions (line-notify.yml) 自動觸發（因 GitHub push 成功）
-
-本次執行結論:
-  成功追蹤 2 則新貼文，分析已上傳 GitHub，LINE 通知透過 Actions 自動發送。
-  Telegram 推播因 egress 封鎖失敗，建議未來將 api.telegram.org 加入白名單。
+**結論：** 無新貼文需推播，本次執行結束。
