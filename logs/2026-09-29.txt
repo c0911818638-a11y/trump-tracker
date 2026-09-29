@@ -1,5 +1,6 @@
 監控執行記錄 - 2026-09-29
 
+=== 第一次執行 ===
 執行時間: 2026-09-29T10:57:58Z
 上次記錄貼文 ID: 2026-09-29_20260928018
 狀態: 未發現新貼文
@@ -15,3 +16,30 @@
 
 結論: 截至本次執行，未發現比 last_seen_id (20260928018) 更新的貼文
 行動: 無新貼文，不更新 last_seen_id，不推播通知
+
+=== 第二次執行 ===
+執行時間: 2026-09-29T（本次執行）
+上次記錄貼文 ID: 2026-09-29_20260928018（2026-09-28 第18篇貼文）
+
+嘗試方法:
+1. GitHub MCP: 讀取 state/last_seen_id.txt → 成功，取得 last_seen_id: 20260928018
+2. WebFetch https://truthsocial.com/@realDonaldTrump.rss → 失敗 (EGRESS_BLOCKED)
+3. WebFetch https://www.thetrumparchive.com/ → 失敗 (EGRESS_BLOCKED)
+4. WebSearch 多次嘗試（搜尋 2026-09-29 貼文）：
+   - "Trump Truth Social posts September 29 2026"
+   - "Trump Truth Social latest posts today 2026"
+   - "Trump Truth Social September 29 2026 post"
+   - "Trump news September 29 2026 Truth Social"
+   - site:trumpstruth.org 最高 ID: 42020 (2026-09-28)
+   - 未找到任何 2026-09-29 貼文
+5. 2026-09-28 貼文清單（已於上次執行中捕捉）：
+   - 09:18 AM: "This is the final battle" 影片
+   - 05:34 PM: 否認伊朗制裁報導 (HOAX)
+   - ~06:00 PM: 14+ 則轉貼批評 Salazar 的留言
+   - 10:33 PM: 大學體育保護法（77-22 通過）
+   - 11:00 PM: MAGA 支持率（99% 選票，98% 認可）(trumpstruth.org ID: 42020)
+
+結論: 截至本次執行（2026-09-29），未發現新貼文
+   - 搜尋來源最新貼文仍為 2026-09-28，尚無 2026-09-29 貼文被索引
+   - trumpstruth.org 最高 ID 42020 = 2026-09-28 最後一篇
+行動: 無新貼文，不更新 last_seen_id，不推播 Telegram 或 LINE
