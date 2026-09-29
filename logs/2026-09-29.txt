@@ -99,3 +99,58 @@
 建議修正:
   - 使用不受 egress proxy 限制的環境（如 GitHub Actions）執行此腳本
   - 或在 egress proxy 白名單中新增必要域名
+
+=== 第五次執行（推測）===
+注: 根據 state/last_seen_id.txt 目前值為 2026-09-29_20260929002，表示
+第五次執行（時間不明）成功追蹤到 2026-09-29 的貼文（共3篇，ID 000-002）。
+
+已追蹤的 2026-09-29 貼文（trumpstruth.org）：
+- ID 42021: "From a great journalist! President DJT" （8:30 AM EDT，圖片轉貼）
+- ID 42022: 白宮「超級智慧午宴」座位表圖片（11:54 AM EDT）
+  出席者含：Elon Musk, Jensen Huang, Mark Zuckerberg, Sundar Pichai,
+  Satya Nadella, Dario Amodei, Greg Brockman, Jeff Bezos, Alex Karp
+
+=== 第六次執行 ===
+執行時間: 2026-09-29T（本次執行，約傍晚）
+上次記錄貼文 ID: 2026-09-29_20260929002（2026-09-29 第3篇貼文）
+
+嘗試方法:
+1. GitHub MCP: 讀取 state/last_seen_id.txt → 成功，SHA: 8234e1f694bd59f3317951d6bceb5540273624a7
+   last_seen_id: 20260929002（2026-09-29 第3篇，含午宴座位表）
+2. 方法A - WebFetch truthsocial.com RSS → 失敗 (EGRESS_BLOCKED)
+3. 方法A - WebFetch truthsocial.com API → 失敗 (EGRESS_BLOCKED)
+4. 方法B - WebSearch 多次嘗試：
+   - "Trump Truth Social posts today 2026-09-29 site:truthsocial.com OR site:thetrumparchive.com"
+     → 最新索引為 trumpstruth.org/statuses/42022（11:54 AM EDT，午宴座位表，已追蹤）
+   - "Trump Truth Social September 29 2026 posts text content"
+     → 只找到 status 42022（已追蹤）
+   - "Trump Truth Social post after AI luncheon September 29 2026"
+     → 無午宴後新貼文索引
+   - "trumpstruth.org statuses 42023 42024 42025 September 29 2026"
+     → 搜尋確認 status 42022 為最新已索引貼文，42023+ 未索引
+   - "Trump Truth Social September 29 2026 evening afternoon latest"
+     → 搜尋引擎無 42022 之後的新貼文
+5. 方法C - WebFetch thetrumparchive.com → 失敗 (EGRESS_BLOCKED)
+   WebFetch trumpstruth.org → 失敗 (EGRESS_BLOCKED)
+
+補充資訊（本次執行透過搜尋取得）：
+- 2026-09-29 白宮「超級智慧午宴」（East Room Super Intelligence Luncheon）
+  出席者：Elon Musk（Tesla/SpaceX）、Jensen Huang（Nvidia）、
+  Sundar Pichai（Google）、Mark Zuckerberg（Meta）、Satya Nadella（Microsoft）、
+  Dario Amodei（Anthropic）、Greg Brockman（OpenAI）、Jeff Bezos（Amazon）、
+  Alex Karp（Palantir）、David Sacks、Speaker Mike Johnson 等
+- Trump 發言：「WHOEVER WINS AI, WINS!」（先前貼文 status 41712）
+- 活動在白宮東廳舉行，Trump 宣布反對 AI 全球監管
+- 會議期間宣佈推出 AI 驅動的新政府網站（美國第一批超智慧政府服務）
+
+結論: 截至本次執行，trumpstruth.org status 42022（午宴座位表，11:54 AM EDT）
+      仍為最新已索引貼文。午宴結束後尚未有新貼文被搜尋引擎索引。
+行動: 無新貼文（比 20260929002 更新），不更新 last_seen_id，不推播通知。
+
+封鎖域名清單（持續更新）:
+  truthsocial.com, thetrumparchive.com, trumpstruth.org, cbsnews.com,
+  cnn.com, edition.cnn.com, yahoo.com, finance.yahoo.com, cnbc.com,
+  foxnews.com, bloomberg.com, usnews.com, axios.com, businesstoday.in,
+  presidency.ucsb.edu, x.com, abc17news.com, krdo.com, townhall.com,
+  wjr.com, thenationalnews.com, news.sbs.co.kr, floridapolitics.com,
+  kadoa.com, trumpstruth.org
