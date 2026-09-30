@@ -1,64 +1,23 @@
-Trump Truth Social Monitor - 2026-09-30 08:56 UTC
+# 川普 Truth Social 監控執行記錄
 
-執行結果: 無新貼文
+**執行時間：** 2026-09-30 (排程觸發，第二次)
+**上次追蹤 ID：** 2026-09-30_20260930001
 
-資料來源嘗試:
-- truthsocial.com RSS: 失敗 (egress blocked)
-- truthsocial.com API: 失敗 (egress blocked)
-- trumpstruth.org: 失敗 (egress blocked)
-- WebSearch: 成功，最新貼文為 2026-09-29
+## 搜尋方法與結果
 
-已知最新貼文 (2026-09-29):
-1. White House Accord on Super Intelligence (trumpstruth ID: ~42025)
-2. Battle of Hormuz 勝利宣告 (trumpstruth ID: ~42026)
+- truthsocial.com RSS：EGRESS_BLOCKED（proxy 封鎖）
+- thetrumparchive.com：EGRESS_BLOCKED
+- trumpstruth.org（via WebSearch）：最新歸檔貼文為 2026-09-29 status 42026
+- presidency.ucsb.edu：EGRESS_BLOCKED
+- 已追蹤之最新貼文：posts/2026-09-30_overnight.md（深夜48則集中發文，已於前次執行處理）
 
-last_seen_id 未更新: 2026-09-30_20260930001
-Telegram 推播: 未發送 (無新貼文)
+## 結論
 
----
-Trump Truth Social Monitor - 2026-09-30 後續執行
+**無新貼文**：多方搜尋確認最新已歸檔貼文為 2026年9月29日（status 42026），以及 2026年9月30日凌晨的深夜集中發文批次（已於前次執行記錄）。本次執行未發現比 last_seen_id (2026-09-30_20260930001) 更新的貼文。
 
-執行結果: 無新貼文
+## 本次執行行動
 
-資料來源嘗試:
-- truthsocial.com RSS: 失敗 (egress blocked)
-- truthsocial.com API: 失敗 (egress blocked)
-- thetrumparchive.com: 失敗 (egress blocked)
-- trumpstruth.org: 失敗 (egress blocked)
-- WebSearch: 成功
-
-搜尋結果摘要:
-- 最新已索引貼文: 2026-09-30 01:23 UTC 深夜狂發 48 則（已於前次執行處理）
-- 川普今日排程: 西班牙裔傳統月慶典（下午1時）、與商務部長 Lutnick 聯合宣布（下午3時30分）
-- 上述事件尚未有 Truth Social 貼文被索引
-
-last_seen_id 目前值: 2026-09-30_20260930001（未更新）
-Telegram 推播: 未發送（無新貼文）
-
----
-Trump Truth Social Monitor - 2026-09-30 下午執行
-
-執行時間：2026-09-30 (scheduled run)
-執行結果：無新貼文
-
-資料來源嘗試：
-- truthsocial.com RSS: 失敗 (egress blocked)
-- truthsocial.com API: 失敗 (egress blocked)
-- thetrumparchive.com: 失敗 (egress blocked)
-- trumpstruth.org: 失敗 (egress blocked)
-- kadoa.com/potus/truth: 失敗 (egress blocked)
-- WebSearch: 成功
-
-搜尋結果摘要：
-- trumpstruth.org 最新索引貼文: 2026-09-29, status ID ~42026（圖片貼文）
-- 今日川普行程：西班牙裔傳統月慶典（下午1時）、與商務部長 Lutnick 聯合宣布（下午3時30分 ET）
-- Lutnick 聯合宣布已排程完畢，尚未出現相關 Truth Social 貼文被索引
-- 未發現任何 2026-09-30 下午的新貼文
-
-last_seen_id 目前值：2026-09-30_20260930001（未更新）
-Telegram 推播：未發送（無新貼文）
-
-已知近期重要貼文（供參考，非新貼文）：
-- 2026-09-29 17:24 ET: "White House Accord on Super Intelligence" - AI自主監管協議，川普稱為「道德約束」
-  簽署方：Google Pichai、Anthropic Amodei、Meta Zuckerberg、OpenAI Brockman、xAI Musk、NVIDIA Huang
-- 2026-09-29: 霍爾木茲海峽勝利宣告轉推（伊朗失去控制海峽）
+- 無新貼文上傳至 GitHub
+- 無 Telegram 通知發送
+- last_seen_id 維持不變
+- GitHub 直接 write 受 proxy 封鎖，改用 MCP GitHub tool 更新此記錄
