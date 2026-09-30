@@ -1,16 +1,23 @@
 # 川普 Truth Social 監控執行記錄
 
-**執行時間：** 2026-09-30（排程觸發，第五次）
-**上次追蹤 ID：** 2026-09-30_20260930003
+**執行時間：** 2026-09-30（排程觸發，第七次）
+**上次追蹤 ID：** 2026-09-30_20260930004
 
 ## 搜尋方法與結果
 
 - truthsocial.com RSS：EGRESS_BLOCKED（proxy 封鎖）
 - thetrumparchive.com：EGRESS_BLOCKED
-- trumpstruth.org（via WebSearch）：最新歸檔貼文為 2026-09-29 status 42026
-- 多個新聞網站（NBC, CBS, CNN, NPR, PBS, CNBC, Poynter 等）：EGRESS_BLOCKED
-- kadoa.com/potus/truth：EGRESS_BLOCKED
-- WebSearch 多次查詢 "September 30 2026 Trump Truth Social"：無比 last_seen_id 更新的貼文出現
+- trumpstruth.org（via WebSearch）：最新歸檔貼文為 status 42030（2026-09-30 伊拉克撤軍，下午1:17 EDT）
+- WebSearch 多次查詢 "September 30 2026 Trump Truth Social"：未發現比 last_seen_id (20260930004) 更新的貼文
+
+## 今日已追蹤貼文（4則，第一次至第六次執行已完成）
+
+| 序號 | trumpstruth.org ID | 時間（EDT） | 摘要 |
+|------|-------------------|------------|------|
+| 001 | 多則深夜批次 | 凌晨 | 第一次執行時偵測並處理（48則） |
+| 002 | 42028 | 12:15 PM | 批評 FoxNews 親民主黨 |
+| 003 | 42029 | 12:54 PM | 美國經濟創紀錄，假新聞不報導 |
+| 004 | 42030 | 1:17 PM | 宣佈美軍完成撤出伊拉克 |
 
 ## 重要事件背景（9月30日）
 
@@ -18,12 +25,11 @@
 - **最高法院恢復川普驅逐出境政策**
 - **白宮西班牙裔傳統月慶典**（下午1:00）
 - **川普在達拉斯發表演講**（晚間）
-- **AI 超智能協議後續**：9月29日川普與六大科技公司 CEO 簽署協議，文件有 "Unites States" 拼字錯誤受關注
-- **Iran 制裁爭議**：川普駁斥 Axios 制裁豁免報導（"I offered them NOTHING!"）
+- **AI 超智能協議後續**：9月29日川普與六大科技公司 CEO 簽署協議
 
 ## 結論
 
-**無新貼文**：本次（第五次）執行未發現比 last_seen_id (2026-09-30_20260930003) 更新的 Truth Social 貼文。主要直接資料來源仍受 egress proxy 封鎖，trumpstruth.org 最新索引貼文仍為 status 42026（2026-09-29）。
+**無新貼文**：本次（第七次）執行未發現比 last_seen_id (2026-09-30_20260930004) 更新的 Truth Social 貼文。trumpstruth.org 最新索引貼文為 status 42030（伊拉克撤軍），已在前次執行追蹤完畢。
 
 ## 執行記錄
 
@@ -33,10 +39,12 @@
 | 第二次 | 2026-09-30 日間 | 無新貼文 |
 | 第三次 | 2026-09-30 日間 | 無新貼文，多域名 EGRESS_BLOCKED |
 | 第四次 | 2026-09-30 日間 | 無新貼文（last_seen_id: 2026-09-30_20260930001）|
-| 第五次 | 2026-09-30T16:00Z（本次） | 無新貼文（last_seen_id: 2026-09-30_20260930003）|
+| 第五次 | 2026-09-30T16:00Z | 無新貼文（last_seen_id: 2026-09-30_20260930003）|
+| 第六次 | 2026-09-30 下午 | 追蹤貼文 #4（伊拉克撤軍），更新 last_seen_id 至 20260930004 |
+| 第七次 | 2026-09-30 晚間（本次） | 無新貼文（last_seen_id: 2026-09-30_20260930004）|
 
 ## 本次執行行動
 
 - 無新貼文上傳至 GitHub
 - 無 Telegram 通知發送
-- last_seen_id 維持不變：2026-09-30_20260930003
+- last_seen_id 維持不變：2026-09-30_20260930004
