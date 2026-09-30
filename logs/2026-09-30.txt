@@ -1,47 +1,16 @@
-監控執行摘要 - 2026-09-30
-==============================
-[更新] 最後執行時間: 2026-09-30 UTC（多次執行）
+Trump Truth Social Monitor - 2026-09-30 08:56 UTC
 
-─────────────────────────────────
-【07:00 UTC 執行結果（已由上次 session 完成）】
-  - 找到並處理 3 篇新貼文：
-    1. 2026-09-30_20260930001 (深夜48則貼文 - 攻擊歐巴馬、陰謀論)
-    2. 白宮超級智慧協議 - AI改名 Super Intelligence 行政命令
-    3. Iran Has Lost Control of the Strait - 荷姆茲海峽控制權宣示
-  - Telegram 推播：已執行（由上次 session）
-  - last_seen_id.txt 更新為：2026-09-30_20260930001
+執行結果: 無新貼文
 
-─────────────────────────────────
-【後續執行（本次 session）】
+資料來源嘗試:
+- truthsocial.com RSS: 失敗 (egress blocked)
+- truthsocial.com API: 失敗 (egress blocked)
+- trumpstruth.org: 失敗 (egress blocked)
+- WebSearch: 成功，最新貼文為 2026-09-29
 
-執行時間：2026-09-30 UTC（07:00 後）
-上次追蹤 ID：2026-09-30_20260930001
+已知最新貼文 (2026-09-29):
+1. White House Accord on Super Intelligence (trumpstruth ID: ~42025)
+2. Battle of Hormuz 勝利宣告 (trumpstruth ID: ~42026)
 
-步驟 1 - 讀取上次記錄: 成功
-  - 上次追蹤: 2026-09-30，第 1 篇（深夜貼文群）
-  - SHA: 538b6b82b36d5101cf4521d2026b4b7cbf39d135
-
-步驟 2 - 抓取新貼文:
-  - truthsocial.com 直接訪問: 封鎖 (EGRESS_BLOCKED)
-  - truthsocial.com RSS: 封鎖 (EGRESS_BLOCKED)
-  - thetrumparchive.com: 封鎖 (EGRESS_BLOCKED)
-  - trumpstruth.org: 封鎖 (EGRESS_BLOCKED)
-  - kadoa.com: 封鎖 (EGRESS_BLOCKED)
-  - cnbc.com: 封鎖 (EGRESS_BLOCKED)
-  - abcnews.com: 封鎖 (EGRESS_BLOCKED)
-  - WebSearch: 執行 8 次搜尋
-
-步驟 3 - 比較新舊:
-  - 搜尋結果顯示 trumpstruth.org 最新狀態為 42026 (2026-09-29)
-  - 07:00 UTC 後無新貼文被索引
-  - 今日重大事件（美軍撤離伊拉克完成）尚未出現對應 Truth Social 貼文
-
-今日背景資訊（供參考）:
-  - 美軍今日正式完成從伊拉克撤離（2024年協議，9/30/2026 截止）
-  - 伊朗戰爭局勢持續：川普稱「很快結束」，主張控制荷姆茲海峽
-  - 超級智慧（Super Intelligence）協議已於 9/29 簽署
-
-結論: 07:00 UTC 後無新貼文
-  - 未建立新貼文分析檔案
-  - 未推播 Telegram 通知
-  - last_seen_id.txt 無需更新
+last_seen_id 未更新: 2026-09-30_20260930001
+Telegram 推播: 未發送 (無新貼文)
