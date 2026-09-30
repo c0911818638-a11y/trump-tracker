@@ -14,3 +14,23 @@ Trump Truth Social Monitor - 2026-09-30 08:56 UTC
 
 last_seen_id 未更新: 2026-09-30_20260930001
 Telegram 推播: 未發送 (無新貼文)
+
+---
+Trump Truth Social Monitor - 2026-09-30 後續執行
+
+執行結果: 無新貼文
+
+資料來源嘗試:
+- truthsocial.com RSS: 失敗 (egress blocked)
+- truthsocial.com API: 失敗 (egress blocked)
+- thetrumparchive.com: 失敗 (egress blocked)
+- trumpstruth.org: 失敗 (egress blocked)
+- WebSearch: 成功
+
+搜尋結果摘要:
+- 最新已索引貼文: 2026-09-30 01:23 UTC 深夜狂發 48 則（已於前次執行處理）
+- 川普今日排程: 西班牙裔傳統月慶典（下午1時）、與商務部長 Lutnick 聯合宣布（下午3時30分）
+- 上述事件尚未有 Truth Social 貼文被索引
+
+last_seen_id 目前值: 2026-09-30_20260930001（未更新）
+Telegram 推播: 未發送（無新貼文）
