@@ -160,7 +160,7 @@ last_seen_id 維持：2026-10-01_20261001005
 ### WebSearch 彙整資訊（2026-10-01 已知事件）
 
 1. **奧克拉荷馬期中選舉造勢**：川普今日（10/1）在 Durant Choctaw Event Center 舉辦造勢大會，支持共和黨州長候選人 Mike Mazzei（下午 2 點開門，6 點 CDT = 23:00 UTC 開始）。活動尚未開始，相關貼文預計於活動後發布。
-2. **WebSearch 找到的最新 trumpstruth.org ID**：42059（與前次執行相同，無新貼文）
+2. **WebSearch 找到的最新 trumpstruth.org 索引 ID**：42059（無新貼文）
 
 ### 結論
 
@@ -193,6 +193,33 @@ last_seen_id 維持：2026-10-01_20261001005
 1. **Durant, Oklahoma 造勢大會**：川普於 Choctaw Event Center 舉辦期中選舉造勢（晚間 6 點 CDT = 23:00 UTC），支持共和黨州長候選人 Mike Mazzei，相關 Truth Social 貼文尚未索引
 2. **FORTRESS America**：國防部長 Hegseth 宣布軍事基地自給能源計畫，未發現川普相關 Truth Social 貼文
 3. **最新 trumpstruth.org 索引 ID**：42059（無新貼文）
+
+### 結論
+
+**未發現新貼文。** 所有直接訪問管道仍被 EGRESS_BLOCKED 封鎖。WebSearch 未索引到 20261001007 之後的新貼文。
+未建立分析檔案，未推播 Telegram 或 LINE。
+**last_seen_id 維持：2026-10-01_20261001007**
+
+---
+
+## 第八次排程執行 - 2026-10-01（UTC 當日）
+
+**最後已知貼文 ID：** 2026-10-01_20261001007
+
+### 搜尋方法
+
+- truthsocial.com RSS：EGRESS_BLOCKED
+- truthsocial.com API：EGRESS_BLOCKED
+- thetrumparchive.com：EGRESS_BLOCKED
+- trumpstruth.org：EGRESS_BLOCKED
+- kadoa.com/potus/truth：EGRESS_BLOCKED
+- WebSearch（多次查詢）：未找到 20261001007 之後的新貼文
+
+### WebSearch 彙整資訊（2026-10-01 當日）
+
+1. **Durant, Oklahoma 造勢大會**：川普在 Choctaw Event Center 舉辦期中選舉造勢（晚間 6 點 CDT），支持共和黨州長候選人 Mike Mazzei，活動相關 Truth Social 貼文尚未索引
+2. **最新 trumpstruth.org 索引 ID**：42059（與前次執行相同，無新貼文）
+3. **最近可查證貼文**：trumpstruth.org ID 42046（RT @realDonaldTrump）
 
 ### 結論
 
