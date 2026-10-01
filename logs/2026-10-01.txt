@@ -80,3 +80,36 @@
 ### 結論
 
 **未發現新貼文。** 所有直接訪問管道仍被 EGRESS_BLOCKED 封鎖，WebSearch 未索引到 2026-10-01_20261001004 之後的新貼文。未建立分析檔案，未推播 Telegram 或 LINE。
+
+---
+
+## 第四次排程執行 - 2026-10-01（UTC）
+
+**最後已知貼文 ID 開始：** 2026-10-01_20261001004 → 更新至 2026-10-01_20261001005
+
+### 搜尋方法
+
+- truthsocial.com RSS：EGRESS_BLOCKED
+- truthsocial.com API：EGRESS_BLOCKED
+- thetrumparchive.com：EGRESS_BLOCKED
+- trumpstruth.org：EGRESS_BLOCKED
+- WebSearch（多次查詢）：成功找到新貼文
+
+### 發現新貼文（1則）
+
+**貼文 ID：** 20261001005
+**時間：** 2026-10-01 04:40 UTC (12:40 AM EDT)
+**trumpstruth.org ID：** 42059
+**主題：** 讚揚波音 737 Max 在 Flydubai 劫機未遂事件中展現超強結構強度
+
+### 背景事件
+
+2026年9月30日，Flydubai 一架波音 737 MAX 8 從杜拜飛往特拉維夫途中，副機師刺傷機長並企圖墜機。川普將副機師稱為「可能是恐怖分子或瘋子」，並讚揚了阻止事件的英雄。同日稍晚，川普發布 Truth Social 貼文正式祝賀波音公司。
+
+### 本次執行行動
+
+- GitHub 上傳：成功（posts/2026-10-01_20261001005.md）
+- last_seen_id 更新：成功（2026-10-01_20261001005）
+- Commit：2126f1dd7436049b908b8863a2a688b4abed46dc
+- Telegram 推播：失敗（api.telegram.org 被 egress proxy 封鎖，HTTP 403）
+- LINE 通知：由 GitHub Actions 自動觸發（步驟 5 push 成功）
