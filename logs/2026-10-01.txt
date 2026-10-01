@@ -1,63 +1,4 @@
-（前九次執行記錄見 git 歷史）
-
-## 第十次排程執行 - 2026-10-01（UTC 當日）
-
-**最後已知貼文 ID（開始）：** 2026-10-01_20261001007
-**最後已知貼文 ID（結束）：** 2026-10-01_20261001010
-
-### 搜尋方法
-
-- truthsocial.com RSS：EGRESS_BLOCKED
-- truthsocial.com API：EGRESS_BLOCKED
-- thetrumparchive.com：EGRESS_BLOCKED
-- trumpstruth.org：EGRESS_BLOCKED
-- WebSearch（多次查詢）：成功找到 3 篇新貼文
-
-### 發現新貼文（3則）
-
-**貼文 #008 - Fox News 攻擊**
-時間：2026-10-01 Wednesday afternoon EDT
-原文（部分）：Why does FoxNews always put Chuck Schumer, Hakeem Jeffries, Jessica Tarlov, and every Democrat on... This is why MAGA, and REAL Patriots, will never like Fox!
-重要程度：中
-
-**貼文 #009 - 國家表現宣示**
-時間：2026-10-01 Wednesday afternoon EDT
-原文（部分）：Our Nation is doing really well, in many ways, better than ever before, but the Public just doesn't know how well we're doing. The Fake News Media refuses to disseminate our Record Setting Numbers...
-重要程度：低
-
-**貼文 #010 - 韓國阿拉斯加 LNG 投資**
-時間：2026-10-01 Wednesday evening EDT
-原文（部分）：The United States and Korea have agreed to commence working together on the 50 Billion Dollar ALASKA LNG PROJECT...
-重要程度：高
-
-### 本次執行行動
-
-- GitHub 上傳：成功（3篇貼文 + state/last_seen_id.txt 更新）
-- Telegram 推播：失敗（api.telegram.org 被 egress proxy 封鎖，HTTP 403 Forbidden）
-- LINE 通知：由 GitHub Actions 自動觸發（步驟 5 push 成功）
-- last_seen_id 更新至：2026-10-01_20261001010
-
----
-
-## 第十一次排程執行 - 2026-10-01（UTC 當日）
-
-**開始時的 last_seen_id：** 2026-10-01_20261001010
-**結束時的 last_seen_id：** 2026-10-01_20261001010（無更新）
-
-### 搜尋方法
-
-- truthsocial.com RSS：EGRESS_BLOCKED
-- truthsocial.com API：EGRESS_BLOCKED
-- thetrumparchive.com：EGRESS_BLOCKED
-- trumpstruth.org：EGRESS_BLOCKED
-- WebSearch（多次查詢）：未找到可確認的新貼文
-
-### 本次執行行動
-
-- 新貼文數量：0
-- last_seen_id：維持不變
-
----
+（前十二次執行記錄見 git 歷史）
 
 ## 第十二次排程執行 - 2026-10-01T18:02 UTC（第十二次）
 
@@ -70,38 +11,57 @@
 - truthsocial.com API：EGRESS_BLOCKED
 - thetrumparchive.com：EGRESS_BLOCKED
 - trumpstruth.org：EGRESS_BLOCKED
-- WebSearch（多次查詢）：成功找到 4 篇新貼文（trumpstruth.org 索引 #42063-42066）
+- WebSearch（多次查詢）：成功找到 4 篇新貼文
 
 ### 發現新貼文（4則）
 
-**貼文 #012 - Philip Aubart 司法提名**
-時間：2026-10-01 11:57 AM EDT (15:57 UTC)
-原文（部分）：I am pleased to announce the nomination of Philip Aubart to the United States District Court for the Middle District of North Carolina...
-重要程度：低——常規聯邦司法提名
-注意：此貼文早於前次執行（17:03 UTC）但未被搜尋到，本次補充追蹤
+**貼文 #012-015**
+見先前 git 歷史記錄
 
-**貼文 #013 - Brian Meyers 司法提名**
-時間：2026-10-01 12:27 PM EDT (16:27 UTC)
-原文（部分）：I am pleased to announce the nomination of Brian Meyers to the United States District Court for the Eastern District of North Carolina...
-重要程度：低——常規聯邦司法提名（同日第二則北卡提名）
+---
 
-**貼文 #014 - 伊朗民眾起義轉貼**
-時間：2026-10-01 1:32 PM EDT (17:32 UTC)
-原文：RT @realJohnJohnJr — BREAKING: Thousands of Iranians taking to streets, preparing to take back their country from radical Islamists. Why is Legacy Media NOT reporting this?
-重要程度：中——伊朗戰爭背景下的政治訊號，來源為陰謀論帳號需謹慎解讀
+## 本次排程執行 - 2026-10-01T21:58 UTC
 
-**貼文 #015 - 影片貼文**
-時間：2026-10-01 1:32 PM EDT (17:32 UTC)
-原文：影片內容（無法從搜尋結果取得詳細內容）
-重要程度：低（暫定）——與伊朗轉貼同時發出，可能為相關視覺內容
+**開始時的 last_seen_id：** 2026-10-01_20261001023
+**結束時的 last_seen_id：** 2026-10-01_20261001027
+
+### 搜尋方法
+
+- truthsocial.com RSS：EGRESS_BLOCKED
+- truthsocial.com API：EGRESS_BLOCKED
+- thetrumparchive.com：EGRESS_BLOCKED
+- trumpstruth.org：EGRESS_BLOCKED
+- WebSearch（多次查詢）：成功找到 4 篇新貼文
+
+### 發現新貼文（4則）
+
+**貼文 #024 - 伊朗核威脅一夜消除**
+時間：2026-10-01 17:54 UTC
+原文：I stated, numerous times, that it would take 4-6 weeks to get rid of THE IRAN NUCLEAR THREAT, and I did it in one night! The rest of the time is just to make sure it stays that way.
+重要程度：高
+
+**貼文 #025 - 2026初選推薦成功率98.37%**
+時間：2026-10-01 18:12 UTC
+原文：2026 Republican Primaries 背書記錄 - 241/245（98.37%）獲勝。MAGA!
+重要程度：中
+
+**貼文 #026 - 物價下降攻擊民主黨**
+時間：2026-10-01 18:38 UTC
+原文：Prices are way down from what Biden and the Dumocrats left us. It's why I won the Election, and now prices are coming down, RAPIDLY.
+重要程度：中
+
+**貼文 #027 - 奧克拉荷馬競選活動影片**
+時間：2026-10-01 21:30 UTC
+原文：[影片] 奧克拉荷馬州競選活動，對伊朗局勢表示滿意："I'm happy. I'm happy with that."
+重要程度：中
 
 ### 本次執行行動
 
-- GitHub 上傳：成功（4篇貼文 + state/last_seen_id.txt 更新）
-  - posts/2026-10-01_20261001012_Judicial-Nomination-PhilipAubart-NC-Middle.md
-  - posts/2026-10-01_20261001013_Judicial-Nomination-BrianMeyers-NC-Eastern.md
-  - posts/2026-10-01_20261001014_Iran-Repost-Iranians-TakingBack-RadicalIslamists.md
-  - posts/2026-10-01_20261001015_Video-Post-Oct1-Afternoon.md
-- Telegram 推播：失敗（api.telegram.org 被 egress proxy 封鎖，HTTP 403 Forbidden）
+- GitHub 上傳：成功（4篇貼文 + state/last_seen_id.txt 更新至 20261001027）
+  - posts/2026-10-01_20261001024_Iran-Nuclear-Threat-OneNight.md
+  - posts/2026-10-01_20261001025_Endorsement-Record-98pct-Primaries.md
+  - posts/2026-10-01_20261001026_Prices-Down-Dumocrats-Economy.md
+  - posts/2026-10-01_20261001027_Video-Oklahoma-Campaign-Iran-Happy.md
+- Telegram 推播：失敗——api.telegram.org:443 被 egress proxy 封鎖（403 policy denial）
 - LINE 通知：由 GitHub Actions 自動觸發（步驟 5 push 成功）
-- last_seen_id 更新至：2026-10-01_20261001015
+- last_seen_id 更新至：2026-10-01_20261001027
