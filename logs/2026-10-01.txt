@@ -1,258 +1,34 @@
-# 川普 Truth Social 監控執行記錄
-
-**執行時間：** 2026-10-01（排程觸發，第一次）
-**上次追蹤 ID：** 2026-09-30_20260930007 → 更新至 2026-10-01_20261001001
-
-## 搜尋方法與結果
-
-- truthsocial.com RSS：EGRESS_BLOCKED（proxy 封鎖）
-- thetrumparchive.com：EGRESS_BLOCKED
-- trumpstruth.org：EGRESS_BLOCKED
-- WebSearch：成功偵測到 2026-10-01 新貼文
-
-## 今日已追蹤貼文（1則）
-
-| 序號 | 時間 | 摘要 |
-|------|------|------|
-| 001 | 2026-10-01 UTC 晨間 | 伊朗戰爭將「很快」結束、全面軍事勝利、霍爾木茲海峽控制、油價將跌 |
-
-## 本次執行行動（第一次）
-
-- 搜尋方式：WebSearch（直接網域均被 EGRESS_BLOCKED 封鎖）
-- 前次 last_seen_id：2026-09-30_20260930007（9/30 第七批，最後約 9:59 PM EDT）
-- 發現 10/1 新貼文：伊朗戰爭勝利宣示（川普 White House + Truth Social 聯合聲明）
-- GitHub 上傳：成功（posts/2026-10-01_20261001001_Iran-TotalVictory-Hormuz-EndVerySoon.md）
-- Telegram 推播：失敗（api.telegram.org EGRESS_BLOCKED，組織 egress 政策封鎖）
-- LINE 通知：由 GitHub Actions 自動觸發（line-notify.yml workflow）
-- last_seen_id 更新至：2026-10-01_20261001001
-
-## 備注
-
-- 9/30 的 posts #001–#007 由先前各次執行追蹤，但 GitHub 上傳均失敗（僅更新了 last_seen_id）
-- 本次確認：trumpstruth.org 截至搜尋時最高 status ID 為 42036（9/30 19:30 EDT）
-- Oct 1 貼文來源：Gulf News 報導（gulfnews.com 也被 EGRESS_BLOCKED，透過 WebSearch 取得摘要）
-
----
-
-## 第二次排程執行 - 2026-10-01 03:58 UTC
-
-**最後已知貼文 ID：** 2026-10-01_20261001004
-
-### 搜尋結果
-
-- truthsocial.com RSS：EGRESS_BLOCKED
-- truthsocial.com API：EGRESS_BLOCKED
-- thetrumparchive.com：EGRESS_BLOCKED
-- trumpstruth.org：EGRESS_BLOCKED
-- kadoa.com/potus/truth：EGRESS_BLOCKED
-- WebSearch（多次）：最新索引貼文為 2026-09-30，未找到 last_seen_id（20261001004）之後的新貼文
-
-### 結論
-
-未發現新貼文。未建立分析檔案，未推播通知。
-下次排程執行時將再次確認。
-
----
-
-## 第三次排程執行 - 2026-10-01（UTC 晚間）
-
-**最後已知貼文 ID：** 2026-10-01_20261001004
-
-### 搜尋方法
-
-- truthsocial.com RSS：EGRESS_BLOCKED
-- truthsocial.com API：EGRESS_BLOCKED
-- thetrumparchive.com：EGRESS_BLOCKED
-- trumpstruth.org：EGRESS_BLOCKED
-- WebSearch（多次查詢）：未找到 20261001004 之後的新貼文
-
-### WebSearch 彙整資訊（2026-10-01 新聞背景）
-
-搜尋發現以下 10/1 重要事件，但無法確認為未追蹤的 Truth Social 新貼文：
-
-1. **關稅新政**：美國對 60 個貿易夥伴啟動第 301 條款關稅（10%～12.5%），取代到期的第 122 條款臨時關稅（midnight ET 生效），涵蓋加拿大、墨西哥、印度、英國等，適用美國 99.4% 進口商品
-2. **愛荷華鋼鐵廠**：Trump 在白宮宣布 Mesabi Metallics 將投資 150 億美元於愛荷華州建造全美最大鋼鐵廠（預計 2030 年投產，1750 個永久職位）
-3. **大學運動法案**：參議院通過 Protect College Sport Act（大學運動員 NIL 權利規範法）
-4. **Trump-Carlson 爭端**：維基百科仍有相關條目更新
-
-上述活動均已反映在 last_seen_id（20261001004）所代表的貼文中，或屬 White House 活動而非 Truth Social 新貼文。
-
-### 結論
-
-**未發現新貼文。** 所有直接訪問管道仍被 EGRESS_BLOCKED 封鎖，WebSearch 未索引到 2026-10-01_20261001004 之後的新貼文。未建立分析檔案，未推播 Telegram 或 LINE。
-
----
-
-## 第四次排程執行 - 2026-10-01（UTC）
-
-**最後已知貼文 ID 開始：** 2026-10-01_20261001004 → 更新至 2026-10-01_20261001005
-
-### 搜尋方法
-
-- truthsocial.com RSS：EGRESS_BLOCKED
-- truthsocial.com API：EGRESS_BLOCKED
-- thetrumparchive.com：EGRESS_BLOCKED
-- trumpstruth.org：EGRESS_BLOCKED
-- WebSearch（多次查詢）：成功找到新貼文
-
-### 發現新貼文（1則）
-
-**貼文 ID：** 20261001005
-**時間：** 2026-10-01 04:40 UTC (12:40 AM EDT)
-**trumpstruth.org ID：** 42059
-**主題：** 讚揚波音 737 Max 在 Flydubai 劫機未遂事件中展現超強結構強度
-
-### 背景事件
-
-2026年9月30日，Flydubai 一架波音 737 MAX 8 從杜拜飛往特拉維夫途中，副機師刺傷機長並企圖墜機。川普將副機師稱為「可能是恐怖分子或瘋子」，並讚揚了阻止事件的英雄。同日稍晚，川普發布 Truth Social 貼文正式祝賀波音公司。
-
-### 本次執行行動
-
-- GitHub 上傳：成功（posts/2026-10-01_20261001005.md）
-- last_seen_id 更新：成功（2026-10-01_20261001005）
-- Commit：2126f1dd7436049b908b8863a2a688b4abed46dc
-- Telegram 推播：失敗（api.telegram.org 被 egress proxy 封鎖，HTTP 403）
-- LINE 通知：由 GitHub Actions 自動觸發（步驟 5 push 成功）
-
----
-
-## 第五次排程執行 - 2026-10-01（UTC 晚間）
-
-**最後已知貼文 ID：** 2026-10-01_20261001005（trumpstruth.org ID 42059，04:40 UTC）
-
-### 搜尋方法
-
-- truthsocial.com RSS：EGRESS_BLOCKED
-- truthsocial.com API：EGRESS_BLOCKED
-- thetrumparchive.com：EGRESS_BLOCKED
-- trumpstruth.org：EGRESS_BLOCKED
-- WebSearch（多次查詢）：未找到 ID 42059 之後的新貼文
-
-### WebSearch 彙整資訊（2026-10-01 已知事件）
-
-1. **南韓投資/阿拉斯加 LNG**：川普宣布南韓投資 540 億美元阿拉斯加 LNG 計畫（$200 億美元整體美國能源計畫），但相關 Truth Social 貼文時間屬 9/30 深夜，已含於先前追蹤範圍或無法確認為新貼文
-2. **伊朗談判**：川普向記者表示「We blow them up or make a deal」，此係口頭發言而非確認的新 Truth Social 貼文
-3. **奧克拉荷馬造勢活動**：川普出席 Durant、Choctaw Event Center 期中選舉造勢，支持州長候選人 Mike Mazzei（活動時間：下午 2 點開門、6 點開始），相關 Truth Social 貼文未在搜尋中索引
-4. **WebSearch 找到的最新 trumpstruth.org ID**：42059（與上次執行相同，無新貼文確認）
-
-### 結論
-
-**未發現新貼文。** 所有直接訪問管道仍被 EGRESS_BLOCKED 封鎖。WebSearch 未索引到 trumpstruth.org ID 42059 之後的新貼文。
-未建立分析檔案，未推播 Telegram 或 LINE。
-last_seen_id 維持：2026-10-01_20261001005
-
----
-
-## 第六次排程執行 - 2026-10-01 08:00 UTC
-
-**最後已知貼文 ID：** 2026-10-01_20261001005（trumpstruth.org ID 42059，04:40 UTC）
-
-### 搜尋方法
-
-- truthsocial.com RSS：EGRESS_BLOCKED
-- truthsocial.com API：EGRESS_BLOCKED
-- thetrumparchive.com：EGRESS_BLOCKED
-- trumpstruth.org：EGRESS_BLOCKED
-- trump-archive.com：EGRESS_BLOCKED
-- presidency.ucsb.edu：EGRESS_BLOCKED
-- WebSearch（多次查詢）：未找到 ID 42059 之後的新貼文
-
-### WebSearch 彙整資訊（2026-10-01 已知事件）
-
-1. **奧克拉荷馬期中選舉造勢**：川普今日（10/1）在 Durant Choctaw Event Center 舉辦造勢大會，支持共和黨州長候選人 Mike Mazzei（下午 2 點開門，6 點 CDT = 23:00 UTC 開始）。活動尚未開始，相關貼文預計於活動後發布。
-2. **WebSearch 找到的最新 trumpstruth.org 索引 ID**：42059（無新貼文）
-
-### 結論
-
-**未發現新貼文。** 所有直接訪問管道仍被 EGRESS_BLOCKED 封鎖。WebSearch 未索引到 trumpstruth.org ID 42059 之後的新貼文。
-未建立分析檔案，未推播 Telegram 或 LINE。
-last_seen_id 維持：2026-10-01_20261001005
-
----
-
-## 第七次排程執行 - 2026-10-01（UTC 當日）
-
-**最後已知貼文 ID：** 2026-10-01_20261001007（Jack Smith/Senator 貼文，09:04 UTC）
-
-### 說明
-
-此次執行開始時，last_seen_id 為 2026-10-01_20261001007，比前次日誌記錄的 005 多了兩筆新貼文（006 和 007），這兩筆貼文於 09:04 UTC 批次追蹤完成（未記錄於本日誌）：
-- **006**：JackSmith-CNN-NationalArchives-DoubleStandard.md
-- **007**：JackSmith-Senator-CriminalProsecution.md（最新已追蹤）
-
-### 搜尋方法
-
-- truthsocial.com RSS：EGRESS_BLOCKED
-- truthsocial.com API：EGRESS_BLOCKED
-- thetrumparchive.com：EGRESS_BLOCKED
-- trumpstruth.org：EGRESS_BLOCKED
-- WebSearch（多次查詢）：未找到 20261001007 之後的新貼文
-
-### WebSearch 彙整資訊（2026-10-01 當日）
-
-1. **Durant, Oklahoma 造勢大會**：川普於 Choctaw Event Center 舉辦期中選舉造勢（晚間 6 點 CDT = 23:00 UTC），支持共和黨州長候選人 Mike Mazzei，相關 Truth Social 貼文尚未索引
-2. **FORTRESS America**：國防部長 Hegseth 宣布軍事基地自給能源計畫，未發現川普相關 Truth Social 貼文
-3. **最新 trumpstruth.org 索引 ID**：42059（無新貼文）
-
-### 結論
-
-**未發現新貼文。** 所有直接訪問管道仍被 EGRESS_BLOCKED 封鎖。WebSearch 未索引到 20261001007 之後的新貼文。
-未建立分析檔案，未推播 Telegram 或 LINE。
-**last_seen_id 維持：2026-10-01_20261001007**
-
----
-
-## 第八次排程執行 - 2026-10-01（UTC 當日）
-
-**最後已知貼文 ID：** 2026-10-01_20261001007
-
-### 搜尋方法
-
-- truthsocial.com RSS：EGRESS_BLOCKED
-- truthsocial.com API：EGRESS_BLOCKED
-- thetrumparchive.com：EGRESS_BLOCKED
-- trumpstruth.org：EGRESS_BLOCKED
-- kadoa.com/potus/truth：EGRESS_BLOCKED
-- WebSearch（多次查詢）：未找到 20261001007 之後的新貼文
-
-### WebSearch 彙整資訊（2026-10-01 當日）
-
-1. **Durant, Oklahoma 造勢大會**：川普在 Choctaw Event Center 舉辦期中選舉造勢（晚間 6 點 CDT），支持共和黨州長候選人 Mike Mazzei，活動相關 Truth Social 貼文尚未索引
-2. **最新 trumpstruth.org 索引 ID**：42059（與前次執行相同，無新貼文）
-3. **最近可查證貼文**：trumpstruth.org ID 42046（RT @realDonaldTrump）
-
-### 結論
-
-**未發現新貼文。** 所有直接訪問管道仍被 EGRESS_BLOCKED 封鎖。WebSearch 未索引到 20261001007 之後的新貼文。
-未建立分析檔案，未推播 Telegram 或 LINE。
-**last_seen_id 維持：2026-10-01_20261001007**
-
----
-
-## 第九次排程執行 - 2026-10-01 12:01 UTC
-
-**最後已知貼文 ID：** 2026-10-01_20261001007
-
-### 搜尋方法
-
-- truthsocial.com RSS：EGRESS_BLOCKED
-- truthsocial.com API：EGRESS_BLOCKED
-- thetrumparchive.com：EGRESS_BLOCKED
-- trumpstruth.org：EGRESS_BLOCKED
-- kadoa.com/potus/truth：EGRESS_BLOCKED
-- time.com：EGRESS_BLOCKED
-- nbcnews.com：EGRESS_BLOCKED
-- WebSearch（多次查詢，15+ 次）：未找到 20261001007 之後的新貼文
-
-### WebSearch 彙整資訊（2026-10-01 當日）
-
-1. **新關稅波浪**：美國對 60 個貿易夥伴實施新關稅（10%～12.5%，第 301 條款），於 midnight ET 生效，取代臨時 10% 關稅
-2. **TIME 雜誌專訪**：Trump 接受 TIME 採訪（9/28 進行）於今日發布，話題涵蓋伊朗戰爭、AI、Fed、最高法院、期中選舉
-3. **Boeing 737 MAX 貼文**（trumpstruth.org ID 42059）：2026-10-01 12:40 AM EDT（04:40 UTC）—已含於 last_seen_id 代表的 7 筆貼文中
-4. **最新 trumpstruth.org 索引 ID**：42059（無新貼文）
-
-### 結論
-
-**未發現新貼文。** 所有直接訪問管道仍被 EGRESS_BLOCKED 封鎖。WebSearch 未索引到 20261001007 之後的新貼文。
-未建立分析檔案，未推播 Telegram 或 LINE。
-**last_seen_id 維持：2026-10-01_20261001007**
+執行時間: 2026-10-01 (UTC)
+上次記錄的貼文 ID: 2026-10-01_20261001007
+上次記錄的 SHA: 5b8a15c0c3d263b2e36233c34d23b84ecd0d24c4
+
+錯誤記錄:
+-----------
+【方法 A】WebFetch https://truthsocial.com/@realDonaldTrump.rss
+  → 失敗：EGRESS_BLOCKED - 網路出口代理封鎖了對 truthsocial.com 的存取
+
+【方法 A】WebFetch https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20
+  → 失敗：EGRESS_BLOCKED - 網路出口代理封鎖了對 truthsocial.com 的存取
+
+【方法 B】WebSearch "Trump Truth Social posts today site:truthsocial.com OR site:thetrumparchive.com"
+  → 無新貼文資訊（截至 2026-10-01_20261001007 後無可驗證的新貼文內容）
+
+【方法 B】WebSearch "Trump Truth Social 2026-10-01"
+  → 找到部分背景資訊（Section 301 新關稅於今日生效、TIME 訪談刊出），
+    但未取得任何貼文 ID 或完整貼文原文可供比對
+
+【方法 C】WebFetch https://www.thetrumparchive.com/
+  → 失敗：EGRESS_BLOCKED - 網路出口代理封鎖了對 thetrumparchive.com 的存取
+
+【其他嘗試】trumpstruth.org / trump.fm / presidency.ucsb.edu / 各大新聞網站
+  → 全部失敗：EGRESS_BLOCKED
+
+結論:
+-----------
+所有取得 Truth Social 貼文的方法均失敗，無法確認是否有新貼文（ID > 20261001007）。
+未建立新貼文分析檔，未推播 Telegram 或 LINE 通知。
+
+今日背景資訊（僅供參考，非來自 Truth Social 直接擷取）:
+- Section 301 關稅今日正式生效（對 60 個貿易夥伴課徵 10%~12.5%）
+- TIME 雜誌刊出 Trump 訪談文章及事實查核
+- Trump 仍維持 Truth Social 活躍發文習慣
