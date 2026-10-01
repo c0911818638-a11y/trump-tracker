@@ -226,3 +226,33 @@ last_seen_id 維持：2026-10-01_20261001005
 **未發現新貼文。** 所有直接訪問管道仍被 EGRESS_BLOCKED 封鎖。WebSearch 未索引到 20261001007 之後的新貼文。
 未建立分析檔案，未推播 Telegram 或 LINE。
 **last_seen_id 維持：2026-10-01_20261001007**
+
+---
+
+## 第九次排程執行 - 2026-10-01 12:01 UTC
+
+**最後已知貼文 ID：** 2026-10-01_20261001007
+
+### 搜尋方法
+
+- truthsocial.com RSS：EGRESS_BLOCKED
+- truthsocial.com API：EGRESS_BLOCKED
+- thetrumparchive.com：EGRESS_BLOCKED
+- trumpstruth.org：EGRESS_BLOCKED
+- kadoa.com/potus/truth：EGRESS_BLOCKED
+- time.com：EGRESS_BLOCKED
+- nbcnews.com：EGRESS_BLOCKED
+- WebSearch（多次查詢，15+ 次）：未找到 20261001007 之後的新貼文
+
+### WebSearch 彙整資訊（2026-10-01 當日）
+
+1. **新關稅波浪**：美國對 60 個貿易夥伴實施新關稅（10%～12.5%，第 301 條款），於 midnight ET 生效，取代臨時 10% 關稅
+2. **TIME 雜誌專訪**：Trump 接受 TIME 採訪（9/28 進行）於今日發布，話題涵蓋伊朗戰爭、AI、Fed、最高法院、期中選舉
+3. **Boeing 737 MAX 貼文**（trumpstruth.org ID 42059）：2026-10-01 12:40 AM EDT（04:40 UTC）—已含於 last_seen_id 代表的 7 筆貼文中
+4. **最新 trumpstruth.org 索引 ID**：42059（無新貼文）
+
+### 結論
+
+**未發現新貼文。** 所有直接訪問管道仍被 EGRESS_BLOCKED 封鎖。WebSearch 未索引到 20261001007 之後的新貼文。
+未建立分析檔案，未推播 Telegram 或 LINE。
+**last_seen_id 維持：2026-10-01_20261001007**
