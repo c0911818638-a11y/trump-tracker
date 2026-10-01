@@ -1,0 +1,33 @@
+# 川普 Truth Social 監控執行記錄
+
+**執行時間：** 2026-10-01（排程觸發，第一次）
+**上次追蹤 ID：** 2026-09-30_20260930007 → 更新至 2026-10-01_20261001001
+
+## 搜尋方法與結果
+
+- truthsocial.com RSS：EGRESS_BLOCKED（proxy 封鎖）
+- thetrumparchive.com：EGRESS_BLOCKED
+- trumpstruth.org：EGRESS_BLOCKED
+- WebSearch：成功偵測到 2026-10-01 新貼文
+
+## 今日已追蹤貼文（1則）
+
+| 序號 | 時間 | 摘要 |
+|------|------|------|
+| 001 | 2026-10-01 UTC 晨間 | 伊朗戰爭將「很快」結束、全面軍事勝利、霍爾木茲海峽控制、油價將跌 |
+
+## 本次執行行動（第一次）
+
+- 搜尋方式：WebSearch（直接網域均被 EGRESS_BLOCKED 封鎖）
+- 前次 last_seen_id：2026-09-30_20260930007（9/30 第七批，最後約 9:59 PM EDT）
+- 發現 10/1 新貼文：伊朗戰爭勝利宣示（川普 White House + Truth Social 聯合聲明）
+- GitHub 上傳：成功（posts/2026-10-01_20261001001_Iran-TotalVictory-Hormuz-EndVerySoon.md）
+- Telegram 推播：失敗（api.telegram.org EGRESS_BLOCKED，組織 egress 政策封鎖）
+- LINE 通知：由 GitHub Actions 自動觸發（line-notify.yml workflow）
+- last_seen_id 更新至：2026-10-01_20261001001
+
+## 備注
+
+- 9/30 的 posts #001–#007 由先前各次執行追蹤，但 GitHub 上傳均失敗（僅更新了 last_seen_id）
+- 本次確認：trumpstruth.org 截至搜尋時最高 status ID 為 42036（9/30 19:30 EDT）
+- Oct 1 貼文來源：Gulf News 報導（gulfnews.com 也被 EGRESS_BLOCKED，透過 WebSearch 取得摘要）
