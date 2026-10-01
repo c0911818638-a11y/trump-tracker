@@ -33,9 +33,6 @@
 ### 本次執行行動
 
 - GitHub 上傳：成功（3篇貼文 + state/last_seen_id.txt 更新）
-  - posts/2026-10-01_20261001008_FoxNews-MAGA-Patriots-Democrats.md
-  - posts/2026-10-01_20261001009_NationalPerformance-FakeNews-RecordNumbers.md
-  - posts/2026-10-01_20261001010_AlaskaLNG-SouthKorea-50Billion-Investment.md
 - Telegram 推播：失敗（api.telegram.org 被 egress proxy 封鎖，HTTP 403 Forbidden）
 - LINE 通知：由 GitHub Actions 自動觸發（步驟 5 push 成功）
 - last_seen_id 更新至：2026-10-01_20261001010
@@ -53,29 +50,58 @@
 - truthsocial.com API：EGRESS_BLOCKED
 - thetrumparchive.com：EGRESS_BLOCKED
 - trumpstruth.org：EGRESS_BLOCKED
-- WebSearch（多次查詢）：搜尋至今日較晚時段（Oklahoma 集會後）未找到可確認的新貼文
-
-### 搜尋發現
-
-透過 WebSearch 確認以下事項：
-- 前次執行已追蹤的貼文（#001-#010）均已存在 GitHub 倉庫
-- 川普今日行程：上午參觀德州 Denton Peterbilt 工廠，晚間 6PM CST 在 Oklahoma Durant Choctaw Event Center 舉辦期中選舉造勢
-- Oklahoma 民主黨參議院初選決選（N'Kiyla Thomas vs. Jim Priest）於今日舉行
-- 前次執行的 Telegram 推播確認失敗（EGRESS_BLOCKED）
-- 未找到任何 #010 之後的新貼文（集會後的晚間發文尚未出現在可存取的新聞來源）
+- WebSearch（多次查詢）：未找到可確認的新貼文
 
 ### 本次執行行動
 
 - 新貼文數量：0
-- GitHub 上傳：N/A（無新貼文）
-- Telegram 推播：N/A（無新貼文）
-- LINE 通知：N/A（無 GitHub push）
-- last_seen_id：維持 2026-10-01_20261001010 不變
+- last_seen_id：維持不變
 
-### 備注
+---
 
-前次執行（第十次）的 Telegram 推播因 EGRESS_BLOCKED 失敗，但 GitHub push 已成功。
-若使用者未收到 Telegram 通知，可至 GitHub 倉庫查看最新貼文：
-- posts/2026-10-01_20261001008_FoxNews-MAGA-Patriots-Democrats.md
-- posts/2026-10-01_20261001009_NationalPerformance-FakeNews-RecordNumbers.md
-- posts/2026-10-01_20261001010_AlaskaLNG-SouthKorea-50Billion-Investment.md
+## 第十二次排程執行 - 2026-10-01T18:02 UTC（第十二次）
+
+**開始時的 last_seen_id：** 2026-10-01_20261001011
+**結束時的 last_seen_id：** 2026-10-01_20261001015
+
+### 搜尋方法
+
+- truthsocial.com RSS：EGRESS_BLOCKED
+- truthsocial.com API：EGRESS_BLOCKED
+- thetrumparchive.com：EGRESS_BLOCKED
+- trumpstruth.org：EGRESS_BLOCKED
+- WebSearch（多次查詢）：成功找到 4 篇新貼文（trumpstruth.org 索引 #42063-42066）
+
+### 發現新貼文（4則）
+
+**貼文 #012 - Philip Aubart 司法提名**
+時間：2026-10-01 11:57 AM EDT (15:57 UTC)
+原文（部分）：I am pleased to announce the nomination of Philip Aubart to the United States District Court for the Middle District of North Carolina...
+重要程度：低——常規聯邦司法提名
+注意：此貼文早於前次執行（17:03 UTC）但未被搜尋到，本次補充追蹤
+
+**貼文 #013 - Brian Meyers 司法提名**
+時間：2026-10-01 12:27 PM EDT (16:27 UTC)
+原文（部分）：I am pleased to announce the nomination of Brian Meyers to the United States District Court for the Eastern District of North Carolina...
+重要程度：低——常規聯邦司法提名（同日第二則北卡提名）
+
+**貼文 #014 - 伊朗民眾起義轉貼**
+時間：2026-10-01 1:32 PM EDT (17:32 UTC)
+原文：RT @realJohnJohnJr — BREAKING: Thousands of Iranians taking to streets, preparing to take back their country from radical Islamists. Why is Legacy Media NOT reporting this?
+重要程度：中——伊朗戰爭背景下的政治訊號，來源為陰謀論帳號需謹慎解讀
+
+**貼文 #015 - 影片貼文**
+時間：2026-10-01 1:32 PM EDT (17:32 UTC)
+原文：影片內容（無法從搜尋結果取得詳細內容）
+重要程度：低（暫定）——與伊朗轉貼同時發出，可能為相關視覺內容
+
+### 本次執行行動
+
+- GitHub 上傳：成功（4篇貼文 + state/last_seen_id.txt 更新）
+  - posts/2026-10-01_20261001012_Judicial-Nomination-PhilipAubart-NC-Middle.md
+  - posts/2026-10-01_20261001013_Judicial-Nomination-BrianMeyers-NC-Eastern.md
+  - posts/2026-10-01_20261001014_Iran-Repost-Iranians-TakingBack-RadicalIslamists.md
+  - posts/2026-10-01_20261001015_Video-Post-Oct1-Afternoon.md
+- Telegram 推播：失敗（api.telegram.org 被 egress proxy 封鎖，HTTP 403 Forbidden）
+- LINE 通知：由 GitHub Actions 自動觸發（步驟 5 push 成功）
+- last_seen_id 更新至：2026-10-01_20261001015
