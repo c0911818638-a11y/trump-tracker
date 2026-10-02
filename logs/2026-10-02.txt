@@ -1,4 +1,4 @@
-2026-10-02 執行記錄（已更新）
+執行時間：2026-10-02（自動排程）
 
 ## 第一次至第五次執行
 （詳見原始記錄，結論：前5次執行均無法取得新貼文，last_seen_id 最終為 2026-10-02_20261002003）
@@ -100,3 +100,46 @@ LINE 通知：不適用（無新貼文且 GitHub 無新 post 推送）
 - 川普批評湯姆科頓阻擋《陽光保護法》
 - 川普駁斥伊朗戰爭批評者（Tucker Carlson 等人）
 - 11 月中期選舉前川普積極競選（Oklahoma、Texas、Alabama）
+
+---
+
+## 第八次執行
+執行時間：2026-10-02 ~20:10 UTC（約 16:10 EDT）
+
+### 上次記錄 ID
+2026-10-02_20261002013
+
+### 嘗試的取得方法
+- 方法 A：truthsocial.com RSS → EGRESS_BLOCKED
+- 方法 A：truthsocial.com API → EGRESS_BLOCKED
+- 方法 B：WebSearch（多輪搜尋，15+ 輪）→ 成功發現新貼文
+  - trumpstruth.org Status 42082 現已被搜尋引擎索引（第七次執行時尚未索引）
+  - trumpstruth.org Status 42083 亦已被索引
+- 方法 C：trumpstruth.org、thetrumparchive.com → EGRESS_BLOCKED
+
+### 新貼文發現
+
+**貼文 #14（20261002014）**
+- trumpstruth.org Status：42082
+- Truth Social ID：117372766735299421
+- 時間：2026-10-02 18:38 UTC（14:38 EDT）
+- 類型：RT 轉貼（Laura Loomer）
+- 內容：轉發 Laura Loomer 貼文，讚揚以色列水電工 Yaniv Hayoun 在 FlyDubai 劫機事件中的英勇表現
+- 檔案：posts/2026-10-02_20261002014_RT-LauraLoomer-IsraeliPlumber-HijackedFlight.md
+
+**貼文 #15（20261002015）**
+- trumpstruth.org Status：42083
+- 時間：2026-10-02 午後（精確時間未確認）
+- 類型：AI 生成影片
+- 內容：AI 影片顯示川普將「Trump 2028」帽子扔向民主黨眾院少數黨領袖 Hakeem Jeffries
+- 檔案：posts/2026-10-02_20261002015_AIVideo-Trump2028Hat-HakeemJeffries.md
+
+### 執行結果
+GitHub push：成功（2 篇新貼文分析檔案 + last_seen_id 更新至 20261002015）
+Telegram 推播：失敗——api.telegram.org 被 egress proxy 封鎖（connect_rejected，exit code 56）
+LINE 通知：由 GitHub Actions 自動觸發（GitHub push 成功，workflow 應自動執行）
+
+### 注意事項
+- Telegram 推播管道持續封鎖，主要通知依賴 LINE（via GitHub Actions）
+- 今日最後已知貼文為 Status 42083（下午），但川普晚間在 Alabama Mobile 市的集會（6 PM CDT）後可能有更多貼文
+- 建議下次執行繼續追蹤 Status 42084+ 的內容
