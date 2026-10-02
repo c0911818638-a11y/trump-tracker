@@ -74,7 +74,7 @@ LINE 通知: 由 GitHub Actions 自動處理
 ### 嘗試的取得方法
 - 方法 A：truthsocial.com RSS → EGRESS_BLOCKED（403）
 - 方法 A：truthsocial.com API → EGRESS_BLOCKED（403）
-- 方法 B：WebSearch（多輪搜尋）→ 已嘗試 10+ 輪，未發現 20261002013 之後的新貼文
+- 方法 B：WebSearch（多輪搜尋，15+ 輪）→ 已嘗試 10+ 輪，未發現 20261002013 之後的新貼文
   - 確認 trumpstruth.org Status 42081（Europe Oil，10:01 AM）為目前最新索引
   - Status 42082+ 尚未被搜尋引擎索引（可能貼文太新）
   - 搜尋結果顯示 Telegram API 亦被 egress proxy 封鎖（403 Forbidden）
@@ -178,4 +178,79 @@ LINE 通知：由 GitHub Actions 自動觸發（GitHub push 成功，workflow �
 last_seen_id：維持不變（2026-10-02_20261002015）
 GitHub push：更新此日誌記錄
 Telegram 推播：不適用（無新貼文）
+LINE 通知：不適用（無新貼文）
+
+---
+
+## 第十次執行
+執行時間：2026-10-02 ~22:03 UTC（約 18:03 EDT）
+
+### 上次記錄 ID
+2026-10-02_20261002015（state/last_seen_id.txt）
+
+### 執行結果
+發現並記錄 2 篇新貼文（後確認為重複內容）：
+
+**貼文 #16（20261002016）**
+- Truth Social ID：117372766735299421（與 #014 相同！）
+- 類型：RT 轉貼（Laura Loomer）—— 同一以色列水電工 Yaniv Hayoun / FlyDubai 劫機事件
+- 注意：此貼文 ID 與 20261002014 的 Truth Social ID 完全相同，可能為重複索引
+- 檔案：posts/2026-10-02_20261002016_RT-LauraLoomer-IsraeliPlumber-Hayoun.md
+
+**貼文 #17（20261002017）**
+- 類型：AI 影片（Russell Vought 扮演死神）
+- 注意：內容疑似與 20261002006（Vought-GrimReaper-AIVideo）重複
+- 檔案：posts/2026-10-02_20261002017_Video-VoughtGrimReaper-Government-Shutdown.md
+
+state/last_seen_id.txt 更新為：2026-10-02_20261002017
+
+GitHub push：成功（commit at 22:03 UTC）
+Telegram 推播：失敗——api.telegram.org 被 egress proxy 封鎖
+LINE 通知：由 GitHub Actions 自動觸發
+
+### 注意事項
+- 貼文 #016 與 #014 使用相同的 Truth Social ID（117372766735299421），確認為重複
+- 貼文 #017 內容（Vought 死神影片）與 #006 高度重疊，可能為不同時間點的相同媒體
+- Alabama Mobile 集會於 23:00 UTC 開始，集會中/後的新貼文尚待索引
+
+---
+
+## 第十一次執行
+執行時間：2026-10-02 ~22:30 UTC（約 18:30 EDT）
+
+### 上次記錄 ID
+2026-10-02_20261002017（state/last_seen_id.txt）
+
+### 嘗試的取得方法
+- 方法 A：truthsocial.com RSS → EGRESS_BLOCKED
+- 方法 A：truthsocial.com API → EGRESS_BLOCKED
+- 方法 B：WebSearch（多輪搜尋，10+ 輪）→ 無新貼文索引
+  - 搜尋 trumpstruth.org Status 42084～42090 → 均未被搜尋引擎索引
+  - 最新索引貼文仍為 Status 42083（AI 影片，Trump 2028 帽扔 Jeffries）
+  - 搜尋 "Trump Truth Social October 2 2026 Alabama rally Mobile" → 無新結果
+  - 集會剛開始（~23:00 UTC），集會中貼文尚未被索引
+- 方法 C：trumpstruth.org、thetrumparchive.com → EGRESS_BLOCKED
+
+### 執行結果
+**無新貼文**：未發現 20261002017 之後的新 Truth Social 貼文
+
+原因分析：
+1. Alabama Mobile 集會於 22:00-23:00 UTC 剛剛開始
+2. 集會期間貼文通常需數分鐘至數十分鐘才能被搜尋引擎索引
+3. 即使川普在集會中轉發或發文，真正的新貼文（Status 42084+）尚未被索引
+
+### 今日貼文統計（截至本次執行）
+- 今日已追蹤貼文總數：17 篇（20261002001～20261002017）
+- 其中重複/疑似重複：#004、#005（可能重複早期貼文）、#016（確認重複 #014）、#017（疑似重複 #006）
+- 實際唯一新貼文估計：約 13 篇
+- 最新已索引 Status：42083
+
+### 背景資訊
+- Alabama Mobile 市 Mitchell Center 集會進行中（6 PM CDT / 23:00 UTC 開始）
+- 預期集會結束後（UTC 深夜）可能出現更多貼文
+- 建議後續執行持續追蹤 Status 42084+ 的集會相關貼文
+
+last_seen_id：維持不變（2026-10-02_20261002017）
+GitHub push：更新此日誌記錄
+Telegram 推播：失敗——api.telegram.org 被 egress proxy 封鎖（connect_rejected）
 LINE 通知：不適用（無新貼文）
