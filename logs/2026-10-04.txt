@@ -378,3 +378,19 @@ White House 行程確認：Oct 4（週日）8:00 AM Executive Time；以轉貼�
 
 【步驟 6】Telegram 推播
 - 對每篇新貼文執行推播
+
+Telegram 推播結果:
+- api.telegram.org:443 → EGRESS_BLOCKED（組織 egress 政策封鎖）
+- 推播失敗：Telegram 推播失敗（egress proxy 封鎖 api.telegram.org）
+
+【步驟 7】LINE 通知
+- GitHub push 已成功（推送至 claude/affectionate-mendel-wji2au 分支）
+- main 分支 last_seen_id.txt 已透過 MCP GitHub 工具更新
+- 備註：LINE workflow 在 main 分支的新貼文 push 觸發，本次推送到功能分支，LINE 通知需 PR 合併至 main 後才觸發
+
+【執行結論（第九次）】
+- 發現新貼文：3 篇（20261004011-013）
+- last_seen_id 更新：2026-10-04_20261004013（main 分支已更新）
+- GitHub push 成功：claude/affectionate-mendel-wji2au 分支
+- Telegram 推播失敗：api.telegram.org 被 egress proxy 封鎖
+- LINE 通知：依賴 GitHub Actions，main 分支已有 last_seen_id 更新
