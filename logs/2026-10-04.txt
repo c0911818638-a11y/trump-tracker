@@ -275,3 +275,50 @@ White House 行程確認：Oct 4（週日）8:00 AM Executive Time；以轉貼�
 - 未建立新貼文檔案
 - Telegram 未推播（無新內容）
 - LINE 未推播（無新內容）
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【第八次執行記錄】UTC 時間：2026-10-04（本次執行）
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+【步驟 1】讀取 last_seen_id
+- 成功讀取：2026-10-04_20261004001（SHA: 384a1aa4d5127869f6df7e65cc17e9a42fc77934）
+
+【步驟 2】嘗試取得川普最新貼文（第八次）
+
+方法 A（Truth Social RSS / API）：
+- https://truthsocial.com/@realDonaldTrump.rss → EGRESS_BLOCKED
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → EGRESS_BLOCKED
+
+方法 B（WebSearch 多次搜尋）：
+- 搜尋 "Trump Truth Social posts October 4 2026" → 僅找到 Oct 3 貼文
+- 搜尋 "Trump Truth Social October 4 2026 midterm election rally endorsement"
+- 搜尋 "Trump Truth Social post tonight Sunday October 4 2026 midnight"
+- 搜尋 "Trump Truth Social post October 4 2026 morning daylight Iran"
+- 搜尋 "Trump "100 times" Truth Social Sunday posting October 4 2026"
+- 搜尋 "Trump erupts Carlson Massie MTG Truth Social October 2026" → 確認為 Aug 22, 2026
+- 搜尋 "Trump Truth Social post "October 4" Salazar midterm 2026 Sunday" → Salazar 貼文為 Oct 3
+- 搜尋 "Trump news October 4 2026 Truth Social post major announcement"
+- trumpstruth.org 最新 archive：statuses/42125（Bayer Ohio，Oct 3, 2026 18:20 EDT）
+- 搜尋 site:trumpstruth.org statuses 42126-42150 → 無結果
+- forth.news 標題確認：「President Trump Posts Routine Updates on Truth Social, No Major Announcements」
+
+方法 C（Trump Archive / 各新聞網站）：
+- 所有直連來源全數被 egress proxy 封鎖：
+  truthsocial.com, thetrumparchive.com, trumpstruth.org, kadoa.com,
+  forth.news, nbcnews.com, cbsnews.com, foxnews.com, thehill.com,
+  washingtontimes.com, yahoo.com, usnews.com, aljazeera.com,
+  rollcall.com, tagteam.harvard.edu, thedailybeast.com
+
+【步驟 3】比較結果
+- 仍未發現比 2026-10-04_20261004001 更新的貼文
+- 確認貼文 42125（Bayer Ohio）為 Oct 3，已在上次執行中處理
+- Trump-Carlson 衝突貼文為 Aug 22, 2026（非新內容）
+- Salazar 攻擊貼文為 Oct 3, 2026（Saturday，已追蹤）
+- Oct 4 白宮行程：Executive Time（閉門），Truth Social 以轉貼為主
+
+【結論（第八次執行）】
+- 無新貼文需處理
+- last_seen_id 維持不變：2026-10-04_20261004001
+- 未建立新貼文檔案
+- Telegram 推播：未執行（無新內容）
+- LINE 通知：未執行（無新內容，GitHub 未 push 新貼文）
