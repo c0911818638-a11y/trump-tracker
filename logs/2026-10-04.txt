@@ -62,3 +62,50 @@
 - 未建立新貼文檔案
 - Telegram 未推播（無新內容）
 - LINE 未推播（無新內容）
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【第三次執行記錄】UTC 時間：約稍晚
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+【步驟 1】讀取 last_seen_id
+- 成功讀取：2026-10-04_20261004001（SHA: 384a1aa4d5127869f6df7e65cc17e9a42fc77934）
+
+【步驟 2】嘗試取得川普最新貼文（第三次）
+
+方法 A（Truth Social RSS / API）：
+- https://truthsocial.com/@realDonaldTrump.rss → EGRESS_BLOCKED
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → EGRESS_BLOCKED
+
+方法 B（WebSearch）：
+- 搜尋確認：川普 Oct 4 主要活動為俄亥俄州 Vandalia 造勢活動（支持 Jon Husted 参議員候選人 + Vivek Ramaswamy 州長候選人）
+- Al Jazeera 報導（2026/10/4）：「Trump defiant about midterm chances as he rallies for Republicans in Ohio」
+- forth.news 新增標題：「Trump Reposts Own Content on Truth Social, No New Policy Announcements」及「President Trump Posts Retweets on Truth Social, Content Unclear」（Oct 4 分析）
+- 上述顯示 Oct 4 川普 Truth Social 活動以轉貼為主，無重大政策宣告
+- trumpstruth.org 最新 archive 仍停留在 statuses/42119-42124（均為 Oct 3）
+- 未發現任何 ID > 20261004001 的新貼文文字內容
+
+方法 C（其他網站）：
+- 下列網站全數被 egress proxy 封鎖：
+  trumpstruth.org, thetrumparchive.com, trump-archive.com, kadoa.com,
+  forth.news, nbcnews.com, foxnews.com, cnn.com, yahoo.com,
+  huffpost.com, washingtontimes.com, aljazeera.com, dailycaller.com,
+  benzinga.com, politifact.com, poynter.org, thedailybeast.com,
+  floridapolitics.com, daytondailynews.com, cyprus-mail.com,
+  inkl.com, presidency.ucsb.edu, tagteam.harvard.edu
+
+【步驟 3】比較結果
+- 未發現比 20261004001 更新的貼文
+- Oct 4 川普主要以造勢活動為主，Truth Social 轉貼居多，archive 尚未索引
+
+【結論（第三次執行）】
+- 無新貼文需處理
+- last_seen_id 維持不變：2026-10-04_20261004001
+- 未建立新貼文檔案
+- Telegram 未推播（無新內容）
+- LINE 未推播（無新內容）
+
+【整體問題說明】
+egress proxy 持續封鎖絕大多數外部新聞及 archive 網站，
+本監控系統僅能依賴 WebSearch 索引到的摘要，
+無法直接抓取 Truth Social 或其備援 archive 的即時內容。
+建議考慮透過非封鎖管道（如本地 GitHub Actions cron）取得貼文內容。
