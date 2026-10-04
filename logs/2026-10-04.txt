@@ -24,7 +24,39 @@
 - 未發現比 20261004001 更新的貼文
 - 原因：所有主要外部來源均被 egress proxy 封鎖；WebSearch 僅能索引到 2026-10-03 的貼文
 
-【結論】
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【第二次執行記錄】時間約 UTC 稍晚
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+【步驟 1】讀取 last_seen_id
+- 成功讀取：2026-10-04_20261004001（與第一次相同）
+
+【步驟 2】嘗試取得川普最新貼文
+
+方法 A（Truth Social RSS / API）：
+- https://truthsocial.com/@realDonaldTrump.rss → EGRESS_BLOCKED
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → EGRESS_BLOCKED
+
+方法 B（WebSearch）：
+- 搜尋多次，確認 2026-10-04 活動：川普於俄亥俄州 Vandalia 主持選前造勢（為 Jon Husted 和 Vivek Ramaswamy 站台，1月5日期中選舉前約31天）
+- 川普宣告「我們會大獲全勝」，"I think we're going to have a big surprise"
+- 公開行程顯示 Oct 4 為 Executive Time（白宮對媒體關閉）
+- 搜尋 trumpstruth.org 最新 archive 條目為 statuses/42119（2026-10-03）
+- 未發現任何明確 Oct 4 Truth Social 貼文內容（新於 20261004001）
+
+方法 C（Trump Archive / 其他新聞網站）：
+- thetrumparchive.com → EGRESS_BLOCKED
+- trumpstruth.org → EGRESS_BLOCKED
+- kadoa.com → EGRESS_BLOCKED
+- forth.news → EGRESS_BLOCKED
+- nbcnews.com → EGRESS_BLOCKED
+- cbsnews.com → EGRESS_BLOCKED
+
+【步驟 3】比較結果
+- 未發現比 20261004001 更新的貼文
+- 所有外部來源均被 egress proxy 封鎖
+
+【結論（第二次執行）】
 - 無新貼文需處理
 - last_seen_id 維持不變：2026-10-04_20261004001
 - 未建立新貼文檔案
