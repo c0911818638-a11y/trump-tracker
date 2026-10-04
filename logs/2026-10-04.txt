@@ -104,7 +104,53 @@
 - Telegram 未推播（無新內容）
 - LINE 未推播（無新內容）
 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【第四次執行記錄】UTC 時間：約晚間
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+【步驟 1】讀取 last_seen_id
+- 成功讀取：2026-10-04_20261004001（SHA: 384a1aa4d5127869f6df7e65cc17e9a42fc77934）
+
+【步驟 2】嘗試取得川普最新貼文（第四次）
+
+方法 A（Truth Social RSS / API）：
+- https://truthsocial.com/@realDonaldTrump.rss → EGRESS_BLOCKED
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → EGRESS_BLOCKED
+
+方法 B（WebSearch 多次搜尋）：
+- 搜尋 "Trump Truth Social posts today 2026-10-04 site:truthsocial.com OR site:thetrumparchive.com"
+- 搜尋 "Trump Truth Social October 4 2026"
+- 搜尋 "Trump Truth Social "October 4" 2026 rally Alabama Mobile post"
+- 搜尋 "Trump "100 times" Truth Social Sunday October 4 2026"
+- 搜尋 "Trump Truth Social latest post today October 4 2026 new"
+- 搜尋 多組關鍵字
+- 結果：trumpstruth.org statuses 最新為 42120（2026-10-03 下午），
+        forth.news 標題確認 Oct 4 為「routine updates, no major announcements」
+        「President Trump Posts Routine Updates on Truth Social, No Major Announcements」
+- 發現貼文 42120 部分文字：
+  "Republicans must WIN the 2026 Midterm Elections, and we must use every appropriate tool —
+   Whether you vote early, absentee, by mail, or in-person, we must 'swamp' the
+   Radical Left Dumocrats with massive turnout! SO IMPORTANT — PLEASE GET OUT AND VOTE.
+   MAKE AMERICA GREAT AGAIN!"
+  （此貼文為 Oct 3, 2026 09:10 EDT，已在上次執行中處理）
+
+方法 C（Trump Archive / 新聞網站）：
+- 嘗試訪問超過 20 個域名，全部被 egress proxy 封鎖（見前述清單）
+
+【步驟 3】比較結果
+- 仍未發現比 20261004001 更新的貼文
+- forth.news Oct 4 報導確認今日 Truth Social 活動為例行性轉貼，無重大新貼文
+
+【結論（第四次執行）】
+- 無新貼文需處理
+- last_seen_id 維持不變：2026-10-04_20261004001
+- 未建立新貼文檔案
+- Telegram 未推播（無新內容）
+- LINE 未推播（無新內容）
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 【整體問題說明】
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 egress proxy 持續封鎖絕大多數外部新聞及 archive 網站，
 本監控系統僅能依賴 WebSearch 索引到的摘要，
 無法直接抓取 Truth Social 或其備援 archive 的即時內容。
