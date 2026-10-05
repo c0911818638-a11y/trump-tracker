@@ -1,0 +1,64 @@
+name: Telegram Notify
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'state/telegram_queue.txt'
+      - 'posts/**.md'
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    env:
+      BOT_TOKEN: "8987639500:AAGYKSqANKJP2DaU3QetR_Nr60uA-vsDxZY"
+      CHAT_ID: "7802005331"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      # 情況 A：有新貼文分析檔（posts/*.md）
+      - name: Check for new post files
+        id: newposts
+        run: |
+          NEW_FILES=$(git diff --name-only HEAD~1 HEAD -- 'posts/*.md' | head -5 | tr '\n' ' ')
+          echo "files=$NEW_FILES" >> $GITHUB_OUTPUT
+
+      - name: Send Telegram for new posts
+        if: steps.newposts.outputs.files != ''
+        run: |
+          for FILE in ${{ steps.newposts.outputs.files }}; do
+            echo "Sending Telegram for: $FILE"
+            MSG=$(cat "$FILE" | head -80 | tr -d '\r')
+            curl -s -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
+              --data-urlencode "chat_id=${CHAT_ID}" \
+              --data-urlencode "text=${MSG}" \
+              -o /tmp/tg_resp.json
+            OK=$(python3 -c "import json; d=json.load(open('/tmp/tg_resp.json')); print(d.get('ok','?'))")
+            echo "Telegram response ok=$OK for $FILE"
+          done
+
+      # 情況 B：手動佇列訊息（state/telegram_queue.txt）
+      - name: Check queue file changed
+        id: queuecheck
+        run: |
+          CHANGED=$(git diff --name-only HEAD~1 HEAD -- 'state/telegram_queue.txt')
+          echo "changed=$CHANGED" >> $GITHUB_OUTPUT
+
+      - name: Send Telegram from queue
+        if: steps.queuecheck.outputs.changed != '' && steps.newposts.outputs.files == ''
+        run: |
+          if [ -f "state/telegram_queue.txt" ]; then
+            MSG=$(cat state/telegram_queue.txt)
+            if [ -n "$MSG" ]; then
+              curl -s -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
+                --data-urlencode "chat_id=${CHAT_ID}" \
+                --data-urlencode "text=${MSG}" \
+                -o /tmp/tg_resp.json
+              OK=$(python3 -c "import json; d=json.load(open('/tmp/tg_resp.json')); print(d.get('ok','?'))")
+              echo "Telegram queue response ok=$OK"
+            fi
+          fi
