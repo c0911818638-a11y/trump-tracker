@@ -4,11 +4,6 @@ import sys
 import os
 import re
 from datetime import datetime, timezone, timedelta
-try:
-    from zoneinfo import ZoneInfo
-    ET_TZ = ZoneInfo("America/New_York")
-except ImportError:
-    ET_TZ = None  # fallback below
 
 ACCOUNT_ID = "107780257626128497"
 BASE = "https://truthsocial.com"
@@ -24,6 +19,9 @@ HEADERS = {
     "Referer": "https://truthsocial.com/",
 }
 
+# 台灣時間 UTC+8，無夏令時
+TW_TZ = timezone(timedelta(hours=8))
+
 def get(url):
     req = urllib.request.Request(url, headers=HEADERS)
     with urllib.request.urlopen(req, timeout=30) as r:
@@ -34,16 +32,8 @@ def strip_html(text):
     text = re.sub(r'<[^>]+>', '', text)
     return text.strip()
 
-def utc_to_et(dt):
-    """轉換為美東時間 (America/New_York)，用於檔名日期標記。
-    川普在美東時間發文，檔名用美東日期才不會出現「跨日」到台灣隔天的問題。"""
-    if ET_TZ:
-        return dt.astimezone(ET_TZ)
-    # Fallback: 夏令時 EDT = UTC-4，冬令時 EST = UTC-5
-    month = dt.month
-    is_dst = 3 <= month <= 11
-    offset = timedelta(hours=-4 if is_dst else -5)
-    return dt.astimezone(timezone(offset))
+def utc_to_tw(dt):
+    return dt.astimezone(TW_TZ)
 
 print("Fetching posts with bearer token...")
 url = f"{BASE}/api/v1/accounts/{ACCOUNT_ID}/statuses?limit=20"
@@ -59,8 +49,8 @@ for p in data:
         break
     if p.get("reblog"):
         continue
-    dt = datetime.strptime(p["created_at"], "%Y-%m-%dT%H:%M:%S.%fZ").replace(tzinfo=timezone.utc)
-    new_posts.append({"id": p["id"], "created_at": dt, "content": strip_html(p.get("content", ""))})
+    dt_utc = datetime.strptime(p["created_at"], "%Y-%m-%dT%H:%M:%S.%fZ").replace(tzinfo=timezone.utc)
+    new_posts.append({"id": p["id"], "created_at": dt_utc, "content": strip_html(p.get("content", ""))})
 
 new_posts.sort(key=lambda p: p["id"])
 print(f"New posts: {len(new_posts)}")
@@ -71,14 +61,15 @@ if not new_posts:
 
 for p in new_posts:
     post_id = p["id"]
-    created_at = p["created_at"]
-    et_time = utc_to_et(created_at)
-    date_str = et_time.strftime("%Y-%m-%d")  # 美東日期，對應川普實際發文日
+    dt_utc = p["created_at"]
+    dt_tw = utc_to_tw(dt_utc)
+    date_str = dt_tw.strftime("%Y-%m-%d")  # 台灣日期，對應用戶收到通知的日期
+    tw_str = dt_tw.strftime("%Y-%m-%d %H:%M:%S (台灣時間 UTC+8)")
     filename = f"posts/{date_str}_{post_id}.md"
 
     md = f"""# 川普 Truth Social 新貼文
 
-**發布時間：** {created_at.strftime('%Y-%m-%dT%H:%M:%SZ')}
+**發布時間：** {tw_str}
 **貼文 ID：** {post_id}
 **連結：** https://truthsocial.com/@realDonaldTrump/{post_id}
 
