@@ -1,0 +1,10 @@
+【川普 Truth Social 監控 - 系統測試】
+
+Telegram 推播管道已升級！
+
+新架構：Claude Code 雲端執行環境 → 寫入 GitHub → GitHub Actions → Telegram API
+
+測試時間：2026-10-05
+狀態：通道連線測試
+
+若您收到此訊息，代表 Telegram 推播已成功透過 GitHub Actions 繞過代理限制運作。後續每次有新川普貼文，將自動推播分析至此。
