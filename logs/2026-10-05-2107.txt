@@ -1,0 +1,38 @@
+執行摘要 2026-10-05T21:07 UTC
+================================
+
+【步驟 1】讀取 last_seen_id
+- 結果：2026-10-05_20261005205（俄亥俄 MAXED OUT 帖，上次處理於 20:06 UTC）
+- SHA：dd88990e0f54e3f016b2a25c1957d0b183b6b157
+
+【步驟 2】抓取川普最新貼文
+- truthsocial.com RSS：EGRESS_BLOCKED
+- truthsocial.com API：EGRESS_BLOCKED
+- thetrumparchive.com：EGRESS_BLOCKED
+- 改用 WebSearch 方法 B：成功（透過新聞搜尋找到相關內容）
+
+【步驟 3】比較新舊
+- 上次處理：20261005205（15:20 EDT）
+- 新帖偵測：10月5日晚間狂貼風暴（7pm–midnight EDT，逾 160 則）
+
+【步驟 4】中文分析
+- 代表性貼文 ID：20261005206
+- 主要主題：洩密者叛國威脅、「America the Beautiful」宣示、聖誕影片、梅拉尼亞紀錄片
+
+【步驟 5】GitHub 上傳
+- 分析檔：posts/2026-10-05_20261005206_EveningSpree-TreasonLeakers-Melania.md ✓
+- last_seen_id 更新：2026-10-05_20261005206 ✓
+- Commit SHA：2a22d89ababda0dff4121d8b95c32359801bc84b
+
+【步驟 6】Telegram 推播
+- 狀態：失敗
+- 原因：api.telegram.org:443 被 egress proxy 封鎖（組織網路政策）
+- 記錄：Telegram 推播失敗：connect_rejected（egress policy）
+
+【步驟 7】LINE 通知
+- GitHub push 成功，line-notify.yml 應自動觸發
+
+【注意事項】
+- Truth Social 直接 API 存取受到 egress proxy 封鎖，本次透過新聞搜尋（WebSearch）取得貼文摘要
+- 晚間 160+ 則貼文為大規模轉貼/攻擊，代表性選取最具政治意義的貼文記錄
+- 因無法存取 Truth Social API，實際新帖總數可能更多（估計 #206–#365+）
