@@ -19,6 +19,30 @@ function stripHtml(html) {
   return html.replace(/<br\s*\/?>/gi, '\n').replace(/<[^>]+>/g, '').trim();
 }
 
+// 台灣時間 UTC+8，無夏令時
+function toTaiwanTime(date) {
+  return new Date(date.getTime() + 8 * 60 * 60 * 1000);
+}
+
+function formatTaiwanDate(date) {
+  const tw = toTaiwanTime(date);
+  const y = tw.getUTCFullYear();
+  const m = String(tw.getUTCMonth() + 1).padStart(2, '0');
+  const d = String(tw.getUTCDate()).padStart(2, '0');
+  return `${y}-${m}-${d}`;
+}
+
+function formatTaiwanDatetime(date) {
+  const tw = toTaiwanTime(date);
+  const y = tw.getUTCFullYear();
+  const m = String(tw.getUTCMonth() + 1).padStart(2, '0');
+  const d = String(tw.getUTCDate()).padStart(2, '0');
+  const h = String(tw.getUTCHours()).padStart(2, '0');
+  const mi = String(tw.getUTCMinutes()).padStart(2, '0');
+  const s = String(tw.getUTCSeconds()).padStart(2, '0');
+  return `${y}-${m}-${d} ${h}:${mi}:${s} (台灣時間 UTC+8)`;
+}
+
 (async () => {
   const lastSeenId = fs.readFileSync('state/last_seen_id.txt', 'utf8').trim();
   console.log('Last seen ID:', lastSeenId);
@@ -62,15 +86,13 @@ function stripHtml(html) {
   fs.mkdirSync('posts', { recursive: true });
   for (const p of newPosts) {
     const dt = new Date(p.created_at);
-    // 用美東時間 (America/New_York) 標記日期，對應川普實際發文日。
-    // 若用台灣時間，川普晚間發文會跨日變成台灣隔天，造成混淆。
-    const dateStr = dt.toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
+    const dateStr = formatTaiwanDate(dt);
     const filename = `posts/${dateStr}_${p.id}.md`;
     const content = stripHtml(p.content || '');
 
     fs.writeFileSync(filename, `# 川普 Truth Social 新貼文
 
-**發布時間：** ${dt.toISOString().replace('.000Z', 'Z')}
+**發布時間：** ${formatTaiwanDatetime(dt)}
 **貼文 ID：** ${p.id}
 **連結：** https://truthsocial.com/@realDonaldTrump/${p.id}
 
