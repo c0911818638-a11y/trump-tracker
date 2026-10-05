@@ -1,6 +1,7 @@
-執行時間：2026-10-05 UTC
+執行時間：2026-10-05 UTC（第二次執行）
 上次記錄貼文 ID：20261004164（2026-10-04）
 
+【第一次執行記錄】
 錯誤記錄：所有取得貼文的方法均失敗，無法取得新貼文。
 
 嘗試的方法：
@@ -28,7 +29,30 @@
   表示今日有貼文但無重大公告
 - 無法取得具體貼文 ID 或完整貼文文字
 
+【第二次執行記錄】
+嘗試的額外方法：
+1. WebFetch: https://www.trumpstruth.org/ — EGRESS_BLOCKED
+2. WebFetch: https://www.kadoa.com/potus/truth — EGRESS_BLOCKED
+3. WebFetch: https://www.forth.news/ — EGRESS_BLOCKED
+4. WebFetch: https://etvbharat.com/ — EGRESS_BLOCKED
+5. WebFetch: https://techcrunch.com/ — EGRESS_BLOCKED
+6. WebFetch: https://foxnews.com/ — EGRESS_BLOCKED
+7. WebFetch: https://cnbc.com/ — EGRESS_BLOCKED
+8. WebFetch: https://en.wikipedia.org/ — EGRESS_BLOCKED
+9. WebFetch: https://www.nbcnews.com/ — EGRESS_BLOCKED
+10. WebFetch: https://www.cbsnews.com/ — EGRESS_BLOCKED
+11. WebFetch: https://www.aljazeera.com/ — EGRESS_BLOCKED
+12. WebFetch: https://adipredictstreet.com/ — EGRESS_BLOCKED
+13. WebSearch（多次，含不同關鍵字）— 僅取得新聞摘要，無法取得完整貼文 ID 及原文
+
+2026-10-05 已知事件（來自搜尋摘要）：
+- 川普在內布拉斯加州 Grand Island 舉行競選造勢活動
+- 川普與 Hegseth 在諾福克海軍基地（Naval Station Norfolk）向 10,000 名海軍人員演講
+- 高階官員在 Camp David 討論伊朗戰爭
+- 哈馬斯停火期限為 10 月 5 日下午 6 點（EDT）
+- 10 月 4 日宣布：超級智慧力量（SIF）任務小組成立，由 Jay Clayton 領導
+
 結論：
-因網路代理封鎖，無法透過任何方法取得 2026-10-05 川普 Truth Social 新貼文的具體內容與 ID。
+網路 egress proxy 封鎖了所有直接網站存取。兩次執行均失敗，無法取得 2026-10-05 川普 Truth Social 貼文的具體 ID 與完整原文。
 未建立貼文分析檔案，未推播 Telegram 或 LINE 通知。
 last_seen_id 維持不變（20261004164）。
