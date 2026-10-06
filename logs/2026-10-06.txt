@@ -195,3 +195,34 @@ LINE 通知：由 GitHub Actions 自動處理（GitHub push 成功，line-notify
 - 川普在俄亥俄州 Vandalia 高中體育館舉辦集會，支持 Jon Husted（參議員）和 Vivek Ramaswamy（州長候選人）
 - 《紐約時報》報導集會上層座位空曠，川普強烈反駁並要求媒體被「逮捕」
 - Fox News 未播報集會，川普同日另發帖批評 Fox News
+
+---
+執行紀錄 2026-10-06T21:00Z（排程）
+
+上次記錄貼文 ID：2026-10-06_20261006026
+本次執行結果：發現 2 則新貼文（系列共4則）
+
+已嘗試方法：
+- 方法 A：truthsocial.com RSS — EGRESS_BLOCKED
+- 方法 A：truthsocial.com API — EGRESS_BLOCKED
+- 方法 A：thetrumparchive.com — EGRESS_BLOCKED
+- 方法 B：WebSearch（多次搜尋，涵蓋 Fox News El-Sayed Osborn、Annie Andrews、$5000 checks 等關鍵字）— 成功
+  * 確認 Fox News 攻擊系列（3則，約 9:50 AM ET）
+  * 確認 Annie Andrews 跨性別歧視帖
+- 方法 C：kadoa.com、realitytea.com、thehill.com 等 — EGRESS_BLOCKED
+
+新貼文摘要：
+- 貼文 20261006027-029（Fox News 系列，9:50 AM ET）：
+  (1) "FoxNews spends more time covering the Jihadist and Dumocrat candidates than they do the good old fashioned Republicans..."
+  (2) "All they talk about is Dumocrat Jihadists like El-Sayed, with his softball interview by Martha MacCallum..."
+  (3) "FoxNews is long form interviewing the sleazebag, Dan Osborn, right now, who is running against our GREAT Republican Senator, Pete Ricketts..."
+- 貼文 20261006030（Annie Andrews 跨性別歧視帖）：
+  川普三度以「trannie」稱呼南卡羅來納州民主黨候選人 Annie Andrews，於背書 Lindsey Graham 的帖文中
+
+GitHub push：
+- posts/2026-10-06_20261006027.md — 上傳成功（commit 93d2d544）
+- posts/2026-10-06_20261006030.md — 上傳成功（commit 504f3798）
+- state/last_seen_id.txt 更新為 2026-10-06_20261006030 — 成功（commit 4ad18e57）
+
+Telegram 推播失敗：api.telegram.org:443 — connect_rejected（組織 egress 政策封鎖，403 policy denial）
+LINE 通知：由 GitHub Actions 自動處理（GitHub push 成功，line-notify.yml 應觸發）
