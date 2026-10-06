@@ -29,3 +29,30 @@ LINE 通知：由 GitHub Actions 自動處理（GitHub push 成功）
 結論：截至本次執行，無新貼文可分析或推播。
 Telegram 推播：略過（無新貼文）
 LINE 通知：略過（無新貼文，GitHub push 未執行）
+
+---
+執行紀錄 2026-10-06T10:00Z（排程）
+
+上次記錄貼文 ID：2026-10-06_20261006005
+本次執行結果：未發現新貼文
+
+已嘗試方法：
+- 方法 A：truthsocial.com RSS（https://truthsocial.com/@realDonaldTrump.rss）— EGRESS_BLOCKED
+- 方法 A：truthsocial.com API（/api/v1/accounts/107780257626128497/statuses）— EGRESS_BLOCKED
+- 方法 B：WebSearch "Trump Truth Social posts today 2026-10-06" — 搜尋結果最新為 10/5 晚間（Chuck Gray 背書、Fox News 抱怨、紐約時報造勢人數爭議）
+- 方法 B：WebSearch "Trump Truth Social October 6 2026 latest" — 未找到 20261006005 之後的新貼文
+- 方法 B：WebSearch "Trump Tom Cotton daylight saving October 6 2026" — 確認相關貼文為 10/3（非新貼文）
+- 方法 C：trumpstruth.org、thetrumparchive.com、kadoa.com、forth.news、newsweek.com、cnbc.com、thehill.com、tribuneindia.com — 全部 EGRESS_BLOCKED
+- 注意：fort.news 顯示「President Trump Posts Routine Updates on Truth Social, No Major Announcements」，與無新重大貼文一致
+
+已確認 10/5–10/6 現有貼文（均早於 last_seen_id，不計為新貼文）：
+- Chuck Gray（懷俄明州眾議員）背書 — 10/5 10:54 PM EDT（trumpstruth.org/statuses/42172）
+- Fox News 未播報俄亥俄造勢大會（9:11 AM ET 週日）
+- 紐約時報造勢人數報導反駁貼文（週一早晨）
+- "MAGA, pretend I am on the ballot" — 週一早晨
+- 巴西大選錯稱印度貼文 — 10/4
+
+結論：截至本次執行（約 10:00Z），未發現 20261006005 之後的新貼文。
+Telegram 推播：略過（無新貼文）
+LINE 通知：略過（無新貼文，GitHub push 未執行）
+last_seen_id：維持 2026-10-06_20261006005 不變
