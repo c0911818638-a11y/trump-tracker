@@ -39,33 +39,6 @@ LINE 通知：略過（無新貼文，GitHub push 未執行）
 已嘗試方法：
 - 方法 A：truthsocial.com RSS（https://truthsocial.com/@realDonaldTrump.rss）— EGRESS_BLOCKED
 - 方法 A：truthsocial.com API（/api/v1/accounts/107780257626128497/statuses）— EGRESS_BLOCKED
-- 方法 B：WebSearch "Trump Truth Social posts today 2026-10-06" — 找到背景資訊但無完整貼文內容
-  * 搜尋結果顯示：川普10/6在內布拉斯加州大島市舉辦競選造勢集會
-  * 川普在集會上暗示伊朗可能「摧毀」洛杉磯，引發加州州長紐森批評
-  * 川普宣布為紅色柴油（農用免稅）簽署行政命令
-  * 川普保證若共和黨贏得期中選舉將發放每人5,000美元支票（影片帖）
-  * 川普在Truth Social翻轉過往反對郵寄投票立場，鼓勵共和黨提早投票
-- 方法 C：trumpstruth.org、kadoa.com、newsweek.com、cnbc.com、thehill.com、tribuneindia.com — 全部 EGRESS_BLOCKED
-
-確認背景資訊（無法取得實際貼文原文）：
-- 川普10/6行程：內布拉斯加州造勢集會（Grand Island, NE）
-- 集會在今晚 18:00 CT（= 00:00 UTC 10/7）才開始
-- 預期集會期間及之後會有新貼文，但現在尚無
-
-結論：截至本次執行（約 10:00Z），未發現 20261006005 之後的新貼文。
-Telegram 推播：略過（無新貼文）
-LINE 通知：略過（無新貼文，GitHub push 未執行）
-
----
-執行紀錄 2026-10-06T15:00Z（排程）
-
-上次記錄貼文 ID：2026-10-06_20261006005
-本次執行結果：未發現新貼文
-
-已嘗試方法：
-- 方法 A：truthsocial.com RSS（https://truthsocial.com/@realDonaldTrump.rss）— EGRESS_BLOCKED
-- 方法 A：truthsocial.com API（/api/v1/accounts/107780257626128497/statuses）— EGRESS_BLOCKED
-- 方法 A：thetrumparchive.com — EGRESS_BLOCKED
 - 方法 B：WebSearch（多次搜尋不同關鍵字）— 搜尋結果仍為已知貼文
   * Annie Andrews 反跨性別侮辱帖（10/5 5:23 PM EDT = 10/6 00:23 UTC，早於 last_seen_id）
   * 巴西/印度混淆帖（10/4）
@@ -73,13 +46,12 @@ LINE 通知：略過（無新貼文，GitHub push 未執行）
   * Baltimore Anduril Industries 參訪（預計 4:00 PM EDT = 20:00 UTC，尚未發生）
 - 方法 C：trumpstruth.org、kadoa.com 等 — EGRESS_BLOCKED
 
-結論：截至本次執行（約 15:00Z），未發現新貼文。
+結論：截至本次執行（約 10:00Z），未發現新貼文。
 Telegram 推播：略過（無新貼文）
-LINE 通知：略過（無 GitHub push）
-last_seen_id：維持 2026-10-06_20261006005 不變
+LINE 通知：略過（無新貼文，GitHub push 未執行）
 
 ---
-執行紀錄 2026-10-06T16:00Z（排程）
+執行紀錄 2026-10-06T15:00Z（排程）
 
 上次記錄貼文 ID：2026-10-06_20261006005
 本次執行結果：未發現新貼文
@@ -121,7 +93,7 @@ LINE 通知：略過（無 GitHub push）
 last_seen_id：維持 2026-10-06_20261006005 不變
 
 ---
-執行紀錄 2026-10-06T17:00Z（排程）
+執行紀錄 2026-10-06T16:00Z（排程）
 
 上次記錄貼文 ID：2026-10-06_20261006005
 本次執行結果：未發現新貼文
@@ -172,3 +144,42 @@ GitHub push：
 
 Telegram 推播失敗：api.telegram.org:443 — connect_rejected（組織 egress 政策封鎖）
 LINE 通知：由 GitHub Actions 自動處理（GitHub push 成功，line-notify.yml 應觸發）
+
+---
+執行紀錄 2026-10-06T14:05Z（排程）
+
+上次記錄貼文 ID：2026-10-06_20261006009
+本次執行結果：發現 3 則新貼文
+
+已嘗試方法：
+- 方法 A：truthsocial.com RSS — EGRESS_BLOCKED
+- 方法 A：truthsocial.com API — EGRESS_BLOCKED
+- 方法 A：thetrumparchive.com — EGRESS_BLOCKED
+- 方法 B：WebSearch（多次搜尋）— 成功找到新貼文報導
+  * trumpstruth.org/statuses/42177: 集會人氣帖
+  * trumpstruth.org/statuses/42178: 芝加哥犯罪帖
+  * trumpstruth.org/statuses/42179: 拜登移民簽證帖
+- 方法 C：kadoa.com、forth.news、bizpacreview.com 等 — EGRESS_BLOCKED
+
+新貼文摘要：
+- 貼文 20261006010（trumpstruth.org/statuses/42177）：集會人氣宣示
+  原文：My Rally crowds and enthusiasm are unbelievable! Nobody has ever seen anything like it. We are flipping races all over the place. The Fake News knows it...
+- 貼文 20261006011（trumpstruth.org/statuses/42178）：芝加哥犯罪
+  原文：Chicago is suffering an unprecedented and particularly violent crime wave that is getting worse by the day. The Federal Government can extinguish it quickly...
+- 貼文 20261006012（trumpstruth.org/statuses/42179）：拜登移民安全問題
+  原文：Watchdog concludes Biden risked security by letting millions overstay visas, including threats
+
+GitHub push：
+- posts/2026-10-06_20261006010_RallyCrowds-FlippingRaces-FakeNews-Dumocrats.md — 上傳成功
+- posts/2026-10-06_20261006011_Chicago-CrimeWave-FederalGovernment-Mayor-Governor.md — 上傳成功
+- posts/2026-10-06_20261006012_Biden-Visas-Security-Watchdog-Overstay.md — 上傳成功
+- state/last_seen_id.txt 更新為 2026-10-06_20261006012 — 成功
+
+Telegram 推播失敗：api.telegram.org:443 — connect_rejected（組織 egress 政策封鎖）
+LINE 通知：由 GitHub Actions 自動處理（GitHub push 成功，line-notify.yml 應觸發）
+
+背景（今日重大事件）：
+- 川普在內布拉斯加州 Grand Island 舉辦期中選舉造勢集會，支持參議員 Pete Ricketts
+- 集會中發表爭議言論：暗示伊朗可能「攻打」洛杉磯和聖地牙哥（非 Truth Social 貼文）
+- 加州州長紐森批評：「瘋狂且危險」
+- 期中選舉主要議題：集會人氣、芝加哥犯罪、拜登移民政策、共和黨翻盤機會
