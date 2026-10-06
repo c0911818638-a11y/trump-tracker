@@ -56,3 +56,35 @@ LINE 通知：略過（無新貼文，GitHub push 未執行）
 Telegram 推播：略過（無新貼文）
 LINE 通知：略過（無新貼文，GitHub push 未執行）
 last_seen_id：維持 2026-10-06_20261006005 不變
+
+---
+執行紀錄 2026-10-06T15:00Z（排程）
+
+上次記錄貼文 ID：2026-10-06_20261006005
+本次執行結果：未發現新貼文
+
+已嘗試方法：
+- 方法 A：truthsocial.com RSS（https://truthsocial.com/@realDonaldTrump.rss）— EGRESS_BLOCKED
+- 方法 A：truthsocial.com API（/api/v1/accounts/107780257626128497/statuses）— EGRESS_BLOCKED
+- 方法 A：thetrumparchive.com — EGRESS_BLOCKED
+- 方法 B：WebSearch "Trump Truth Social posts today October 6 2026" — 找到背景資訊但無完整貼文內容
+  * 搜尋結果顯示：川普10/6在內布拉斯加州大島市舉辦競選造勢集會
+  * 川普在集會上暗示伊朗可能「摧毀」洛杉磯，引發加州州長紐森批評
+  * 川普宣布為紅色柴油（農用免稅）簽署行政命令
+  * 川普保證若共和黨贏得期中選舉將發放每人5,000美元支票（影片帖）
+  * 川普在Truth Social翻轉過往反對郵寄投票立場，鼓勵共和黨提早投票
+- 方法 C：trumpstruth.org、kadoa.com、newsweek.com、cnbc.com、nbcnews.com、foxnews.com、foxla.com、aljazeera.com、conservativedailynews.com、news.sbs.co.kr、adipredictstreet.com、probly.com、thehill.com — 全部 EGRESS_BLOCKED
+
+確認背景資訊（無法取得實際貼文原文）：
+- 川普10/6行程：內布拉斯加州造勢集會（Grand Island, NE）
+- 集會上：暗示伊朗可能以洛杉磯為攻擊目標，稱「保護世界安全要付出小代價」
+- 加州州長紐森回應：「瘋狂且危險」
+- 川普宣布釋放1.72億桶戰略石油儲備以應對伊朗戰爭引發的油價上漲
+- 郵寄投票貼文（與歷史立場相反）
+
+問題：所有可能提供貼文原文的站台均被 egress proxy 封鎖，無法取得 20261006005 之後的貼文完整內容。
+
+結論：截至本次執行（約 15:00Z），無法確認並取得新貼文內容。
+Telegram 推播：略過（無法確認新貼文內容）
+LINE 通知：略過（無 GitHub push）
+last_seen_id：維持 2026-10-06_20261006005 不變
