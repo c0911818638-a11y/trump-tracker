@@ -1,0 +1,22 @@
+執行紀錄 2026-10-06T00:59Z
+
+上次已知貼文：2026-10-05_20261005209（2026-10-05 23:25 UTC，trumpstruth.org/statuses/42171）
+
+抓取嘗試：
+- 方法 A：WebFetch https://truthsocial.com/@realDonaldTrump.rss → EGRESS_BLOCKED
+- 方法 A：WebFetch https://www.thetrumparchive.com/ → EGRESS_BLOCKED
+- 方法 B：WebSearch × 8 次（多種關鍵字）→ 未發現 2026-10-05 23:25 UTC 之後的新貼文
+  搜尋結果最新貼文仍為 status/42171（MAGA 廣告資金貼文，23:25 UTC）
+- 方法 C：WebFetch www.trumpstruth.org → EGRESS_BLOCKED
+
+結論：截至 2026-10-06T00:59Z，未發現新貼文（距上次執行約 54 分鐘）。
+Trump 通常在美東時間晚間 11 點後停止發文，與此結果相符。
+
+新貼文：0 則
+GitHub push：無（無新內容）
+last_seen_id：維持 2026-10-05_20261005209（未變更）
+Telegram 推播：未執行（無新貼文）
+LINE 通知：未執行（無新貼文，且 Telegram egress 仍封鎖）
+
+注意：Telegram Bot Token 推播功能受 egress proxy 封鎖（api.telegram.org:443 CONNECT 被拒），
+此限制自上次執行起仍未解除。GitHub Actions LINE 通知管道正常（由上次成功 push 觸發）。
