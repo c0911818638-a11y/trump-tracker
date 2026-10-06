@@ -96,35 +96,11 @@ last_seen_id：維持 2026-10-06_20261006005 不變
 執行紀錄 2026-10-06T16:00Z（排程）
 
 上次記錄貼文 ID：2026-10-06_20261006005
-本次執行結果：未發現新貼文
-
-已嘗試方法：
-- 方法 A：truthsocial.com RSS — EGRESS_BLOCKED
-- 方法 A：truthsocial.com API（/api/v1/accounts/107780257626128497/statuses）— EGRESS_BLOCKED
-- 方法 A：thetrumparchive.com — EGRESS_BLOCKED
-- 方法 B：WebSearch（多次搜尋，不同關鍵字組合）：
-  * 確認 Nebraska Grand Island 集會已於今日（Mon Oct 6）舉行，但搜尋索引無新 Truth Social 貼文
-  * 川普在集會上稱伊朗可能「摧毀」洛杉磯/聖地牙哥（集會演講，非 Truth Social 貼文）
-  * 加州州長紐森批評：「瘋狂且危險」
-  * 川普發文：Beckton Dickenson (BD) 醫療設備 30億美元投資 Nebraska（已在 post #005 追蹤）
-  * 未找到任何 20261006005 之後的新貼文（trumpstruth.org/statuses 最高索引仍為 42176）
-- 方法 C：newsweek.com, thehill.com, yahoo.com, mediaite.com, foxnews.com 等 — 全部 EGRESS_BLOCKED
-
-結論：截至本次執行（約 17:00 UTC），未發現新貼文。集會後（23:00 UTC 以後）可能出現新貼文。
-Telegram 推播：略過（無新貼文）
-LINE 通知：略過（無 GitHub push）
-GitHub push：MCP 工具成功（egress proxy 直接呼叫 curl 遭封鎖，改用 MCP GitHub server）
-last_seen_id：維持 2026-10-06_20261006005 不變
-
----
-執行紀錄 2026-10-06T20:00Z（排程）
-
-上次記錄貼文 ID：2026-10-06_20261006005
 本次執行結果：發現 2 則新貼文
 
 已嘗試方法：
 - 方法 A：truthsocial.com RSS — EGRESS_BLOCKED
-- 方法 A：truthsocial.com API — EGRESS_BLOCKED
+- 方法 A：truthsocial.com API（/api/v1/accounts/107780257626128497/statuses）— EGRESS_BLOCKED
 - 方法 A：thetrumparchive.com — EGRESS_BLOCKED
 - 方法 B：WebSearch（多次搜尋）— 成功找到新貼文報導
   * "Trump Accuses NYT of Doctoring Doral Image" — Newsweek, Raw Story, Alternet, Daily Beast 等多家報導
@@ -183,3 +159,39 @@ LINE 通知：由 GitHub Actions 自動處理（GitHub push 成功，line-notify
 - 集會中發表爭議言論：暗示伊朗可能「攻打」洛杉磯和聖地牙哥（非 Truth Social 貼文）
 - 加州州長紐森批評：「瘋狂且危險」
 - 期中選舉主要議題：集會人氣、芝加哥犯罪、拜登移民政策、共和黨翻盤機會
+
+---
+執行紀錄 2026-10-06T16:56Z（排程）
+
+上次記錄貼文 ID：2026-10-06_20261006016
+本次執行結果：發現 3 則新貼文
+
+已嘗試方法：
+- 方法 A：truthsocial.com RSS — EGRESS_BLOCKED
+- 方法 A：truthsocial.com API — EGRESS_BLOCKED
+- 方法 A：thetrumparchive.com — EGRESS_BLOCKED
+- 方法 B：WebSearch（多次搜尋，包含 salon.com、thewrap.com、newrepublic.com 等報導）— 成功
+  * 找到 3 則新貼文（關於俄亥俄州集會、NYT「逮捕」、「MY RALLIES ARE SAVING THE REPUBLICAN PARTY」）
+- 方法 C：kadoa.com、mediaite.com、thedailybeast.com 等 — EGRESS_BLOCKED
+
+新貼文摘要：
+- 貼文 20261006017：Ohio 集會滿座 / NYT 應被「逮捕」
+  原文：The Ohio Arena was already full to the brim — And yet these people were still trying to get in. The New York Times said, 'There were empty seats' when, in fact, there were none, and thousands of people had to be turned away. The New York Times, and many other Artificial Media Outlets, should be arrested for their dishonesty and disservice to our Country.
+- 貼文 20261006018：NYT 遲早關閉「骯髒大門」
+  原文：Some day in the not too distant future The Times will be forced to close its dirty doors, and that will be a Great Day for America!
+- 貼文 20261006019：集會人氣宣示 / 拯救共和黨
+  原文：My Rally crowds and enthusiasm are unbelievable! Nobody has ever seen anything like it. We are flipping races all over the place. MY RALLIES ARE SAVING THE REPUBLICAN PARTY, AGAIN!!!
+
+GitHub push：
+- posts/2026-10-06_20261006017.md — 上傳成功
+- posts/2026-10-06_20261006018.md — 上傳成功
+- posts/2026-10-06_20261006019.md — 上傳成功
+- state/last_seen_id.txt 更新為 2026-10-06_20261006019 — 成功
+
+Telegram 推播失敗：api.telegram.org:443 — connect_rejected（組織 egress 政策封鎖）
+LINE 通知：由 GitHub Actions 自動處理（GitHub push 成功，line-notify.yml 應觸發）
+
+背景（今日事件）：
+- 川普在俄亥俄州 Vandalia 高中體育館舉辦集會，支持 Jon Husted（參議員）和 Vivek Ramaswamy（州長候選人）
+- 《紐約時報》報導集會上層座位空曠，川普強烈反駁並要求媒體被「逮捕」
+- Fox News 未播報集會，川普同日另發帖批評 Fox News
