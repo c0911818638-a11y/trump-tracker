@@ -1,22 +1,20 @@
-2026-10-08 監控執行日誌
-======================
+監控執行時間：2026-10-08 UTC
+最後已知貼文 ID：2026-10-07_20261007016
 
-執行時間：2026-10-08 (UTC)
-上次記錄 ID：2026-10-07_20261007015
+錯誤記錄：
+- truthsocial.com RSS feed：被 egress proxy 封鎖 (HTTP 403)
+- truthsocial.com API：被 egress proxy 封鎖 (HTTP 403)
+- thetrumparchive.com：被 egress proxy 封鎖 (HTTP 403)
+- kadoa.com/potus/truth：被 egress proxy 封鎖 (HTTP 403)
+- trumpstruth.org：被 egress proxy 封鎖 (HTTP 403)
+- cbsnews.com：被 egress proxy 封鎖 (HTTP 403)
+- thehill.com：被 egress proxy 封鎖 (HTTP 403)
+- yahoo.com：被 egress proxy 封鎖 (HTTP 403)
 
-【執行結果】：未發現新貼文
+Web 搜尋結果：
+- 搜尋 "Trump Truth Social October 8 2026" 無結果
+- 最近可找到的貼文為 2026-10-07 的貼文（Wisconsin 災害援助、Tom Tiffany 背書等）
+- 無法確認 2026-10-08 是否有新貼文
 
-【錯誤記錄】：
-- truthsocial.com：EGRESS_BLOCKED（網路出口政策封鎖）
-- thetrumparchive.com：EGRESS_BLOCKED
-- trumpstruth.org：EGRESS_BLOCKED
-- kadoa.com：EGRESS_BLOCKED
-
-【WebSearch 搜尋結果】：
-- 未找到 2026-10-08 的貼文
-- 最新貼文仍為 2026-10-07（Wisconsin 災難援助 / Tom Tiffany 背書、德州 Tano Tijerina 相關貼文）
-- 這些 Oct 7 貼文已在上次執行中記錄（last_seen_id 日期為 2026-10-07）
-
-【結論】：
-無法確認新貼文，未建立貼文分析檔案，未推播通知。
-所有外部貼文來源均被 egress proxy 封鎖，僅能依賴 WebSearch 間接取得資訊。
+結論：所有資料來源均無法存取，無法確認是否有新貼文。
+未建立貼文檔，未推播 Telegram/LINE 通知。
