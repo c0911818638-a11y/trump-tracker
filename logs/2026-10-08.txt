@@ -1,20 +1,36 @@
-監控執行時間：2026-10-08 UTC
-最後已知貼文 ID：2026-10-07_20261007016
+監控執行時間：2026-10-08 UTC（第二次執行，補充前次失敗）
+最後已知貼文 ID（執行前）：2026-10-07_20261007016
 
+=== 第一次執行記錄（本日稍早）===
 錯誤記錄：
-- truthsocial.com RSS feed：被 egress proxy 封鎖 (HTTP 403)
-- truthsocial.com API：被 egress proxy 封鎖 (HTTP 403)
-- thetrumparchive.com：被 egress proxy 封鎖 (HTTP 403)
-- kadoa.com/potus/truth：被 egress proxy 封鎖 (HTTP 403)
-- trumpstruth.org：被 egress proxy 封鎖 (HTTP 403)
-- cbsnews.com：被 egress proxy 封鎖 (HTTP 403)
-- thehill.com：被 egress proxy 封鎖 (HTTP 403)
-- yahoo.com：被 egress proxy 封鎖 (HTTP 403)
+- truthsocial.com RSS feed：被 egress proxy 封鎖
+- truthsocial.com API：被 egress proxy 封鎖
+- thetrumparchive.com：被 egress proxy 封鎖
+- 多個新聞站點：被 egress proxy 封鎖
+- Web 搜尋未找到 2026-10-08 新貼文
+結論：無法確認新貼文，未推播通知
 
-Web 搜尋結果：
-- 搜尋 "Trump Truth Social October 8 2026" 無結果
-- 最近可找到的貼文為 2026-10-07 的貼文（Wisconsin 災害援助、Tom Tiffany 背書等）
-- 無法確認 2026-10-08 是否有新貼文
+=== 第二次執行記錄（04:04 UTC）===
+【步驟 1-2】
+- 上次 ID：2026-10-07_20261007016
+- 方法 A/C：BLOCKED（egress proxy）
+- 方法 B (WebSearch)：找到 2026-10-07 Wisconsin 災援 + Tiffany 背書貼文
+  URL: https://truthsocial.com/@realDonaldTrump/117400280030146024
+  時間：約 2026-10-07T15:15:00Z（11:15 AM EDT）
+- 2026-10-08 今日貼文：搜尋未找到（索引未更新或確無新貼文）
 
-結論：所有資料來源均無法存取，無法確認是否有新貼文。
-未建立貼文檔，未推播 Telegram/LINE 通知。
+【步驟 3-5】
+- 新貼文 ID：20261007017（Wisconsin/Tiffany，前次 push 失敗故重新處理）
+- 分析完成，GitHub push 成功（MCP 工具）
+  commit: 50e0c1e4c346c0bd7e508cbe5d10a7366e368ada
+- state/last_seen_id.txt 更新至：2026-10-07_20261007017
+
+【步驟 6】Telegram 推播失敗：api.telegram.org 被 egress proxy 封鎖（organization policy）
+
+【步驟 7】LINE：GitHub push 成功，GitHub Actions 應自動觸發
+
+【執行摘要】
+- 處理新貼文數：1
+- GitHub push：成功
+- Telegram 推播失敗：api.telegram.org 被 egress proxy 封鎖（organization policy）
+- LINE：由 GitHub Actions 自動處理
