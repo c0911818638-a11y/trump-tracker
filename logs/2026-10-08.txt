@@ -3,7 +3,7 @@
 
 上次已知貼文 ID: 2026-10-07_20261007023
 
-== 本次執行結果 ==
+== 第一次執行結果 ==
 
 【步驟1】讀取上次記錄 ID: 成功
   last_seen_id = 2026-10-07_20261007023
@@ -34,8 +34,35 @@
 
 【步驟7】LINE 通知: 依賴 GitHub Actions 自動觸發 (步驟5 成功推送)
 
-== 執行摘要 ==
+== 第一次執行摘要 ==
   - 新貼文發現: 2 則
   - GitHub 上傳: 成功
   - Telegram 推播失敗: api.telegram.org 被 egress proxy 封鎖 (HTTP 403)
   - LINE 通知: 由 GitHub Actions 自動處理
+
+---
+
+== 第二次執行結果 (同日稍後) ==
+
+上次已知貼文 ID: 2026-10-08_42200
+
+【步驟1】讀取上次記錄 ID: 成功
+  last_seen_id = 2026-10-08_42200
+  SHA = 3266af2cee374c77d60d3ec9ec58c33440161982
+
+【步驟2】抓取貼文: 所有方法均失敗
+  - 方法A: truthsocial.com/@realDonaldTrump.rss → EGRESS_BLOCKED
+  - 方法A: truthsocial.com API → EGRESS_BLOCKED（同域名）
+  - 方法B: WebSearch "Trump Truth Social posts today 2026-10-08" → 未找到 2026-10-08 確切貼文
+  - 方法B: WebSearch "Trump Truth Social October 8 2026" → 最新資料為 2026-10-07
+  - 方法C: thetrumparchive.com → EGRESS_BLOCKED
+  - 其他: kadoa.com, trumpstruth.org, cbsnews.com, westernjournal.com, forbes.com → 全部 EGRESS_BLOCKED
+
+【步驟3-7】因無法取得貼文，跳過
+
+== 第二次執行摘要 ==
+  - 新貼文發現: 0 則（無法取得資料）
+  - 原因: 所有貼文來源均被 egress proxy 封鎖，WebSearch 亦無 2026-10-08 已索引貼文
+  - GitHub 上傳: 未執行
+  - Telegram 推播: 未執行
+  - LINE 通知: 未執行
