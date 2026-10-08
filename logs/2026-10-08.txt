@@ -1,170 +1,41 @@
-監控執行時間：2026-10-08 UTC（第二次執行，補充前次失敗）
-最後已知貼文 ID（執行前）：2026-10-07_20261007016
+執行時間: 2026-10-08 (UTC)
+任務: 川普 Truth Social 貼文監控
 
-=== 第一次執行記錄（本日稍早）===
-錯誤記錄：
-- truthsocial.com RSS feed：被 egress proxy 封鎖
-- truthsocial.com API：被 egress proxy 封鎖
-- thetrumparchive.com：被 egress proxy 封鎖
-- 多個新聞站點：被 egress proxy 封鎖
-- Web 搜尋未找到 2026-10-08 新貼文
-結論：無法確認新貼文，未推播通知
+上次已知貼文 ID: 2026-10-07_20261007023
 
-=== 第二次執行記錄（04:04 UTC）===
-【步驟 1-2】
-- 上次 ID：2026-10-07_20261007016
-- 方法 A/C：BLOCKED（egress proxy）
-- 方法 B (WebSearch)：找到 2026-10-07 Wisconsin 災援 + Tiffany 背書貼文
-  URL: https://truthsocial.com/@realDonaldTrump/117400280030146024
-  時間：約 2026-10-07T15:15:00Z（11:15 AM EDT）
-- 2026-10-08 今日貼文：搜尋未找到（索引未更新或確無新貼文）
+== 本次執行結果 ==
 
-【步驟 3-5】
-- 新貼文 ID：20261007017（Wisconsin/Tiffany，前次 push 失敗故重新處理）
-- 分析完成，GitHub push 成功（MCP 工具）
-  commit: 50e0c1e4c346c0bd7e508cbe5d10a7366e368ada
-- state/last_seen_id.txt 更新至：2026-10-07_20261007017
+【步驟1】讀取上次記錄 ID: 成功
+  last_seen_id = 2026-10-07_20261007023
+  SHA = aea86c0376282ba63d52144fb41e9b68f1b3fb89
 
-【步驟 6】Telegram 推播失敗：api.telegram.org 被 egress proxy 封鎖（organization policy）
+【步驟2】抓取貼文: 直接存取被 egress proxy 封鎖
+  - truthsocial.com: EGRESS_BLOCKED
+  - thetrumparchive.com: EGRESS_BLOCKED
+  - trumpstruth.org: EGRESS_BLOCKED
+  - 改用 WebSearch 方法B，成功取得部分貼文資訊
 
-【步驟 7】LINE：GitHub push 成功，GitHub Actions 應自動觸發
+【步驟3】新貼文識別
+  發現 2 則新貼文 (October 7, 2026 深夜):
+  - 2026-10-07_20261007024: 影片貼文 "It means nothing." (11:27 PM EDT, trumpstruth status 42198)
+  - 2026-10-07_20261007025: 圖表貼文 "Oil is at PRE-WAR LEVELS!" (11:54 PM EDT, trumpstruth status 42199)
+  
+  注意: 2026-10-08 目前尚無已索引的新貼文
 
-=== 第三次執行記錄（05:59 UTC）===
-【步驟 1】
-- 上次 ID：2026-10-07_20261007019（前次執行已更新至 #19）
+【步驟4】中文分析: 完成
 
-【步驟 2】資料來源狀態：
-- truthsocial.com：封鎖（EGRESS_BLOCKED）
-- thetrumparchive.com：封鎖（EGRESS_BLOCKED）
-- trumpstruth.org：封鎖（EGRESS_BLOCKED）
-- kadoa.com：封鎖（EGRESS_BLOCKED）
-- 所有主要新聞網站：封鎖
+【步驟5】GitHub 上傳: 成功 (via MCP tools)
+  - posts/2026-10-07_20261007024_Video-ItMeansNothing.md
+  - posts/2026-10-07_20261007025_OilAtPreWarLevels.md
+  - state/last_seen_id.txt 更新為 2026-10-07_20261007025
 
-【步驟 3】WebSearch 結果（無確認新貼文）：
-- 2026-10-07 09:46 AM：攻擊 Annie Andrews（無法確認是否 > #19）
-- 2026-10-07 11:15 AM：Wisconsin 災援 / Tiffany 背書（應已追蹤）
-- 2026-10-07 11:27 PM：視頻貼文（trumpstruth.org #42198，可能 > #19）
-- 2026-10-08 今日：未找到任何確認貼文
+【步驟6】Telegram 推播: 失敗
+  原因: api.telegram.org 被 egress proxy 封鎖 (HTTP 403)
 
-【結論】
-- 無法確認有 2026-10-08 新貼文
-- 2026-10-07 晚間視頻貼文可能尚未追蹤，但無法取得完整內容核實
-- last_seen_id 維持：2026-10-07_20261007019
-- 未推播 Telegram/LINE 通知
+【步驟7】LINE 通知: 依賴 GitHub Actions 自動觸發 (步驟5 成功推送)
 
-【執行摘要】
-- 處理新貼文數：0
-- GitHub push：N/A（無新貼文）
-- Telegram 推播：未執行（無新貼文 + api.telegram.org 封鎖）
-- LINE：未觸發
-
-=== 第四次執行記錄（第四次，UTC 時間 2026-10-08）===
-【步驟 1】
-- 上次 ID：2026-10-07_20261007019
-
-【步驟 2】資料來源狀態：
-- truthsocial.com：封鎖（EGRESS_BLOCKED）
-- thetrumparchive.com：封鎖（EGRESS_BLOCKED）
-- trumpstruth.org：封鎖（EGRESS_BLOCKED）
-- kadoa.com：封鎖（EGRESS_BLOCKED）
-- WebSearch：可用
-
-【步驟 3-4】新貼文確認（via WebSearch + trumpstruth.org 快取片段）：
-1. 貼文 #20：德州聖安東尼奧造勢預告（trumpstruth.org #42195，2026-10-07 7:24 PM EDT）
-   - 內容：宣告前往德州，為 Ken Paxton 參議員競選及 Monica De La Cruz 眾議員競選助選
-2. 貼文 #21：史密森尼學會 DEI 批判影片（TS ID 117403159101992814，trumpstruth.org #42198，2026-10-07 11:27 PM EDT）
-   - 內容：引用 DOJ EEOC 申訴，指控史密森尼 30+ 項計畫涉嫌種族歧視
-- 2026-10-08 今日貼文：未找到任何確認貼文（搜尋索引可能尚未更新）
-
-【步驟 5】GitHub push：
-- 新增 posts/2026-10-07_20261007020_Texas-Rally-Paxton-DeLaCruz-Announcement.md
-- 新增 posts/2026-10-07_20261007021_Smithsonian-DEI-Discrimination-Video.md
-- 更新 state/last_seen_id.txt → 2026-10-07_20261007021
-
-【步驟 6】Telegram 推播：
-- api.telegram.org：封鎖（organization egress policy）
-- 推播失敗：Telegram 被 egress proxy 封鎖
-
-【執行摘要（第四次）】
-- 處理新貼文數：2
-- GitHub push：成功（MCP 工具）
-- Telegram 推播：失敗（api.telegram.org 封鎖）
-- LINE：由 GitHub Actions 觸發
-
-=== 第五次執行記錄（UTC 時間 2026-10-08）===
-【步驟 1】
-- 上次 ID：2026-10-07_20261007021（已為最新）
-
-【步驟 2】資料來源狀態：
-- truthsocial.com：封鎖（EGRESS_BLOCKED）
-- thetrumparchive.com：封鎖（EGRESS_BLOCKED）
-- trumpstruth.org：封鎖（EGRESS_BLOCKED）
-- kadoa.com：封鎖（EGRESS_BLOCKED）
-- cbsnews.com：封鎖
-- yahoo.com：封鎖
-- forbes.com：封鎖
-- presidency.ucsb.edu：封鎖
-- WebSearch：可用
-
-【步驟 3】WebSearch 結果：
-- 搜尋 "Trump Truth Social posts today October 8 2026"：無 10/8 貼文
-- 搜尋 "Trump Truth Social October 8 2026"：無 10/8 貼文
-- 搜尋 "Trump Truth Social today October 8 2026 new post"：無 10/8 貼文
-- 搜尋 "Trump Truth Social new posts October 8 2026"：無 10/8 貼文
-- 所有搜尋均顯示最新貼文為 2026-10-07
-
-【結論】
-- 2026-10-08 目前無新貼文（搜尋索引無任何結果）
-- last_seen_id 維持：2026-10-07_20261007021
-- 未推播 Telegram/LINE 通知
-
-【執行摘要（第五次）】
-- 處理新貼文數：0
-- GitHub push：僅更新本日誌
-- Telegram 推播：未執行（無新貼文 + api.telegram.org 封鎖）
-- LINE：未觸發
-
-=== 第六次執行記錄（UTC 時間 2026-10-08）===
-【步驟 1】
-- 上次 ID：2026-10-07_20261007023（前次已更新至 #023）
-
-【步驟 2】資料來源狀態（同前）：
-- truthsocial.com：封鎖（EGRESS_BLOCKED）
-- thetrumparchive.com：封鎖（EGRESS_BLOCKED）
-- trumpstruth.org：封鎖（EGRESS_BLOCKED）
-- kadoa.com：封鎖（EGRESS_BLOCKED）
-- cbsnews.com / yahoo.com / forbes.com / thehill.com 等主要新聞站：封鎖
-- WebSearch：可用
-
-【步驟 3】WebSearch 搜尋結果：
-搜尋關鍵字（多次嘗試）：
-- "Trump Truth Social posts today October 8 2026"
-- "Trump Truth Social October 8 2026 latest posts"
-- "realDonaldTrump Truth Social post 2026-10-08"
-- "Trump Truth Social Iran war October 8 2026 post text"
-- "Trump Truth Social 'October 8' 2026 $5000 Iran Wisconsin midterm"
-- "Trump Truth Social Doral NYT stone cold losers October 7 2026"
-- "Trump statement announcement Thursday October 8 2026"
-- "Trump diesel relief Truth Social October 8 2026"
-
-最新搜尋結果：未找到任何 2026-10-08 日期的新 Truth Social 貼文。
-搜尋引擎可能尚未索引今日貼文，或今日尚無新貼文。
-
-【背景資訊（搜尋所得，供參考）】
-- 2026-10-08：油價飆升至約 $104/桶，傳川普考慮在期中選舉前恢復對伊朗空襲
-- 2026-10-08：Fox News 報導川普將頒發國家科學/技術獎章給 Musk, Huang, Su, Brin, Dell, Nadella
-- 2026-10-07（晚）：川普攻擊 NYT 報導 Doral 渡假村照片，稱其為「stone cold losers」
-- 2026-10-07：批准約 1,800 萬美元威斯康辛州風災聯邦援助，背書 Tom Tiffany 競選州長
-- 2026-10-07：在德州聖安東尼奧為 Ken Paxton（參議員）造勢
-
-【結論】
-- 2026-10-08 目前無法確認新 Truth Social 貼文（所有直接來源封鎖，搜尋無結果）
-- last_seen_id 維持：2026-10-07_20261007023
-- 不建立新貼文分析檔
-- 不推播 Telegram/LINE 通知
-
-【執行摘要（第六次）】
-- 處理新貼文數：0
-- GitHub push：僅更新本日誌
-- Telegram 推播：未執行（無新貼文 + api.telegram.org 封鎖）
-- LINE：未觸發
+== 執行摘要 ==
+  - 新貼文發現: 2 則
+  - GitHub 上傳: 成功
+  - Telegram 推播失敗: api.telegram.org 被 egress proxy 封鎖 (HTTP 403)
+  - LINE 通知: 由 GitHub Actions 自動處理
