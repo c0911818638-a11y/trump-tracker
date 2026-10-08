@@ -1,59 +1,27 @@
-監控執行時間：2026-10-08 UTC（第二次執行，補充前次失敗）
-最後已知貼文 ID（執行前）：2026-10-07_20261007016
+監控執行日誌 - 2026-10-08
+================================
 
-=== 第一次執行記錄（本日稍早）===
-錯誤記錄：
-- truthsocial.com RSS feed：被 egress proxy 封鎖
-- truthsocial.com API：被 egress proxy 封鎖
-- thetrumparchive.com：被 egress proxy 封鎖
-- 多個新聞站點：被 egress proxy 封鎖
-- Web 搜尋未找到 2026-10-08 新貼文
-結論：無法確認新貼文，未推播通知
+執行時間：2026-10-08 UTC
+上次記錄 ID：2026-10-07_20261007019
+SHA：f60f5215c546713a0a42adf0ae4163fc04c8d806
 
-=== 第二次執行記錄（04:04 UTC）===
-【步驟 1-2】
-- 上次 ID：2026-10-07_20261007016
-- 方法 A/C：BLOCKED（egress proxy）
-- 方法 B (WebSearch)：找到 2026-10-07 Wisconsin 災援 + Tiffany 背書貼文
-  URL: https://truthsocial.com/@realDonaldTrump/117400280030146024
-  時間：約 2026-10-07T15:15:00Z（11:15 AM EDT）
-- 2026-10-08 今日貼文：搜尋未找到（索引未更新或確無新貼文）
+執行結果：未發現新貼文
 
-【步驟 3-5】
-- 新貼文 ID：20261007017（Wisconsin/Tiffany，前次 push 失敗故重新處理）
-- 分析完成，GitHub push 成功（MCP 工具）
-  commit: 50e0c1e4c346c0bd7e508cbe5d10a7366e368ada
-- state/last_seen_id.txt 更新至：2026-10-07_20261007017
+原因說明：
+- 方法 A（truthsocial.com RSS）：被網路 egress proxy 封鎖（EGRESS_BLOCKED）
+- 方法 A（truthsocial.com API）：被網路 egress proxy 封鎖（EGRESS_BLOCKED）
+- 方法 B（WebSearch）：搜尋結果顯示最新貼文為 2026-10-07，與 last_seen_id 相符，未發現更新內容
+- 方法 C（thetrumparchive.com）：被網路 egress proxy 封鎖（EGRESS_BLOCKED）
+- 其他嘗試（CBSNews、NBCNews、Yahoo、Forbes、AlJazeera 等）：全部被網路 egress proxy 封鎖
 
-【步驟 6】Telegram 推播失敗：api.telegram.org 被 egress proxy 封鎖（organization policy）
+最近確認的貼文（來自 WebSearch 搜尋結果，僅作參考）：
+- 2026-10-07：關於威斯康辛州風災聯邦援助（約 1800 萬美元），同時為 Tom Tiffany 州長競選背書
+- 2026-10-07：於聖安東尼奧為德州參議員候選人 Ken Paxton 舉辦造勢活動相關貼文
+- 2026-10-06：關於 Fox News 採訪 Dan Osborn（內布拉斯加州參議員候選人）的不滿
+- 2026-10-06：發布神秘的「期中選舉驚喜」預告
 
-【步驟 7】LINE：GitHub push 成功，GitHub Actions 應自動觸發
+處置：不發送 Telegram 或 LINE 通知，不更新 last_seen_id（無新內容）。
 
-=== 第三次執行記錄（05:59 UTC）===
-【步驟 1】
-- 上次 ID：2026-10-07_20261007019（前次執行已更新至 #19）
-
-【步驟 2】資料來源狀態：
-- truthsocial.com：封鎖（EGRESS_BLOCKED）
-- thetrumparchive.com：封鎖（EGRESS_BLOCKED）
-- trumpstruth.org：封鎖（EGRESS_BLOCKED）
-- kadoa.com：封鎖（EGRESS_BLOCKED）
-- 所有主要新聞網站：封鎖
-
-【步驟 3】WebSearch 結果（無確認新貼文）：
-- 2026-10-07 09:46 AM：攻擊 Annie Andrews（無法確認是否 > #19）
-- 2026-10-07 11:15 AM：Wisconsin 災援 / Tiffany 背書（應已追蹤）
-- 2026-10-07 11:27 PM：視頻貼文（trumpstruth.org #42198，可能 > #19）
-- 2026-10-08 今日：未找到任何確認貼文
-
-【結論】
-- 無法確認有 2026-10-08 新貼文
-- 2026-10-07 晚間視頻貼文可能尚未追蹤，但無法取得完整內容核實
-- last_seen_id 維持：2026-10-07_20261007019
-- 未推播 Telegram/LINE 通知
-
-【執行摘要】
-- 處理新貼文數：0
-- GitHub push：N/A（無新貼文）
-- Telegram 推播：未執行（無新貼文 + api.telegram.org 封鎖）
-- LINE：未觸發
+注意：當前雲端執行環境的網路 egress 政策封鎖大多數外部域名，
+包括 truthsocial.com 及大多數主流新聞媒體，導致無法直接取得貼文。
+建議考慮設置白名單或改用不同的取得方式（如 GitHub Actions 本地執行）。
