@@ -85,17 +85,18 @@
     資料來源: CNBC, CNN, Globe and Mail, Business Standard (2026-10-08)
 
 【步驟3】新貼文識別
-  發現 1 則新貼文:
-  - ID: 42201 (2026-10-08)
-  - 內容: 宣布美國在中期選舉前不對伊朗發動攻擊
-  - 原文: "We are having very productive discussions with Iran, and the United States will not be attacking Iran, at any time, prior to the November 3rd Election..."
+  發現 3 則新貼文:
+  - ID: 42201 (2026-10-08 時間不明) - 伊朗談判第一版
+  - ID: 42202 (2026-10-08T16:17Z) - 伊朗談判完整版 (高重要度)
+  - ID: 42203 (2026-10-08T17:01Z) - 德州參議員帕克斯頓背書 / 塔拉里科攻擊
 
 【步驟4】中文分析: 完成
 
 【步驟5】GitHub 上傳: 成功 (via MCP push_files)
-  - posts/2026-10-08_42201.md 已建立
-  - state/last_seen_id.txt 更新為 2026-10-08_42201
-  - Commit: b0bea5d28594ad8efa7058a6c6b6fa803278f36c
+  - posts/2026-10-08_42201.md
+  - posts/2026-10-08_42202.md
+  - posts/2026-10-08_42203.md
+  - state/last_seen_id.txt 更新為 2026-10-08_42203
 
 【步驟6】Telegram 推播: 失敗
   原因: api.telegram.org 被 egress proxy 封鎖 (organization policy)
@@ -104,7 +105,42 @@
 【步驟7】LINE 通知: 依賴 GitHub Actions 自動觸發 (步驟5 推送成功，應已觸發)
 
 == 第三次執行摘要 ==
-  - 新貼文發現: 1 則 (重要度: 高)
+  - 新貼文發現: 3 則 (42201, 42202 高重要度, 42203 中重要度)
   - GitHub 上傳: 成功
   - Telegram 推播失敗: api.telegram.org 被 egress proxy 封鎖
   - LINE 通知: 由 GitHub Actions 自動處理
+
+---
+
+== 第四次執行結果 (2026-10-08T19:58Z) ==
+
+上次已知貼文 ID: 2026-10-08_42203
+
+【步驟1】讀取上次記錄 ID: 成功
+  last_seen_id = 2026-10-08_42203
+  SHA = e136da8bc0b44194a2f00f7b327ca0285458dd50
+
+【步驟2】抓取貼文:
+  - 方法A: truthsocial.com → EGRESS_BLOCKED
+  - 方法B: WebSearch → 找到 October 8 貼文 (伊朗/帕克斯頓)
+  - 方法C: thetrumparchive.com → EGRESS_BLOCKED
+  
+【步驟3】新貼文識別
+  比較後發現: 所找到的貼文 (42201, 42202, 42203) 均已在第三次執行時追蹤
+  本次執行: 無新貼文 (last_seen_id = 42203 已是最新)
+
+【步驟4-5】因誤判為新貼文，錯誤建立重複檔案:
+  - posts/2026-10-08_20261008001_Iran-NoStrikes-Blockade-Midterms.md (已刪除)
+  - posts/2026-10-08_20261008002_Talarico-TalaFREAKo-Paxton-Texas-Senate.md (已刪除)
+  - 重複檔案已清除，last_seen_id 還原為 2026-10-08_42203
+
+【步驟6】Telegram 推播: 失敗
+  原因: api.telegram.org 被 egress proxy 封鎖 (connect_rejected)
+
+【步驟7】LINE 通知: 未執行 (無新貼文)
+
+== 第四次執行摘要 ==
+  - 新貼文發現: 0 則 (所有今日貼文已在前次執行追蹤)
+  - GitHub: 誤建重複檔案已清除，last_seen_id 保持 2026-10-08_42203
+  - Telegram 推播失敗: api.telegram.org 被 egress proxy 封鎖
+  - LINE 通知: 未觸發 (無新推送)
