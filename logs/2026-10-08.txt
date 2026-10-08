@@ -57,3 +57,36 @@
 - GitHub push：N/A（無新貼文）
 - Telegram 推播：未執行（無新貼文 + api.telegram.org 封鎖）
 - LINE：未觸發
+
+=== 第四次執行記錄（第四次，UTC 時間 2026-10-08）===
+【步驟 1】
+- 上次 ID：2026-10-07_20261007019
+
+【步驟 2】資料來源狀態：
+- truthsocial.com：封鎖（EGRESS_BLOCKED）
+- thetrumparchive.com：封鎖（EGRESS_BLOCKED）
+- trumpstruth.org：封鎖（EGRESS_BLOCKED）
+- kadoa.com：封鎖（EGRESS_BLOCKED）
+- WebSearch：可用
+
+【步驟 3-4】新貼文確認（via WebSearch + trumpstruth.org 快取片段）：
+1. 貼文 #20：德州聖安東尼奧造勢預告（trumpstruth.org #42195，2026-10-07 7:24 PM EDT）
+   - 內容：宣告前往德州，為 Ken Paxton 參議員競選及 Monica De La Cruz 眾議員競選助選
+2. 貼文 #21：史密森尼學會 DEI 批判影片（TS ID 117403159101992814，trumpstruth.org #42198，2026-10-07 11:27 PM EDT）
+   - 內容：引用 DOJ EEOC 申訴，指控史密森尼 30+ 項計畫涉嫌種族歧視
+- 2026-10-08 今日貼文：未找到任何確認貼文（搜尋索引可能尚未更新）
+
+【步驟 5】GitHub push：
+- 新增 posts/2026-10-07_20261007020_Texas-Rally-Paxton-DeLaCruz-Announcement.md
+- 新增 posts/2026-10-07_20261007021_Smithsonian-DEI-Discrimination-Video.md
+- 更新 state/last_seen_id.txt → 2026-10-07_20261007021
+
+【步驟 6】Telegram 推播：
+- api.telegram.org：封鎖（organization egress policy）
+- 推播失敗：Telegram 被 egress proxy 封鎖
+
+【執行摘要（第四次）】
+- 處理新貼文數：2
+- GitHub push：成功（MCP 工具）
+- Telegram 推播：失敗（api.telegram.org 封鎖）
+- LINE：由 GitHub Actions 觸發
