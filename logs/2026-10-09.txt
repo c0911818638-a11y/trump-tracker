@@ -15,3 +15,21 @@
 - 2026-10-08: 川普支持德州參議員候選人 Ken Paxton
 
 由於上次記錄 ID 已為 2026-10-09，且無法確認是否有更新貼文，本次跳過貼文建立與通知。
+
+---
+
+監控執行時間: 2026-10-09 (第二次執行)
+上次記錄貼文 ID: 2026-10-09_42212
+狀態: 搜尋更完整，仍無新貼文確認
+
+本次額外搜尋結果：
+- 諾貝爾獎相關轉推 (2026-10-09 早上)：Trump 轉發 @Schoenlaw 的文章，批評諾貝爾委員會將和平獎頒給南非法官 Navi Pillay
+  文字："The Nobel Committee shamed itself beyond repair and demeaned the once great Nobel Peace Prize by giving it to the UN's Navi Pillay"（稱 Pillay 為美國和以色列的仇恨者，批評其在加薩問題上的立場）
+  此貼文 Trump's Truth ID 約 42186，低於 last_seen_id 42212，已在前次執行中記錄。
+
+- "Dumocrats are Scammers" 貼文（約 2026-10-09 00:02 UTC）：
+  "The Dumocrats are Scammers. These are the real FACTS!!!"
+  此貼文 ID 不明，但時間點早於 42212，推斷已記錄。
+
+結論：網路 egress 政策封鎖所有直接外部連線（truthsocial.com、trumpstruth.org、Forbes、Yahoo、NBC 等全部 DNS ENOTFOUND）。
+無法確認 ID > 42212 的新貼文存在。last_seen_id 維持不變。
