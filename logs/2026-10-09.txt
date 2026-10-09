@@ -1,0 +1,27 @@
+執行時間: 2026-10-09 04:00 UTC
+
+【執行摘要】
+- 上次記錄 ID: 2026-10-08_42210
+- 今日日期: 2026-10-09
+
+【貼文抓取】
+- 方法 A (Truth Social 直接存取): 失敗 — 代理伺服器 403 Forbidden (truthsocial.com 被 egress 政策封鎖)
+- 方法 B (WebSearch): 成功 — 從搜尋結果取得 2026-10-08 貼文摘要
+- 方法 C (Trump Archive): 失敗 — DNS 解析失敗
+
+【發現的新貼文】
+1. 2026-10-08_42211: 川普宣告期中選舉前不攻擊伊朗，維持荷姆茲海峽封鎖
+2. 2026-10-08_42212: 川普要求改用「超級智慧」取代 AI，稱繼續使用 AI 者為白宮敵人
+
+注意: 2026-10-09 當日貼文尚未被搜尋引擎索引，可能尚未發布或需等待更新。
+
+【GitHub 上傳】
+- posts/2026-10-08_42211.md: 成功 (commit fa205fe)
+- posts/2026-10-08_42212.md: 成功 (commit c55cb6b)
+- state/last_seen_id.txt → 2026-10-08_42212: 成功 (commit de8719e)
+
+【Telegram 推播】
+失敗: api.telegram.org:443 連線被 egress proxy 政策拒絕 (connect_rejected)
+
+【LINE 通知】
+由 GitHub Actions (line-notify.yml) 自動處理，已因 posts/*.md 新增而觸發。
