@@ -112,18 +112,6 @@
 - 方法 C (thetrumparchive.com): 失敗 - getaddrinfo ENOTFOUND www.thetrumparchive.com
 - 方法 D (新聞網站 TheHill/CBS/Kadoa): 失敗 - DNS 無法解析
 
-### WebSearch 搜尋關鍵字
-1. "Trump Truth Social posts today 2026-10-10 site:truthsocial.com OR site:thetrumparchive.com"
-2. "Trump Truth Social October 10 2026"
-3. "Trump Truth Social October 9 10 2026 post new"
-4. "realDonaldTrump Truth Social post 2026 October Iran Nobel Paxton"
-
-### Web Search 發現（參考用）
-搜尋結果中最新可確認貼文日期為 2026-10-08，無法確認 ID > 42237 的新貼文：
-- 諾貝爾和平獎 590 字長文（～10/8-10/10）：川普抱怨未獲諾貝爾獎，稱挪威頒獎給 Navi Pillay 是「不可抹滅的污點」
-- 伊朗貼文（10/8）：中期選舉前不攻擊伊朗，海上封鎖維持
-- 德州參議員貼文（10/7-10/8）：背書 Ken Paxton，攻擊 James Talarico
-
 ### 新貼文數量
 0 - 無法確認是否有 ID > 42237 的新貼文（DNS 封鎖）
 
@@ -131,3 +119,35 @@
 截至 2026-10-10T16:57:53Z，無法確認新貼文。
 last_seen_id 未更新（維持 2026-10-10_42237）。
 未執行 Telegram 推播或 GitHub 貼文上傳（依 Step 8 規定）。
+
+---
+
+## 第六次執行（2026-10-10T17:57:28Z）
+
+### 執行狀況
+- state/last_seen_id.txt 讀取：成功，ID = 2026-10-10_42237
+- 方法 A (truthsocial.com RSS/API): 失敗 - getaddrinfo ENOTFOUND truthsocial.com
+- 方法 B (WebSearch): 執行（6 次搜尋）
+- 方法 C (thetrumparchive.com): 失敗 - getaddrinfo ENOTFOUND
+- 方法 D (trumpstruth.org / kadoa.com): 失敗 - DNS 無法解析
+
+### WebSearch 搜尋關鍵字
+1. "Trump Truth Social posts today 2026-10-10 site:truthsocial.com OR site:thetrumparchive.com"
+2. "Trump Truth Social October 10 2026 latest posts"
+3. "Trump 'Mike Ditka' 'great champion' Truth Social October 10 2026"
+4. "Trump Truth Social 'under attack' 'Catsimatidis' OR 'Fox Business' October 10 2026"
+5. "Trump Truth Social October 10 2026 after 9am latest new"
+6. "Trump Truth Social October 10 2026 newest posts site:trumpstruth.org 42237-42240"
+
+### 已確認的今日貼文（均在 last_seen_id 42237 之內）
+- Status 42233: "Prosecutorial Misconduct!" - 8:06 AM EDT
+- Status 42234: "I settled 8 WARS, am close to ending or settling 2 more" - 8:04 AM EDT
+- Status 42235: Mike Ditka 悼念 - "Mike Ditka was a great champion, both as a player and a Coach. He was MAGA all the way, and he will be missed. Rest in Peace, Mike!" - 8:15 AM EDT
+- Status 42236: 轉推 Fox Business John Catsimatidis - "The American people are 'under attack' by US enemies and allies" - 8:54 AM EDT
+- Status 42237: 轉推 Robert Jeffress 支持五角大廈公開處決聲明 - 10:42 AM EDT（last_seen）
+
+### 新貼文數量
+0 - 搜尋結果最高確認 ID 為 42237，無 ID > 42237 的新貼文
+
+### 結論
+截至 2026-10-10T17:57:28Z，無新貼文超過 last_seen=42237，未執行 Telegram 推播或 GitHub 貼文上傳。
