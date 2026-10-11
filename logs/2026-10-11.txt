@@ -154,3 +154,23 @@
 - 結論：無新貼文，不推播 Telegram，不更新 last_seen_id.txt
 - Telegram 推播：未執行（無新貼文；api.telegram.org 在此環境被 proxy 封鎖）
 - LINE 通知：未觸發（無新內容 push）
+
+---
+
+【第九次執行 2026-10-11 08:58 UTC】
+- 上次已記錄 ID：2026-10-10_42245（SHA: 52e96e084193cc964883e51584dd0ec4deb99113）
+- 嘗試來源：
+  · truthsocial.com RSS/API（WebFetch）：失敗 - DNS 解析失敗
+  · thetrumparchive.com（WebFetch）：失敗 - DNS 解析失敗
+  · trumpstruth.org（WebFetch）：失敗 - DNS 解析失敗
+  · kadoa.com、foxnews.com、thehill.com、aol.com、forbes.com、thedailybeast.com、tampafp.com、theconservativetreehouse.com、san.com、japantimes.co.jp、project1461.substack.com、presidency.ucsb.edu（WebFetch）：均 DNS 失敗
+  · WebSearch × 9次（extended mode）：涵蓋主題包括 Oct 11 posts、Nobel、Zelenskyy、Katie Zacharia、diesel deal、Sunday morning posting、post 42246-42250
+- 搜尋結果摘要：
+  · trumpstruth.org 最新確認貼文仍為 #42245（2026-10-10）
+  · 搜尋引擎未索引 42246+ 任何貼文
+  · 從 Japan Times 找到 Oct 11 日期的新聞文章（Trump calls for replacing Zelenskyy），但確認是 Oct 10 在白宮對媒體的談話，非 Truth Social 貼文
+  · 諾貝爾和平獎系列貼文（Oct 9-10）確認為已記錄舊貼文
+  · 無任何 2026-10-11 Truth Social 新貼文被搜尋引擎索引（共 9 次搜尋確認）
+- 結論：無新貼文，不推播 Telegram，不更新 last_seen_id.txt
+- Telegram 推播：未執行（無新貼文；api.telegram.org 在此環境被 proxy 封鎖）
+- LINE 通知：未觸發（無新內容 push）
