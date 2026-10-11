@@ -68,3 +68,31 @@
 - 結論：無新貼文，不推播 Telegram，不更新 last_seen_id.txt
 - Telegram 推播：失敗 - proxy 阻擋 api.telegram.org (HTTP 403 Forbidden)
 - LINE 通知：未觸發（無新內容 push）
+
+---
+
+【第五次執行 2026-10-11】
+- 上次已記錄 ID：2026-10-10_42243（SHA: 0e9458f5dbd41b6fe77c41a109fae6af9881ef44）
+- 嘗試來源：
+  · truthsocial.com RSS/API（WebFetch）：失敗 - DNS 解析失敗
+  · thetrumparchive.com（WebFetch）：失敗 - DNS 解析失敗
+  · trumpstruth.org（WebFetch）：失敗 - DNS 解析失敗
+  · WebSearch × 8次（多種關鍵字組合）：找到貼文 ID 但無完整文字內容
+  · 所有主要新聞網站（cbsnews.com, yahoo.com, cnn.com, forbes.com, axios.com 等）：DNS 失敗
+  · curl GitHub API：被 proxy 封鎖，改用 MCP 工具
+- 找到新貼文：
+  · ID 42244（trumpstruth.org/statuses/42244）：影片貼文，2026-10-10 22:01 EDT
+    Truth Social status ID: 117419806852030114
+    URL: https://truthsocial.com/@realDonaldTrump/117419806852030114
+    內容：影片（無文字），無法取得影片內容
+  · ID 42245（trumpstruth.org/statuses/42245）：轉推貼文（RT），2026-10-10 22:02 EDT
+    轉推 Trump 自身較早前的貼文（關於支持率）
+    URL: https://truthsocial.com/users/realDonaldTrump/statuses/117419...（截斷）
+    內容：重新分享，無新文字
+- 10月11日新貼文：搜尋未找到（可能尚未發文或搜尋引擎未索引）
+- 行動：
+  · 更新 state/last_seen_id.txt 至 2026-10-10_42245
+  · 未建立貼文分析檔案（純影片/轉推，無可分析文字內容）
+  · 未推播 Telegram（無有意義的文字內容）
+- Telegram 推播：跳過（無可分析的文字貼文）
+- LINE 通知：未觸發（無新文字貼文 push）
