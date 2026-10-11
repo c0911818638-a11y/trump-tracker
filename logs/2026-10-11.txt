@@ -54,3 +54,33 @@ A third scheduled run on 2026-10-11 confirmed the same result:
 - No new posts found after ID 42245
 - Telegram notification: FAILED — api.telegram.org:443 blocked by egress proxy
 - last_seen_id.txt: reverted to 2026-10-10_42245
+
+## Fifth Run (同日) — Nobel Prize posts captured & Energy Ceasefire captured (14:00–14:59 UTC)
+- Nobel Prize related posts (from Oct 9-10) analyzed and committed in separate runs
+- POST 42246 (Energy Ceasefire, Oct 11 10:16 AM EDT) CAPTURED at ~14:59 UTC
+  - Full text: "Effective immediately, there is an ENERGY CEASEFIRE in the War between Russia and Ukraine. Both parties have agreed. Do not break it! Thank you for your attention to this matter. President DONALD J. TRUMP"
+  - Committed to posts/ directory and last_seen_id updated to 2026-10-11_42246
+  - Telegram notification: status unknown (previous run)
+
+## Current Run (2026-10-11 ~16:00+ UTC)
+- last_seen_id confirmed: 2026-10-11_42246 (energy ceasefire already tracked)
+- All direct WebFetch attempts FAILED (DNS ENOTFOUND: all major news/social sites)
+- Extended WebSearch across 12+ queries for posts after ID 42246
+- FINDING: Post 42247 CONFIRMED to exist in trumpstruth.org archive (Oct 11, 10:34 AM EDT)
+  - Content: UNVERIFIABLE (archive snippet ambiguous, DNS prevents direct access)
+  - Likely: continuation of ceasefire announcement OR video/image/repost
+  - Action: NOT processed (unknown content); last_seen_id remains 2026-10-11_42246
+- FINDING: Trump-Zelenskyy call post — referenced in CBS/NBC headlines ("very good" call)
+  - Date: likely Oct 11, 2026 (one day after Putin diesel call Oct 10)
+  - Content: UNVERIFIABLE (all news sites DNS ENOTFOUND; search snippets show March 2025 version)
+  - Action: NOT processed; monitoring continues
+- No Telegram notifications sent (no verifiable new text posts)
+- last_seen_id.txt: unchanged at 2026-10-11_42246
+
+## Network Status Note (all runs today)
+Outbound DNS resolution is failing for virtually all external domains:
+truthsocial.com, thetrumparchive.com, trumpstruth.org, cbsnews.com, nbcnews.com,
+foxnews.com, bloomberg.com, aljazeera.com, france24.com, euronews.com, reuters.com,
+yahoo.com, api.telegram.org — all return ENOTFOUND.
+WebSearch (internal proxy) remains functional and is the only viable fetch method.
+Telegram push notifications are blocked by the egress proxy.
