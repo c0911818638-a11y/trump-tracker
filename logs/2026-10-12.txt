@@ -1,91 +1,27 @@
- 執行時間: 2026-10-12 UTC
-上次貼文 ID: 2026-10-11_42254
-新貼文數量: 1
+# 監控日誌 2026-10-12
 
-新貼文:
-- ID 42255 (2026-10-11 22:57 UTC): 造勢大會宣布 - Youngstown OH 與 Alaska
-  Truth Social 狀態 ID: 117424510700770095
+## 最新執行時間
+2026-10-12T09:59:02Z
 
-步驟結果:
-- 步驟 1 (讀取 last_seen_id): 成功，ID = 2026-10-11_42254
-- 步驟 2 (抓取貼文): Truth Social 直接存取失敗 (DNS 無法解析)，改用 WebSearch 取得內容
-- 步驟 3 (比較新舊): 找到 1 篇新貼文 (ID 42255)
-- 步驟 4 (中文分析): 完成
-- 步驟 5 (GitHub 上傳): 成功，commit SHA 6679eed01be89e8a98a88bac6eb659095e44130d
-- 步驟 6 (Telegram 推播): 失敗，原因: egress 政策擋下 api.telegram.org (HTTP 403)
-- 步驟 7 (LINE 通知): 由 GitHub Actions 自動觸發 (步驟 5 成功)
+## 上次記錄貼文 ID
+2026-10-12_42262（trumpstruth.org 存檔序號 42262）
+對應原貼文：2026年10月11日 22:47 UTC
+（Kid Rock 宗教衝突警告之轉推）
 
-備注: 本次未找到 2026-10-12 (今日，哥倫布日) 的新貼文，
-川普今日下午預計出席揚斯敦造勢大會，可能有後續貼文。
+## 本次抓取結果
+- 嘗試方法：WebFetch（truthsocial.com、thetrumparchive.com）→ DNS 解析失敗
+- 改用：WebSearch（多次查詢）→ 成功取得搜尋結果
+- 最新可確認貼文 ID：42262（同上次記錄）
 
----
+## 結論
+無新貼文（存檔序號 > 42262 暫無新資料）
+今日（Columbus Day，2026-10-12）尚無新貼文被公開存檔索引。
 
-第二次監控: 2026-10-12 04:57:52 UTC
-上次記錄 ID: 2026-10-12_42262
-搜尋方法:
-  - WebFetch truthsocial.com: 失敗 (ENOTFOUND)
-  - WebFetch thetrumparchive.com: 失敗 (ENOTFOUND)
-  - WebFetch trumpstruth.org: 失敗 (ENOTFOUND)
-  - WebSearch: 執行成功
-搜尋結果:
-  - 最後索引貼文: ID 42262 (2026-10-11)
-  - 未找到新貼文 (ID > 42262)
-結論: 暫無新貼文，無需推播通知。
+## 昨日（10/11）主要貼文回顧（供參考）
+1. 哥倫布日祝賀（ID: 42247）- "HAPPY COLUMBUS DAY TO ALL"
+2. 俄烏能源停火宣布 - "Effective immediately, there is an ENERGY CEASEFIRE"
+3. Katie Zacharia 記者會預告 - 新聞發言人將於 Columbus Day 就任，週二 09:30 舉行首場記者會
+4. 競選活動宣傳（Ohio / Alaska）
 
----
-
-第三次監控: 2026-10-12 06:59:17 UTC
-上次記錄 ID: 2026-10-12_42262
-搜尋方法:
-  - WebFetch truthsocial.com: 失敗 (ENOTFOUND)
-  - WebFetch thetrumparchive.com: 失敗 (ENOTFOUND)
-  - WebFetch trumpstruth.org: 失敗 (ENOTFOUND)
-  - WebSearch: 執行成功
-搜尋結果:
-  - 最後索引貼文: ID 42260 (trumpstruth.org, 2026-10-11)
-  - 未找到新貼文 (ID > 42262)
-結論: 暫無新貼文，無需推播通知。
-備注: 川普揚斯敦造勢大會預計晚間 6PM EDT (22:00 UTC)，後續可能有新貼文。
-      Telegram 推播於本環境持續被 egress 政策擋下 (HTTP 403)。
-
----
-
-第四次監控: 2026-10-12 07:56:48 UTC
-上次記錄 ID: 2026-10-12_42262
-搜尋方法:
-  - WebFetch truthsocial.com: 失敗 (ENOTFOUND / proxy 403)
-  - WebFetch thetrumparchive.com: 失敗 (ENOTFOUND)
-  - WebFetch trumpstruth.org: 失敗 (ENOTFOUND)
-  - WebSearch (extended): 執行成功，但未找到 2026-10-12 當日貼文
-  - WebFetch cbsnews/thedailybeast/kadoa/x.com/forbes/yahoo/forth.news: 全部失敗 (ENOTFOUND)
-搜尋結果:
-  - 最後索引貼文: ID 42262 (2026-10-11)
-  - 未找到新貼文 (ID > 42262)
-結論: 暫無新貼文，無需推播通知。
-備注: 網路 egress 政策持續阻擋 truthsocial.com 及大多數新聞網站。
-      Telegram 推播於本環境持續被擋 (HTTP 403)。
-      本次為當日第四次監控，均未發現新貼文。
-
----
-
-第五次監控: 2026-10-12 UTC（哥倫布日 Columbus Day）
-上次記錄 ID: 2026-10-12_42262
-搜尋方法:
-  - WebFetch truthsocial.com (RSS + API): 失敗 (ENOTFOUND)
-  - WebFetch thetrumparchive.com: 失敗 (ENOTFOUND)
-  - WebFetch trumpstruth.org: 失敗 (ENOTFOUND)
-  - WebSearch "Trump Truth Social posts October 12 2026" (extended): 執行成功
-  - WebSearch "Trump truths October 12 2026" (extended): 執行成功
-  - WebSearch "trumpstruth.org statuses 42263-42267": 執行成功
-  - WebSearch "Trump Truth Social Nobel Peace Prize 2026": 執行成功
-  - WebFetch cbsnews/foxnews/thehill/kadoa/scribe.disroot.org/providence.root.sx/forth.news/presidency.ucsb.edu: 全部失敗 (ENOTFOUND)
-搜尋結果:
-  - trumpstruth.org 歸檔最高 ID: 42260 (2026-10-11)
-  - 未找到 ID 42263 或更高的新貼文
-  - WebSearch 顯示 10/11 相關貼文：Katie Zacharia 新聞秘書宣布、造勢大會、Nobel Prize 批評
-  - 無法確認 Nobel Prize 批評貼文是否晚於 ID 42262
-結論: 無法確認有 ID > 42262 的新貼文，暫無新通知。
-備注: 所有外部域名 DNS 解析持續失敗，本環境 egress 政策限制嚴重。
-      Telegram api.telegram.org 同樣無法連線 (ENOTFOUND/403)。
-      建議：若要改善監控效果，可考慮在 GitHub Actions 環境中直接執行此腳本，
-      不受本 Claude 雲端環境的 egress 限制影響。
+## 通知
+無新貼文，不觸發 Telegram 或 LINE 通知。
