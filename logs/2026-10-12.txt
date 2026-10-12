@@ -65,3 +65,27 @@
 備注: 網路 egress 政策持續阻擋 truthsocial.com 及大多數新聞網站。
       Telegram 推播於本環境持續被擋 (HTTP 403)。
       本次為當日第四次監控，均未發現新貼文。
+
+---
+
+第五次監控: 2026-10-12 UTC（哥倫布日 Columbus Day）
+上次記錄 ID: 2026-10-12_42262
+搜尋方法:
+  - WebFetch truthsocial.com (RSS + API): 失敗 (ENOTFOUND)
+  - WebFetch thetrumparchive.com: 失敗 (ENOTFOUND)
+  - WebFetch trumpstruth.org: 失敗 (ENOTFOUND)
+  - WebSearch "Trump Truth Social posts October 12 2026" (extended): 執行成功
+  - WebSearch "Trump truths October 12 2026" (extended): 執行成功
+  - WebSearch "trumpstruth.org statuses 42263-42267": 執行成功
+  - WebSearch "Trump Truth Social Nobel Peace Prize 2026": 執行成功
+  - WebFetch cbsnews/foxnews/thehill/kadoa/scribe.disroot.org/providence.root.sx/forth.news/presidency.ucsb.edu: 全部失敗 (ENOTFOUND)
+搜尋結果:
+  - trumpstruth.org 歸檔最高 ID: 42260 (2026-10-11)
+  - 未找到 ID 42263 或更高的新貼文
+  - WebSearch 顯示 10/11 相關貼文：Katie Zacharia 新聞秘書宣布、造勢大會、Nobel Prize 批評
+  - 無法確認 Nobel Prize 批評貼文是否晚於 ID 42262
+結論: 無法確認有 ID > 42262 的新貼文，暫無新通知。
+備注: 所有外部域名 DNS 解析持續失敗，本環境 egress 政策限制嚴重。
+      Telegram api.telegram.org 同樣無法連線 (ENOTFOUND/403)。
+      建議：若要改善監控效果，可考慮在 GitHub Actions 環境中直接執行此腳本，
+      不受本 Claude 雲端環境的 egress 限制影響。
