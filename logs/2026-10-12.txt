@@ -81,7 +81,7 @@ DHS/HSI 於今日早晨突擊搜查眾議員 Ilhan Omar 的華盛頓特區住宅
 
 ---
 
-## 執行記錄 2026-10-12T16:57:00Z（本次）
+## 執行記錄 2026-10-12T16:57:00Z（第六次）
 
 ### 狀態
 - last_seen_id 進入時：2026-10-12_42296
@@ -111,6 +111,48 @@ DHS/HSI 於今日早晨突擊搜查眾議員 Ilhan Omar 的華盛頓特區住宅
 
 ### GitHub 推送
 - state/last_seen_id.txt：無變動（維持 2026-10-12_42296）
+
+### Telegram 通知
+未發送（無新貼文）
+
+### LINE 通知
+未發送（無新貼文）
+
+---
+
+## 執行記錄 2026-10-12T17:57:27Z（第七次）
+
+### 狀態
+- last_seen_id 進入時：2026-10-12_42296
+- 本次退出時：無變動（無新貼文）
+
+### 本次抓取嘗試
+- WebFetch: truthsocial.com RSS → DNS ENOTFOUND
+- WebFetch: truthsocial.com API → DNS ENOTFOUND
+- WebFetch: thetrumparchive.com → DNS ENOTFOUND
+- WebFetch: trumpstruth.org → DNS ENOTFOUND
+- WebFetch: trumpstruth.org/?per_page=100 → DNS ENOTFOUND
+- WebFetch: cbsnews.com → DNS ENOTFOUND
+- WebFetch: kadoa.com → DNS ENOTFOUND
+- WebFetch: presidency.ucsb.edu → DNS ENOTFOUND
+- WebFetch: forth.news → DNS ENOTFOUND
+- WebFetch: yahoo.com → DNS ENOTFOUND
+- WebSearch（多次 extended 查詢）→ 成功
+
+### 新貼文發現
+- WebSearch 發現最高索引 ID：42278（集會人群規模防禦貼文，10/12 早晨）
+- last_seen_id 為 42296
+- **無新貼文（所有已索引貼文 ID 均低於 42296）**
+
+### 今日脈絡（17:57 UTC = 13:57 EDT）
+- 川普早晨發文防禦集會規模（Denzel Washington 背書轉推，已被 Snopes 查核）
+- 今晚 Youngstown 集會（EDT 19:00 / UTC 23:00）尚未舉行
+- 搜尋索引通常落後 6-12 小時
+- ID 42279-42296 之間的貼文（早晨批次尾段）尚未被搜尋引擎索引
+
+### GitHub 推送
+- state/last_seen_id.txt：無變動（維持 2026-10-12_42296）
+- logs/2026-10-12.txt：已更新（本條目）✓
 
 ### Telegram 通知
 未發送（無新貼文）
