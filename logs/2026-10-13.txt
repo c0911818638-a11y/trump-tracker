@@ -1,6 +1,6 @@
 Trump Truth Social 監控日誌 - 2026-10-13
 執行時間：2026-10-13T（本次執行時間）
-上次記錄 ID：2026-10-13_42304
+上次記錄 ID：2026-10-13_42306
 
 錯誤記錄：
 ==========
@@ -12,18 +12,32 @@ Trump Truth Social 監控日誌 - 2026-10-13
 - https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → 同上封鎖
 
 方法 B (WebSearch)：
-- 搜尋 "Trump Truth Social posts today October 13 2026" → 找到部分 2026/10/11-12 的報導摘要，但無法取得 10/13 完整貼文
-- 無法確認是否有比 last_seen_id (2026-10-13_42304) 更新的貼文
+- 搜尋 "Trump Truth Social posts today October 13 2026" → 找到部分 2026/10/11-12 的報導摘要
+- 透過搜尋 42307 關鍵字找到新貼文：Jon Husted 俄亥俄州參議員背書文
 
 方法 C (WebFetch)：
 - https://www.thetrumparchive.com/ → DNS 解析失敗 (ENOTFOUND)
-- 其他新聞網站 (cbsnews.com, forbes.com, thedailybeast.com 等) → DNS 解析失敗
+- https://www.trumpstruth.org/ → DNS 解析失敗 (ENOTFOUND)
+- 其他新聞網站 (cbsnews.com, forbes.com 等) → DNS 解析失敗
+
+步驟 5 - GitHub 上傳：
+- 成功建立：posts/2026-10-13_42307.md
+- 成功更新：state/last_seen_id.txt → 2026-10-13_42307
 
 步驟 6 - Telegram 推播：
 - api.telegram.org:443 → 被組織 egress 政策封鎖 (connect_rejected)
 - Telegram 推播失敗：egress proxy 封鎖 api.telegram.org
+- 備援：透過 GitHub Actions 的 line-notify.yml 工作流程推播 LINE/Telegram
 
 結論：
-- 無法取得最新貼文，未建立任何貼文分析檔
-- Telegram/LINE 推播均未執行
-- 本次執行因 egress 政策限制，所有外部 API 均無法存取（GitHub MCP 除外）
+- 發現 1 則新貼文 (42307)：Jon Husted 俄亥俄州參議員背書
+- 已建立分析檔：posts/2026-10-13_42307.md
+- 直接 Telegram 推播失敗，依賴 GitHub Actions 備援通道
+- 本次執行因 egress 政策限制，直接外部 API 均無法存取（GitHub MCP 除外）
+
+第二次執行（當日稍晚）記錄：
+=================================
+執行時間：2026-10-13T（第二次執行）
+上次記錄 ID：2026-10-13_42306（同上）
+新發現貼文：42307（Jon Husted 俄亥俄背書）
+更新後 ID：2026-10-13_42307
