@@ -1,6 +1,8 @@
 Trump Truth Social 監控日誌 - 2026-10-13
-執行時間：2026-10-13T（本次執行時間）
-上次記錄 ID：2026-10-13_42304
+上次記錄 ID：2026-10-13_42306
+
+=== 第一次執行記錄 ===
+上次記錄 ID（當時）：2026-10-13_42304
 
 錯誤記錄：
 ==========
@@ -23,7 +25,30 @@ Trump Truth Social 監控日誌 - 2026-10-13
 - api.telegram.org:443 → 被組織 egress 政策封鎖 (connect_rejected)
 - Telegram 推播失敗：egress proxy 封鎖 api.telegram.org
 
+=== 第二次執行記錄 ===
+上次記錄 ID（當時）：2026-10-13_42306
+
+錯誤記錄：
+==========
+
+步驟 2 - 抓取川普最新貼文失敗：
+
+方法 A (WebFetch)：
+- https://truthsocial.com/@realDonaldTrump.rss → DNS 解析失敗 (ENOTFOUND)
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → DNS 解析失敗
+
+方法 B (WebSearch)：
+- 搜尋 "Trump Truth Social posts today site:truthsocial.com OR site:thetrumparchive.com" → 未找到 2026-10-13 具體貼文
+- 搜尋 "Trump Truth Social October 13 2026" → 未找到當日貼文
+- 搜尋 "Trump Truth Social post October 13 2026 latest statement" → 未找到當日貼文
+
+方法 C (WebFetch)：
+- https://www.thetrumparchive.com/ → DNS 解析失敗
+- kadoa.com, trumpstruth.org, cbsnews.com, nbcnews.com → 全部 DNS 解析失敗
+
+步驟 6 - Telegram 推播：未嘗試（無新貼文可推播）
+
 結論：
+- 執行環境出口網路政策封鎖所有外部域名 DNS 解析（GitHub MCP 除外）
 - 無法取得最新貼文，未建立任何貼文分析檔
-- Telegram/LINE 推播均未執行
-- 本次執行因 egress 政策限制，所有外部 API 均無法存取（GitHub MCP 除外）
+- last_seen_id 維持不變：2026-10-13_42306
