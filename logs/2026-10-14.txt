@@ -71,3 +71,32 @@ Step 7 (LINE 通知): 由 GitHub Actions line-notify.yml 自動觸發 (GitHub pu
 Step 7 (LINE): 未執行（無 GitHub push）
 
 結論: 川普目前無新的 Truth Social 貼文，last_seen_id 維持 2026-10-13_42322
+
+---
+
+=== 第四次執行 (約 08:04 UTC) ===
+執行時間: 2026-10-14 08:04 UTC
+上次記錄 ID: 2026-10-14_42328
+監控結果: 發現 3 則新貼文（凌晨深夜連發集群）
+
+步驟 2 (抓取貼文):
+- 方法 A (WebFetch): DNS 失敗 (truthsocial.com ENOTFOUND, thetrumparchive.com ENOTFOUND)
+- 方法 B (WebSearch): 透過 WebSearch + trumpstruth.org 搜尋索引，發現 10/14 凌晨貼文群
+  - 搜尋結果確認：42329 (12:47 AM EDT 影片), 42330 (1:14 AM EDT 影片), 42334 (影片), 42336 (2:50 AM EDT 影片：股市/邊境), 42345 (3:21 AM EDT, RT, 已下架), 42346 (2:05 AM EDT 影片：六個月政績), 42348 (2:25 AM EDT ReTruth), 42349 (2:19 AM EDT 文字貼文：民主黨攻擊)
+  - Forbes 報導確認：AI 老虎影片（川普與老虎搏鬥後擁抱, 配《The Lion Sleeps Tonight》）
+  - ID 42349 確認：Truth Social ID 117437808637530181 ("Democrats are banking on voters forgetting how terrible they are")
+
+步驟 3 (比較結果):
+- 發現 ID 42329 至 42349 共 21 個新 ID（其中 3 個有完整分析內容）
+- 主要新貼文: 42334 (AI老虎影片), 42346 (六個月政績影片), 42349 (民主黨攻擊文字貼)
+
+步驟 4 (中文分析): 完成 3 篇
+- posts/2026-10-14_42334.md (AI老虎影片)
+- posts/2026-10-14_42346.md (六個月政績)
+- posts/2026-10-14_42349.md (民主黨攻擊)
+
+步驟 5 (GitHub 上傳): 成功 - 3 篇貼文分析已上傳，last_seen_id 更新為 2026-10-14_42349
+
+步驟 6 (Telegram 推播): 嘗試執行（見後續記錄）
+
+新的 last_seen_id: 2026-10-14_42349
