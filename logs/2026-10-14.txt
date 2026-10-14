@@ -1,0 +1,19 @@
+執行時間: 2026-10-14 (UTC)
+監控結果: 發現 1 則新貼文
+
+=== 新貼文 ===
+貼文 ID: 2026-10-13_42317
+Truth Social ID: 117436046490491993
+發布時間: 2026-10-13 22:51 UTC
+內容: [圖片貼文] Hello, Greenland!
+
+=== 執行狀態 ===
+Step 1 (讀取 last_seen_id): 成功 - 上次 ID: 2026-10-13_42316
+Step 2 (抓取貼文): 成功 (WebSearch 方法)
+Step 3 (比較新舊): 發現 1 則新貼文 (42317)
+Step 4 (中文分析): 完成
+Step 5 (GitHub 上傳): 成功 - posts/2026-10-13_42317.md 已上傳，last_seen_id 已更新為 2026-10-13_42317
+Step 6 (Telegram 推播): 失敗 - 組織 egress 政策封鎖 api.telegram.org:443 (connect_rejected)
+Step 7 (LINE 通知): 由 GitHub Actions line-notify.yml 自動觸發 (GitHub push 成功)
+
+新的 last_seen_id: 2026-10-13_42317
