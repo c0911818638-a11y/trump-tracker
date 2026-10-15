@@ -1,19 +1,37 @@
 監控執行時間: 2026-10-15 UTC
+最後已追蹤貼文 ID: 42376 (2026-10-15, 行刑隊/不直播聲明)
+
+=== 16:59 UTC 執行結果 ===
+
+【執行摘要】
+- 步驟 1: 成功讀取 last_seen_id.txt，上次記錄 ID: 2026-10-15_42375
+- 步驟 2A: truthsocial.com 無法連線（DNS 解析失敗）
+- 步驟 2B: WebSearch 執行成功
+  - 發現 2026-10-15 新貼文：川普宣布 Nidal Hasan 死刑執行不直播
+  - 來源：Axios, Fox News, Stripes, Yahoo News, Mediaite, Western Journal
+- 步驟 2C: thetrumparchive.com 無法連線（DNS 解析失敗）
+- 步驟 3: 發現 1 則比 last_seen_id（42375）更新的貼文（估計 ID: 42376）
+- 步驟 4: 完成中文分析
+- 步驟 5: GitHub push 成功 → posts/2026-10-15_42376.md
+- 步驟 5 (state): 已更新 state/last_seen_id.txt → 2026-10-15_42376
+- 步驟 6: Telegram 推播失敗：api.telegram.org 被 egress proxy 拒絕連線（connect_rejected）
+- 步驟 7: LINE 通知由 GitHub Actions 自動處理（push 成功，workflow 應自動觸發）
+
+【新貼文 #42376 摘要】
+原文: "He will die, as scheduled, by firing squad, but this event will not be streamed..."
+主題: 取消 Nidal Hasan（胡德堡槍擊案）死刑執行直播計畫
+重要程度: 中
+
+【注意】
+本執行環境大多數外部域名 DNS 解析失敗，貼文 ID 42376 為估計值。
+Telegram 推播被 egress proxy 封鎖，為本環境已知限制。
+
+=== 較早執行紀錄（同日 UTC 早些時候）===
+
+監控執行時間: 2026-10-15 UTC
 最後已追蹤貼文 ID: 42368 (2026-10-15 03:01 AM EDT)
 
 執行結果: 無新貼文
-
-【執行摘要】
-- 步驟 1: 成功讀取 last_seen_id.txt，上次記錄 ID: 2026-10-15_42368
-- 步驟 2A: truthsocial.com 無法連線（DNS 解析失敗）
-- 步驟 2B: WebSearch 執行成功
-  - 搜尋結果最新貼文為 trumpstruth.org/statuses/42368（2026-10-15 03:01 AM EDT）
-  - 搜尋未發現 ID 42369 或更新的貼文
-- 步驟 2C: thetrumparchive.com 無法連線（DNS 解析失敗）
-- 步驟 3: 無比 last_seen_id（42368）更新的貼文，本次不建立貼文檔
-- 步驟 5: 無新貼文，略過 GitHub push
-- 步驟 6: 無新貼文，略過 Telegram 推播
-- 步驟 7: 略過（LINE 由 GitHub Actions 處理）
 
 【已知近期貼文紀錄（已追蹤）】
 - #42368: 2026-10-15 03:01 AM EDT — 圖片貼文（Roy Cooper North Carolina 罪犯釋放議題）
@@ -24,7 +42,3 @@
 - #42357: 2026-10-14 03:13 PM EDT — 亞利桑那州 Bullhead City 競選集會直播連結
 - #42356: 2026-10-14 — ANOTHER MASSIVE 21 BILLION DOLLAR INVESTMENT FOR AMERICA! (GlobalFoundries 紐約州)
 - #42335: 2026-10-14 — 影片貼文
-
-【網路環境說明】
-本次執行環境大多數外部域名 DNS 解析失敗，只能透過 WebSearch API 取得搜尋引擎已索引的內容。
-如需完整即時監控，建議改在具備完整網路存取的環境執行。
