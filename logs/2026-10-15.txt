@@ -69,3 +69,28 @@ GitHub 貼文上傳: 不適用
 last_seen_id 更新: 不需要 (維持 2026-10-15_42360)
 Telegram 推播: 失敗 - api.telegram.org:443 被 egress proxy 拒絕 (exit code 56)
 LINE 通知: 不適用 (無新貼文，GitHub push 未執行)
+
+---
+[08:00:08Z UTC] 第四次監控循環執行
+上次追蹤 ID: 2026-10-15_42365
+
+=== 貼文來源抓取結果 ===
+Method A - WebFetch (truthsocial.com RSS/API): 失敗 - DNS 解析錯誤
+Method B - WebSearch (關鍵字搜尋): 成功 - 透過 trumpstruth.org 搜尋索引發現 ID 42366, 42367
+Method C - WebFetch (thetrumparchive.com): 失敗 - DNS 解析錯誤
+
+=== 新貼文 ===
+ID 42366 (Truth Social ID: 117443397258891596, 06:00 UTC / 凌晨 2:00 AM EDT):
+  Jon Husted 俄亥俄州參議院候選人背書 - 大學足球17次截球記錄，呼籲選民支持 Husted 對抗 Sherrod Brown
+
+ID 42367 (07:01 UTC / 凌晨 3:01 AM EDT):
+  圖片貼文 - 64 張人頭照，標題「Roy Cooper and his Appointees Released 3,500 Criminals!」
+
+=== 本次執行結果 ===
+新貼文發現: 2 則 (ID 42366, 42367)
+GitHub 貼文上傳: 成功
+  - posts/2026-10-15_42366.md (commit 03fec17d)
+  - posts/2026-10-15_42367.md (commit 23532ff9)
+last_seen_id 更新: 2026-10-15_42367 (commit fb4e4de7)
+Telegram 推播: 失敗 - api.telegram.org:443 被 egress proxy 拒絕 (exit code 56)
+LINE 通知: 由 GitHub Actions line-notify.yml 自動觸發（GitHub push 成功）
