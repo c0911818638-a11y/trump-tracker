@@ -1,146 +1,30 @@
-[00:00:20Z UTC] 監控循環執行
-上次追蹤 ID: 2026-10-14_42358 (上次更新: 2026-10-14T21:57:55Z)
+監控執行時間: 2026-10-15 UTC
+最後已追蹤貼文 ID: 42368 (2026-10-15 03:01 AM EDT)
 
-=== 貼文來源抓取結果 ===
-Method A - WebFetch (truthsocial.com RSS/API): 失敗 - DNS 解析錯誤 (目標域名不可達)
-Method B - WebSearch (關鍵字搜尋): 成功 - 找到 2026/10/13-14 的貼文摘要
-Method C - WebFetch (thetrumparchive.com): 失敗 - DNS 解析錯誤
+執行結果: 無新貼文
 
-=== 已知最近貼文 (均早於上次追蹤 ID) ===
-ID 42358: 空軍一號上觀看RSBN直播，即將降落亞利桑那州 (2026-10-14)
-ID 42357: 分享亞利桑那州牛頭城期中造勢集會 YouTube 直播連結 (2026-10-14)
-ID 42355-42356: 阿拉斯加LNG項目與GlobalFoundries半導體投資 (2026-10-14)
-ID 約42340-42354: 老虎攻擊事件影片系列 (2026-10-13-14):
-  - 'Don't ever mess with nature! President DJT' (Yorkshire Wildlife Park, William Chapman)
-  - 動物攻擊合輯 (獅子攻擊影片，無說明文字)
-  - AI 老虎影片 (Trump 與老虎互動的人工智慧生成影片)
+【執行摘要】
+- 步驟 1: 成功讀取 last_seen_id.txt，上次記錄 ID: 2026-10-15_42368
+- 步驟 2A: truthsocial.com 無法連線（DNS 解析失敗）
+- 步驟 2B: WebSearch 執行成功
+  - 搜尋結果最新貼文為 trumpstruth.org/statuses/42368（2026-10-15 03:01 AM EDT）
+  - 搜尋未發現 ID 42369 或更新的貼文
+- 步驟 2C: thetrumparchive.com 無法連線（DNS 解析失敗）
+- 步驟 3: 無比 last_seen_id（42368）更新的貼文，本次不建立貼文檔
+- 步驟 5: 無新貼文，略過 GitHub push
+- 步驟 6: 無新貼文，略過 Telegram 推播
+- 步驟 7: 略過（LINE 由 GitHub Actions 處理）
 
-=== 本次執行結果 ===
-新貼文發現: 無 (未找到 ID > 42358 的貼文)
-備註: 蒙大拿州卡利斯佩爾造勢集會 (Aaron Flint) 正在進行中
-    (預定 6:15 PM Mountain Time = 00:15 UTC Oct 15)
-    集會相關新貼文可能尚未被搜尋引擎索引
+【已知近期貼文紀錄（已追蹤）】
+- #42368: 2026-10-15 03:01 AM EDT — 圖片貼文（Roy Cooper North Carolina 罪犯釋放議題）
+- #42367: 2026-10-15 03:01 AM EDT — 圖片貼文（Roy Cooper 任命官員釋放 3,500 名罪犯）
+- #42366: 2026-10-15 02:00 AM EDT — 背書 Jon Husted 俄亥俄州參議員選舉
+- #42365: 2026-10-15 — 轉發 WSJ 意見文章《Gross Output Signals an Economic Surge》
+- #42359: 2026-10-14 06:48 PM EDT — 前往蒙大拿州「PACKED HOUSE」演講
+- #42357: 2026-10-14 03:13 PM EDT — 亞利桑那州 Bullhead City 競選集會直播連結
+- #42356: 2026-10-14 — ANOTHER MASSIVE 21 BILLION DOLLAR INVESTMENT FOR AMERICA! (GlobalFoundries 紐約州)
+- #42335: 2026-10-14 — 影片貼文
 
-GitHub 貼文上傳: 不適用
-Telegram 推播: 不適用
-last_seen_id 更新: 不需要 (無新貼文)
-
----
-[04:01:42Z UTC] 第二次監控循環執行
-上次追蹤 ID: 2026-10-15_42359
-
-=== 貼文來源抓取結果 ===
-Method A - WebFetch (truthsocial.com RSS/API): 失敗 - DNS 解析錯誤
-Method B - WebSearch (關鍵字搜尋): 成功 - 找到 ID 42360 的摘要資訊
-Method C - WebFetch (thetrumparchive.com): 失敗 - DNS 解析錯誤
-多數新聞網站（Forbes, HuffPost, NBC, CBS, ITV, Yahoo 等）也因 DNS 限制無法存取
-
-=== 新貼文 ===
-ID 42360: 圖片貼文，照片中有一人穿著「INDIANA」球衣 (2026-10-14 20:49 EDT / 2026-10-15 00:49 UTC)
-
-=== 本次執行結果 ===
-新貼文發現: 1 則 (ID 42360)
-GitHub 貼文上傳: 成功 (posts/2026-10-15_42360.md, commit ede4c6b)
-last_seen_id 更新: 2026-10-15_42360
-Telegram 推播: 失敗 - api.telegram.org:443 被 egress proxy 拒絕（403 policy denial）
-LINE 通知: 依賴 GitHub Actions 自動觸發（line-notify.yml）
-
----
-[04:58:56Z UTC] 第三次監控循環執行
-上次追蹤 ID: 2026-10-15_42360
-
-=== 貼文來源抓取結果 ===
-Method A - WebFetch (truthsocial.com RSS/API): 失敗 - DNS 解析錯誤
-Method B - WebSearch (關鍵字搜尋): 成功 - 搜尋 2026-10-15 早晨貼文
-  搜尋範圍：truthsocial.com, thetrumparchive.com, cbsnews.com, nbcnews.com, rollingout.com
-  已確認知曉內容：Montana/Arizona 造勢集會 (Oct 14), 老虎影片系列, 能源停火公告 (Oct 11)
-  未發現 ID > 42360 的新貼文
-Method C - WebFetch (thetrumparchive.com): 失敗 - DNS 解析錯誤
-
-=== 今日已知 Trump 動態 ===
-- 10月14日：蒙大拿州卡利斯佩爾/亞利桑那州牛頭城造勢集會 (Aaron Flint 等候選人)
-- 10月14日：在蒙大拿集會上宣布國防部新「超大測試場」
-- 10月14-15日：阿拉斯加 LNG / GlobalFoundries 半導體投資推廣
-- 10月15日排程：行政時間、玫瑰園午餐、橢圓形辦公室政策會議、預錄採訪、兩場電話造勢集會
-
-=== 本次執行結果 ===
-新貼文發現: 無 (未找到 ID > 42360 的貼文)
-GitHub 貼文上傳: 不適用
-last_seen_id 更新: 不需要 (維持 2026-10-15_42360)
-Telegram 推播: 失敗 - api.telegram.org:443 被 egress proxy 拒絕 (exit code 56)
-LINE 通知: 不適用 (無新貼文，GitHub push 未執行)
-
----
-[08:00:08Z UTC] 第四次監控循環執行
-上次追蹤 ID: 2026-10-15_42365
-
-=== 貼文來源抓取結果 ===
-Method A - WebFetch (truthsocial.com RSS/API): 失敗 - DNS 解析錯誤
-Method B - WebSearch (關鍵字搜尋): 成功 - 透過 trumpstruth.org 搜尋索引發現 ID 42366, 42367
-Method C - WebFetch (thetrumparchive.com): 失敗 - DNS 解析錯誤
-
-=== 新貼文 ===
-ID 42366 (Truth Social ID: 117443397258891596, 06:00 UTC / 凌晨 2:00 AM EDT):
-  Jon Husted 俄亥俄州參議院候選人背書 - 大學足球17次截球記錄，呼籲選民支持 Husted 對抗 Sherrod Brown
-
-ID 42367 (07:01 UTC / 凌晨 3:01 AM EDT):
-  圖片貼文 - 64 張人頭照，標題「Roy Cooper and his Appointees Released 3,500 Criminals!」
-
-=== 本次執行結果 ===
-新貼文發現: 2 則 (ID 42366, 42367)
-GitHub 貼文上傳: 成功
-  - posts/2026-10-15_42366.md (commit 03fec17d)
-  - posts/2026-10-15_42367.md (commit 23532ff9)
-last_seen_id 更新: 2026-10-15_42367 (commit fb4e4de7)
-Telegram 推播: 失敗 - api.telegram.org:443 被 egress proxy 拒絕 (exit code 56)
-LINE 通知: 由 GitHub Actions line-notify.yml 自動觸發（GitHub push 成功）
-
----
-[09:59:39Z UTC] 第五次監控循環執行
-上次追蹤 ID: 2026-10-15_42368
-
-=== 貼文來源抓取結果 ===
-Method A - WebFetch (truthsocial.com RSS/API): 失敗 - DNS 解析錯誤 (目標域名不可達)
-Method B - WebSearch (關鍵字搜尋): 成功
-  搜尋來源: trumpstruth.org, cbsnews.com, nbcnews.com, yahoo.com, newsweek.com, forbes.com
-  最高已知貼文 ID: 42368 (已於前次執行處理)
-  搜尋結果未發現 ID > 42368 的新貼文
-  確認 42368 (2026-10-15 07:01 UTC): DeCarlos Brown Jr. / Roy Cooper 北卡攻擊貼文
-Method C - WebFetch (thetrumparchive.com): 失敗 - DNS 解析錯誤
-
-=== 今日確認已處理貼文 (2026-10-15) ===
-- ID 42360 (2026-10-15 00:49 UTC): 穿著 INDIANA 球衣人士圖片貼文
-- ID 42362-42365: (前次執行已處理)
-- ID 42366 (2026-10-15 06:00 UTC / 02:00 AM EDT): Jon Husted 俄亥俄州參議員背書
-- ID 42367 (2026-10-15 07:01 UTC / 03:01 AM EDT): Roy Cooper 釋放 3,500 名罪犯（64 人頭照圖片）
-- ID 42368 (2026-10-15 07:01 UTC / 03:01 AM EDT): DeCarlos Brown Jr. / Roy Cooper 北卡攻擊貼文
-
-=== 本次執行結果 ===
-新貼文發現: 無 (未找到 ID > 42368 的貼文)
-GitHub 貼文上傳: 不適用
-last_seen_id 更新: 不需要 (維持 2026-10-15_42368)
-Telegram 推播: 不適用 (無新貼文)
-LINE 通知: 不適用 (無新貼文，GitHub push 未執行)
-
-備註: 川普今日排程包括橢圓形辦公室政策會議及兩場電話造勢集會
-      搜尋索引仍滯後，下次執行時可能發現新貼文
-
----
-[10:59:50Z UTC] 第六次監控循環執行
-上次追蹤 ID: 2026-10-15_42368
-
-=== 貼文來源抓取結果 ===
-Method A - WebFetch (truthsocial.com RSS/API): 失敗 - DNS 解析錯誤 (目標域名不可達)
-Method B - WebSearch (關鍵字搜尋): 成功
-  搜尋來源: trumpstruth.org, cbsnews.com, nbcnews.com, yahoo.com, newsweek.com, forbes.com
-  搜尋查詢: Trump Truth Social October 15 2026, trumpstruth.org statuses 42369-42375
-  最高已知貼文 ID: 42368 (與 last_seen_id 相同)
-  搜尋結果未發現 ID > 42368 的新貼文
-Method C - WebFetch (thetrumparchive.com): 失敗 - DNS 解析錯誤
-
-=== 本次執行結果 ===
-新貼文發現: 無 (未找到 ID > 42368 的貼文)
-GitHub 貼文上傳: 不適用
-last_seen_id 更新: 不需要 (維持 2026-10-15_42368)
-Telegram 推播: 不適用 (無新貼文)
-LINE 通知: 不適用 (無新貼文，GitHub push 未執行)
+【網路環境說明】
+本次執行環境大多數外部域名 DNS 解析失敗，只能透過 WebSearch API 取得搜尋引擎已索引的內容。
+如需完整即時監控，建議改在具備完整網路存取的環境執行。
