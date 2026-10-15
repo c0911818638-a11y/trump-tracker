@@ -1,0 +1,26 @@
+[00:00:20Z UTC] 監控循環執行
+上次追蹤 ID: 2026-10-14_42358 (上次更新: 2026-10-14T21:57:55Z)
+
+=== 貼文來源抓取結果 ===
+Method A - WebFetch (truthsocial.com RSS/API): 失敗 - DNS 解析錯誤 (目標域名不可達)
+Method B - WebSearch (關鍵字搜尋): 成功 - 找到 2026/10/13-14 的貼文摘要
+Method C - WebFetch (thetrumparchive.com): 失敗 - DNS 解析錯誤
+
+=== 已知最近貼文 (均早於上次追蹤 ID) ===
+ID 42358: 空軍一號上觀看RSBN直播，即將降落亞利桑那州 (2026-10-14)
+ID 42357: 分享亞利桑那州牛頭城期中造勢集會 YouTube 直播連結 (2026-10-14)
+ID 42355-42356: 阿拉斯加LNG項目與GlobalFoundries半導體投資 (2026-10-14)
+ID 約42340-42354: 老虎攻擊事件影片系列 (2026-10-13-14):
+  - 'Don't ever mess with nature! President DJT' (Yorkshire Wildlife Park, William Chapman)
+  - 動物攻擊合輯 (獅子攻擊影片，無說明文字)
+  - AI 老虎影片 (Trump 與老虎互動的人工智慧生成影片)
+
+=== 本次執行結果 ===
+新貼文發現: 無 (未找到 ID > 42358 的貼文)
+備註: 蒙大拿州卡利斯佩爾造勢集會 (Aaron Flint) 正在進行中
+    (預定 6:15 PM Mountain Time = 00:15 UTC Oct 15)
+    集會相關新貼文可能尚未被搜尋引擎索引
+
+GitHub 貼文上傳: 不適用
+Telegram 推播: 不適用
+last_seen_id 更新: 不需要 (無新貼文)
