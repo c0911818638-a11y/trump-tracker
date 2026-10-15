@@ -124,3 +124,23 @@ LINE 通知: 不適用 (無新貼文，GitHub push 未執行)
 
 備註: 川普今日排程包括橢圓形辦公室政策會議及兩場電話造勢集會
       搜尋索引仍滯後，下次執行時可能發現新貼文
+
+---
+[10:59:50Z UTC] 第六次監控循環執行
+上次追蹤 ID: 2026-10-15_42368
+
+=== 貼文來源抓取結果 ===
+Method A - WebFetch (truthsocial.com RSS/API): 失敗 - DNS 解析錯誤 (目標域名不可達)
+Method B - WebSearch (關鍵字搜尋): 成功
+  搜尋來源: trumpstruth.org, cbsnews.com, nbcnews.com, yahoo.com, newsweek.com, forbes.com
+  搜尋查詢: Trump Truth Social October 15 2026, trumpstruth.org statuses 42369-42375
+  最高已知貼文 ID: 42368 (與 last_seen_id 相同)
+  搜尋結果未發現 ID > 42368 的新貼文
+Method C - WebFetch (thetrumparchive.com): 失敗 - DNS 解析錯誤
+
+=== 本次執行結果 ===
+新貼文發現: 無 (未找到 ID > 42368 的貼文)
+GitHub 貼文上傳: 不適用
+last_seen_id 更新: 不需要 (維持 2026-10-15_42368)
+Telegram 推播: 不適用 (無新貼文)
+LINE 通知: 不適用 (無新貼文，GitHub push 未執行)
