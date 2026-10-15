@@ -24,3 +24,23 @@ ID 約42340-42354: 老虎攻擊事件影片系列 (2026-10-13-14):
 GitHub 貼文上傳: 不適用
 Telegram 推播: 不適用
 last_seen_id 更新: 不需要 (無新貼文)
+
+---
+[04:01:42Z UTC] 第二次監控循環執行
+上次追蹤 ID: 2026-10-15_42359
+
+=== 貼文來源抓取結果 ===
+Method A - WebFetch (truthsocial.com RSS/API): 失敗 - DNS 解析錯誤
+Method B - WebSearch (關鍵字搜尋): 成功 - 找到 ID 42360 的摘要資訊
+Method C - WebFetch (thetrumparchive.com): 失敗 - DNS 解析錯誤
+多數新聞網站（Forbes, HuffPost, NBC, CBS, ITV, Yahoo 等）也因 DNS 限制無法存取
+
+=== 新貼文 ===
+ID 42360: 圖片貼文，照片中有一人穿著「INDIANA」球衣 (2026-10-14 20:49 EDT / 2026-10-15 00:49 UTC)
+
+=== 本次執行結果 ===
+新貼文發現: 1 則 (ID 42360)
+GitHub 貼文上傳: 成功 (posts/2026-10-15_42360.md, commit ede4c6b)
+last_seen_id 更新: 2026-10-15_42360
+Telegram 推播: 失敗 - api.telegram.org:443 被 egress proxy 拒絕（403 policy denial）
+LINE 通知: 依賴 GitHub Actions 自動觸發（line-notify.yml）
