@@ -43,13 +43,13 @@ Telegram 推播被 egress proxy 封鎖，為本環境已知限制。
 - #42356: 2026-10-14 — ANOTHER MASSIVE 21 BILLION DOLLAR INVESTMENT FOR AMERICA! (GlobalFoundries 紐約州)
 - #42335: 2026-10-14 — 影片貼文
 
-=== 最新執行結果（當前執行）===
+=== 執行記錄 3（2026-10-15 UTC）===
 
-執行時間: 2026-10-15 UTC（最新）
-上次記錄 ID: 2026-10-15_42378
+執行時間: 2026-10-15 UTC
+上次記錄 ID: 2026-10-15_42378（SHA: c579ac5a）
 
 【執行摘要】
-- 步驟 1: 成功讀取 last_seen_id.txt，上次記錄 ID: 2026-10-15_42378（SHA: c579ac5a）
+- 步驟 1: 成功讀取 last_seen_id.txt，上次記錄 ID: 2026-10-15_42378
 - 步驟 2A: truthsocial.com RSS/API: DNS 無法解析（ENOTFOUND）
 - 步驟 2B: WebSearch 成功，找到最新已知貼文 ID: 42377（trumpstruth.org）
 - 步驟 2C: trumpstruth.org / thetrumparchive.com: DNS 無法解析（ENOTFOUND）
@@ -60,3 +60,30 @@ Telegram 推播被 egress proxy 封鎖，為本環境已知限制。
 【結論】
 無新貼文。監控完成，不推播通知。
 Telegram 推播為本環境已知限制（egress proxy 封鎖）。
+
+=== 執行記錄 4（2026-10-15 UTC 最新）===
+
+執行時間: 2026-10-15 UTC（定時任務觸發）
+上次記錄 ID: 2026-10-15_42378（SHA: c579ac5a）
+
+【執行摘要】
+- 步驟 1: 成功讀取 last_seen_id.txt，上次記錄 ID: 2026-10-15_42378
+- 步驟 2A: truthsocial.com RSS/API: DNS 無法解析（ENOTFOUND）
+- 步驟 2B: WebSearch 多次搜尋，最高已索引貼文 ID: 42377
+  - #42377: Dan Scavino RT「President Trump arrives in Montana」
+  - 搜尋確認無 ID > 42378 之貼文被索引
+- 步驟 2C: trumpstruth.org / thetrumparchive.com: DNS 無法解析（ENOTFOUND）
+- 步驟 3: 最新已知 ID（42377）< 上次記錄（42378）→ 無新貼文
+- 步驟 4-7: 跳過（無新貼文可分析或推播）
+- last_seen_id.txt: 保持不變（2026-10-15_42378）
+
+【近期貼文背景（本次搜尋所見，已追蹤過）】
+- #42377: 2026-10-15 12:11 PM EDT — RT Dan Scavino，川普抵達蒙大拿州
+- #42376: 2026-10-15 — 宣布 Nidal Hasan 死刑不直播（前次執行已處理）
+- #42374: 2026-10-15 10:46 AM EDT — 影片貼文（Montana）
+- #42373: 2026-10-15 09:48 AM EDT — 影片貼文（Montana 支持者）
+- 今日主要活動：川普赴蒙大拿州 Kalispell 為 Aaron Flint 舉行競選集會
+
+【結論】
+無新貼文。本次監控完成，不推播通知。
+Telegram 推播為本環境已知限制（egress proxy 封鎖 api.telegram.org）。
