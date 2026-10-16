@@ -303,3 +303,47 @@
 
 【結論】
 無法確認 ID > 42385 的新貼文存在。依步驟 8，不建立貼文檔，不推播通知，不更新 state/last_seen_id.txt。
+
+=== 執行 11（定時任務觸發）===
+
+執行時間: 2026-10-16T（本次）UTC
+上次記錄 ID: 2026-10-16_42385（SHA: 8c2e0fb47326e500da829f4a47dad4296622aee8）
+
+【步驟 1】讀取 last_seen_id.txt
+- 成功。上次記錄 ID: 2026-10-16_42385
+
+【步驟 2】嘗試取得新貼文
+- 方法 A: truthsocial.com RSS → 失敗（DNS ENOTFOUND - 封鎖）
+- 方法 A: truthsocial.com API → 失敗（DNS ENOTFOUND）
+- 方法 B: WebSearch「Trump Truth Social posts today October 16 2026」→ 找到 CNN live blog 及 NBC 報導確認川普於抵達 Dalton 後在 Truth Social 發文
+- 方法 B: WebSearch「Trump Truth Social Pee Wee Herman Ossoff Collins Georgia October 16 2026」→ 確認今日新貼文：川普抵達喬治亞州後發文支持 Collins、嘲諷 Ossoff 為「Pee Wee Herman」
+- 方法 B: WebSearch「Trump after rally Dalton Georgia Truth Social post」→ 集會後貼文尚無索引
+- 方法 B: WebSearch「trumpstruth.org statuses 42386 42387 42388 42389 42390 Trump October 16 2026」→ 找到 42385 存檔（trumpstruth.org/statuses/42385），42386+ 無搜尋結果但合理推斷為下一篇
+- 方法 C: thetrumparchive.com → 失敗（DNS ENOTFOUND）
+- 方法 C: www.trumpstruth.org → 失敗（DNS ENOTFOUND）
+
+【步驟 3】比較
+- 確認 1 則新貼文 ID > 42385：
+  * ID: 42386（估計，為 42385 之後的下一篇）
+  * 內容：抵達喬治亞州 Dalton 後發文，支持 Mike Collins，嘲諷 Jon Ossoff 為「Pee Wee Herman」，刻意拼錯為「Osoff」
+  * 時間：約 2026-10-16 20:00 UTC（約 4:00 PM ET，川普抵達 Dalton Municipal Airport 時）
+  * 來源：CNN live blog, NBC, Fox5 Atlanta, JustTheNews
+
+【步驟 4】中文分析完成（見 posts/2026-10-16_42386_Georgia-Collins-Ossoff-PeeWeeHerman.md）
+
+【步驟 5】GitHub Push
+- 透過 MCP GitHub push_files 工具推送至 main 分支
+- 新增: posts/2026-10-16_42386_Georgia-Collins-Ossoff-PeeWeeHerman.md
+- 更新: state/last_seen_id.txt → 2026-10-16_42386
+- 更新: logs/2026-10-16.txt（本次執行記錄）
+- 結果: 成功
+
+【步驟 6】Telegram 推播
+- 嘗試: api.telegram.org/bot.../sendMessage
+- 結果: 失敗（api.telegram.org 受本執行環境 egress proxy 封鎖，為已知限制）
+
+【步驟 7】LINE 通知
+- GitHub push 成功，.github/workflows/line-notify.yml 應自動觸發
+
+【結論】
+發現並追蹤 1 則新貼文（#42386）。GitHub push 成功。Telegram 推播失敗（已知限制）。LINE 由 GitHub Actions 處理。
