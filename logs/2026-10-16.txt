@@ -1,4 +1,4 @@
-執行時間: 2026-10-16 UTC
+執行時間: 2026-10-16 UTC (更新: 01:58 UTC)
 上次記錄的貼文 ID: 2026-10-15_42379
 SHA: de0624c695a784ccf05727f0bf9c7e93b95648d1
 
@@ -7,28 +7,32 @@ SHA: de0624c695a784ccf05727f0bf9c7e93b95648d1
 【方法 A】直接存取 Truth Social RSS/API
 - URL: https://truthsocial.com/@realDonaldTrump.rss
 - URL: https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20
-- 結果: 失敗 — Proxy 回傳 403 Forbidden（CONNECT tunnel blocked）
+- 結果: 失敗 — DNS 解析失敗 (getaddrinfo ENOTFOUND truthsocial.com)
 
-【方法 B】WebSearch 搜尋
-- 關鍵字: "Trump Truth Social posts today site:truthsocial.com OR site:thetrumparchive.com"
-- 關鍵字: "Trump Truth Social October 16 2026"
+【方法 B】WebSearch 搜尋 (多次嘗試)
+- 關鍵字: "Trump Truth Social posts today October 16 2026"
+- 關鍵字: "Trump Truth Social October 15 16 2026 tiger video latest"
+- 關鍵字: "Trump Truth Social post October 15 OR October 16 2026"
 - 結果: 搜尋結果僅顯示至 2026-10-15 的貼文，未發現 2026-10-16 的新貼文
-- 搜尋可見的最新報導：川普 10/15 貼文有關 Fort Hood 射手 Nidal Hasan 執行不直播（posts prior to ID 42379）
+- 透過 WebSearch 確認的最新貼文 (均 <= last_seen_id 42379):
+    * 2026-10-13: 老虎攻擊影片 (trumpstruth.org status ~42322) — "Don't ever mess with nature!"
+    * 2026-10-13 深夜: AI 老虎影片、動物攻擊合輯
+    * 2026-10-15: 白柱修復對比圖 (trumpstruth.org status ~42363)
+    * 2026-10-15: Fort Hood 射手 Nidal Hasan 行刑不直播貼文
+    * last_seen: 2026-10-15 status ~42379
 
 【方法 C】Trump Archive
-- URL: https://www.thetrumparchive.com/
-- 結果: 失敗 — DNS 無法解析（ENOTFOUND）
-- URL: https://www.trumpstruth.org/
-- 結果: 失敗 — Proxy 回傳 403 Forbidden
+- URL: https://www.thetrumparchive.com/ — DNS 解析失敗
+- URL: https://www.trumpstruth.org/ — DNS 解析失敗
+- URL: https://www.presidency.ucsb.edu/ — DNS 解析失敗
 
 === 其他嘗試 ===
-- https://www.kadoa.com/potus/truth — DNS 無法解析
-- foxnews.com, nbcnews.com, cbsnews.com — DNS 無法解析（網路 Egress 政策限制）
+- 嘗試存取新聞網站 (WashingtonPost, Forbes, NBC, Newsweek, Yahoo, Axios, CBS): 全部 DNS 解析失敗
+- 環境網路 Egress 政策封鎖了大多數外部域名
 
 === Telegram 推播 ===
-- 失敗: api.telegram.org — Proxy 回傳 403 Forbidden（CONNECT tunnel blocked）
+- 未執行 (無新貼文可推播)
 
 === 結論 ===
-所有方法皆無法取得 2026-10-16 的新貼文。
-環境網路 Egress 政策封鎖了社群媒體平台及 Telegram API。
-未建立貼文檔，未更新 state/last_seen_id.txt。
+所有方法皆無法確認 2026-10-16 是否有新貼文。
+未建立貼文檔，未更新 state/last_seen_id.txt，未推播 Telegram 或 LINE。
