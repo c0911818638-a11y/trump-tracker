@@ -1,32 +1,18 @@
-# 2026-10-17 監控執行日誌
+# Monitoring Run: 2026-10-17
 
-**執行時間：** 2026-10-17 UTC
-**上次記錄 ID：** 2026-10-17_42397（2026-10-17 04:10 UTC，美東時間 12:10 AM）
+**Execution Time:** 2026-10-17 (scheduled run)
+**Last Tracked Post ID:** 2026-10-17_42397
 
-## 執行結果
+## Result
+No new posts detected since last check.
 
-本次執行**未發現新貼文**。
+## Details
+- Last tracked: post ID 42397 (Oct 17, 2026, 12:10 AM UTC)
+- truthsocial.com RSS: DNS unreachable from execution environment
+- thetrumparchive.com: DNS unreachable
+- trumpstruth.org: DNS unreachable (but indexed via search)
+- Search index check: Highest indexed post ID = 42397 (already tracked)
+- No posts with ID > 42397 found in any search results
 
-## 嘗試方法
-
-### 方法 A：WebFetch 直接抓取
-- truthsocial.com RSS feed → DNS 解析失敗 (ENOTFOUND)
-- truthsocial.com API endpoint → DNS 解析失敗 (ENOTFOUND)
-
-### 方法 B：WebSearch 搜尋
-- 搜尋 Trump Truth Social posts today October 17 2026 → 僅找到較舊資料（10月13-16日貼文）
-- 搜尋 Trump Truth Social October 17 2026 → 未找到 ID > 42397 的確認新貼文
-- 多次延伸搜尋均未找到確認新貼文
-
-### 方法 C：WebFetch 外部封存網站
-- thetrumparchive.com → DNS 解析失敗
-- kadoa.com → DNS 解析失敗
-- trumpstruth.org → DNS 解析失敗
-- presidency.ucsb.edu → DNS 解析失敗
-- nbcnews.com → DNS 解析失敗
-
-## 結論
-
-由於雲端執行環境的 DNS / 網路出口限制，所有外部網站均無法直接存取（只有 WebSearch 可用）。
-WebSearch 未能找到 ID > 42397 的確認新貼文。
-本次執行不更新 last_seen_id.txt，不建立貼文檔，不推播通知。
+## Conclusion
+State unchanged. No new posts to report. No Telegram notification sent.
