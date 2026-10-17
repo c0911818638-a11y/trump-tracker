@@ -1,114 +1,32 @@
-2026-10-17 執行摘要（多次執行）
-==================================
+# 2026-10-17 監控執行日誌
 
-最新 state: 2026-10-16_42395
-最後更新時間: 2026-10-17 UTC（第五次執行）
+**執行時間：** 2026-10-17 UTC
+**上次記錄 ID：** 2026-10-17_42397（2026-10-17 04:10 UTC，美東時間 12:10 AM）
 
-=== 第一次執行（先前）===
+## 執行結果
 
-上次記錄 ID: 2026-10-16_42390
-嘗試方法：
+本次執行**未發現新貼文**。
 
-方法 A（Truth Social 直連）：
-- https://truthsocial.com/@realDonaldTrump.rss → DNS 解析失敗 (getaddrinfo ENOTFOUND)
-- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 → DNS 解析失敗
+## 嘗試方法
 
-方法 B（WebSearch 搜尋）：
-- 搜尋「Trump Truth Social October 17 2026」→ 未找到 2026-10-17 的新貼文
-- 搜尋結果顯示最新紀錄為 2026-10-16 凌晨 1:13 AM（關於 Matt Towery 在 Hannity 節目的貼文）
-- 未有任何結果確認 last_seen_id 42390 之後有新貼文
+### 方法 A：WebFetch 直接抓取
+- truthsocial.com RSS feed → DNS 解析失敗 (ENOTFOUND)
+- truthsocial.com API endpoint → DNS 解析失敗 (ENOTFOUND)
 
-方法 C（Trump Archive）：
-- https://www.thetrumparchive.com/ → DNS 解析失敗 (getaddrinfo ENOTFOUND)
-- https://www.trumpstruth.org/ → DNS 解析失敗
+### 方法 B：WebSearch 搜尋
+- 搜尋 Trump Truth Social posts today October 17 2026 → 僅找到較舊資料（10月13-16日貼文）
+- 搜尋 Trump Truth Social October 17 2026 → 未找到 ID > 42397 的確認新貼文
+- 多次延伸搜尋均未找到確認新貼文
 
-結論：
-所有方法均無法確認是否存在比 2026-10-16_42390 更新的貼文。
-動作：未推播 Telegram / LINE（無新貼文確認）。
+### 方法 C：WebFetch 外部封存網站
+- thetrumparchive.com → DNS 解析失敗
+- kadoa.com → DNS 解析失敗
+- trumpstruth.org → DNS 解析失敗
+- presidency.ucsb.edu → DNS 解析失敗
+- nbcnews.com → DNS 解析失敗
 
-=== 第二次執行（02:59 UTC）===
+## 結論
 
-上次記錄 ID: 2026-10-16_42395
-嘗試方法：
-
-方法 A（Truth Social 直連）：
-- https://truthsocial.com/@realDonaldTrump.rss → ENOTFOUND
-- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → ENOTFOUND
-
-方法 B（WebSearch 搜尋）：
-- 搜尋「Trump Truth Social October 17 2026 latest post」→ 無新貼文
-- 搜尋「Trump Truth Social October 2026 post statement」→ 最新為 10/16 ID 42387
-- 搜尋「Trump today news October 17 2026 White House statement」→ 無 Truth Social 新貼文確認
-- 最新搜尋結果：October 15-16, 2026（IDs up to ~42387），均低於 last_seen_id 42395
-
-方法 C（Trump Archive）：
-- trumpstruth.org: connect_rejected（proxy 封鎖）
-- thetrumparchive.com: ENOTFOUND
-- kadoa.com: ENOTFOUND
-
-結論：無法找到 ID > 42395 的新貼文。未推播任何通知。
-
-=== 第三次執行（約 03:30 UTC）===
-
-上次記錄 ID: 2026-10-16_42395
-嘗試方法：
-
-方法 A（Truth Social 直連）：
-- https://truthsocial.com/@realDonaldTrump.rss → ENOTFOUND
-- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 → ENOTFOUND
-
-方法 B（WebSearch 搜尋，共 7 次）：
-- 未找到 ID > 42395 的新貼文
-- 背景資訊：Trump 預計在肯塔基州 Highland Heights 舉行集會；Katie Zacharia 被解職
-
-方法 C（Trump Archive 及其他）：
-- 全部 ENOTFOUND 或 proxy 封鎖
-
-結論：所有方法均失敗。未推播 Telegram 或 LINE。
-
-=== 第四次執行（04:57 UTC）===
-
-上次記錄 ID: 2026-10-16_42395
-嘗試方法：
-
-方法 A（Truth Social 直連）：
-- https://truthsocial.com/@realDonaldTrump.rss → ENOTFOUND
-- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 → ENOTFOUND
-
-方法 B（WebSearch 搜尋，共 5 次）：
-- 搜尋「Trump Truth Social posts October 17 2026」→ 未找到 10/17 貼文
-- 搜尋「Trump Truth Social latest posts today site:kadoa.com/potus 2026-10-17」→ 未找到 10/17 貼文
-- 搜尋「site:trumpstruth.org statuses 42396 OR 42397 OR 42398 OR 42399 OR 42400」→ 未找到 42396+ 的貼文
-- 搜尋「Trump Truth Social October 17 2026 trumpstruth.org statuses」→ 最新確認仍為 ID 42395 (2026-10-16)
-- 搜尋「Trump Truth Social today October 17 2026 new post」→ 未找到 10/17 貼文
-
-方法 C（Trump Archive 及其他）：
-- https://www.thetrumparchive.com/ → ENOTFOUND
-- https://www.trumpstruth.org/ → ENOTFOUND
-- https://www.kadoa.com/potus/truth → ENOTFOUND
-
-結論：搜尋結果確認最新貼文仍為 ID 42395 (2026-10-16)，無新貼文。
-未推播 Telegram 或 LINE（無新貼文）。
-
-=== 第五次執行（UTC 當天稍後）===
-
-上次記錄 ID: 2026-10-16_42395
-嘗試方法：
-
-方法 A（Truth Social 直連）：
-- https://truthsocial.com/@realDonaldTrump.rss → ENOTFOUND
-- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 → ENOTFOUND
-- https://www.thetrumparchive.com/ → ENOTFOUND
-
-方法 B（WebSearch 搜尋，共 6 次）：
-- 多次查詢「Trump Truth Social posts today October 17 2026」→ 無 2026-10-17 新貼文
-- 查詢「Trump Truth Social October 16 17 2026 latest posts」→ 最新為 Oct 15-16，已涵蓋
-- 補充查詢「Trump Truth Social October 17 2026 new post announcement」→ 無新貼文
-- 補充查詢「Trump Truth Social post Oct 17 OR October 17 2026 statement policy」→ 無新貼文
-
-方法 C（其他聚合器）：
-- kadoa.com, trumpstruth.org, supertrumptracker.com → 全部 ENOTFOUND
-
-結論：已確認截至本次執行，2026-10-17 尚無新貼文。
-last_seen_id 維持：2026-10-16_42395
-未推播 Telegram 或 LINE（無新貼文）。
+由於雲端執行環境的 DNS / 網路出口限制，所有外部網站均無法直接存取（只有 WebSearch 可用）。
+WebSearch 未能找到 ID > 42397 的確認新貼文。
+本次執行不更新 last_seen_id.txt，不建立貼文檔，不推播通知。
