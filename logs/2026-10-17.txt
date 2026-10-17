@@ -2,7 +2,7 @@
 ==================================
 
 最新 state: 2026-10-16_42395
-最後更新時間: 2026-10-17 04:57 UTC
+最後更新時間: 2026-10-17 UTC（第五次執行）
 
 === 第一次執行（先前）===
 
@@ -88,4 +88,27 @@
 - https://www.kadoa.com/potus/truth → ENOTFOUND
 
 結論：搜尋結果確認最新貼文仍為 ID 42395 (2026-10-16)，無新貼文。
+未推播 Telegram 或 LINE（無新貼文）。
+
+=== 第五次執行（UTC 當天稍後）===
+
+上次記錄 ID: 2026-10-16_42395
+嘗試方法：
+
+方法 A（Truth Social 直連）：
+- https://truthsocial.com/@realDonaldTrump.rss → ENOTFOUND
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 → ENOTFOUND
+- https://www.thetrumparchive.com/ → ENOTFOUND
+
+方法 B（WebSearch 搜尋，共 6 次）：
+- 多次查詢「Trump Truth Social posts today October 17 2026」→ 無 2026-10-17 新貼文
+- 查詢「Trump Truth Social October 16 17 2026 latest posts」→ 最新為 Oct 15-16，已涵蓋
+- 補充查詢「Trump Truth Social October 17 2026 new post announcement」→ 無新貼文
+- 補充查詢「Trump Truth Social post Oct 17 OR October 17 2026 statement policy」→ 無新貼文
+
+方法 C（其他聚合器）：
+- kadoa.com, trumpstruth.org, supertrumptracker.com → 全部 ENOTFOUND
+
+結論：已確認截至本次執行，2026-10-17 尚無新貼文。
+last_seen_id 維持：2026-10-16_42395
 未推播 Telegram 或 LINE（無新貼文）。
