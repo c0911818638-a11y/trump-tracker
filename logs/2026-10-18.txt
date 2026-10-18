@@ -1,58 +1,19 @@
-執行時間: 2026-10-18 UTC
-狀態: 成功
+監控執行時間：2026-10-18 (UTC)
+上次記錄 ID：2026-10-18_42415
+GitHub SHA：6fef2098a84b28bb2f5279ee505f02bf1a2b299a
 
-新貼文數量: 1
+錯誤記錄：
+- 方法 A (Truth Social RSS https://truthsocial.com/@realDonaldTrump.rss): 失敗 - getaddrinfo ENOTFOUND truthsocial.com
+- 方法 A (Truth Social API https://truthsocial.com/api/v1/accounts/107780257626128497/statuses): 失敗 - getaddrinfo ENOTFOUND truthsocial.com
+- 方法 C (Trump Archive https://www.thetrumparchive.com/): 失敗 - getaddrinfo ENOTFOUND www.thetrumparchive.com
+- 方法 B (WebSearch): 未找到 2026-10-18 新貼文，最新結果為 2026-10-17
+  - 搜尋查詢1: "Trump Truth Social posts October 18 2026"
+  - 搜尋查詢2: "Trump Truth Social today 2026-10-18 latest posts"
+  - kadoa.com 直連: 失敗 - getaddrinfo ENOTFOUND www.kadoa.com
+  - trumpstruth.org 直連: 失敗 - getaddrinfo ENOTFOUND www.trumpstruth.org
 
-貼文列表:
-- 2026-10-18_42410_Netanyahu-CompleteEndorsement-Iran-Warning.md
-  主題: 川普全力支持內塔尼亞胡競選連任，威脅伊朗「將完成任務」
-  資料來源: 多家新聞媒體報導 (JTA, Times of Israel, Al Jazeera, Axios 等)
-
-GitHub push: 成功
-Telegram 推播失敗: api.telegram.org 被 egress proxy 封鎖（connect_rejected）
-LINE 通知: 依賴 GitHub Actions 自動觸發（因 GitHub push 成功，應已觸發）
-
-備註:
-- Truth Social 網站無法直接訪問（DNS 失敗）
-- thetrumparchive.com 無法訪問（DNS 失敗）
-- 貼文內容透過 WebSearch 搜尋多家媒體報導重建
-- 上次 seen ID: 2026-10-18_42409
-- 本次更新 ID: 2026-10-18_42410
-
----
-
-【第二次執行】2026-10-18 UTC（自動排程）
-
-上次記錄貼文 ID: 2026-10-18_42411
-狀態: 無新貼文
-
-檢查結果:
-- WebSearch 搜尋 "Trump Truth Social October 18 2026" 未找到比 42411 更新的貼文
-- 所有直接訪問來源（truthsocial.com, thetrumparchive.com, trumpstruth.org, kadoa.com）均因網路 egress 政策無法連線（DNS 失敗）
-- 最新搜尋結果顯示最近活動為 2026-10-17（肯塔基州 Highland Heights 集會直播、密西根州 Mike Rogers 參議員初選背書）
-
-結論: 無新貼文需要處理。last_seen_id.txt 維持 2026-10-18_42411 不變。
-Telegram/LINE 通知: 未發送（無新貼文）。
-
----
-
-【第三次執行】2026-10-18T20:57 UTC（自動排程）
-
-上次記錄 ID：2026-10-18_42411
-本次最新 ID：2026-10-18_42414
-
-新貼文（共3篇）：
-- 42412: Netanyahu "Complete and Total Endorsement" 完整背書貼文（以色列大選前9天）
-- 42413: 共和黨民調視頻（53% 最崇拜川普，雷根 18%）
-- 42414: 轉發內塔尼亞胡感謝文（「一起完成任務」，誓言阻止伊朗核武）
-
-GitHub 上傳狀態：成功
-- posts/2026-10-18_42412.md ✓
-- posts/2026-10-18_42413.md ✓
-- posts/2026-10-18_42414.md ✓
-- state/last_seen_id.txt 更新至 2026-10-18_42414 ✓
-
-Telegram 推播狀態：失敗
-原因：egress proxy 拒絕連線（api.telegram.org:443 — 403 policy denial）
-
-LINE 通知：由 GitHub Actions (line-notify.yml) 自動觸發（因 GitHub push 成功，應已觸發）
+結論：
+網路環境 DNS 解析受限，無法直接連接任何外部服務。
+Web 搜尋結果中找不到 2026-10-18 的新貼文（最新記錄仍為 2026-10-17）。
+由於無法取得新貼文，不建立貼文檔，不推播 Telegram 或 LINE。
+last_seen_id.txt 維持現有值：2026-10-18_42415
