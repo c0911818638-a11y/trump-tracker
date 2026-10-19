@@ -1,0 +1,21 @@
+執行時間: 2026-10-19 (UTC)
+上次 ID: 2026-10-18_42420
+
+新貼文偵測:
+- 貼文 ID: 42421 (2026-10-18)
+- 主題: 川普完全背書納坦亞胡連任
+
+步驟 5 GitHub push: 成功 (commit 8d76d958)
+- posts/2026-10-18_42421.md 已建立
+- state/last_seen_id.txt 已更新為 2026-10-18_42421
+
+步驟 6 Telegram 推播: 失敗
+- 原因: 執行環境 egress proxy 拒絕連線至 api.telegram.org:443
+- 錯誤: connect_rejected (host not allowed for this session)
+
+步驟 7 LINE 通知: 由 GitHub Actions 自動處理（push 成功，workflow 應自動觸發）
+
+資料來源限制:
+- truthsocial.com 無法直接存取 (ENOTFOUND)
+- 貼文內容來源: 多家新聞媒體報導 (Times of Israel, CNN, Middle East Eye, Al Jazeera 等)
+- 貼文 ID 42421 為推估值（基於上次 ID 42420 遞增）
