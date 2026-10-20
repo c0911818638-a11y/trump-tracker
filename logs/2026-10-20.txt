@@ -70,15 +70,8 @@
 
 【步驟 3】新貼文比較：
   未發現比 ID 42512 更新的貼文。
-  搜尋涵蓋範圍：October 20 2026 Trump Truth Social 各關鍵字組合。
-  最近的媒體報導均為 October 19 的堪薩斯集會及法院案件貼文。
 
 【步驟 4-7】：跳過（無新貼文）
-
-== 說明 ==
-Truth Social 及大多數新聞網站無法直接存取（網路政策限制）。
-透過 WebSearch 間接監控，可能存在時效落差。
-建議改用 GitHub Actions 定時觸發，以獲得更可靠的外部網路存取。
 
 ---
 
@@ -88,31 +81,23 @@ Truth Social 及大多數新聞網站無法直接存取（網路政策限制）�
 
 == 執行結果 ==
 
-【步驟 1】讀取上次記錄的貼文 ID：成功
-  上次 ID: 2026-10-20_42512
-
-【步驟 2】抓取最新貼文：
-  - Truth Social RSS/API: 失敗（DNS 無法解析 truthsocial.com）
-  - thetrumparchive.com: 失敗（DNS 無法解析）
-  - trumpstruth.org / kadoa.com / forth.news: 失敗（DNS 無法解析）
-  - WebSearch: 執行，搜尋結果仍以 October 19 的貼文為主
-
-【步驟 3】新貼文比較：
-  未發現比 ID 42512 更新的貼文。
-  WebSearch 回傳內容：Fox News 攻擊貼文（10/19 早晨）、法院案件、俄羅斯制裁辯護（週日）。
-  無 October 20 的新報導。
-
-【步驟 4-7】：跳過（無新貼文）
-
-== 狀態 ==
-last_seen_id.txt 維持: 2026-10-20_42512
-Telegram 推播: 跳過（無新貼文）
-LINE 通知: 跳過（無 GitHub push）
+【步驟 1-3】：無新貼文，跳過步驟 4-7
 
 ---
 
 執行時間: 2026-10-20 13:07 UTC（第六次執行）
 上次貼文 ID: 2026-10-20_42512
+最新貼文 ID: 2026-10-20_42512（無新貼文）
+
+== 執行結果 ==
+
+【步驟 1-3】：無新貼文，跳過步驟 4-7
+
+---
+
+執行時間: 2026-10-20 13:30 UTC（第七次執行）
+上次貼文 ID: 2026-10-20_42512
+最新貼文 ID: 2026-10-20_42514
 
 == 執行結果 ==
 
@@ -120,20 +105,31 @@ LINE 通知: 跳過（無 GitHub push）
   上次 ID: 2026-10-20_42512
 
 【步驟 2】抓取最新貼文：
-  - Truth Social RSS (truthsocial.com): 失敗（DNS 無法解析）
-  - Truth Social API (truthsocial.com): 失敗（DNS 無法解析）
-  - thetrumparchive.com: 失敗（DNS 無法解析）
-  - trumpstruth.org: 失敗（DNS 無法解析）
-  - kadoa.com: 失敗（DNS 無法解析）
-  - WebSearch (extended): 執行，多次搜尋涵蓋 42513-42518、October 20 morning/afternoon 關鍵字
+  - truthsocial.com RSS/API: 失敗（proxy 403）
+  - thetrumparchive.com: 失敗（proxy 403）
+  - trumpstruth.org: 失敗（proxy 403）
+  - kadoa.com: 失敗（proxy 403）
+  - WebSearch (extended): 成功，找到 ID 42513、42514
 
-【步驟 3】新貼文比較：
-  未發現比 ID 42512 更新的貼文。
-  WebSearch 所能找到的最新貼文仍為 42512。
+【步驟 3】發現新貼文（> ID 42512）：
+  - 42513 (2026-10-20 12:51 UTC / 08:51 AM EDT): 邊境執法削減財政與犯罪成本文章轉貼
+  - 42514 (2026-10-20 12:51 UTC / 08:51 AM EDT): 川普執政期間股市表現圖片 (S&P 500)
 
-【步驟 4-7】：跳過（無新貼文）
+【步驟 4】中文分析：已完成（見貼文分析檔案）
 
-== 狀態 ==
-last_seen_id.txt 維持: 2026-10-20_42512
-Telegram 推播: 跳過（無新貼文）
-LINE 通知: 跳過（無 GitHub push）
+【步驟 5】GitHub 上傳：成功
+  上傳檔案：
+  - posts/2026-10-20_42513.md
+  - posts/2026-10-20_42514.md
+  更新 state/last_seen_id.txt: 2026-10-20_42514
+  commit: 1eded1f090bc961e7c87db9b001f8e899bbc09c1
+
+【步驟 6】Telegram 推播：失敗
+  Telegram 推播失敗：代理伺服器封鎖 api.telegram.org（HTTP 403 Forbidden）
+
+【步驟 7】LINE 通知：
+  GitHub Push 成功，GitHub Actions 應自動觸發 LINE 通知。
+
+== 今日新增重點（第七次執行）==
+1. 42513: 邊境執法政策宣傳（期中選舉造勢）- 重要程度：中
+2. 42514: 川普執政股市亮眼表現宣傳（期中選舉造勢）- 重要程度：中
