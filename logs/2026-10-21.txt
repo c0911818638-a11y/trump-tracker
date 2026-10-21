@@ -1,35 +1,20 @@
-監控執行日誌 - 2026-10-21
+執行時間: 2026-10-21 UTC
+執行狀態: 成功
 
-執行時間：2026-10-21 12:59:38 UTC
-上次記錄貼文ID：2026-10-21_42536
-SHA：a028f924eb6dd2aaa97326f4b1d6a30c9296c45c
+上次 ID: 2026-10-21_42551
+本次最新 ID: 2026-10-21_42553
 
-【步驟 1】讀取上次記錄：成功
-- 上次 ID：2026-10-21_42536（拜登批評哈伯德貼文）
+新貼文: 2 篇
 
-【步驟 2】嘗試抓取最新貼文：
-- 方法 A（Truth Social RSS/API）：失敗（DNS 解析失敗 getaddrinfo ENOTFOUND truthsocial.com）
-- 方法 B（WebSearch）：已執行，找到 Oct 21 主要貼文資訊
-- 方法 C（Trump Archive）：失敗（DNS 解析失敗）
+貼文 42552:
+  主題: FoxNews 期中選舉媒體批評 (9:50 AM ET)
+  重要程度: 中
 
-【步驟 3】比較結果：
-- 已追蹤的 Oct 21 貼文：
-  * 42533：資料中心強制自發電＋社區股利政策
-  * 42534：史蒂芬·哈伯德從俄羅斯獲釋（川普直接向普京交涉）
-  * 42535：為不實施俄羅斯制裁辯護
-  * 42536：「拜登早該促成哈伯德獲釋！」
-- 透過 GitHub API 確認這四則均已記錄於 posts/ 目錄
-- 在 last_seen_id（42536）之後，未發現任何新貼文（多次 WebSearch 均未找到更新內容）
+貼文 42553:
+  主題: 資料中心社區紅利政策 (MAKE DEALS)
+  重要程度: 高
 
-【結論】本次執行未發現新貼文。
-- 無需更新 state/last_seen_id.txt
-- 無需發送 Telegram 或 LINE 推播
-- 無需上傳新的貼文分析檔案
-
-【注意事項】
-- 外部網站均無法透過 WebFetch 訪問（DNS 解析失敗）
-  包含：truthsocial.com、thetrumparchive.com、cbsnews.com、cnbc.com、kadoa.com、trumpstruth.org
-- 僅能透過 WebSearch 搜尋摘要和 GitHub API 確認資訊
-- Telegram 推播：未觸發（無新貼文）
-- LINE 通知：未觸發（無新貼文 / GitHub push 未執行）
-- 建議：考慮改善網路 egress 政策或增加備用資料來源
+GitHub push (main): 成功
+GitHub state 更新: 成功
+Telegram 推播: 失敗 - connect_rejected (egress proxy 不允許 api.telegram.org)
+LINE 通知: 由 GitHub Actions 自動處理 (已推送 posts/ 至 main 分支)
