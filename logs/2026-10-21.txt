@@ -143,3 +143,29 @@ Telegram 及 LINE 均未推播（無新內容）。
 - 今晚 SC 造勢活動後可能有新貼文（預計 UTC 00:00 後）
 - 不推播通知，不更新 state/last_seen_id.txt
 - Telegram 推播：未執行（無新內容）
+
+## 第八次執行（自動排程）
+執行時間: 2026-10-21T11:01:45Z
+上次記錄 ID: 2026-10-21_42533
+
+未發現新貼文（相較 ID 42533）。
+
+**方法 A（直接存取 Truth Social）：**
+- https://truthsocial.com/@realDonaldTrump.rss → ENOTFOUND（DNS 無法解析）
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → ENOTFOUND（DNS 無法解析）
+
+**方法 B（WebSearch 搜尋）：**
+- 搜尋「Trump Truth Social October 21 2026 morning latest」→ 最新為 10/19-20
+- 搜尋「site:trumpstruth.org 42534-42540」→ 無結果
+- 搜尋「Trump Truth Social post today midterms data center Wednesday 2026」→ 無 10/21 新貼文
+- 確認「Midterm Surprise」貼文為 10/6，非新內容
+- 今日背景：南卡羅萊納州 Pendleton 造勢活動預計今晚 7pm ET（00:00 UTC+1）
+
+**方法 C（Trump Archive）：**
+- thetrumparchive.com, trumpstruth.org → ENOTFOUND（DNS 無法解析）
+
+**結論：**
+- 未發現 ID > 42533 的新貼文
+- 今晚 SC 造勢活動後可能有新貼文（預計造勢結束後 UTC 00:00-02:00）
+- 不推播通知，不更新 state/last_seen_id.txt
+- Telegram 推播：未執行（無新內容）
