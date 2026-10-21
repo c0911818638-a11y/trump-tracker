@@ -41,3 +41,17 @@ Telegram 推播: 不需要（無新貼文）
 狀態: 正常，無需推播
 Telegram 推播: 不需要（無新貼文）
 ---
+
+第四次執行時間: 2026-10-21T19:52Z
+上次記錄 ID: 2026-10-21_42553
+檢查結果: 無新貼文
+抓取方法嘗試:
+- truthsocial.com RSS: 失敗（DNS 解析錯誤 ENOTFOUND）
+- truthsocial.com API: 失敗（DNS 解析錯誤 ENOTFOUND）
+- thetrumparchive.com: 失敗（DNS 解析錯誤 ENOTFOUND）
+- kadoa.com: 失敗（DNS 解析錯誤 ENOTFOUND）
+- trumpstruth.org: 失敗（DNS 解析錯誤 ENOTFOUND）
+- WebSearch: 成功（搜尋結果無 2026-10-21 新貼文，最新為 10-20）
+狀態: 正常，無新貼文，無需推播
+Telegram 推播: 不需要（無新貼文）
+---
