@@ -1,29 +1,42 @@
 # 監控執行記錄 - 2026-10-21
 
+## 第一次執行
 執行時間: 2026-10-21T00:58:40Z
 上次記錄 ID: 2026-10-20_42526
 
-## 執行結果
+未發現新貼文。
+
+**方法 A（直接存取 Truth Social）：**
+- https://truthsocial.com/@realDonaldTrump.rss → ENOTFOUND（DNS 無法解析）
+- https://truthsocial.com/api/v1/accounts/... → ENOTFOUND（DNS 無法解析）
+
+**方法 B（WebSearch 搜尋）：**
+- 找到 2026-10-20 的貼文資料（ID 最高至 42526）
+- 未找到任何 2026-10-21 的新貼文
+
+**方法 C（Trump Archive）：**
+- thetrumparchive.com, trumpstruth.org → ENOTFOUND（DNS 無法解析）
+
+## 第二次執行
+執行時間: 2026-10-21T01:57:00Z
+上次記錄 ID: 2026-10-20_42526
 
 未發現新貼文。
 
-## 各方法嘗試結果
-
 **方法 A（直接存取 Truth Social）：**
-- https://truthsocial.com/@realDonaldTrump.rss → getaddrinfo ENOTFOUND（DNS 無法解析）
-- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → getaddrinfo ENOTFOUND（DNS 無法解析）
+- https://truthsocial.com/@realDonaldTrump.rss → ENOTFOUND（DNS 無法解析）
+- https://truthsocial.com/api/v1/accounts/... → ENOTFOUND（DNS 無法解析）
 
 **方法 B（WebSearch 搜尋）：**
-- 搜尋完成，找到 2026-10-20 的貼文資料（ID 最高至 42526）
-- 未找到任何 2026-10-21 的新貼文
-- 明確搜尋 ID 42527, 42528, 42529, 42530, 42531 均無結果
+- 多次搜尋 2026-10-21 貼文，均無新結果
+- 搜尋 trumpstruth.org IDs 42527-42560 無結果
+- 最新可見貼文仍為 42526（2026-10-20）
 
 **方法 C（Trump Archive）：**
-- https://www.thetrumparchive.com/ → getaddrinfo ENOTFOUND（DNS 無法解析）
-- https://www.trumpstruth.org/ → getaddrinfo ENOTFOUND（DNS 無法解析）
-- https://www.presidency.ucsb.edu/ → getaddrinfo ENOTFOUND（DNS 無法解析）
+- thetrumparchive.com, trumpstruth.org → ENOTFOUND（DNS 無法解析）
 
 ## 結論
 
-無新貼文需要推播。上次 ID（42526）仍為最新貼文。
+連續兩次執行均無法發現 ID > 42526 的新貼文。
+網路代理政策持續封鎖直接存取 Truth Social 及備援網站。
 Telegram 及 LINE 均未推播（無新內容）。
