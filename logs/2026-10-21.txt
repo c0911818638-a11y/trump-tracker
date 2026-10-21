@@ -35,8 +35,28 @@
 **方法 C（Trump Archive）：**
 - thetrumparchive.com, trumpstruth.org → ENOTFOUND（DNS 無法解析）
 
+## 第三次執行
+執行時間: 2026-10-21T02:55:58Z
+上次記錄 ID: 2026-10-20_42526
+
+未發現新貼文。
+
+**方法 A（直接存取 Truth Social）：**
+- https://truthsocial.com/@realDonaldTrump.rss → ENOTFOUND（DNS 無法解析）
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → ENOTFOUND（DNS 無法解析）
+
+**方法 B（WebSearch 搜尋）：**
+- 搜尋「Trump Truth Social posts today October 21 2026」→ 無 10/21 貼文
+- 搜尋「Trump Truth Social October 21 2026」→ 最近索引貼文仍為 10/19-20
+- 搜尋「Trump Truth Social post Wednesday October 21 2026」→ 無結果
+- 搜尋「Trump Truth Social post Iran war midterm October 21 2026」→ 無 10/21 貼文
+- 近期相關動態：Trump 於 10/19 批評 Fox News「為民主黨辯護」；10/8 宣布中期選舉前不攻打伊朗
+
+**方法 C（Trump Archive）：**
+- https://www.thetrumparchive.com/ → ENOTFOUND（DNS 無法解析）
+
 ## 結論
 
-連續兩次執行均無法發現 ID > 42526 的新貼文。
-網路代理政策持續封鎖直接存取 Truth Social 及備援網站。
+連續三次執行均無法發現 ID > 42526 的新貼文。
+網路代理政策持續封鎖直接存取 Truth Social 及備援網站（DNS ENOTFOUND）。
 Telegram 及 LINE 均未推播（無新內容）。
