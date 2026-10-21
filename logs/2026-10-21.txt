@@ -1,171 +1,35 @@
-# 監控執行記錄 - 2026-10-21
+監控執行日誌 - 2026-10-21
 
-## 第一次執行
-執行時間: 2026-10-21T00:58:40Z
-上次記錄 ID: 2026-10-20_42526
+執行時間：2026-10-21 12:59:38 UTC
+上次記錄貼文ID：2026-10-21_42536
+SHA：a028f924eb6dd2aaa97326f4b1d6a30c9296c45c
 
-未發現新貼文。
+【步驟 1】讀取上次記錄：成功
+- 上次 ID：2026-10-21_42536（拜登批評哈伯德貼文）
 
-**方法 A（直接存取 Truth Social）：**
-- https://truthsocial.com/@realDonaldTrump.rss → ENOTFOUND（DNS 無法解析）
-- https://truthsocial.com/api/v1/accounts/... → ENOTFOUND（DNS 無法解析）
+【步驟 2】嘗試抓取最新貼文：
+- 方法 A（Truth Social RSS/API）：失敗（DNS 解析失敗 getaddrinfo ENOTFOUND truthsocial.com）
+- 方法 B（WebSearch）：已執行，找到 Oct 21 主要貼文資訊
+- 方法 C（Trump Archive）：失敗（DNS 解析失敗）
 
-**方法 B（WebSearch 搜尋）：**
-- 找到 2026-10-20 的貼文資料（ID 最高至 42526）
-- 未找到任何 2026-10-21 的新貼文
+【步驟 3】比較結果：
+- 已追蹤的 Oct 21 貼文：
+  * 42533：資料中心強制自發電＋社區股利政策
+  * 42534：史蒂芬·哈伯德從俄羅斯獲釋（川普直接向普京交涉）
+  * 42535：為不實施俄羅斯制裁辯護
+  * 42536：「拜登早該促成哈伯德獲釋！」
+- 透過 GitHub API 確認這四則均已記錄於 posts/ 目錄
+- 在 last_seen_id（42536）之後，未發現任何新貼文（多次 WebSearch 均未找到更新內容）
 
-**方法 C（Trump Archive）：**
-- thetrumparchive.com, trumpstruth.org → ENOTFOUND（DNS 無法解析）
+【結論】本次執行未發現新貼文。
+- 無需更新 state/last_seen_id.txt
+- 無需發送 Telegram 或 LINE 推播
+- 無需上傳新的貼文分析檔案
 
-## 第二次執行
-執行時間: 2026-10-21T01:57:00Z
-上次記錄 ID: 2026-10-20_42526
-
-未發現新貼文。
-
-**方法 A（直接存取 Truth Social）：**
-- https://truthsocial.com/@realDonaldTrump.rss → ENOTFOUND（DNS 無法解析）
-- https://truthsocial.com/api/v1/accounts/... → ENOTFOUND（DNS 無法解析）
-
-**方法 B（WebSearch 搜尋）：**
-- 多次搜尋 2026-10-21 貼文，均無新結果
-- 搜尋 trumpstruth.org IDs 42527-42560 無結果
-- 最新可見貼文仍為 42526（2026-10-20）
-
-**方法 C（Trump Archive）：**
-- thetrumparchive.com, trumpstruth.org → ENOTFOUND（DNS 無法解析）
-
-## 第三次執行
-執行時間: 2026-10-21T02:55:58Z
-上次記錄 ID: 2026-10-20_42526
-
-未發現新貼文。
-
-**方法 A（直接存取 Truth Social）：**
-- https://truthsocial.com/@realDonaldTrump.rss → ENOTFOUND（DNS 無法解析）
-- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → ENOTFOUND（DNS 無法解析）
-
-**方法 B（WebSearch 搜尋）：**
-- 搜尋「Trump Truth Social posts today October 21 2026」→ 無 10/21 貼文
-- 搜尋「Trump Truth Social October 21 2026」→ 最近索引貼文仍為 10/19-20
-- 搜尋「Trump Truth Social post Wednesday October 21 2026」→ 無結果
-- 搜尋「Trump Truth Social post Iran war midterm October 21 2026」→ 無 10/21 貼文
-- 近期相關動態：Trump 於 10/19 批評 Fox News「為民主黨辯護」；10/8 宣布中期選舉前不攻打伊朗
-
-**方法 C（Trump Archive）：**
-- https://www.thetrumparchive.com/ → ENOTFOUND（DNS 無法解析）
-
-## 第四次執行
-執行時間: 2026-10-21T（自動排程）
-上次記錄 ID: 2026-10-20_42526
-
-未發現新貼文。
-
-**方法 A（直接存取 Truth Social）：**
-- https://truthsocial.com/@realDonaldTrump.rss → ENOTFOUND（DNS 無法解析）
-- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → ENOTFOUND（DNS 無法解析）
-
-**方法 B（WebSearch 搜尋）：**
-- 搜尋「Trump Truth Social posts today site:truthsocial.com OR site:thetrumparchive.com 2026」→ 無 10/21 貼文
-- 搜尋「Trump Truth Social October 21 2026 latest posts」→ 最新索引貼文仍為 10/19-20
-- 搜尋「Trump Truth Social Wednesday October 21 2026」→ 無結果
-- 搜尋「Trump statement October 21 2026 midterms Israel Netanyahu」→ 最新為 10/18-19
-- 搜尋「Trump post today 2026 October 21 morning announcement」→ 無早晨貼文，今日排程：SC 南卡 Pendleton 晚上 7pm ET 造勢活動
-- 搜尋「Trump Truth Social harvest fuel farm diesel 8 billion post ID 2026」→ 10/9 貼文（舊）
-- 搜尋「Trump Truth Social Medicare whistleblower South Carolina October 20 21 2026」→ 無直接符合
-- 搜尋「Trump Truth Social after North Carolina rally October 20 2026 late night post」→ 無結果
-- 搜尋「site:trumpstruth.org statuses 42527 OR 42528...」→ 無直接符合
-
-**方法 C（Trump Archive）：**
-- https://www.thetrumparchive.com/ → ENOTFOUND（DNS 無法解析）
-- https://www.trumpstruth.org/statuses/42527 → ENOTFOUND（DNS 無法解析）
-- https://www.kadoa.com/potus/truth → ENOTFOUND（DNS 無法解析）
-
-**今日背景資訊（來自搜尋）：**
-- 2026-10-21 排程：Trump 將在南卡羅萊納州 Pendleton 舉行造勢活動（晚上 7pm ET）
-- 中期選舉距今約 14 天
-- Truth Social 日活躍用戶約 26 萬，年減 36%
-
-## 第五次執行
-執行時間: 2026-10-21T05:55:51Z
-上次記錄 ID: 2026-10-21_42532
-
-未發現新貼文（相較 ID 42532）。
-
-**方法 A（直接存取 Truth Social）：**
-- https://truthsocial.com/@realDonaldTrump.rss → ENOTFOUND（DNS 無法解析）
-- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → ENOTFOUND（DNS 無法解析）
-
-**方法 B（WebSearch 搜尋）：**
-- 搜尋「Trump Truth Social posts today site:truthsocial.com OR site:thetrumparchive.com 2026」→ 無 10/21 新貼文
-- 搜尋「Trump Truth Social "October 21" 2026 posts today news」→ 最新索引貼文為 10/20
-
-**方法 C（Trump Archive）：**
-- https://www.thetrumparchive.com/ → ENOTFOUND（DNS 無法解析）
-- www.trumpstruth.org → ENOTFOUND（DNS 無法解析）
-- www.kadoa.com → ENOTFOUND（DNS 無法解析）
-- www.presidency.ucsb.edu → ENOTFOUND（DNS 無法解析）
-
-**結論：**
-- 未發現 ID > 42532 的新貼文
-- 所有直接存取管道持續 DNS ENOTFOUND
-- 不推播通知，不更新 state/last_seen_id.txt
-
-## 結論（至第五次執行）
-
-連續五次執行均無法發現 ID > 42532 的新貼文。
-網路代理政策持續封鎖直接存取 Truth Social 及備援網站（DNS ENOTFOUND）。
-Telegram 及 LINE 均未推播（無新內容）。
-
-## 第七次執行（自動排程）
-執行時間: 2026-10-21T08:58:25Z
-上次記錄 ID: 2026-10-21_42533
-
-未發現新貼文（相較 ID 42533）。
-
-**方法 A（直接存取 Truth Social）：**
-- https://truthsocial.com/@realDonaldTrump.rss → ENOTFOUND（DNS 無法解析）
-- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → ENOTFOUND（DNS 無法解析）
-
-**方法 B（WebSearch 搜尋）：**
-- 搜尋「Trump Truth Social posts today October 21 2026」→ 無 10/21 新貼文
-- 搜尋「Trump Truth Social October 21 2026 latest posts」→ 最新為 10/19-20
-- 搜尋「Trump Truth Social rally South Carolina Pendleton October 21」→ 確認今晚 7pm ET 在 Clemson/Pendleton SC 有造勢活動，但無貼文
-- 搜尋「site:trumpstruth.org statuses 42534-42538」→ 無結果
-- 今日背景：川普預計在南卡羅萊納州 Clemson T. Ed Garrison Arena 支持 Darline Graham（參議員候選人）造勢，晚上 7pm ET 開始
-
-**方法 C（Trump Archive）：**
-- www.thetrumparchive.com → ENOTFOUND（DNS 無法解析）
-- www.trumpstruth.org → ENOTFOUND（DNS 無法解析）
-
-**結論：**
-- 未發現 ID > 42533 的新貼文
-- 今晚 SC 造勢活動後可能有新貼文（預計 UTC 00:00 後）
-- 不推播通知，不更新 state/last_seen_id.txt
-- Telegram 推播：未執行（無新內容）
-
-## 第八次執行（自動排程）
-執行時間: 2026-10-21T11:01:45Z
-上次記錄 ID: 2026-10-21_42533
-
-未發現新貼文（相較 ID 42533）。
-
-**方法 A（直接存取 Truth Social）：**
-- https://truthsocial.com/@realDonaldTrump.rss → ENOTFOUND（DNS 無法解析）
-- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → ENOTFOUND（DNS 無法解析）
-
-**方法 B（WebSearch 搜尋）：**
-- 搜尋「Trump Truth Social October 21 2026 morning latest」→ 最新為 10/19-20
-- 搜尋「site:trumpstruth.org 42534-42540」→ 無結果
-- 搜尋「Trump Truth Social post today midterms data center Wednesday 2026」→ 無 10/21 新貼文
-- 確認「Midterm Surprise」貼文為 10/6，非新內容
-- 今日背景：南卡羅萊納州 Pendleton 造勢活動預計今晚 7pm ET（00:00 UTC+1）
-
-**方法 C（Trump Archive）：**
-- thetrumparchive.com, trumpstruth.org → ENOTFOUND（DNS 無法解析）
-
-**結論：**
-- 未發現 ID > 42533 的新貼文
-- 今晚 SC 造勢活動後可能有新貼文（預計造勢結束後 UTC 00:00-02:00）
-- 不推播通知，不更新 state/last_seen_id.txt
-- Telegram 推播：未執行（無新內容）
+【注意事項】
+- 外部網站均無法透過 WebFetch 訪問（DNS 解析失敗）
+  包含：truthsocial.com、thetrumparchive.com、cbsnews.com、cnbc.com、kadoa.com、trumpstruth.org
+- 僅能透過 WebSearch 搜尋摘要和 GitHub API 確認資訊
+- Telegram 推播：未觸發（無新貼文）
+- LINE 通知：未觸發（無新貼文 / GitHub push 未執行）
+- 建議：考慮改善網路 egress 政策或增加備用資料來源
