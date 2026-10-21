@@ -55,3 +55,18 @@ Telegram 推播: 不需要（無新貼文）
 狀態: 正常，無新貼文，無需推播
 Telegram 推播: 不需要（無新貼文）
 ---
+
+第五次執行時間: 2026-10-21T21:00:43Z
+上次記錄 ID: 2026-10-21_42553
+檢查結果: 無新貼文
+抓取方法嘗試:
+- truthsocial.com RSS: 失敗（DNS 解析錯誤 ENOTFOUND）
+- truthsocial.com API: 失敗（DNS 解析錯誤 ENOTFOUND）
+- thetrumparchive.com: 失敗（DNS 解析錯誤 ENOTFOUND）
+- kadoa.com: 失敗（DNS 解析錯誤 ENOTFOUND）
+- trumpstruth.org: 失敗（DNS 解析錯誤 ENOTFOUND）
+- WebSearch: 成功（確認 trumpstruth.org 最新索引 ID 為 42553，與上次記錄相符）
+狀態: 正常，無新貼文，無需推播
+Telegram 推播: 不需要（無新貼文）
+備注: 今日稍早 Telegram 推播失敗（第一次執行），貼文 42552/42553 未能透過 Telegram 通知用戶
+      LINE 通知已由 GitHub Actions 自動處理
