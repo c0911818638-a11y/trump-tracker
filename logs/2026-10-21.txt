@@ -86,8 +86,33 @@
 - 中期選舉距今約 14 天
 - Truth Social 日活躍用戶約 26 萬，年減 36%
 
+## 第五次執行
+執行時間: 2026-10-21T05:55:51Z
+上次記錄 ID: 2026-10-21_42532
+
+未發現新貼文（相較 ID 42532）。
+
+**方法 A（直接存取 Truth Social）：**
+- https://truthsocial.com/@realDonaldTrump.rss → ENOTFOUND（DNS 無法解析）
+- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → ENOTFOUND（DNS 無法解析）
+
+**方法 B（WebSearch 搜尋）：**
+- 搜尋「Trump Truth Social posts today site:truthsocial.com OR site:thetrumparchive.com 2026」→ 無 10/21 新貼文
+- 搜尋「Trump Truth Social "October 21" 2026 posts today news」→ 最新索引貼文為 10/20
+
+**方法 C（Trump Archive）：**
+- https://www.thetrumparchive.com/ → ENOTFOUND（DNS 無法解析）
+- www.trumpstruth.org → ENOTFOUND（DNS 無法解析）
+- www.kadoa.com → ENOTFOUND（DNS 無法解析）
+- www.presidency.ucsb.edu → ENOTFOUND（DNS 無法解析）
+
+**結論：**
+- 未發現 ID > 42532 的新貼文
+- 所有直接存取管道持續 DNS ENOTFOUND
+- 不推播通知，不更新 state/last_seen_id.txt
+
 ## 結論
 
-連續四次執行均無法發現 ID > 42526 的新貼文。
+連續五次執行均無法發現 ID > 42532 的新貼文。
 網路代理政策持續封鎖直接存取 Truth Social 及備援網站（DNS ENOTFOUND）。
 Telegram 及 LINE 均未推播（無新內容）。
