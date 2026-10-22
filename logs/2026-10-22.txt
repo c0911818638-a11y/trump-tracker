@@ -93,3 +93,40 @@ last_seen_id 維持 2026-10-22_42573 不變。
 搜尋引擎未索引 2026-10-22 的新貼文。
 last_seen_id 維持 2026-10-22_42573 不變（無更新）。
 未發送 Telegram 或 LINE 通知（無新貼文可處理）。
+
+---
+
+## 執行記錄 5
+**執行時間：** 2026-10-22T18:58:22Z（美東 14:58 ET）
+**上次記錄貼文 ID：** 2026-10-22_42612
+
+### 嘗試方法
+
+**方法 A：WebFetch**
+- truthsocial.com/@realDonaldTrump.rss：失敗（getaddrinfo ENOTFOUND）
+- truthsocial.com/api/v1/accounts/107780257626128497/statuses：失敗（ENOTFOUND）
+
+**方法 B：WebSearch（多次搜尋）**
+- 搜尋「Trump Truth Social posts today 2026-10-22」→ 找到已知貼文 42611, 42612
+- 搜尋「Trump Truth Social October 22 2026 latest posts」→ 最新已索引貼文為 42612
+- 搜尋「trumpstruth.org statuses 42613-42630」→ 無新貼文記錄
+- 搜尋「Trump Truth Social afternoon October 22 2026」→ 未找到 ID > 42612 的新貼文
+
+**方法 C：其他來源**
+- trumpstruth.org：失敗（ENOTFOUND）
+- kadoa.com：失敗（ENOTFOUND）
+- thetrumparchive.com：失敗（ENOTFOUND）
+- cbsnews.com、cnbc.com：失敗（ENOTFOUND）
+
+### 已確認之最新貼文
+- 貼文 42611（11:40 AM EDT）：伊朗油價/期中選舉指控 ← 已於前次執行記錄
+- 貼文 42612（12:22 PM EDT）：LeBron James/國歌爭議 ← 已於前次執行記錄
+
+### 本次執行結論
+未發現 ID > 42612 之新貼文。
+截至美東下午 14:58，last_seen_id 維持 2026-10-22_42612 不變。
+未發送 Telegram 或 LINE 通知（無新貼文）。
+
+### 已知背景（截至 10/22 下午）
+- 距離期中選舉（2026-11-03）剩 12 天
+- 今日已記錄貼文包括：42604, 42605, 42606, 42610, 42612
