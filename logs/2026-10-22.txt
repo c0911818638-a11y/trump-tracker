@@ -125,3 +125,36 @@ last_seen_id 維持 2026-10-22_42573 不變（無更新）。
 truthsocial.com 及所有直連備援網域 DNS 解析持續失敗。
 last_seen_id 維持 2026-10-22_42612 不變（無更新）。
 未發送 Telegram 或 LINE 通知（無新貼文可處理）。
+
+---
+
+## 執行記錄 6
+**執行時間：** 2026-10-22T22:55 UTC（排程自動執行）
+**上次記錄貼文 ID：** 2026-10-22_42615
+
+### 嘗試方法
+
+**方法 A：WebFetch**
+- truthsocial.com/@realDonaldTrump.rss：失敗（getaddrinfo ENOTFOUND）
+- truthsocial.com API：失敗（getaddrinfo ENOTFOUND）
+- thetrumparchive.com：失敗（getaddrinfo ENOTFOUND）
+- trumpstruth.org：失敗（getaddrinfo ENOTFOUND）
+- kadoa.com：失敗（getaddrinfo ENOTFOUND）
+- cbsnews.com：失敗（getaddrinfo ENOTFOUND）
+
+**方法 B：WebSearch（多次搜尋）**
+- 搜尋「Trump Truth Social posts today October 22 2026 site:truthsocial.com OR site:thetrumparchive.com」→ 最新索引貼文為 Oct 21（俄羅斯制裁辯護）
+- 搜尋「Trump Truth Social "October 22, 2026" posts」→ 無 Oct 22 新貼文
+- 搜尋「Trump Truth Social post today 2026-10-22」→ 最新為 Oct 21 資料中心貼文
+- 搜尋「Trump Truth Social latest posts today October 22 2026」→ 確認無 Oct 22 新貼文索引
+
+**代理政策限制**
+- api.telegram.org:443：被 proxy 擋下（gateway answered 403 to CONNECT — policy denial）
+- Telegram 推播因此無法執行
+
+### 本次執行結論
+所有直連備援來源均 DNS 解析失敗。
+搜尋引擎確認截至本次執行，尚無 Oct 22 新貼文被索引（最新為 Oct 21）。
+last_seen_id 維持 2026-10-22_42615 不變（無新貼文，無更新）。
+Telegram 推播失敗：proxy 封鎖 api.telegram.org:443（403 policy denial）。
+未發送任何通知（無新貼文 + Telegram 封鎖）。
