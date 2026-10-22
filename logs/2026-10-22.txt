@@ -10,15 +10,25 @@
 4. WebSearch: "Trump Truth Social posts today site:truthsocial.com OR site:thetrumparchive.com 2026-10-22" — 無2026-10-22結果
 5. WebSearch: "Trump Truth Social October 22 2026 post" — 無2026-10-22結果，最新為10月21日
 6. WebSearch: "Trump Truth Social today 2026-10-22 midterms Iran sanctions" — 無2026-10-22結果
-7. WebSearch: site:trumpstruth.org statuses 42557~42562 — 無結果，最高已索引ID為42551 (2026-10-21)
-8. 多次嘗試主要新聞網站 (CBS, NBC, CNBC, Yahoo, The Hill, Al Jazeera等) — 皆DNS解析失敗
+7. WebSearch: site:trumpstruth.org statuses 42557~42562 — 無結果
+8. WebSearch: Trump 80 "1 AM" posting frenzy — 找到多篇文章但皆非2026-10-22
+9. WebSearch: Trump Sioux City Iowa rally October 22 2026 — 確認今日有愛荷華州蘇城造勢晚會(下午4:30開始)
+10. WebSearch: Trump Truth Social "October 22, 2026" 精確搜尋 — 無結果
+11. WebFetch: 多個新聞網站 (trumpstruth.org, kadoa.com, yahoo.com, rawstory.com, poynter.org, cnbc.com, aol.com等) — 皆DNS解析失敗
+
+已確認的最新貼文資訊 (來自搜尋結果):
+- Status 42533 (2026-10-21 1:37 AM EDT): 資料中心貼文，Trump談論AI資料中心應向社區支付紅利並自行發電
+- Status 42545 (2026-10-21 10:37 AM): 影片轉發
+- Status 42549 (2026-10-21 10:43 AM): 轉發NASCAR Richard Petty相關貼文
+- Status 42551 (2026-10-21): 圖片貼文
+- Status 42556 (2026-10-21): last_seen_id
 
 結論:
 - 目前未發現任何 ID > 42556 的新貼文
-- trumpstruth.org 索引顯示最高貼文 ID 為42551 (2026-10-21)，低於 last_seen_id 42556
 - 2026-10-22 可能尚無新貼文，或貼文尚未被搜尋引擎索引
+- Trump今日有愛荷華州蘇城(Sioux City)中期選舉造勢晚會，下午4:30~6PM
 - 本次執行無新貼文，未更新 last_seen_id，未發送 Telegram 通知
 
 網路存取限制說明:
-大多數外部網站的 DNS 解析在此雲端執行環境中失敗，僅 WebSearch (Google) 可正常運作。
+大多數外部網站的DNS解析在此雲端執行環境中失敗，僅 WebSearch 可正常運作。
 truthsocial.com 及相關檔案庫網站均無法直接存取。
