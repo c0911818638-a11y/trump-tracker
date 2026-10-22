@@ -66,3 +66,30 @@
 搜尋引擎索引中無 2026-10-22 的新貼文資料（最新為 10-20）。
 last_seen_id 維持 2026-10-22_42573 不變。
 未發送 Telegram 或 LINE 通知（無新貼文）。
+
+---
+
+## 執行記錄 4
+**執行時間：** 2026-10-22T（排程自動執行）
+**上次記錄貼文 ID：** 2026-10-22_42573
+
+### 嘗試方法
+
+**方法 A：WebFetch**
+- truthsocial.com/@realDonaldTrump.rss：失敗（getaddrinfo ENOTFOUND truthsocial.com）
+- truthsocial.com/api/v1/accounts/107780257626128497/statuses：失敗（ENOTFOUND）
+
+**方法 B：WebSearch**
+- 搜尋「Trump Truth Social posts today 2026-10-22」→ 無 10-22 新貼文
+- 搜尋「Trump Truth Social October 22 2026 latest」→ 最新為 10-21 資料中心貼文
+- 搜尋「Trump Truth Social post today October 22 2026 latest」→ 無新結果
+
+**方法 C：其他來源**
+- thetrumparchive.com：失敗（ENOTFOUND）
+- cbsnews.com：失敗（ENOTFOUND）
+
+### 本次執行結論
+持續性 DNS 解析失敗，truthsocial.com 及所有備援網域均無法連線。
+搜尋引擎未索引 2026-10-22 的新貼文。
+last_seen_id 維持 2026-10-22_42573 不變（無更新）。
+未發送 Telegram 或 LINE 通知（無新貼文可處理）。
