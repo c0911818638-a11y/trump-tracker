@@ -1,0 +1,24 @@
+監控執行日期: 2026-10-22
+執行時間 (UTC): 2026-10-22
+
+上次記錄貼文 ID: 2026-10-21_42556
+
+嘗試方法:
+1. WebFetch: https://truthsocial.com/@realDonaldTrump.rss — 失敗 (DNS解析錯誤: ENOTFOUND)
+2. WebFetch: https://truthsocial.com/api/v1/accounts/107780257626128497/statuses — 失敗 (DNS解析錯誤)
+3. WebFetch: https://www.thetrumparchive.com/ — 失敗 (DNS解析錯誤: ENOTFOUND)
+4. WebSearch: "Trump Truth Social posts today site:truthsocial.com OR site:thetrumparchive.com 2026-10-22" — 無2026-10-22結果
+5. WebSearch: "Trump Truth Social October 22 2026 post" — 無2026-10-22結果，最新為10月21日
+6. WebSearch: "Trump Truth Social today 2026-10-22 midterms Iran sanctions" — 無2026-10-22結果
+7. WebSearch: site:trumpstruth.org statuses 42557~42562 — 無結果，最高已索引ID為42551 (2026-10-21)
+8. 多次嘗試主要新聞網站 (CBS, NBC, CNBC, Yahoo, The Hill, Al Jazeera等) — 皆DNS解析失敗
+
+結論:
+- 目前未發現任何 ID > 42556 的新貼文
+- trumpstruth.org 索引顯示最高貼文 ID 為42551 (2026-10-21)，低於 last_seen_id 42556
+- 2026-10-22 可能尚無新貼文，或貼文尚未被搜尋引擎索引
+- 本次執行無新貼文，未更新 last_seen_id，未發送 Telegram 通知
+
+網路存取限制說明:
+大多數外部網站的 DNS 解析在此雲端執行環境中失敗，僅 WebSearch (Google) 可正常運作。
+truthsocial.com 及相關檔案庫網站均無法直接存取。
