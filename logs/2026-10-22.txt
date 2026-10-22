@@ -93,3 +93,35 @@ last_seen_id 維持 2026-10-22_42573 不變。
 搜尋引擎未索引 2026-10-22 的新貼文。
 last_seen_id 維持 2026-10-22_42573 不變（無更新）。
 未發送 Telegram 或 LINE 通知（無新貼文可處理）。
+
+---
+
+## 執行記錄 5
+**執行時間：** 2026-10-22T（排程自動執行）
+**上次記錄貼文 ID：** 2026-10-22_42612
+
+### 嘗試方法
+
+**方法 A：WebFetch**
+- truthsocial.com/@realDonaldTrump.rss：失敗（getaddrinfo ENOTFOUND truthsocial.com）
+- thetrumparchive.com：失敗（ENOTFOUND）
+- trumpstruth.org：失敗（ENOTFOUND）
+
+**方法 B：WebSearch（多次搜尋）**
+- 搜尋「Trump Truth Social posts today October 22 2026」→ 找到最高 ID 42612（即上次已記錄 ID）
+- 搜尋「trumpstruth.org statuses 42613-42618 October 2026」→ 無 ID > 42612 的新貼文
+- 搜尋「Trump Truth Social new posts October 22 2026 midterms voting」→ 確認今日已知最高 ID 為 42612
+- 搜尋「"October 22, 2026" Trump Truth Social post text」→ 無新貼文確認
+- 搜尋「Trump Truth Social new post October 22 2026 LeBron OR midterms OR Iran」→ 最新貼文均 ≤ 42612
+
+**方法 C：其他來源**
+- thetrumparchive.com：失敗（ENOTFOUND）
+- trumpstruth.org：失敗（ENOTFOUND）
+- kadoa.com：失敗（ENOTFOUND）
+
+### 本次執行結論
+搜尋結果確認最高已知貼文 ID 為 42612，即上次已記錄 ID。
+未發現 ID > 42612 之新貼文。
+truthsocial.com 及所有直連備援網域 DNS 解析持續失敗。
+last_seen_id 維持 2026-10-22_42612 不變（無更新）。
+未發送 Telegram 或 LINE 通知（無新貼文可處理）。
