@@ -1,51 +1,45 @@
-執行時間: 2026-10-22T05:00 UTC
-上次貼文 ID (執行前): 2026-10-21_42556
+# Trump Truth Social 監控記錄 - 2026-10-22
 
-【擷取方式】
-- truthsocial.com 直接存取：失敗 (DNS 解析失敗，環境限制)
-- thetrumparchive.com：失敗 (DNS 解析失敗)
-- WebSearch 搜尋：成功（找到 trumpstruth.org 快取資料）
+## 執行時間
+2026-10-22T09:59:03Z
 
-【新貼文摘要】
-已偵測到比 42556 更新的貼文：
-- 42557: American Manufacturing is BOOMING（製造業宣傳）
-- 42558: I am very concerned about the Dan S. Sullivan Race（阿拉斯加選情）
-- 42559: 轉推（內容不明）
-- 42560: 轉推，涉及內華達州投票（Joe Lombardo）
-- 42561-42566: 未知（可能為圖片貼或轉推；含資料中心 MAKE DEALS 貼文）
-- 42567: 圖片貼文（飛機機艙合照）
+## 上次記錄的貼文 ID
+2026-10-22_42570 (SHA: a1e6c0425ccaffae8f47232fdc64f602b2a052c2)
 
-【GitHub 上傳結果】
-- posts/2026-10-21_42557.md: 成功 ✓
-- posts/2026-10-21_42558.md: 成功 ✓
-- posts/2026-10-21_42567.md: 成功 ✓
-- state/last_seen_id.txt: 更新為 2026-10-22_42567 ✓
+## 執行結果
+本次監控未找到新貼文。
 
-【Telegram 推播】
-失敗：api.telegram.org:443 被 egress proxy 封鎖（政策拒絕，403）
+## 嘗試方法
 
-【LINE 通知】
-GitHub Actions 已由 posts 提交觸發，應自動推播 LINE。
+### 方法 A：WebFetch
+- truthsocial.com/@realDonaldTrump.rss：失敗（ENOTFOUND - DNS 解析失敗）
+- truthsocial.com API：失敗（ENOTFOUND）
+- trumpstruth.org/statuses/42571：失敗（ENOTFOUND）
 
-【備註】
-由於 egress 政策限制，無法直接存取 truthsocial.com 及 Telegram API。
-貼文內容係透過 WebSearch 從新聞報導與 trumpstruth.org 快取重建。
-42557 和 42558 的部分原文係根據新聞摘要推斷，可能與原文略有出入。
-42559/42560/42561-42566 為轉推或圖片貼，詳細原文無法確認。
+### 方法 B：WebSearch
+多次搜尋「Trump Truth Social posts October 22 2026」及相關關鍵字，未找到 ID 42570 之後的新貼文。
+最近索引的貼文（來自 trumpstruth.org）：
+- statuses/42569：2026-10-21 22:03 ET，圖片貼文（BIDEN vs TRUMP 對比圖）
+- statuses/42568：2026-10-21，retruth
 
----
+### 方法 C：其他來源
+- thetrumparchive.com：失敗（ENOTFOUND）
+- foxnews.com、cbsnews.com、yahoo.com、npr.org：失敗（ENOTFOUND）
+- presidency.ucsb.edu：失敗（ENOTFOUND）
 
-執行時間: 2026-10-22T08:56:33 UTC
-上次貼文 ID (執行前): 2026-10-22_42570
+## 今日新聞背景（透過 WebSearch）
+- 川普今日（Thu Oct 22）於愛荷華州蘇城舉行競選活動
+- 美國與伊朗間接談判持續進行；川普表示「做得很好」
+- 距離期中選舉（Nov 3）剩 13 天
+- 川普週三在南卡羅來納州集會稱：半數執政後的政策從未在競選期間提及
 
-【擷取方式】
-- truthsocial.com 直接存取：失敗 (DNS 解析失敗)
-- thetrumparchive.com：失敗 (DNS 解析失敗)
-- WebSearch 搜尋：成功
+## 結論
+所有外部網站直接存取均因 DNS 解析失敗而無法連線。
+透過 WebSearch 未找到 ID 42570 之後的新貼文。
+UTC 09:59Z = 美東 05:59 ET，川普可能尚未發布今日新貼文。
 
-【新貼文摘要】
-無新貼文（最新已知貼文 42570 已是最新）
-
-【備註】
-42570: Andrew Klavan 書籍推薦「Find Me Nowhere」(2026-10-22 01:00 AM EDT)
-搜尋結果未找到 42571 以上任何新貼文，確認無更新。
+## 後續動作
+- GitHub log 寫入：嘗試（curl 因 proxy 限制失敗，改用 MCP 工具）
+- 未更新 state/last_seen_id.txt（無新貼文）
+- 未建立貼文分析檔案
+- 未發送 Telegram 或 LINE 通知（無新貼文）
