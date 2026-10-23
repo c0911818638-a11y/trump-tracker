@@ -1,25 +1,42 @@
-執行摘要 2026-10-23
-==================
-步驟 1: 讀取 last_seen_id = "2026-10-23_42668" ✓
-步驟 2: Truth Social 直連失敗 (ENOTFOUND)，trumpstruth.org 直連失敗 (ENOTFOUND)，改用 WebSearch 取得貼文清單 ✓
-步驟 3: 發現 11 篇新貼文 (42669, 42670, 42672, 42673, 42675, 42677, 42680, 42681, 42682, 42683, 42684) ✓
-步驟 4: 完成所有貼文中文分析 ✓
-步驟 5: GitHub push 成功 (commit: 9f04191a6809347e86158518b3dfc446ff03a998)，last_seen_id 更新為 "2026-10-23_42684" ✓
-步驟 6: Telegram 推播失敗：api.telegram.org:443 被 egress proxy 封鎖 (403 policy denial)
-步驟 7: LINE 通知由 GitHub Actions 自動處理（GitHub push 已成功）✓
+監控執行紀錄 - 2026-10-23
+==========================
 
-新貼文清單：
-- 42669: RT (蒙大拿投票/Kurt Alme) [低]
-- 42670: 蒙大拿提前投票通知 [低]
-- 42672: 肯塔基投票動員 [低]
-- 42673: 堪薩斯投票動員 [低]
-- 42675: 愛荷華提前投票通知 [低]
-- 42677: 印第安那提前投票通知 [低]
-- 42680: 反射池修復更新 (2026-10-23 04:41 UTC) [中]
-- 42681: Roger Marshall/Bombardier 2.7億美元投資背書 (2026-10-23 03:41 UTC) [中]
-- 42682: Max Engling 印第安那州務卿背書 [低]
-- 42683: 紐約時報/Wedgewood假民調攻擊 [高]
-- 42684: Ilhan Omar身份詐欺指控 [高]
+執行時間：2026-10-23 UTC
+上次記錄貼文 ID：2026-10-23_42668
+
+【取得方式結果】
+- 方法 A (WebFetch RSS/API)：失敗 - truthsocial.com DNS 解析失敗（getaddrinfo ENOTFOUND）
+- 方法 B (WebSearch)：部分成功 - 找到貼文但無法確認 Truth Social 貼文 ID
+- 方法 C (Trump Archive)：失敗 - thetrumparchive.com DNS 解析失敗
+
+【搜尋結果摘要】
+透過 Web 搜尋找到以下貼文（無法驗證是否為新貼文）：
+
+1. 2026-10-23 12:41 AM UTC
+   主題：國家廣場倒影池（Reflecting Pool）
+   摘要：川普貼文稱倒影池已填滿 85%，草地在破壞事件後已修復，並已安裝監視攝影機
+   狀態：此貼文可能已由前次執行捕獲（last_seen_id 日期為 2026-10-23）
+
+2. 2026-10-22 晚間
+   主題：龐巴迪（Bombardier）投資美國 2.7 億美元
+   狀態：日期早於 last_seen_id，應已捕獲
+
+3. 2026-10-22
+   主題：印第安納州州務卿選舉背書（Max Engling）
+   狀態：日期早於 last_seen_id，應已捕獲
+
+4. 2026-10-22
+   主題：支持 Vivek Ramaswamy 攻擊廣告（涉及 Amy Acton 疏遠母親）
+   狀態：日期早於 last_seen_id，應已捕獲
+
+【結論】
+本次執行未發現新貼文（比 last_seen_id 2026-10-23_42668 更新的貼文）。
+未更新 state/last_seen_id.txt。
+未發送 Telegram 通知。
+
+【技術問題】
+大多數外部網站 DNS 解析失敗，導致無法直接存取 Truth Social API 或新聞來源。
+僅能透過 Web 搜尋摘要取得部分貼文資訊，且缺乏精確的貼文 ID 以進行比對。
 
 ---
 
@@ -170,4 +187,23 @@
 注意事項：
 - 自 #42685（約 16:33 UTC）至本次執行（21:00 UTC）約 4.5 小時無新貼文
 - Telegram 推播持續被 egress proxy 封鎖（已確認多次）
+- 下次執行將繼續監控 #42685 之後的新貼文
+
+---
+
+執行記錄 - 2026-10-23 22:04 UTC
+=================================
+狀態: 無新貼文
+上次已知貼文 ID: 2026-10-23_42685
+
+執行摘要：
+- 步驟 1: 讀取 last_seen_id = "2026-10-23_42685" ✓（sha: ddefe60a7c2c5e1396936c1b7b335d9989bbc525）
+- 步驟 2: Truth Social 直連失敗 (ENOTFOUND)，thetrumparchive.com 直連失敗 (ENOTFOUND)，WebSearch 多次搜尋（含 extended 模式，涵蓋晚間、最新關鍵字）
+- 步驟 3: 無新貼文。WebSearch 最新確認貼文仍為 #42685（Charlie Kirk 案法官批評），自 #42685（約 16:33 UTC）至本次執行（22:04 UTC）約 5.5 小時無新貼文
+- 步驟 5: 無需 GitHub 推送（state 無變動）
+- 步驟 6: Telegram 推播略過（無新貼文）
+- 步驟 7: LINE 無需處理（無新貼文）
+
+注意事項：
+- Telegram 推播持續被 egress proxy 封鎖
 - 下次執行將繼續監控 #42685 之後的新貼文
