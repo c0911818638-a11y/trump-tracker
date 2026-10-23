@@ -1,28 +1,22 @@
-=== Trump Truth Social 監控日誌 ===
-日期：2026-10-23
-執行時間：2026-10-23T09:00:58Z
-Last Seen ID：2026-10-23_42668
+執行摘要 2026-10-23
+==================
+步驟 1: 讀取 last_seen_id = "2026-10-23_42668" ✓
+步驟 2: Truth Social 直連失敗 (ENOTFOUND)，trumpstruth.org 直連失敗 (ENOTFOUND)，改用 WebSearch 取得貼文清單 ✓
+步驟 3: 發現 11 篇新貼文 (42669, 42670, 42672, 42673, 42675, 42677, 42680, 42681, 42682, 42683, 42684) ✓
+步驟 4: 完成所有貼文中文分析 ✓
+步驟 5: GitHub push 成功 (commit: 9f04191a6809347e86158518b3dfc446ff03a998)，last_seen_id 更新為 "2026-10-23_42684" ✓
+步驟 6: Telegram 推播失敗：api.telegram.org:443 被 egress proxy 封鎖 (403 policy denial)
+步驟 7: LINE 通知由 GitHub Actions 自動處理（GitHub push 已成功）✓
 
-【執行狀態】
-- 步驟1（讀取 last_seen_id）：成功。上次記錄：2026-10-23_42668
-- 步驟2A（Truth Social RSS/API）：失敗 - getaddrinfo ENOTFOUND truthsocial.com（DNS 封鎖）
-- 步驟2B（WebSearch）：部分成功 - 找到 2026-10-22 的貼文，但無法確認 > ID 42668 的新貼文
-- 步驟2C（Trump Archive）：失敗 - getaddrinfo ENOTFOUND www.thetrumparchive.com（DNS 封鎖）
-- 備選（trumpstruth.org/kadoa.com 等）：失敗 - DNS 封鎖
-- 備選（foxnews/cbsnews/nbcnews/cnbc/yahoo 等新聞網站）：失敗 - DNS 封鎖
-
-【找到的最新貼文】（2026-10-22，應已在上次追蹤中）
-1. Iowa 集會貼文（ID ~42636）：Getting ready to land in Iowa. Big Rally happening. Inflation and Prices coming down, FAST!
-2. 伊朗/石油貼文：Iran is doing everything they can to drive up the price of Oil prior to the U.S. Midterm Election
-3. LeBron James 貼文：While listening to our National Anthem, LeBron James disrespects our Country!
-4. Apple/賓夕法尼亞鈦：Apple is committing to purchasing 100 MILLION DOLLARS of PENNSYLVANIA Titanium for its NEW iPhone
-
-【結論】
-由於 DNS 封鎖導致無法直接存取任何貼文存檔網站（truthsocial.com、thetrumparchive.com、
-trumpstruth.org、kadoa.com 等），無法確認是否有 ID > 42668 的新貼文。
-WebSearch 搜尋引擎只返回 2026-10-22 及更早的內容，未發現確定的 2026-10-23 新貼文。
-本次執行未更新 last_seen_id，未發送通知。
-
-【下次執行建議】
-確保執行環境具備完整的 DNS 解析能力以存取 truthsocial.com 或相關存檔網站。
-考慮在工作流程中新增備援方案，例如透過代理或 VPN 存取被封鎖的網域。
+新貼文清單：
+- 42669: RT (蒙大拿投票/Kurt Alme) [低]
+- 42670: 蒙大拿提前投票通知 [低]
+- 42672: 肯塔基投票動員 [低]
+- 42673: 堪薩斯投票動員 [低]
+- 42675: 愛荷華提前投票通知 [低]
+- 42677: 印第安那提前投票通知 [低]
+- 42680: 反射池修復更新 (2026-10-23 04:41 UTC) [中]
+- 42681: Roger Marshall/Bombardier 2.7億美元投資背書 (2026-10-23 03:41 UTC) [中]
+- 42682: Max Engling 印第安那州務卿背書 [低]
+- 42683: 紐約時報/Wedgewood假民調攻擊 [高]
+- 42684: Ilhan Omar身份詐欺指控 [高]
