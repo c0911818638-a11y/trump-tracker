@@ -66,26 +66,28 @@ No notifications sent.
   步驟1：成功讀取 last_seen_id = 2026-10-23_42690 (SHA: e56027ea373e013843812f7b9ae24c48ed340026)
 
   步驟2：嘗試取得最新貼文
-    - 方法A RSS (truthsocial.com)：失敗 — proxy 403 (egress 政策封鎖)
-    - 方法A2 API (truthsocial.com)：失敗 — proxy 403
-    - 方法B WebSearch "October 24 2026"：搜尋無 10/24 貼文結果
-    - 方法B2 WebSearch "Oct 24 2026"：同上，無新貼文
-    - 方法B3 WebSearch "Fox News Dumocrats 2026"：找到 Oct 6 相關貼文，非新貼文
-    - 方法C thetrumparchive.com：失敗 — proxy 403
-    - 方法C2 trumpstruth.org：失敗 — proxy 403
-    - 方法C3 presidency.ucsb.edu：失敗 — proxy 403
-    - 方法C4 kadoa.com：失敗 — DNS/proxy 封鎖
-    - 方法C5 cbsnews.com/yahoo.com：失敗 — DNS 無法解析
+    - 方法A RSS/API (truthsocial.com)：失敗 — proxy 403 (egress 政策封鎖)
+    - 方法B WebSearch (多組搜尋詞)：
+        * "Trump Truth Social October 24 2026"：無新結果
+        * "Trump Truth Social today October 24"：無 10/24 貼文索引
+        * "site:trumpstruth.org/statuses 42691-42695"：無結果（最高 ID 仍 42690）
+        * "Trump midnight post Iran retaliation October 24"：Yahoo News 有標題提及但無法存取原文
+        * "Trump Iran Epic Fury post text"：僅找到 10/23 佛羅里達造勢活動演講內容（非 Truth Social 貼文）
+    - 方法C thetrumparchive.com/trumpstruth.org：失敗 — proxy 403
 
   步驟3：比較結果
-    - 搜尋引擎最新已索引貼文仍為 2026-10-23（ID 42690，倒影池貼文）
-    - 無找到任何 2026-10-24 新貼文
-    - 結論：無新貼文
+    - trumpstruth.org 存檔：最高 ID = 42690（2026-10-23 17:49 UTC 國家廣場空拍圖）
+    - 注意：Yahoo News 有標題「Trump Loses It in Midnight Post After Iran Threatens Retaliation」，
+      可能是 10/23 深夜/10/24 凌晨的新貼文，但因 DNS 封鎖無法確認內容及 ID
+    - 近日重要背景：Trump 10/23 佛羅里達造勢揚言「Epic Fury」再打伊朗；
+      伊朗 IRGC 聲稱癱瘓霍爾木茲海峽 7 艘油輪，布蘭特原油破 $117
+    - 結論：無確認新貼文（可能有 1 則午夜伊朗相關貼文待後續執行確認）
 
-  步驟6：Telegram 推播 — 無新貼文，未推播
+  步驟6：Telegram 推播 — 無確認新貼文，未推播
   步驟7：LINE 通知 — 無新 push，備援管道未觸發
 
-  最終結論：無新貼文。last_seen_id.txt 維持 2026-10-23_42690 不變。
+  最終結論：無確認新貼文。last_seen_id.txt 維持 2026-10-23_42690 不變。
+  建議：下次執行重點搜尋 ID 42691+ 及伊朗相關夜間貼文。
 
 ---
 
@@ -95,7 +97,7 @@ No notifications sent.
   步驟1：成功讀取 last_seen_id = 2026-10-23_42690 (SHA: e56027ea373e013843812f7b9ae24c48ed340026)
 
   步驟2：嘗試取得最新貼文
-    - 方法A RSS/API (truthsocial.com)：失敗 — ENOTFOUND DNS 解析失敗
+    - 方法A RSS (truthsocial.com)：失敗 — ENOTFOUND DNS 解析失敗
     - 方法B WebSearch (多組搜尋詞)：
         * "Trump Truth Social October 24 2026"：無新結果
         * "Trump Truth Social today October 24"：無 10/24 貼文索引
@@ -167,6 +169,34 @@ No notifications sent.
     - 多次廣泛搜尋均未找到任何 2026-10-24 新貼文
     - 確認 ID 42690 之後（10/23 倒影池貼文後）的所有主要 10/23 貼文均已由前次執行追蹤完畢
     - 今日（10/24 週六）暫無新貼文索引
+    - 結論：無新貼文
+
+  步驟6：Telegram 推播 — 無新貼文，未推播
+  步驟7：LINE 通知 — 無新 push，備援管道未觸發
+
+  最終結論：無新貼文。last_seen_id.txt 維持 2026-10-23_42690 不變。
+
+---
+
+【第七次執行】（2026-10-24T06:56:44Z）
+上次記錄 ID：2026-10-23_42690
+
+  步驟1：成功讀取 last_seen_id = 2026-10-23_42690 (SHA: e56027ea373e013843812f7b9ae24c48ed340026)
+
+  步驟2：嘗試取得最新貼文
+    - 方法A RSS (truthsocial.com)：失敗 — getaddrinfo ENOTFOUND
+    - 方法A2 API (truthsocial.com)：失敗 — getaddrinfo ENOTFOUND
+    - 方法B1 WebSearch "Trump Truth Social posts today site:truthsocial.com OR site:thetrumparchive.com 2026-10-24"：無 10/24 貼文，最新仍為 10/22-23
+    - 方法B2 WebSearch "Trump Truth Social October 24 2026 posts latest"：無 10/24 貼文
+    - 方法B3 WebSearch "Trump Truth Social post October 23 24 2026 site:trumpstruth.org"：最高 ID=42690（10/23 17:49 UTC 倒影池空拍圖）
+    - 方法B4 WebSearch "Trump Truth Social post October 24, 2026"：搜尋無 10/24 貼文
+    - 方法C thetrumparchive.com：失敗 — getaddrinfo ENOTFOUND
+    - 方法C2 kadoa.com：失敗 — getaddrinfo ENOTFOUND
+    - 方法C3 trumpstruth.org：失敗 — getaddrinfo ENOTFOUND
+
+  步驟3：比較結果
+    - trumpstruth.org 存檔最高 ID = 42690（2026-10-23 17:49 UTC）
+    - 搜尋未發現 ID > 42690 的新貼文
     - 結論：無新貼文
 
   步驟6：Telegram 推播 — 無新貼文，未推播
