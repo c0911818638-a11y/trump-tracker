@@ -1,99 +1,27 @@
-執行時間: 2026-10-24T13:00 UTC（第十二次執行）
+執行時間：2026-10-24 17:58 UTC
 
-【本次執行摘要】
-上次記錄 ID：2026-10-23_42690
-找到新貼文：3 篇
-新 last_seen_id：2026-10-24_42693
+【步驟 1】讀取 last_seen_id：2026-10-24_42702 (成功)
 
-步驟1：成功讀取 last_seen_id = 2026-10-23_42690 (SHA: e56027ea373e013843812f7b9ae24c48ed340026)
+【步驟 2】抓取貼文：
+- truthsocial.com 直連：失敗 (ENOTFOUND)
+- truthsocial.com API：失敗 (ENOTFOUND)
+- WebSearch 搜尋 trumpstruth.org：成功
+- 找到新貼文 ID：42703
 
-步驟2：嘗試取得最新貼文
-  - 方法A RSS (truthsocial.com)：失敗 — getaddrinfo ENOTFOUND
-  - 方法A2 API (truthsocial.com)：失敗 — getaddrinfo ENOTFOUND
-  - 方法C thetrumparchive.com：失敗 — getaddrinfo ENOTFOUND
-  - 方法C2 trumpstruth.org：失敗 — getaddrinfo ENOTFOUND
-  - 方法C3 presidency.ucsb.edu：失敗 — getaddrinfo ENOTFOUND
-  - 方法B WebSearch (多組搜尋詞)：
-      * 搜尋 "Trump Truth Social October 24 2026"：找到 3 篇新貼文
-      * 搜尋 "Trump 80 raises health concerns ominous post"：確認健康格言原文
-      * 搜尋 "Trump press room swimming pool October 24 2026"：確認記者室帖文
-      * 搜尋 "Trump LeBron James national anthem disrespects October 24"：確認 LeBron 帖文
+【步驟 3】比較：
+- 上次 ID：42702
+- 新貼文：42703（1 則）
 
-步驟3：比較結果 — 找到 3 篇 ID > 42690 的新貼文
+【步驟 4】分析：已完成貼文 42703 的中文分析
 
-步驟4：分析
-  - 2026-10-23_42691: 健康格言（"A healthy person has a thousand dreams..."）
-  - 2026-10-24_42692: 白宮記者室/游泳池帖文（否認改建游泳池）
-  - 2026-10-24_42693: LeBron James 國歌帖文
+【步驟 5】GitHub 上傳：
+- posts/2026-10-24_42703.md：成功（透過 MCP GitHub 工具）
+- state/last_seen_id.txt 更新為 2026-10-24_42703：成功
 
-步驟5：GitHub 上傳
-  - posts/2026-10-23_42691.md: 成功（SHA: 8caf0ceff229bb26ecfce301ee2f117632ece2a1）
-  - posts/2026-10-24_42692.md: 成功（SHA: 90b1a5959226eb3b23b58ae7d241ffdd70ef33d9）
-  - posts/2026-10-24_42693.md: 成功（SHA: 2362da7d3c364c78bb0f2f6b6e06a5e7b7605ffd）
-  - state/last_seen_id.txt: 更新為 2026-10-24_42693 成功
+【步驟 6】Telegram 推播：
+- 失敗：egress proxy 拒絕連線至 api.telegram.org (403 policy denial)
 
-步驟6：Telegram 推播
-  - 失敗: api.telegram.org:443 — connect_rejected (egress 代理政策拒絕，403 policy denial)
-  - 原因: 遠端執行環境的 egress 防火牆不允許連線到 api.telegram.org
+【步驟 7】LINE 通知：
+- GitHub push 已成功，GitHub Actions 應自動觸發 LINE 通知
 
-步驟7：LINE 通知
-  - 由於 GitHub push 成功，line-notify.yml workflow 應已自動觸發
-
----
-
-（以下為先前執行記錄）
-
-【第一次至第十一次執行】（2026-10-24 早間各時段）
-  結果：均無找到新貼文。trumpstruth.org 最高確認 ID = 42690。
-  原因：搜尋引擎索引延遲，新貼文尚未被收錄。
-
----
-
-執行時間: 2026-10-24T16:30 UTC（後續監控執行）
-
-【本次執行摘要】
-上次記錄 ID：2026-10-24_42696
-找到新貼文：0 篇（無更新）
-
-步驟1：成功讀取 last_seen_id = 2026-10-24_42696 (SHA: ef8135f3d0c1b7857dfc8dffc586a8ffaeb1e3e2)
-
-步驟2：嘗試取得最新貼文
-  - 方法A RSS (truthsocial.com)：失敗 — getaddrinfo ENOTFOUND
-  - 方法A2 API (truthsocial.com)：失敗 — getaddrinfo ENOTFOUND
-  - 方法C thetrumparchive.com：失敗 — getaddrinfo ENOTFOUND
-  - 方法C2 trumpstruth.org：失敗 — getaddrinfo ENOTFOUND
-  - 方法B WebSearch：搜尋確認最高 ID = 42696（與 last_seen_id 相同）
-    * 搜尋 "Trump Truth Social posts October 24 2026"：最高 ID = 42696
-    * 搜尋 "site:trumpstruth.org statuses 42697 OR 42698"：無結果
-
-步驟3：比較結果 — 無找到 ID > 42696 的新貼文
-
-步驟5：GitHub 上傳 — 無新貼文，跳過
-步驟6：Telegram 推播 — 無新貼文，跳過
-步驟7：LINE 通知 — 無新貼文，跳過
-
----
-
-執行時間: 2026-10-24（晚間執行）
-
-【本次執行摘要】
-上次記錄 ID：2026-10-24_42702
-找到新貼文：0 篇（無更新）
-
-步驟1：成功讀取 last_seen_id = 2026-10-24_42702 (SHA: 7d9273e05568e46cc26d465d183a397955eb10aa)
-
-步驟2：嘗試取得最新貼文
-  - 方法A RSS (truthsocial.com)：失敗 — getaddrinfo ENOTFOUND
-  - 方法A2 API (truthsocial.com)：失敗 — getaddrinfo ENOTFOUND
-  - 方法C thetrumparchive.com：失敗 — getaddrinfo ENOTFOUND
-  - 方法C2 trumpstruth.org：失敗 — getaddrinfo ENOTFOUND
-  - 方法B WebSearch（多組搜尋詞）：
-    * 搜尋 "Trump Truth Social posts today October 24 2026"：最高可確認 ID = 42606（10/22），搜尋引擎未索引到 > 42702
-    * 搜尋 "Trump 42703 42704 42705 42706 42707 site:trumpstruth.org"：無結果
-    * 搜尋 "Trump Truth Social post October 24 2026 evening"：無新貼文
-
-步驟3：比較結果 — 無找到 ID > 42702 的新貼文
-
-步驟5：GitHub 上傳 — 無新貼文，跳過
-步驟6：Telegram 推播 — 無新貼文，跳過
-步驟7：LINE 通知 — 無新貼文，跳過
+執行摘要：找到 1 則新貼文 (42703)，GitHub 更新成功，Telegram 推播失敗（受環境 egress 政策限制）。
