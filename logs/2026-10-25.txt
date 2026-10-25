@@ -1,26 +1,27 @@
-## 監控執行記錄 - 2026-10-25
+Trump Truth Social 監控執行記錄
+日期: 2026-10-25
+執行時間: 2026-10-25 09:56:46 UTC
 
-**執行時間：** 2026-10-25T07:59:00Z
-**上次記錄 ID：** 2026-10-25_42713
-**執行結果：** 未發現新貼文
+上次記錄 ID: 2026-10-25_42714
+SHA: cd2dcb680c4b94afc38d010109ed46190997b92b
 
-### 嘗試方法
+嘗試方法:
+1. WebFetch https://truthsocial.com/@realDonaldTrump.rss -> 失敗 (ENOTFOUND)
+2. WebFetch https://www.thetrumparchive.com/ -> 失敗 (ENOTFOUND)
+3. WebSearch "Trump Truth Social posts today 2026-10-25" -> 僅找到 Oct 22-23 舊文章
+4. WebFetch https://www.presidency.ucsb.edu/documents/truth-social-posts-october-25-2026 -> 失敗 (ENOTFOUND)
+5. WebFetch https://www.kadoa.com/potus/truth -> 失敗 (ENOTFOUND)
+6. WebSearch "Trump Truth Social October 25 2026" -> 無 Oct 25 新貼文
+7. WebFetch https://www.trumpstruth.org/ -> 失敗 (ENOTFOUND)
+8. WebFetch https://www.cbsnews.com/tag/truth-social/ -> 失敗 (ENOTFOUND)
 
-1. **方法 A - WebFetch truthsocial.com RSS：** 失敗（ENOTFOUND - 網域無法解析）
-2. **方法 A - WebFetch truthsocial.com API：** 失敗（ENOTFOUND - 網域無法解析）
-3. **方法 B - WebSearch 搜尋：** 部分成功，最新搜尋結果為 2026-10-23（ID ~42580），均早於已記錄 ID 42713
-4. **方法 C - WebFetch thetrumparchive.com：** 失敗（ENOTFOUND - 網域無法解析）
+結論:
+- 搜尋結果中最新貼文來自 Oct 22-23, 2026
+- 未找到比 last_seen_id (42714) 更新的貼文
+- 網路環境限制導致大部分直接訪問失敗
+- 本次執行無新貼文需通知
+- GitHub 直接 API 寫入被 proxy 封鎖，改用 MCP 工具
 
-### 搜尋結果摘要（最近可見貼文）
-
-- 2026-10-23：川普發文關於 National Mall 倒影池（Reflecting Pool）翻修完成，已新增監控攝影機
-- 2026-10-22：川普支持 Vivek Ramaswamy 攻擊廣告，涉及 Ohio 州長競選對手 Amy Acton
-- 2026-10-22：川普吹捧 Bombardier 2.7億美元在美投資擴張
-- 2026-10-22：川普背書 Max Engling 角逐印第安納州秘書長
-- 無 2026-10-25 新貼文被搜尋引擎索引
-
-### 結論
-
-本次執行未發現比 ID 42713 更新的貼文。
-雲端執行環境網路政策限制對 truthsocial.com、thetrumparchive.com 及所有主要新聞網站的直接存取（ENOTFOUND）。
-不觸發 Telegram 或 LINE 推播。
+狀態: 無新貼文 / 無法確認（網路限制）
+Telegram 推播: 未執行（無新貼文）
+LINE 通知: 未執行（無新貼文）
