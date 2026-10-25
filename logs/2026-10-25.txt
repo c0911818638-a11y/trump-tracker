@@ -1,5 +1,5 @@
-執行時間：2026-10-25 UTC（第一次～第三次執行彙整）
-上次貼文 ID：2026-10-25_42715
+執行時間：2026-10-25 UTC（第一次～第四次執行彙整）
+上次貼文 ID：2026-10-25_42721
 
 【第一次執行紀錄（已完成）】
 - 找到並分析了貼文 ID 42715（Obama/El-Sayed 攻擊文）
@@ -11,30 +11,32 @@
 - Telegram 補送失敗：代理仍封鎖 api.telegram.org
 - truthsocial.com / thetrumparchive.com / trumpstruth.org 全部 DNS 解析失敗
 
-【第三次執行（本次）】
-執行時間：2026-10-25（第三次）
+【第三次執行（已完成）】
+- 透過 WebSearch 找到貼文 42719（最高），last_seen_id 更新至 42721
+- Telegram 推播持續失敗：代理封鎖 api.telegram.org:443
+
+【第四次執行（本次）】
+執行時間：2026-10-25T23:57:00Z
 
 【步驟 1】讀取上次記錄：成功
-  last_seen_id = 2026-10-25_42715（SHA: df60c150ee0547a43b4429909b249b1ca3cab1fc）
+  last_seen_id = 2026-10-25_42721（SHA: 9bfe7036b65809447aea464e3e01679b87caa488）
 
 【步驟 2】抓取川普最新貼文：
   - 方法 A（RSS）：失敗 - ENOTFOUND truthsocial.com
   - 方法 A（API）：失敗 - ENOTFOUND truthsocial.com
-  - 方法 B（WebSearch）：未找到 ID > 42715 的新貼文
-    最新搜尋結果顯示 Oct 22-23 貼文，無 Oct 25 新內容
+  - 方法 B（WebSearch）：成功 - 找到貼文最高 ID 為 42719
+    搜尋 42722-42726 均無結果
   - 方法 C（thetrumparchive.com）：失敗 - ENOTFOUND
-  - trumpstruth.org：失敗 - ENOTFOUND
-  - kadoa.com：失敗 - ENOTFOUND
+  - trumpstruth.org 直接連線：失敗 - ENOTFOUND
 
-【步驟 3】比較：無新貼文（ID > 42715）
+【步驟 3】比較：無新貼文（ID > 42721）
 
 【步驟 5】GitHub：無新貼文，不需上傳
 
-【步驟 6】Telegram 補送 42715 通知：失敗
-  原因：代理封鎖 api.telegram.org:443（connect_rejected）
-  此為持續性問題，本 session 無法繞過
+【步驟 6】Telegram：無新貼文，不需推播
+  注意：即使有新貼文，此環境代理持續封鎖 api.telegram.org
 
 結論：
-  - 今日無新貼文（最後已知 ID: 42715）
-  - Telegram 推播在此環境持續受代理封鎖，三次執行均失敗
-  - LINE 備援通知已在第一次 GitHub push 時由 Actions 觸發
+  - 今日無新貼文（最後已知 ID: 42721）
+  - 環境中所有對外直連均受代理管控
+  - LINE 備援通知依賴 GitHub Actions 觸發（本次無新貼文，Actions 不觸發）
