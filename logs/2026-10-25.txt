@@ -25,3 +25,34 @@ SHA: cd2dcb680c4b94afc38d010109ed46190997b92b
 狀態: 無新貼文 / 無法確認（網路限制）
 Telegram 推播: 未執行（無新貼文）
 LINE 通知: 未執行（無新貼文）
+
+---
+
+執行時間: 2026-10-25 ~13:00 UTC（第二次執行）
+
+上次記錄 ID: 2026-10-25_42714（來自 09:56 UTC 上次執行）
+
+嘗試方法:
+1. WebFetch truthsocial.com RSS -> 失敗 (ENOTFOUND)
+2. WebFetch thetrumparchive.com -> 失敗 (ENOTFOUND)
+3. WebSearch 多次搜尋 Oct 25 2026 新貼文
+   - 搜尋 Michigan/Port Huron rally Truth Social
+   - 搜尋 trumpstruth.org 最新 ID
+4. 確認 trumpstruth.org 最新 ID = 42714（與 last_seen_id 相符）
+
+確認貼文 (已於上次執行捕獲):
+- 42712 (Oct 25 03:34 UTC): Lisa Murkowski/Alaska Ranked Choice Voting 攻擊
+- 42713 (Oct 25 04:42 UTC): Obama 伊朗政策攻擊 + Michigan Rogers 背書
+- 42714 (Oct 25 06:02 UTC): Rob Carson/NEWSMAX 稱讚
+
+今日背景資訊 (不含新貼文):
+- 川普今日下午在密西根州 Port Huron (McMorran Place Arena) 舉辦造勢集會
+  - 門票開放時間: 11:30 AM EDT / 15:30 UTC
+  - 川普預計演講時間: 3:00 PM EDT / 19:00 UTC
+  - Nicki Minaj 也將現身
+- 歐巴馬昨日 (Oct 24) 在底特律為民主黨候選人 Abdul El-Sayed 造勢
+- 密西根參議院選舉是 2026 期中選舉最關鍵席位之一
+
+結論: 無新貼文（trumpstruth.org 最高 ID 仍為 42714）
+Telegram 推播: 未執行（無新貼文）
+LINE 通知: 未執行（無新貼文）
