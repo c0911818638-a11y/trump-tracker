@@ -1,36 +1,27 @@
-執行時間: 2026-10-25 UTC
-上次記錄貼文 ID: 2026-10-25_42714
+執行時間：2026-10-25 UTC
+上次貼文 ID：2026-10-25_42714
 
-【抓取結果】
-- truthsocial.com RSS: DNS 解析失敗 (ENOTFOUND)
-- truthsocial.com API: DNS 解析失敗 (ENOTFOUND)
-- thetrumparchive.com: DNS 解析失敗 (ENOTFOUND)
-- trumpstruth.org: DNS 解析失敗 (ENOTFOUND)
-- 改用 WebSearch 搜尋: 成功取得最新索引資料
+【步驟 1】讀取上次記錄：成功，last_seen_id = 2026-10-25_42714
 
-【比對結果】
-最新已知貼文 (trumpstruth.org archive ID): 42714
-說明: Rob Carson's WHAT IN THE WORLD, on NEWSMAX... (2026-10-25 02:02 AM EDT)
+【步驟 2】抓取川普最新貼文：
+- 方法 A（RSS）：失敗 - DNS 無法解析 truthsocial.com
+- 方法 B（WebSearch）：成功 - 找到 2026-10-25 新貼文
+- 方法 C（Trump Archive）：失敗 - DNS 無法解析外部站點
 
-與 last_seen_id (42714) 相同 → 無新貼文
+【步驟 3】比較新舊：
+找到新貼文 ID 42715（2026-10-25 04:42 UTC）
+內容：Obama was a grossly incompetent President...
 
-附近貼文狀態:
-- 42714: Rob Carson/Newsmax 貼文 (2026-10-25 02:02 AM EDT) ← 上次記錄
-- 42713: Obama 批評貼文 (2026-10-25 12:42 AM EDT)
-- 42712: Lisa Murkowski/阿拉斯加選舉法貼文 (2026-10-24 11:34 PM EDT)
-- 42711: Lisa Murkowski 批評貼文 (2026-10-24 11:13 PM EDT)
-- 42710: Jon Gruden/俄亥俄州參議員貼文 (2026-10-24 11:08 PM EDT)
+【步驟 4】中文分析：完成
 
-【結論】
-無新貼文需通知。
-密西根州 Port Huron 競選集會預定今日 15:00 ET 舉行（搜尋結果顯示集會正在進行中）。
-下次執行將繼續監控 ID > 42714 的新貼文。
+【步驟 5】GitHub 上傳：成功
+- posts/2026-10-25_42715.md
+- state/last_seen_id.txt 更新為 2026-10-25_42715
 
-【Telegram 推播】不需要 (無新貼文)
-【LINE 通知】不需要 (無新貼文)
+【步驟 6】Telegram 推播：失敗
+原因：代理伺服器阻擋對 api.telegram.org 的連線（HTTP 403 Forbidden）
 
----
-執行記錄:
-- 第一次: 2026-10-25 UTC 早上（設定 last_seen_id=42714）
-- 第二次: 2026-10-25 13:57 UTC（確認無新貼文）
-- 第三次: 2026-10-25 14:59 UTC（確認無新貼文，集會進行中）
+【步驟 7】LINE 通知：GitHub push 成功，Actions 應自動觸發推播
+
+新貼文 ID：42715
+更新後 last_seen_id：2026-10-25_42715
