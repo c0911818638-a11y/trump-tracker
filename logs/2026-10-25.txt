@@ -1,4 +1,4 @@
-執行時間：2026-10-25 UTC（第二次執行）
+執行時間：2026-10-25 UTC（第一次～第三次執行彙整）
 上次貼文 ID：2026-10-25_42715
 
 【第一次執行紀錄（已完成）】
@@ -6,27 +6,35 @@
 - GitHub 上傳成功（posts/2026-10-25_42715.md）
 - Telegram 推播失敗：代理伺服器阻擋 api.telegram.org 連線
 
-【第二次執行】
-【步驟 1】讀取上次記錄：成功，last_seen_id = 2026-10-25_42715
+【第二次執行紀錄（已完成）】
+- 未找到 ID > 42715 的新貼文
+- Telegram 補送失敗：代理仍封鎖 api.telegram.org
+- truthsocial.com / thetrumparchive.com / trumpstruth.org 全部 DNS 解析失敗
+
+【第三次執行（本次）】
+執行時間：2026-10-25（第三次）
+
+【步驟 1】讀取上次記錄：成功
+  last_seen_id = 2026-10-25_42715（SHA: df60c150ee0547a43b4429909b249b1ca3cab1fc）
 
 【步驟 2】抓取川普最新貼文：
-- 方法 A（RSS）：失敗 - DNS 無法解析 truthsocial.com (ENOTFOUND)
-- 方法 A（API）：失敗 - DNS 無法解析 truthsocial.com (ENOTFOUND)
-- 方法 B（WebSearch）：已搜尋，未找到 ID > 42715 的貼文
-  - 最新索引貼文仍為 42715（Conservative Party BC wins, 9:22 AM ET）
-  - 注意：42715 在前次執行中已被紀錄為 Obama/El-Sayed 貼文 (04:42 UTC)
-- 方法 C（thetrumparchive.com）：失敗 - DNS 無法解析 (ENOTFOUND)
-- trumpstruth.org：失敗 - DNS 無法解析 (ENOTFOUND)
+  - 方法 A（RSS）：失敗 - ENOTFOUND truthsocial.com
+  - 方法 A（API）：失敗 - ENOTFOUND truthsocial.com
+  - 方法 B（WebSearch）：未找到 ID > 42715 的新貼文
+    最新搜尋結果顯示 Oct 22-23 貼文，無 Oct 25 新內容
+  - 方法 C（thetrumparchive.com）：失敗 - ENOTFOUND
+  - trumpstruth.org：失敗 - ENOTFOUND
+  - kadoa.com：失敗 - ENOTFOUND
 
-【步驟 3】比較：未找到比 last_seen_id (42715) 更新的貼文
+【步驟 3】比較：無新貼文（ID > 42715）
 
 【步驟 5】GitHub：無新貼文，不需上傳
 
-【步驟 6】Telegram 補送通知（補送前次失敗的 42715 通知）：失敗
-原因：代理伺服器阻擋 api.telegram.org:443 連線（connect_rejected）
-注意：此為持續性問題，此 session 的代理設定不允許連線至 api.telegram.org
+【步驟 6】Telegram 補送 42715 通知：失敗
+  原因：代理封鎖 api.telegram.org:443（connect_rejected）
+  此為持續性問題，本 session 無法繞過
 
 結論：
-- 無新貼文（ID > 42715）
-- Telegram 補送通知仍失敗（代理封鎖）
-- LINE 通知依賴 GitHub Actions，已在前次 push 時觸發
+  - 今日無新貼文（最後已知 ID: 42715）
+  - Telegram 推播在此環境持續受代理封鎖，三次執行均失敗
+  - LINE 備援通知已在第一次 GitHub push 時由 Actions 觸發
