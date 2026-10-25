@@ -1,12 +1,10 @@
 # 執行日誌 2026-10-25
 
-## 執行摘要
+## 執行摘要（第一次執行 00:56 UTC）
 
 執行時間: 2026-10-25 00:56 UTC
 上次貼文 ID: 2026-10-24_42707
 上次貼文 SHA: 3d479ea4a5bba3fea516c63ff4fb5897da1efb72
-
-## 嘗試抓取貼文
 
 ### 方法 A: 直接訪問 truthsocial.com
 - 結果: 失敗
@@ -24,13 +22,33 @@
 - www.trumpstruth.org: DNS 解析失敗
 - www.kadoa.com: DNS 解析失敗
 
-## 結論
+結論: 無新貼文，未推播 Telegram。
 
-無法取得比 last_seen_id (2026-10-24_42707) 更新的貼文。
-可能原因：
-1. 代理政策封鎖了 truthsocial.com 及相關第三方站點
-2. 今日尚無新貼文 (搜尋引擎未索引)
-3. 執行時間過早，尚未有新貼文
+---
 
-未執行 Telegram 推播（無新貼文可推播）。
-未更新 state/last_seen_id.txt（無新貼文）。
+## 執行摘要（第二次執行）
+
+執行時間: 2026-10-25 UTC (第二次)
+上次貼文 ID: 2026-10-24_42707
+
+### 步驟 1: 讀取 last_seen_id
+- 成功: 2026-10-24_42707 (SHA: 3d479ea4a5bba3fea516c63ff4fb5897da1efb72)
+
+### 步驟 2: 抓取最新貼文
+- truthsocial.com RSS: DNS 解析失敗
+- truthsocial.com API: DNS 解析失敗
+- thetrumparchive.com: DNS 解析失敗
+- WebSearch 結果: 找到 October 24 貼文 (最高 ID: 42707)
+  - trumpstruth.org 搜尋結果: statuses/42707 是最新已索引項目
+  - 搜尋 IDs > 42707: 無結果
+
+### 步驟 3: 比較新舊
+- 最新可見貼文 ID 42707 = last_seen_id
+- 無新貼文（ID > 42707 的貼文未被搜尋引擎索引）
+
+### 結論
+- 無新貼文需通知
+- 未推播 Telegram
+- 未更新 last_seen_id.txt（維持 2026-10-24_42707）
+
+備註：環境網路政策封鎖直接外部連線，WebSearch 作為備援確認無新貼文。
