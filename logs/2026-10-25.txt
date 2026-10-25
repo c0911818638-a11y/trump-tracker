@@ -1,125 +1,26 @@
-# 執行日誌 2026-10-25
+## 監控執行記錄 - 2026-10-25
 
-## 執行摘要（第一次執行 00:56 UTC）
+**執行時間：** 2026-10-25T07:59:00Z
+**上次記錄 ID：** 2026-10-25_42713
+**執行結果：** 未發現新貼文
 
-執行時間: 2026-10-25 00:56 UTC
-上次貼文 ID: 2026-10-24_42707
-上次貼文 SHA: 3d479ea4a5bba3fea516c63ff4fb5897da1efb72
+### 嘗試方法
 
-### 方法 A: 直接訪問 truthsocial.com
-- 結果: 失敗
-- 原因: 代理伺服器封鎖 truthsocial.com (HTTP 403 - policy denial)
-- URL 嘗試: https://truthsocial.com/@realDonaldTrump.rss
-- URL 嘗試: https://truthsocial.com/api/v1/accounts/107780257626128497/statuses
+1. **方法 A - WebFetch truthsocial.com RSS：** 失敗（ENOTFOUND - 網域無法解析）
+2. **方法 A - WebFetch truthsocial.com API：** 失敗（ENOTFOUND - 網域無法解析）
+3. **方法 B - WebSearch 搜尋：** 部分成功，最新搜尋結果為 2026-10-23（ID ~42580），均早於已記錄 ID 42713
+4. **方法 C - WebFetch thetrumparchive.com：** 失敗（ENOTFOUND - 網域無法解析）
 
-### 方法 B: WebSearch 搜尋
-- 結果: 部分成功 (但未找到 2026-10-24_42707 之後的新貼文)
-- 搜尋關鍵字: Trump Truth Social posts today October 25 2026
-- 最新搜尋結果日期: 2026-10-22 至 2026-10-23
+### 搜尋結果摘要（最近可見貼文）
 
-### 方法 C: 第三方檔案站
-- www.thetrumparchive.com: DNS 解析失敗
-- www.trumpstruth.org: DNS 解析失敗
-- www.kadoa.com: DNS 解析失敗
-
-結論: 無新貼文，未推播 Telegram。
-
----
-
-## 執行摘要（第二次執行）
-
-執行時間: 2026-10-25 UTC (第二次)
-上次貼文 ID: 2026-10-24_42707
-
-### 步驟 1: 讀取 last_seen_id
-- 成功: 2026-10-24_42707 (SHA: 3d479ea4a5bba3fea516c63ff4fb5897da1efb72)
-
-### 步驟 2: 抓取最新貼文
-- truthsocial.com RSS: DNS 解析失敗
-- truthsocial.com API: DNS 解析失敗
-- thetrumparchive.com: DNS 解析失敗
-- WebSearch 結果: 找到 October 24 貼文 (最高 ID: 42707)
-  - trumpstruth.org 搜尋結果: statuses/42707 是最新已索引項目
-  - 搜尋 IDs > 42707: 無結果
-
-### 步驟 3: 比較新舊
-- 最新可見貼文 ID 42707 = last_seen_id
-- 無新貼文（ID > 42707 的貼文未被搜尋引擎索引）
+- 2026-10-23：川普發文關於 National Mall 倒影池（Reflecting Pool）翻修完成，已新增監控攝影機
+- 2026-10-22：川普支持 Vivek Ramaswamy 攻擊廣告，涉及 Ohio 州長競選對手 Amy Acton
+- 2026-10-22：川普吹捧 Bombardier 2.7億美元在美投資擴張
+- 2026-10-22：川普背書 Max Engling 角逐印第安納州秘書長
+- 無 2026-10-25 新貼文被搜尋引擎索引
 
 ### 結論
-- 無新貼文需通知
-- 未推播 Telegram
-- 未更新 last_seen_id.txt（維持 2026-10-24_42707）
 
-備註：環境網路政策封鎖直接外部連線，WebSearch 作為備援確認無新貼文。
-
----
-
-## 執行摘要（第三次執行）
-
-執行時間: 2026-10-25 UTC (第三次)
-上次貼文 ID: 2026-10-24_42707
-
-### 步驟 1: 讀取 last_seen_id
-- 成功: 2026-10-24_42707 (SHA: 3d479ea4a5bba3fea516c63ff4fb5897da1efb72)
-
-### 步驟 2: 抓取最新貼文
-- 方法 A (truthsocial.com RSS): DNS 解析失敗
-- 方法 A (truthsocial.com API): DNS 解析失敗
-- 方法 B (WebSearch - "Trump Truth Social October 25 2026"): 無當日貼文
-- 方法 B (WebSearch - 密西根造勢大會): 找到造勢大會預告，無 Truth Social 貼文
-- 方法 C (thetrumparchive.com): DNS 解析失敗
-- trumpstruth.org: DNS 解析失敗
-- kadoa.com: DNS 解析失敗
-
-### 步驟 3: 比較新舊
-- 搜尋結果最新貼文 ID: 42706 (2026-10-24 喬治亞造勢大會)
-- 上次記錄 ID: 42707
-- 新貼文數量: 0
-
-### 背景資訊
-- 川普 10/25 預定於密西根州 Port Huron (McMorran Place Arena) 舉行造勢大會 (下午3時 EDT)
-- 競爭對手：歐巴馬同日在底特律舉行民主黨造勢大會
-- 密西根參議院選舉：Abdul El-Sayed (民主黨) vs. Mike Rogers (共和黨)
-
-### 結論
-- 無新貼文（ID > 42707），不符合通知條件
-- Telegram 推播：未執行（無新貼文）
-- LINE 通知：未執行（無新貼文）
-- last_seen_id.txt：維持不變 (2026-10-24_42707)
-
-備註：本次執行環境限制同前次。由於密西根造勢大會今日進行中，建議下次執行時優先搜尋密西根相關貼文。
-
----
-
-## 執行摘要（第四次執行）
-
-執行時間: 2026-10-25 UTC (第四次)
-上次貼文 ID: 2026-10-24_42709
-上次貼文 SHA: 651ce59786f465ef9ea18af490286db802a39f4a
-
-### 步驟 1: 讀取 last_seen_id
-- 成功: 2026-10-24_42709 (SHA: 651ce59786f465ef9ea18af490286db802a39f4a)
-
-### 步驟 2: 抓取最新貼文
-- 方法 A (truthsocial.com RSS): FAILED - getaddrinfo ENOTFOUND truthsocial.com
-- 方法 A (truthsocial.com API curl): FAILED - connection timeout
-- 方法 B (WebSearch - "Trump Truth Social posts today October 25 2026 site:truthsocial.com OR site:thetrumparchive.com"): 未找到 Oct 24-25 貼文；最新索引為 Oct 22-23
-- 方法 B (WebSearch - "Trump Truth Social October 25 2026 latest"): 同上
-- 方法 B (WebSearch - "Trump Truth Social posts October 24 OR October 25 2026 latest"): 同上，最新可見貼文仍為 Oct 22-23
-- 方法 C (thetrumparchive.com): FAILED - getaddrinfo ENOTFOUND
-- 方法 C (trumpstruth.org): FAILED - getaddrinfo ENOTFOUND
-- 方法 C (kadoa.com): FAILED - getaddrinfo ENOTFOUND
-- cbsnews.com: FAILED - getaddrinfo ENOTFOUND
-
-### 步驟 3: 比較新舊
-- 搜尋結果最新可見貼文日期: 2026-10-22 至 2026-10-23
-- 上次記錄 ID: 2026-10-24_42709
-- 新貼文數量: 0（無法確認是否有新貼文，但搜尋引擎未索引到比 42709 更新的項目）
-
-### 結論
-- 所有方法均無法取得今日貼文（Step 8 條件觸發）
-- 無法連線原因：環境 DNS 解析失敗（egress 網路政策封鎖非 GitHub 流量）
-- Telegram 推播：未執行
-- LINE 通知：未執行（GitHub push 亦失敗）
-- last_seen_id.txt：維持不變 (2026-10-24_42709)
+本次執行未發現比 ID 42713 更新的貼文。
+雲端執行環境網路政策限制對 truthsocial.com、thetrumparchive.com 及所有主要新聞網站的直接存取（ENOTFOUND）。
+不觸發 Telegram 或 LINE 推播。
