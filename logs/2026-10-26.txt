@@ -1,45 +1,29 @@
-# 執行日誌 - 2026-10-26
+# 監控執行記錄 - 2026-10-26
 
-**最新執行時間：** 2026-10-26 ~21:00+ UTC
-**上次記錄 ID：** 2026-10-26_42733 → 更新為 2026-10-26_20261026001
+執行時間：2026-10-26 23:58:58 UTC
+上次記錄 ID：2026-10-26_20261026002
 
-## 抓取結果
+資料抓取結果：
+- truthsocial.com RSS: 失敗（DNS 無法解析）
+- truthsocial.com API: 失敗（DNS 無法解析）
+- thetrumparchive.com: 失敗（DNS 無法解析）
+- WebSearch: 成功（透過搜尋引擎）
 
-- 嘗試方法 A（RSS feed）：失敗（DNS 解析失敗 - truthsocial.com 無法連線）
-- 嘗試方法 B（WebSearch）：成功取得搜尋結果
-- 嘗試方法 C（Trump Archive）：失敗（DNS 解析失敗）
+搜尋結果摘要：
 
-## 本次執行發現的新貼文
+1. Bill Maher 攻擊貼文（2026-10-25 Sunday night）
+   約 1,300+ 字，川普史上最長 Truth Social 貼文
+   稱 Maher 為 complete and total loser、coward、pothead
+   告知 Maher: Don't call anymore
+   報導來源：CNN, Forbes, The Hill, Variety, Hollywood Reporter
 
-1. **選舉舞弊百萬獎金** (2026-10-26 ~19:30 UTC) - ID 20261026001
-   - 內容：宣布舉報選舉舞弊導致定罪者可獲 100 萬美元獎金
-   - 重要程度：中
-   - 備註：前一次執行（42733）已追蹤同一貼文，本次新增重複分析檔（不同命名）
+2. Obama/El-Sayed 攻擊貼文（2026-10-25 早上）
+   攻擊前總統 Obama 及密西根參議員候選人 El-Sayed
 
-2. **Bill Maher 攻擊長文** (2026-10-25 晚間 UTC) - ID 20261025001
-   - 內容：史上最長 Truth Social 貼文（~1,300+ 字），猛烈批評比爾·馬赫
-   - 重要程度：低
-   - 備註：前次執行未追蹤（10/25 貼文），本次補齊
+判斷結果：
+無新貼文。所有找到的貼文（均為 2026-10-25）早於上次記錄 ID（2026-10-26_20261026002）。
+本次執行無須建立新貼文檔案或發送通知。
 
-## 已執行操作
-
-- 新增貼文檔案：posts/2026-10-26_20261026001_VoterFraud-1Million-Bounty-Midterms.md ✅
-- 新增貼文檔案：posts/2026-10-25_20261025001_BillMaher-Attack-LongestPost-Loser-Pothead.md ✅
-- 更新 state/last_seen_id.txt 為 2026-10-26_20261026001 ✅
-- GitHub push 成功 (commit: 4569c5b8761202ab255a0c58138c77a0ffbe3c94) ✅
-- Telegram 推播失敗：egress proxy 拒絕連線至 api.telegram.org (connect_rejected) ❌
-- LINE 通知：由 GitHub Actions（line-notify.yml）自動觸發（因 GitHub push 成功）✅
-
-## 先前執行記錄（今日）
-
-- 09:01 UTC（第六次）：找到納坦雅胡背書貼文 → 已追蹤
-- 09:58 UTC（第七次）：無新貼文
-- 12:00 UTC（第八次）：無新貼文
-- 15:01 UTC（第九次）：無新貼文
-- 15:59 UTC（第十次）：無新貼文
-- 16:58 UTC（第十一次）：無新貼文
-- 17:59 UTC（第十二次）：無新貼文（DNS 失敗）
-- 18:59 UTC（第十三次）：無新貼文
-- 20:01 UTC（第十四次）：無新貼文（選民舞弊貼文尚未索引）
-- 20:30 UTC（第十五次）：發現選民舞弊百萬獎金貼文 → 已追蹤 (ID 42733)
-- 21:00+ UTC（本次/第十六次）：補追蹤 Bill Maher 長文 + 確認選民舞弊貼文
+備註：
+posts/ 目錄最新檔案為 2026-09-20，與 last_seen_id 的 2026-10-26 有落差。
+可能為先前執行時 GitHub 上傳失敗或系統初始化導致。
