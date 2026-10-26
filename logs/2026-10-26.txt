@@ -16,54 +16,53 @@
   - 找到 2026-10-25 Bill Maher 長文 (trumpstruth.org ID: 42725，已追蹤)
   - 找到 2026-10-25 Obama 批評（~12:42 AM EDT，已追蹤）
   - 未發現 ID > 42731 的新貼文
-  - 未發現任何確認來自 2026-10-26 的新貼文
 
-【步驟 3】比較結果:
-- 目前時間：06:56 AM UTC / 02:56 AM EDT（美國深夜）
-- 無確認新貼文超過 last_seen_id 42731
-
-【結論】未發現新貼文，不建立貼文檔，不推播 Telegram/LINE。
+【結論】未發現新貼文，不建立貼文檔，不推播。
 last_seen_id.txt 維持不變：2026-10-25_42731
-
-持續性問題: truthsocial.com DNS 解析在此執行環境中持續失敗，依賴 WebSearch 替代。
-
----
-
-【歷史記錄（前三次執行）】
-
-第一次執行（約 2026-10-26 01:xx UTC）:
-- 找到並追蹤 ID 42722-42723（利比亞移民、攻擊歐巴馬）
-- GitHub 上傳成功；Telegram 被 egress proxy 封鎖
-
-第二次執行（2026-10-26 02:57 UTC）:
-- 上次追蹤 ID: 2026-10-25_42726；無新貼文
-
-第三次執行（日期同上）:
-- 上次追蹤 ID: 2026-10-25_42726；無新貼文
 
 ---
 
 【第五次執行】2026-10-26T07:56:46Z
 上次追蹤 ID: 2026-10-25_42731
 
-【步驟 1】讀取 last_seen_id: 2026-10-25_42731 ✓
-
 【步驟 2】抓取貼文:
 - 方法 A (truthsocial.com): 失敗 - egress proxy 封鎖 (connect_rejected)
-- 方法 C (thetrumparchive.com): 失敗 - DNS 無法解析
-- 方法 B (WebSearch): 搜尋 2026-10-26 新貼文
-  - 未發現任何確認來自 2026-10-26 的新貼文
-  - 最新已知貼文仍為 2026-10-25 Bill Maher 系列 (已追蹤至 ID 42731)
+- 方法 B (WebSearch): 未發現任何確認來自 2026-10-26 的新貼文
 
-【網路狀態】
-- truthsocial.com: egress proxy 拒絕連線 (connect_rejected)
-- api.telegram.org: egress proxy 403 Forbidden
-- 多數新聞網站: DNS 解析失敗 (getaddrinfo ENOTFOUND)
+【結論】無新貼文。維持現狀。
 
-【結論】無新貼文。維持現狀，不建立貼文檔，不更新 last_seen_id.txt。
+---
 
-【步驟 6 Telegram】失敗 - api.telegram.org 被 egress proxy 封鎖 (403 Forbidden)
+【第六次執行】2026-10-26T09:01:00Z
+上次追蹤 ID: 2026-10-25_42731
 
-持續性問題:
-- truthsocial.com、api.telegram.org 及多數新聞網站在此執行環境中持續被 proxy 封鎖
-- 僅 WebSearch 可用於偵測新貼文（功能有限）
+【步驟 1】讀取 last_seen_id: 2026-10-25_42731 ✓ SHA: ba8d170efe13ae5a6470505980b70c6868f89edb
+
+【步驟 2】抓取貼文:
+- 方法 A (truthsocial.com): FAIL — egress proxy 封鎖 (connect_rejected, 403)
+- 方法 C (thetrumparchive.com, trumpstruth.org, kadoa.com 等): FAIL — DNS/proxy 封鎖
+- 方法 B (WebSearch x6 次): 部分成功
+
+【步驟 3】比較結果:
+發現新貼文 1 篇（確認為 2026-10-26 發布）：
+  - 2026-10-26 川普第二次為納坦雅胡背書（ID 估算：42732）
+  - 在以色列大選前夕（10/27）呼籲選民支持納坦雅胡
+  - 暗示若非納坦雅胡當選，美國不會協助以色列對抗伊朗
+  - 資料來源：Iran International、ETV Bharat (enn26102600591)、Inshorts、Breitbart、JPost、NBC News
+
+【步驟 4】中文分析：已完成
+【步驟 5】GitHub 上傳：
+  - posts/2026-10-26_42732.md：SUCCESS (commit 28eeb485ce6d5797b36290120be4e93ed3d67601)
+  - state/last_seen_id.txt → 2026-10-26_42732：SUCCESS (commit 9c0529f1d3fc02c7fb3d379fa9c8f64768a01fe8)
+
+【步驟 6】Telegram 推播：
+  FAIL — api.telegram.org:443 被 egress proxy 封鎖（connect_rejected, gateway 403 policy denial）
+  主要通知管道本次失效。
+
+【步驟 7】LINE 通知：
+  由於 GitHub push 成功，line-notify.yml 應已自動觸發（備援管道）
+
+【注意事項】
+- truthsocial.com、api.telegram.org 在此環境中持續被 proxy 封鎖
+- 貼文 ID (42732) 為推算值，實際 ID 可能不同
+- 貼文內容根據多家媒體報導重建，非原始貼文文字
