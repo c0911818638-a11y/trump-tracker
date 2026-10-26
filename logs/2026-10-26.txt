@@ -1,7 +1,7 @@
 # 執行日誌 - 2026-10-26
 
 **最新執行時間：** 2026-10-26 ~20:30 UTC
-**上次記錄 ID：** 2026-10-26_42732
+**上次記錄 ID：** 2026-10-26_42732 → 更新為 2026-10-26_42733
 
 ## 抓取結果
 
@@ -11,15 +11,17 @@
 
 ## 發現的新貼文
 
-1. **選民舞弊百萬獎金貼文**（2026-10-26 ~19:30 UTC）- 新貼文！ID 42733
-   - 內容：宣布100萬美元舉報選民舞弊獎金
-   - 多家媒體（Mediaite 4:36 PM EDT、Raw Story 4:03 PM EDT）確認
+1. **選民舞弊百萬獎金貼文**（2026-10-26 ~19:30 UTC）- 新貼文 ID 42733
+   - 原文："Anybody reporting Voter Fraud in the past elections, or the upcoming 2026 midterm Election will be paid $1,000,000 upon the arrest and conviction of those that created the fraud! Thank you for your attention to this matter."
+   - 來源：Mediaite (4:36 PM EDT)、Raw Story (4:03 PM EDT)、NTD (3:56 PM EDT) 等多家媒體報導確認
 
 ## 已執行操作
 
-- 新增貼文檔案：posts/2026-10-26_42733_VoterFraud-Million-Dollar-Reward-Midterms.md
-- 更新 state/last_seen_id.txt 為 2026-10-26_42733
-- 透過 Telegram 發送通知
+- 新增貼文檔案：posts/2026-10-26_42733_VoterFraud-Million-Dollar-Reward-Midterms.md ✅
+- 更新 state/last_seen_id.txt 為 2026-10-26_42733 ✅
+- GitHub push 成功 ✅
+- Telegram 推播失敗： egress proxy 拒絕連線 api.telegram.org ❌
+- LINE 通知：將由 GitHub Actions（line-notify.yml）自動觸發 ✅
 
 ## 先前執行記錄（今日）
 
@@ -32,4 +34,4 @@
 - 17:59 UTC（第十二次）：無新貼文（DNS 失敗）
 - 18:59 UTC（第十三次）：無新貼文
 - 20:01 UTC（第十四次）：無新貼文（選民舞弊貼文尚未索引）
-- 20:30 UTC（本次執行）：發現選民舞弊百萬獎金貼文（新！）
+- 20:30 UTC（本次執行）：發現選民舞弊百萬獎金貼文 → 已追蹤、已推至 GitHub
