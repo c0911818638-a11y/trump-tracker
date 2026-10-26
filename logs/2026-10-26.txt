@@ -1,0 +1,28 @@
+執行時間: 2026-10-26 UTC
+上次追蹤 ID: 2026-10-25_42721
+
+【步驟 1】讀取 last_seen_id: 2026-10-25_42721 ✓
+
+【步驟 2】抓取貼文:
+- 方法 A (truthsocial.com RSS/API): 失敗 - DNS 解析失敗 (getaddrinfo ENOTFOUND)
+- 方法 B (WebSearch): 成功 - 透過新聞搜尋找到相關貼文
+- 方法 C (thetrumparchive.com): 失敗 - DNS 解析失敗
+
+【步驟 3-4】發現 2 則新貼文:
+1. posts/2026-10-26_42722.md - 利比亞移民政策 (約 2026-10-26 01:15 UTC)
+2. posts/2026-10-25_42723.md - 攻擊歐巴馬/選前動員 (約 2026-10-25 05:42 UTC)
+
+【步驟 5】GitHub 上傳: 成功 ✓
+- commit: f72dceaca655682fa66a1dd76f640943fdfe99b2
+- 新 last_seen_id: 2026-10-26_42723
+
+【步驟 6】Telegram 推播: 失敗
+- 原因: api.telegram.org:443 被 egress proxy 封鎖 (connect_rejected)
+- 此為網路政策限制，非 Token 問題
+
+【步驟 7】LINE 通知: 由 GitHub Actions 自動觸發 (已隨 post push 啟動)
+
+備註:
+- 貼文 ID (42722, 42723) 為根據 trumpstruth.org 歸檔序號推估，非 Truth Social 原始 ID
+- 網路環境限制導致無法直接存取 truthsocial.com、大多數新聞網站及 Telegram API
+- 貼文內容來源: WebSearch 新聞摘要 (多家媒體報導交叉驗證)
