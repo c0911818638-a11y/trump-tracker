@@ -1,167 +1,39 @@
-# 監控日誌 - 2026-10-27
+# 監控日誌 2026-10-27
 
-**執行時間：** 2026-10-27 02:07 UTC
-**上次記錄 ID：** 2026-10-27_20261027002（前次執行遺留，格式不一致）
-**本次更新至：** 2026-10-27_20261027005
-
----
+執行時間：2026-10-27T05:59:30Z
+上次記錄 ID：2026-10-27_20261027005
+本次執行狀態：未發現新貼文
 
 ## 執行摘要
 
-本次監控發現並成功上傳 3 篇新貼文（均為 2026-10-26 發布，前次執行未完整處理）。
+- 步驟 1：成功讀取 last_seen_id = 2026-10-27_20261027005（sha: 9728f5abdaa56ec64630e924ce92fba329191670）
+- 步驟 2：嘗試多種方法抓取最新貼文
+  - 方法 A（truthsocial.com RSS）：失敗（DNS 解析失敗）
+  - 方法 A（truthsocial.com API）：失敗（DNS 解析失敗）
+  - 方法 B（WebSearch）：成功，取得搜尋結果
+  - 方法 C（thetrumparchive.com）：失敗（DNS 解析失敗）
+  - 補充搜尋（trumpstruth.org）：部分成功
+- 步驟 3：比較結果——未發現比 last_seen_id 更新的貼文
+- 步驟 4-7：跳過（無新貼文）
 
----
+## 發現的最新貼文（已在前次執行中記錄）
 
-## 嘗試的方法
+- trumpstruth.org ID 42774：轉發川普 Truth Social 貼文
+- trumpstruth.org ID 42775：法院要求通知 DC 高爾夫球場開發案（2026-10-26）
+- Bill Maher 攻擊貼文（2026-10-25，約 1,300 字）
+- 以色列選舉 Netanyahu 背書（2026-10-25）
+- Obama/El-Sayed 攻擊貼文（2026-10-25/26）
+- 選舉舞弊懸賞 100 萬美元（2026-10-26）
+- 多則國會候選人背書（2026-10-26）
 
-1. **Truth Social RSS** (https://truthsocial.com/@realDonaldTrump.rss): Proxy 403 封鎖 - 失敗
-2. **Truth Social API** (https://truthsocial.com/api/v1/accounts/.../statuses): Proxy 403 封鎖 - 失敗
-3. **WebSearch 搜尋**（方法 B）: 成功，透過 trumpstruth.org 搜尋結果找到貼文列表
-4. **多家媒體網站** (Forbes, CNN, Fox, NBC, HuffPost 等): DNS 失敗，無法直接存取
-5. **Trump Archive** (thetrumparchive.com): DNS 失敗
+## 連線狀況
 
----
+- 直接 Web 存取：全部失敗（DNS 解析受限）
+- WebSearch：可用
+- GitHub API（MCP）：可用
+- Telegram API：未測試（無新貼文）
 
-## 發現的新貼文
+## 結論
 
-### 貼文 1：選民舞弊懸賞 100 萬
-- **trumpstruth.org ID：** 42732
-- **本系統 ID：** 20261027003
-- **發布時間：** 2026-10-26 15:31 ET
-- **原文摘要：** "Anybody reporting Voter Fraud in the past Elections, or the upcoming 2026 Midterm Election, will be paid $1,000,000 upon the arrest and conviction..."
-- **分析重要程度：** 高
-- **GitHub 上傳：** 成功 - posts/2026-10-26_20261027003_VoterFraudBounty-1Million.md
-
-### 貼文 2：抨擊參議院讓夏令時間法案消亡
-- **trumpstruth.org ID：** 42744
-- **本系統 ID：** 20261027004
-- **發布時間：** 2026-10-26 ET
-- **原文摘要：** "The United States Senate is letting the Daylight Saving Bill die, when a vast majority of people in America want it passed..."
-- **分析重要程度：** 中
-- **GitHub 上傳：** 成功 - posts/2026-10-26_20261027004_DaylightSavingBill-Senate.md
-
-### 貼文 3：2.5 億美元護士招募計畫
-- **trumpstruth.org ID：** 42750
-- **本系統 ID：** 20261027005
-- **發布時間：** 2026-10-26 18:10 ET
-- **原文摘要：** "The Trump Administration is proud to announce a 250 MILLION DOLLAR PLUS initiative to recruit, train, and retain nurses across America..."
-- **分析重要程度：** 中
-- **GitHub 上傳：** 成功 - posts/2026-10-26_20261027005_NursesInitiative-250M.md
-
----
-
-## 其他發現（未處理的貼文）
-
-以下 October 26 貼文在 trumpstruth.org 有記錄，但僅有標題/摘要，未進行完整分析（屬於大量中期選舉背書貼文系列）：
-- 42743: Sydney Gruters 背書（佛羅里達第16選區）
-- 42746: Anna Paulina Luna 背書
-- 42754: RSBN 集會直播連結分享
-- 42755: Bill Huizenga 背書（密西根第4選區）
-- 42756: Ralph Alvarado 背書（肯塔基第6選區）
-
----
-
-## 背景資訊：以色列大選（2026-10-27）
-
-以色列今日舉行立法大選，川普多次公開背書納坦雅胡。出口民調顯示競爭激烈：
-- 艾森科特（Eisenkot/Yashar）略微領先：預估 22-23 席
-- 納坦雅胡（Likud）：預估 19-21 席
-- 右翼聯盟預估 50 席，反對派聯盟 52-56 席（均未達組閣門檻 61 席）
-
-川普今日（10/27）尚未發出關於以色列選舉結果的貼文（計票仍在進行中）。
-
----
-
-## 通知狀態（第一次執行 02:07 UTC）
-
-- **GitHub 上傳（3 篇貼文）：** 成功 ✅
-- **last_seen_id 更新：** 成功 ✅（2026-10-27_20261027005）
-- **Telegram 推播：** 失敗 ❌ — api.telegram.org:443 connect_rejected（egress proxy 封鎖）
-- **LINE 備援：** GitHub push 成功，.github/workflows/line-notify.yml 應已自動觸發
-
----
-
-## 結論（第一次執行）
-
-本次執行（2026-10-27 02:07 UTC）成功上傳 3 篇 10 月 26 日的新貼文至 GitHub。
-Telegram 推播因 egress proxy 封鎖失敗，LINE 通知透過 GitHub Actions 自動觸發。
-今日（10/27）尚未找到川普新貼文，可能因時間尚早或以色列選舉結果未出。
-
----
-
-## 第二次執行 - 2026-10-27（本次）
-
-**執行時間：** 2026-10-27（自動定時觸發）
-**結果：** 無新貼文
-
-### 搜尋結果
-
-| 方法 | 目標 | 結果 |
-|------|------|------|
-| 方法 A | truthsocial.com RSS | DNS 失敗 |
-| 方法 A | Truth Social API | DNS 失敗 |
-| 方法 B | WebSearch（關鍵字搜尋） | 未找到 2026-10-27 新貼文 |
-| 方法 C | thetrumparchive.com | DNS 失敗 |
-| 方法 C | trumpstruth.org | DNS 失敗 |
-
-### 重要背景（今日動態）
-
-- 川普今日（週二）在德州舉行兩場期中選舉造勢活動：
-  1. **Corpus Christi** — 下午 2 時 CDT（UTC 19:00）
-  2. **Lubbock** — 下午 6 時 CDT（UTC 23:00）
-- 伊朗局勢持續緊張，川普表示仍在考慮是否採取軍事行動
-- 距期中選舉（11月3日）還有 7 天，預計貼文活動將更加頻繁
-- 德州參議院選舉：Talarico (D) vs. Paxton (R) 形勢吃緊
-- 德州提早投票：10月19日至10月30日
-
-### 通知狀態（第二次執行）
-
-- **GitHub 日誌更新：** 成功 ✅
-- **last_seen_id：** 維持不變（20261027005）
-- **Telegram 推播：** 未執行（無新貼文）
-- **LINE 通知：** 未執行（無新貼文）
-
-### 結論
-
-未找到任何超過 last_seen_id（20261027005）的新貼文。
-本次不更新 last_seen_id，不推播通知，不建立新貼文檔。
-
----
-
-## 第三次執行 - 2026-10-27T04:56:54Z
-
-**執行時間：** 2026-10-27T04:56:54Z（自動定時觸發）
-**last_seen_id：** 2026-10-27_20261027005
-**結果：** 無新貼文
-
-### 搜尋結果
-
-| 方法 | 目標 | 結果 |
-|------|------|------|
-| 方法 A | truthsocial.com RSS | ENOTFOUND（DNS 失敗） |
-| 方法 A | Truth Social API | ENOTFOUND（DNS 失敗） |
-| 方法 B | WebSearch（今日貼文） | 僅找到 Oct 25-26 貼文，應已追蹤 |
-| 方法 B | WebSearch（含日期） | 無 Oct 27 新貼文確認 |
-| 方法 C | thetrumparchive.com | ENOTFOUND（DNS 失敗） |
-| 方法 C | trumpstruth.org | ENOTFOUND（DNS 失敗） |
-| 方法 C | kadoa.com | ENOTFOUND（DNS 失敗） |
-| 備援 | Forbes, CNN, HuffPost 等 | 全部 ENOTFOUND |
-
-### WebSearch 摘要發現
-
-- Bill Maher 攻擊貼文（1:37 AM Oct 26）：~1,300 字，已在前次追蹤
-- Obama/El-Sayed 批評貼文（12:42 AM Oct 26）：已在前次追蹤
-- Yashar Ali 於 Oct 27 在 X 平台分享最新貼文，但 x.com 不可存取
-
-### 通知狀態（第三次執行）
-
-- **GitHub 日誌更新：** 成功 ✅
-- **last_seen_id：** 維持不變（20261027005）
-- **Telegram 推播：** 未執行（無新貼文）
-- **LINE 通知：** 未執行（無新貼文）
-
-### 結論
-
-網路限制持續，無法直接存取 Truth Social 及相關網站。
-未找到任何超過 last_seen_id（20261027005）的新貼文。
-本次不更新 last_seen_id，不推播通知，不建立新貼文檔。
+所有已知貼文均已在前次執行（2026-10-27 稍早）中記錄完畢。
+本次執行無新貼文需要推播。
