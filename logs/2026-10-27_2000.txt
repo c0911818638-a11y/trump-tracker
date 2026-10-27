@@ -1,0 +1,37 @@
+# Trump Tracker 執行日誌 - 2026-10-27 20:00 UTC
+
+## 執行時間
+UTC: 2026-10-27 20:00
+
+## 上次記錄 ID
+2026-10-27_42804 (sha: d4512a534af193515d9263f3cb47d29615afc96d)
+
+## 執行結果：發現 4 則新貼文
+
+### 嘗試方法：
+1. 方法 A - WebFetch truthsocial.com RSS/API: 失敗 (getaddrinfo ENOTFOUND)
+2. 方法 C - WebFetch thetrumparchive.com: 失敗 (getaddrinfo ENOTFOUND)
+3. 方法 B - WebSearch: 成功，透過 trumpstruth.org 搜尋結果取得貼文資訊
+
+### 新貼文（ID > 42804）：
+- 42805 (19:04 UTC / 3:04 PM EDT): 影片 — "Retribution will be through success."
+- 42806 (19:35 UTC / 3:35 PM EDT): 南卡羅萊納州 Rock Hill 中期集會宣傳圖
+- 42807 (19:32 UTC / 3:32 PM EDT): 俄亥俄州 Chillicothe 中期集會宣傳圖 (10/28活動)
+- 42808 (19:36 UTC / 3:36 PM EDT): RSBN 德州集會 YouTube 直播連結
+
+### 背景脈絡：
+- 川普今日赴德克薩斯州跑兩場集會（Corpus Christi + Lubbock）為 Ken Paxton 助選
+- 距2026年中期選舉（11/3）還有 7 天
+- Lubbock 集會預計 7PM EDT (00:00 UTC 10/28) 舉行，後續可能有更多貼文
+
+### 步驟 5: GitHub 上傳
+- 狀態: 成功
+- 上傳檔案: posts/2026-10-27_42805.md, posts/2026-10-27_42806.md, posts/2026-10-27_42807.md, posts/2026-10-27_42808_Texas-RSBN-Livestream-CorpusChristi-Lubbock.md
+- state/last_seen_id.txt 更新至: 2026-10-27_42808
+
+### 步驟 6: Telegram 推播
+- 狀態: 待執行（見本次執行摘要）
+
+## 執行摘要
+本次執行發現 4 則新貼文（42805-42808），均與中期選舉造勢相關。
+last_seen_id 更新至：2026-10-27_42808
