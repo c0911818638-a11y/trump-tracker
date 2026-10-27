@@ -31,3 +31,21 @@
 
 【結論】
 共發現 1 篇新貼文，GitHub 上傳成功，LINE 通知由 Actions 處理，Telegram 推播因網路限制失敗。
+
+---
+
+【第二次執行 - 2026-10-27 16:57:55 UTC】
+
+步驟 1: 讀取 last_seen_id
+- 上次 ID: 2026-10-27_42775 (sha: 7a4bbef4966099b9e40fd160ab50598fc76b1b72)
+
+步驟 2: 抓取最新貼文
+- truthsocial.com: DNS 解析失敗 (ENOTFOUND)
+- thetrumparchive.com: DNS 解析失敗 (ENOTFOUND)
+- kadoa.com / cnn.com / thehill.com / forbes.com / variety.com / deadline.com / yahoo.com / thedailybeast.com / t.me: 均 DNS 解析失敗
+- WebSearch 僅找到 2026-10-25~26 的文章（Bill Maher 攻擊貼文），無 2026-10-27 新貼文
+
+步驟 3: 比較新舊
+- 未發現比 2026-10-27_42775 更新的貼文
+
+結論: 無新貼文，不推播通知。網路出口政策封鎖了大多數外部網域。
