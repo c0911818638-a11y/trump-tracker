@@ -1,51 +1,40 @@
 執行時間: 2026-10-27 UTC
 
-【執行摘要】
+=== 執行摘要 ===
 
-步驟 1: 讀取 last_seen_id
-- 上次 ID: 2026-10-27_20261027005 (sha: 9728f5abdaa56ec64630e924ce92fba329191670)
-
-步驟 2: 抓取最新貼文
-- truthsocial.com: DNS 解析失敗 (ENOTFOUND)
-- thetrumparchive.com: DNS 解析失敗 (ENOTFOUND)
-- 改用 WebSearch + 多方新聞來源搜尋
-- 找到新貼文: ID 42775 (East Potomac Golf Course / Judge ruling)
-
-步驟 3: 比較新舊貼文
-- 新貼文: 42775 (未在 repo 中，確認為新貼文)
-- 發布時間: 2026-10-26 23:37 EDT
-
-步驟 4: 中文分析完成
-- 貼文: 2026-10-27_42775_EastPotomac-GolfCourse-Judge-Unconstitutional.md
-
-步驟 5: GitHub 上傳
-- 成功: posts/2026-10-27_42775_EastPotomac-GolfCourse-Judge-Unconstitutional.md
-- 成功: state/last_seen_id.txt 更新為 2026-10-27_42775
-- Commit: 433d11975a0d41e7699b6346f114bca48d8f78a4
-
-步驟 6: Telegram 推播
-- 失敗: egress 政策擋下 api.telegram.org (connect_rejected)
-
-步驟 7: LINE 通知
-- 由 GitHub Actions (line-notify.yml) 自動觸發，因步驟 5 push 成功
-
-【結論】
-共發現 1 篇新貼文，GitHub 上傳成功，LINE 通知由 Actions 處理，Telegram 推播因網路限制失敗。
-
----
-
-【第二次執行 - 2026-10-27 16:57:55 UTC】
-
-步驟 1: 讀取 last_seen_id
-- 上次 ID: 2026-10-27_42775 (sha: 7a4bbef4966099b9e40fd160ab50598fc76b1b72)
+步驟 1: 讀取上次記錄
+- 上次貼文 ID: 2026-10-27_42799
+- SHA: 8fa8e6898a22c47711d6188ce4669d5bf7853396
 
 步驟 2: 抓取最新貼文
-- truthsocial.com: DNS 解析失敗 (ENOTFOUND)
-- thetrumparchive.com: DNS 解析失敗 (ENOTFOUND)
-- kadoa.com / cnn.com / thehill.com / forbes.com / variety.com / deadline.com / yahoo.com / thedailybeast.com / t.me: 均 DNS 解析失敗
-- WebSearch 僅找到 2026-10-25~26 的文章（Bill Maher 攻擊貼文），無 2026-10-27 新貼文
+- truthsocial.com: 失敗（ENOTFOUND - 網路封鎖）
+- thetrumparchive.com: 失敗（ENOTFOUND - 網路封鎖）
+- 改用 WebSearch 取得貼文資訊
+- trumpstruth.org 搜尋結果: 成功取得貼文摘要
 
 步驟 3: 比較新舊
-- 未發現比 2026-10-27_42775 更新的貼文
+- 找到 5 則新貼文: ID 42800, 42801, 42802, 42803, 42804
 
-結論: 無新貼文，不推播通知。網路出口政策封鎖了大多數外部網域。
+步驟 4: 貼文分析完成
+- 42800: 恭賀加拿大 Lorne Doerkson 勝選 (10:53 AM EDT)
+- 42801: 前往德克薩斯州 Corpus Christi 集會 (1:46 PM EDT)
+- 42802: 轉發 Roger Marshall 堪薩斯州背書 (2:05 PM EDT)
+- 42803: 堪薩斯州提前投票呼籲 (2:05 PM EDT)
+- 42804: 俄亥俄州 Chillicothe 集會連結 (3:04 PM EDT)
+
+步驟 5: GitHub 上傳
+- 狀態: 成功
+- Commit SHA: a5016a9c23fa4204618a873bb1de644c84c9c9fb
+- 上傳檔案: posts/2026-10-27_42800.md, posts/2026-10-27_42801.md, posts/2026-10-27_42802.md, posts/2026-10-27_42803.md, posts/2026-10-27_42804.md
+- state/last_seen_id.txt 更新至: 2026-10-27_42804
+
+步驟 6: Telegram 推播
+- 狀態: 失敗
+- 原因: Telegram 推播失敗：網路 egress 政策封鎖 api.telegram.org（Proxy 回傳 403 Forbidden）
+- 已嘗試: curl -v api.telegram.org 443，CONNECT 隧道被 Proxy 拒絕
+
+步驟 7: LINE 通知
+- 因 GitHub push 成功，.github/workflows/line-notify.yml 應自動觸發
+- 本步驟不需手動執行
+
+=== 結束 ===
