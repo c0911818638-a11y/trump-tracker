@@ -11,27 +11,42 @@ UTC: 2026-10-27 20:00
 ### 嘗試方法：
 1. 方法 A - WebFetch truthsocial.com RSS/API: 失敗 (getaddrinfo ENOTFOUND)
 2. 方法 C - WebFetch thetrumparchive.com: 失敗 (getaddrinfo ENOTFOUND)
-3. 方法 B - WebSearch: 成功，透過 trumpstruth.org 搜尋結果取得貼文資訊
+3. 方法 C2 - WebFetch kadoa.com: 失敗 (getaddrinfo ENOTFOUND)
+4. 方法 B - WebSearch: 成功，透過 trumpstruth.org 搜尋結果取得貼文資訊
 
 ### 新貼文（ID > 42804）：
-- 42805 (19:04 UTC / 3:04 PM EDT): 影片 — "Retribution will be through success."
-- 42806 (19:35 UTC / 3:35 PM EDT): 南卡羅萊納州 Rock Hill 中期集會宣傳圖
-- 42807 (19:32 UTC / 3:32 PM EDT): 俄亥俄州 Chillicothe 中期集會宣傳圖 (10/28活動)
-- 42808 (19:36 UTC / 3:36 PM EDT): RSBN 德州集會 YouTube 直播連結
+
+| ID | 時間 (UTC) | 內容摘要 |
+|----|-----------|---------|
+| 42805 | 19:04 | 影片: "Retribution will be through success." |
+| 42806 | 19:35 | 南卡羅萊納州 Rock Hill 中期集會宣傳圖 |
+| 42807 | 19:32 | 俄亥俄州 Chillicothe 中期集會宣傳圖 (10/28活動) |
+| 42808 | 19:36 | RSBN 德州兩場集會 YouTube 直播連結 |
 
 ### 背景脈絡：
 - 川普今日赴德克薩斯州跑兩場集會（Corpus Christi + Lubbock）為 Ken Paxton 助選
+- Corpus Christi 集會上川普稱「讓我們把委內瑞拉變成美國第51州」
+- 川普表示仅在「誠實選舉」的前提下接受中期選舉結果
 - 距2026年中期選舉（11/3）還有 7 天
-- Lubbock 集會預計 7PM EDT (00:00 UTC 10/28) 舉行，後續可能有更多貼文
+- Lubbock 集會預計 7PM EDT (00:00 UTC 10/28)，後續可能有更多貼文
 
-### 步驟 5: GitHub 上傳
+## 步驟 5: GitHub 上傳
 - 狀態: 成功
+- Commit SHA: 90d1c75283e2a5115816e7821a3bbccc0a46fa70
 - 上傳檔案: posts/2026-10-27_42805.md, posts/2026-10-27_42806.md, posts/2026-10-27_42807.md, posts/2026-10-27_42808_Texas-RSBN-Livestream-CorpusChristi-Lubbock.md
 - state/last_seen_id.txt 更新至: 2026-10-27_42808
 
-### 步驟 6: Telegram 推播
-- 狀態: 待執行（見本次執行摘要）
+## 步驟 6: Telegram 推播
+- 狀態: 失敗
+- 原因: api.telegram.org:443 被 egress proxy 拒絕連線 (connect_rejected)
+- 這是本 session 各次執行的一貫問題
+
+## 步驟 7: LINE 通知
+- 因 GitHub push 成功，.github/workflows/line-notify.yml 會自動觸發
+- LINE 為本次運行的主要通知管道
 
 ## 執行摘要
-本次執行發現 4 則新貼文（42805-42808），均與中期選舉造勢相關。
-last_seen_id 更新至：2026-10-27_42808
+- 新貼文數量: 4 則（42805、42806、42807、42808）
+- 主驅貼文類型: 德州集會宣傳/評論影片/選舉集會宣傳
+- last_seen_id 更新至: 2026-10-27_42808
+- Telegram 推播失敗（網路限制），LINE 將透過 GitHub Actions 自動推播
