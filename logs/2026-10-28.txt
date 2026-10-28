@@ -1,6 +1,6 @@
 監控執行記錄 - 2026-10-28
 
-執行時間: 2026-10-28T (UTC)
+【第一次執行】執行時間: 2026-10-28T (UTC)
 上次記錄的貼文 ID: 2026-10-27_42808
 上次記錄的 SHA: 734feef273b455cef43987e4faa587047dcd512d
 
@@ -28,3 +28,21 @@
 - cbsnews.com, cnn.com, forbes.com, yahoo.com
 - huffpost.com, thehill.com, snopes.com
 - www.presidency.ucsb.edu
+
+---
+
+【第二次執行】執行時間: 2026-10-28T03:00:06Z (UTC)
+上次記錄的貼文 ID: 2026-10-27_42808
+
+【抓取嘗試結果】
+- 方法 A (truthsocial.com RSS): 失敗 - 網域無法解析
+- 方法 A (Truth Social API): 失敗 - 網域無法解析
+- 方法 B (WebSearch 多次嘗試): 執行成功，搜尋 2026-10-27/28 貼文
+  - 搜尋結果確認 2026-10-25 最新真實貼文為 Bill Maher 攻擊文 (1,318 字)
+  - 搜尋未找到任何 2026-10-28 的新貼文
+  - 2026-10-27 流傳的選舉勝利截圖被 Lead Stories/Snopes 確認為 AI 偽造
+- 方法 C (thetrumparchive.com, presidency.ucsb.edu): 失敗 - 網域無法解析
+
+【確認結論】
+本次第二輪執行確認：2026-10-28 截至 03:00 UTC，未發現新的 Trump Truth Social 貼文 (ID > 42808)
+無推播通知。last_seen_id.txt 維持不變 (2026-10-27_42808)。
