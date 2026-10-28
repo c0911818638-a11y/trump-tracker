@@ -1,34 +1,43 @@
-監控執行記錄 - 2026-10-28
+# 監控日誌：2026-10-28
 
-執行時間: 2026-10-28T04:58:45 (UTC)
-上次記錄的貼文 ID: 2026-10-27_42808
-上次記錄的 SHA: 734feef273b455cef43987e4faa587047dcd512d
+## 執行時間
+2026-10-28T05:56:53Z
 
-【抓取嘗試結果】
-- 方法 A (truthsocial.com RSS): 失敗 - 網域無法解析 (被 session 網路政策封鎖)
-- 方法 A (Truth Social API endpoint): 失敗 - 網域無法解析
-- 方法 B (WebSearch): 執行成功，未找到 ID > 42808 的新貼文
-- 方法 C (thetrumparchive.com): 失敗 - 網域無法解析
-- 輔助搜尋 (trumpstruth.org): 無法直接訪問，但 Google 搜尋索引顯示最高 ID 為 42808
+## 上次記錄 ID
+2026-10-27_42808
 
-【搜尋結果摘要】
-- 找到的最新貼文: ID 42808 (2026-10-27), 內容為 YouTube 直播連結
-- 其他 Oct 27 貼文: ID 42807 (Chillicothe 造勢活動連結), ID 42805 (影片 "Retribution will be through success")
-- 2026-10-25/26: 攻擊 Bill Maher (1,323 字長文) + 攻擊 Obama/El-Sayed
-- 2026-10-28: 未發現任何新貼文
+## 執行結果
+- 方法 A（WebFetch RSS）：失敗 - truthsocial.com 被網路政策封鎖（getaddrinfo ENOTFOUND）
+- 方法 A（Truth Social API）：失敗 - truthsocial.com 被網路政策封鎖
+- 方法 B（WebSearch）：部分成功 - 找到報導，但最新可確認貼文來自 2026-10-25~27（早於 last_seen_id）
+- 方法 C（WebFetch thetrumparchive.com）：失敗 - 被網路政策封鎖
 
-【背景資訊】
-- Chillicothe, Ohio 造勢活動預定 10/28 晚 7 PM ET (UTC 00:00 10/29)
-- 第二次執行時間 UTC 04:58 = ET 00:58（活動應已結束，但貼文或尚未被搜尋索引收錄）
+## 搜尋到的最新已知貼文
+- 攻擊 Bill Maher 的 1,321 字長文（約 2026-10-25 晚間 8 PM ET）
+- 攻擊 Obama 及 Abdul El-Sayed（約 2026-10-25）
+- 以上均早於 last_seen_id（2026-10-27_42808），應已在先前執行中處理
 
-【結論】
-本次執行（第二次）未發現新的 Trump Truth Social 貼文 (ID > 42808)
-無推播通知。last_seen_id.txt 維持不變。
+## 結論
+2026-10-28 無法確認任何新貼文。直接存取 truthsocial.com 及多個主要新聞網站均被環境網路政策封鎖。WebSearch 未發現 2026-10-28 的新貼文。
 
-【訪問被封鎖的域名（需在 session 網路設定中允許）】
+## 封鎖網域清單
 - truthsocial.com
-- thetrumparchive.com / trumpstruth.org
-- kadoa.com, factba.se, presidency.ucsb.edu
-- cbsnews.com, cnn.com, forbes.com, yahoo.com
-- huffpost.com, thehill.com, newrepublic.com, rawstory.com
-- ibtimes.co.uk, thewrap.com, ground.news, poynter.org
+- www.yahoo.com
+- www.cnn.com
+- thehill.com
+- www.forbes.com
+- www.huffpost.com
+- variety.com
+- deadline.com
+- www.cbsnews.com
+- www.mediaite.com
+- newscord.org
+- www.poynter.org
+- www.kadoa.com
+- www.thetrumparchive.com
+- resistthemainstream.com
+
+## 建議
+請在環境網路政策中加入以下網域以改善監控能力：
+- truthsocial.com
+- thetrumparchive.com
