@@ -103,6 +103,38 @@
 
 ---
 
+## 第六次執行紀錄（2026-10-28 20:00 UTC）
+
+**上次記錄 ID：** 2026-10-28_42813
+
+### 抓取狀態
+
+- **truthsocial.com RSS：** 失敗（DNS 無法解析，網域未在允許清單）
+- **thetrumparchive.com：** 失敗（DNS 無法解析，網域未在允許清單）
+- **kadoa.com：** 失敗（DNS 無法解析，網域未在允許清單）
+- **WebSearch：** 成功，發現 1 則新貼文
+
+### 新貼文 (ID: 42814)
+
+**發布時間：** 2026-10-28 早晨 UTC
+**主題：** 川普宣稱其對納坦雅胡的個人背書扭轉以色列選舉局勢
+
+**原文：**
+"When President Trump endorsed Bibi Netanyahu, the whole tide turned. What looked like a likely defeat, now looks like a big come-from-behind stalemate, or even a WIN for Netanyahu. Millions of Israelis have had enough of the culture of lies. It all took place AFTER the Endorsement by President Trump."
+
+**中文摘要：** 川普宣稱其對以色列總理納坦雅胡的背書是扭轉選舉局勢的關鍵。情緒：宣示／自誇。重要程度：高（影響中東局勢）。
+
+**已建立分析檔案：** posts/2026-10-28_42814.md
+**已更新 last_seen_id 至：** 2026-10-28_42814
+
+### 通知狀態
+
+- **GitHub 上傳：** 成功（MCP push_files 工具）
+- **Telegram 推播：** 失敗——api.telegram.org:443 被 egress proxy 封鎖（policy denial，HTTP 403）
+- **LINE 通知：** 由 GitHub Actions 自動觸發（因步驟 5 push 成功）
+
+---
+
 ## 注意事項
 
 以下網域被此執行環境的網路政策封鎖，若要確保即時追蹤，請在環境設定中允許：
