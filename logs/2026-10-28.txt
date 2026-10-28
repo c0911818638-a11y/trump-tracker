@@ -1,43 +1,25 @@
-# 監控日誌：2026-10-28
+Trump Truth Social 監控日誌 - 2026-10-28
 
-## 執行時間
-2026-10-28T05:56:53Z
+執行時間: 2026-10-28 09:58:39 UTC
+上次記錄貼文 ID: 2026-10-28_42810
 
-## 上次記錄 ID
-2026-10-27_42808
+【資料來源狀態】
+- truthsocial.com: 無法連線（網域被 proxy 封鎖）
+- thetrumparchive.com: 無法連線（網域被 proxy 封鎖）
+- trumpstruth.org: 無法連線（網域被 proxy 封鎖）
+- kadoa.com: 無法連線（網域被 proxy 封鎖）
+- WebSearch: 成功執行，已搜尋最新貼文
 
-## 執行結果
-- 方法 A（WebFetch RSS）：失敗 - truthsocial.com 被網路政策封鎖（getaddrinfo ENOTFOUND）
-- 方法 A（Truth Social API）：失敗 - truthsocial.com 被網路政策封鎖
-- 方法 B（WebSearch）：部分成功 - 找到報導，但最新可確認貼文來自 2026-10-25~27（早於 last_seen_id）
-- 方法 C（WebFetch thetrumparchive.com）：失敗 - 被網路政策封鎖
+【搜尋結果】
+透過 WebSearch 確認最新已索引貼文為 ID 42810（今日 0 天前發佈）
+貼文內容：RT @jmclghn - Strong Majority backs @realDonaldTrump stopping Iran from getting nuclear weapons
 
-## 搜尋到的最新已知貼文
-- 攻擊 Bill Maher 的 1,321 字長文（約 2026-10-25 晚間 8 PM ET）
-- 攻擊 Obama 及 Abdul El-Sayed（約 2026-10-25）
-- 以上均早於 last_seen_id（2026-10-27_42808），應已在先前執行中處理
+【已知近期貼文（供參考）】
+- 42807 (Oct 28): 俄亥俄州 Chillicothe 中期選舉造勢活動連結
+- 42808 (Oct 28): YouTube 直播連結
+- 42809 (Oct 28): 關於 Netanyahu/以色列的轉貼內容
+- 42810 (Oct 28): RT - 多數民眾支持川普阻止伊朗發展核武
 
-## 結論
-2026-10-28 無法確認任何新貼文。直接存取 truthsocial.com 及多個主要新聞網站均被環境網路政策封鎖。WebSearch 未發現 2026-10-28 的新貼文。
-
-## 封鎖網域清單
-- truthsocial.com
-- www.yahoo.com
-- www.cnn.com
-- thehill.com
-- www.forbes.com
-- www.huffpost.com
-- variety.com
-- deadline.com
-- www.cbsnews.com
-- www.mediaite.com
-- newscord.org
-- www.poynter.org
-- www.kadoa.com
-- www.thetrumparchive.com
-- resistthemainstream.com
-
-## 建議
-請在環境網路政策中加入以下網域以改善監控能力：
-- truthsocial.com
-- thetrumparchive.com
+【結論】
+無新貼文（所有已知貼文 ID ≤ 42810，與 last_seen_id 相符）
+不執行推播通知
