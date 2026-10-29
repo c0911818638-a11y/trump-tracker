@@ -113,6 +113,7 @@ WebSearch 搜尋確認：
 
 本次監控（第四次）未發現新貼文，無需推播。
 last_seen_id 維持不變：2026-10-28_42826
+不推播 Telegram / LINE。
 
 ---
 
@@ -242,6 +243,47 @@ last_seen_id 維持不變：2026-10-28_42826
 ## 結論
 
 第七次執行確認無新貼文。
+last_seen_id 維持不變：2026-10-28_42826
+Telegram 推播：不執行（無新內容）
+LINE 通知：不執行（無新內容）
+
+---
+
+# Monitoring Run: 2026-10-29（第八次執行）
+
+執行時間: 2026-10-29 13:19 UTC
+上次貼文 ID: 2026-10-28_42826
+
+## 方法嘗試結果
+
+- 方法 A (truthsocial.com RSS): 失敗 - ENOTFOUND（網路政策封鎖）
+- 方法 A (truthsocial.com API): 失敗 - ENOTFOUND
+- 方法 B (WebSearch x7 不同關鍵字): 執行成功，無新貼文
+- 方法 C (thetrumparchive.com): 失敗 - ENOTFOUND
+- 方法 C (trumpstruth.org): 失敗 - ENOTFOUND
+- 方法 C (kadoa.com / x.com / yahoo.com / cnn.com / foxnews.com / nbcnews.com / forbes.com / japantimes.co.jp / presidency.ucsb.edu): 全部 ENOTFOUND
+- GitHub REST API (curl): 失敗 - proxy 阻擋寫入
+- GitHub MCP Tools: 可用（本次用於寫入此 log）
+
+## 搜尋結果
+
+WebSearch 搜尋確認：
+- 最新可查得的 Trump's Truth 存檔貼文為 #42826（圖片貼文，2026-10-28）
+- 搜尋 #42827~#42831 無任何索引結果
+- 搜尋 "Trump Truth Social October 29 2026"、"Trump statement post October 29 2026"、"Trump Texas rally October 29 2026 Truth Social post" 均無 Oct 29 新貼文
+- TrumpTruthOnX (X帳號) 最新轉播為 Oct 28 10:42 PM ET（即 #42825 或 #42826）
+- 搜尋引擎未索引到任何 ID > 42826 或日期為 2026-10-29 的新貼文
+
+## 背景資訊
+
+- 今日（2026-10-29）為美國 2026 年期中選舉前四天（選舉日為 2026-11-03）
+- 川普今日在德州舉辦「back-to-back rallies」（連續造勢集會）
+- Truth Social 今日宣布 Bloomberg 及交易商付費訂閱川普貼文快速存取方案（最高 $100,000/月）
+- 可能在造勢活動期間有新發貼，但搜尋引擎尚未索引
+
+## 結論
+
+第八次執行確認無新貼文可追蹤。
 last_seen_id 維持不變：2026-10-28_42826
 Telegram 推播：不執行（無新內容）
 LINE 通知：不執行（無新內容）
