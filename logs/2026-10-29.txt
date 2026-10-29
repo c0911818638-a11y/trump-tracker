@@ -16,10 +16,19 @@ Telegram 推播: 失敗
 
 LINE 通知: 由 GitHub Actions 觸發（若 workflow 設定正確）
 
+---
+
+第二次執行時間: 2026-10-29 04:56 UTC
+
+搜尋 ID > 42826 的新貼文: 未發現
+- truthsocial.com 無法存取（網域未在允許清單）
+- trumpstruth.org 無法存取（網域未在允許清單）
+- WebSearch 搜尋結果：無 10 月 29 日新貼文
+- 結論：截至 04:56 UTC，川普尚未發布新貼文
+
 備註:
 - truthsocial.com 無法存取（網域未在允許清單）
 - thetrumparchive.com 無法存取（網域未在允許清單）
 - trumpstruth.org 無法存取（網域未在允許清單）
 - kadoa.com 無法存取（網域未在允許清單）
-- yahoo.com 無法存取（網域未在允許清單）
 - WebSearch 仍可用，貼文資訊透過搜尋結果摘要取得
