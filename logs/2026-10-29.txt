@@ -1,34 +1,26 @@
-執行時間: 2026-10-29 UTC
-上次記錄 ID: 2026-10-28_42823
+# Monitoring Run: 2026-10-29
 
-新貼文發現: 3 則 (42824, 42825, 42826)
-貼文類型: 圖片轉貼（東波多馬克高爾夫球場翻新系列）
-10 月 29 日新貼文: 0 則（未發現）
+執行時間: 2026-10-29 05:57:00 UTC
+上次貼文 ID: 2026-10-28_42826
 
-GitHub 上傳: 成功 (commit 68459db)
-- posts/2026-10-28_42824.md
-- posts/2026-10-28_42825.md
-- posts/2026-10-28_42826.md
-- state/last_seen_id.txt -> 2026-10-28_42826
+## 方法嘗試結果
 
-Telegram 推播: 失敗
-原因: api.telegram.org:443 connect_rejected (egress proxy 政策拒絕連線)
+- 方法 A (WebFetch truthsocial.com RSS): 失敗 - 網域不在允許清單
+- 方法 A (truthsocial.com API): 失敗 - 網域不在允許清單
+- 方法 B (WebSearch): 執行成功
+- 方法 C (thetrumparchive.com): 失敗 - 網域不在允許清單
+- 方法 C (trumpstruth.org): 失敗 - 網域不在允許清單
+- 方法 C (kadoa.com): 失敗 - 網域不在允許清單
+- 方法 C (cbsnews.com): 失敗 - 網域不在允許清單
 
-LINE 通知: 由 GitHub Actions 觸發（若 workflow 設定正確）
+## 搜尋結果
 
----
+WebSearch 搜尋多個關鍵字組合，找到的最新貼文為：
+- 2026-10-28 ID 42826：秋景圖片貼文（22:42 EDT）
+- 2026-10-28 ID 42820：奧克拉荷馬提前投票呼籲（17:57 EDT）
 
-第二次執行時間: 2026-10-29 04:56 UTC
+未發現任何 ID > 42826 的新貼文（2026-10-29 截至本次執行）。
 
-搜尋 ID > 42826 的新貼文: 未發現
-- truthsocial.com 無法存取（網域未在允許清單）
-- trumpstruth.org 無法存取（網域未在允許清單）
-- WebSearch 搜尋結果：無 10 月 29 日新貼文
-- 結論：截至 04:56 UTC，川普尚未發布新貼文
+## 結論
 
-備註:
-- truthsocial.com 無法存取（網域未在允許清單）
-- thetrumparchive.com 無法存取（網域未在允許清單）
-- trumpstruth.org 無法存取（網域未在允許清單）
-- kadoa.com 無法存取（網域未在允許清單）
-- WebSearch 仍可用，貼文資訊透過搜尋結果摘要取得
+本次監控（2026-10-29）未發現新貼文，無需推播通知。
