@@ -48,3 +48,61 @@
 
 第十次執行發現 12 篇新貼文（#42834-#42845），3 篇有文字內容已上傳分析，其餘為影片/圖片/轉發。
 Telegram 推播失敗需在 session 網路設定中允許 api.telegram.org。
+
+---
+
+# Monitoring Run: 2026-10-29（第十一次執行）
+
+執行時間: 2026-10-29 19:00-20:00 UTC
+上次貼文 ID: 2026-10-29_42845
+
+## 背景
+
+川普今日赴南卡羅來納州 Rock Hill（Winthrop Coliseum / Sports & Event Center）
+為 Darline Graham 參議院選舉造勢。Rally 時間：上午 12:30 PM ET 開始，約 2:45 PM ET 結束。
+
+## 方法嘗試結果
+
+- 方法 A (truthsocial.com RSS): 失敗 - ENOTFOUND（網路政策封鎖）
+- 方法 A (truthsocial.com API): 失敗 - ENOTFOUND
+- 方法 B (WebSearch x8 不同關鍵字): 執行成功
+  - 找到貼文均為 #42845 之前（Oct 22-29 AM 的貼文）
+  - 未發現 ID > 42845 的新貼文
+- 方法 C (thetrumparchive.com): 失敗 - ENOTFOUND
+- 方法 C (trumpstruth.org): 失敗 - ENOTFOUND（直接訪問）
+  但 WebSearch 搜尋片段中可見到 statuses/42841 已在上次記錄
+- GitHub REST API (curl): 失敗 - proxy 阻擋寫入
+- GitHub MCP Tools: 可用（使用中）
+
+## 搜尋發現
+
+Rally 後貼文（ID > 42845）：
+- 無法確認任何新貼文
+- 川普可能仍在返程途中（Rally 於 2:45 PM ET 結束，現在 3:58 PM ET）
+
+已確認的今日重要貼文（已在上次記錄中）：
+- 99% 共和黨支持率聲稱（疑似誇大，Marquette 民調顯示實際 75%）
+- 南卡羅來納 Darline Graham 造勢相關轉發貼文多則
+
+封鎖的域名（本 session 網路限制）：
+- truthsocial.com, thetrumparchive.com, trumpstruth.org
+- kadoa.com, presidency.ucsb.edu
+- cnn.com, cbsnews.com, yahoo.com, nbcnews.com
+
+## 執行結果
+
+- 新貼文：0 篇（無法確認）
+- 分析檔案上傳：無
+- last_seen_id 更新：未更新（維持 2026-10-29_42845）
+- Telegram 推播：未執行（無新貼文）
+- LINE 通知：未觸發（無新 GitHub push）
+
+## 結論
+
+第十一次執行未發現新貼文。川普剛結束 Rally 可能尚未有新貼文，
+或有新貼文但因網路限制無法確認。
+下次執行將繼續監控。
+
+**持續問題：**
+- Telegram 推播被 proxy 封鎖（api.telegram.org 需加入允許清單）
+- 主要資料來源均被封鎖（需允許 truthsocial.com）
