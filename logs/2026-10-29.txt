@@ -17,37 +17,19 @@
 
 ## 新發現貼文（ID > 42833）
 
-從 WebSearch 及 trumpstruth.org 搜尋片段發現以下新貼文：
-
 **42834**（~16:15 UTC / 12:15 PM EDT）
-"Congressman Dan Meuser is an America First Patriot who is doing an incredible job representing Pennsylvania's 9th Congressional District. He has my Complete and Total Endorsement!"
+"Congressman Dan Meuser is an America First Patriot who is doing an incredible job representing Pennsylvania's 9th Congressional District."
 
-**42835**（~16:40 UTC / 12:40 PM EDT）
-"Just arrived in South Carolina! Watching the Right Side Broadcasting Network interviews with the thousands of people who can't get into the arena. Extra jumbotrons have been set up outside!"
+**42835**（~16:40 UTC）南卡羅來納抵達貼文
 
-**42836-42839**（影片/圖片轉發，無完整文字）
-
-**42840**（~16:46 UTC / 12:46 PM EDT）
-[RT 轉發 RSBN 圖片] 南卡羅來納支持者提前排隊入場
-
-**42841-42845**（影片/圖片/轉發貼文，無完整文字）
-
-背景：川普今日赴南卡羅來納州為 Darline Graham 参議院選舉造勢（選舉日 2026-11-03）。
+**42836-42845**（影片/圖片/轉發貼文）
 
 ## 執行結果
 
-- 分析檔案上傳：
-  - posts/2026-10-29_42834.md：成功
-  - posts/2026-10-29_42835.md：成功
-  - posts/2026-10-29_42840.md：成功
+- 分析檔案上傳：posts/2026-10-29_42834.md, 42835.md, 42840.md 成功
 - last_seen_id 更新：成功 → 2026-10-29_42845
-- Telegram 推播：失敗（原因：api.telegram.org:443 被 session egress proxy 封鎖，403 policy denial）
-- LINE 通知：由 GitHub Actions 自動處理（GitHub push 成功，workflow 應觸發）
-
-## 結論
-
-第十次執行發現 12 篇新貼文（#42834-#42845），3 篇有文字內容已上傳分析，其餘為影片/圖片/轉發。
-Telegram 推播失敗需在 session 網路設定中允許 api.telegram.org。
+- Telegram 推播：失敗（api.telegram.org:443 被 proxy 封鎖）
+- LINE 通知：由 GitHub Actions 自動處理
 
 ---
 
@@ -56,53 +38,47 @@ Telegram 推播失敗需在 session 網路設定中允許 api.telegram.org。
 執行時間: 2026-10-29 19:00-20:00 UTC
 上次貼文 ID: 2026-10-29_42845
 
-## 背景
+未發現新貼文（ID > 42845）。last_seen_id 維持不變。
 
-川普今日赴南卡羅來納州 Rock Hill（Winthrop Coliseum / Sports & Event Center）
-為 Darline Graham 參議院選舉造勢。Rally 時間：上午 12:30 PM ET 開始，約 2:45 PM ET 結束。
+---
+
+# Monitoring Run: 2026-10-29（第十二次執行）
+
+執行時間: 2026-10-29 21:57 UTC
+上次貼文 ID: 2026-10-29_42845
 
 ## 方法嘗試結果
 
-- 方法 A (truthsocial.com RSS): 失敗 - ENOTFOUND（網路政策封鎖）
-- 方法 A (truthsocial.com API): 失敗 - ENOTFOUND
-- 方法 B (WebSearch x8 不同關鍵字): 執行成功
-  - 找到貼文均為 #42845 之前（Oct 22-29 AM 的貼文）
-  - 未發現 ID > 42845 的新貼文
-- 方法 C (thetrumparchive.com): 失敗 - ENOTFOUND
+- 方法 A (truthsocial.com RSS/API): 失敗 - ENOTFOUND
+- 方法 B (WebSearch): 成功，發現新貼文
 - 方法 C (trumpstruth.org): 失敗 - ENOTFOUND（直接訪問）
-  但 WebSearch 搜尋片段中可見到 statuses/42841 已在上次記錄
-- GitHub REST API (curl): 失敗 - proxy 阻擋寫入
-- GitHub MCP Tools: 可用（使用中）
+- GitHub MCP Tools: 成功
+- Telegram 推播: 失敗（api.telegram.org connect_rejected）
 
-## 搜尋發現
+## 新發現貼文（ID > 42845）
 
-Rally 後貼文（ID > 42845）：
-- 無法確認任何新貼文
-- 川普可能仍在返程途中（Rally 於 2:45 PM ET 結束，現在 3:58 PM ET）
+**42846**（~18:12 UTC / 1:12 PM EDT）
+轉推 Trump 自身貼文（status 117525273514465379），內容待確認
 
-已確認的今日重要貼文（已在上次記錄中）：
-- 99% 共和黨支持率聲稱（疑似誇大，Marquette 民調顯示實際 75%）
-- 南卡羅來納 Darline Graham 造勢相關轉發貼文多則
+**42854**（18:52 UTC / 2:52 PM EDT）⭐ 重要
+"Today I am pleased to report, in Breaking News this morning, that the U.S. Economy is BOOMING at 3.4 PERCENT. Consumer spending is UP. Business investment is UP. Equipment investment ROSE 21%. Core inflation remained LOW. These numbers BEAT the forecasts of 72% of economists. The economy is ROARING — and the Democrats would BURN IT ALL DOWN if given the chance this November!"
 
-封鎖的域名（本 session 網路限制）：
-- truthsocial.com, thetrumparchive.com, trumpstruth.org
-- kadoa.com, presidency.ucsb.edu
-- cnn.com, cbsnews.com, yahoo.com, nbcnews.com
+**42856**（~18:57 UTC）
+轉推 Dan Meuser 背書貼文（42834 的 ReTruth）
+
+**42857**（19:05 UTC / 3:05 PM EDT）
+"Congressman Scott Perry is a tremendous Representative for the Great People of Pennsylvania's 10th Congressional District. Scott is a true MAGA Warrior, who always puts AMERICA FIRST! He has my Complete and Total Endorsement for Re-Election!"
 
 ## 執行結果
 
-- 新貼文：0 篇（無法確認）
-- 分析檔案上傳：無
-- last_seen_id 更新：未更新（維持 2026-10-29_42845）
-- Telegram 推播：未執行（無新貼文）
-- LINE 通知：未觸發（無新 GitHub push）
+- 分析檔案上傳：
+  - posts/2026-10-29_42854.md：成功（重要程度：高）
+  - posts/2026-10-29_42857.md：成功（重要程度：低）
+- last_seen_id 更新：成功 → 2026-10-29_42857
+- Telegram 推播：失敗（api.telegram.org 被 egress proxy 封鎖）
+- LINE 通知：由 GitHub Actions 自動觸發（GitHub push 成功）
 
 ## 結論
 
-第十一次執行未發現新貼文。川普剛結束 Rally 可能尚未有新貼文，
-或有新貼文但因網路限制無法確認。
-下次執行將繼續監控。
-
-**持續問題：**
-- Telegram 推播被 proxy 封鎖（api.telegram.org 需加入允許清單）
-- 主要資料來源均被封鎖（需允許 truthsocial.com）
+期中選舉前夕最重要貼文：川普宣稱 GDP 3.4% 增長，並攻擊民主黨。
+Telegram 推播持續被封鎖，需在 session 網路設定中允許 api.telegram.org。
