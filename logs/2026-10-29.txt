@@ -98,14 +98,17 @@ last_seen_id 維持不變：2026-10-28_42826
 
 ## 搜尋結果
 
-WebSearch 搜尋確認：
-- 最新可查得的貼文仍為 2026-10-28 ID 42826（秋景圖片貼文，22:42 UTC）
-- 搜尋 "Trump Truth Social October 29 2026"、"midterm election eve"、"trumpstruth.org 42827-42830" 均無新貼文
-- 今日（2026-10-29）為美國期中選舉前一天，網路搜尋引擎尚未索引到任何 2026-10-29 的川普 Truth Social 貼文
+累計 8+ 次 WebSearch，使用不同關鍵字：
+- "Trump Truth Social October 29 2026"
+- "Trump Truth Social post midterm 42827 OR 42828 OR 42829 OR 42830"
+- "Trump Truth Social today midterm rally Ohio Peltola"
+- "Trump midnight posting binge October 28 29 2026"
+- "trumpstruth.org 42826 OR 42827 OR 42828"
+均未發現任何 ID > 42826 的新貼文。
 
 ## 背景資訊（供參考）
 
-根據搜尋結果，今日主要新聞：
+根據搜尋結果，今日（2026-10-29，期中選舉前一天）：
 - Truth Social 宣布以最高 $100,000/月出售川普貼文快速存取權（Bloomberg 等金融機構）
 - 川普與歐巴馬在期中選舉前各自舉辦造勢活動
 
@@ -135,49 +138,6 @@ last_seen_id 維持不變：2026-10-28_42826
 ## 搜尋結果
 
 累計 8+ 次 WebSearch，使用不同關鍵字：
-- "Trump Truth Social October 29 2026"
-- "Trump Truth Social post midterm 42827 OR 42828 OR 42829 OR 42830"
-- "Trump Truth Social today midterm rally Ohio Peltola"
-- "Trump midnight posting binge October 28 29 2026"
-- "trumpstruth.org 42826 OR 42827 OR 42828"
-均未發現任何 ID > 42826 的新貼文。
-
-## 背景資訊（今日重要事件）
-
-根據搜尋摘要，今日（2026-10-29，期中選舉前一天）：
-- 川普在俄亥俄州舉辦最後衝刺造勢活動
-- 歐巴馬在克里夫蘭舉辦民主黨造勢
-- 搜尋引擎尚未索引到今日的新 Truth Social 貼文
-
-## 結論
-
-第五次執行：仍未發現 ID > 42826 的新貼文。
-可能原因：(1) 搜尋引擎尚未索引最新貼文，(2) 川普本日尚未發貼或發貼甚少。
-last_seen_id 維持不變：2026-10-28_42826
-不推播 Telegram / LINE。
-
----
-
-# Monitoring Run: 2026-10-29（第六次執行）
-
-執行時間: 2026-10-29 10:58:44 UTC
-上次貼文 ID: 2026-10-28_42826
-
-## 方法嘗試結果
-
-- 方法 A (truthsocial.com RSS): 失敗 - ENOTFOUND
-- 方法 A (truthsocial.com API): 失敗 - ENOTFOUND
-- 方法 B (WebSearch x8 不同關鍵字): 執行成功，無新貼文
-- 方法 C (thetrumparchive.com): 失敗 - ENOTFOUND
-- 方法 C (trumpstruth.org): 失敗 - ENOTFOUND
-- 方法 C (kadoa.com): 失敗 - ENOTFOUND
-- 方法 C (tagteam.harvard.edu): 失敗 - ENOTFOUND
-- 方法 C (news24.com.au / foxnews.com / japantimes.co.jp / cnn.com / yahoo.com): 全部 ENOTFOUND
-- GitHub REST API 直接寫入: 失敗 - proxy 阻擋
-
-## 搜尋結果
-
-8 次 WebSearch 確認，包含以下搜尋詞：
 - "Trump Truth Social posts October 29 2026"
 - "Trump Truth Social today 2026年10月29日 新貼文"
 - "Trump midnight Truth Social frenzy October 28 2026 posts content"
@@ -196,9 +156,56 @@ trumpstruth.org 存檔的最新貼文為 42826（圖片貼文，2026-10-28 22:42
 
 ## 結論
 
-第六次執行仍未發現新貼文。
+第五次執行仍未發現新貼文。
 last_seen_id 維持不變：2026-10-28_42826
 不推播 Telegram / LINE。
+
+---
+
+# Monitoring Run: 2026-10-29（第六次執行）
+
+執行時間: 2026-10-29 10:58:44 UTC
+上次貼文 ID: 2026-10-28_42826
+
+## 方法嘗試結果
+
+- 方法 A (truthsocial.com RSS): 失敗 - ENOTFOUND
+- 方法 A (truthsocial.com API): 失敗 - ENOTFOUND
+- 方法 B (WebSearch x8 不同關鍵字): 執行成功，無新貼文
+- 方法 C (thetrumparchive.com): 失敗 - ENOTFOUND
+- 方法 C (trumpstruth.org / www.trumpstruth.org): 失敗 - ENOTFOUND
+- 方法 C (kadoa.com / cnn.com / forbes.com / huffpost.com / thehill.com / cbsnews.com / yahoo.com / fox35orlando.com / koreatimes.co.kr / democracydocket.com / zeebiz.com / mediaite.com / news.meaww.com / electionlawblog.org / joemygod.com): 全部 ENOTFOUND
+- GitHub REST API (curl): 失敗 - proxy 阻擋寫入
+- GitHub MCP Tools: 可用（本次用於寫入此 log）
+
+## 搜尋結果
+
+8 次 WebSearch 搜尋確認，關鍵字包含：
+- "Trump Truth Social posts October 29 2026"
+- "Trump Truth Social October 29 2026 new post today"
+- "Trump Truth Social post October 29 2026 midterm election"
+- "Trump midnight Truth Social 'October 28' OR 'October 29' 2026"
+- "Trump Truth Social 'something big' October 28 29 2026"
+- "Trump news October 29 2026 drug prices executive order"
+- "Trump Truth Social 'October 28, 2026' Alaska Walz Julia Letlow"
+- "Trump '$1,000,000' 'voter fraud' Truth Social post October 2026"
+- "Trump Truth Social 42827 OR 42828 OR 42829 OR 42830"
+- "trumpstruth.org/statuses/42826 Trump post"
+
+未發現任何 ID > 42826 或日期為 2026-10-29 的新貼文。
+
+## 背景資訊
+
+今日為美國 2026 年期中選舉前一天（選舉日為 2026-11-03）。
+川普昨晚（Oct 28）的最後一篇貼文（#42826）已被上次執行記錄。
+本次所有 WebSearch 結果均未呈現任何 2026-10-29 的新貼文。
+
+## 結論
+
+第六次執行確認無新貼文。
+last_seen_id 維持不變：2026-10-28_42826
+Telegram 推播：不執行（無新內容）
+LINE 通知：不執行（無新內容）
 
 ---
 
@@ -214,7 +221,7 @@ last_seen_id 維持不變：2026-10-28_42826
 - 方法 B (WebSearch x10+ 不同關鍵字): 執行成功，無新貼文
 - 方法 C (thetrumparchive.com): 失敗 - ENOTFOUND
 - 方法 C (trumpstruth.org / www.trumpstruth.org): 失敗 - ENOTFOUND
-- 方法 C (kadoa.com / cnn.com / forbes.com / huffpost.com / thehill.com / cbsnews.com / yahoo.com / fox35orlando.com / koreatimes.co.kr / democracydocket.com / zeebiz.com / mediaite.com / news.meaww.com / electionlawblog.org / joemygod.com): 全部 ENOTFOUND
+- 方法 C (kadoa.com / x.com / yahoo.com / cnn.com / foxnews.com / nbcnews.com / forbes.com / japantimes.co.jp / presidency.ucsb.edu): 全部 ENOTFOUND
 - GitHub REST API (curl): 失敗 - proxy 阻擋寫入
 - GitHub MCP Tools: 可用（本次用於寫入此 log）
 
@@ -236,9 +243,10 @@ last_seen_id 維持不變：2026-10-28_42826
 
 ## 背景資訊
 
-今日為美國 2026 年期中選舉前一天（選舉日為 2026-11-03）。
-川普昨晚（Oct 28）的最後一篇貼文（#42826）已被上次執行記錄。
-本次所有 WebSearch 結果均未呈現任何 2026-10-29 的新貼文。
+- 今日（2026-10-29）為美國 2026 年期中選舉前四天（選舉日為 2026-11-03）
+- 川普今日在德州舉辦「back-to-back rallies」（連續造勢集會）
+- Truth Social 今日宣布 Bloomberg 及交易商付費訂閱川普貼文快速存取方案（最高 $100,000/月）
+- 可能在造勢活動期間有新發貼，但搜尋引擎尚未索引
 
 ## 結論
 
@@ -283,7 +291,40 @@ WebSearch 搜尋確認：
 
 ## 結論
 
-第八次執行確認無新貼文可追蹤。
+第八次執行確認無新貼文。
 last_seen_id 維持不變：2026-10-28_42826
 Telegram 推播：不執行（無新內容）
 LINE 通知：不執行（無新內容）
+
+---
+
+# Monitoring Run: 2026-10-29（第九次執行）
+
+執行時間: 2026-10-29 14:25 UTC
+上次貼文 ID: 2026-10-28_42826
+
+## 方法嘗試結果
+
+- 方法 A (truthsocial.com RSS): 失敗 - ENOTFOUND（網路政策封鎖）
+- 方法 B (WebSearch x5 不同關鍵字): 執行成功，發現新貼文！
+- 方法 C (trumpstruth.org / 其他): 失敗 - ENOTFOUND
+- GitHub MCP Tools: 可用（成功寫入）
+- Telegram 推播: 失敗 - api.telegram.org 被 egress proxy 封鎖
+
+## 新發現貼文
+
+**貼文 ID：42831**（比 last_seen 42826 新）
+**發布時間：** 2026-10-29 11:48 UTC（美東時間 7:48 AM EDT）
+**內容摘要：** "We are drawing the BIGGEST CROWDS at Trump Rallies in the history of Midterm Elections, by a factor of five times. My approval among Republicans is at 99%. Big Rally in South Carolina for the wonderful Darline Graham, today. Senator Lindsey Graham is very proud of her!"
+
+## 執行結果
+
+- 分析檔案上傳：成功 (posts/2026-10-29_42831.md, commit: a3b987ff6ec38ff68712cb9a67ac1c40351c7dd7)
+- last_seen_id 更新：成功 → 2026-10-29_42831 (commit: 6ebae1d09dab7468316b347b830a2b48447dd919)
+- Telegram 推播：失敗（原因：api.telegram.org 被 session egress proxy 封鎖）
+- LINE 通知：由 GitHub Actions 自動處理（GitHub push 成功，workflow 應觸發）
+
+## 結論
+
+第九次執行發現 1 篇新貼文（#42831）並成功處理。
+Telegram 推播失敗需在 session 網路設定中允許 api.telegram.org。
