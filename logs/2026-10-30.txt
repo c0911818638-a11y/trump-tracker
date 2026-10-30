@@ -5,15 +5,36 @@
 - 2026-10-30T12:12:00Z (second run)
 - 2026-10-30T12:00:33Z (third run)
 - 2026-10-30T~UTC (fourth run)
-- 2026-10-30T14:57:00Z (fifth run — this entry)
+- 2026-10-30T14:57:00Z (fifth run)
+- 2026-10-30T~UTC (sixth run — this entry)
 
-## Status (fifth run)
-找到 6 則新貼文 / 6 new posts found
+## Status (sixth run)
+失敗 — 所有方法均無法取得貼文 / All methods failed to fetch posts
 
 ## Last Seen ID
-2026-10-30_42893 (updated from 42883)
+2026-10-30_42893 (unchanged from previous run)
 
-## New Posts Found (IDs 42884–42893)
+## Methods Attempted (sixth run)
+1. WebFetch truthsocial.com/@realDonaldTrump.rss — BLOCKED (ENOTFOUND, network policy)
+2. WebFetch truthsocial.com/api/v1/accounts/... — BLOCKED (same)
+3. WebSearch "Trump Truth Social posts today October 30 2026" — 未找到今日新貼文
+4. WebSearch "Trump Truth Social October 30 2026 latest posts" — 同上
+5. WebFetch thetrumparchive.com — BLOCKED (ENOTFOUND)
+6. WebFetch trumpstruth.org — BLOCKED (ENOTFOUND)
+7. WebFetch kadoa.com/potus/truth — BLOCKED (ENOTFOUND)
+8. WebFetch cbsnews.com, variety.com, yahoo.com, forbes.com — ALL BLOCKED (ENOTFOUND)
+
+## Telegram Notification (Step 6)
+未執行 — 步驟 2 失敗，無新貼文可推播（依步驟 8 規定）
+
+## LINE Notification (Step 7)
+未執行 — 無 GitHub push，步驟 8
+
+---
+## Previous Run (fifth run - successful)
+找到 6 則新貼文 / 6 new posts found
+
+### New Posts Found (IDs 42884–42893)
 - 42884: 7:15 AM EDT — 廣播訪談宣布，為Kansas參議員Roger Marshall拉票 (KCMO電台)
 - 42886: 7:27 AM EDT — 影片貼文，無文字內容
 - 42889: 7:25 AM EDT — 轉發catturd2：Hegseth解雇中將Brett Sylvia (洩密/測謊失敗，案件移交DOJ)
@@ -21,36 +42,14 @@
 - 42892: 7:24 AM EDT — 為Maria Bartiromo離Fox News後取得新工作道賀
 - 42893: 7:29 AM EDT — 分享保守派媒體期中選舉Senate民調（兩州翻轉）
 
-## GitHub Upload (Step 5)
+### GitHub Upload (fifth run, Step 5)
 成功 — 上傳6個貼文分析Markdown至 posts/ 目錄
-Commit SHA: 939b5fe1e7b9142fe42b7abc55d3349a738f4673
 state/last_seen_id.txt 已更新為 2026-10-30_42893
 
-## Telegram Notification (Step 6)
+### Telegram Notification (fifth run, Step 6)
 失敗 — api.telegram.org 被 egress proxy 封鎖 (403 policy denial)
-無法推播本次6則新貼文通知。
-
-## LINE Notification (Step 7)
-由 GitHub Actions (line-notify.yml) 自動處理（因GitHub push成功）
-
-## Data Source
-trumpstruth.org 第三方Trump Truth Social存檔
-（truthsocial.com 及其他主要新聞網站在此執行環境仍無法存取）
 
 ---
-## Previous Runs (no new posts found)
-
-### Status (first–fourth runs)
-無新貼文 / No new posts found in those runs
-
-### Methods Attempted (earlier runs)
-1. WebFetch truthsocial.com/@realDonaldTrump.rss — BLOCKED (ENOTFOUND, network policy)
-2. WebFetch truthsocial.com API — BLOCKED (same)
-3. WebFetch thetrumparchive.com — BLOCKED (ENOTFOUND)
-4. WebFetch trumpstruth.org — BLOCKED (ENOTFOUND)
-5. WebFetch kadoa.com, presidency.ucsb.edu, and all news sites — ALL BLOCKED (ENOTFOUND)
-6. WebSearch multiple queries for "Trump Truth Social October 30 2026" — No posts with ID > 42883 found
-
 ## 備注 / Network Policy Note
 如需完整功能，請在 session 網路設定中允許以下網域：
 truthsocial.com、thetrumparchive.com、trumpstruth.org、kadoa.com、
