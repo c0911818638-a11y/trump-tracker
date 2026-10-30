@@ -1,10 +1,11 @@
 # Trump Tracker Run Log - 2026-10-30
 
-## Run Time
-2026-10-30T09:57:45Z
+## Run Times
+- 2026-10-30T09:57:45Z (earlier run)
+- 2026-10-30T12:12:00Z (this run)
 
 ## Status
-No new posts found
+無新貼文 / No new posts found
 
 ## Last Seen ID
 2026-10-30_42876 (post ID 42876, content: GREGG JARRETT Trump Russia collusion article, posted Oct 29 2026 10:12 PM EDT)
@@ -14,8 +15,11 @@ No new posts found
 2. WebFetch thetrumparchive.com - BLOCKED (network policy)
 3. WebFetch trumpstruth.org - BLOCKED (network policy)
 4. WebFetch kadoa.com - BLOCKED (network policy)
-5. WebSearch multiple queries - Returned results up to ID 42876 only; no posts with ID > 42876 found in any indexed source
+5. WebSearch multiple queries - Returned results up to ID 42876 only; no posts with ID > 42876 found
 
 ## Conclusion
 No new Trump Truth Social posts found beyond last_seen_id 42876.
 No Telegram notification sent (no new content).
+
+## 備注
+如需完整功能，請在 session 網路設定中允許：truthsocial.com、thetrumparchive.com、trumpstruth.org、kadoa.com。
