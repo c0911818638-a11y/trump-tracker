@@ -1,15 +1,45 @@
 # Monitoring Run Log - 2026-10-30
 
-Run Time: 2026-10-30T20:57:07Z
+## Run: 23:01 UTC
 Last Seen ID: 2026-10-30_42893
 Status: No new posts found
 
-## Details
+### Details
+- Method A (truthsocial.com direct): BLOCKED - domain not in allowed network policy
+- Method B (WebSearch): Executed - found posts up to ID 42891 (below last_seen_id 42893)
+- Method C (thetrumparchive.com): BLOCKED - domain not in allowed network policy
+- trumpstruth.org direct curl: BLOCKED - egress proxy refused connection
+
+### Known October 30 Posts (All Already Recorded in Previous Run)
+- 42893: Link to Conservative Brief senate poll article (7:29 AM EDT)
+- 42892: Link to NewsBreak/Maria Bartiromo article (7:24 AM EDT)
+- 42891: Image post / Jesus-Obama meme by Kevin Sorbo (7:25 AM EDT)
+- 42890: Image post (7:25 AM EDT)
+- 42889: RT of a post (7:25 AM EDT)
+- 42888: Video post (7:25 AM EDT)
+- 42887: RT post
+- 42885: RT post
+- 42884: Live radio interview announcement with Roger Marshall (7:15 AM EDT)
+- 42883: Inflation/economy post ("INFLATION IS WAY DOWN UNDER TRUMP") (6:30 AM EDT)
+- 42881: RT of Mark Levin about Democrat media lies (ca. 6:30 AM EDT)
+- 42880: Video post about college sports (5:36 AM EDT)
+- 42878: Video post (5:33 AM EDT)
+
+### Conclusion
+No new posts since last_seen_id (42893). No notifications sent.
+
+---
+
+## Run: 20:57 UTC
+Last Seen ID: 2026-10-30_42893
+Status: No new posts found
+
+### Details
 - Method A (truthsocial.com direct): BLOCKED - domain not in allowed network policy
 - Method B (WebSearch): Executed - found posts up to ID 42893 (matches last_seen_id)
 - Method C (thetrumparchive.com): BLOCKED - domain not in allowed network policy
 
-## Latest Posts Found (All Already Recorded)
+### Latest Posts Found (All Already Recorded)
 - 42893: Link to Conservative Brief senate poll article (7:29 AM EDT)
 - 42892: Link to NewsBreak/Maria Bartiromo article (7:24 AM EDT)
 - 42891: Image post (7:25 AM EDT)
@@ -21,5 +51,5 @@ Status: No new posts found
 - 42881: RT of Mark Levin about Democrat media lies (ca. 6:30 AM EDT)
 - 42880: Video post about college sports (5:36 AM EDT)
 
-## Conclusion
+### Conclusion
 No new posts since last_seen_id (42893). No notifications sent.
