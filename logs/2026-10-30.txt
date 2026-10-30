@@ -1,37 +1,64 @@
 # 監控執行記錄 - 2026-10-30
 
+## 第一次執行（01:57:48Z）
+
 執行時間：2026-10-30T01:57:48Z
 上次記錄 ID：2026-10-30_42873
 
-## 執行摘要
+### 執行摘要
 
-### 步驟1：讀取上次記錄
-成功讀取 last_seen_id.txt
-- 上次貼文 ID：2026-10-30_42873
-- GitHub SHA：62538d7bbc31cf7014501687896fd59ae320661d
-
-### 步驟2：抓取最新貼文
 方法A（WebFetch truthsocial.com RSS）：失敗 - 網路限制，域名無法解析
 方法B（WebSearch）：執行但未找到 ID > 42873 的新貼文
    - 搜尋到最高 archive 貼文 ID：42846（低於 last_seen_id 42873）
 方法C（WebFetch 第三方存檔）：失敗 - 多個域名封鎖
 
-### 步驟3：比較結果
-搜尋到的最高貼文 ID（42846）< last_seen_id（42873）
-本次執行未發現新貼文
+結論：無新貼文需要通知。本次監控週期無推播。
+
+---
+
+## 第二次執行（02:59:27Z）
+
+執行時間：2026-10-30T02:59:27Z
+上次記錄 ID：2026-10-30_42873
+
+### 抓取方法結果
+
+- truthsocial.com → 失敗：ENOTFOUND（網域封鎖）
+- thetrumparchive.com → 失敗：ENOTFOUND（網域封鎖）
+- trumpstruth.org → 失敗：ENOTFOUND（網域封鎖）
+- kadoa.com → 失敗：ENOTFOUND（網域封鎖）
+- nbcnews.com → 失敗：ENOTFOUND（網域封鎖）
+
+### WebSearch 發現（較第一次更完整）
+
+近期貼文 archive ID 列表（搜尋結果重建）：
+- 42870（2026-10-29 17:06）：前歐巴馬情報首長文章分享
+- 42871（2026-10-29）：蒙大拿州早期投票倡導
+- 42873（2026-10-30）：RT 貼文（最後記錄，last_seen_id）
+- 42875（日期待確認）：亞倫·弗林特蒙大拿眾議員背書
+  文字片段："Aaron Flint will be a tremendous Congressman for the amazing people of Monta..."
+
+### 評估
+
+archive ID 42875 > 42873，理論上為新貼文。
+但因：
+1. 無法存取完整文字（trumpstruth.org 被封鎖）
+2. 日期疑為 2026-10-29（可能早於 last_seen_id 的記錄時間點）
+3. 無法驗證是否真正是新增貼文
+
+判定：本次無法確認有效新貼文，不發送通知，不更新 last_seen_id.txt。
 
 ### 結論
-無新貼文需要通知。本次監控週期無推播。
 
-## 網路存取狀況（被封鎖域名）
+- 本次執行無法取得確認的新貼文完整內容
+- 未建立貼文分析檔案
+- 未發送 Telegram 推播
+- 未更新 last_seen_id.txt
+
+## 建議修正
+
+需在 session 網路政策中允許以下網域以恢復正常監控：
 - truthsocial.com
-- www.trumpstruth.org
-- www.kadoa.com
-- www.cnn.com
-- www.yahoo.com
-- deadline.com
-- factba.se
-- t.me
-- www.presidency.ucsb.edu
-
-建議在 session 網路設定中允許這些域名以提升監控效果。
+- thetrumparchive.com
+- trumpstruth.org
+- kadoa.com
