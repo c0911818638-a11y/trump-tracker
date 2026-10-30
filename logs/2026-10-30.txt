@@ -36,15 +36,6 @@
 - 42871（2026-10-29）：蒙大拿州早期投票倡導
 - 42873（2026-10-30）：RT 貼文（最後記錄，last_seen_id）
 - 42875（日期待確認）：亞倫·弗林特蒙大拿眾議員背書
-  文字片段："Aaron Flint will be a tremendous Congressman for the amazing people of Monta..."
-
-### 評估
-
-archive ID 42875 > 42873，理論上為新貼文。
-但因：
-1. 無法存取完整文字（trumpstruth.org 被封鎖）
-2. 日期疑為 2026-10-29（可能早於 last_seen_id 的記錄時間點）
-3. 無法驗證是否真正是新增貼文
 
 判定：本次無法確認有效新貼文，不發送通知，不更新 last_seen_id.txt。
 
@@ -73,5 +64,13 @@ WebSearch：成功找到新貼文
 - 建立分析檔案：posts/2026-10-29_42876.md ✓
 - 更新 last_seen_id.txt：2026-10-30_42876 ✓
 - GitHub push：成功 ✓
-- Telegram 推播：執行中
-- LINE 通知：由 GitHub Actions 處理
+- Telegram 推播：失敗——api.telegram.org:443 被 egress proxy 拒絕（policy denial，HTTP 403）
+- LINE 通知：由 GitHub Actions 處理（依賴 GitHub push 成功，應已觸發）
+
+### 網路限制說明
+
+本 session 的 egress proxy 封鎖了以下域名：
+- api.telegram.org（主要通知管道失效）
+- truthsocial.com、thetrumparchive.com、trumpstruth.org、kadoa.com、nbcnews.com
+
+建議：在 session 網路政策中允許 api.telegram.org 以恢復 Telegram 推播功能。
