@@ -109,3 +109,50 @@ GitHub API（讀取）和 WebSearch 仍可正常運作。
 === 備註 ===
 今日（2026-10-31，萬聖節）為 2026 美國期中選舉（11月3日）前三天。
 期待後續執行可能發現選前衝刺動員貼文。
+
+---
+
+執行日期：2026-10-31
+執行時間：約 07:00 UTC（第四次執行）
+
+=== 執行摘要 ===
+
+【步驟 1】讀取上次記錄
+- 上次記錄 ID：42952（存檔日期：2026-10-31）
+- SHA：86dc56daa1ae5df83ae1b1d00b95a143e141059a
+
+【步驟 2】抓取最新貼文
+- truthsocial.com：無法存取（DNS 解析失敗）
+- trumpstruth.org：無法存取（DNS 解析失敗）
+- 其餘直連網域均被 egress proxy 封鎖
+- WebSearch (extended)：成功取得 6 則新貼文元資料（來自 trumpstruth.org 搜尋索引快取）
+
+【步驟 3】比較新舊
+- 發現 6 則新貼文（ID 42963, 42966, 42968, 42973, 42976, 42979）
+- 均為 2026-10-30 深夜至 2026-10-31 凌晨 UTC 發布
+- 主題：期中選舉前夕佛州及德州共和黨候選人批量背書
+
+【步驟 4-5】分析與上傳
+- 成功上傳 6 篇分析至 posts/ 目錄
+- 新貼文 ID：42963, 42966, 42968, 42973, 42976, 42979
+- 主題：選前背書 — Jon Bonck (TX-38), Jimmy Patronis (FL-1),
+        Randy Fine (FL-6), Greg Steube (FL-17), Brian Mast (FL-21) + 1 則轉發
+- 更新 state/last_seen_id.txt 至 2026-10-31_42979
+- Commit SHA: 810c173bc5852c5b024a4a4f9b497179a56a2265
+
+【步驟 6】Telegram 推播
+- 結果：失敗
+- 原因：api.telegram.org:443 被 egress proxy 拒絕（403 gateway 政策封鎖）
+- 建議：請在 session 網路設定中允許 api.telegram.org 以啟用即時推播
+
+【步驟 7】LINE 通知
+- GitHub push 成功，.github/workflows/line-notify.yml 應已自動觸發
+- LINE 備援通知預計正常送達
+
+=== 新貼文清單 ===
+42963 - 背書 Jon Bonck（TX-38）[重要程度：低]
+42966 - 背書 Jimmy Patronis（FL-1）[重要程度：低]
+42968 - 背書 Randy Fine（FL-6）[重要程度：低]
+42973 - 背書 Greg Steube（FL-17）[重要程度：低]
+42976 - 背書 Brian Mast（FL-21）[重要程度：低至中]
+42979 - 轉發舊貼文（內容未知）[重要程度：低]
