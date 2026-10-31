@@ -284,3 +284,46 @@ api.telegram.org、truthsocial.com、trumpstruth.org、thetrumparchive.com
 及多數新聞網站均被 egress proxy 封鎖。
 Telegram 推播: 本次無新貼文，未執行。
 LINE 備援: 本次無新貼文，GitHub Actions 無需觸發。
+
+---
+
+執行日期：2026-10-31
+執行時間：約 13:00 UTC（第八次執行）
+
+=== 執行摘要 ===
+
+【步驟 1】讀取上次記錄
+- 上次記錄 ID：42985（存檔日期：2026-10-31）
+- SHA：dafad2551d548f40948fc211fe4f51c66c28adaf
+
+【步驟 2】抓取最新貼文
+- truthsocial.com RSS / API：DNS 解析失敗（ENOTFOUND，網域封鎖）
+- thetrumparchive.com：DNS 解析失敗
+- trumpstruth.org：DNS 解析失敗
+- kadoa.com：DNS 解析失敗
+- tagteam.harvard.edu：DNS 解析失敗
+- yahoo.com、cbsnews.com、edition.cnn.com、fullfact.org：DNS 解析失敗
+- WebSearch（standard + extended）：執行多次搜尋
+  - 搜尋 "Trump Truth Social posts today October 31 2026"：最新索引貼文仍為 ID 42980
+  - 搜尋 ID 42986-43000 範圍（trumpstruth.org）：無結果
+  - 搜尋 "Trump Truth Social October 31 2026 afternoon"：無新貼文報導
+  - 搜尋 "Trump Truth Social Halloween telerally midterm"：無相關新貼文
+
+【步驟 3】比較新舊
+- 未發現 ID > 42985 的新貼文
+- trumpstruth.org 索引顯示最新已索引 ID 為 42980（2026-10-31 00:37 EDT）
+- 可能原因：
+  1. 川普今日尚未在 Truth Social 發新文（以 telerallies 為主要宣傳管道）
+  2. 新貼文存在但尚未被第三方存檔索引
+
+【步驟 4-7】
+- 無新貼文，跳過分析、上傳、Telegram 推播、LINE 通知
+
+=== 結論 ===
+截至 2026-10-31 約 13:00 UTC，未發現 ID > 42985 的新貼文。
+state/last_seen_id.txt 維持 2026-10-31_42985，不更新。
+
+=== 網路限制備註 ===
+api.telegram.org、truthsocial.com、trumpstruth.org 及多數新聞網站均被 egress proxy 封鎖。
+Telegram 推播：本次無新貼文，未執行。
+LINE 備援：本次無新貼文，GitHub Actions 無需觸發。
