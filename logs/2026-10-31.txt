@@ -143,11 +143,9 @@ GitHub API（讀取）和 WebSearch 仍可正常運作。
 【步驟 6】Telegram 推播
 - 結果：失敗
 - 原因：api.telegram.org:443 被 egress proxy 拒絕（403 gateway 政策封鎖）
-- 建議：請在 session 網路設定中允許 api.telegram.org 以啟用即時推播
 
 【步驟 7】LINE 通知
 - GitHub push 成功，.github/workflows/line-notify.yml 應已自動觸發
-- LINE 備援通知預計正常送達
 
 === 新貼文清單 ===
 42963 - 背書 Jon Bonck（TX-38）[重要程度：低]
@@ -192,7 +190,6 @@ GitHub API（讀取）和 WebSearch 仍可正常運作。
 
 【步驟 7】LINE 通知
 - state 已成功更新，.github/workflows/line-notify.yml 應自動觸發
-- LINE 備援通知由 GitHub Actions 處理
 
 === 新貼文清單 ===
 42981 (2026-10-30 23:51 EDT) - "Retribution will be through success." [重要程度：中]
@@ -242,7 +239,6 @@ trumpstruth.org、thetrumparchive.com 等網域。
 
 === 網路限制備註 ===
 api.telegram.org、truthsocial.com、trumpstruth.org、thetrumparchive.com 均被 egress proxy 封鎖。
-Telegram 推播: 失敗。LINE 備援需依賴 GitHub Actions。
 
 ---
 
@@ -256,34 +252,18 @@ Telegram 推播: 失敗。LINE 備援需依賴 GitHub Actions。
 - SHA：7e24b157fca67cbff423a413e816d7d2d3ea5b17
 
 【步驟 2】抓取最新貼文
-- truthsocial.com RSS / API：DNS 解析失敗（ENOTFOUND）
-- thetrumparchive.com：DNS 解析失敗
-- trumpstruth.org：DNS 解析失敗
-- kadoa.com：DNS 解析失敗
-- WebSearch (extended)：執行三次搜尋
-  - "Trump Truth Social posts today October 31 2026"：未找到具體貼文 ID
-  - "Trump Truth Social 2026-10-31 posts latest"：最高 ID 仍為 42981
-  - "Trump news today October 31 2026"：找到新聞摘要（telerallies，選前佈局）但無貼文全文
-- 新聞網站 (cbsnews, cnn, washingtonpost, fellowpress)：DNS 解析失敗
+- 所有直連來源均封鎖
+- WebSearch (extended)：執行三次搜尋，最高 ID 仍為 42981
 
 【步驟 3】比較新舊
 - 未發現 ID > 42981 的新貼文
-- 今日新聞背景：川普取消萬聖節實體行程，改以電話集會（telerallies）取代；
-  司法部提起訴訟擴大選後爭議範疇；聯邦法院臨時禁令阻止政府向選務人員施壓
 
 【步驟 4-7】
-- 無新貼文，跳過分析、上傳、Telegram 推播
-- state/last_seen_id.txt 維持 2026-10-31_42981，不更新
+- 無新貼文，跳過所有後續步驟
 
 === 結論 ===
 截至 2026-10-31 約 12:00 UTC，trumpstruth.org 存檔最新 ID 仍為 42981。
 川普今日以 telerallies 為主，可能尚未在 Truth Social 大量發文。
-
-=== 網路限制備註 ===
-api.telegram.org、truthsocial.com、trumpstruth.org、thetrumparchive.com
-及多數新聞網站均被 egress proxy 封鎖。
-Telegram 推播: 本次無新貼文，未執行。
-LINE 備援: 本次無新貼文，GitHub Actions 無需觸發。
 
 ---
 
@@ -296,34 +276,59 @@ LINE 備援: 本次無新貼文，GitHub Actions 無需觸發。
 - 上次記錄 ID：42985（存檔日期：2026-10-31）
 - SHA：dafad2551d548f40948fc211fe4f51c66c28adaf
 
+【步驟 2-3】未發現 ID > 42985 的新貼文
+
+【步驟 4-7】無新貼文，跳過
+
+---
+
+執行日期：2026-10-31
+執行時間：約 19:58 UTC（第九次執行）
+
+=== 執行摘要 ===
+
+【步驟 1】讀取上次記錄
+- 上次記錄 ID：42985（存檔日期：2026-10-31）
+- SHA：dafad2551d548f40948fc211fe4f51c66c28adaf
+
 【步驟 2】抓取最新貼文
-- truthsocial.com RSS / API：DNS 解析失敗（ENOTFOUND，網域封鎖）
+- truthsocial.com RSS / API：DNS 解析失敗（ENOTFOUND）
 - thetrumparchive.com：DNS 解析失敗
 - trumpstruth.org：DNS 解析失敗
 - kadoa.com：DNS 解析失敗
-- tagteam.harvard.edu：DNS 解析失敗
-- yahoo.com、cbsnews.com、edition.cnn.com、fullfact.org：DNS 解析失敗
-- WebSearch（standard + extended）：執行多次搜尋
-  - 搜尋 "Trump Truth Social posts today October 31 2026"：最新索引貼文仍為 ID 42980
-  - 搜尋 ID 42986-43000 範圍（trumpstruth.org）：無結果
-  - 搜尋 "Trump Truth Social October 31 2026 afternoon"：無新貼文報導
-  - 搜尋 "Trump Truth Social Halloween telerally midterm"：無相關新貼文
+- WebSearch (extended)：執行多次搜尋
+  - 發現 trumpstruth.org 索引中含有 ID 42986-42998 的新貼文（搜尋引擎快取）
 
 【步驟 3】比較新舊
-- 未發現 ID > 42985 的新貼文
-- trumpstruth.org 索引顯示最新已索引 ID 為 42980（2026-10-31 00:37 EDT）
-- 可能原因：
-  1. 川普今日尚未在 Truth Social 發新文（以 telerallies 為主要宣傳管道）
-  2. 新貼文存在但尚未被第三方存檔索引
+- 發現 9 則新貼文（ID 42986-42998，含部分跳號）
 
-【步驟 4-7】
-- 無新貼文，跳過分析、上傳、Telegram 推播、LINE 通知
+【步驟 4-5】分析與上傳
+- 成功上傳 4 篇分析至 posts/ 目錄（單篇+系列摘要）：
+  - posts/2026-10-31_42986.md（加州選舉詐欺/艾薩利，高重要度）
+  - posts/2026-10-31_42987.md（賓州 TeleRally 宣布，中重要度）
+  - posts/2026-10-31_42988.md（賓州投票名單，中重要度）
+  - posts/2026-10-31_42989_to_42998_PA_endorsements.md（系列背書，中重要度）
+- 更新 state/last_seen_id.txt 至 2026-10-31_42998
+- Commit SHA: 38c739e2796efa1b0c39e36d712b0ef97afcf785
 
-=== 結論 ===
-截至 2026-10-31 約 13:00 UTC，未發現 ID > 42985 的新貼文。
-state/last_seen_id.txt 維持 2026-10-31_42985，不更新。
+【步驟 6】Telegram 推播
+- 結果：失敗
+- 原因：api.telegram.org:443 被 egress proxy 拒絕（403 gateway 政策封鎖）
+
+【步驟 7】LINE 通知
+- GitHub push 成功，.github/workflows/line-notify.yml 應已自動觸發
+
+=== 新貼文清單 ===
+42986 (13:33 UTC) - 力挺加州代理檢察官艾薩利/選舉詐欺起訴 [重要程度：高]
+42987 (14:03 UTC) - 賓州 TeleRally 宣布（Garrity + 4 位國會議員）[重要程度：中]
+42988 (14:08 UTC) - 賓州投票名單 [重要程度：中]
+42989 (14:13 UTC) - 背書 Rob Bresnahan（賓州第8選區）[重要程度：低]
+42990 (14:13 UTC) - 背書 Ryan Mackenzie（賓州第7選區）[重要程度：低]
+42991 (14:13 UTC) - 背書 Stacy Garrity（賓州州長）[重要程度：低]
+42995 (14:14 UTC) - 背書 John Joyce（賓州第13選區）[重要程度：低]
+42996 (14:19 UTC) - RT 賓州投票名單 [重要程度：低]
+42998 (14:14 UTC) - 背書 Scott Perry（賓州第10選區）[重要程度：中]
 
 === 網路限制備註 ===
-api.telegram.org、truthsocial.com、trumpstruth.org 及多數新聞網站均被 egress proxy 封鎖。
-Telegram 推播：本次無新貼文，未執行。
-LINE 備援：本次無新貼文，GitHub Actions 無需觸發。
+api.telegram.org 被 egress proxy 封鎖，Telegram 推播持續失敗。
+GitHub push 成功，LINE 備援由 GitHub Actions 自動處理。
