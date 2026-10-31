@@ -156,3 +156,49 @@ GitHub API（讀取）和 WebSearch 仍可正常運作。
 42973 - 背書 Greg Steube（FL-17）[重要程度：低]
 42976 - 背書 Brian Mast（FL-21）[重要程度：低至中]
 42979 - 轉發舊貼文（內容未知）[重要程度：低]
+
+---
+
+執行日期：2026-10-31
+執行時間：約 09:58 UTC（第五次執行）
+
+=== 執行摘要 ===
+
+【步驟 1】讀取上次記錄
+- 上次記錄 ID：42979（存檔日期：2026-10-31）
+- SHA：eb820369acb85b150b47388255fd3a4b6f234034
+
+【步驟 2】抓取最新貼文
+- truthsocial.com：無法存取（DNS 解析失敗）
+- thetrumparchive.com：無法存取（DNS 解析失敗）
+- trumpstruth.org：無法存取（DNS 解析失敗）
+- WebSearch (extended)：成功發現 ID 42980 及 42981
+
+【步驟 3】比較新舊
+- 發現 2 則新貼文（ID 42980, 42981）
+- 確認兩篇檔案已存在 posts/ 目錄中（前次執行已上傳但未更新狀態）
+
+【步驟 4-5】分析與上傳
+- posts/2026-10-31_42980.md：已存在（前次執行上傳）
+  - 內容：拳擊影片（Ali-Frazier 歷史賽事解說）
+- posts/2026-10-30_42981.md：已存在（前次執行上傳）
+  - 內容："Retribution will be through success."
+- 更新 state/last_seen_id.txt 至 2026-10-31_42981：成功
+  - Commit SHA: ad11033b1a4efd5a86717b65dab45a6f70472357
+
+【步驟 6】Telegram 推播
+- 結果：失敗
+- 原因：api.telegram.org:443 被 egress proxy 拒絕（403 gateway 政策封鎖）
+
+【步驟 7】LINE 通知
+- state 已成功更新，.github/workflows/line-notify.yml 應自動觸發
+- LINE 備援通知由 GitHub Actions 處理
+
+=== 新貼文清單 ===
+42981 (2026-10-30 23:51 EDT) - "Retribution will be through success." [重要程度：中]
+42980 (2026-10-31 00:37 EDT) - 拳擊影片（Ali vs Frazier）[重要程度：低]
+
+=== 網路限制備註 ===
+本環境持續無法存取：api.telegram.org、api.line.me、truthsocial.com、
+trumpstruth.org、thetrumparchive.com 等網域。
+如需啟用直接推播，請在 session 網路設定中允許上述網域。
