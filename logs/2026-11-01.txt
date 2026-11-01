@@ -35,3 +35,15 @@ WebSearch 功能可運作（透過 proxy），但無法取回具體貼文 ID 或
 - 第一次執行: 已記錄
 - 第二次執行: 2026-11-01，相同錯誤
 - 第三次執行: 2026-11-01，相同錯誤，已確認更多域名被封鎖
+- 第四次執行: 2026-11-01，相同錯誤，另確認以下域名亦被封鎖：
+  - www.aljazeera.com, fullfact.org, www.snopes.com, foxnews.com
+  - t.me (Telegram Web), manifold.markets, www.irishstar.com
+  - www.kadoa.com, dev2.expipoint.com, tdev.umb.edu
+  - www.presidency.ucsb.edu, www.trumpstruth.org
+  WebSearch 顯示最新已索引貼文為 10/31 (ID up to ~43087)，未發現 ID > 43091 之新貼文。
+  選舉前夕（美國期中選舉 11/3），川普活躍貼文主題：
+  - 支持各州共和黨候選人（Florida、Iowa、Pennsylvania、NY 等）
+  - 加州選票訴訟（第九巡迴法院 10/30 再次駁回）
+  - 阿拉斯加選舉爭議（CROOKED ELECTION IN ALASKA!）
+  - 1百萬美元選舉舞弊舉報獎金（10/26）
+  以上資訊均來自 WebSearch 搜尋摘要，無法取得完整貼文 ID 及全文，故不建立貼文分析檔。
