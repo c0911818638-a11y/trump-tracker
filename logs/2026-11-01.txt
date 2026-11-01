@@ -15,6 +15,8 @@
 - edition.cnn.com: DNS 解析失敗（網路政策封鎖）
 - www.npr.org: DNS 解析失敗（網路政策封鎖）
 - www.itv.com: DNS 解析失敗（網路政策封鎖）
+- www.irishstar.com: DNS 解析失敗（網路政策封鎖）
+- variety.com: DNS 解析失敗（網路政策封鎖）
 
 原因分析:
 此 Claude Code 雲端執行環境的網路輸出政策（egress policy）封鎖了所有上述外部域名。
@@ -36,3 +38,4 @@ WebSearch 功能可運作（透過 proxy），但無法取回具體貼文 ID 或
 - 第二次執行: 2026-11-01，相同錯誤
 - 第三次執行: 2026-11-01，相同錯誤，已確認更多域名被封鎖
 - 第四次執行: 2026-11-01 08:56 UTC，相同錯誤，WebSearch 找不到當日新貼文
+- 第五次執行: 2026-11-01，相同錯誤，確認 irishstar.com、variety.com 亦封鎖
