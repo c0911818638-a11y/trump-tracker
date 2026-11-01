@@ -1,5 +1,5 @@
 日期: 2026-11-01 UTC
-狀態: 無法取得貼文（持續中）
+狀態: 無法直接取得貼文（持續中）
 
 錯誤記錄:
 - truthsocial.com: DNS 解析失敗（網路政策封鎖）
@@ -34,6 +34,10 @@
 - www.irishstar.com: DNS 解析失敗（網路政策封鎖）
 - yournews.com: DNS 解析失敗（網路政策封鎖）
 - www.kadoa.com: DNS 解析失敗（網路政策封鎖）
+- www.ibtimes.co.uk: DNS 解析失敗（網路政策封鎖）
+- variety.com: DNS 解析失敗（網路政策封鎖）
+- nbcnews.com: DNS 解析失敗（網路政策封鎖）
+- www.wsfa.com: DNS 解析失敗（網路政策封鎖）
 
 原因分析:
 此 Claude Code 雲端執行環境的網路輸出政策（egress policy）封鎖了所有上述外部域名。
@@ -47,8 +51,8 @@ WebSearch 功能可運作（透過 proxy），但無法取回具體貼文 ID 或
 - trumpstruth.org
 或考慮改用本地 Claude Code CLI（不受此網路政策限制）。
 
-上次記錄的貼文 ID: 2026-11-01_43093
-本次執行結果: 未取得任何新貼文，未發送任何通知（Telegram 及 LINE 均未推播）
+當前 last_seen_id: 2026-11-01_43113
+本次執行結果: 未取得任何新貼文（ID > 43113），未發送任何通知（Telegram 及 LINE 均未推播）
 
 執行記錄:
 - 第一次執行: 已記錄
@@ -60,3 +64,4 @@ WebSearch 功能可運作（透過 proxy），但無法取回具體貼文 ID 或
 - 第七次執行: 2026-11-01，相同錯誤，WebSearch 發現中期選舉前川普再度大量發文（20則/10分鐘），包含背書 Carlos Gimenez（佛州）、Bruce Blakeman（紐約州長候選人）、Saritha Komatireddy（紐約州檢察長候選人），以及法院拒絕停止計票請求後的選舉舞弊貼文；但因無法取得貼文 ID 及全文，無法與 last_seen_id (2026-11-01_43093) 比較，未建立貼文檔，未推播通知。en.wikipedia.org、foxnews.com 亦確認封鎖。
 - 第八次執行: 2026-11-01，相同錯誤。WebSearch 搜尋 trumpstruth.org ID 43094-43097 未找到索引結果。搜尋顯示 Nov.1 應有更多 tele-rally 貼文（川普曾承諾周一再辦多場電話造勢），但搜尋引擎尚未索引。28news.com、witn.com 亦被封鎖。確認 last_seen_id 43093 對應 trumpstruth.org/statuses/43093（IOW 愛荷華州杜比克活動連結，Oct.31 發布）。無新貼文確認，未推播任何通知。
 - 第九次執行: 2026-11-01 16:00 UTC，相同錯誤。WebSearch 顯示今日（11/1）川普活動：夏令時間結束貼文（Senate letting bill die）、堪薩斯州 Salina 造勢大會（今日舉行）、愛荷華州 Dubuque 造勢大會（今日舉行）。presidency.ucsb.edu、newsweek.com、pbs.org、cnn.com、abcnews.com、yournews.com 等均被封鎖。Bill Maher 貼文（1318字）為 10/25 舊貼，夏令時間貼文約為 10/27，均已在 ID 43093 前記錄。無法確認 ID > 43093 的新貼文。未推播任何通知。
+- 第十次執行: 2026-11-01 20:56 UTC，相同錯誤。state/last_seen_id.txt 當前為 2026-11-01_43113（比 43093 更新，代表前次執行成功更新了狀態）。WebSearch 透過搜尋找到貼文 ID 43104、43109、43110、43111（均早於 43113），搜尋 ID 43114/43115/43116 無結果。wsfa.com、www.ibtimes.co.uk、variety.com、nbcnews.com 等均封鎖。已知內容：43111=表揚密歇根民主黨人 Haley Stevens 背書共和黨人 Rogers（下午1:38 EST）、43110=阿拉斯加選票圖片（標示「SCAM!」）、43109=背書愛荷華州第4選區 Chris McGowan（上午10:47 EST）。中期選舉投票日前兩天，川普持續密集發文推廣共和黨候選人。無法確認 ID > 43113 的新貼文，未推播任何通知。
