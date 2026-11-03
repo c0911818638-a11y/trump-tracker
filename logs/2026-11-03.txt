@@ -1,0 +1,38 @@
+日期：2026-11-03
+執行時間：UTC 自動排程
+
+上次記錄貼文 ID：2026-11-02_43225
+SHA：3b26280deb76d102c99be10f98c7737b322bfac2
+
+【錯誤記錄】所有貼文取得方法均失敗，原因：雲端執行環境網路出口政策封鎖外部網域。
+
+嘗試方法：
+- 方法 A1：WebFetch https://truthsocial.com/@realDonaldTrump.rss → 失敗（ENOTFOUND：網域未在允許清單）
+- 方法 A2：WebFetch https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → 未嘗試（同域）
+- 方法 B：WebSearch "Trump Truth Social posts today November 3 2026" → 僅回傳標題摘要，無完整貼文內容或 ID
+- 方法 C：WebFetch https://www.thetrumparchive.com/ → 失敗（ENOTFOUND：網域未在允許清單）
+- 備援嘗試：
+  - www.kadoa.com → 失敗（ENOTFOUND）
+  - www.cbsnews.com → 失敗（ENOTFOUND）
+  - www.trumpstruth.org → 失敗（ENOTFOUND）
+  - dagens.com → 失敗（ENOTFOUND）
+  - us.cnn.com → 失敗（ENOTFOUND）
+  - www.ibtimes.co.uk → 失敗（ENOTFOUND）
+  - www.thedailybeast.com → 失敗（ENOTFOUND）
+
+網路搜尋摘要（僅供參考，無法確認為新貼文）：
+- 2026-11-02：Trump 發文提到伊朗和解"可能發生"及油價下跌
+- 2026-11-01（深夜）：Trump 發布與年輕貓王 Elvis Presley 合成頭像圖片
+- 2026-10-31：Trump 在 10 分鐘內連發約 20 則貼文，催促共和黨選民投票
+
+處置：
+- 未建立貼文分析檔案
+- 未更新 state/last_seen_id.txt
+- 未推播 Telegram 或 LINE 通知
+- 已記錄本錯誤日誌
+
+建議：
+請在雲端執行環境的網路出口政策（egress policy）中新增以下網域：
+- truthsocial.com
+- www.thetrumparchive.com
+- api.telegram.org（如 Telegram 推播亦受限）
