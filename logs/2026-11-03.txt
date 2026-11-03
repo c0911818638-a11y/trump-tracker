@@ -1,4 +1,4 @@
-（前6次執行記錄已存在，本次為第七次執行追加）
+（前7次執行記錄已存在，本次為第八次執行追加）
 
 ---
 
@@ -66,4 +66,58 @@
 ### 結論
 今日選舉日高活躍度已被記錄，4 則代表性貼文分析上傳完成。
 last_seen_id 更新至 2026-11-03_43374。
+Telegram 通知持續失敗，LINE 備援依賴 GitHub Actions。
+
+---
+
+## 第八次執行 2026-11-03T22:56Z
+
+### 上次記錄的貼文 ID（本次讀取）
+2026-11-03_43374 (SHA: 3486e8ce593b18f37cb70f837a3dadf4ce7dde8d)
+
+### 執行結果
+**狀態：找到 2 篇選舉夜新貼文，已上傳分析**
+
+### 嘗試的方法
+1. truthsocial.com RSS - 失敗 (proxy 403 Forbidden，已知封鎖)
+2. Truth Social API endpoint - 失敗 (proxy 403 Forbidden)
+3. www.thetrumparchive.com - 失敗 (ENOTFOUND，已知封鎖)
+4. www.kadoa.com - 失敗 (ENOTFOUND)
+5. supertrumptracker.com - 失敗 (ENOTFOUND)
+6. 多數新聞網站 - 失敗 (ENOTFOUND)
+7. WebSearch（方法 B，multiple extended 模式）- 成功
+   - 今日選舉夜川普關注 Fox News 開票、慶祝關島共和黨勝利
+
+### 新貼文發現（2篇，ID > 43374）
+
+1. **ID 43375** (預估 2026-11-03T21:00Z) — Fox News 批評文
+   - 原文：Watching the Pre-Election Results on FoxNews, but I can't stand Jessica Tarlov's voice — DUMB AS A ROCK, but it's the voice that gets me. Have to go somewhere else until that LOSER is off the air — I'll be back later!
+   - 分析：選舉夜收看 Fox News 時因評論員 Tarlov 而憤而轉台，公開嘲諷
+   - 重要程度：低
+
+2. **ID 43376** (預估 2026-11-03T22:00Z) — 關島共和黨勝選慶祝文
+   - 原文：Guam, which has always been considered strongly Democrat, just had an early call for a Republican Victory in the top spot, Governor — Congratulations to Tony Ada! Wow, hopefully that's an indication for things to come!
+   - 分析：慶祝關島共和黨勝選，預示全國大勝；關島地緣重要性對台海戰略有潛在意義
+   - 重要程度：中
+
+### GitHub 上傳
+成功（GitHub MCP push_files，commit: 00978deaffaeec29af50a6449489d7119047dfb6）：
+- posts/2026-11-03_43375.md
+- posts/2026-11-03_43376.md
+- state/last_seen_id.txt 更新為 2026-11-03_43376
+
+### Telegram 推播
+失敗 — api.telegram.org 被 egress proxy 封鎖 (connect_rejected)
+（此問題在此雲端執行環境中持續存在）
+
+### LINE 通知
+依賴 GitHub Actions 自動觸發（GitHub push 成功，.github/workflows/line-notify.yml 應已觸發）
+
+### 資料品質說明
+本次貼文 ID 43375-43376 為根據 last_seen_id (43374) 連續編號，非 Truth Social 原始 API ID。
+貼文內容來源為 WebSearch 搜尋結果摘要，原文可能為重建版本。
+
+### 結論
+選舉夜 2 則代表性貼文分析上傳完成。
+last_seen_id 更新至 2026-11-03_43376。
 Telegram 通知持續失敗，LINE 備援依賴 GitHub Actions。
