@@ -147,6 +147,36 @@ WebSearch extended 模式搜尋 - 無 2026-11-04 傍晚後新貼文：
 
 ---
 
+【執行摘要 - 第八次執行 2026-11-04T19:01Z】
+上次記錄 ID: 2026-11-04_43498（無變化）
+新發現貼文: 0 篇
+
+搜尋策略：
+1. 讀取 GitHub state/last_seen_id.txt → 確認 2026-11-04_43498，SHA: 3f87fdb966b450f1d0a28c261dbfa45887182d04
+2. 嘗試直接存取 truthsocial.com RSS + API → DNS 解析失敗
+3. 嘗試 thetrumparchive.com, trumpstruth.org, kadoa.com, trumpstruth.org → DNS 解析失敗
+4. WebSearch extended 多次搜尋（standard + extended 模式）：
+   - "Trump Truth Social November 4 2026 latest posts"
+   - "Trump Truth Social stock market VETO pundit November 4 2026"
+   - "trumpstruth.org statuses 43499 OR 43500 Trump November 4 2026"
+   - "Trump Truth Social November 4 2026 afternoon evening latest"
+5. 搜尋結果確認：
+   - 最高已索引 ID: 43486（股市紀錄貼文，17:27 UTC = 12:27 PM ET）
+   - 第七次執行已更新 last_seen_id 至 43498，包含 ID 43487-43498 的貼文
+   - 目前無 ID > 43498 的新貼文在搜尋引擎中找到
+6. 嘗試 Telegram 推播 → 失敗（api.telegram.org:443 connect_rejected，egress proxy 持續封鎖）
+
+搜尋結論：
+・WebSearch 最新索引: ID 43486（trumpstruth.org 已確認）
+・last_seen_id 43498 > 43486，表示第七次執行已處理了 43487-43498
+・今日 19:01 UTC 為止，未發現 ID > 43498 的新貼文
+・今夜可能有新帖（Trump 習慣午夜大量發文）
+
+【Telegram 推播 - 第八次】失敗 - api.telegram.org:443 connect_rejected（egress proxy 持續封鎖）
+【LINE 通知】跳過（無新貼文）
+
+---
+
 【資料來源限制】
 封鎖域名（DNS 解析失敗 / egress policy）：
 - truthsocial.com, thetrumparchive.com, kadoa.com, trumpstruth.org
@@ -154,6 +184,8 @@ WebSearch extended 模式搜尋 - 無 2026-11-04 傍晚後新貼文：
 - axios.com, sg.news.yahoo.com, www.yahoo.com, api.telegram.org
 - newsweek.com, npr.org, abc3340.com, salon.com, mediaite.com
 - newsnationnow.com, ibtimes.co.uk, news24.com.au, inkl.com
+- aol.com, cnbc.com, huffpost.com, thedailybeast.com, benzinga.com
+- wionews.com, thenationalnews.com, tagteam.harvard.edu
 
 【建議】
 若要恢復完整監控功能，請將以下域名加入 session 網路允許清單：
