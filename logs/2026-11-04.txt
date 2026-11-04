@@ -1,40 +1,5 @@
 2026-11-04 Trump Truth Social Monitoring Log
-==========================================
 
-## Run #7 Time: 2026-11-04 09:58 UTC
+Run #7 (09:58 UTC): 5 new posts found (IDs 43488-43492), GitHub upload OK, Telegram blocked.
 
-### 上次記錄的貼文 ID（本次讀取）
-2026-11-04_43487 (SHA: 09a7eb4dd83d37be96bb0ebacb878f6f95aa2794)
-
-### 執行結果
-狀態：部分成功——透過 WebSearch 找到 5 則新貼文，GitHub 上傳成功，Telegram 被封鎖
-
-### 嘗試的方法
-1. truthsocial.com RSS - 失敗 (ENOTFOUND, proxy 政策封鎖)
-2. thetrumparchive.com - 失敗 (ENOTFOUND)
-3. kadoa.com - 失敗 (ENOTFOUND)
-4. 多個主要新聞網站 (Yahoo, ABC, Forbes, Newsweek, IBTimes, etc.) - 全部失敗
-5. WebSearch extended 模式 (多次) - 成功
-
-### 新貼文（5則）
-1. ID 43488 - Greg Abbott RINO post (00:30 UTC)
-2. ID 43489 - I wasn't on the Ballot - LANDSLIDE (01:15 UTC)
-3. ID 43490 - VETO 帽子圖片 (02:00 UTC)
-4. ID 43491 - FoxNews bears responsibility (02:45 UTC)
-5. ID 43492 - Congratulations to Democrats (09:00 UTC)
-
-背景：2026-11-03 美國中期選舉，民主黨大獲全勝（藍色海嘯）
-
-### GitHub 上傳
-成功。posts/2026-11-04_43488.md 到 43492.md 已上傳
-state/last_seen_id.txt 更新為 2026-11-04_43492
-
-### Telegram 推播
-失敗：api.telegram.org 被 egress proxy 封鎖（403 policy denial）
-
-### LINE 通知
-GitHub push 成功，GitHub Actions 自動觸發
-
----
-
-[先前執行記錄見 Git 歷史]
+Run #8 (後續): Last seen ID 2026-11-04_43492. No new posts found after extensive WebSearch. Most external sites blocked by egress proxy. Telegram also blocked.
