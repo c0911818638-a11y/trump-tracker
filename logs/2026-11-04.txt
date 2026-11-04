@@ -44,3 +44,15 @@ Telegram 推播狀態：
 
 ---
 【22:59 UTC 執行】未找到新貼文。WebSearch 找到的最高 ID 為 43486，低於 last_seen_id 43503。truthsocial.com 及大多數存取管道仍被 egress policy 封鎖。Telegram 推播跳過（無新貼文）。
+
+---
+【23:58 UTC 執行】未找到新貼文。
+嘗試方法：
+  - 方法 A (truthsocial.com RSS + API): 失敗 - DNS 解析失敗 (egress policy 封鎖)
+  - 方法 B (WebSearch): 部分成功 - 找到最高貼文 ID 為 43486 (< last_seen_id 43503)
+    * 相關報導已確認所有選舉夜貼文均已在先前執行中捕獲
+    * 搜尋結果未顯示任何 ID > 43503 的新貼文
+  - 方法 C (thetrumparchive.com): 失敗 - DNS 解析失敗 (egress policy 封鎖)
+  - trumpstruth.org: 失敗 - DNS 解析失敗 (egress policy 封鎖)
+  - 新聞網站 (axios, forbes, huffpost, newsweek, yahoo, hollywoodreporter 等): 全部失敗
+結論: 無新貼文 (ID > 43503)。last_seen_id 未更新。Telegram 推播跳過。
