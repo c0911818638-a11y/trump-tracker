@@ -177,6 +177,37 @@ WebSearch extended 模式搜尋 - 無 2026-11-04 傍晚後新貼文：
 
 ---
 
+【執行摘要 - 第九次執行 2026-11-04T19:57Z】
+上次記錄 ID: 2026-11-04_43498（無變化）
+新發現貼文: 0 篇
+
+搜尋策略：
+1. 讀取 GitHub state/last_seen_id.txt → 確認 2026-11-04_43498，SHA: 3f87fdb966b450f1d0a28c261dbfa45887182d04
+2. 嘗試直接存取 truthsocial.com RSS + API → DNS 解析失敗（session egress 封鎖）
+3. 嘗試 thetrumparchive.com, trumpstruth.org, kadoa.com → DNS 解析失敗
+4. WebSearch extended 多次搜尋：
+   - "Trump Truth Social posts today November 4 2026"
+   - "Trump Truth Social stock market VETO record high text November 4 2026"
+   - "Trump Truth Social new posts November 4 2026 after noon full text veto Iran war midterm"
+   - "Trump Truth Social latest posts today November 4 2026 afternoon evening new"
+   - "Trump Truth Social new post November 4 2026 Iran war worth it ballroom pundit"
+   - "Trump Truth Social latest 2pm 3pm 4pm 5pm new announcement November 4 2026"
+5. 搜尋結果確認：
+   - 最高已索引 ID（trumpstruth.org）: 43486（股市紀錄貼文，12:27 PM ET）
+   - 目前無 ID > 43498 的新貼文在搜尋引擎中找到
+   - 新聞報導主要集中在中期選舉後續反應（已於第七次執行捕獲）
+   - 相關報導：Iran war "worth it" 為現場採訪發言，非 Truth Social 貼文
+
+搜尋結論：
+・今日 19:57 UTC 為止，未發現 ID > 43498 的新貼文
+・WebSearch 顯示 trumpstruth.org 最高索引仍為 43486
+・封鎖域名未變（truthsocial.com, trumpstruth.org, api.telegram.org）
+
+【Telegram 推播 - 第九次】失敗 - api.telegram.org:443 被 egress proxy 持續封鎖
+【LINE 通知】跳過（無新貼文）
+
+---
+
 【資料來源限制】
 封鎖域名（DNS 解析失敗 / egress policy）：
 - truthsocial.com, thetrumparchive.com, kadoa.com, trumpstruth.org
