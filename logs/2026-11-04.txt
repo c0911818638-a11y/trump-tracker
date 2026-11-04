@@ -3,3 +3,44 @@
 執行時間: 2026-11-04T14:30:00Z（第三次執行）
 執行時間: 2026-11-04T16:00:00Z（第四次執行）
 執行時間: 2026-11-04T15:58:00Z（第五次執行）
+上次記錄 ID: 2026-11-04_43503
+
+[各次執行結果]
+- 方法 A (Truth Social RSS/API): 失敗 - truthsocial.com 被 egress policy 封鎖
+- 方法 B (WebSearch): 有限成功 - 找到部分貼文片段但無法確認完整 ID 清單
+- 方法 C (Trump Archive): 失敗 - thetrumparchive.com 被 egress policy 封鎖
+- trumpstruth.org: 失敗 - 被 egress policy 封鎖
+- 大多數新聞網站: 無法直接存取
+
+[11月4日確認的貼文]
+- ID 43485: 圖片貼文 (2026-11-04 早上, 已記錄)
+- ID 43486: 股市新高 "Stock Market just hit another Record High — 91 Days in just a short period of time — Less than two years. Your 401(k)s are through the roof." (2026-11-04 12:27 PM EST, 已記錄)
+- ID 43503: 上次記錄的最新貼文 (2026-11-04, 已記錄)
+
+[其他確認的選舉夜貼文 - 2026-11-03, 均已記錄]
+- Fox News 批評: "bears responsibility for these losses by constantly and consistently putting on the Dumocrat opposition."
+- Jessica Tarlov: "DUMB AS A ROCK"
+- 自我辯護: "I wasn't on the Ballot and if I was, we would have won IN A LANDSLIDE!"
+- Greg Abbott: "RINO"
+- 否決威脅: 若民主黨通過法案將予否決
+
+Telegram 推播狀態：
+   - api.telegram.org 在本 session 的 egress policy 中持續被封鎖
+   - 歷次執行均無法推播，建議將 api.telegram.org 加入允許清單
+
+【資料來源限制】
+封鎖域名（DNS 解析失敗 / egress policy）：
+- truthsocial.com, thetrumparchive.com, kadoa.com, trumpstruth.org
+- zerohedge.com, forbes.com, yahoo.com, huffpost.com, time.com
+- axios.com, sg.news.yahoo.com, www.yahoo.com, api.telegram.org
+- newsweek.com, npr.org, cnbc.com, thedailybeast.com, benzinga.com
+- wionews.com, thenationalnews.com
+
+【建議】
+若要恢復完整監控功能，請將以下域名加入 session 網路允許清單：
+- truthsocial.com
+- thetrumparchive.com
+- api.telegram.org（Telegram 推播所需）
+
+---
+【22:59 UTC 執行】未找到新貼文。WebSearch 找到的最高 ID 為 43486，低於 last_seen_id 43503。truthsocial.com 及大多數存取管道仍被 egress policy 封鎖。Telegram 推播跳過（無新貼文）。
