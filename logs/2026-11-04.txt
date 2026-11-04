@@ -1,6 +1,7 @@
 執行時間: 2026-11-04T12:01:00Z（首次執行）
 執行時間: 2026-11-04T12:56:00Z（第二次執行）
 執行時間: 2026-11-04T14:30:00Z（第三次執行）
+執行時間: 2026-11-04T16:00:00Z（第四次執行）
 
 【執行摘要 - 首次執行 12:01 UTC】
 上次記錄 ID: 2026-11-04_43492
@@ -51,6 +52,26 @@ WebSearch extended 模式多次搜尋 - 無 2026-11-04 午後新貼文：
 - newsweek.com, newsnationnow.com, wikipedia.org
 
 【Telegram 推播 - 第三次】跳過（無新貼文）
+
+【LINE 通知】跳過（無新貼文）
+
+---
+
+【執行摘要 - 第四次執行 16:00 UTC】
+上次記錄 ID: 2026-11-04_43496（無變化）
+新發現貼文: 0 篇
+
+WebSearch 多次嘗試（standard + extended 模式）：
+・所有已知貼文與前三次執行結果一致，狀態最高為 43484（trumpstruth.org 已索引）
+・web search 無法找到任何 status > 43496 的新貼文
+・直接存取 truthsocial.com / trumpstruth.org / 各新聞網站：DNS 解析失敗
+
+持續封鎖域名（egress policy）：
+- truthsocial.com, thetrumparchive.com, trumpstruth.org
+- api.telegram.org（Telegram 推播所需）
+- 幾乎所有主要新聞網站
+
+【Telegram 推播 - 第四次】跳過（無新貼文）
 
 【LINE 通知】跳過（無新貼文）
 
