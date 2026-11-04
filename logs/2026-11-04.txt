@@ -1,33 +1,26 @@
-執行時間: 2026-11-04 UTC
-上次貼文 ID: 2026-11-03_43411
-新貼文數量: 1
+2026-11-04 Trump Truth Social Monitoring Log
+==========================================
+Run #1 Time: (previous run - last_seen_id set to 2026-11-04_43413)
+Run #2 Time: 2026-11-04 02:57 UTC
 
-新貼文:
-- 2026-11-04_43412: Trump攻擊Fox News主持人Jessica Tarlov（選舉日下午 5:25 PM ET）
+Last Seen ID: 2026-11-04_43413
 
-資料來源:
-- WebFetch (truthsocial.com): 失敗 - 網域封鎖
-- WebFetch (thetrumparchive.com): 失敗 - 網域封鎖
-- WebSearch: 成功 - 取得摘要資訊
+Error Summary (Run #2):
+- Method A (truthsocial.com RSS): FAILED - ENOTFOUND (domain blocked by network policy)
+- Method A (truthsocial.com API): FAILED - domain blocked
+- Method B (WebSearch): PARTIAL - search summaries returned but no specific post IDs/text accessible
+- Method C (thetrumparchive.com): FAILED - ENOTFOUND (domain blocked)
+- Fallback sources (kadoa.com, trumpstruth.org, forbes.com, yahoo.com, aol.com, tag24.com, etc.): ALL FAILED - domains blocked
 
-步驟5 GitHub API push: 成功 (MCP push_files to main)
-步驟6 Telegram 推播: 失敗 - 網路 egress 政策阻擋 (HTTP 403 Forbidden from proxy)
-步驟7 LINE: 將由 GitHub Actions (.github/workflows/line-notify.yml) 自動處理
+Root Cause: Cloud session network policy restricts outbound access to most news/social media domains.
+Solution: Enable network access to truthsocial.com or an archive site in session settings.
 
----
-執行時間: 2026-11-04 (第二次執行) UTC
-上次貼文 ID: 2026-11-04_43412
-新貼文數量: 1
+WebSearch context (unverified, from search snippets only):
+- Election night Nov 3: Trump posted about Fox News criticism ("FoxNews Ratings are way down (27%!)")
+- Election night Nov 3: Trump attacked Michigan Senate candidate Abdul El-Sayed
+- Election night Nov 3: Trump made election fraud claims re Alaska around 1am
+- Multiple posts about MAGA warriors (44 posts in 13 minutes reportedly)
+- Fake posts circulating - AFP/Lead Stories fact-checked fabrications
 
-新貼文:
-- 2026-11-03_43413: Trump背書威斯康辛州眾議員Van Orden連任（期中選舉日背書系列）
-
-資料來源:
-- WebFetch (truthsocial.com): 失敗 - 網域封鎖
-- WebFetch (thetrumparchive.com): 失敗 - 網域封鎖
-- WebSearch: 成功 - 取得摘要資訊 (trumpstruth.org/statuses/43413)
-
-步驟5 GitHub API PUT: 失敗 - proxy 封鎖寫入 (403)
-步驟5 MCP push_files: 成功
-步驟6 Telegram 推播: 失敗 - 網路 egress 政策阻擋 (HTTP 403 Forbidden from proxy)
-步驟7 LINE: 將由 GitHub Actions (.github/workflows/line-notify.yml) 自動處理
+Action Taken: No new posts processed. No Telegram/LINE notifications sent.
+GitHub State: last_seen_id.txt unchanged (2026-11-04_43413)
