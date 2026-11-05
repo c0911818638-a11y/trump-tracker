@@ -49,3 +49,35 @@
 ## 網路封鎖簽註
 Telegram 推播失敗：api.telegram.org 被此環境的 egress proxy 政策封鎖。
 若需啟用 Telegram 推播，請在 Claude Code Remote 環境設定中新增 api.telegram.org 至允許的外流網域。
+
+---
+
+## 第二次執行記錄
+
+**執行時間：** 2026-11-05T09:01:28Z
+
+### 步驟 1 - 讀取上次記錄
+- 上次記錄貼文 ID：2026-11-05_43515
+- sha：c98c3dd367f566ff32b93bfc1ed90115bca3eedf
+- 狀態：成功
+
+### 步驟 2 - 抓取川普最新貼文
+- 方法 A (truthsocial.com)：失敗 — 網域被 egress 政策封鎖 (ENOTFOUND)
+- 方法 B (WebSearch)：執行 — 多次搜尋，未找到 ID 43515 以後的新貼文
+- 方法 C (thetrumparchive.com)：失敗 — 網域被 egress 政策封鎖 (ENOTFOUND)
+
+### 步驟 3 - 比較新舊貼文
+- 未發現新貼文
+- 最新已記錄 ID：2026-11-05_43515（夏令時間貼文 43510 + 11/3-4 選夜貼文 5 篇）
+
+### 步驟 5 - GitHub 上傳
+- 狀態：無新貼文，跳過（本日誌更新除外）
+
+### 步驟 6 - Telegram 推播
+- 狀態：失敗
+- 錯誤：api.telegram.org:443 被 egress proxy 拒絕 (connect_rejected)
+- 備註：Telegram 通知管道在此環境持續被封鎖，請參考網路封鎖簽註
+
+### 結論
+自今日 08:00 UTC 執行後（上次記錄 ID：43515），川普於本次 09:01 UTC 執行前尚未發布新貼文。
+搜尋引擎可能存在索引延遲，下次執行將繼續監控。
