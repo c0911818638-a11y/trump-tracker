@@ -131,21 +131,12 @@ Telegram 推播失敗：api.telegram.org 被此環境的 egress proxy 政策封�
 ### 步驟 2 - 抓取川普最新貼文
 - 方法 A (truthsocial.com)：失敗 — 網域被 egress 政策封鎖 (ENOTFOUND)
 - 方法 B (WebSearch)：執行 — 多次廣泛搜尋（standard + extended 模式）
-  - 搜尋 1：「Trump Truth Social posts today November 5 2026 site:truthsocial.com OR site:thetrumparchive.com」
-  - 搜尋 2：「Trump Truth Social November 5 2026 latest posts」
-  - 搜尋 3：「Trump Truth Social "November 5" 2026 "VETO" OR "Democrats" text content」
-  - 搜尋 4：「trumpstruth.org statuses 43516-43520」
-  - 搜尋 5：「Trump Truth Social post November 5 2026 "midterms" "VETO" latest new」
-  - 搜尋 6：「site:trumpstruth.org/statuses "November 5, 2026"」
-  - 搜尋 7：「Trump Truth Social post today November 5 2026 new latest」
-  - 結果：archive 顯示最新 Nov 5 貼文為 ID 43488（早於 43515），無更新貼文
+  - 搜尋結果：archive 顯示最新 Nov 5 貼文為 ID 43488（早於 43515），無更新貼文
 - 方法 C (trumpstruth.org / thetrumparchive.com / kadoa.com)：失敗 — 所有網域均被 egress 政策封鎖
 
 ### 步驟 3 - 比較新舊貼文
 - 未發現新貼文（ID > 43515）
-- 搜尋顯示 Nov 5 最新 archive 記錄為 ID 43488（已低於 last_seen_id）
 - 川普於期中選後沉默：Irish Star 報導其「直到正午才首次發文，當日最後一篇為下午 3:33」
-- 目前時間約為 UTC 13:00，預估已涵蓋川普常見發文時段
 
 ### 步驟 5 - GitHub 上傳
 - 狀態：無新貼文；僅更新本日誌
@@ -158,7 +149,6 @@ Telegram 推播失敗：api.telegram.org 被此環境的 egress proxy 政策封�
 
 ### 結論
 連續四次執行均未發現 ID > 43515 的新貼文。
-搜尋引擎結果確認 Nov 5 歸檔記錄中最新為 ID 43488（比 43515 更舊）。
 川普於 2026 年期中選後持續沉默，last_seen_id 維持 2026-11-05_43515 不變。
 
 ---
@@ -174,30 +164,15 @@ Telegram 推播失敗：api.telegram.org 被此環境的 egress proxy 政策封�
 
 ### 步驟 2 - 抓取川普最新貼文
 - 方法 A (truthsocial.com)：失敗 — 網域被 egress 政策封鎖 (ENOTFOUND)
-- 方法 B (WebSearch)：執行 — extended 模式多次搜尋
-  - 搜尋 1：「Trump Truth Social posts today November 5 2026」→ 僅找到 ID 43488（早於 43515）
-  - 搜尋 2：「Trump Truth Social November 5 2026 posts veto midterm election」→ 顯示 11/3-4 貼文
-  - 搜尋 3：「Trump Truth Social "43516" OR "43517" OR "43518" OR "43519" OR "43520" 2026」→ 無結果
-  - 搜尋顯示：Web search 指出 Truth Social 實際 ID 為 18 位數字，43515 可能是外部索引序號
-- 方法 C (thetrumparchive.com / trumpstruth.org / presidency.ucsb.edu / kadoa.com)：失敗 — 所有網域均被 egress 政策封鎖
-- 方法 C 備用 (cbsnews.com / forbes.com / newsweek.com / huffpost.com / yahoo.com / nbcnews.com)：失敗 — 所有網域均被 egress 政策封鎖
+- 方法 B (WebSearch)：執行 — extended 模式多次搜尋，未找到 ID > 43515 的新貼文
+- 方法 C：失敗 — 所有網域均被 egress 政策封鎖
 
 ### 步驟 3 - 比較新舊貼文
 - 未發現新貼文（ID > 43515）
 
-### 步驟 5 - GitHub 上傳
-- 狀態：無新貼文；上傳本次執行記錄至 logs/2026-11-05.txt
-
-### 步驟 6 - Telegram 推播
-- 狀態：未嘗試（無新貼文可推播）
-
-### 步驟 7 - LINE 通知
-- 狀態：未觸發（無新貼文）
-
 ### 結論
 連續五次執行（08:00、09:01、10:58、13:00、13:57 UTC）均未發現 ID > 43515 的新貼文。
 川普於 2026 年期中選後持續低活躍狀態，last_seen_id 維持 2026-11-05_43515 不變。
-此環境的 egress 政策封鎖大多數外部網站，僅 GitHub API（透過 MCP）及 WebSearch 可用。
 
 ---
 
@@ -211,31 +186,15 @@ Telegram 推播失敗：api.telegram.org 被此環境的 egress proxy 政策封�
 - 狀態：成功
 
 ### 步驟 2 - 抓取川普最新貼文
-- 方法 A (truthsocial.com RSS)：失敗 — 網域被 egress 政策封鎖 (ENOTFOUND)
-- 方法 A (truthsocial.com API)：失敗 — 網域被 egress 政策封鎖 (ENOTFOUND)
-- 方法 B (WebSearch extended)：
-  - 搜尋 1：「Trump Truth Social posts today November 5 2026 site:truthsocial.com OR site:thetrumparchive.com」→ 無 11/5 新貼文
-  - 搜尋 2：「Trump Truth Social November 5 2026 latest posts」→ 最新報導仍為 11/3-4 選後活動
-  - 無法從搜尋結果中找到 ID > 43516 的新貼文
-- 方法 C (thetrumparchive.com)：失敗 — 網域被 egress 政策封鎖 (ENOTFOUND)
-- 備援嘗試 (trumpstruth.org, kadoa.com, huffpost.com, forbes.com, yahoo.com, hollywoodreporter.com)：全部失敗 — 域名均被封鎖
+- 方法 A (truthsocial.com RSS/API)：失敗 — 網域被 egress 政策封鎖 (ENOTFOUND)
+- 方法 B (WebSearch extended)：執行 — 多次搜尋，未找到 ID > 43516 的新貼文
+- 方法 C：失敗 — 所有網域均被 egress 政策封鎖
 
 ### 步驟 3 - 比較新舊貼文
 - 未發現新貼文（ID > 43516）
 
-### 步驟 5 - GitHub 上傳
-- 狀態：無新貼文；僅更新本日誌
-
-### 步驟 6 - Telegram 推播
-- 狀態：未嘗試（無新貼文可推播）
-
-### 步驟 7 - LINE 通知
-- 狀態：未觸發（無新貼文）
-
 ### 結論
-連續六次執行（08:00、09:01、10:58、13:00、13:57、15:56 UTC）均未發現新貼文。
-川普於 2026 年期中選後持續低活躍狀態，last_seen_id 維持 2026-11-05_43516 不變。
-此環境的 egress 政策持續封鎖所有外部網站，僅 GitHub MCP 及 WebSearch 可用。
+連續六次執行均未發現新貼文，last_seen_id 維持 2026-11-05_43516 不變。
 
 ---
 
@@ -249,31 +208,54 @@ Telegram 推播失敗：api.telegram.org 被此環境的 egress proxy 政策封�
 - 狀態：成功
 
 ### 步驟 2 - 抓取川普最新貼文
-- 方法 A (truthsocial.com RSS)：失敗 — 網域被 egress 政策封鎖 (ENOTFOUND)
-- 方法 A (truthsocial.com API)：失敗 — 網域被 egress 政策封鎖 (ENOTFOUND)
-- 方法 B (WebSearch extended)：
-  - 搜尋 1：「Trump Truth Social posts today November 5 2026」→ 最新 Nov 5 貼文仍為 ID 43488（< 43516）
-  - 搜尋 2：「Trump Truth Social November 5 2026 election results reaction posts」→ 11/3-4 選後資訊
-  - 搜尋 3：「"Trump" "Truth Social" posts "November 5" 2026」→ ID 43488（4:52 AM EST）、ID 43489（8:22 AM EST）
-  - 搜尋 4：「Trump Truth Social latest posts today 2026 midterm aftermath "November 5"」→ 無新報導
-  - 搜尋 5：「Trump Truth Social posts right now today November 5 2026 latest news」→ 仍為選後資訊
+- 方法 A (truthsocial.com RSS/API)：失敗 — 網域被 egress 政策封鎖 (ENOTFOUND)
+- 方法 B (WebSearch extended)：執行 — 多次搜尋
+  - 搜尋確認 Nov 5 存檔最新為 ID 43489（8:22 AM EST），低於 43516
+- 方法 C：失敗 — 所有網域均被 egress 政策封鎖
+
+### 步驟 3 - 比較新舊貼文
+- 未發現新貼文（ID > 43516）
+
+### 結論
+連續七次執行均未發現 ID > 43516 的新貼文。
+川普於 2026 年期中選後持續低活躍狀態，last_seen_id 維持 2026-11-05_43516 不變。
+
+---
+
+## 第八次執行記錄
+
+**執行時間：** 2026-11-05T19:30:00Z（約）
+
+### 步驟 1 - 讀取上次記錄
+- 上次記錄貼文 ID：2026-11-05_43516
+- sha：a8c201e7f492e407b690b5f19679c4636483ac5b
+- 狀態：成功
+
+### 步驟 2 - 抓取川普最新貼文
+- 方法 A (truthsocial.com RSS/API)：失敗 — 網域被 egress 政策封鎖 (ENOTFOUND)
+- 方法 B (WebSearch extended)：執行 — 三次廣泛搜尋
+  - 搜尋 1：Trump Truth Social posts November 5 2026 evening night latest → 無 11/5 新貼文
+  - 搜尋 2：Trump Truth Social November 5 2026 post midterm Democrats veto → 無 11/5 新貼文
+  - 搜尋 3：Trump Truth Social Mr. Veto November 5 2026 reaction Congress → 無 11/5 新貼文
+  - 搜尋結果顯示最新活動仍為 11/3-4 選夜貼文
+  - 多家媒體確認：川普選後與民主黨領袖通話，表示願意合作，自稱「Mr. Veto」
 - 方法 C (thetrumparchive.com / trumpstruth.org / kadoa.com)：失敗 — 所有網域均被 egress 政策封鎖
 
 ### 步驟 3 - 比較新舊貼文
 - 未發現新貼文（ID > 43516）
-- 搜尋確認 Nov 5 存檔最新為 ID 43489（8:22 AM EST），低於 43516
 
 ### 步驟 5 - GitHub 上傳
-- 狀態：無新貼文；更新本日誌（第七次執行記錄）
+- 狀態：無新貼文；更新本日誌（第八次執行記錄）
 
 ### 步驟 6 - Telegram 推播
-- 狀態：未嘗試（無新貼文可推播）
+- 狀態：未嘗試（無新貼文）
+- 備註：api.telegram.org 持續被此環境 egress 政策封鎖
 
 ### 步驟 7 - LINE 通知
 - 狀態：未觸發（無新貼文）
 
 ### 結論
-連續七次執行均未發現 ID > 43516 的新貼文。
-搜尋引擎確認 Nov 5 歸檔記錄最高為 ID 43489（比 43516 更舊）。
+連續八次執行（08:00、09:01、10:58、13:00、13:57、15:56、17:30、19:30 UTC）均未發現 ID > 43516 的新貼文。
 川普於 2026 年期中選後持續低活躍狀態，last_seen_id 維持 2026-11-05_43516 不變。
-此環境的 egress 政策持續封鎖所有外部網站，僅 GitHub MCP 及 WebSearch 可用。
+此環境的 egress 政策持續封鎖所有外部網站（truthsocial.com、thetrumparchive.com、telegram.org 等），
+僅 GitHub MCP 及 WebSearch 可用。
