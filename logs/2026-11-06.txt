@@ -1,0 +1,61 @@
+# 執行記錄 2026-11-06
+
+**執行時間：** 2026-11-06T(UTC)
+
+## 執行摘要
+
+### 步驟 1 - 讀取上次記錄
+- 上次記錄貼文 ID：2026-11-05_43520
+- sha：ac2974542203c79be2257ce316dc1ddfb13cab21
+- 狀態：成功
+
+### 步驟 2 - 抓取川普最新貼文
+- 方法 A (truthsocial.com RSS)：失敗 — 網域被 egress 政策封鎖 (ENOTFOUND)
+- 方法 A (truthsocial.com API)：失敗 — 網域被 egress 政策封鎖 (ENOTFOUND)
+- 方法 B (WebSearch)：執行 — 多次搜尋，僅找到 2026-11-03~05 的貼文（已於前次執行記錄）
+  - 搜尋 1："Trump Truth Social posts today November 6 2026"
+  - 搜尋 2："Trump Truth Social November 6 2026 post midterms"
+  - 搜尋 3："Trump Truth Social November 6 2026 new posts today"
+  - 搜尋 4："Trump Truth Social midnight posting binge November 5 6 2026"
+  - 搜尋 5："Trump 'not at all ANGRY' OR 'Stable Genius' Truth Social post November 2026"
+  - 注意：「Stable Genius」/「Not at all ANGRY」等文章確認為 2022 年舊文（Rolling Stone URL 含 2022）
+  - 注意：「They Stole The Electron」文章確認為 2022 年舊文（關於 Blake Masters 阿利桑那州）
+  - 注意：Daily Beast「1AM Truth Social Posting Spree」(Trump 80 歲) 文章為 2026 年夏季（45-73 天前），非 11 月新文
+- 方法 C (thetrumparchive.com)：失敗 — 網域被 egress 政策封鎖 (ENOTFOUND)
+- 方法 C (trumpstruth.org)：失敗 — 網域被 egress 政策封鎖 (ENOTFOUND)
+- 方法 C (kadoa.com/potus/truth)：失敗 — 網域被 egress 政策封鎖 (ENOTFOUND)
+
+### 步驟 3 - 比較新舊貼文
+- 未發現新貼文（ID > 43520）
+- 當前 last_seen_id：2026-11-05_43520
+  （對應：2026-11-05 晚間「股市歷史最黑暗一天，川普指責 Dumocrats 導致選後暴跌」貼文）
+
+### 步驟 4 - 中文分析
+- 無新貼文，跳過
+
+### 步驟 5 - GitHub 上傳
+- 無新貼文，跳過（本日誌更新除外）
+- 注意：curl 直接呼叫 GitHub REST API 被 proxy 封鎖；改用 MCP GitHub 工具
+
+### 步驟 6 - Telegram 推播
+- 無新貼文，不推播
+- 注意：依前次記錄，api.telegram.org 仍被 egress proxy 封鎖
+
+### 步驟 7 - LINE 通知
+- 無新貼文，GitHub Actions 不觸發
+
+## 環境限制摘要
+| 服務 | 狀態 |
+|------|------|
+| truthsocial.com | egress 封鎖 (ENOTFOUND) |
+| thetrumparchive.com | egress 封鎖 (ENOTFOUND) |
+| trumpstruth.org | egress 封鎖 (ENOTFOUND) |
+| kadoa.com | egress 封鎖 (ENOTFOUND) |
+| 主要新聞網站 (Yahoo/CBS/Fox/NBC/HuffPost 等) | egress 封鎖 (ENOTFOUND) |
+| WebSearch | 可用（僅限搜尋摘要） |
+| api.telegram.org | egress 封鎖 |
+| GitHub MCP 工具 | 可用 |
+
+## 結論
+本次執行（2026-11-06）未找到任何 ID > 43520 的新貼文。
+last_seen_id 維持在 2026-11-05_43520，不更新。
