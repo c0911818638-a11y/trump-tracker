@@ -1,6 +1,6 @@
 # 川普 Truth Social 監控日誌
 日期：2026-11-07
-執行時間：2026-11-07T01:56:56Z（第一次）/ 2026-11-07T（第二次）/ 2026-11-07T06:59:14Z（第三次）
+執行時間：2026-11-07T01:56:56Z（第一次）/ 2026-11-07T（第二次）/ 2026-11-07T06:59:14Z（第三次）/ 2026-11-07T（第四次）
 
 ## 執行結果：無新貼文
 
@@ -31,8 +31,16 @@
 - WebSearch 關鍵詞 "you will rue the day"：確認為 2025 年選舉日前貼文
 - 嘗試存取 20+ 個外部域名，全部因 ENOTFOUND 失敗
 
+### 第四次執行（2026-11-07 UTC）新增搜尋嘗試
+- WebSearch "Trump Truth Social posts November 7 2026"：搜尋結果最新為 Nov 6
+- WebSearch "Trump MR. VETO Truth Social November 7 2026"：確認有 MR. VETO 貼文（可能已在前次記錄）
+- WebSearch "site:trumpstruth.org November 7, 2026"：搜尋結果顯示 trumpstruth.org 最新索引 ID 為 43501（Nov 6）
+- WebSearch 嘗試 ID 43563-43600 範圍：無結果
+- Telegram t.me：ENOTFOUND（網路限制）
+- UCSB 美國總統計畫存檔：ENOTFOUND（網路限制）
+
 ### 結論
-- 三次執行均未發現比 2026-11-07_43562 更新的貼文
+- 四次執行均未發現比 2026-11-07_43562 更新的貼文
 - 2026-11-07 新貼文尚未被搜尋引擎索引，或尚未發布
 - state/last_seen_id.txt 維持不變（2026-11-07_43562）
 - 未發送 Telegram 或 LINE 通知
