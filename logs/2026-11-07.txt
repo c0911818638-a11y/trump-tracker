@@ -1,38 +1,45 @@
 Trump Truth Social 監控日誌
 日期: 2026-11-07
-最後更新: 2026-11-07T16:58 UTC（第四次運行）
+最後更新: 2026-11-07T19:01 UTC（第五次運行）
 
 狀態: 無新貼文
 
-最後記錄貼文 ID: 2026-11-07_43563
-GitHub SHA: 4c0785f4bc69f9a13979a163aa0d7913266b725a
+最後記錄貼文 ID: 2026-11-07_43564
+GitHub SHA: b6bb34d35a87575fbf5837b57bcce12c68f91d39
 
 搜索結果摘要:
 - 嘗試方法 A (Truth Social RSS/API): 失敗 - 網路限制 (ENOTFOUND truthsocial.com)
-- 嘗試方法 B (WebSearch): 找到存檔最新 ID ~43500 (2026-11-06，trumpstruth.org)
-- 嘗試方法 C (Trump Archive / thetrumparchive.com / trumpstruth.org / kadoa.com): 失敗 - 網路限制
-- 嘗試新聞網站 (thehill.com, finance.yahoo.com, cnbc.com): 失敗 - 網路限制
-- 嘗試 Telegram 頻道 (t.me): 失敗 - 網路限制
-- 嘗試 UCSB Presidency Project: 失敗 - 網路限制
+- 嘗試方法 B (WebSearch): 未找到 ID > 43564 的新貼文
+- 嘗試方法 C (trumpstruth.org / kadoa.com / thetrumparchive.com): 失敗 - 網路限制
+- 嘗試新聞網站 (thehill.com, cbsnews.com, yahoo.com, cnbc.com, etc.): 失敗 - 網路限制
 
-已知近期貼文（前次運行已追蹤，ID 43500-43563）:
-- ID 43500/43501: 影片/圖片貼文 (2026-11-06 22:11-23:31 EST)
-- ID 43498: 宣布 Stephen Miller 擔任白宮幕僚長 (2026-11-06 15:12 EST)
-- ID 43497: 以色列/伊朗核武貼文 (2026-11-06 13:09 EST)
-- ID 43496: 支持 Joe Gruters 競選 RNC 主席 (2026-11-06 13:05 EST)
-- ID 43495: 支持超人工智慧 (SI) 政策 (2026-11-06 07:08 EST)
-- ID 43494: NEWSMAX 伊朗貼文轉發 (2026-11-06 06:56 EST)
-- ID 43493: "I JUST WASN'T ON THE BALLOT" (2026-11-05)
-- ID 43491/43492: 股市崩跌指責民主黨「Dumocrats」(2026-11-05)
-最高已追蹤 ID: 43563 (2026-11-07)
+已知最新貼文（本次運行已確認）:
+- ID 43564: "MR. VETO" 黑白肖像圖 (2026-11-07T11:27:52Z)
+  背景：期中選舉民主黨奪回兩院後，川普以「否決先生」宣示立場
+  連結：https://truthsocial.com/@realDonaldTrump/43564
 
-ID > 43563 新貼文: 0 篇（四次運行均為 0 篇）
+前次運行已知貼文（ID 43500-43563）:
+- ID 43539: 宣布 Stephen Miller 擔任白宮幕僚長 (2026-11-06)
+- ID 43537: 股市下跌指責民主黨「Dumocrats」(2026-11-06)
+- ID 43538: 伊朗/中東核武貼文 (2026-11-06)
+- ID 43536: 支持超人工智慧/資料中心 (2026-11-06)
+- ID 43503: 轉發（川普 Truth Social 狀態）(2026-11-06 或更早)
 
-第四次運行摘要（2026-11-07 16:58 UTC）:
-- WebSearch 搜尋未找到 ID > 43563 的新貼文
-- 所有外部存檔網站均因網路出口政策限制而無法存取
+最高已追蹤 ID: 43564 (2026-11-07)
+
+ID > 43564 新貼文: 0 篇（本次第五次運行為 0 篇）
+
+第五次運行摘要（2026-11-07 19:01 UTC）:
+- WebSearch 廣泛搜尋：未找到 ID > 43564 的新貼文
+- 所有外部存檔網站均因網路出口政策限制無法存取
+- 川普今日可能尚未在 11:27 UTC 後發布新貼文，或新貼文尚未被搜尋引擎索引
 - 決定：不建立貼文檔，不推播 Telegram/LINE 通知
-- last_seen_id.txt 維持不變：2026-11-07_43563
+- last_seen_id.txt 維持不變：2026-11-07_43564
+
+---
+前四次運行記錄（維持不變）:
+- 第四次運行（16:58 UTC）：最後 ID 43563，無新貼文
+- 第一至三次運行：同樣無新貼文
 
 網路限制說明:
 以下網域在本 session 中無法存取，建議在環境設定中允許：
@@ -42,3 +49,4 @@ ID > 43563 新貼文: 0 篇（四次運行均為 0 篇）
 - kadoa.com
 - api.telegram.org
 - api.line.me
+- thehill.com / cbsnews.com / yahoo.com / cnbc.com 等新聞網站
