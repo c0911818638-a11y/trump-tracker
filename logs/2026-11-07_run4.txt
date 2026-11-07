@@ -1,0 +1,39 @@
+# 川普 Truth Social 監控日誌
+日期：2026-11-07
+執行時間：2026-11-07T（第四次）
+
+## 執行結果：無新貼文
+
+### 上次記錄 ID
+2026-11-07_43562
+
+### 抓取嘗試（本次）
+- truthsocial.com RSS：失敗（ENOTFOUND，主機不可達）
+- truthsocial.com API：失敗（ENOTFOUND）
+- thetrumparchive.com：失敗（ENOTFOUND）
+- kadoa.com：失敗（ENOTFOUND）
+- trumpstruth.org：失敗（ENOTFOUND）
+- WebSearch 延伸搜尋（3 次）：
+  - Trump Truth Social posts today November 7 2026 → 未發現新貼文
+  - Trump Truth Social post November 7 2026 latest today → 未發現新貼文
+  - Trump Truth Social post today 2026 midterms aftermath November 7 → 未發現新貼文
+- 所有主要新聞網站（thehill.com、cnbc.com、yahoo.com、axios.com、npr.org、foxbusiness.com、snopes.com、huffpost.com、kfoxtv.com、forbes.com 等）：全數失敗（ENOTFOUND，被 egress proxy 封鎖）
+
+### WebSearch 搜尋結果
+- 未發現 ID > 43562 的新貼文
+- 2026-11-07（今日）貼文尚未被搜尋引擎索引，或尚未發布
+- 最新報導仍圍繞 2026-11-05 至 2026-11-06 貼文（已在前次執行中處理）
+- 本次搜尋結果與第三次執行（2026-11-07_run3.txt）相同
+
+### Telegram 推播
+失敗——api.telegram.org 被 session egress proxy 擋下（HTTP/1.1 403 Forbidden via CONNECT tunnel）。
+此為持續存在的已知限制，非暫時性故障。
+
+### LINE 通知
+本次無新貼文，GitHub push 未觸發 line-notify workflow。
+
+### 結論
+- 未發現新貼文，state/last_seen_id.txt 維持不變（2026-11-07_43562）
+- 今日已執行第 4 次，所有結果相同
+- 建議：在允許存取 truthsocial.com 或 trumpstruth.org 的環境中重新執行監控
+- 已確認封鎖清單：Telegram API、truthsocial.com、thetrumparchive.com、所有主流新聞網站
