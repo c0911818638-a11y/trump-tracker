@@ -28,3 +28,28 @@ Result: 43513 < 43564 → NO NEW POSTS
 === Conclusion ===
 No new posts found since last check.
 No files created, no Telegram/LINE notifications sent.
+
+---
+
+Time: 2026-11-07 (second run)
+Last seen ID: 2026-11-07_43564
+
+=== Step 1: Read last ID ===
+SUCCESS - last ID: 2026-11-07_43564
+
+=== Step 2: Fetch latest posts ===
+- truthsocial.com RSS: BLOCKED (ENOTFOUND)
+- thetrumparchive.com: BLOCKED (ENOTFOUND)
+- trumpstruth.org: BLOCKED (ENOTFOUND)
+- WebSearch extended fallback: SUCCESS
+  Posts found via search (all IDs lower than 43564):
+    statuses/43509, 43511, 43512, 43516
+
+=== Step 3: Compare ===
+Highest found ID in search: 43516
+Last seen ID: 43564
+Result: 43516 < 43564 → NO NEW POSTS
+
+=== Conclusion ===
+No new posts found since last check.
+No files created, no Telegram/LINE notifications sent.
