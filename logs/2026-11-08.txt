@@ -1,7 +1,7 @@
 # 監控執行日誌 2026-11-08
 
-**執行時間：** 2026-11-08 18:59 UTC（最新更新）
-**上次記錄 ID：** 2026-11-08_43574
+**執行時間：** 2026-11-08 23:56 UTC（最新更新）
+**上次記錄 ID：** 2026-11-08_43577
 
 ## 嘗試方法
 
@@ -9,10 +9,9 @@
 |------|------|------|
 | Truth Social RSS | truthsocial.com/@realDonaldTrump.rss | 失敗（域名不可達，網路限制）|
 | Truth Social API | truthsocial.com/api/v1/accounts/... | 失敗（域名不可達）|
-| WebSearch | Trump Truth Social November 8 2026 | 未找到 ID > 43574 的新貼文 |
+| WebSearch | Trump Truth Social November 8 2026 | 找到新貼文 43577 |
 | Trump Archive | thetrumparchive.com | 失敗（域名不可達）|
-| trumpstruth.org | trumpstruth.org | 失敗（域名不可達，但 Google 摘要可用）|
-| 各新聞源 | cnbc, newsweek, huffpost, thehill 等 | 失敗（域名不可達）|
+| 各新聞源 | cnbc, newsweek, thehill, tmz 等 | 失敗（域名不可達）|
 
 ## 今日執行摘要
 
@@ -27,25 +26,23 @@
 | ~14:58 | 0 | 無新貼文 |
 | ~16:03 | 0 | 無新貼文 |
 | ~17:56 | 0 | 無新貼文 |
-| ~18:59 | 0 | 無新貼文（本次執行）|
+| ~18:59 | 0 | 無新貼文 |
+| ~23:56 | 1 | 43577（Dana White AI 卡通影片）|
+
+## 23:56 UTC 執行詳情
+
+- 讀取 last_seen_id：2026-11-08_43576
+- WebSearch 找到新貼文：43577（川普分享 Dana White 擔任白宮發言人 AI 卡通影片）
+- GitHub push：成功（posts/2026-11-08_43577.md, state/last_seen_id.txt 更新為 43577）
+- Telegram 推播：失敗（api.telegram.org 被 egress proxy 封鎖）
+- LINE 通知：由 GitHub Actions 自動觸發
 
 ## 狀態
 
-- 最近一次成功執行：~07:xx UTC（提交 43573-43574 兩篇貼文）
-- 新貼文數量：0（本次執行）
-- Telegram 推播：不適用（無新貼文）
-- last_seen_id：維持 2026-11-08_43574 不變
-- 本次執行時間：2026-11-08 18:59 UTC
-
-## WebSearch 找到的最新已知貼文（已處理）
-
-1. **Archive ID 43527**（2026-11-08 11:01 AM EST）：宣布今晚接受 60 Minutes 採訪，呼籲共和黨參院協助
-2. **Archive ID 43526**（2026-11-08 10:14 AM EST）：影片貼文
-3. **Archive ID 43525**（2026-11-08 08:49 AM EST）：「America took a giant step back in History...we will be back, BIGGER AND STRONGER THAN EVER BEFORE!」
-4. **Dana White**（2026-11-07）：提議 UFC 執行長擔任白宮新聞秘書
-5. **DOJ Slotkin**（2026-11-07）：要求司法部調查，點名密西根州參議員
-6. **Stephen Miller**（2026-11-06）：宣布升任白宮幕僚長，自 2026-11-09 起生效
+- 最近一次成功執行：23:56 UTC（提交 1 篇貼文 43577）
+- last_seen_id：2026-11-08_43577
+- Telegram 推播失敗：api.telegram.org 被 session 網路政策封鎖
 
 ## 備注
 
-網路環境限制大多數外部域名的直接訪問。WebSearch 搜尋未發現 last_seen_id（43574）之後的新貼文。truthsocial.com 需要在後端網路設定中開放才能恢復直接監控。
+網路環境限制大多數外部域名的直接訪問。WebSearch 搜尋找到 TMZ（2026-11-08）關於 Dana White 卡通影片的報導，確認為新貼文。truthsocial.com 需要在後端網路設定中開放才能恢復直接監控。
