@@ -1,0 +1,36 @@
+執行時間: 2026-11-08 UTC
+=========================
+
+步驟 1 - 讀取上次記錄：
+  上次貼文 ID: 2026-11-07_43565
+  SHA: 8f9649249092a63ed746cea7a14e104656fc6870
+
+步驟 2 - 抓取川普最新貼文：
+  方法 A (truthsocial.com RSS): 失敗 - DNS 無法解析 (truthsocial.com 不在允許的網域內)
+  方法 A (truthsocial.com API): 失敗 - 同上
+  方法 C (thetrumparchive.com): 失敗 - DNS 無法解析
+  方法 B (WebSearch): 成功 - 透過搜尋引擎取得貼文資訊
+
+步驟 3 - 比較新舊：
+  找到 2 篇新貼文（ID > 43565）：
+  - 2026-11-07_43566: Dana White 受邀擔任白宮新聞秘書
+  - 2026-11-08_43567: 川普聲稱若在選票上將大勝
+
+步驟 4-5 - 分析與 GitHub 上傳：
+  成功上傳：
+  - posts/2026-11-07_43566.md ✓
+  - posts/2026-11-08_43567.md ✓
+  - state/last_seen_id.txt 更新為 2026-11-08_43567 ✓
+  Commit SHA: d2f6b95846f11a15c5591ea11021eebe1415a4dc
+
+步驟 6 - Telegram 推播：
+  狀態: 失敗
+  原因: Telegram 推播失敗：api.telegram.org 被 egress proxy 政策封鎖 (403 connect_rejected)
+
+步驟 7 - LINE 通知：
+  GitHub push 成功，GitHub Actions (line-notify.yml) 應自動觸發 LINE 通知。
+
+注意事項：
+  - truthsocial.com、thetrumparchive.com、trumpstruth.org 等多個外部網域無法存取
+  - 貼文內容係透過 WebSearch 搜尋結果片段重建，可能非完整原文
+  - Telegram 推播需在允許 api.telegram.org 的網路環境下執行
