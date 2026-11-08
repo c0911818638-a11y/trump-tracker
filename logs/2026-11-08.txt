@@ -1,6 +1,6 @@
 # 監控執行日誌 2026-11-08
 
-**執行時間：** 2026-11-08 17:56 UTC（最新更新）
+**執行時間：** 2026-11-08 18:59 UTC（最新更新）
 **上次記錄 ID：** 2026-11-08_43574
 
 ## 嘗試方法
@@ -11,7 +11,7 @@
 | Truth Social API | truthsocial.com/api/v1/accounts/... | 失敗（域名不可達）|
 | WebSearch | Trump Truth Social November 8 2026 | 未找到 ID > 43574 的新貼文 |
 | Trump Archive | thetrumparchive.com | 失敗（域名不可達）|
-| trumpstruth.org | trumpstruth.org | 失敗（域名不可達）|
+| trumpstruth.org | trumpstruth.org | 失敗（域名不可達，但 Google 摘要可用）|
 | 各新聞源 | cnbc, newsweek, huffpost, thehill 等 | 失敗（域名不可達）|
 
 ## 今日執行摘要
@@ -26,7 +26,8 @@
 | ~07:xx | 2 | 43573-43574（詳見貼文檔）|
 | ~14:58 | 0 | 無新貼文 |
 | ~16:03 | 0 | 無新貼文 |
-| ~17:56 | 0 | 無新貼文（本次執行）|
+| ~17:56 | 0 | 無新貼文 |
+| ~18:59 | 0 | 無新貼文（本次執行）|
 
 ## 狀態
 
@@ -34,15 +35,16 @@
 - 新貼文數量：0（本次執行）
 - Telegram 推播：不適用（無新貼文）
 - last_seen_id：維持 2026-11-08_43574 不變
-- 本次執行時間：2026-11-08 17:56 UTC
+- 本次執行時間：2026-11-08 18:59 UTC
 
 ## WebSearch 找到的最新已知貼文（已處理）
 
-1. **Archive ID 43525**（2026-11-08 08:49 AM EST）：股市跌損 3 兆美元
-2. **Dana White**（2026-11-07）：提議 UFC 執行長擔任白宮新聞秘書
-3. **DOJ Slotkin**（2026-11-07）：要求司法部調查，點名密西根州參議員
-4. **Dana White 確認**（2026-11-08）：UFC 執行長確認將飛往華盛頓，週一與川普會面
-5. **60 Minutes**（2026-11-08）：川普宣布今晚接受 60 Minutes 採訪
+1. **Archive ID 43527**（2026-11-08 11:01 AM EST）：宣布今晚接受 60 Minutes 採訪，呼籲共和黨參院協助
+2. **Archive ID 43526**（2026-11-08 10:14 AM EST）：影片貼文
+3. **Archive ID 43525**（2026-11-08 08:49 AM EST）：「America took a giant step back in History...we will be back, BIGGER AND STRONGER THAN EVER BEFORE!」
+4. **Dana White**（2026-11-07）：提議 UFC 執行長擔任白宮新聞秘書
+5. **DOJ Slotkin**（2026-11-07）：要求司法部調查，點名密西根州參議員
+6. **Stephen Miller**（2026-11-06）：宣布升任白宮幕僚長，自 2026-11-09 起生效
 
 ## 備注
 
