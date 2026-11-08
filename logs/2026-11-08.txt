@@ -1,7 +1,7 @@
 # 監控執行日誌 2026-11-08
 
-**執行時間：** 2026-11-08 05:59 UTC（最新更新）
-**上次記錄 ID：** 2026-11-08_43572（Hegseth 彈劾貼文）
+**執行時間：** 2026-11-08 14:58 UTC（最新更新）
+**上次記錄 ID：** 2026-11-08_43574
 
 ## 嘗試方法
 
@@ -9,8 +9,9 @@
 |------|------|------|
 | Truth Social RSS | truthsocial.com/@realDonaldTrump.rss | 失敗（域名不可達，網路限制）|
 | Truth Social API | truthsocial.com/api/v1/accounts/... | 失敗（域名不可達）|
-| WebSearch | Trump Truth Social November 8 2026 | 未找到 ID > 43572 的新貼文 |
+| WebSearch | Trump Truth Social November 8 2026 | 未找到 ID > 43574 的新貼文 |
 | Trump Archive | thetrumparchive.com | 失敗（域名不可達）|
+| trumpstruth.org | trumpstruth.org | 失敗（域名不可達）|
 | 各新聞源 | cnbc, newsweek, huffpost, thehill 等 | 失敗（域名不可達）|
 
 ## 今日執行摘要
@@ -22,15 +23,22 @@
 | ~03:56 | 1 | Dana White 更新 |
 | ~05:03 | 4 | 43569-43572（SLEAZEBAGS/DOJ、阿拉斯加、德州、Hegseth）|
 | ~05:59 | 0 | 無新貼文 |
-| **最新** | **0** | **本次執行，無新貼文** |
+| ~07:xx | 2 | 43573-43574（詳見貼文檔）|
+| **14:58** | **0** | **本次執行，無新貼文** |
 
 ## 狀態
 
-- 最近一次成功執行：2026-11-08 05:03 UTC（提交 43569-43572 四篇貼文）
+- 最近一次成功執行：~07:xx UTC（提交 43573-43574 兩篇貼文）
 - 新貼文數量：0
 - Telegram 推播：不適用（無新貼文）
-- last_seen_id：維持 2026-11-08_43572 不變
+- last_seen_id：維持 2026-11-08_43574 不變
+
+## WebSearch 找到的最新已知貼文（已處理）
+
+1. **Archive ID 43525**（2026-11-08 08:49 AM EST）：股市跌損 3 兆美元
+2. **Dana White**（2026-11-07）：提議 UFC 執行長擔任白宮新聞秘書
+3. **DOJ Slotkin**（2026-11-07）：要求司法部調查點名密西根州參議員
 
 ## 備注
 
-網路環境限制大多數外部域名的直接訪問。WebSearch 搜尋未發現 2026-11-08 05:03 UTC 後的新貼文。truthsocial.com 需要在後端網路設定中開放才能恢復直接監控。
+網路環境限制大多數外部域名的直接訪問。WebSearch 搜尋未發現 last_seen_id（43574）之後的新貼文。truthsocial.com 需要在後端網路設定中開放才能恢復直接監控。
