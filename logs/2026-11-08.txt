@@ -23,14 +23,29 @@
   - state/last_seen_id.txt 更新為 2026-11-08_43567 ✓
   Commit SHA: d2f6b95846f11a15c5591ea11021eebe1415a4dc
 
-步驟 6 - Telegram 推播：
+步驟 6 - Telegram 推播（第一次嘗試）：
   狀態: 失敗
-  原因: Telegram 推播失敗：api.telegram.org 被 egress proxy 政策封鎖 (403 connect_rejected)
+  原因: Telegram 推播失敗：api.telegram.org 被 egress proxy 政策封鎖 (connect_rejected)
 
 步驟 7 - LINE 通知：
   GitHub push 成功，GitHub Actions (line-notify.yml) 應自動觸發 LINE 通知。
 
+=========================
+第二次執行補送（同日）
+=========================
+
+步驟 1 - 上次記錄 ID: 2026-11-08_43567
+
+步驟 2-3 - 搜尋新貼文：
+  嘗試各方法後，未發現 ID > 43567 的新貼文
+  trumpstruth.org、truthsocial.com 等直接存取均受網路限制
+
+步驟 6 - Telegram 補發推播（貼文 43566, 43567）：
+  狀態: 失敗
+  原因: Telegram 推播失敗：api.telegram.org 被 egress proxy 政策封鎖 (connect_rejected)
+
 注意事項：
-  - truthsocial.com、thetrumparchive.com、trumpstruth.org 等多個外部網域無法存取
+  - truthsocial.com、thetrumparchive.com、trumpstruth.org、api.telegram.org 均無法存取
   - 貼文內容係透過 WebSearch 搜尋結果片段重建，可能非完整原文
   - Telegram 推播需在允許 api.telegram.org 的網路環境下執行
+  - LINE 通知依賴 GitHub Actions 自動觸發
