@@ -1,36 +1,38 @@
-執行時間: 2026-11-08 UTC
-=========================
+# 監控執行日誌 2026-11-08
 
-步驟 1 - 讀取上次記錄：
-  上次貼文 ID: 2026-11-07_43565
-  SHA: 8f9649249092a63ed746cea7a14e104656fc6870
+**執行時間：** 2026-11-08 05:59 UTC
+**上次記錄 ID：** 2026-11-08_43572（Hegseth 彈劾貼文）
 
-步驟 2 - 抓取川普最新貼文：
-  方法 A (truthsocial.com RSS): 失敗 - DNS 無法解析 (truthsocial.com 不在允許的網域內)
-  方法 A (truthsocial.com API): 失敗 - 同上
-  方法 C (thetrumparchive.com): 失敗 - DNS 無法解析
-  方法 B (WebSearch): 成功 - 透過搜尋引擎取得貼文資訊
+## 第三次執行結果：無新貼文
 
-步驟 3 - 比較新舊：
-  找到 2 篇新貼文（ID > 43565）：
-  - 2026-11-07_43566: Dana White 受邀擔任白宮新聞秘書
-  - 2026-11-08_43567: 川普聲稱若在選票上將大勝
+## 嘗試方法
 
-步驟 4-5 - 分析與 GitHub 上傳：
-  成功上傳：
-  - posts/2026-11-07_43566.md ✓
-  - posts/2026-11-08_43567.md ✓
-  - state/last_seen_id.txt 更新為 2026-11-08_43567 ✓
-  Commit SHA: d2f6b95846f11a15c5591ea11021eebe1415a4dc
+| 方法 | 目標 | 結果 |
+|------|------|------|
+| Truth Social RSS | truthsocial.com/@realDonaldTrump.rss | 失敗（域名不可達，網路限制）|
+| Truth Social API | truthsocial.com/api/v1/accounts/... | 失敗（域名不可達）|
+| WebSearch | Trump Truth Social November 8 2026 | 未找到 ID > 43572 的新貼文 |
+| Trump Archive | thetrumparchive.com | 失敗（域名不可達）|
+| 各新聞源 | cnbc, newsweek, huffpost, thehill 等 | 失敗（域名不可達）|
 
-步驟 6 - Telegram 推播：
-  狀態: 失敗
-  原因: Telegram 推播失敗：api.telegram.org 被 egress proxy 政策封鎖 (403 connect_rejected)
+## 今日執行摘要
 
-步驟 7 - LINE 通知：
-  GitHub push 成功，GitHub Actions (line-notify.yml) 應自動觸發 LINE 通知。
+| 執行時間 (UTC) | 新貼文數 | 備注 |
+|---------------|---------|------|
+| ~00:59 | 1 | Dana White 新聞秘書 + 若在選票上將大勝 |
+| ~02:58 | 0 | 無新貼文 |
+| ~03:56 | 1 | Dana White 更新 |
+| ~05:03 | 4 | 43569-43572（SLEAZEBAGS/DOJ、阿拉斯加、德州、Hegseth）|
+| **05:59** | **0** | **本次執行，無新貼文** |
 
-注意事項：
-  - truthsocial.com、thetrumparchive.com、trumpstruth.org 等多個外部網域無法存取
-  - 貼文內容係透過 WebSearch 搜尋結果片段重建，可能非完整原文
-  - Telegram 推播需在允許 api.telegram.org 的網路環境下執行
+## 狀態
+
+- 最近一次成功執行：2026-11-08 05:03 UTC（提交 43569-43572 四篇貼文）
+- 距上次執行：約 1 小時
+- 新貼文數量：0
+- Telegram 推播：不適用（無新貼文）
+- last_seen_id：維持 2026-11-08_43572 不變
+
+## 備注
+
+網路環境限制大多數外部域名的直接訪問。WebSearch 搜尋未發現 2026-11-08 05:03 UTC 後的新貼文。truthsocial.com 需要在後端網路設定中開放才能恢復直接監控。
