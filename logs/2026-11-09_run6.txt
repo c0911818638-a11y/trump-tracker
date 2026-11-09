@@ -1,0 +1,89 @@
+執行時間: 2026-11-09 (run6)
+
+=== 步驟摘要 ===
+
+步驟1 - 讀取上次記錄:
+  上次ID: 2026-11-09_43622
+  SHA: e191b16ed497c8dda43c7323baf830ccaf128652
+  狀態: 正常讀取
+  注意: 此ID為前次run5的估算值，與實際trumpstruth.org序號不符
+
+步驟2 - 抓取貼文（依序嘗試）:
+  方法A (WebFetch truthsocial.com RSS): 失敗 - ENOTFOUND (egress 政策封鎖)
+  方法A (WebFetch thetrumparchive.com): 失敗 - ENOTFOUND (egress 政策封鎖)
+  方法B (WebSearch 多次搜尋 - 8次):
+    - 透過搜尋找到 trumpstruth.org 的實際序號格式
+    - 確認 trumpstruth.org 存檔最高ID為 43532 (Nov 8, 7:05 PM)
+    - 發現前次各 run 使用了估算ID (43610/43620/43622)，非實際存檔序號
+    - 實際存檔序號：Giant Step Back = 43525（前次run5估算為43622）
+    - 找到未追蹤貼文：43527、43528、43532（前次因ID估算錯誤被跳過）
+    - 未發現 Nov 9 新貼文（trumpstruth.org 存檔目前最高為 Nov 8）
+  方法C (WebFetch kadoa.com/trumpstruth.org): 失敗 - ENOTFOUND (egress 政策封鎖)
+
+=== ID 校正說明 ===
+
+問題: 前次 run1-run5 均使用估算ID（非實際存檔序號），導致:
+  - last_seen_id 被設為 43622（估算值）
+  - 實際存檔最高ID為 43532
+  - 43527、43528、43532 三則貼文從未被正確追蹤
+
+解決: 本次(run6)以實際存檔序號為基準，更正 last_seen_id = 43532
+
+步驟3 - 比較新舊貼文:
+  前次 last_seen_id: 2026-11-09_43622 (估算，實際對應約43525)
+  發現未追蹤的新貼文:
+    - 43527: 60 Minutes 訪問預告 (Nov 8, 11:01 AM)
+    - 43528: Task Force Iron Gate 伊朗封鎖 (Nov 8, 3:46 PM) ← 高重要度
+    - 43532: 美國可負擔性與就業法案 S.5653 (Nov 8, 7:05 PM)
+
+步驟4 - 貼文分析:
+  43527: posts/2026-11-08_43527_60Minutes-Interview-Announcement.md
+  43528: posts/2026-11-08_43528_TaskForceIronGate-Iran-NavalBlockade.md
+  43532: posts/2026-11-08_43532_AffordabilityJobsAct-S5653.md
+
+步驟5 - GitHub 上傳:
+  posts/2026-11-08_43528_TaskForceIronGate-Iran-NavalBlockade.md: 成功 (MCP push)
+  posts/2026-11-08_43527_60Minutes-Interview-Announcement.md: 成功 (MCP push)
+  posts/2026-11-08_43532_AffordabilityJobsAct-S5653.md: 成功 (MCP push)
+  state/last_seen_id.txt 更新為: 2026-11-09_43532 (校正後實際序號)
+  GitHub commit SHA: 6efc269f84e4f4e89b48f4913275d3a3729d4dde
+
+步驟6 - Telegram 推播:
+  失敗: api.telegram.org 被環境 egress 政策封鎖 (curl exit 56 - connect_rejected)
+  此為已知限制，同前六次執行
+
+步驟7 - LINE 通知:
+  GitHub push 成功，GitHub Actions 應自動觸發 LINE 通知工作流程
+
+=== 本次發現的貼文 ===
+
+1. 60 Minutes 訪問預告 (ID: 43527, 2026-11-08 11:01 AM EST)
+   原文: I will be interviewed tonight on 60 Minutes. Hopefully, they will show all of the great things...
+   重要程度: 中
+
+2. Task Force Iron Gate 伊朗封鎖 (ID: 43528, 2026-11-08 3:46 PM EST)
+   原文: Task Force Iron Gate is in full force and effect in the Islamic Republic of Iran.
+         Coupled with history's greatest Naval Blockade, very little gets into, or out of, Iran!
+   重要程度: 高
+   說明: 美國對伊朗雙重封鎖（海軍+陸上特遣隊），對全球能源市場影響重大
+
+3. 美國可負擔性與就業法案 (ID: 43532, 2026-11-08 7:05 PM EST)
+   原文: I am urging all Senators to vote for The American Affordability and Jobs Act (S. 5653)!
+   重要程度: 中
+   說明: 期中選舉失利後的立法應對，推動能源許可改革
+
+=== 環境限制 ===
+
+以下域名仍被 egress 政策封鎖:
+  truthsocial.com, thetrumparchive.com, trumpstruth.org, api.telegram.org
+  yahoo.com, cbsnews.com, nbcnews.com, thehill.com, bizpacreview.com
+  及大多數主要新聞媒體網站
+  (WebSearch 仍可用，但只能取得摘要資訊)
+
+=== 本次執行結果 ===
+
+發現並上傳3則未追蹤的新貼文（ID校正後）。
+last_seen_id.txt 已校正更新為: 2026-11-09_43532
+Telegram推播失敗（環境封鎖，已知限制）。
+GitHub Actions LINE通知應已觸發。
+後續 run 將以 ID > 43532 為基準尋找新貼文。
