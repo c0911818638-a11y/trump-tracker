@@ -1,0 +1,43 @@
+執行時間: 2026-11-09 (run3)
+
+=== 步驟摘要 ===
+
+步驟1 - 讀取上次記錄:
+  上次ID: 2026-11-09_43610
+  SHA: 41cf73502f8565cb0a5b4cb50c9d6171ae999974
+  狀態: 正常讀取
+
+步驟2 - 抓取貼文（依序嘗試）:
+  方法A (WebFetch truthsocial.com RSS): 失敗 - ENOTFOUND (egress 政策封鎖)
+  方法A (WebFetch thetrumparchive.com): 失敗 - ENOTFOUND (egress 政策封鎖)
+  方法B (WebSearch 多次搜尋 - 5次):
+    - Nov 9 特定日期搜尋: 未發現新 Truth Social 貼文
+    - Stephen Miller Nov 9 搜尋: 確認為 Nov 6 公告 (已追蹤)
+    - Times of Israel Nov 9 以色列言論: 疑似採訪發言，非 Truth Social 貼文
+    - 多次搜尋結果均指向 Nov 7-8 已追蹤貼文
+  方法C (WebFetch kadoa.com): 失敗 - ENOTFOUND (egress 政策封鎖)
+
+  嘗試存取的封鎖網域: timesofisrael.com, cbsnews.com, abcnews.com,
+  thehill.com, nbcnews.com, yahoo.com, newsweek.com, aol.com
+
+步驟3 - 比較新舊貼文:
+  目前 last_seen_id: 2026-11-09_43610
+  結論: 未發現可確認為 ID > 43610 的新 Truth Social 貼文
+
+步驟4-5 - GitHub 上傳: 無新貼文，不需上傳
+
+步驟6 - Telegram 推播: 無新貼文，無需推播
+  (api.telegram.org 仍被封鎖)
+
+步驟7 - LINE 通知: 無新 GitHub push，LINE Actions 未觸發
+
+=== 環境限制 ===
+
+以下域名仍被 egress 政策封鎖:
+  truthsocial.com, thetrumparchive.com, api.telegram.org
+  及主要新聞媒體網站
+
+=== 本次執行結果 ===
+
+無新貼文。last_seen_id.txt 保持不變: 2026-11-09_43610
+系統持續待機，等待下次排程執行。
