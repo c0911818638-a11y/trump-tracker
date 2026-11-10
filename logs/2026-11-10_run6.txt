@@ -1,0 +1,87 @@
+# 川普 Truth Social 監控日誌 - 2026-11-10 Run 6
+
+**執行時間：** 2026-11-10T(UTC) - 本次排程觸發
+**上次記錄 ID：** 2026-11-10_117596300000000000（對應約 13:33 UTC，內容：為赫格塞斯辯護、稱 Thomas Massie 為「TOTAL LOSER」）
+
+## 執行結果
+
+**狀態：** 未發現新貼文
+
+---
+
+## 抓取嘗試
+
+### 方法 A（WebFetch 直連）
+- truthsocial.com RSS：❌ ENOTFOUND（session 網路限制）
+- truthsocial.com API：❌ ENOTFOUND
+- thetrumparchive.com：❌ ENOTFOUND
+- trumpstruth.org：❌ ENOTFOUND
+- kadoa.com：❌ ENOTFOUND
+- 所有主要新聞網站（CNBC, NBC, Newsweek, Yahoo, HuffPost, Daily Beast, Raw Story, Forbes 等）：❌ ENOTFOUND
+- curl 直連 api.telegram.org：❌ connect_rejected（egress proxy 封鎖）
+
+### 方法 B（WebSearch）
+✅ 多次搜尋執行成功
+
+搜尋查詢：
+1. "Trump Truth Social posts today November 10 2026"
+2. "Trump Truth Social November 10 2026 election results posts text"
+3. "Trump 150 Truth Social posts November 9 2026 election fraud text content"
+4. "Trump Truth Social 'Alaska' 'Sullivan' 'Rigged' November 10 2026"
+5. "Trump Truth Social November 10 2026 evening night Alaska election rigged"
+6. "Trump Truth Social 'Stephen Miller' 'Chief of Staff' November 10 2026 posts latest"
+7. "Trump Truth Social November 10 2026 afternoon evening posts latest updates"
+
+---
+
+## 搜尋發現摘要
+
+### 已確認的 2026-11-10 貼文（均已在前次記錄中捕獲）
+
+| 時間（EST） | 時間（UTC） | 主題 | 狀態 |
+|------------|------------|------|------|
+| ~6-7 AM | ~11-12 UTC | 質疑阿拉斯加選舉結果（Dan Sullivan + "Rigged"）| 已捕獲（< last_seen_id）|
+| 7:36 AM | 12:36 UTC | 阿拉斯加「Dan Sullivan PLUS Dan Sullivan wins...by thousands of votes」| 已捕獲（< last_seen_id）|
+| ~8:33 AM | 13:33 UTC | 為 Hegseth 辯護、稱 Thomas Massie 為 TOTAL LOSER | **= last_seen_id** |
+
+### 2026-11-10 下午/晚間貼文
+- WebSearch 未發現任何明確為下午/晚間的新貼文
+- Forbes 文章（2026-11-10）報導阿拉斯加「Rigged」貼文為「morning」時間
+- Daily Beast 標題「Frantic Trump Escalates Alaska Demand」可能為同一組早晨貼文的報導
+
+### 重要背景資訊（本次搜尋新發現）
+- 阿拉斯加參議院選情：Peltola 領先 Sullivan 106,321 對 103,804（差距 2,517 票）
+  - 獨立候選人 Daniel J. Sullivan Jr. 獲得 3,651 票（1.7%）
+  - Trump 要求把「假 Dan Sullivan」票數全數移給真 Dan Sullivan
+  - 聯邦法官已駁回 DOJ 試圖介入阿拉斯加開票的訴訟
+- 2026 期中選舉：共和黨全面潰敗，Trump 持續質疑選舉誠信
+
+---
+
+## 比較結果
+
+上次記錄 ID：117596300000000000
+搜尋未發現任何 ID > 117596300000000000 的新確認貼文。
+（注：搜尋引擎索引通常落後真實發文 1-3 小時）
+
+**結論：本次執行無新貼文可分析或推播。**
+
+---
+
+## 通知狀態
+
+- **Telegram：** ❌ 失敗（api.telegram.org connect_rejected，egress proxy 持續封鎖）
+- **LINE：** 未觸發（無新 push）
+- **GitHub push：** ✅ 本日誌成功上傳
+
+---
+
+## 持續問題
+
+此 session 網路政策封鎖幾乎所有外部域名，整天六次執行均受同樣限制。
+如需解決，請在 session 網路設定中允許：
+- truthsocial.com
+- thetrumparchive.com
+- kadoa.com
+- trumpstruth.org
+- api.telegram.org（Telegram 推播）
