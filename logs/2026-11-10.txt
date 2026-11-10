@@ -1,42 +1,18 @@
-# 監控日誌 - 2026-11-10
+執行時間: 2026-11-10 13:56 UTC
+上次記錄 ID: 2026-11-10_117596000000000000
+SHA: 9233fc62ccb5db91d4da70ff98423c8e0b92fab8
 
-**執行時間：** 2026-11-10T11:58:42Z
-**上次記錄的貼文 ID：** 2026-11-10_117594000000000000
+錯誤記錄：
+- 方法A：truthsocial.com 被 egress proxy 封鎖 (connect_rejected)
+- 方法B：WebSearch 找到 2026-11-09 的貼文（選舉質疑、Hegseth 彈劾），但無法取得 Truth Social post IDs，無法比較是否為新貼文
+- 方法C：thetrumparchive.com 被 egress proxy 封鎖 (ENOTFOUND)
 
-## 執行摘要
+補充：
+- 多個新聞網站亦被封鎖：newsweek.com, cnbc.com, aol.com, yahoo.com, thenewdaily.com.au
+- 透過 WebSearch 發現的 2026-11-09 貼文摘要（可能已在上次執行時處理）：
+  1. 選舉質疑貼文："Does anybody really believe that this 'Election' was honest. How could the Polls be so wrong??? Some early voting 'dumps' were so large that it was impossible to win, no matter how many people went to vote. It's all about the machines, which are far more important than the voter!"
+  2. Hegseth 防禦：「Hegseth should be praised, not impeached」
+  3. Dana White AI 影片貼文（兩則）
 
-透過 WebSearch 搜尋川普最新 Truth Social 貼文。
-
-### 資料擷取狀態
-- truthsocial.com：❌ 被網路政策封鎖（ENOTFOUND）
-- thetrumparchive.com：❌ 被網路政策封鎖（ENOTFOUND）
-- truthsocial.com API：❌ 被網路政策封鎖
-- WebSearch 搜尋：✅ 成功
-
-### 發現的最新貼文（來自新聞報導）
-
-根據 WebSearch 搜尋結果，2026年11月9日（週一）川普在 Truth Social 發布的主要內容：
-
-1. 質疑期中選舉結果：「Does anybody really believe that this 'Election' was honest」
-2. 指責投票機器：「It's all about the machines, which are far more important than the voter!」
-3. 分享 Dana White 擔任白宮新聞秘書的 AI 生成影片（兩則）
-4. 分享其他 AI 生成影片
-
-### 比較結果
-
-上次記錄 ID：117594000000000000（以 11759 開頭，對應 2026-11-10）
-
-根據 Truth Social Snowflake ID 規則，2026年11月9日的貼文 ID 應以 11758 開頭，
-均**低於**上次記錄的 117594000000000000，因此判斷**無新貼文需要處理**。
-
-### 結論
-
-本次執行無新貼文可分析。上次執行已處理至今日最新貼文。
-
-### 下次建議
-
-如需即時監控，建議在 session 的網路政策中允許以下網域：
-- truthsocial.com
-- thetrumparchive.com
-- trumpstruth.org
-- kadoa.com
+決定：無法確認新貼文 ID，不建立貼文檔，不推播通知。
+建議：在 session 網路設定中允許 truthsocial.com 或 thetrumparchive.com 以恢復正常功能。
