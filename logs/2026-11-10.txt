@@ -150,3 +150,44 @@ WebSearch 搜尋引擎索引通常落後真實發文 1-3 小時。
 - thetrumparchive.com
 - kadoa.com
 - trumpstruth.org
+
+---
+
+**執行時間：** 2026-11-10T22:58:00Z
+**上次記錄的貼文 ID：** 2026-11-10_117596300000000000
+
+## 第五次執行摘要
+
+### 資料擷取狀態
+- truthsocial.com RSS：❌ 被網路政策封鎖（ENOTFOUND）
+- thetrumparchive.com：❌ 被網路政策封鎖（ENOTFOUND）
+- kadoa.com：❌ 被網路政策封鎖（ENOTFOUND）
+- cnbc.com：❌ 被網路政策封鎖（ENOTFOUND）
+- newsweek.com：❌ 被網路政策封鎖（ENOTFOUND）
+- yahoo.com：❌ 被網路政策封鎖（ENOTFOUND）
+- forbes.com：❌ 被網路政策封鎖（ENOTFOUND）
+- rawstory.com：❌ 被網路政策封鎖（ENOTFOUND）
+- themarysue.com：❌ 被網路政策封鎖（ENOTFOUND）
+- kutv.com：❌ 被網路政策封鎖（ENOTFOUND）
+- WebSearch 搜尋：✅ 成功
+
+### WebSearch 發現
+
+WebSearch 顯示 kadoa.com 聚合器記錄了 2026-11-10 上午的貼文主題（約 7:36-11:54 AM 東部時間）：
+- 為 Pete Hegseth 辯護（防止 Thomas Massie 彈劾）
+- 推薦司法提名人 Sullivan（獲德州參議員 Cruz、Cornyn 支持）
+- 敦促確認 Gaiser 為德州聯邦法院法官
+- 支持 Lambert 擔任終身聯邦地區法官
+- 指控阿拉斯加選舉存在選民混淆和虛假候選人申報
+
+但因 kadoa.com 無法直接訪問，無法取得確切貼文 ID，無法與 last_seen_id（117596300000000000）比較。
+
+### 結論
+
+本次執行無法確認是否有新貼文（ID > 117596300000000000）。
+Telegram 未推播。
+
+### 持續問題
+
+網路政策持續封鎖所有外部域名，整天五次執行均受同樣限制。
+如需解決，請在 session 設定中允許 truthsocial.com 等必要域名。
