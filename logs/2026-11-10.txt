@@ -40,3 +40,27 @@
 - thetrumparchive.com
 - trumpstruth.org
 - kadoa.com
+
+---
+
+**執行時間：** 2026-11-10T13:56:45Z
+**上次記錄的貼文 ID：** 2026-11-10_117596000000000000
+
+## 第二次執行摘要
+
+### 資料擷取狀態
+- truthsocial.com：❌ 被 egress proxy 封鎖 (connect_rejected)
+- thetrumparchive.com：❌ 被網路政策封鎖（ENOTFOUND）
+- truthsocial.com API：❌ 被 egress proxy 封鎖
+- WebSearch 搜尋：✅ 成功（但無法取得 post ID）
+
+### 比較結果
+
+上次記錄 ID：117596000000000000
+WebSearch 顯示 2026-11-09 的貼文仍為同一組（選舉質疑、Hegseth 彈劾、Dana White AI 影片）。
+無法確認 2026-11-10 是否有更新貼文，因所有直接來源均被封鎖。
+
+### 結論
+
+本次執行無法確認新貼文。不推播 Telegram/LINE 通知。
+建議在網路政策允許 truthsocial.com 後重試。
