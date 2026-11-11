@@ -164,3 +164,32 @@ state/last_seen_id.txt 維持 2026-11-11_43550 不變。
 - truthsocial.com
 - thetrumparchive.com  
 - trumpstruth.org
+
+---
+
+## 第五次執行 2026-11-11T19:56:21Z
+
+### 上次記錄的貼文 ID
+2026-11-11_43552（state file 已由前次執行更新）
+
+### 方法 A：直接存取 Truth Social
+- truthsocial.com → ENOTFOUND（域名被網路政策封鎖）
+
+### 方法 B：WebSearch 搜尋（成功）
+多組搜尋確認今日貼文：
+- **ID 43551**（11/11 12:56 PM EST）：退伍軍人節影片 — 阿靈頓國家公墓，致敬退伍軍人，提及伊朗戰爭「我們失去了18個美麗的靈魂」
+- **ID 43552**（11/11 12:56 PM EST）：退伍軍人節影片（第二則）
+- 凌晨 1:25 AM 及 1:47 AM：批評 NYT 關於 C-SPAN 通話和 Bedminster 性騷擾報導（ID < 43552，前次已處理）
+- 未發現任何 ID > 43552 的新貼文
+
+### 方法 C：其他聚合網站
+- trumpstruth.org → ENOTFOUND
+- trumpalert.app → ENOTFOUND
+- kadoa.com → ENOTFOUND
+
+### 結論
+**無新貼文（ID > 43552）**
+
+截至 2026-11-11 19:56 UTC，未發現比 last_seen_id（43552）更新的貼文。
+state/last_seen_id.txt 維持 2026-11-11_43552 不變。
+未建立貼文分析檔案，未發送 Telegram 或 LINE 通知。
