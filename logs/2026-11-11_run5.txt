@@ -1,0 +1,76 @@
+# 川普 Truth Social 監控日誌 - 2026-11-11 (第五次執行)
+
+**執行時間：** 2026-11-11 08:01 UTC（美東時間凌晨 03:01）
+**上次記錄 ID：** 2026-11-10_43548
+
+## 執行結果
+
+**狀態：** 未發現新貼文 / 推播失敗
+
+---
+
+## 抓取嘗試
+
+### 方法 A（WebFetch 直連）
+❌ 所有外部新聞/Truth Social 網站均被封鎖 (ENOTFOUND):
+- truthsocial.com RSS/API
+- thetrumparchive.com, trumpstruth.org
+- thehill.com, newsnationnow.com
+- 所有主要新聞媒體（CNN、NBC、Fox、CNBC、Forbes、Yahoo 等）
+
+### 方法 B（WebSearch）
+✅ 多次搜尋執行成功
+
+搜尋查詢與結果：
+1. "Trump Truth Social November 11 2026" → 無確認 11/11 貼文
+2. "Trump Veterans Day 2026 Truth Social post" → 無確認新貼文
+3. "Trump Victory Day Veterans Day 2026" → 均為 2025 年的更名事件回顧
+4. "Trump Veterans Day Arlington 2026 speech November 11" → 均為 2025 年 11 月 11 日事件
+5. "Trump Truth Social Massie Peltola November 10 11 2026" → Nov 10 貼文已追蹤
+
+---
+
+## 時間分析
+
+當前時間：2026-11-11 08:01 UTC（美東 03:01）
+川普通常在東部早上 7-10 點開始發文。
+目前為美國深夜/凌晨，Veterans Day 貼文尚未發布。
+
+---
+
+## 歷史貼文確認（已追蹤）
+
+2026-11-10 已追蹤貼文：
+| ID | 時間（UTC） | 主題 |
+|----|------------|------|
+| 43541 | 13:33 | 為海格賽斯辯護，稱馬西為 TOTAL LOSER |
+| 43542 | 14:43 | 海格賽斯影片分享 |
+| 43543 | ~20:00 | 彈劾失敗慶祝，稱馬西 major LOSER |
+| 43546 | 22:08 | 阿拉斯加選舉統計圖片貼文 |
+| 43547 | 23:24 | 完整版 Hegseth 辯護長文 |
+| 43548 | (末) | 彈劾失敗慶祝版本（最新已追蹤） |
+
+---
+
+## 通知狀態
+
+| 管道 | 狀態 | 原因 |
+|------|------|------|
+| Telegram | ❌ 封鎖 | api.telegram.org 被 proxy 以 403 Forbidden 封鎖 |
+| LINE | ❌ 未觸發 | 無新 GitHub push，不觸發 workflow |
+| GitHub push (log) | ✅ 成功（via MCP GitHub） | 本日誌成功上傳 |
+
+---
+
+## 建議
+
+在 session 網路設定（egress policy）中新增以下允許清單：
+- `truthsocial.com` — 主要貼文來源
+- `api.telegram.org` — Telegram 推播通知（目前被 403 封鎖）
+- `thetrumparchive.com` 或 `trumpstruth.org` — 備援來源
+
+---
+
+**下次執行預期：** 美東上午 7-10 點後（UTC 12:00-15:00），川普可能發布 Veterans Day 貼文。
+**本次執行結束：** 2026-11-11 08:01 UTC（第五次）
+**last_seen_id 維持：** 2026-11-10_43548
