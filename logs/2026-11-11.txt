@@ -20,35 +20,38 @@
 
 其他嘗試:
 - newsweek.com → DNS 解析失敗 (ENOTFOUND)
-- truthout.org → DNS 解析失敗 (ENOTFOUND)
-- democracynow.org → DNS 解析失敗 (ENOTFOUND)
 - forbes.com → DNS 解析失敗 (ENOTFOUND)
-- en.wikipedia.org → DNS 解析失敗 (ENOTFOUND)
-- nbcnews.com → DNS 解析失敗 (ENOTFOUND)
 - yahoo.com → DNS 解析失敗 (ENOTFOUND)
 - www.presidency.ucsb.edu → DNS 解析失敗 (ENOTFOUND)
 - www.whitehouse.gov → DNS 解析失敗 (ENOTFOUND)
+- sophiecress.com → DNS 解析失敗 (ENOTFOUND)
+- huffpost.com → DNS 解析失敗 (ENOTFOUND)
+- cnbc.com → DNS 解析失敗 (ENOTFOUND)
 
 原因診斷:
 本次執行的 cloud session 網路政策（egress policy）封鎖了上述所有外部網域的直接 HTTP 連線（WebFetch）。
 只有 WebSearch 可以取得搜尋摘要，但摘要無法提供完整貼文 ID 與全文。
 
 WebSearch 搜尋到的背景資訊（僅供參考，無法用於比對 last_seen_id）:
-- Trump 在 2026-11-09 ~ 11-10 質疑期中選舉結果的真實性，聲稱投票機有問題
-- Stephen Miller 被宣布擔任白宮幕僚長（2026-11-09 起）
-- 有意見報導稱 Trump 曾在 Truth Social 提議將 11月11日改名為「第一次世界大戰勝利日（Victory Day for WWI）」
-- 白宮已發布 Veterans Day 2026 官方公告
+- Trump 在 2026-11-09 質疑期中選舉結果，原文片段："Does anybody really believe that this 'Election' was honest"
+- 另一貼文："Some early voting 'dumps' were so large that it was impossible to win, no matter how many people went to vote"
+- 另一貼文："It's all about the machines, which are far more important than the voter!"
+- 2026-11-11 (Veterans Day)：在搜尋結果中發現 sophiecress.com 有兩則疑似 Trump Truth Social 貼文
+  - ID: 1763186142592（Veterans Day message）
+  - ID: 1763186134299（Veterans Day message）
+  - 但 sophiecress.com 無法存取，無法確認內容與發布日期
+- 白宮已發布 Veterans Day 2026 官方公告（官方文件，非 Truth Social 貼文）
 
 處置:
 - 未建立任何貼文分析檔案 (posts/)
 - 未更新 state/last_seen_id.txt（維持 2026-11-10_43547）
-- 未推播 Telegram 通知
+- 未推播 Telegram 通知（因無法確認新貼文內容）
 - 未觸發 LINE 通知
 
 建議:
 請在環境設定（session network policy）中將下列網域加入允許清單：
   - truthsocial.com
   - thetrumparchive.com
-  - 或其他可靠的備援來源
+  - 或其他可靠的備援來源（例如 polialert.com, yournews.com）
 
-本次執行結束。
+本次執行結束（第二次嘗試，2026-11-11）。
