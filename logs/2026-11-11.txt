@@ -27,20 +27,21 @@
 - sophiecress.com → DNS 解析失敗 (ENOTFOUND)
 - huffpost.com → DNS 解析失敗 (ENOTFOUND)
 - cnbc.com → DNS 解析失敗 (ENOTFOUND)
+- substack.com → DNS 解析失敗 (ENOTFOUND)
+- snopes.com → DNS 解析失敗 (ENOTFOUND)
+- axios.com → DNS 解析失敗 (ENOTFOUND)
+- progressive.org → DNS 解析失敗 (ENOTFOUND)
+
+搜尋結果摘要（WebSearch 能找到的資訊，第二次執行 04:59 UTC）:
+- 明確結論：WebSearch 未找到 2026-11-11 任何新 Truth Social 貼文
+- Trump 在 2025 年曾宣布將退伍軍人節更名為「第一次世界大戰勝利日」
+- 2026 年退伍軍人節（Veterans Day 2026）白宮公告仍維持原名稱
+- Yahoo News 有一篇標題「Trump Honors Fallen by Giving Veterans Day New Russian Name」（疑似 2026-11-11），但網域被封鎖無法存取
+- 上一次執行記錄的兩個候選貼文 ID（1763186142592、1763186134299）仍無法確認內容
 
 原因診斷:
 本次執行的 cloud session 網路政策（egress policy）封鎖了上述所有外部網域的直接 HTTP 連線（WebFetch）。
 只有 WebSearch 可以取得搜尋摘要，但摘要無法提供完整貼文 ID 與全文。
-
-WebSearch 搜尋到的背景資訊（僅供參考，無法用於比對 last_seen_id）:
-- Trump 在 2026-11-09 質疑期中選舉結果，原文片段："Does anybody really believe that this 'Election' was honest"
-- 另一貼文："Some early voting 'dumps' were so large that it was impossible to win, no matter how many people went to vote"
-- 另一貼文："It's all about the machines, which are far more important than the voter!"
-- 2026-11-11 (Veterans Day)：在搜尋結果中發現 sophiecress.com 有兩則疑似 Trump Truth Social 貼文
-  - ID: 1763186142592（Veterans Day message）
-  - ID: 1763186134299（Veterans Day message）
-  - 但 sophiecress.com 無法存取，無法確認內容與發布日期
-- 白宮已發布 Veterans Day 2026 官方公告（官方文件，非 Truth Social 貼文）
 
 處置:
 - 未建立任何貼文分析檔案 (posts/)
@@ -52,6 +53,6 @@ WebSearch 搜尋到的背景資訊（僅供參考，無法用於比對 last_seen
 請在環境設定（session network policy）中將下列網域加入允許清單：
   - truthsocial.com
   - thetrumparchive.com
-  - 或其他可靠的備援來源（例如 polialert.com, yournews.com）
+  - 或其他可靠的備援來源（例如 trumpstruth.org、polialert.com）
 
-本次執行結束（第二次嘗試，2026-11-11）。
+本次執行結束（第三次嘗試，2026-11-11 04:59 UTC）。
