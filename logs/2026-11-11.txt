@@ -1,86 +1,68 @@
-執行時間: 2026-11-11 (UTC)
-上次已知貼文 ID: 2026-11-10_43547
+# 監控執行日誌 - 2026-11-11
 
-錯誤記錄:
-==========
+執行時間：2026-11-11 09:57 UTC（第五次執行）
 
-【步驟 2 失敗】所有貼文抓取方法均失敗：
+## 狀態
+未發現可確認的新貼文
 
-方法 A (WebFetch):
-- https://truthsocial.com/@realDonaldTrump.rss → DNS 解析失敗 (ENOTFOUND)
-- https://truthsocial.com/api/v1/accounts/107780257626128497/statuses → DNS 解析失敗 (ENOTFOUND)
-
-方法 B (WebSearch):
-- 搜尋回傳 2026-11-09 ~ 2026-11-10 的相關報導，但無法取得帶有貼文 ID 的完整貼文清單
-- 無法確認是否有比 last_seen_id (2026-11-10_43547) 更新的貼文
-
-方法 C (WebFetch):
-- https://www.thetrumparchive.com/ → DNS 解析失敗 (ENOTFOUND)
-- https://www.kadoa.com/potus/truth → DNS 解析失敗 (ENOTFOUND)
-
-其他嘗試:
-- newsweek.com → DNS 解析失敗 (ENOTFOUND)
-- forbes.com → DNS 解析失敗 (ENOTFOUND)
-- yahoo.com → DNS 解析失敗 (ENOTFOUND)
-- www.presidency.ucsb.edu → DNS 解析失敗 (ENOTFOUND)
-- www.whitehouse.gov → DNS 解析失敗 (ENOTFOUND)
-- sophiecress.com → DNS 解析失敗 (ENOTFOUND)
-- huffpost.com → DNS 解析失敗 (ENOTFOUND)
-- cnbc.com → DNS 解析失敗 (ENOTFOUND)
-- substack.com → DNS 解析失敗 (ENOTFOUND)
-- snopes.com → DNS 解析失敗 (ENOTFOUND)
-- axios.com → DNS 解析失敗 (ENOTFOUND)
-- progressive.org → DNS 解析失敗 (ENOTFOUND)
-
-搜尋結果摘要（WebSearch 能找到的資訊，第二次執行 04:59 UTC）:
-- 明確結論：WebSearch 未找到 2026-11-11 任何新 Truth Social 貼文
-- Trump 在 2025 年曾宣布將退伍軍人節更名為「第一次世界大戰勝利日」
-- 2026 年退伍軍人節（Veterans Day 2026）白宮公告仍維持原名稱
-- Yahoo News 有一篇標題「Trump Honors Fallen by Giving Veterans Day New Russian Name」（疑似 2026-11-11），但網域被封鎖無法存取
-- 上一次執行記錄的兩個候選貼文 ID（1763186142592、1763186134299）仍無法確認內容
-
-原因診斷:
-本次執行的 cloud session 網路政策（egress policy）封鎖了上述所有外部網域的直接 HTTP 連線（WebFetch）。
-只有 WebSearch 可以取得搜尋摘要，但摘要無法提供完整貼文 ID 與全文。
-
-處置:
-- 未建立任何貼文分析檔案 (posts/)
-- 未更新 state/last_seen_id.txt（維持 2026-11-10_43547）
-- 未推播 Telegram 通知（因無法確認新貼文內容）
-- 未觸發 LINE 通知
-
-建議:
-請在環境設定（session network policy）中將下列網域加入允許清單：
-  - truthsocial.com
-  - thetrumparchive.com
-  - 或其他可靠的備援來源（例如 trumpstruth.org、polialert.com）
-
-本次執行結束（第三次嘗試，2026-11-11 04:59 UTC）。
+## 最後已知貼文 ID
+2026-11-11_43550
 
 ---
 
-【第四次執行 - 自動排程觸發】
-執行時間（UTC 估算）: 2026-11-11 (Veterans Day)
-last_seen_id: 2026-11-10_43548 (state/last_seen_id.txt)
+【第五次執行 - 2026-11-11 09:57 UTC】
 
 追加搜尋嘗試結果：
-- 搜尋 "Trump Truth Social posts today 2026-11-11 site:truthsocial.com OR site:thetrumparchive.com" → 無 11/11 結果
-- 搜尋 "Trump Truth Social November 11 2026 latest posts" → 無新貼文，Nov 9-10 貼文已記錄
-- 搜尋 "Trump truth social Veterans Day Victory Day November 11 2026 post text rename" → 未找到 11/11 新貼文
-- 搜尋 "Trump Truth Social today midterm 2026 results reaction November 11" → 最新為 Nov 10 Hegseth 貼文
-- 搜尋 "Trump posts Veterans Day 2026 truth social november 11, 2026" → 無確認 11/11 新貼文
-- 搜尋 "Trump truth social 43549~43555" → 無結果（嘗試以數字 ID 搜尋）
+- 搜尋 "Trump Truth Social posts today 2026-11-11 site:truthsocial.com OR site:thetrumparchive.com" → 無 11/11 新貼文
+- 搜尋 "Trump Truth Social November 11 2026" → 未找到新 11/11 貼文
+- 搜尋 "Trump posts Veterans Day November 11 2026 Truth Social" → 無確認新貼文
+- 搜尋 "Trump 'Victory Day' Veterans Day November 11 2026 Truth Social post text rename" → 內容追溯至 2025 年原帖
+- 搜尋 "Trump 'Russian name' Veterans Day 2026 Truth Social post" → 疑似新文章但無法確認
 
-新發現（搜尋摘要）：
-- Nov 10, 2026: Hegseth 彈劾投票後，川普貼文："every single Republican, except Thomas Massie, a major LOSER, voted in favor of Pete"
-- Nov 9, 2026: 質疑中選結果："Does anybody really believe that this 'Election' was honest"
-- Nov 9, 2026: 宣布 Stephen Miller 升任 Chief of Staff，Susie Wiles 轉移至 Trump 政治組織
-- Yahoo News 標題「Trump Honors Fallen by Giving Veterans Day New Russian Name」疑為 11/11 新貼文，但無法存取取得內文
+相關發現：
+- Yahoo News / The Daily Beast 有文章標題「Trump Honors Fallen by Giving Veterans Day New Russian Name」（2026-11-11）
+  但內容可能是重複報導 2025 年川普宣布改名退伍軍人節的舊事
+- Progressive.org 2026-11-09 評論文提及川普宣布退伍軍人節應更名為「第一次世界大戰勝利日」
+- 無法取得完整貼文文字、真實貼文 ID 或確認日期
 
-處置（第四次）：
-- 所有外部域名仍被封鎖（truthsocial.com、yahoo.com、newsweek.com、cnbc.com 等）
-- 無法確認 11/11 新貼文的 ID 與全文
+網路限制（持續存在）：
+- truthsocial.com → DNS 解析失敗（ENOTFOUND）
+- thetrumparchive.com → DNS 解析失敗
+- thedailybeast.com → DNS 解析失敗
+- ca.news.yahoo.com → DNS 解析失敗
+- kadoa.com → DNS 解析失敗
+- presidency.ucsb.edu → DNS 解析失敗
+- 大多數新聞媒體網域均被封鎖
+
+處置（第五次）：
+- 無法確認 last_seen_id（2026-11-11_43550）之後的新貼文
 - 未建立新貼文分析檔案
 - 未推播 Telegram/LINE 通知
-- state/last_seen_id.txt 保持 2026-11-10_43548 不變
-- 本日誌已更新以記錄第四次執行結果
+- state/last_seen_id.txt 保持不變（2026-11-11_43550）
+
+建議（同前）：
+請在環境設定（session network policy）中將下列網域加入允許清單：
+  - truthsocial.com
+  - thetrumparchive.com
+  - yahoo.com
+  - thedailybeast.com
+  - 或其他可靠備援來源
+
+---
+
+【先前執行摘要】
+
+執行時間（UTC 估算）: 2026-11-11 (Veterans Day) 多次執行
+last_seen_id 歷史：
+  - 第一~三次執行：2026-11-10_43547
+  - 第四次執行：2026-11-10_43548
+  - 第五次執行：2026-11-11_43550（state 已更新）
+
+搜尋到的背景資訊（非新確認貼文）：
+- 2026-11-09: 川普質疑期中選舉誠信：「Does anybody really believe that this 'Election' was honest」，稱「It's all about the machines」
+- 2026-11-09: 宣布 Stephen Miller 升任 Chief of Staff，Susie Wiles 轉移至 Trump 政治組織
+- 2026-11-10: 慶祝 Hegseth 彈劾投票失敗，稱 Thomas Massie 為「major LOSER」
+- 川普命令司法部調查民主黨領袖所謂「犯罪勒索」行為
+- 川普發文要求參議院通過全年夏令時法案
+
+本日誌最後更新：2026-11-11 09:57 UTC
