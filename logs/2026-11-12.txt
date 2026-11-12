@@ -1,60 +1,26 @@
-執行時間: 2026-11-12T14:58 UTC
+=== Trump Truth Social Monitor Run ===
+Run Time: 2026-11-12 18:58 UTC
+Last Seen Post ID: 2026-11-12_43563
 
-【步驟 1】上次記錄的貼文 ID: 2026-11-11_43553 (sha: 2d3ce062024d25844635f764382c1dfd99567657)
+STATUS: No new posts found.
 
-【步驟 2】抓取貼文:
-- 方法 A: truthsocial.com - 失敗（網域不在允許清單，ENOTFOUND）
-- 方法 B: WebSearch - 成功，透過搜尋引擎索引取得摘要
-- 方法 C: thetrumparchive.com - 失敗（網域不在允許清單）
+Archive search shows highest indexed post is 43562 (Military rebuild, 12:24 PM ET).
+All posts 43554-43562 from the November 12 morning posting spree were already processed
+in the previous run (state saved at 43563).
 
-【步驟 3-4】發現 3 篇新貼文（2026-11-12）:
-1. ID 43554 - 05:50 ET - 民主黨「CORRUPT AND EVIL」
-2. ID 43555 - ~12:00 UTC - 墨西哥關稅/移民大隊威脅
-3. ID 43557 - 13:43 UTC - 伊朗聲明/萬斯轉職
+Posts covered in previous run (IDs 43554–43562):
+- 43554: Democrats "CORRUPT AND EVIL" post (~5:50 AM ET)
+- 43555: "Relentless effort by anti-America" post
+- 43556: "Here we go again!" migrant caravan/Mexico tariffs (~7:04 AM ET)
+- 43557: Republican Senate filibuster/"Save America Act" post
+- 43558: JD Vance ordered to focus on Democratic corruption, not Iran (~8:07 AM ET)
+- 43559: Democrats "root out corruption" / investigate blue states post
+- 43560: Nvidia CEO Jensen Huang resigned → Tim Cook post (~10:29 AM ET)
+- 43561: "Seditious Six" prosecution post
+- 43562: Military rebuild / $350B reconciliation bill (~12:24 PM ET)
 
-注意: 貼文 ID 為估計值（依搜尋結果時間序列推算），非從 Truth Social API 直接取得。
+Network access: truthsocial.com, thetrumparchive.com, trumpstruth.org, dailykos.com,
+thedailybeast.com, mediaite.com, rawstory.com, yahoo.com, cnbc.com, fxstreet.com,
+kadoa.com all blocked by session network policy. Only WebSearch (read-only) available.
 
-【步驟 5】GitHub 上傳:
-- posts/2026-11-12_43554.md - 成功
-- posts/2026-11-12_43555.md - 成功
-- posts/2026-11-12_43557.md - 成功
-- state/last_seen_id.txt 更新為 2026-11-12_43557 - 成功
-
-【步驟 6】Telegram 推播:
-- 失敗: api.telegram.org 被 egress proxy 阻擋（policy denial, 403）
-- 此為 session 網路政策限制，非程式錯誤
-
-【步驟 7】LINE 通知:
-- 由 GitHub Actions (.github/workflows/line-notify.yml) 自動觸發（GitHub push 成功）
-
-執行結果: 部分完成
-- GitHub 存檔: 成功
-- Telegram 推播: 失敗（網路政策限制）
-- LINE 通知: 由 Actions 自動處理
-
----
-
-執行時間: 2026-11-12T17:56 UTC
-上次記錄 ID: 2026-11-12_43561
-
-【步驟 2】抓取貼文:
-- 方法 A: truthsocial.com - 失敗（ENOTFOUND，網域不在允許清單）
-- 方法 B: WebSearch - 成功
-
-【步驟 3-4】發現 2 篇新貼文（比 43561 更新）:
-1. ID 43562 - 早晨 UTC - 墨西哥關稅威脅倍增 ("Here we go again! MEXICO MUST STOP THEM, NOW")
-2. ID 43563 - 約 05:50 UTC - 藍州腐敗攻擊 ("MASSIVE BLUE STATE CORRUPTION & CRIME")
-
-【步驟 5】GitHub 上傳:
-- posts/2026-11-12_43562.md - 成功
-- posts/2026-11-12_43563.md - 成功
-- state/last_seen_id.txt 更新為 2026-11-12_43563 - 成功
-
-【步驟 6】Telegram 推播: 失敗——api.telegram.org:443 被 egress proxy 拒絕（connect_rejected）
-
-【步驟 7】LINE 通知: 由 GitHub Actions 自動觸發（GitHub push 成功）
-
-執行結果: 部分完成
-- GitHub 存檔: 成功
-- Telegram 推播: 失敗（egress proxy 封鎖）
-- LINE 通知: 由 Actions 自動處理
+Action taken: No new posts → no GitHub uploads, no Telegram notifications.
