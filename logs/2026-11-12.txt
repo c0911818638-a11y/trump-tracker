@@ -1,33 +1,31 @@
-執行時間: 2026-11-12T14:58 UTC
+# 執行摘要 2026-11-12
 
-【步驟 1】上次記錄的貼文 ID: 2026-11-11_43553 (sha: 2d3ce062024d25844635f764382c1dfd99567657)
+## 步驟 1 - 讀取 last_seen_id
+- 狀態: 成功
+- 上次記錄: 2026-11-12_43557 (SHA: 0504e813bc2dc657f381999296dc8b7070e8453b)
 
-【步驟 2】抓取貼文:
-- 方法 A: truthsocial.com - 失敗（網域不在允許清單，ENOTFOUND）
-- 方法 B: WebSearch - 成功，透過搜尋引擎索引取得摘要
-- 方法 C: thetrumparchive.com - 失敗（網域不在允許清單）
+## 步驟 2 - 抓取川普最新貼文
+- 狀態: 部分成功（WebFetch 被網路政策阻擋，改用 WebSearch）
+- truthsocial.com 直連: 被阻擋 (ENOTFOUND)
+- thetrumparchive.com: 被阻擋 (ENOTFOUND)
+- WebSearch: 成功找到 2026-11-12 伊朗貼文
 
-【步驟 3-4】發現 3 篇新貼文（2026-11-12）:
-1. ID 43554 - 05:50 ET - 民主黨「CORRUPT AND EVIL」
-2. ID 43555 - ~12:00 UTC - 墨西哥關稅/移民大隊威脅
-3. ID 43557 - 13:43 UTC - 伊朗聲明/萬斯轉職
+## 步驟 3 - 比較新舊
+- 找到 1 篇新貼文: 2026-11-12_43558（伊朗/Vance 貼文）
+- 注意: 貼文 ID 43558 為估算值（無法直接存取 Truth Social API 確認）
 
-注意: 貼文 ID 為估計值（依搜尋結果時間序列推算），非從 Truth Social API 直接取得。
+## 步驟 4 - 中文分析
+- 狀態: 完成
 
-【步驟 5】GitHub 上傳:
-- posts/2026-11-12_43554.md - 成功
-- posts/2026-11-12_43555.md - 成功
-- posts/2026-11-12_43557.md - 成功
-- state/last_seen_id.txt 更新為 2026-11-12_43557 - 成功
+## 步驟 5 - GitHub 上傳
+- 狀態: 成功
+- 推送至分支: claude/affectionate-mendel-3t1p3c
+- 新建檔案: posts/2026-11-12_43558.md
+- 更新 state/last_seen_id.txt: 2026-11-12_43558
 
-【步驟 6】Telegram 推播:
-- 失敗: api.telegram.org 被 egress proxy 阻擋（policy denial, 403）
-- 此為 session 網路政策限制，非程式錯誤
+## 步驟 6 - Telegram 推播
+- 狀態: 失敗
+- 原因: api.telegram.org 被 org egress 政策阻擋（HTTP 403 Forbidden）
 
-【步驟 7】LINE 通知:
-- 由 GitHub Actions (.github/workflows/line-notify.yml) 自動觸發（GitHub push 成功）
-
-執行結果: 部分完成
-- GitHub 存檔: 成功
-- Telegram 推播: 失敗（網路政策限制）
-- LINE 通知: 由 Actions 自動處理
+## 步驟 7 - LINE 通知
+- 狀態: 未觸發（貼文推送至開發分支，非 main，GitHub Actions 可能不會自動觸發）
