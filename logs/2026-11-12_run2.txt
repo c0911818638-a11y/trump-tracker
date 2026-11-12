@@ -1,0 +1,81 @@
+# 川普 Truth Social 監控日誌 - 2026-11-12（第二次執行）
+
+**執行時間：** 2026-11-12（排程自動執行）
+**上次記錄 ID：** 2026-11-11_43553（trumpstruth.org 序號）
+
+## 執行結果：無法確認新貼文
+
+---
+
+## 嘗試方法
+
+### 方法 A：直接存取 Truth Social
+- https://truthsocial.com/@realDonaldTrump.rss → **ENOTFOUND**（DNS 封鎖）
+- https://www.thetrumparchive.com/ → **ENOTFOUND**（DNS 封鎖）
+- https://www.trumpstruth.org/ → **ENOTFOUND**（DNS 封鎖）
+- 所有主流新聞網站（CNBC, NYT, HuffPost, Newsweek, Time, Yahoo, Al Jazeera, The Hill, Mediaite 等） → **ENOTFOUND**
+
+### 方法 B：WebSearch 搜尋（部分成功）
+
+搜尋「Trump Truth Social posts November 12 2026」及相關關鍵字，結果如下：
+
+**未找到確認的 2026-11-12 新貼文。**
+
+最近確認的 Truth Social 貼文（已在前次執行中追蹤）：
+1. **2026-11-11 凌晨 1:25 AM ET**：反駁《紐約時報》關於 C-SPAN 電話「未經通知」的報導
+   - "It was a fully scheduled call, as a favor to C-Span, set up through White House Communications."
+   - 附加指控：NYT "knew this, but lied, in order to demean"
+2. **2026-11-11 凌晨 1:47 AM ET**：反駁 Bedminster 高爾夫球場性騷擾和解報導
+   - "What they fail to say is that it did not involve President Trump, a rather important omission."
+   - 結尾："FAKE NEWS!!!"
+3. **2026-11-10**：BBC 誹謗官司勝利
+   - "A Huge Victory against Fake News BBC, a terrible abuser of the truth"
+4. **2026-11-09**：質疑期中選舉結果
+   - "Does anybody really believe that this 'Election' was honest"
+   - "It's all about the machines, which are far more important than the voter!"
+
+以上貼文均可能已在 2026-11-11 ID 43553 之前或當時被追蹤。
+
+### 方法 C：替代存檔站
+- kadoa.com, trumpalert.app, trumpstruth.org 等 → 全部 **ENOTFOUND**
+
+---
+
+## 通知狀態
+
+| 管道 | 狀態 | 原因 |
+|------|------|------|
+| Telegram | ❌ 失敗 | api.telegram.org: 403 Forbidden（proxy egress 封鎖） |
+| LINE | ❌ 未觸發 | 無新貼文 GitHub push |
+| GitHub posts | ❌ 未建立 | 無確認新貼文 |
+| GitHub log | ✅ 本次 | 透過 MCP 工具寫入 |
+
+---
+
+## 技術限制（持續存在）
+
+- truthsocial.com：ENOTFOUND（網域封鎖）
+- thetrumparchive.com：ENOTFOUND（網域封鎖）
+- trumpstruth.org：ENOTFOUND（網域封鎖）
+- api.telegram.org：403 Forbidden（egress proxy 封鎖）
+- 大多數新聞媒體：ENOTFOUND
+
+---
+
+## 結論
+
+本次執行（2026-11-12 第二次）與第一次執行相同，仍受限於：
+1. 網路政策封鎖所有外部新聞/社群媒體網站的直連
+2. Telegram 推播被 proxy 阻擋
+
+**last_seen_id 維持：** 2026-11-11_43553（無確認新貼文）
+
+---
+
+## 建議（待使用者設定）
+
+需在 session 網路設定中允許以下域名以恢復完整功能：
+1. `api.telegram.org`（主要通知管道）
+2. `truthsocial.com`（直接 RSS/API 存取）
+3. `www.trumpstruth.org`（備援存檔）
+4. 或任何主流新聞網站（nytimes.com, bbc.com, reuters.com 等）
