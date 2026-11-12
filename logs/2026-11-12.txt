@@ -1,39 +1,52 @@
-# 川普 Truth Social 監控日誌 - 2026-11-12
+# 川普 Truth Social 監控執行日誌
+執行日期：2026-11-12
+執行時間：UTC（排程自動執行）
+上次記錄貼文ID：2026-11-11_43553（trumpstruth.org 序號）
 
-執行時間: 2026-11-12 00:57:51 UTC
-最後記錄貼文 ID: 2026-11-11_43553
+## 執行結果：無法取得新貼文
 
-## 執行摘要
+### 嘗試的方法：
 
-無法取得新貼文。所有資料來源均遭到封鎖：
+**方法 A（WebFetch 直連）：失敗**
+- truthsocial.com/@realDonaldTrump.rss → DNS 無法解析（網路政策封鎖）
+- truthsocial.com/api/v1/accounts/.../statuses → DNS 無法解析
+- trumpstruth.org/statuses/43554~43558 → DNS 無法解析
+- thetrumparchive.com → DNS 無法解析
+- 所有主流新聞網站（CNBC, NYT, HuffPost, Newsweek, Time, Fox, CBS, etc.) → DNS 無法解析
 
-### 嘗試的資料來源
-- truthsocial.com/@realDonaldTrump.rss → DNS 解析失敗（ENOTFOUND）
-- truthsocial.com/api/v1/accounts/... → DNS 解析失敗
-- www.thetrumparchive.com → DNS 解析失敗
-- www.trumpalert.app → DNS 解析失敗
-- www.kadoa.com/potus/truth → DNS 解析失敗
-- www.newsweek.com → DNS 解析失敗
-- rawstory.com → DNS 解析失敗
-- www.yahoo.com → DNS 解析失敗
-- www.huffpost.com → DNS 解析失敗
-- rsbnetwork.com → DNS 解析失敗
-- webcache.googleusercontent.com → DNS 解析失敗
+**方法 B（WebSearch）：部分成功（無法取得貼文 ID）**
+透過搜尋引擎找到以下背景資訊（無法確認為 ID 43553 之後的新貼文）：
 
-### WebSearch 搜尋結果摘要
-透過 WebSearch 找到的最新貼文資訊（無法確認是否為新貼文）：
-- 2026-11-11 凌晨 1:25 AM ET：攻擊紐約時報關於 C-SPAN 電話報導（稱為 FAKE NEWS）
-- 2026-11-11 凌晨 1:47 AM ET：攻擊紐約時報 Bedminster 高爾夫球場性騷擾報導
-- 無法確認是否有任何 2026-11-12 的新貼文
+1. 老兵節演說（2026-11-11，阿靈頓國家公墓）：
+   - 川普為伊朗戰爭辯護，表示美國使世界「更安全」
+   - 聲稱美國「贏得」伊朗戰爭
 
-### 未找到 2026-11-12 的新貼文
+2. NYT 深夜攻擊貼文（確認為 2026-11-11 凌晨 1:25AM 和 1:47AM EST）：
+   - 貼文1（1:25AM）：反駁《紐約時報》關於 C-SPAN 電話「未經通知」的報導
+   - 貼文2（1:47AM）：反駁 Bedminster 高爾夫球場性騷擾和解報導，以「FAKE NEWS!!!」結尾
+   - 注：這些貼文在 trumpstruth.org 的序號可能低於 43551，已被之前執行追蹤
 
-由於網路存取限制，本次執行無法確認是否有新貼文。
-最後記錄 ID 2026-11-11_43553 保持不變。
+3. 伊朗戰爭聲明：表示將在「想結束時結束」（已出現於多篇報導中）
 
-## 建議
-需要在 session 網路設定中允許以下網域以恢復正常功能：
+**方法 C（其他存檔網站）：失敗**
+- kadoa.com/potus/truth → DNS 無法解析
+- trumpalert.app → DNS 無法解析
+- presidency.ucsb.edu → DNS 無法解析
+- thehill.com, mediaite.com, alternet.org 等 → DNS 無法解析
+
+**GitHub API 寫入：失敗**
+- 透過 proxy 的 GitHub REST API 寫入被封鎖
+- 透過 GitHub MCP 工具寫入（此日誌即透過 MCP 完成）
+
+### 結論：
+本 session 的網路政策封鎖了幾乎所有外部網站的直連（僅 WebSearch API 可用）。
+無法確認 ID 43553 之後的具體新貼文。
+本次執行未更新 state/last_seen_id.txt，未發送 Telegram 通知。
+
+### 建議：
+需要在 session 網路設定中允許以下域名：
 - truthsocial.com
+- trumpstruth.org
 - thetrumparchive.com
-- www.trumpalert.app
-或其他可存取的 Trump 貼文聚合網站
+
+或在 GitHub Actions workflow 中執行監控（不受本 session 網路限制）。
