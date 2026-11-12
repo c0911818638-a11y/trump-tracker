@@ -1,9 +1,33 @@
 # 川普 Truth Social 監控執行日誌
 執行日期：2026-11-12
-最後執行時間：2026-11-12T04:57:42Z（排程自動執行）
+最後執行時間：2026-11-12T05:56:25Z（排程自動執行）
 上次記錄貼文ID：2026-11-11_43553（trumpstruth.org 序號 #43553）
 
 ## 執行結果：無新貼文
+
+---
+
+## 第二次執行記錄（05:56 UTC）
+
+**方法 A（WebFetch 直連）：失敗**
+- truthsocial.com → HTTP 403（proxy 政策封鎖）
+- thetrumparchive.com → DNS 無法解析
+- trumpalert.app → DNS 無法解析
+- kadoa.com → DNS 無法解析
+
+**方法 B（WebSearch）：無 2026-11-12 新貼文結果**
+- 搜尋 "Trump Truth Social posts today November 12 2026"
+- 搜尋 "Trump Truth Social November 12 2026 posts latest today"
+- 兩次搜尋均未找到當日新貼文
+
+**Telegram 推播：失敗**
+- api.telegram.org → HTTP 403（proxy 政策封鎖）
+
+**結論：** 無新貼文，無法推播通知。state/last_seen_id.txt 保持不變（2026-11-11_43553）。
+
+---
+
+## 第一次執行記錄（04:57 UTC）
 
 ### 本次執行摘要：
 
@@ -38,9 +62,12 @@
 ### 結論：
 無新貼文需要追蹤。state/last_seen_id.txt 保持不變（2026-11-11_43553）。
 
-### 網路限制說明：
+---
+
+## 網路限制說明：
 本 session 的網路政策封鎖了幾乎所有外部網站的直連。
 需在 session 網路設定中允許以下域名以改善效果：
 - truthsocial.com
+- api.telegram.org
 - trumpstruth.org
 - thetrumparchive.com
