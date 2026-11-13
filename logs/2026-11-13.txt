@@ -1,23 +1,43 @@
 # 監控執行記錄 2026-11-13
 
-執行時間：2026-11-13 UTC
+執行時間：2026-11-13 01:57 UTC（第二次執行）
 上次記錄 ID：2026-11-12_43568
 
 ## 執行結果
 
 **新貼文：無**
 
-所有已知 11/12 貼文（43556–43568）均已記錄於前次執行。
+所有已知 11/12 貼文（43554–43568）均已記錄於前次執行。
 搜尋 11/13 貼文：未發現任何新貼文。
 
 ## 方法嘗試記錄
 
-- WebFetch truthsocial.com：失敗（DNS 封鎖）
+- WebFetch truthsocial.com：失敗（DNS 封鎖 - 不在允許清單）
 - WebFetch thetrumparchive.com：失敗（DNS 封鎖）
 - WebFetch trumpstruth.org：失敗（DNS 封鎖）
-- WebSearch：成功，發現最新貼文 ID ~43565（11/12），無 ID > 43568 的新貼文
-- WebFetch 各新聞網站：大部分 DNS 封鎖
+- WebFetch presidency.ucsb.edu：失敗（DNS 封鎖）
+- WebFetch mediaite.com / thedailybeast.com / nbcnews.com：失敗（DNS 封鎖）
+- WebSearch（多次擴展搜尋）：成功，但僅發現 2026-11-12 貼文（最高 ID 43564）
+  - 搜尋 ID 43565-43575：無結果
+  - 搜尋 "November 13, 2026" Trump Truth Social：無結果
+
+## 2026-11-12 已知貼文摘要（供參考）
+
+來源：WebSearch 彙整（全數早於 last_seen_id 43568）
+
+| 時間(ET) | ID | 主題摘要 |
+|----------|----|---------|
+| 05:50 AM | 43554 | 民主黨腐敗、稅務記錄 |
+| 06:28 AM | 43555 | 第一任期反對派回憶 |
+| 07:04 AM | 43556 | 中期選舉 / 移民商隊 |
+| 07:35 AM | 43557 | 參議院拖延/廢除阻撓議事 |
+| 08:07 AM | 43558 | 要求 Vance 聚焦民主州腐敗 |
+| 08:23 AM | 43559 | 民主黨應調查藍州選舉舞弊 |
+| 10:29 AM | 43560 | 建議 Tim Cook 接替 Nvidia CEO |
+| 10:59 AM | 43561 | 追問「叛亂六人組」是否被起訴 |
+| 12:24 PM | 43562 | 催促參議院通過 3500億軍費預算 |
+| 06:30 PM | 43564 | 轉發 Hugh Hewitt 稱讚訪談 |
 
 ## 結論
 
-無新貼文，不需推播通知。
+無新貼文，不需推播通知。last_seen_id.txt 維持不變。
