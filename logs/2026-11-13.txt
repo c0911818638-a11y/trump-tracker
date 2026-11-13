@@ -1,116 +1,43 @@
-# 監控執行日誌 - 2026-11-13
+=== Trump Truth Social Tracker 執行日誌 ===
+日期: 2026-11-13 16:24 UTC
 
-## 執行紀錄
+【狀態】無法取得新貼文
 
-### 第 1 次執行：08:57 UTC
-（詳見原始記錄，結論：網路限制導致無法取得貼文）
+【上次記錄 ID】2026-11-13_43579
+【SHA】1415ca64b11bdc11bfad6cf6b1654f86134bf169
 
-### 第 2 次執行：10:57 UTC
+【嘗試方法】
+1. WebFetch https://truthsocial.com/@realDonaldTrump.rss
+   → 失敗: ENOTFOUND (truthsocial.com 在此 cloud session 網路政策中被封鎖)
 
-**上次記錄 ID：** 2026-11-13_43579
-**執行時間：** 2026-11-13T10:57:26Z
+2. WebFetch https://truthsocial.com/api/v1/accounts/107780257626128497/statuses
+   → 未嘗試 (域名已確認封鎖)
 
-## 執行結果
-未發現新貼文（ID > 43579）
+3. WebSearch: "Trump Truth Social posts today November 13 2026"
+   → 找到 November 12-13 的報導，但所有貼文 ID ≤ 43579（已見過）
+   → 未找到 ID > 43579 的新貼文
 
-## 資料來源嘗試
+4. WebFetch www.thetrumparchive.com
+   → 失敗: ENOTFOUND
 
-### 直接存取（全部失敗）
-- truthsocial.com - 403（proxy 政策封鎖）
-- thetrumparchive.com - ENOTFOUND
-- trumpstruth.org - ENOTFOUND
-- kadoa.com - ENOTFOUND
+5. WebFetch www.trumpstruth.org (statuses/43580+)
+   → 失敗: ENOTFOUND
 
-### Web Search（成功）
-透過 WebSearch 找到截至 2026-11-12 的貼文摘要。
-最新索引貼文為 ID 43565（Lilly 製藥賓州廠，2026-11-12 晚間）。
-由於 last_seen_id 為 43579，高於已索引最新 ID，推斷無新貼文。
+6. WebFetch 多個新聞網站 (yahoo.com, cnn.com, cnbc.com, axios.com, etc.)
+   → 全部失敗: ENOTFOUND (網路政策限制)
 
-## 2026-11-12 已知貼文摘要（供參考）
+【結論】
+此 cloud session 的網路政策封鎖了幾乎所有外部域名，僅允許 WebSearch API。
+透過 WebSearch 找到的最新貼文 ID 為 43567（2026-11-13），早於 last_seen_id 43579。
+沒有確認的新貼文可處理。
 
-| ID    | 時間（EST）       | 主題摘要 |
-|-------|------------------|---------|
-| 43565 | 晚間             | Lilly 製藥賓州 $35 億廠區破土典禮 |
-| 43564 | 18:30            | 轉發 Hugh Hewitt 採訪好評 |
-| 43562 | 午間             | 軍事重建第二任期 |
-| 43561 | 10:59            | 要求起訴 "Seditious Six" |
-| 43560 | 10:29            | Nvidia CEO Jensen Huang 離職評論 |
-| 43559 | 08:23            | 民主黨若要「根除腐敗」應查藍州 |
-| 43558 | 08:14            | 命令 Vance 聚焦民主黨州腐敗犯罪 |
-| 43557 | 早間             | 共和黨參議院不能成為法案墳場 |
-| 43556 | 早間             | 中期選舉民主黨舞弊指控 |
-
-## 通知狀態
-- GitHub push：已完成（本日誌更新）
-- Telegram 推播：未執行（無確認新貼文）
-- LINE 通知：由 GitHub Actions 自動處理
-
-## 建議
-若要改善監控效果，需將以下域名加入 egress 許可清單：
+【建議】
+在網路政策中加入以下域名白名單以讓追蹤器正常運作：
 - truthsocial.com
-- thetrumparchive.com  
+- thetrumparchive.com
 - trumpstruth.org
 
----
-
-### 第 3 次執行：11:57 UTC
-
-**執行時間：** 2026-11-13T11:57:00Z
-**上次記錄 ID：** 2026-11-13_43579
-
-**結果：** 未發現新貼文（ID > 43579）
-- WebSearch 多次搜尋仍無 2026-11-13 新貼文
-- 最新可見貼文仍為 2026-11-12 範圍（最高 ID 43565）
-- 未傳送 Telegram 通知
-
----
-
-### 第 4 次執行：13:10 UTC
-
-**執行時間：** 2026-11-13T13:10:44Z
-**上次記錄 ID：** 2026-11-13_43579
-
-**結果：** 未發現新貼文（ID > 43579）
-
-**嘗試方法：**
-- truthsocial.com RSS：失敗（ENOTFOUND）
-- thetrumparchive.com：失敗（ENOTFOUND）
-- WebSearch 多次擴展搜尋：僅找到 2026-11-12 貼文回顧
-- 新聞 WebFetch（mediaite, thedailybeast, cnbc, yahoo, aljazeera 等）：全部 ENOTFOUND
-
-**搜尋摘要：**
-11/13 新聞報導主要為 11/12 貼文的後續報導：
-- 民主黨「腐敗邪惡」批評（凌晨 5:50 ET）
-- 伊朗：「不需要與伊朗達成協議」
-- 命令 Vance 聚焦民主黨城市腐敗
-- 墨西哥關稅加倍威脅
-- 稅務記錄：「Democratic 驗帳師什麼都沒找到」
-- 建議 Tim Cook 擔任 Nvidia CEO
-
-未傳送 Telegram 通知（無確認新貼文）
-
----
-
-### 第 5 次執行：15:40 UTC
-
-**執行時間：** 2026-11-13T15:40:03Z
-**上次記錄 ID：** 2026-11-13_43579
-
-**結果：** 未發現新貼文（ID > 43579）
-
-**嘗試方法：**
-- truthsocial.com RSS：失敗（ENOTFOUND）
-- thetrumparchive.com：失敗（ENOTFOUND）
-- WebSearch 多次擴展搜尋（模式：extended）：
-  - "Trump Truth Social posts today November 13 2026" → 最新為 11/12
-  - "Trump Truth Social latest posts site:truthsocial.com 2026" → 最新為 11/12
-  - "Trump Truth Social November 13 2026 new post statement" → 找到 trumpstruth.org/statuses/43566, 43567（均 < 43579）
-  - "Trump truth social post November 13, 2026 latest new" → 最新報導為 11/12
-
-**搜尋發現的 11/13 貼文（均已追蹤）：**
-- ID 43567：9:02 AM EST - 圖片貼文「BEST PRESIDENT IN THE HISTORY OF AMERICA」
-- ID 43566：6:22 AM EST - 邊境安全視頻貼文（FY26 遣返數據）
-
-以上 ID 均低於 43579，確認無新貼文需通知。
-
-未傳送 Telegram 通知（無確認新貼文）
+【動作】
+- 未建立貼文檔案
+- 未推播 Telegram 或 LINE
+- last_seen_id.txt 保持不變
