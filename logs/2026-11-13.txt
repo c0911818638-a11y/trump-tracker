@@ -114,3 +114,30 @@
 以上 ID 均低於 43579，確認無新貼文需通知。
 
 未傳送 Telegram 通知（無確認新貼文）
+
+---
+
+### 第 6 次執行：18:58 UTC
+
+**執行時間：** 2026-11-13T18:58:39Z
+**上次記錄 ID：** 2026-11-13_43579
+
+**結果：** 未發現新貼文（ID > 43579）
+
+**嘗試方法：**
+- truthsocial.com RSS：失敗（ENOTFOUND）
+- thetrumparchive.com：失敗（ENOTFOUND）
+- trumpstruth.org：失敗（ENOTFOUND）
+- WebSearch 多次擴展搜尋（方法 B）：執行多次廣泛搜尋
+
+**搜尋發現：**
+- 11/12 貼文仍是最新報導（Vance 腐敗調查、伊朗協議、民主黨攻擊等）
+- 透過搜尋確認 trumpstruth.org 存檔顯示 11/13 最新 ID：43566、43567
+- 兩者均低於 last_seen_id 43579，確認無新貼文
+
+**封鎖網域（部分）：**
+truthsocial.com, thetrumparchive.com, trumpstruth.org, texxr.com,
+yahoo.com, mediaite.com, thewrap.com, foxnews.com, cnbc.com,
+cnn.com, thehill.com, axios.com, justsecurity.org
+
+未傳送 Telegram 通知（無確認新貼文）
