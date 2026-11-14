@@ -1,57 +1,37 @@
-# 川普 Truth Social 監控日誌 - 2026-11-14
+# 監控日誌 2026-11-14
 
-**上次記錄 ID：** 2026-11-13_43579
+**執行時間：** 2026-11-14T01:57:21Z
+**上次已記錄 ID：** 2026-11-13_43579
 
----
-
-## 第二次執行（UTC 00:56）
-
-**執行時間：** 2026-11-14T00:56:23Z
-
-### 嘗試方法
+## 檢索方法執行結果
 
 | 方法 | 結果 |
 |------|------|
-| WebFetch: truthsocial.com RSS | 失敗（ENOTFOUND，DNS 政策封鎖） |
-| WebSearch 廣泛搜尋（多次） | 未找到晚於 2026-11-13_43579 的新貼文 |
-| WebFetch: thetrumparchive.com | 未嘗試（先前相同失敗） |
-| WebFetch: 各大新聞網站 | 失敗（ENOTFOUND） |
+| WebFetch: truthsocial.com RSS | 失敗（網域被封鎖） |
+| WebFetch: truthsocial.com API | 失敗（網域被封鎖） |
+| WebFetch: thetrumparchive.com | 失敗（網域被封鎖） |
+| WebFetch: trumpstruth.org | 失敗（網域被封鎖） |
+| WebFetch: 各新聞媒體（yahoo/cnbc/npr 等） | 失敗（網域被封鎖） |
+| WebSearch 搜尋 | 成功，但最新結果僅至 2026-11-13 |
 
-### 搜尋結果
-- WebSearch 最新報導日期：2026-11-12（川普 Truth Social 貼文稱美國不需要與伊朗談判）
-- 未發現 2026-11-14 或 2026-11-13 晚於 43579 的新貼文
+## 結論
 
-### 通知狀態：不推播（無新貼文）
+透過 WebSearch 確認：搜尋引擎可見的最新川普 Truth Social 貼文為 2026-11-12 至 2026-11-13，
+尚未發現任何 ID > 43579 的新貼文。
 
----
+**可能原因：**
+- 川普今日（2026-11-14）尚未發文
+- 搜尋引擎索引尚未更新今日貼文
+- 本 session 網路 egress 政策限制過多外部網域存取，導致直接爬取失敗
+- Telegram 推播失敗：api.telegram.org 被 egress proxy 封鎖
 
-## 第一次執行（稍早）
+## 建議允許的網域（以利未來正常執行）
 
-**上次記錄 ID：** 2026-11-13_43579
-
-### WebSearch 找到的 2026-11-13 貼文（均早於 last_seen_id）
-
-| 貼文 ID | 時間（ET） | 內容摘要 |
-|---------|-----------|----------|
-| 43566 | 6:22 AM | 影片貼文：驅逐出境數字 |
-| 43567 | 9:02 AM | 圖片貼文："BEST PRESIDENT IN THE HISTORY OF AMERICA" |
-| 43568 | 5:52 PM | 娛樂產業立法（Motion Picture, Television, and Entertainment Revitalization Act） |
-| 43569 | 5:58 PM | 感謝海岸防衛隊及首批響應人員（路易斯安那州船隻碰撞事故） |
-
-所有已找到的貼文 ID（43566–43569）均低於上次記錄的 43579，無新貼文需分析。
-
----
-
-## 技術限制（持續存在）
-
-- truthsocial.com：ENOTFOUND（DNS 政策封鎖）
-- thetrumparchive.com：ENOTFOUND
-- 所有主流新聞網站：ENOTFOUND 或 403
-- api.telegram.org：403 Forbidden（egress proxy 封鎖）
-
-**建議：** 請在環境網路設定中，將下列網域加入允許清單：
 - truthsocial.com
-- thetrumparchive.com
+- thetrumparchive.com  
+- trumpstruth.org
 - api.telegram.org
-
-**state/last_seen_id.txt：維持不變（2026-11-13_43579）**
+- meidasnews.com
+- cnbc.com
+- npr.org
+- yahoo.com
