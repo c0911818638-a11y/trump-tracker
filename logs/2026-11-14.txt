@@ -36,3 +36,25 @@ Telegram 推播：失敗 — api.telegram.org:443 被 egress proxy 政策阻擋�
 LINE 通知：由 GitHub Actions (.github/workflows/line-notify.yml) 自動觸發（GitHub push 成功，應正常執行）
 
 備注：truthsocial.com、mediaite.com、ibtimes.co.uk、trumpalert.app、kadoa.com 等網域在本 session 無法直接存取。貼文資料來源為 trumpstruth.org 存檔（透過 WebSearch 間接取得）。
+
+---
+
+執行時間：2026-11-14T~21:00 UTC (第四次執行)
+
+狀態：發現 1 篇新貼文
+
+上次記錄 ID：2026-11-14_43573
+本次發現新貼文：1篇
+
+新貼文清單：
+- 43574：~下午（確切時間待確認）— Trash Island / 東波托馬克公園高爾夫球場 / 攻擊聯邦法官 Ana Reyes
+
+新貼文摘要：川普發布大量「Trash Island」（東波托馬克公園）照片，稱其為「世界上最差高爾夫球場」，宣示內政部將改建成「世界最佳高爾夫球場」，直接點名攻擊發出臨時禁制令的聯邦法官 Ana Reyes，並宣布給予 DC 居民 50% 優惠費率。
+
+GitHub Push：成功（commit e5bdc545，含1篇分析檔及更新 last_seen_id）
+新 last_seen_id：2026-11-14_43574
+
+Telegram 推播：失敗 — api.telegram.org:443 被 egress proxy 政策阻擋（403 policy denial）
+LINE 通知：由 GitHub Actions (.github/workflows/line-notify.yml) 自動觸發（GitHub push 成功，應正常執行）
+
+資料來源：WebSearch 搜尋結果（truthsocial.com 本 session 無法直接存取）
