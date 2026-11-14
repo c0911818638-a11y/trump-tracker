@@ -1,6 +1,7 @@
 # 監控日誌 2026-11-14
 
-**執行時間：** 2026-11-14T01:57:21Z
+**第一次執行：** 2026-11-14T01:57:21Z
+**第二次執行：** 2026-11-14T02:57:10Z
 **上次已記錄 ID：** 2026-11-13_43579
 
 ## 檢索方法執行結果
@@ -11,13 +12,13 @@
 | WebFetch: truthsocial.com API | 失敗（網域被封鎖） |
 | WebFetch: thetrumparchive.com | 失敗（網域被封鎖） |
 | WebFetch: trumpstruth.org | 失敗（網域被封鎖） |
-| WebFetch: 各新聞媒體（yahoo/cnbc/npr 等） | 失敗（網域被封鎖） |
-| WebSearch 搜尋 | 成功，但最新結果僅至 2026-11-13 |
+| WebFetch: 各新聞媒體（yahoo/cnbc/dailykos/newsweek/hotair 等） | 失敗（網域被封鎖） |
+| WebSearch 搜尋 | 成功，但最新結果僅至 2026-11-12/13 |
 
 ## 結論
 
 透過 WebSearch 確認：搜尋引擎可見的最新川普 Truth Social 貼文為 2026-11-12 至 2026-11-13，
-尚未發現任何 ID > 43579 的新貼文。
+trumpstruth.org archive 最高至 ID 43569，尚未發現任何 ID > 43579 的新貼文。
 
 **可能原因：**
 - 川普今日（2026-11-14）尚未發文
@@ -28,10 +29,9 @@
 ## 建議允許的網域（以利未來正常執行）
 
 - truthsocial.com
-- thetrumparchive.com  
+- thetrumparchive.com
 - trumpstruth.org
 - api.telegram.org
-- meidasnews.com
 - cnbc.com
-- npr.org
 - yahoo.com
+- newsweek.com
