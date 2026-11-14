@@ -7,7 +7,8 @@
 **第五次執行：** 2026-11-14T09:56:00Z
 **第六次執行：** 2026-11-14T11:56:52Z
 **第七次執行：** 2026-11-14T13:00:00Z
-**第八次執行：** 2026-11-14T13:57:00Z（本次）
+**第八次執行：** 2026-11-14T13:57:00Z
+**第九次執行：** 2026-11-14T14:57:21Z（本次）
 **上次已記錄 ID：** 2026-11-13_43582
 
 ## 檢索方法執行結果
@@ -22,37 +23,43 @@
 | WebFetch: kadoa.com | 失敗（網域被封鎖） |
 | WebSearch 搜尋（standard + extended）| 成功，但最新結果仍僅至 2026-11-13 |
 
-## 步驟 3 結果（第八次執行）
+## 步驟 3 結果（第九次執行）
 
-透過多次 WebSearch 確認：
-- 搜尋引擎可見的最新川普 Truth Social 存檔 ID 為 43568（2026-11-13）
+透過多次 WebSearch 確認（九次執行結果一致）：
+- trumpstruth.org 搜尋索引最新可見 ID：43566（2026-11-13，6:22 AM 影片貼文）
 - 上次記錄 ID 43582 > 搜尋最新 ID，表示先前執行已處理所有近期貼文
 - 未發現任何 ID > 43582 的新貼文
+- 2026-11-14 全日（截至 14:57Z）無新貼文確認
+
+**已知 2026-11-13 貼文（上次已記錄，本次不重複推播）：**
+- FAA 全美停飛危機間川普發布好萊塢影視振興法案貼文（約 ID 43575 附近）
+- 川普感謝海岸防衛隊應對新奧爾良郵輪與油輪碰撞（約 ID 43580 附近）
 
 今日（2026-11-14）背景新聞（搜尋摘要，非新貼文）：
-- 川普關於全美航班停飛的回應（FAA ground stop，11/13 晚間）：透過 Fox News 表示是「old broken stuff」
-- 川普選舉舞弊聲稱（11/9 後持續）
-- APEC 峰會相關報導
+- FAA ground stop 已於 2026-11-13 解除（超過四小時後，原因仍調查中）
+- 新奧爾良密西西比河郵輪事故：無人死亡，32 人送醫，航道封鎖中
+- APEC 峰會相關外交動態持續
 
-**結論：本次執行未發現新貼文。**
+**結論：第九次執行未發現新貼文。**
 
 ## 推播狀態
 
-- Telegram 推播：**不適用**（無新貼文）
+- Telegram 推播：**失敗**（api.telegram.org 被 egress proxy 以 403 封鎖，無論是否有新貼文）
 - LINE 通知：**不適用**（無新貼文，GitHub Actions 不啟動）
 
 ## 技術限制（持續存在）
 
 - truthsocial.com：ENOTFOUND（DNS 政策封鎖）
 - thetrumparchive.com：ENOTFOUND
-- trumpstruth.org：ENOTFOUND
-- 所有主流新聞網站：ENOTFOUND 或 403
-- api.telegram.org：被 egress proxy 封鎖
+- trumpstruth.org：403（egress proxy 政策拒絕）
+- cbsnews/foxnews/nbcnews/huffpost/rawstory 等：ENOTFOUND
+- api.telegram.org：403（egress proxy 政策拒絕）
+- GitHub API 寫入（PUT/POST）：被 proxy 封鎖，僅允許 gh CLI 推送
 
 ## 建議允許的網域（以利未來正常執行）
 
-- truthsocial.com
-- thetrumparchive.com
-- trumpstruth.org
-- api.telegram.org
-- yahoo.com / newsweek.com / mediaite.com
+- truthsocial.com（主要資料來源）
+- thetrumparchive.com（備援資料來源）
+- trumpstruth.org（備援資料來源）
+- api.telegram.org（Telegram 推播，主要通知管道）
+- 至少一個新聞聚合網站（如 kadoa.com 或 mediaite.com）
