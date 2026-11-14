@@ -58,3 +58,23 @@ Telegram 推播：失敗 — api.telegram.org:443 被 egress proxy 政策阻擋�
 LINE 通知：由 GitHub Actions (.github/workflows/line-notify.yml) 自動觸發（GitHub push 成功，應正常執行）
 
 資料來源：WebSearch 搜尋結果（truthsocial.com 本 session 無法直接存取）
+
+---
+
+執行時間：2026-11-14 (本次執行，第五次或後續)
+
+狀態：無新貼文
+
+上次記錄 ID：2026-11-14_43580（state/last_seen_id.txt 中記錄）
+
+本次執行結果：
+- 方法 A (truthsocial.com RSS/API)：DNS 解析失敗（網域不在允許清單）
+- 方法 A (thetrumparchive.com)：DNS 解析失敗（網域不在允許清單）
+- 方法 B (WebSearch)：已搜尋 2026-11-14 貼文，找到 ID 43570–43580，均 ≤ last_seen_id
+- 方法 C (trumpstruth.org)：DNS 解析失敗（網域不在允許清單）
+- 搜尋 ID 43581–43585：無結果
+
+搜尋結論：未找到比 ID 43580 更新的貼文
+操作：無新貼文，無推播，本次記錄於 logs/2026-11-14.txt
+
+附記：Yahoo, FOXNews, Mediaite, Daily Beast 等新聞網域亦無法直接存取。
