@@ -39,3 +39,22 @@
 - 未發現 status 43587 或更新的貼文
 - 2026-11-15 目前尚無新貼文
 - Telegram 未推播（無新貼文）
+
+---
+
+## 第三次檢查 (同日稍後)
+
+執行時間：2026-11-15 UTC (第三次)
+上次記錄貼文 ID：2026-11-14_43586
+
+步驟 2 - 抓取貼文：
+- 方法 A (truthsocial.com): 失敗 — ENOTFOUND（域名不在網路允許清單）
+- 方法 B (WebSearch): 多次搜尋均無 11/15 新貼文
+  - 搜尋結果最新為 Nov 14 貼文（Newsom 死刑貼文、海岸警衛隊讚美貼文）
+  - trumpstruth.org 最新索引仍為 43585（Nov 14, 21:50）
+- 方法 C (thetrumparchive.com / trumpstruth.org / kadoa.com / presidency.ucsb.edu): 全部 ENOTFOUND
+
+檢查結果：**無新貼文**
+- 未發現 2026-11-15 新貼文
+- Telegram 未推播
+- last_seen_id.txt 維持：2026-11-14_43586
