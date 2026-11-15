@@ -1,8 +1,8 @@
-[2026-11-15 執行記錄]
+[2026-11-15 執行記錄 - 最後更新]
 
 執行時間: 2026-11-15 UTC
 上次記錄貼文 ID: 2026-11-14_43582
-狀態: 資料抓取失敗
+狀態: 資料抓取失敗（多次嘗試）
 
 失敗原因:
 - 此 cloud session 的 egress 網路政策封鎖了幾乎所有外部 HTTP/HTTPS 連線
@@ -11,14 +11,19 @@
 - trumpstruth.org: DNS 解析失敗 (ENOTFOUND)
 - trumpalert.app: DNS 解析失敗 (ENOTFOUND)
 - kadoa.com: DNS 解析失敗 (ENOTFOUND)
-- yahoo.com, mediaite.com, thedailybeast.com, foxnews.com, newsweek.com 等新聞網站: 全部 DNS 解析失敗
+- mediaite.com: DNS 解析失敗 (ENOTFOUND)
+- foxnews.com: DNS 解析失敗 (ENOTFOUND)
+- thedailybeast.com: DNS 解析失敗 (ENOTFOUND)
+- yahoo.com: DNS 解析失敗 (ENOTFOUND)
+- rawstory.com: DNS 解析失敗 (ENOTFOUND)
 - GitHub API (curl via proxy): Write access not permitted
 
 WebSearch 有運作，但僅能取得摘要片段，無法取得完整貼文內容或精確的貼文 ID。
-從搜尋結果可知 2026-11-14 有以下主題的貼文（無法確認 ID 是否 > 43582）：
-1. 東波多馬克高爾夫球場 / 法官 Ana Reyes 相關
-2. 加州州長 Newsom 廢除死刑相關
-3. 好萊塢稅收優惠相關（無視全美航班停飛危機）
+
+從搜尋結果可知近期有以下主題的貼文（無法確認 ID 是否 > 43582）：
+1. 11/15 晨間：關於 Newsom 廢除死刑（報導為「超過16小時後的第一篇貼文」）
+2. 11/14：在全國航班停飛期間，貼文關於好萊塢稅收優惠和海岸警衛隊（未提及航班危機）
+3. 11/12 (較早)：宣告美國不再需要與伊朗談判核協議
 
 處理方式:
 - 未建立貼文分析檔案
@@ -27,4 +32,5 @@ WebSearch 有運作，但僅能取得摘要片段，無法取得完整貼文內�
 
 建議處置:
 - 請在 cloud session 的網路設定中允許以下網域：
-  truthsocial.com, thetrumparchive.com, trumpstruth.org
+  truthsocial.com, thetrumparchive.com, trumpstruth.org, trumpalert.app
+- 或考慮改用支援外部網路的 GitHub Actions workflow 來執行本監控任務
