@@ -1,60 +1,41 @@
-# 執行日誌 - 2026-11-15
+# 執行記錄 2026-11-15
 
-執行時間：2026-11-15 (UTC)
+**執行時間：** 2026-11-15 06:57:03 UTC
+**上次記錄 ID：** 2026-11-14_43586
 
-## 狀態
+## 抓取結果
 
-步驟 1 - 讀取上次記錄：成功，last_seen_id = 2026-11-14_43582
+**方法 A（WebFetch 直連）：** 失敗
+- truthsocial.com - 網路政策封鎖（ENOTFOUND）
+- thetrumparchive.com - 網路政策封鎖（ENOTFOUND）
 
-步驟 2 - 抓取貼文：
-- 方法 A (truthsocial.com): 失敗 — ENOTFOUND
-- 方法 B (WebSearch): 部分成功 — 透過搜尋找到新貼文資訊
-- 方法 C (trumpstruth.org/thetrumparchive.com): 失敗 — ENOTFOUND
+**方法 B（WebSearch）：** 部分成功
+- 搜尋到最新報導的貼文日期為 2026-11-14
+- trumpstruth.org 顯示最新貼文 ID 為 43585（2026-11-14 22:50 EST 影片貼文）
+- 2026-11-14 貼文內容確認：Newsom/死刑議題、好萊塢稅收議題、FAA 航班混亂
+- 未找到 ID 43587 或更高之後續貼文
+- 未找到任何 2026-11-15 的新貼文
 
-步驟 3 - 比較：找到 4 則新貼文（ID 43583-43586）
+**方法 C（WebFetch trumparchive）：** 失敗
+- www.thetrumparchive.com - 網路政策封鎖（ENOTFOUND）
 
-步驟 4 - 分析：已完成 4 篇中文分析
+## 結論
 
-步驟 5 - GitHub 上傳：透過 MCP 工具完成
+未確認有新貼文（ID > 43586）。可能原因：
+1. 2026-11-15（週日）尚無新貼文
+2. 網路限制導致部分資料來源無法存取
 
-步驟 6 - Telegram 推播失敗：api.telegram.org 被 egress proxy 封鎖（connect_rejected）
+**行動：** 不更新 last_seen_id.txt，不發送通知，僅記錄本次執行。
 
-步驟 7 - LINE 通知：由 GitHub Actions 自動處理（posts 已 push）
+## 網路限制說明
 
-## 新貼文清單
-- 43583: THE SEDITIOUS SIX（叛國六人組圖片）重要程度：高
-- 43584: 轉發 O'Keefe 感謝 Bartiromo（公民記者獎）重要程度：低
-- 43585: 影片-獨立新聞業 重要程度：中
-- 43586: 為 Jim Mullin 祈禱 重要程度：低
-
----
-
-## 第二次檢查 (同日稍後)
-
-執行時間：2026-11-15 UTC (第二次)
-上次記錄貼文 ID：2026-11-14_43586
-
-檢查結果：**無新貼文**
-- WebSearch 確認：trumpstruth.org 最新索引貼文為 status #43586（Nov 14, 21:52）
-- 未發現 status 43587 或更新的貼文
-- 2026-11-15 目前尚無新貼文
-- Telegram 未推播（無新貼文）
-
----
-
-## 第三次檢查 (同日稍後)
-
-執行時間：2026-11-15 UTC (第三次)
-上次記錄貼文 ID：2026-11-14_43586
-
-步驟 2 - 抓取貼文：
-- 方法 A (truthsocial.com): 失敗 — ENOTFOUND（域名不在網路允許清單）
-- 方法 B (WebSearch): 多次搜尋均無 11/15 新貼文
-  - 搜尋結果最新為 Nov 14 貼文（Newsom 死刑貼文、海岸警衛隊讚美貼文）
-  - trumpstruth.org 最新索引仍為 43585（Nov 14, 21:50）
-- 方法 C (thetrumparchive.com / trumpstruth.org / kadoa.com / presidency.ucsb.edu): 全部 ENOTFOUND
-
-檢查結果：**無新貼文**
-- 未發現 2026-11-15 新貼文
-- Telegram 未推播
-- last_seen_id.txt 維持：2026-11-14_43586
+以下域名需要在 Session 網路設定中加入允許清單才能直接存取：
+- truthsocial.com
+- www.thetrumparchive.com
+- www.trumpstruth.org
+- www.kadoa.com
+- mediaite.com
+- newsweek.com
+- www.thedailybeast.com
+- yahoo.com
+- www.showbiz411.com
