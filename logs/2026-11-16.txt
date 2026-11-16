@@ -5,7 +5,39 @@
 執行時間 (第三次): 2026-11-16T (上次執行)
 執行時間 (第四次): 2026-11-16T04:57:01Z
 執行時間 (第五次): 2026-11-16T06:58:11Z
+執行時間 (第六次): 2026-11-16T07:58:59Z
 上次記錄貼文 ID: 2026-11-15_43600
+
+## 第六次執行結果 (2026-11-16T07:58:59Z)
+
+抓取狀態: 部分成功（WebSearch 可用）
+新貼文數量: 0
+
+### 資料來源檢查
+
+- truthsocial.com: 無法連線（DNS 解析失敗）
+- thetrumparchive.com: 無法連線（DNS 解析失敗）
+- trumpstruth.org: 無法連線（DNS 解析失敗）
+- trumpalert.app: 無法連線（DNS 解析失敗）
+- timesofoman.com: 無法連線（DNS 解析失敗）
+- bernama.com: 無法連線（DNS 解析失敗）
+- jpost.com: 無法連線（DNS 解析失敗）
+- tribuneindia.com: 無法連線（DNS 解析失敗）
+- WebSearch: 成功（多次查詢）
+
+### WebSearch 發現
+
+- trumpstruth.org 最新索引貼文: 狀態 43600（2026-11-15 8:58 PM EST）
+- 搜尋 ID 43601–43605 均無結果
+- 川普 11/16 行程：早上白宮 Executive Time，之後啟程前往 Anchorage → 馬尼拉（ASEAN）→ 深圳（APEC）
+- 未發現 2026-11-16 任何確認的新貼文
+
+### 結論
+
+未發現新貼文。state/last_seen_id.txt 保持不變 (2026-11-15_43600)。
+未觸發 Telegram/LINE 通知。
+
+---
 
 ## 第五次執行結果 (2026-11-16T06:58:11Z)
 
