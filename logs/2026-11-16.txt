@@ -10,7 +10,37 @@
 執行時間 (第八次): 2026-11-16T09:57:00Z
 執行時間 (第九次): 2026-11-16T10:58:00Z
 執行時間 (第十次): 2026-11-16T11:59:47Z
+執行時間 (第十一次): 2026-11-16T12:57:03Z
 上次記錄貼文 ID: 2026-11-15_43600
+
+## 第十一次執行結果 (2026-11-16T12:57:03Z)
+
+抓取狀態: 部分成功（WebSearch 可用）
+新貼文數量: 0
+
+### 資料來源檢查
+
+- truthsocial.com: 無法連線（DNS 解析失敗）
+- thetrumparchive.com: 無法連線（DNS 解析失敗）
+- trumpstruth.org: 無法連線（DNS 解析失敗）
+- kadoa.com: 無法連線（DNS 解析失敗）
+- 多數新聞網站: 無法連線（PBS、CNN、WashPost、Newsweek、Yahoo、Daily Beast、Irish Star 等）
+- WebSearch: 成功（多次查詢）
+
+### WebSearch 發現
+
+- site:trumpstruth.org 搜尋 ID 43601–43607：無結果
+- 搜尋「November 16 2026 Trump Truth Social」：無新貼文結果
+- 搜尋「Trump Truth Social post November 16 2026 truthsocial.com」：無新貼文
+- 搜尋「Trump 5:50AM meltdown November 2026」：確認為 11/12（週四），非 11/16
+- 目前時間 12:57 UTC（美東時間 07:57 AM），距上次貼文約 11 小時
+
+### 結論
+
+未發現新貼文。state/last_seen_id.txt 保持不變 (2026-11-15_43600)。
+未觸發 Telegram/LINE 通知。
+
+---
 
 ## 第十次執行結果 (2026-11-16T11:59:47Z)
 
@@ -132,25 +162,12 @@
 抓取狀態: 部分成功（WebSearch 可用）
 新貼文數量: 0
 
-### 資料來源檢查
-
-- truthsocial.com: 無法連線（DNS 解析失敗）
-- thetrumparchive.com: 無法連線（DNS 解析失敗）
-- spectrumlocalnews.com: 無法連線
-- thedailybeast.com: 無法連線
-- cnn.com: 無法連線
-- pbs.org: 無法連線
-- jpost.com: 無法連線
-- yahoo.com: 無法連線
-- presidency.ucsb.edu: 無法連線
-- kadoa.com: 無法連線
-- WebSearch: 成功（多次查詢）
-
 ### WebSearch 發現
 
-- site:trumpstruth.org 搜尋 ID 43601-43605：無結果（確認無新貼文）
-- Trump 11/16 行程：前往亞洲（ASEAN/APEC）
-- 2026-11-16 目前無新貼文被索引
+- trumpstruth.org 最新索引貼文: 狀態 43600（2026-11-15 8:58 PM EST）
+- 已確認 ID 43587 = "The Biden Administration was an FAA disaster..." (Nov 15 8:16 AM EST)
+- 多次搜尋 ID 43601, 43602, 43603 無結果
+- 多次搜尋 "November 16 2026" 貼文無結果
 
 ### 結論
 
