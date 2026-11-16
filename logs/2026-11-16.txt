@@ -7,7 +7,44 @@
 執行時間 (第五次): 2026-11-16T06:58:11Z
 執行時間 (第六次): 2026-11-16T07:58:59Z
 執行時間 (第七次): 2026-11-16T08:56:00Z
+執行時間 (第八次): 2026-11-16T09:57:00Z
 上次記錄貼文 ID: 2026-11-15_43600
+
+## 第八次執行結果 (2026-11-16T09:57:00Z)
+
+抓取狀態: 部分成功（WebSearch 可用）
+新貼文數量: 0
+
+### 資料來源檢查
+
+- truthsocial.com: 無法連線（DNS 解析失敗）
+- thetrumparchive.com: 無法連線（DNS 解析失敗）
+- trumpstruth.org: 無法連線（DNS 解析失敗）
+- trumpalert.app: 無法連線（DNS 解析失敗）
+- t.me (Telegram): 無法連線（DNS 解析失敗）
+- 多數新聞網站: 無法連線（PBS、NBC、Yahoo、Daily Beast 等）
+- WebSearch: 成功（多次查詢）
+
+### WebSearch 發現
+
+- trumpstruth.org 最新索引貼文: 狀態 43600（2026-11-15 8:58 PM EST，宗教影片）
+- 搜尋 ID 43601–43608 均無結果
+- 多次搜尋 "November 16 2026" 川普貼文：無新結果
+- 確認今日（11/16）至查詢時間為止無新貼文被索引
+
+### 已知 ID 43600 之前的貼文（作為參考）
+
+- ID 43600: 宗教影片（耶穌相關），2026-11-15 20:58 EST
+- ID 43595: 轉發 Truth Social 連結，2026-11-15
+- ID 43588: ATC 資金請求（"If Congress approves..."），2026-11-15 ~08:35 EST
+- ID 43587: 批評拜登 FAA 政策，2026-11-15 ~08:16 EST
+
+### 結論
+
+未發現新貼文。state/last_seen_id.txt 保持不變 (2026-11-15_43600)。
+未觸發 Telegram/LINE 通知。
+
+---
 
 ## 第七次執行結果 (2026-11-16T08:56:00Z)
 
@@ -46,18 +83,6 @@
 抓取狀態: 部分成功（WebSearch 可用）
 新貼文數量: 0
 
-### 資料來源檢查
-
-- truthsocial.com: 無法連線（DNS 解析失敗）
-- thetrumparchive.com: 無法連線（DNS 解析失敗）
-- trumpstruth.org: 無法連線（DNS 解析失敗）
-- trumpalert.app: 無法連線（DNS 解析失敗）
-- timesofoman.com: 無法連線（DNS 解析失敗）
-- bernama.com: 無法連線（DNS 解析失敗）
-- jpost.com: 無法連線（DNS 解析失敗）
-- tribuneindia.com: 無法連線（DNS 解析失敗）
-- WebSearch: 成功（多次查詢）
-
 ### WebSearch 發現
 
 - trumpstruth.org 最新索引貼文: 狀態 43600（2026-11-15 8:58 PM EST）
@@ -77,21 +102,12 @@
 抓取狀態: 部分成功（WebSearch 可用）
 新貼文數量: 0
 
-### 資料來源檢查
-
-- truthsocial.com: 無法連線（DNS 解析失敗）
-- thetrumparchive.com: 無法連線（DNS 解析失敗）
-- trumpstruth.org: 無法連線（DNS 解析失敗）
-- WebSearch: 成功
-
 ### WebSearch 發現
 
 - trumpstruth.org 最新索引貼文: 狀態 43600（2026-11-15 8:58 PM EST）
-  - 內容: 影片貼文（宗教/信仰主題）
 - 已確認 ID 43587 = "The Biden Administration was an FAA disaster..." (Nov 15 8:16 AM EST)
 - 多次搜尋 ID 43601, 43602, 43603 無結果
 - 多次搜尋 "November 16 2026" 貼文無結果
-- 大多數新聞網站被封鎖 (CNN, Yahoo, PBS, Newsweek, Daily Beast, AOL, Benzinga, NTD 等)
 
 ### 結論
 
@@ -105,20 +121,11 @@
 抓取狀態: 部分成功（WebSearch 可用）
 新貼文數量: 0
 
-### 資料來源檢查
-
-- truthsocial.com: 無法連線（DNS 解析失敗）
-- thetrumparchive.com: 無法連線（DNS 解析失敗）
-- trumpstruth.org: 無法連線（DNS 解析失敗）
-- WebSearch: 成功
-
 ### WebSearch 發現
 
-- trumpstruth.org 最新索引貼文: 狀態 43600（2026-11-15 8:58 PM EST）
-  - 內容: 影片貼文（宗教主題）
+- trumpstruth.org 最新索引貼文: 狀態 43600（2026-11-15 8:58 PM EST，影片貼文）
 - 狀態 43598: 2026-11-15 圖片貼文
 - 未發現 ID > 43600 的新貼文
-- 2026-11-16 目前無新貼文被索引
 
 ### 結論
 
