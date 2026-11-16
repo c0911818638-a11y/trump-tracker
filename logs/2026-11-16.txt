@@ -11,7 +11,52 @@
 執行時間 (第九次): 2026-11-16T10:58:00Z
 執行時間 (第十次): 2026-11-16T11:59:47Z
 執行時間 (第十一次): 2026-11-16T12:57:03Z
-上次記錄貼文 ID: 2026-11-15_43600
+執行時間 (第十二次): 2026-11-16T15:03:44Z
+上次記錄貼文 ID: 2026-11-16_43602
+
+## 第十二次執行結果 (2026-11-16T15:03:44Z)
+
+抓取狀態: 部分成功（WebSearch 可用）
+新貼文數量: 0
+
+### 狀態更新
+
+注意：state/last_seen_id.txt 已於本次執行前更新為 2026-11-16_43602（前次 session 已捕獲 ID 43601 和 43602）。
+
+已知已捕獲的貼文：
+- ID 43601: 影片貼文，2026-11-16 06:05 AM EST — 阿拉斯加民主黨舞弊指控（Bill O'Reilly 片段轉發）
+- ID 43602: 轉發 https://truthsocial.com/users/realDonaldTrump/statuses/117625791706744860
+
+### 資料來源檢查
+
+- truthsocial.com: 無法連線（DNS 解析失敗）
+- thetrumparchive.com: 無法連線（DNS 解析失敗）
+- trumpstruth.org: 無法連線（DNS 解析失敗）
+- kadoa.com: 無法連線（DNS 解析失敗）
+- trumpalert.app: 無法連線（DNS 解析失敗）
+- 多數新聞網站: 無法連線（PBS、NBC、Yahoo、Daily Beast、Newsweek、RawStory 等）
+- WebSearch: 成功（多次查詢）
+
+### WebSearch 發現（搜尋 ID > 43602 的貼文）
+
+- site:trumpstruth.org ID 43603–43610: 無結果
+- 搜尋「Trump Truth Social November 16 2026 latest new」：無 ID > 43602 的新貼文
+- 搜尋「Trump Truth Social doing great November 16 2026」：The Poke 11/16 文章提及 Trump 發文稱自己「表現很好」（doing great），但無法確認 ID
+- 搜尋「Trump Truth Social treasonists death count」：此為 2026 年 8 月文章，非 11/16 新貼文
+- 搜尋「Trump Truth Social radical left greatest enemy November 16 2026」：此為 11/15（週日）貼文，已被 ID 43601/43602 前的 session 捕獲
+
+### 川普目前行程（背景）
+
+- 川普正在前往亞洲途中（ASEAN 第 49 屆峰會於馬尼拉 11/16-18，之後 APEC 於深圳）
+- 跨時區行程可能減少 Truth Social 活動
+- 2026 中期選舉後（民主黨奪下眾參兩院），川普持續在 Truth Social 發文質疑選舉結果
+
+### 結論
+
+未發現 ID > 43602 的新貼文。state/last_seen_id.txt 保持不變 (2026-11-16_43602)。
+未觸發 Telegram/LINE 通知。
+
+---
 
 ## 第十一次執行結果 (2026-11-16T12:57:03Z)
 
