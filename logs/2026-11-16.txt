@@ -4,7 +4,36 @@
 執行時間 (第二次): 2026-11-16T01:56:34Z
 執行時間 (第三次): 2026-11-16T (上次執行)
 執行時間 (第四次): 2026-11-16T04:57:01Z
+執行時間 (第五次): 2026-11-16T06:58:11Z
 上次記錄貼文 ID: 2026-11-15_43600
+
+## 第五次執行結果 (2026-11-16T06:58:11Z)
+
+抓取狀態: 部分成功（WebSearch 可用）
+新貼文數量: 0
+
+### 資料來源檢查
+
+- truthsocial.com: 無法連線（DNS 解析失敗）
+- thetrumparchive.com: 無法連線（DNS 解析失敗）
+- trumpstruth.org: 無法連線（DNS 解析失敗）
+- WebSearch: 成功
+
+### WebSearch 發現
+
+- trumpstruth.org 最新索引貼文: 狀態 43600（2026-11-15 8:58 PM EST）
+  - 內容: 影片貼文（宗教/信仰主題）
+- 已確認 ID 43587 = "The Biden Administration was an FAA disaster..." (Nov 15 8:16 AM EST)
+- 多次搜尋 ID 43601, 43602, 43603 無結果
+- 多次搜尋 "November 16 2026" 貼文無結果
+- 大多數新聞網站被封鎖 (CNN, Yahoo, PBS, Newsweek, Daily Beast, AOL, Benzinga, NTD 等)
+
+### 結論
+
+未發現新貼文。state/last_seen_id.txt 保持不變 (2026-11-15_43600)。
+未觸發 Telegram/LINE 通知。
+
+---
 
 ## 第四次執行結果 (2026-11-16T04:57:01Z)
 
