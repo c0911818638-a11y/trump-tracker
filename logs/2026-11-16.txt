@@ -13,7 +13,52 @@
 執行時間 (第十一次): 2026-11-16T12:57:03Z
 執行時間 (第十二次): 2026-11-16T15:03:44Z
 執行時間 (第十三次): 2026-11-16T16:56:26Z
-上次記錄貼文 ID: 2026-11-16_43603
+執行時間 (第十四次): 2026-11-16T21:58:57Z
+上次記錄貼文 ID: 2026-11-16_117626544494395657（trumpstruth.org ID 43603）
+
+## 第十四次執行結果 (2026-11-16T21:58:57Z)
+
+抓取狀態: 部分成功（WebSearch 可用）
+新貼文數量: 0
+
+### 資料來源檢查
+
+- truthsocial.com: 無法連線（DNS 解析失敗）
+- thetrumparchive.com: 無法連線（DNS 解析失敗）
+- trumpstruth.org: 無法連線（DNS 解析失敗）
+- kadoa.com: 無法連線（DNS 解析失敗）
+- 多數新聞網站: 無法連線（CNN、NBC、Yahoo、Daily Beast、JPost、Newsweek 等）
+- WebSearch: 成功（多次查詢）
+
+### WebSearch 發現
+
+- 搜尋 trumpstruth.org 狀態 ID 43604–43606：無結果
+- 搜尋「Trump Truth Social November 16 2026 evening night tonight latest」：無新貼文
+- 搜尋「Trump Truth Social post text aviation flight grounding」：確認最新已知為 11/15 貼文
+- 搜尋「Trump Truth Social meltdown APEC China Xi Putin November 16 2026」：無 11/16 新貼文
+- 搜尋「Trump Truth Social new post November 16 2026 evening」：同樣無新結果
+
+### 背景資訊（今日確認）
+
+- 川普已於今日（11/16，週一）啟程前往亞洲
+  - 目的地：菲律賓馬尼拉（ASEAN 第49屆峰會，11/16-18）→ 中國深圳（APEC）
+  - 歷史性三邊會議（川普×習近平×普丁）定於 11/19 深圳舉行
+  - 議題：核裁軍、伊朗戰爭、烏克蘭局勢、美中貿易
+- 跨時區長途飛行可能影響 Truth Social 活動
+
+### 已知今日貼文（已於前次執行捕獲）
+
+- ID 43601 (Truth Social ID ~117625xxx): 阿拉斯加選舉影片貼文，06:05 AM EST
+- ID 43602: 轉發 https://truthsocial.com/users/realDonaldTrump/statuses/117625791706744860
+- ID 43603 (Truth Social ID 117626544494395657): 最後捕獲貼文
+
+### 結論
+
+未發現 ID > 43603 的新貼文（Truth Social ID > 117626544494395657）。
+state/last_seen_id.txt 保持不變 (2026-11-16_117626544494395657)。
+未觸發 Telegram/LINE 通知。
+
+---
 
 ## 第十三次執行結果 (2026-11-16T16:56:26Z)
 
