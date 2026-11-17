@@ -112,6 +112,27 @@ Telegram/LINE 通知：未推播（無新貼文）。
 
 ---
 
+## 第八次執行（2026-11-17T13:56:24Z）
+
+**上次記錄 ID：2026-11-16_117628858669518545**
+
+方法 A：truthsocial.com RSS/API → ENOTFOUND（網路政策封鎖）
+方法 B：WebSearch（standard + extended 模式）→ 無 2026-11-17 確認新貼文
+  - 搜尋「Trump Truth Social posts today November 17 2026」→ 無新貼文（最新為 11/15-16）
+  - 搜尋「Trump Truth Social latest posts site:thetrumparchive.com」→ 無最新數據
+  - 搜尋「Trump Truth Social November 17 2026 new post today」→ 無新貼文
+  - 搜尋「"Trump" "Truth Social" posts "November 17" OR "Nov 17" 2026」→ 無新貼文
+  - 搜尋「Trump Truth Social post text content today flight chaos Iran economy November 17 2026」→ 無新貼文
+  - 搜尋「Trump posts today 2026年11月17日 Truth Social」→ 無新貼文
+方法 C：thetrumparchive.com, kadoa.com, yahoo.com, thedailybeast.com, theconservativetreehouse.com, presidency.ucsb.edu 均被 egress policy 封鎖
+
+步驟 5：GitHub Push — 成功（更新此日誌）
+步驟 6：Telegram 推播 — 未嘗試（無新貼文）
+
+結論：無新貼文。state/last_seen_id.txt 維持現狀（2026-11-16_117628858669518545）。
+
+---
+
 ## 建議
 
 需將以下域名加入網路政策白名單以提升監控效果：
