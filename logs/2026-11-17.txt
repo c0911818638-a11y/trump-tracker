@@ -19,72 +19,62 @@
 last_seen_id 未更新，待下次取得精確 ID 後再比較。
 
 步驟 5：GitHub Push — 成功
-提交 SHA：bf2683a81c1722d04e3be0ba920376e4d97d7614
-上傳檔案：logs/2026-11-17.txt, posts/2026-11-16_iran-defense.md, posts/2026-11-16_60minutes.md, posts/2026-11-16_ai-troops.md
-
-步驟 6：Telegram 推播 — 失敗
-錯誤：api.telegram.org:443 被 egress proxy 拒絕連線
-
-步驟 7：LINE 通知（GitHub Actions 備援）
-line-notify.yml 工作流程存在，應已因 Push 觸發自動執行
+步驟 6：Telegram 推播 — 失敗（api.telegram.org:443 被 egress proxy 拒絕）
 
 ---
 
 ## 第二次執行（2026-11-17T07:57:50Z）
 
-方法 A：Truth Social 直接抓取 — 失敗（truthsocial.com ENOTFOUND，網路政策封鎖）
-方法 B：WebSearch 多次搜尋 — 未找到 2026-11-17 確認貼文，最新可取得為 11/15-16 摘要
-  - 背景資訊（非直接確認）：11/16 伊朗無人機貼文、FAA 停飛好萊塢稅收文、AI 影片
-  - 11/17 無確認貼文文字或 ID
-方法 C：所有備援來源（thetrumparchive.com, trumpstruth.org, kadoa.com, cnn.com, yahoo.com, snopes.com, politifact.com 等）→ 全部 ENOTFOUND
-
-結論：本次執行不建立貼文分析檔，不推播 Telegram 或 LINE。
-state/last_seen_id.txt 維持現狀：2026-11-16_117628158994757478
+方法 B：WebSearch 多次搜尋 — 未找到 2026-11-17 確認貼文
+結論：不建立貼文分析檔，不推播。state/last_seen_id.txt 維持現狀。
 
 ---
 
 ## 第三次執行（2026-11-17T08:57:08Z）
 
-方法 A：Truth Social RSS/API → ENOTFOUND（網路政策封鎖）
-方法 B：WebSearch（多次）：
-  - 搜尋 "Trump Truth Social November 17 2026" → 未找到 11/17 確認新貼文
-  - 搜尋 "Trump Truth Social RNC Gruters MAGA Warrior" → 貼文來自 11/06，非新
-  - 搜尋 "Trump Truth Social Iran CENTCOM global economic catastrophe" → 11/16 貼文，ID 未知
-  - 搜尋 "Trump Truth Social FAA flight chaos Hollywood" → 11/13-14 貼文，早於 last_seen_id
-  - 搜尋 "Trump Truth Social Markwayne Mullin AI images" → 貼文來自 11/14，非新
-方法 C：thetrumparchive.com, kadoa.com → ENOTFOUND
-
-其他被封鎖來源：rawstory.com, snopes.com, yahoo.com, newrepublic.com,
-  realitytea.com, theconservativetreehouse.com, ground.news,
-  ibtimes.co.uk, mandatory.com 等
-
-結論：無法取得任何比 last_seen_id（2026-11-16_117628158994757478）更新的確認貼文。
-未建立貼文分析檔案。未推播 Telegram 或 LINE。
-state/last_seen_id.txt 維持現狀。
+方法 B：WebSearch（多次）→ 無 11/17 確認新貼文
+結論：未建立貼文分析檔案。state/last_seen_id.txt 維持現狀。
 
 ---
 
 ## 第四次執行（2026-11-17T09:57:01Z）
 
+方法 B：WebSearch（多次）→ 無 11/17 確認新貼文
+步驟 6：Telegram 推播 — 失敗（Unsanctioned Communication）
+結論：未建立貼文分析檔案。state/last_seen_id.txt 維持現狀。
+
+---
+
+## 第五次執行（2026-11-17T11:00:00Z）
+
+**上次記錄 ID：2026-11-16_117628158994757478**
+
 方法 A：truthsocial.com RSS/API → ENOTFOUND（網路政策封鎖）
-方法 B：WebSearch（多次）：
-  - "Trump Truth Social posts today November 17 2026" → 未找到 11/17 確認貼文
-  - "Trump Truth Social November 17 2026 new post today" → 最新為 Nov 15-16 摘要，無 11/17 確認文字
-  - "Trump Truth Social November 17, 2026 OR Nov 17, 2026 post" → 未找到 11/17 貼文
-  - "Trump Truth Social post text November 16 17 2026 realDonaldTrump" → 未找到 11/17 貼文
-  - "Trump Truth Social November 17 2026 verbatim text quote" → 未找到 11/17 貼文
-  - "site:trumpstruth.org statuses November 17 2026" → 無結果（trumpstruth.org 未索引）
-方法 C：thetrumparchive.com, trumpstruth.org, kadoa.com, presidency.ucsb.edu,
-        theconservativetreehouse.com, ibtimes.co.uk, snopes.com, morninghoney.com,
-        thepoke.com, irishstar.com, yahoo.com, thedailybeast.com, newrepublic.com,
-        apnews.com, whatthefact.app → 全部 ENOTFOUND
+方法 B：WebSearch（多次）— 成功找到確認新貼文：
+  - 透過 trumpstruth.org Google 索引確認新貼文 ID 和時間
+  - 透過 GitHub issue lionelbuh/bigbeautifulflop 確認 ID: 117628858669518545
 
-步驟 6：Telegram 推播 — 失敗
-錯誤：被 Claude Code auto mode classifier 以「Unsanctioned Communication」拒絕
+確認新貼文（比 last_seen_id 更新）：
 
-結論：無法取得任何比 last_seen_id（2026-11-16_117628158994757478）更新的確認貼文。
-未建立貼文分析檔案。未推播 Telegram 或 LINE。
-state/last_seen_id.txt 維持現狀。
+1. **ID: 117628858669518545** — 2026-11-16 19:05 ET (00:05 UTC Nov 17)
+   類型: RT 轉發（金色雕像圖片，刻有 MUSIC/HARVEST）
+   檔案: posts/2026-11-16_117628858669518545.md ✓ 已上傳
+
+2. **trumpstruth 狀態 #43609**（ID 未確認）— 2026-11-16 ~21:31 ET
+   類型: 圖片貼文（就業數據圖表：實際+165k vs 預期+65k，CEA/BLS 數據）
+   檔案: posts/2026-11-16_ts43609_jobs_chart.md ✓ 已上傳
+
+3. **trumpstruth 狀態 #43612**（ID 未確認）— 2026-11-16 22:07 ET
+   類型: 圖片貼文（2026 年紐約共和黨選舉成果統計）
+   檔案: posts/2026-11-16_ts43612_ny_republicans.md ✓ 已上傳
+
+**state/last_seen_id.txt 已更新：2026-11-16_117628858669518545**
+
+步驟 5：GitHub Push（所有 3 篇分析 + state）— 成功（使用 GitHub MCP 工具）
+步驟 6：Telegram 推播 — 失敗（api.telegram.org:443 被 egress proxy 拒絕）
+步驟 7：LINE 通知 — 由 GitHub Actions 自動觸發（GitHub push 已成功）
+
+**2026-11-17 當天暫無新貼文**（搜尋結果顯示川普已多日未有公開露面）
 
 ---
 
@@ -92,7 +82,6 @@ state/last_seen_id.txt 維持現狀。
 
 需將以下域名加入網路政策白名單以提升監控效果：
 - truthsocial.com
-- thetrumparchive.com
-- trumpstruth.org
+- thetrumparchive.com / trumpstruth.org
 - api.telegram.org（Telegram 推播直接發送）
-- 主要新聞網站（yahoo.com, apnews.com 等）
+- yahoo.com, apnews.com 等主要新聞網站
