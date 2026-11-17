@@ -1,9 +1,45 @@
 # 監控日誌 - 2026-11-17
 
-**執行時間：** 2026-11-17 UTC（第二次執行）
 **上次記錄 ID：** 2026-11-16_117628158994757478
 
-## 錯誤記錄
+---
+
+## 第三次執行記錄（最新）
+
+**執行時間：** 2026-11-17 UTC（第三次執行）
+
+所有抓取方法均失敗，無法取得新貼文：
+
+### 嘗試方法
+
+**方法 A - WebFetch 直接訪問 Truth Social：**
+- truthsocial.com/@realDonaldTrump.rss → DNS 解析失敗（網路政策封鎖）
+- 狀態：❌ 失敗
+
+**方法 B - WebSearch 搜尋：**
+- 多次搜尋 2026-11-17 Trump Truth Social 貼文
+- 結果：只找到 11 月 15-16 日的貼文背景資訊，無 11 月 17 日確認新貼文
+- 背景資訊：川普於 11 月 17 日抵達菲律賓出席第 49 屆東南亞國協峰會
+- 狀態：⚠️ 部分成功（有背景但無具體貼文 ID）
+
+**方法 C - Trump Archive / 第三方存檔：**
+- thetrumparchive.com, trumpstruth.org, kadoa.com - 全部 DNS 解析失敗
+- 狀態：❌ 失敗
+
+**新聞網站存取嘗試：**
+- cnn.com, yahoo.com, foxnews.com, mediaite.com, variety.com 等 - 全部 DNS 解析失敗
+- 狀態：❌ 失敗
+
+### 結論
+本次執行因雲端環境 egress policy 限制，無法訪問任何外部來源。
+無確認新貼文，不建立貼文檔，不推播通知。
+last_seen_id.txt 維持不變。
+
+---
+
+## 第二次執行記錄
+
+**執行時間：** 2026-11-17 UTC（第二次執行）
 
 所有抓取方法均失敗，無法取得新貼文：
 
@@ -35,17 +71,9 @@ WebSearch 間接得知（無法驗證 ID，僅供參考）：
 - irishstar.com、ibtimes.co.uk、snopes.com、whatthefact.app
 - politifact.com、substack.com
 
-## 結論
+## 長期建議
 
-本次執行因雲端環境 egress policy 限制，無法訪問任何 Truth Social 相關來源。
-WebSearch 顯示有 2026-11-17 相關活動（FAA 危機）但無法取得確認的新貼文 ID 或完整文字。
-
-**不建立貼文檔案，不推播通知。**
-**state/last_seen_id.txt 保持不變（2026-11-16_117628158994757478）。**
-
-## 建議
-
-請在 Claude Code Remote 環境設定中允許以下域名：
+請在 Claude Code Remote 環境設定中允許以下域名以恢復監控功能：
 - truthsocial.com
 - thetrumparchive.com
 - trumpstruth.org
