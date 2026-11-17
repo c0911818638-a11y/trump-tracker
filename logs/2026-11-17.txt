@@ -1,80 +1,27 @@
-# 監控日誌 - 2026-11-17
+# 2026-11-17 監控日誌
 
-**上次記錄 ID：** 2026-11-16_117628158994757478
+執行時間：2026-11-17 UTC
+上次記錄 ID：2026-11-16_117628158994757478
 
----
+## 執行狀況
 
-## 第三次執行記錄（最新）
+方法 A：Truth Social 直接抓取 — 失敗（truthsocial.com DNS 無法解析，網路政策封鎖）
+方法 B：WebSearch 搜尋 — 部分成功（取得摘要片段，無法取得完整貼文 ID）
+方法 C：Trump Archive — 失敗（thetrumparchive.com, trumpstruth.org, kadoa.com 均被封鎖）
+其他新聞來源 — 失敗（yahoo.com, foxnews.com, cnn.com, mediaite.com, ibtimes.co.uk, newsweek.com 等均無法連線）
 
-**執行時間：** 2026-11-17 UTC（第三次執行）
+## 透過 WebSearch 發現的 11/16 貼文（已建立分析檔案）
 
-所有抓取方法均失敗，無法取得新貼文：
+1. 伊朗戰爭國防聲明（posts/2026-11-16_iran-defense.md）
+2. 攻擊 CBS 60 Minutes（posts/2026-11-16_60minutes.md）
+3. AI 生成士兵影片（posts/2026-11-16_ai-troops.md）
 
-### 嘗試方法
+注意：因無法取得精確貼文 ID，無法確認上述貼文是否比 last_seen_id 更新。
+last_seen_id 未更新，待下次取得精確 ID 後再比較。
 
-**方法 A - WebFetch 直接訪問 Truth Social：**
-- truthsocial.com/@realDonaldTrump.rss → DNS 解析失敗（網路政策封鎖）
-- 狀態：❌ 失敗
-
-**方法 B - WebSearch 搜尋：**
-- 多次搜尋 2026-11-17 Trump Truth Social 貼文
-- 結果：只找到 11 月 15-16 日的貼文背景資訊，無 11 月 17 日確認新貼文
-- 背景資訊：川普於 11 月 17 日抵達菲律賓出席第 49 屆東南亞國協峰會
-- 狀態：⚠️ 部分成功（有背景但無具體貼文 ID）
-
-**方法 C - Trump Archive / 第三方存檔：**
-- thetrumparchive.com, trumpstruth.org, kadoa.com - 全部 DNS 解析失敗
-- 狀態：❌ 失敗
-
-**新聞網站存取嘗試：**
-- cnn.com, yahoo.com, foxnews.com, mediaite.com, variety.com 等 - 全部 DNS 解析失敗
-- 狀態：❌ 失敗
-
-### 結論
-本次執行因雲端環境 egress policy 限制，無法訪問任何外部來源。
-無確認新貼文，不建立貼文檔，不推播通知。
-last_seen_id.txt 維持不變。
-
----
-
-## 第二次執行記錄
-
-**執行時間：** 2026-11-17 UTC（第二次執行）
-
-所有抓取方法均失敗，無法取得新貼文：
-
-### 方法 A - WebFetch 直接訪問
-- truthsocial.com/@realDonaldTrump.rss → 錯誤：getaddrinfo ENOTFOUND（網域不在 egress 允許清單）
-- truthsocial.com/api/v1/accounts/107780257626128497/statuses → 同上，ENOTFOUND
-
-### 方法 B - WebSearch（有限資訊）
-- 搜尋「Trump Truth Social posts today 2026-11-17」→ 無 2026-11-17 新貼文結果
-- 搜尋「Trump Truth Social November 17 2026 latest posts」→ 最新為 Nov 15-16，無 Nov 17 貼文文字
-- 搜尋「Trump Truth Social "60 Minutes" OR "FAA" OR "Iran" post text November 2026」→ 有提及但無完整貼文 ID
-- 搜尋「Trump Truth Social "november 17" 2026 posted said wrote」→ 無確認新貼文
-
-WebSearch 間接得知（無法驗證 ID，僅供參考）：
-- 2026-11-16 09:31 PM EST：「Job Growth Doubles Expectations」相關貼文（Trump's Truth 存檔）
-- 2026-11-16：約 13 組 Potomac Park 高爾夫球場（「trash island」）照片
-- 2026-11-16 ~8:58 PM Eastern：AI 生成士兵祈禱影片
-- 2026-11-16 06:05 AM：民主黨起訴轉發（Truth Social ID: 117625791706744860，低於 last_seen_id）
-- 2026-11-16：批評 60 Minutes 管理層貼文
-- 2026-11-17（週一）：CNN 報導 Trump 堅稱有積極處理 FAA 航班停飛危機（無具體 Truth Social 貼文 ID）
-
-### 方法 C - 備用 Archive 網站（全部封鎖）
-- thetrumparchive.com → ENOTFOUND
-- trumpstruth.org → ENOTFOUND
-- kadoa.com → ENOTFOUND
-
-### 其他嘗試的新聞網站（全部封鎖）
-- yahoo.com、cnn.com、thedailybeast.com、variety.com
-- irishstar.com、ibtimes.co.uk、snopes.com、whatthefact.app
-- politifact.com、substack.com
-
-## 長期建議
-
-請在 Claude Code Remote 環境設定中允許以下域名以恢復監控功能：
+## 建議
+需將以下域名加入網路政策白名單：
 - truthsocial.com
 - thetrumparchive.com
 - trumpstruth.org
-- kadoa.com
+- apnews.com 或 reuters.com（至少一個可靠新聞來源）
