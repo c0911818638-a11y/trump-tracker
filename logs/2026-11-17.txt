@@ -1,0 +1,30 @@
+日期：2026-11-17
+執行時間：2026-11-17T00:56:50Z
+最後已知貼文 ID：2026-11-16_117628158994757478
+
+錯誤記錄：
+1. truthsocial.com - ENOTFOUND（網域未在 session 授權清單，無法存取）
+2. thetrumparchive.com - ENOTFOUND（網域未在 session 授權清單）
+3. kadoa.com - ENOTFOUND（網域未在 session 授權清單）
+4. cnn.com - ENOTFOUND（網域未在 session 授權清單）
+5. yahoo.com - ENOTFOUND（網域未在 session 授權清單）
+6. thedailybeast.com - ENOTFOUND（網域未在 session 授權清單）
+7. mediaite.com - ENOTFOUND（網域未在 session 授權清單）
+8. irishstar.com - ENOTFOUND（網域未在 session 授權清單）
+9. trumpstruth.org - ENOTFOUND（網域未在 session 授權清單）
+10. snopes.com - ENOTFOUND（網域未在 session 授權清單）
+11. whatthefact.app - ENOTFOUND（網域未在 session 授權清單）
+
+WebSearch 結果：
+- 未找到 2026-11-16_117628158994757478 之後的新貼文
+- 搜尋到最新的 Truth Social 貼文 ID 為 117625791706744860（比 last_seen_id 更舊）
+- 有關 FAA 停飛危機的貼文報導見於新聞（約 2026-11-16），但無法取得確切貼文 ID 或原文
+
+結論：
+本次執行無法取得新的 Trump Truth Social 貼文。
+原因：cloud session 的網路政策限制了對 truthsocial.com 及所有相關新聞/存檔網站的存取。
+建議：在 session 網路設定中允許以下網域：
+  - truthsocial.com
+  - thetrumparchive.com
+  - trumpstruth.org
+  - kadoa.com
