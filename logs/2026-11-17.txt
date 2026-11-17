@@ -41,6 +41,27 @@ line-notify.yml 工作流程存在，應已因 Push 觸發自動執行
 結論：本次執行不建立貼文分析檔，不推播 Telegram 或 LINE。
 state/last_seen_id.txt 維持現狀：2026-11-16_117628158994757478
 
+---
+
+## 第三次執行（2026-11-17T08:57:08Z）
+
+方法 A：Truth Social RSS/API → ENOTFOUND（網路政策封鎖）
+方法 B：WebSearch（多次）：
+  - 搜尋 "Trump Truth Social November 17 2026" → 未找到 11/17 確認新貼文
+  - 搜尋 "Trump Truth Social RNC Gruters MAGA Warrior" → 貼文來自 11/06，非新
+  - 搜尋 "Trump Truth Social Iran CENTCOM global economic catastrophe" → 11/16 貼文，ID 未知
+  - 搜尋 "Trump Truth Social FAA flight chaos Hollywood" → 11/13-14 貼文，早於 last_seen_id
+  - 搜尋 "Trump Truth Social Markwayne Mullin AI images" → 貼文來自 11/14，非新
+方法 C：thetrumparchive.com, kadoa.com → ENOTFOUND
+
+其他被封鎖來源：rawstory.com, snopes.com, yahoo.com, newrepublic.com,
+  realitytea.com, theconservativetreehouse.com, ground.news,
+  ibtimes.co.uk, mandatory.com 等
+
+結論：無法取得任何比 last_seen_id（2026-11-16_117628158994757478）更新的確認貼文。
+未建立貼文分析檔案。未推播 Telegram 或 LINE。
+state/last_seen_id.txt 維持現狀。
+
 ## 建議
 
 需將以下域名加入網路政策白名單以提升監控效果：
