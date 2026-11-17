@@ -78,6 +78,22 @@ last_seen_id 未更新，待下次取得精確 ID 後再比較。
 
 ---
 
+## 第六次執行（2026-11-17T12:00:00Z）
+
+**上次記錄 ID：2026-11-16_117628858669518545**
+
+方法 A：truthsocial.com RSS/API → ENOTFOUND（網路政策封鎖）
+方法 B：WebSearch（多次，含 extended 模式）→ 無 2026-11-17 確認新貼文
+  - 嘗試搜尋 ID 範圍 117629*/117630*/117631*/117632*，無結果
+  - 搜尋 trumpstruth.org 狀態 43613-43616，無結果
+  - 搜尋 presidency.ucsb.edu November 17 2026，無結果
+方法 C：所有外部域名均被 egress policy 封鎖
+
+結論：未發現新貼文。state/last_seen_id.txt 維持現狀（2026-11-16_117628858669518545）。
+Telegram/LINE 通知：未推播（無新貼文）。
+
+---
+
 ## 建議
 
 需將以下域名加入網路政策白名單以提升監控效果：
