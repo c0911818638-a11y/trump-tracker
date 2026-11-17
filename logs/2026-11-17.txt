@@ -1,41 +1,17 @@
-# 監控日誌 - 2026-11-17
+執行時間: 2026-11-17 UTC
+上次記錄 ID: 117628158994757478 (2026-11-16)
 
-**執行時間：** 2026-11-17 UTC
-**上次記錄 ID：** 2026-11-16_117628158994757478
+錯誤記錄:
+- 方法A: truthsocial.com 無法解析 (網路政策限制)
+- 方法B (WebSearch): 未找到 2026-11-17 的新貼文，搜尋結果僅含 11/15-16 的貼文
+- 方法C: thetrumparchive.com 無法解析 (網路政策限制)
+- 其他新聞網站 (foxnews, yahoo, cnbc, pbs, nbc, rawstory, mediaite, thedailybeast, variety, snopes, ibtimes, kadoa, wikipedia): 均無法解析
 
-## 錯誤記錄
+原因: 此 Claude Code Remote Session 的網路出口政策 (egress policy) 限制了大多數外部域名的存取。
+僅 WebSearch 工具可用，但未返回今日 (2026-11-17) 的新貼文。
 
-所有抓取方法均失敗，無法取得新貼文：
-
-### 方法 A - WebFetch 直接訪問
-- truthsocial.com/@realDonaldTrump.rss → 錯誤：getaddrinfo ENOTFOUND（網域不在 egress 允許清單）
-
-### 方法 B - WebSearch
-- 搜尋「Trump Truth Social posts today 2026-11-17」→ 無 2026-11-17 新貼文結果
-- 搜尋「Trump Truth Social November 17 2026 morning post」→ 無新貼文文字
-- 搜尋「Trump statement post November 17 2026」→ 未找到確認的新貼文
-
-### 方法 C - 備用 Archive 網站（全部封鎖）
-- thetrumparchive.com → ENOTFOUND
-- trumpstruth.org → ENOTFOUND
-- kadoa.com → ENOTFOUND
-- presidency.ucsb.edu → ENOTFOUND
-
-### 其他嘗試的新聞網站（全部封鎖）
-- yahoo.com、rawstory.com、thedailybeast.com
-- newrepublic.com、cbsnews.com、ibtimes.co.uk、snopes.com
-
-## 結論
-
-本次執行因雲端環境 egress policy 限制，無法訪問任何 Truth Social 相關 Archive，
-也無法從 WebSearch 取得 2026-11-17 的具體新貼文文字。
-
-**不建立貼文檔案，不推播通知。**
-
-## 建議
-
-請在 Claude Code Remote 環境設定中允許以下域名：
+結論: 無法確認今日是否有新貼文，不建立貼文檔，不推播通知。
+如需解除限制，請在 Session 設定中允許以下域名:
 - truthsocial.com
-- thetrumparchive.com / trumpstruth.org
-- kadoa.com / www.kadoa.com
-- presidency.ucsb.edu
+- thetrumparchive.com
+- 主流新聞網站 (reuters.com, apnews.com 等)
