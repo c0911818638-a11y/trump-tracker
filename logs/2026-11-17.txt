@@ -20,14 +20,20 @@
 - https://www.thetrumparchive.com/ → 錯誤: DNS 解析失敗
 - https://trumpstruth.org/ → 錯誤: DNS 解析失敗
 - https://www.kadoa.com/potus/truth → 錯誤: DNS 解析失敗
-- https://t.me/s/realDonaldTrump_Truth/ → 錯誤: DNS 解析失敗
-- https://theconservativetreehouse.com/ → 錯誤: DNS 解析失敗
-- https://www.presidency.ucsb.edu/ → 錯誤: DNS 解析失敗
+- 其他新聞網站 (yahoo, dailybeast, nbcnews 等) → 錯誤: DNS 解析失敗
 
 ## 根本原因
 
-Cloud session 的網路出口政策封鎖了大多數外部網域，只有 GitHub MCP 工具可存取。
-WebFetch 和直接 curl 均無法連線至任何新聞或 Truth Social 相關網站。
+Cloud session 的網路出口政策封鎖了大多數外部網域，只有 WebSearch 和 GitHub MCP 工具可存取。
+
+## 第二次執行補充（同日）
+
+**WebSearch 深度搜尋結果：**
+- 透過多輪 WebSearch 擴展搜尋，成功確認 trumpstruth.org 存檔最新貼文 ID 為 117629573147086367（2026-11-16 22:07 ET）
+- 此 ID 與 last_seen_id 完全相符，表示自上次記錄後**無新貼文**
+- 川普正在進行亞洲行，於 2026-11-17 抵達菲律賓馬尼拉參加 ASEAN 峰會
+- 11/16 ET 時段的經濟/稅收相關貼文均已包含於上次記錄範圍內
+- 未在任何搜尋結果中發現 ID > 117629573147086367 的新貼文
 
 ## 建議行動
 
