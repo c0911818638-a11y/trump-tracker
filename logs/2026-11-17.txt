@@ -1,6 +1,6 @@
 # 監控日誌 - 2026-11-17
 
-**執行時間：** 2026-11-17 UTC
+**執行時間：** 2026-11-17 UTC（第二次執行）
 **上次記錄 ID：** 2026-11-16_117628158994757478
 
 ## 錯誤記錄
@@ -9,33 +9,44 @@
 
 ### 方法 A - WebFetch 直接訪問
 - truthsocial.com/@realDonaldTrump.rss → 錯誤：getaddrinfo ENOTFOUND（網域不在 egress 允許清單）
+- truthsocial.com/api/v1/accounts/107780257626128497/statuses → 同上，ENOTFOUND
 
-### 方法 B - WebSearch
+### 方法 B - WebSearch（有限資訊）
 - 搜尋「Trump Truth Social posts today 2026-11-17」→ 無 2026-11-17 新貼文結果
-- 搜尋「Trump Truth Social November 17 2026 morning post」→ 無新貼文文字
-- 搜尋「Trump statement post November 17 2026」→ 未找到確認的新貼文
+- 搜尋「Trump Truth Social November 17 2026 latest posts」→ 最新為 Nov 15-16，無 Nov 17 貼文文字
+- 搜尋「Trump Truth Social "60 Minutes" OR "FAA" OR "Iran" post text November 2026」→ 有提及但無完整貼文 ID
+- 搜尋「Trump Truth Social "november 17" 2026 posted said wrote」→ 無確認新貼文
+
+WebSearch 間接得知（無法驗證 ID，僅供參考）：
+- 2026-11-16 09:31 PM EST：「Job Growth Doubles Expectations」相關貼文（Trump's Truth 存檔）
+- 2026-11-16：約 13 組 Potomac Park 高爾夫球場（「trash island」）照片
+- 2026-11-16 ~8:58 PM Eastern：AI 生成士兵祈禱影片
+- 2026-11-16 06:05 AM：民主黨起訴轉發（Truth Social ID: 117625791706744860，低於 last_seen_id）
+- 2026-11-16：批評 60 Minutes 管理層貼文
+- 2026-11-17（週一）：CNN 報導 Trump 堅稱有積極處理 FAA 航班停飛危機（無具體 Truth Social 貼文 ID）
 
 ### 方法 C - 備用 Archive 網站（全部封鎖）
 - thetrumparchive.com → ENOTFOUND
 - trumpstruth.org → ENOTFOUND
 - kadoa.com → ENOTFOUND
-- presidency.ucsb.edu → ENOTFOUND
 
 ### 其他嘗試的新聞網站（全部封鎖）
-- yahoo.com、rawstory.com、thedailybeast.com
-- newrepublic.com、cbsnews.com、ibtimes.co.uk、snopes.com
+- yahoo.com、cnn.com、thedailybeast.com、variety.com
+- irishstar.com、ibtimes.co.uk、snopes.com、whatthefact.app
+- politifact.com、substack.com
 
 ## 結論
 
-本次執行因雲端環境 egress policy 限制，無法訪問任何 Truth Social 相關 Archive，
-也無法從 WebSearch 取得 2026-11-17 的具體新貼文文字。
+本次執行因雲端環境 egress policy 限制，無法訪問任何 Truth Social 相關來源。
+WebSearch 顯示有 2026-11-17 相關活動（FAA 危機）但無法取得確認的新貼文 ID 或完整文字。
 
 **不建立貼文檔案，不推播通知。**
+**state/last_seen_id.txt 保持不變（2026-11-16_117628158994757478）。**
 
 ## 建議
 
 請在 Claude Code Remote 環境設定中允許以下域名：
 - truthsocial.com
-- thetrumparchive.com / trumpstruth.org
-- kadoa.com / www.kadoa.com
-- presidency.ucsb.edu
+- thetrumparchive.com
+- trumpstruth.org
+- kadoa.com
