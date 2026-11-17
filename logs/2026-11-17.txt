@@ -19,9 +19,21 @@
 注意：因無法取得精確貼文 ID，無法確認上述貼文是否比 last_seen_id 更新。
 last_seen_id 未更新，待下次取得精確 ID 後再比較。
 
+## 步驟 5：GitHub Push — 成功
+提交 SHA：bf2683a81c1722d04e3be0ba920376e4d97d7614
+上傳檔案：logs/2026-11-17.txt, posts/2026-11-16_iran-defense.md, posts/2026-11-16_60minutes.md, posts/2026-11-16_ai-troops.md
+
+## 步驟 6：Telegram 推播 — 失敗
+錯誤：api.telegram.org:443 被 egress proxy 拒絕連線（本 session 網路政策不允許此主機）
+備援：GitHub Actions telegram-notify.yml 工作流程應已因 Push 觸發，可能透過 GitHub Actions 環境成功推播
+
+## 步驟 7：LINE 通知（GitHub Actions 備援）
+line-notify.yml 工作流程存在，應已因 Push 觸發自動執行
+
 ## 建議
-需將以下域名加入網路政策白名單：
+需將以下域名加入網路政策白名單以提升監控效果：
 - truthsocial.com
 - thetrumparchive.com
 - trumpstruth.org
 - apnews.com 或 reuters.com（至少一個可靠新聞來源）
+- api.telegram.org（Telegram 推播直接發送）
