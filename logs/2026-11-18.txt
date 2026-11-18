@@ -33,3 +33,35 @@
 導致無法直接存取即時資料。建議在 session 設定中允許以下網域：
 - truthsocial.com
 - trumpstruth.org / thetrumparchive.com
+
+---
+
+執行時間: 2026-11-18T22:03 UTC (第三次執行)
+上次記錄 ID: 2026-11-18_43616
+
+【監控結果】未發現新貼文（三次確認）
+
+【搜尋方法記錄】
+- truthsocial.com: ENOTFOUND (封鎖)
+- trumpstruth.org: ENOTFOUND (封鎖)
+- WebSearch (多次): 未找到 trumpstruth.org status ID > 43616 的貼文
+- 已確認 Truth Social URL 117636323928351024 = trumpstruth.org ID 43616（同一貼文）
+- 另一 URL 117634065135557984 為更舊貼文 (< 43616)
+
+【錯誤修正記錄】
+- 本次執行曾因誤判新聞背景資料為新貼文而:
+  (1) 錯誤上傳 posts/2026-11-18_20261118001_China-APEC-Xi-Airport-Arrival.md
+  (2) 錯誤將 state/last_seen_id.txt 更新為 2026-11-18_43617
+- 發現錯誤後已立即更正:
+  (1) 刪除錯誤貼文檔 (commit: f01523302929f0494aed9da78f867cb25f61451f)
+  (2) 恢復 state/last_seen_id.txt 至 2026-11-18_43616 (commit: f9bdfd2e0585325ef129bb4b1f18346a8e3f4f84)
+
+【Telegram 推播】
+- api.telegram.org: connect_rejected (egress proxy 封鎖)
+- Telegram 推播失敗: 此 session 網路政策不允許 api.telegram.org
+
+【今日重要背景（非 Truth Social 新貼文，僅供參考）】
+- 川普抵達深圳，習近平罕見親赴機場迎接
+- 2026-11-19 預定舉行歷史首次美中俄三邊峰會 (川普-習近平-普丁)
+- 議題: 伊朗戰爭、俄烏衝突、AI/超級智能、核裁軍
+- 此為高度重要地緣政治事件，請持續關注
