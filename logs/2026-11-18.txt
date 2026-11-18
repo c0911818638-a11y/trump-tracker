@@ -1,10 +1,12 @@
 # Trump Tracker 執行日誌 - 2026-11-18
 
-**執行時間：** 2026-11-18T00:56:53Z
-**上次記錄 ID：** 2026-11-17_GAS-PRICES
-**今日狀態：** 無新貼文
+**第一次執行時間：** 2026-11-18T00:56:53Z
+**第二次執行時間：** 2026-11-18T03:58:47Z
+**上次記錄 ID：** 2026-11-17_BIG-JOHN（state/last_seen_id.txt）
 
-## 執行摘要
+---
+
+## 第一次執行摘要（00:56:53Z）
 
 嘗試從以下來源取得最新貼文：
 - truthsocial.com - 失敗（網路阻擋）
@@ -15,22 +17,41 @@
 - GitHub issues tracker (lionelbuh/bigbeautifulflop) - 成功
 - Web Search - 成功
 
-## 找到的最新貼文資料
+確認的最新貼文均來自 2026-11-16，早於上次記錄 ID（2026-11-17_GAS-PRICES）。
+結論：無新貼文。未推播通知。
 
-透過 Web Search 和 GitHub issues tracker 確認的最新貼文均來自 2026-11-16（Issues #6-9），
-均早於上次記錄 ID（2026-11-17_GAS-PRICES）。
+---
 
-搜尋未發現 2026-11-17（貼文 ID GAS-PRICES 之後）或 2026-11-18 的任何新貼文。
+## 第二次執行摘要（03:58:47Z）
 
-## 結論
+**嘗試的來源（全部失敗）：**
+- truthsocial.com - ENOTFOUND
+- thetrumparchive.com - ENOTFOUND
+- trumpstruth.org - ENOTFOUND
+- trumpalert.app - ENOTFOUND
+- kadoa.com - ENOTFOUND
+- thedailybeast.com - ENOTFOUND
+- yahoo.com - ENOTFOUND
+- nbcnews.com - ENOTFOUND
+- foxnews.com - ENOTFOUND
+- pbs.org - ENOTFOUND
+- washingtonpost.com - ENOTFOUND
+- x.com - ENOTFOUND
+- 及其他多個新聞網站
 
-無新貼文需處理。未更新 state/last_seen_id.txt，未推播 Telegram 或 LINE。
+**WebSearch 背景資訊（無法驗證為具體新貼文）：**
+- 川普於 2026-11-17 抵達菲律賓馬尼拉，出席第 49 屆東南亞國協峰會
+- 2026-11-18 出席 ASEAN-US 特別峰會
+- 稱東南亞為「最具活力與生產力的地區之一」
+- 預計與習近平、普丁進行三方會談
 
-## 注意事項
+無法取得帶有可比較 ID/時間戳的完整貼文原文。
+結論：無新貼文可處理。未推播 Telegram 或 LINE 通知。
 
-本 session 的網路設定阻擋了大多數外部直連來源，僅 Web Search API 可用。
-若需完整監控，請在 session 設定中允許以下網域：
+---
+
+## 建議
+
+請在此 session 的網路政策中允許以下 domain，讓監控功能正常運作：
 - truthsocial.com
-- thetrumparchive.com
-- trumpstruth.org
-- trumpalert.app
+- thetrumparchive.com 或 trumpstruth.org
