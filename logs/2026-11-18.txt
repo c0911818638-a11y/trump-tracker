@@ -1,0 +1,36 @@
+# Trump Tracker 執行日誌 - 2026-11-18
+
+**執行時間：** 2026-11-18T00:56:53Z
+**上次記錄 ID：** 2026-11-17_GAS-PRICES
+**今日狀態：** 無新貼文
+
+## 執行摘要
+
+嘗試從以下來源取得最新貼文：
+- truthsocial.com - 失敗（網路阻擋）
+- thetrumparchive.com - 失敗（網路阻擋）
+- kadoa.com/potus/truth - 失敗（網路阻擋）
+- trumpstruth.org - 失敗（網路阻擋）
+- trumpalert.app - 失敗（網路阻擋）
+- GitHub issues tracker (lionelbuh/bigbeautifulflop) - 成功
+- Web Search - 成功
+
+## 找到的最新貼文資料
+
+透過 Web Search 和 GitHub issues tracker 確認的最新貼文均來自 2026-11-16（Issues #6-9），
+均早於上次記錄 ID（2026-11-17_GAS-PRICES）。
+
+搜尋未發現 2026-11-17（貼文 ID GAS-PRICES 之後）或 2026-11-18 的任何新貼文。
+
+## 結論
+
+無新貼文需處理。未更新 state/last_seen_id.txt，未推播 Telegram 或 LINE。
+
+## 注意事項
+
+本 session 的網路設定阻擋了大多數外部直連來源，僅 Web Search API 可用。
+若需完整監控，請在 session 設定中允許以下網域：
+- truthsocial.com
+- thetrumparchive.com
+- trumpstruth.org
+- trumpalert.app
