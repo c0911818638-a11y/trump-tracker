@@ -1,18 +1,16 @@
-執行時間: 2026-11-18T19:59:12Z
+執行時間: 2026-11-18T19:59:12Z (第一次執行)
+執行時間: 2026-11-18T20:56:00Z (第二次執行)
 上次記錄 ID: 2026-11-18_43616
 
-【監控結果】未發現新貼文
+【監控結果】未發現新貼文（兩次執行皆確認）
 
 【搜尋方法嘗試記錄】
 1. truthsocial.com - ENOTFOUND (網路政策封鎖)
 2. thetrumparchive.com - ENOTFOUND (網路政策封鎖)
 3. trumpstruth.org - ENOTFOUND (網路政策封鎖)
-4. trumpalert.app - ENOTFOUND (網路政策封鎖)
-5. kadoa.com - ENOTFOUND (網路政策封鎖)
-6. mnimarkets.com - ENOTFOUND (網路政策封鎖)
-7. GitHub Issues 追蹤器 (lionelbuh/bigbeautifulflop) - 可存取
+4. GitHub Issues 追蹤器 (lionelbuh/bigbeautifulflop) - 可存取
    → 最新 Issue #11 = 上次已記錄貼文 ID 43616
-8. WebSearch 搜尋 - 多次嘗試
+5. WebSearch 搜尋 - 未發現 status 43617 或更新貼文
 
 【已確認最新貼文（即上次記錄貼文）】
 - ID: 43616 (trumpstruth.org) / 117636323928351024 (Truth Social)
@@ -35,4 +33,3 @@
 導致無法直接存取即時資料。建議在 session 設定中允許以下網域：
 - truthsocial.com
 - trumpstruth.org / thetrumparchive.com
-- mnimarkets.com
