@@ -1,27 +1,47 @@
-日期: 2026-11-19
-執行時間: 2026-11-19T11:56:38Z
+執行時間：2026-11-19 (UTC)
+最後已知貼文ID：2026-11-18_43616
 
-錯誤記錄：
-- truthsocial.com：ENOTFOUND（網域不在允許清單）
-- thetrumparchive.com：ENOTFOUND（網域不在允許清單）
-- trumpstruth.org：ENOTFOUND（網域不在允許清單）
-- kadoa.com：ENOTFOUND（網域不在允許清單）
-- trumpalert.app：ENOTFOUND（網域不在允許清單）
-- irishstar.com：ENOTFOUND（網域不在允許清單）
-- thedailybeast.com：ENOTFOUND（網域不在允許清單）
-- yahoo.com：ENOTFOUND（網域不在允許清單）
-- newrepublic.com：ENOTFOUND（網域不在允許清單）
-- futurism.com：ENOTFOUND（網域不在允許清單）
-- thewrap.com：ENOTFOUND（網域不在允許清單）
-- rawstory.com：ENOTFOUND（網域不在允許清單）
-- ground.news：ENOTFOUND（網域不在允許清單）
-- presidency.ucsb.edu：ENOTFOUND（網域不在允許清單）
-- tagteam.harvard.edu：ENOTFOUND（網域不在允許清單）
+執行摘要：
+==============================
+嘗試方法：
+1. WebFetch https://truthsocial.com/@realDonaldTrump.rss → 失敗（ENOTFOUND - truthsocial.com 不在允許的網路域名中）
+2. WebFetch https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?limit=20 → 未嘗試（主域名已確認封鎖）
+3. WebSearch "Trump Truth Social posts today November 19 2026" → 無 Nov 19 新貼文
+4. WebFetch https://www.trumpstruth.org/ → 失敗（ENOTFOUND）
+5. WebFetch https://www.thetrumparchive.com/ → 失敗（ENOTFOUND）
+6. WebFetch https://www.kadoa.com/potus/truth → 失敗（ENOTFOUND）
+7. WebFetch https://www.trumpalert.app/latest-trump-truth-social-posts → 失敗（ENOTFOUND）
+8. WebFetch https://www.mnimarkets.com/articles/trump-on-truth-social-1794987858557 → 失敗（ENOTFOUND）
+9. WebFetch https://thehill.com/... → 失敗（ENOTFOUND）
+10. WebFetch https://www.foxnews.com/live-news/... → 失敗（ENOTFOUND）
+11. WebFetch https://www.cnn.com/... → 失敗（ENOTFOUND）
+12. WebFetch https://edition.cnn.com/... → 失敗（ENOTFOUND）
+13. WebFetch https://www.cbsnews.com/... → 失敗（ENOTFOUND）
+14. WebFetch https://www.nbcnews.com/... → 失敗（ENOTFOUND）
+15. WebFetch https://www.alternet.org/... → 失敗（ENOTFOUND）
+16. WebFetch https://www.tag24.com/... → 失敗（ENOTFOUND）
+17. WebFetch https://www.yahoo.com/... → 失敗（ENOTFOUND）
+18. WebFetch https://www.presidency.ucsb.edu/... → 失敗（ENOTFOUND）
+19. WebFetch https://en.wikipedia.org/... → 失敗（ENOTFOUND）
+20. WebFetch https://www.mediaite.com/... → 失敗（ENOTFOUND）
+21. WebFetch https://www.forth.news/... → 失敗（ENOTFOUND）
+22. WebFetch https://www.mtv.com.lb/... → 失敗（ENOTFOUND）
 
-WebSearch 結果：
-- 透過搜尋引擎可見最新貼文為 2026-11-18（ID: 43616），內容為川普飛往中國途中的貼文
-- 未發現任何 2026-11-19 的新貼文被收錄至搜尋引擎索引
-- 無法確認是否有新貼文（網路限制導致無法直接驗證）
+背景資訊（來自 WebSearch 搜尋結果摘要）：
+- 川普目前在中國深圳參加 APEC 峰會（11月18-19日）
+- 已確認最後貼文 ID 43616（2026-11-19 凌晨2:44，菲律賓飛往中國途中）
+- 川普與習近平、普丁進行了三方會談
+- 新聞報導引述川普稱「We are really making history」（現場言論，非確認 Truth Social 貼文）
+- 11月19日確認有新事件（APEC三方峰會），但無法取得確認的 Truth Social 貼文文字及ID
 
-結論：所有方法均無法直接取得貼文，本次執行未建立貼文分析檔，未推播通知。
-上次記錄貼文 ID 保持不變：2026-11-18_43616
+結論：
+由於雲端執行環境的網路出口政策封鎖了幾乎所有外部新聞、歸檔及社群媒體網站，
+本次執行無法取得任何可驗證的新 Truth Social 貼文（ID > 43616）。
+last_seen_id 未更新，不建立貼文分析檔，不推播通知。
+
+需要在環境設定中允許的網域（至少其中一個）：
+- truthsocial.com
+- trumpstruth.org
+- thetrumparchive.com
+- presidency.ucsb.edu
+- 任何主要新聞網站（nbcnews.com, cnn.com, foxnews.com 等）
