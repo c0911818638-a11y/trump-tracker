@@ -1,7 +1,7 @@
 # 川普 Truth Social 監控日誌
 
 **監控日期：** 2026-11-19
-**最新執行時間：** 2026-11-19 03:10:00 UTC（本次）
+**最新執行時間：** 2026-11-19 04:56:17 UTC（本次，第三次執行）
 
 ---
 
@@ -18,43 +18,50 @@
 
 ---
 
-## 執行二（本次）
+## 執行二（較早）
 
 執行時間：2026-11-19 03:10:00 UTC
 狀態：無新貼文確認
 
 **上次已知貼文 ID：** 2026-11-18_43616
 
+方法 A（直接存取 truthsocial.com）：失敗 — proxy 封鎖
+方法 B（WebSearch）：部分成功，搜尋摘要顯示 2026-11-18 最新貼文為 ID 43616
+方法 C（替代存取）：所有網站 DNS 解析失敗
+
+背景：川普於 APEC 峰會在深圳與習近平和普丁舉行三邊會談。
+
+---
+
+## 執行三（本次）
+
+執行時間：2026-11-19 04:56:17 UTC
+狀態：無新貼文確認
+
+**上次已知貼文 ID：** 2026-11-18_43616
+
 ### 方法嘗試摘要
 
-**方法 A（直接存取 truthsocial.com）：** 失敗 — 403 CONNECT tunnel failed（proxy 封鎖）
+- truthsocial.com（RSS + API）：失敗 — ENOTFOUND（proxy 封鎖）
+- thetrumparchive.com：失敗 — ENOTFOUND
+- trumpstruth.org：失敗 — ENOTFOUND
+- trumpalert.app：失敗 — ENOTFOUND
+- kadoa.com：失敗 — ENOTFOUND
+- rollcall.com/factbase：失敗 — ENOTFOUND
+- irishstar.com：失敗 — ENOTFOUND
+- thedailybeast.com：失敗 — ENOTFOUND
+- yahoo.com：失敗 — ENOTFOUND
+- wikipedia.org：失敗 — ENOTFOUND
+- forth.news：失敗 — ENOTFOUND
 
-**方法 B（WebSearch）：** 部分成功
-- 搜尋摘要顯示 2026-11-18 最新貼文為 ID 43616（前往中國的貼文）
-- 2026-11-19 貼文尚未被搜尋引擎索引
-
-**方法 C（替代存取）：**
-- thetrumparchive.com：失敗（DNS 解析失敗）
-- trumpstruth.org：失敗（DNS 解析失敗）
-- 所有主流新聞網站：失敗（DNS 解析失敗）
-
-**GitHub 追蹤資料庫（lionelbuh/bigbeautifulflop）：**
-- 已確認最新 Issue：#11（Nov 18, 2026, 2:44 AM ET — 與 last_seen_id 相同）
-- 無 Issue #12 或更新記錄
-
-**直接搜尋 trumpstruth.org IDs（43617-43621）：** 無結果
-
-### 當日背景（來自 WebSearch）
-
-川普於 2026/11/19 在深圳 APEC 峰會與習近平（一對一）及普丁（三邊會談）舉行歷史性峰會：
-- 川普抵達時習近平親自在機場迎接
-- 三邊會談議題：伊朗戰爭、烏克蘭、核武、全球貿易
-- 川普受訪時表示峰會「已經是一場勝利」（Fox News 採訪，非 Truth Social 貼文）
-- 尚無確認的峰會後 Truth Social 貼文全文被搜尋引擎索引
+WebSearch 嘗試（多次）：
+- 搜尋「Trump Truth Social posts November 19 2026」：無 11/19 具體貼文
+- 搜尋「site:truthsocial.com realDonaldTrump November 19 2026」：僅找到 11/17 貼文
+- 搜尋「Trump Truth Social today 2026-11-19 latest posts」：最新貼文片段約停留在 11/18
 
 ### 通知狀態
 
-- **Telegram 推播：** 未執行（無新貼文；api.telegram.org 被 proxy 封鎖：403）
+- **Telegram 推播：** 未執行（無新貼文確認）
 - **LINE 通知：** 未執行（無 GitHub push；無新貼文）
 
 ---
