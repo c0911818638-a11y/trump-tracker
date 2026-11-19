@@ -1,36 +1,67 @@
-# Trump Tracker 執行日誌 - 2026-11-18
+執行時間: 2026-11-18T19:59:12Z (第一次執行)
+執行時間: 2026-11-18T20:56:00Z (第二次執行)
+上次記錄 ID: 2026-11-18_43616
 
-**執行時間：** 2026-11-18T00:56:53Z
-**上次記錄 ID：** 2026-11-17_GAS-PRICES
-**今日狀態：** 無新貼文
+【監控結果】未發現新貼文（兩次執行皆確認）
 
-## 執行摘要
+【搜尋方法嘗試記錄】
+1. truthsocial.com - ENOTFOUND (網路政策封鎖)
+2. thetrumparchive.com - ENOTFOUND (網路政策封鎖)
+3. trumpstruth.org - ENOTFOUND (網路政策封鎖)
+4. GitHub Issues 追蹤器 (lionelbuh/bigbeautifulflop) - 可存取
+   → 最新 Issue #11 = 上次已記錄貼文 ID 43616
+5. WebSearch 搜尋 - 未發現 status 43617 或更新貼文
 
-嘗試從以下來源取得最新貼文：
-- truthsocial.com - 失敗（網路阻擋）
-- thetrumparchive.com - 失敗（網路阻擋）
-- kadoa.com/potus/truth - 失敗（網路阻擋）
-- trumpstruth.org - 失敗（網路阻擋）
-- trumpalert.app - 失敗（網路阻擋）
-- GitHub issues tracker (lionelbuh/bigbeautifulflop) - 成功
-- Web Search - 成功
+【已確認最新貼文（即上次記錄貼文）】
+- ID: 43616 (trumpstruth.org) / 117636323928351024 (Truth Social)
+- 發布時間: 2026-11-18 02:44 AM ET (07:44 UTC)
+- 內容: 川普宣布從菲律賓飛往中國，宣稱達成菲律賓貿易協議，讚揚馬科斯總統，以 "See you in China!" 結尾
 
-## 找到的最新貼文資料
+【背景情境】
+- 川普正在深圳參加 APEC 峰會
+- 習近平親自在機場迎接
+- 明日（11/19）預定舉行川普-習近平-普丁三方峰會
 
-透過 Web Search 和 GitHub issues tracker 確認的最新貼文均來自 2026-11-16（Issues #6-9），
-均早於上次記錄 ID（2026-11-17_GAS-PRICES）。
+【結論】
+- 無新貼文需分析
+- 未更新 state/last_seen_id.txt（維持 2026-11-18_43616）
+- 未推播 Telegram 通知
+- 未觸發 LINE 通知
 
-搜尋未發現 2026-11-17（貼文 ID GAS-PRICES 之後）或 2026-11-18 的任何新貼文。
-
-## 結論
-
-無新貼文需處理。未更新 state/last_seen_id.txt，未推播 Telegram 或 LINE。
-
-## 注意事項
-
-本 session 的網路設定阻擋了大多數外部直連來源，僅 Web Search API 可用。
-若需完整監控，請在 session 設定中允許以下網域：
+【網路限制說明】
+本 session 的網路政策封鎖了大多數新聞網站及 Trump Social 相關聚合站，
+導致無法直接存取即時資料。建議在 session 設定中允許以下網域：
 - truthsocial.com
-- thetrumparchive.com
-- trumpstruth.org
-- trumpalert.app
+- trumpstruth.org / thetrumparchive.com
+
+---
+
+執行時間: 2026-11-18T22:03 UTC (第三次執行)
+上次記錄 ID: 2026-11-18_43616
+
+【監控結果】未發現新貼文（三次確認）
+
+【搜尋方法記錄】
+- truthsocial.com: ENOTFOUND (封鎖)
+- trumpstruth.org: ENOTFOUND (封鎖)
+- WebSearch (多次): 未找到 trumpstruth.org status ID > 43616 的貼文
+- 已確認 Truth Social URL 117636323928351024 = trumpstruth.org ID 43616（同一貼文）
+- 另一 URL 117634065135557984 為更舊貼文 (< 43616)
+
+【錯誤修正記錄】
+- 本次執行曾因誤判新聞背景資料為新貼文而:
+  (1) 錯誤上傳 posts/2026-11-18_20261118001_China-APEC-Xi-Airport-Arrival.md
+  (2) 錯誤將 state/last_seen_id.txt 更新為 2026-11-18_43617
+- 發現錯誤後已立即更正:
+  (1) 刪除錯誤貼文檔 (commit: f01523302929f0494aed9da78f867cb25f61451f)
+  (2) 恢復 state/last_seen_id.txt 至 2026-11-18_43616 (commit: f9bdfd2e0585325ef129bb4b1f18346a8e3f4f84)
+
+【Telegram 推播】
+- api.telegram.org: connect_rejected (egress proxy 封鎖)
+- Telegram 推播失敗: 此 session 網路政策不允許 api.telegram.org
+
+【今日重要背景（非 Truth Social 新貼文，僅供參考）】
+- 川普抵達深圳，習近平罕見親赴機場迎接
+- 2026-11-19 預定舉行歷史首次美中俄三邊峰會 (川普-習近平-普丁)
+- 議題: 伊朗戰爭、俄烏衝突、AI/超級智能、核裁軍
+- 此為高度重要地緣政治事件，請持續關注
