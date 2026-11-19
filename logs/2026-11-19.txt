@@ -1,7 +1,7 @@
 # 川普 Truth Social 監控日誌
 
 **監控日期：** 2026-11-19
-**最新執行時間：** 2026-11-19 (第四次執行)
+**最新執行時間：** 2026-11-19 (第五次執行)
 
 ---
 
@@ -54,7 +54,7 @@ WebSearch：無 11/19 具體貼文
 
 ---
 
-## 執行四（本次）
+## 執行四（較早）
 
 **上次已知貼文 ID：** 2026-11-18_43616
 
@@ -65,13 +65,11 @@ WebSearch：無 11/19 具體貼文
 
 方法 B（WebSearch）：
 - 多次搜尋「Trump Truth Social November 18/19 2026 posts」
-- 最新確認的貼文仍為 ID 43616（Nov 18, 2:44 AM EST）：「I am now heading to China, from the Philippines...」
-- 搜尋摘要提到 Trump 在 APEC/深圳的活動，但無具體新 Truth Social 貼文文字
+- 最新確認的貼文仍為 ID 43616（Nov 18, 2:44 AM EST）
 
 方法 C（Trump Archive）：
 - thetrumparchive.com → ENOTFOUND
 - trumpstruth.org → ENOTFOUND
-- 多個新聞網站（yahoo.com, nbcnews.com, cnn.com, foxnews.com, cbsnews.com 等）→ 全部 ENOTFOUND
 
 ### 新聞背景（搜尋摘要）
 
@@ -79,13 +77,40 @@ WebSearch：無 11/19 具體貼文
 - 習近平親自在機場迎接
 - 11/19 Trump-Xi-Putin 歷史性三邊會議（伊朗、烏克蘭議題）
 - Trump 被引述稱峰會「已是一場勝利」（記者採訪，非確認 Truth Social 貼文）
-- 菲律賓貿易協議（可能包含在已記錄的 ID 43616 貼文中）
 
-### 通知狀態
+通知狀態：Telegram 未執行（無新確認貼文）
 
-- **GitHub 上傳：** 成功（本日誌）
+---
+
+## 執行五（本次）
+
+執行時間：2026-11-19（UTC）
+**上次已知貼文 ID：** 2026-11-18_43616
+
+### 方法嘗試
+
+方法 A（WebFetch RSS）：
+- truthsocial.com/@realDonaldTrump.rss → 失敗：ENOTFOUND
+
+方法 B（WebSearch）：
+- "Trump Truth Social posts November 19 2026" → 無 11/19 具體貼文
+- "Trump Truth Social today November 19 2026 latest statements" → 無 11/19 具體貼文
+- "Trump Truth Social site:truthsocial.com 2026-11-19" → 無結果
+
+方法 C（所有替代網站）：
+- trumpstruth.org → ENOTFOUND
+- trumpalert.app → ENOTFOUND
+- kadoa.com → ENOTFOUND
+- factba.se → ENOTFOUND
+- thetrumparchive.com → ENOTFOUND
+
+### 狀態
+
+- **新貼文：** 無法確認（所有存取管道受阻）
+- **GitHub 日誌：** 已更新（本次）
 - **Telegram 推播：** 未執行（無新確認貼文）
 - **LINE 通知：** 未執行（無新確認貼文）
+- **last_seen_id.txt：** 未更新（維持 2026-11-18_43616）
 
 ---
 
