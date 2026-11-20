@@ -1,121 +1,31 @@
-# Trump Tracker 執行記錄 - 2026-11-20
+[2026-11-20] 執行時間: 2026-11-20T15:56:00Z
 
-最後更新時間: 2026-11-20T12:58:26Z
-上次記錄 ID: 2026-11-19_43645
-狀態: 未發現新貼文
-
----
-
-## 第五次執行（12:58 UTC）
-
-### 搜尋結果摘要
-- WebSearch 搜尋 "Trump Truth Social November 20 2026 latest post" 無新貼文
-- WebSearch 搜尋 "site:trumpstruth.org statuses 43646 OR 43647 OR 43648 OR 43649 OR 43650" 無結果
-- WebFetch 嘗試 truthsocial.com、thetrumparchive.com、trumpstruth.org、kadoa.com、trumpalert.app、nbcnews.com、thedailybeast.com、yahoo.com、forth.news 均因 DNS 解析失敗（網路政策限制）
-- 未找到 ID > 43645 的新貼文
-
-### 背景資訊
-- 川普返回中美俄峰會的預定記者會（11/20 中午 ET）相關的 Truth Social 貼文尚未出現在搜尋索引中
-- 搜尋顯示川普曾於 11/19 發布多篇關於峰會、Pete Rose 特赦、農業法案等貼文（均已記錄）
-
-### 結論
-本次執行未確認 ID > 43645 的新貼文。last_seen_id 維持不變。
-Telegram 未推播（無確認新貼文）。
-
----
-
-## 第四次執行（11:59 UTC）
-
-### 搜尋結果摘要
-- WebSearch 廣泛搜尋 November 19-20 2026 貼文
-- 嘗試存取多個新聞網站（dailybeast, nbcnews, cnn, bloomberg, thehill 等）均因網域封鎖失敗
-- 透過 X (Twitter) 搜尋找到 @TrumpTruthOnX、@uniindianews 轉貼的貼文
-- 確認 trumpstruth.org 歸檔最高 ID 為 43643（November 19）
-- 搜尋引擎尚未索引 ID > 43645 的新貼文
-
-### 確認 November 19 已知貼文（依時間排序）
-- 43630：「Heading back to Washington, D.C., from China. It was a Great and Highly Consequential Trip. I will be giving a News Conference tomorrow at 12 P.M., the White House.」（約 Nov 19 晚間）
-- 43643：影像貼文
-- 43644：疑為農業法案貼文（已捕獲）
-- 43645：疑為彼得·羅斯特赦貼文（已捕獲，last_seen_id）
-
-### November 20 背景
-- 川普預定 2026-11-20 中午 ET 在白宮舉行記者會（返回中美俄峰會後）
-- 白宮、習近平、普丁已發布「和平宣言」
-- 川普宣稱創下 Air Force One 最長連續飛行記錄（約 15 小時）
-- 預計記者會後將有新的 Truth Social 貼文
-
-### 結論
-本次執行未確認 ID > 43645 的新貼文。last_seen_id 維持不變。
-Telegram 未推播（無確認新貼文）。
-
----
-
-## 第三次執行（10:59 UTC）
-
-### 搜尋結果摘要
-- 透過 WebSearch 嘗試多個存檔網站，均因網路限制無法直接存取
-- WebSearch 顯示 trumpstruth.org 最高存檔 ID 為 43642（November 19）
-- trumpalert.app 被提及有 6 篇 November 20 (UTC) 貼文，但無法存取該網站
-- UCSB Presidency Project 尚未索引 November 20, 2026 的貼文
-- Trump 預定於 November 20 中午 ET 在白宮舉行記者會
-
-### November 19 已知貼文（ID ≤ 43645，均已記錄）
-- 43640：ABC News Puts 2 on Leave Over Flawed Trump Jr. Story
-- 43642：The Factories Are Coming Home, ISM Just Confirmed It
-- 43630：Heading back to Washington DC from China (Great Trip)
-- 其他：Pete Rose 特赦、農業法案、菲律賓貿易協議等
-
-### 結論
-本次執行未確認 ID > 43645 的新貼文。last_seen_id 維持不變。
-Telegram 未推播（無確認新貼文）。
-
----
-
-## 第二次執行（09:58 UTC）
-
-### 確認的 November 19 貼文 ID（均已在上次執行記錄）
-透過 WebSearch 在 trumpstruth.org 歸檔連結中確認：
-- ID 43596：RT 貼文
-- ID 43630：「Heading back to Washington, D.C., from China. It was a Great and Highly Cons...」
-- ID 43632：影片貼文
-- ID 43638：圖片貼文
-- ID 43645：（上次記錄的最後一篇）
-
-### November 20 狀態
-- rollcall.com/factbase 顯示最新社群媒體活動日期為 2026-11-19
-- 未在搜尋結果中找到 ID > 43645 的確認新貼文
-- 川普於 2026-11-20 中午 ET 預定的白宮記者會尚未出現在搜尋索引中
-- 網路環境無法直接連接外部新聞/歸檔網站
-
-### 結論
-本次執行未發現新貼文。last_seen_id 維持 2026-11-19_43645 不變。
-Telegram 未推播（無新貼文）。
-
----
-
-## 第一次執行（由先前排程觸發）
-
-執行時間：2026-11-20 (UTC)
-上次記錄貼文 ID：2026-11-19_43645
-GitHub SHA：fd3ad74642dd3a60e2a90c4a4b24b21f209f5c46
-
-【狀態：無法取得新貼文 — 網路限制】
+錯誤報告：無法取得最新 Truth Social 貼文
 
 嘗試方法：
+1. WebFetch https://truthsocial.com/@realDonaldTrump.rss → 失敗：ENOTFOUND (網域未在允許清單)
+2. WebFetch https://www.trumpstruth.org/ → 失敗：ENOTFOUND
+3. WebFetch https://www.trumpalert.app/ → 失敗：ENOTFOUND
+4. WebFetch https://www.kadoa.com/potus/truth → 失敗：ENOTFOUND
+5. WebFetch https://www.thetrumparchive.com/ → 失敗：ENOTFOUND
+6. WebFetch https://rollcall.com/factbase/trump/topic/social/ → 失敗：ENOTFOUND
+7. WebFetch https://edition.cnn.com (live blog) → 失敗：ENOTFOUND
+8. WebFetch https://nbcnews.com (live blog) → 失敗：ENOTFOUND
+9. WebFetch https://www.presidency.ucsb.edu → 失敗：ENOTFOUND
+10. WebSearch (可存取，但僅返回摘要片段，無法確認 ID > 43646 的新貼文)
 
-方法 A（WebFetch 直接取得）：
-- 多個網域 DNS 解析失敗（網路政策阻擋）：
-  truthsocial.com、thetrumparchive.com、trumpstruth.org、
-  foxnews.com、cnn.com、nbcnews.com、thehill.com 等
-
-方法 B（WebSearch 搜尋）：
-- 搜尋結果顯示 trumpstruth.org 存檔最高至 ID 43645（2026-11-19）
-- 未找到 ID > 43645 的確認新貼文
-
-方法 C（Trump Archive）：
-- thetrumparchive.com → DNS 解析失敗
+現有狀態：
+- 上次記錄貼文 ID: 2026-11-20_43646 (SHA: f71cfce5850605f17abfd9e445ffe5bddec0dff9)
+- 無法確認是否有新貼文 (ID > 43646)
+- WebSearch 顯示川普於 2026-11-20 返回華盛頓，並宣布記者會，但無法取得確切貼文 ID
 
 結論：
-本次執行未確認新貼文，不建立分析檔，不推播 Telegram/LINE。
-建議在環境網路設定中新增相關網域的出站存取權限。
+本次執行無法取得新貼文資料。不建立貼文分析檔，不更新 last_seen_id.txt，不推播通知。
+
+需要在 Cloud Session 的網路政策中允許以下網域以恢復正常運作：
+- truthsocial.com
+- trumpstruth.org
+- thetrumparchive.com
+- trumpalert.app
+- kadoa.com
+- presidency.ucsb.edu
