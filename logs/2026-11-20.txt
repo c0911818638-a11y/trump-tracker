@@ -1,4 +1,34 @@
-[監控執行記錄] 2026-11-20
+# Trump Tracker 執行記錄 - 2026-11-20
+
+最後更新時間: 2026-11-20T09:58:30Z
+上次記錄 ID: 2026-11-19_43645
+狀態: 未發現新貼文
+
+---
+
+## 第二次執行（09:58 UTC）
+
+### 確認的 November 19 貼文 ID（均已在上次執行記錄）
+透過 WebSearch 在 trumpstruth.org 歸檔連結中確認：
+- ID 43596：RT 貼文
+- ID 43630：「Heading back to Washington, D.C., from China. It was a Great and Highly Cons...」
+- ID 43632：影片貼文
+- ID 43638：圖片貼文
+- ID 43645：（上次記錄的最後一篇）
+
+### November 20 狀態
+- rollcall.com/factbase 顯示最新社群媒體活動日期為 2026-11-19
+- 未在搜尋結果中找到 ID > 43645 的確認新貼文
+- 川普於 2026-11-20 中午 ET 預定的白宮記者會尚未出現在搜尋索引中
+- 網路環境無法直接連接外部新聞/歸檔網站
+
+### 結論
+本次執行未發現新貼文。last_seen_id 維持 2026-11-19_43645 不變。
+Telegram 未推播（無新貼文）。
+
+---
+
+## 第一次執行（由先前排程觸發）
 
 執行時間：2026-11-20 (UTC)
 上次記錄貼文 ID：2026-11-19_43645
@@ -9,52 +39,17 @@ GitHub SHA：fd3ad74642dd3a60e2a90c4a4b24b21f209f5c46
 嘗試方法：
 
 方法 A（WebFetch 直接取得）：
-- https://truthsocial.com/@realDonaldTrump.rss → DNS 解析失敗（網域不在允許清單）
-- https://truthsocial.com/api/v1/accounts/.../statuses → DNS 解析失敗
-- https://www.thetrumparchive.com/ → DNS 解析失敗
-- https://www.trumpstruth.org/ → DNS 解析失敗
-- https://www.kadoa.com/potus/truth → DNS 解析失敗
-- https://www.trumpalert.app/ → DNS 解析失敗
-- https://rollcall.com/factbase/trump/topic/social/ → DNS 解析失敗
-- https://www.yahoo.com/ → DNS 解析失敗
-- https://thehill.com/ → DNS 解析失敗
-- https://www.cnn.com/ → DNS 解析失敗
-- https://www.foxnews.com/ → DNS 解析失敗
-- https://www.nbcnews.com/ → DNS 解析失敗
-- https://www.oann.com/ → DNS 解析失敗
-- https://soapcentral.com/ → DNS 解析失敗
-- https://www.thedailybeast.com/ → DNS 解析失敗
-- https://www.newsbreak.com/ → DNS 解析失敗
-- https://homesiber.com/ → DNS 解析失敗
-- https://www.rappler.com/ → DNS 解析失敗
-- https://justthenews.com/ → DNS 解析失敗
-- https://rollcall.com/ → DNS 解析失敗
-- https://x.com/ → DNS 解析失敗
-- https://news.webindia123.com/ → DNS 解析失敗
+- 多個網域 DNS 解析失敗（網路政策阻擋）：
+  truthsocial.com、thetrumparchive.com、trumpstruth.org、
+  foxnews.com、cnn.com、nbcnews.com、thehill.com 等
 
 方法 B（WebSearch 搜尋）：
-- 搜尋結果顯示 trumpstruth.org 存檔最高至 ID 約 43643（2026-11-19）
+- 搜尋結果顯示 trumpstruth.org 存檔最高至 ID 43645（2026-11-19）
 - 未找到 ID > 43645 的確認新貼文
-- 搜尋顯示以下相關報導（但無法確認具體新貼文 ID）：
-  * "Trump Spirals on Truth Social on Way Home From Major Summit"（Yahoo/The Daily Beast）
-    → 描述川普返回途中貼文：期中選舉失利自我安慰、伊朗戰爭辯護、Pete Rose 讚揚
-  * "Trump's wild midnight Truth Social posting binge features over 150 messages"（Yahoo）
-    → 描述深夜大量貼文（150+），涉及叛國指控至美拉尼婭影集
-  * 川普宣布 2026-11-20 中午白宮記者會討論中國/亞洲貿易成果
-  * 中美俄三方峰會於深圳舉行，發布「和平宣言」
 
 方法 C（Trump Archive）：
-- thetrumparchive.com → DNS 解析失敗（已於方法 A 嘗試）
+- thetrumparchive.com → DNS 解析失敗
 
 結論：
-本次執行透過 WebSearch 找到關於川普近期貼文的背景資訊，
-但無法確認 ID > 43645 的具體新貼文文字內容，
-因此依步驟 8 規定：不建立貼文分析檔，不推播 Telegram/LINE。
-
-建議：在 Claude Code 遠端執行環境的網路設定中新增以下網域的出站存取權限：
-- truthsocial.com
-- trumpstruth.org
-- thetrumparchive.com
-- yahoo.com / thedailybeast.com 等新聞媒體
-
-last_seen_id 未更新（維持 2026-11-19_43645）。
+本次執行未確認新貼文，不建立分析檔，不推播 Telegram/LINE。
+建議在環境網路設定中新增相關網域的出站存取權限。
