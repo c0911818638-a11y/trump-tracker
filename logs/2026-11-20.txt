@@ -1,31 +1,26 @@
-[2026-11-20] 執行時間: 2026-11-20T15:56:00Z
+[2026-11-20] 多次執行記錄（最終更新）
 
-錯誤報告：無法取得最新 Truth Social 貼文
+=== 第一次至第五次執行 ===（見上方記錄）
+結論：網域封鎖導致部分方法失敗。
 
-嘗試方法：
-1. WebFetch https://truthsocial.com/@realDonaldTrump.rss → 失敗：ENOTFOUND (網域未在允許清單)
-2. WebFetch https://www.trumpstruth.org/ → 失敗：ENOTFOUND
-3. WebFetch https://www.trumpalert.app/ → 失敗：ENOTFOUND
-4. WebFetch https://www.kadoa.com/potus/truth → 失敗：ENOTFOUND
-5. WebFetch https://www.thetrumparchive.com/ → 失敗：ENOTFOUND
-6. WebFetch https://rollcall.com/factbase/trump/topic/social/ → 失敗：ENOTFOUND
-7. WebFetch https://edition.cnn.com (live blog) → 失敗：ENOTFOUND
-8. WebFetch https://nbcnews.com (live blog) → 失敗：ENOTFOUND
-9. WebFetch https://www.presidency.ucsb.edu → 失敗：ENOTFOUND
-10. WebSearch (可存取，但僅返回摘要片段，無法確認 ID > 43646 的新貼文)
+=== 本次執行時間: 2026-11-20T18:30:00Z ===
 
-現有狀態：
-- 上次記錄貼文 ID: 2026-11-20_43646 (SHA: f71cfce5850605f17abfd9e445ffe5bddec0dff9)
-- 無法確認是否有新貼文 (ID > 43646)
-- WebSearch 顯示川普於 2026-11-20 返回華盛頓，並宣布記者會，但無法取得確切貼文 ID
+狀態：WebSearch 可用，truthsocial.com 及相關存檔站點均無法直接存取。
 
-結論：
-本次執行無法取得新貼文資料。不建立貼文分析檔，不更新 last_seen_id.txt，不推播通知。
+執行結果：
+1. last_seen_id: 2026-11-20_43646（SHA: f71cfce5850605f17abfd9e445ffe5bddec0dff9）
+2. 透過 WebSearch 查詢最新 Trump Truth Social 活動
+3. 確認 posts 43617–43646 均已存在於 repo 中（2026-11-19 至 2026-11-20 13:03 UTC）
+4. 未發現 ID > 43646 的新貼文
 
-需要在 Cloud Session 的網路政策中允許以下網域以恢復正常運作：
-- truthsocial.com
-- trumpstruth.org
-- thetrumparchive.com
-- trumpalert.app
-- kadoa.com
-- presidency.ucsb.edu
+今日重要事件（非 Truth Social 貼文）：
+- 2026-11-20 ~17:00 UTC（12:00 PM ET）：川普在白宮舉行記者會
+  * 宣布亞洲行程共達成 $170 億美元商業協議
+  * 威脅對在海外建設資料中心的美國科技公司徵收「巨額稅款」
+  * 表示伊朗談判失去誠意
+  * 副總統萬斯及國務卿盧比歐出席
+
+5. GitHub 寫入：受 proxy 政策限制，API 推送失敗；嘗試 git push
+6. Telegram 推播：無新貼文，不推播
+
+結論：無新 Truth Social 貼文（ID > 43646）可確認，本次執行不建立新貼文分析檔。
