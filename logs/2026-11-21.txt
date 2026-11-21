@@ -1,0 +1,37 @@
+# 川普 Truth Social 監控記錄 - 2026-11-21
+
+## 執行時間
+2026-11-21 05:00 UTC
+
+## 狀態
+上次記錄貼文 ID：2026-11-20_43646（trumpstruth.org status #43646）
+上次貼文時間：2026-11-20 08:03 AM EST（川普轉發 @Schoenlaw 關於三方峰會的貼文）
+
+## 本次搜尋結果
+未發現比上次記錄（#43646）更新的貼文。
+
+搜尋方法：
+- WebFetch：truthsocial.com 被網路政策封鎖（ENOTFOUND）
+- WebFetch：trumpstruth.org、thetrumparchive.com、kadoa.com、trumpalert.app 均被封鎖
+- WebSearch：搜尋 November 20-21 2026 的貼文，trumpstruth.org 索引最新仍為 #43646
+- 無法確認 #43647+ 的新貼文
+
+## 背景資訊（搜尋取得）
+- 川普已從中國 APEC 峰會返回華盛頓
+- 11月20日舉行了白宮新聞發布會
+- 11月19日宣布赦免棒球傳奇 Pete Rose（已在前次記錄）
+- 11月20日上午轉發 Schoenlaw 關於中美俄三方峰會的評論（#43646，已記錄）
+
+## 結論
+本次執行未發現新貼文，不觸發 Telegram 通知。
+trumpstruth.org 索引可能有延遲，建議下次執行時繼續從 #43647 開始檢查。
+
+## 網路限制說明
+以下網域在此 session 中被封鎖，需在環境設定中解除限制：
+- truthsocial.com
+- trumpstruth.org
+- thetrumparchive.com
+- foxnews.com
+- yahoo.com
+- nbcnews.com
+- presidency.ucsb.edu
