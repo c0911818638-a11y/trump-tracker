@@ -1,0 +1,40 @@
+# 川普 Truth Social 監控日誌 - 2026-11-21
+
+## 執行時間
+2026-11-21 19:58:22 UTC
+
+## 狀態
+上次記錄 ID: 2026-11-20_43646
+
+## 資料擷取結果
+
+### 方法 A：直接存取 Truth Social
+- truthsocial.com：ENOTFOUND（網域不在允許清單）
+- truthsocial.com API：ENOTFOUND
+
+### 方法 B：WebSearch 搜尋
+- 搜尋執行成功
+- 找到最新貼文日期：2026-11-20
+- 找到最新 trumpstruth.org 狀態 ID：43642
+- 最新 ID (43642) < 上次記錄 ID (43646)
+
+### 方法 C：第三方存檔網站
+- thetrumparchive.com：ENOTFOUND
+- trumpstruth.org：ENOTFOUND
+- trumpalert.app：ENOTFOUND
+- kadoa.com：ENOTFOUND
+
+## 結論
+
+**今日無新貼文。**
+
+搜尋指數顯示川普 Truth Social 帳號自 2026-11-20 後無新貼文。
+Showbiz411 報導（未經主流媒體證實）：帳號曾短暫消失後恢復，但 24 小時內無新發文。
+
+## 已處理貼文數
+0 篇新貼文
+
+## 通知狀態
+- GitHub push：不需要（無新貼文）
+- Telegram 推播：不需要（無新貼文）
+- LINE 通知：不需要（無新貼文）
