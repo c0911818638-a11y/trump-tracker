@@ -1,0 +1,28 @@
+Trump Truth Social Monitoring - 2026-11-21
+
+執行時間: 2026-11-21T06:56:39Z
+上次記錄的貼文 ID: 2026-11-20_43646
+
+錯誤記錄:
+- 直接存取 truthsocial.com 失敗：DNS 解析失敗 (ENOTFOUND) - 網域不在此 session 允許清單
+- WebFetch 嘗試失敗的網址：
+  * truthsocial.com/@realDonaldTrump.rss (ENOTFOUND)
+  * truthsocial.com/api/v1/accounts/107780257626128497/statuses (ENOTFOUND)
+  * trumpalert.app (ENOTFOUND)
+  * trumpstruth.org (ENOTFOUND)
+  * kadoa.com (ENOTFOUND)
+  * thedailybeast.com (ENOTFOUND)
+  * yahoo.com (ENOTFOUND)
+  * nbcnews.com (ENOTFOUND)
+  * presidency.ucsb.edu (ENOTFOUND)
+  * rollcall.com (ENOTFOUND)
+
+WebSearch 搜尋摘要（無法取得具體貼文 ID）:
+- 2026-11-19~20：川普從 APEC/中國峰會返回，Truth Social 有多篇貼文
+- 貼文主題包含：APEC 峰會成果、記者會預告、Pete Rose 赦免、Laura Loomer 伊朗相關轉貼、甘迺迪中心榮譽獎
+- 無法確認上述貼文是否比 last_seen_id (2026-11-20_43646) 新
+- 未找到 2026-11-21 的具體確認貼文
+
+結論:
+由於無法取得具體貼文 ID 和內容，本次執行不建立貼文分析檔，不推播通知。
+建議：在 session 網路設定中允許 truthsocial.com 或其他備援網域以恢復正常監控。
