@@ -1,0 +1,44 @@
+[2026-11-21] 執行時間: 2026-11-21T01:30:00Z
+
+錯誤報告：無法取得最新 Truth Social 貼文
+
+嘗試方法：
+1. WebFetch https://truthsocial.com/@realDonaldTrump.rss → 失敗：ENOTFOUND (網域未在允許清單)
+2. WebFetch https://www.trumpstruth.org/ → 失敗：ENOTFOUND
+3. WebFetch https://www.trumpalert.app/ → 失敗：ENOTFOUND
+4. WebFetch https://www.kadoa.com/potus/truth → 失敗：ENOTFOUND
+5. WebFetch https://www.thetrumparchive.com/ → 失敗：ENOTFOUND
+6. WebFetch https://www.presidency.ucsb.edu → 失敗：ENOTFOUND
+7. WebFetch https://edition.cnn.com (live blog) → 失敗：ENOTFOUND
+8. WebFetch https://nbcnews.com (live blog) → 失敗：ENOTFOUND
+9. WebFetch https://www.yahoo.com (news) → 失敗：ENOTFOUND
+10. WebFetch https://foxnews.com → 失敗：ENOTFOUND
+11. WebFetch https://rollcall.com/factbase/ → 失敗：ENOTFOUND
+12. WebSearch (可存取，僅返回摘要片段，無法確認 ID > 43646 的新貼文)
+
+現有狀態：
+- 上次記錄貼文 ID: 2026-11-20_43646
+- 無法確認是否有新貼文 (ID > 43646)
+
+WebSearch 搜尋結果摘要（2026-11-20 至 21 相關資訊）：
+- 川普返美後舉行記者會（2026-11-20 中午 ET）
+- 川普解雇網路安全總監 Sean Cairncross（2026-11-20）
+  理由：全國性科技中斷（tech outages）後認為表現不佳
+  臨時接任：Kirsten Davies（國防部資訊長）
+- 川普於 2026-11-20 返回白宮後暫無 Truth Social 貼文確認
+- 2026-11-21 目前無任何新貼文出現在搜尋結果中
+
+Telegram: 因 api.telegram.org 受 egress proxy 阻擋而跳過
+GitHub push: 透過 gh API + PAT 寫入
+
+結論：
+本次執行無法取得新貼文資料。不建立貼文分析檔，不更新 last_seen_id.txt，不推播通知。
+
+需要在 Cloud Session 的網路政策中允許以下網域以恢復正常運作：
+- truthsocial.com
+- trumpstruth.org
+- thetrumparchive.com
+- trumpalert.app
+- kadoa.com
+- presidency.ucsb.edu
+- api.telegram.org (Telegram 推播)
