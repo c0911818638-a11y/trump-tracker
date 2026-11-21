@@ -1,0 +1,42 @@
+# Trump Truth Social 監控日誌
+
+**執行時間：** 2026-11-21 UTC
+**上次記錄 ID：** 2026-11-20_43646
+
+## 執行結果
+
+**新貼文：** 無（未發現 ID 43647 以上的新貼文）
+
+## 嘗試方法
+
+| 方法 | 目標 | 結果 |
+|------|------|------|
+| 方法 A | truthsocial.com RSS/API | 失敗 - 網域不在允許列表 |
+| 方法 B | WebSearch 搜尋 | 部分成功 - 確認最新貼文為 43646 (Nov 20) |
+| 方法 C | thetrumparchive.com / trumpstruth.org | 失敗 - 網域不在允許列表 |
+
+## 已確認最新貼文狀態
+
+- 最後確認貼文：ID 43646（2026-11-20）
+  - 內容：ReTruth from SchoenLaw about tripartite summit with Xi and Putin
+- 搜尋未發現 ID 43647、43648、43649 或更高的新貼文
+- 推論：2026-11-21（週六）截至監控時間點，未有新貼文發布
+
+## 網路限制說明
+
+以下網域在此雲端環境中無法存取：
+- truthsocial.com
+- trumpstruth.org
+- thetrumparchive.com
+- trumpalert.app
+- kadoa.com
+- thehill.com / nbcnews.com 等主流媒體
+
+建議將以上重要網域加入環境允許清單以提升監控效果。
+
+## 動作
+
+- 未更新 state/last_seen_id.txt（無新貼文）
+- 未建立貼文分析檔
+- 未推播 Telegram / LINE 通知
+
