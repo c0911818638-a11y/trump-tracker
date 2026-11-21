@@ -1,0 +1,30 @@
+執行時間：2026-11-21 14:57:22 UTC
+最後記錄貼文 ID：2026-11-20_43646
+
+錯誤記錄：
+1. truthsocial.com - 無法連線（主機未在允許網域清單）
+2. trumpstruth.org - 無法連線（主機未在允許網域清單）
+3. thetrumparchive.com - 無法連線（主機未在允許網域清單）
+4. kadoa.com - 無法連線（主機未在允許網域清單）
+5. trumpalert.app - 無法連線（主機未在允許網域清單）
+6. yahoo.com - 無法連線（主機未在允許網域清單）
+7. thedailybeast.com - 無法連線（主機未在允許網域清單）
+8. showbiz411.com - 無法連線（主機未在允許網域清單）
+9. theconservativetreehouse.com - 無法連線（主機未在允許網域清單）
+10. rollcall.com - 無法連線（主機未在允許網域清單）
+11. cnbc.com - 無法連線（主機未在允許網域清單）
+12. wikipedia.org - 無法連線（主機未在允許網域清單）
+
+WebSearch 搜尋結果摘要（無法取得具體新貼文）：
+- 川普於 11/20 返回華府（APEC 峰會在中國舉行，與習近平、普亭達成「邁向和平宣言」）
+- 預計 11/21 中午舉行白宮記者會討論貿易協議
+- Showbiz411 報導聲稱川普 Truth Social 所有貼文於 11/21 消失（未獲其他媒體證實）
+- 未能確認任何 ID 高於 43646 的新貼文
+
+結論：由於雲端執行環境網路限制，無法存取任何外部新聞來源或 Truth Social 相關存檔網站。
+建議：在環境網路設定中允許以下網域：
+  - truthsocial.com
+  - trumpstruth.org
+  - thetrumparchive.com
+  - kadoa.com
+  - trumpalert.app
