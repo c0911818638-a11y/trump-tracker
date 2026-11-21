@@ -1,0 +1,40 @@
+[2026-11-21] 執行時間: 2026-11-21T08:59:00Z
+
+執行摘要：已搜尋，尚無 ID > 43646 的新貼文被收錄
+
+嘗試方法：
+1. WebFetch https://truthsocial.com/@realDonaldTrump.rss → 失敗：ENOTFOUND (網域未在允許清單)
+2. WebFetch https://www.trumpstruth.org/ → 失敗：ENOTFOUND
+3. WebFetch https://www.thetrumparchive.com/ → 失敗：ENOTFOUND
+4. WebFetch https://www.trumpalert.app/ → 失敗：ENOTFOUND
+5. WebFetch https://www.kadoa.com/potus/truth → 失敗：ENOTFOUND
+6. WebFetch 多個主要新聞網站 → 失敗：ENOTFOUND (yahoo, nbcnews, foxnews, thehill, cnn, newsweek 等皆被封鎖)
+7. WebSearch → 可存取，可取得搜尋摘要
+
+搜尋結果發現：
+- trumpstruth.org 資料庫最新收錄貼文為 ID 43646 (2026-11-20 08:02 AM ET)
+  內容：RT @Schoenlaw 關於川習普三方峰會的貼文
+- 搜尋未發現 ID 43647 至 43670+ 的貼文收錄記錄
+- 可能仍有貼文尚未被第三方存檔網站收錄
+
+背景情況（由 WebSearch 摘要確認）：
+- 2026-11-18：川普在前往中國途中宣布菲律賓貿易協議
+- 2026-11-19：川普飛離中國返美，「Great and Highly Consequential Trip」，宣布 11-20 中午記者會
+- 2026-11-19：宣布追授皮特·羅斯（Pete Rose）完全赦免
+- 2026-11-19：宣布甘迺迪中心第 49 屆榮譽獲得者名單
+- 2026-11-20：川普舉行返美後首次記者會（關於中國行、貿易協議）
+- 2026-11-21：NBC 報導川普「為習近平與普丁關係辯護」（可能為新貼文，尚未確認 ID）
+
+現有狀態：
+- 上次記錄貼文 ID: 2026-11-20_43646 (SHA: f71cfce5850605f17abfd9e445ffe5bddec0dff9)
+- 未找到確認的新貼文 (ID > 43646)
+- 不更新 last_seen_id.txt，不建立貼文分析檔
+
+需要在 Cloud Session 的網路政策中允許以下網域以恢復正常運作：
+- truthsocial.com
+- trumpstruth.org
+- thetrumparchive.com
+- trumpalert.app
+- kadoa.com
+- presidency.ucsb.edu
+- 以及主要新聞網站 (nbcnews.com, foxnews.com, yahoo.com 等)
