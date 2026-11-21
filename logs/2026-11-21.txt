@@ -1,0 +1,22 @@
+# 監控執行記錄
+
+**執行時間：** 2026-11-21 UTC
+**上次記錄貼文 ID：** 2026-11-20_43646（trumpstruth.org #43646，2026-11-20 08:03 EST）
+
+## 執行結果
+
+無新貼文。
+
+## 資料來源嘗試
+
+- truthsocial.com：網路政策封鎖（ENOTFOUND）
+- thetrumparchive.com：網路政策封鎖（ENOTFOUND）
+- trumpstruth.org：網路政策封鎖（ENOTFOUND）
+- kadoa.com：網路政策封鎖（ENOTFOUND）
+- trumpalert.app：網路政策封鎖（ENOTFOUND）
+- WebSearch 搜尋：成功，但最新索引貼文為 #43646（與上次記錄相同）
+
+## 結論
+
+今日（2026-11-21）截至執行時間，未發現比 #43646 更新的貼文。
+未發送 Telegram 或 LINE 通知。
