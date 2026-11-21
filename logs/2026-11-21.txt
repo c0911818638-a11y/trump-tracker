@@ -1,0 +1,49 @@
+日期: 2026-11-21
+執行時間: UTC
+
+【執行摘要】
+本次監控未發現新貼文，不進行推播。
+
+【步驟 1 - 讀取上次記錄】
+成功從 GitHub 讀取 state/last_seen_id.txt
+上次記錄: 2026-11-20_43646（2026年11月20日，序號第43646篇）
+SHA: f71cfce5850605f17abfd9e445ffe5bddec0dff9
+
+【步驟 2 - 嘗試抓取川普最新貼文】
+
+方法 A（WebFetch）：
+- truthsocial.com/@realDonaldTrump.rss → DNS 解析失敗（網路政策封鎖）
+- truthsocial.com API → DNS 解析失敗
+
+方法 B（WebSearch）：
+- 搜尋 "Trump Truth Social posts today 2026-11-21" → 找到數篇連結，但無法直接存取
+- 搜尋 "Trump Truth Social trumpstruth.org 43647-43650 November 2026"
+  → 最高可見序號為 43643（2026年11月19日），低於 last_seen_id 43646
+  → 未找到序號 43647 以上的貼文
+
+方法 C（Trump Archive）：
+- thetrumparchive.com → DNS 解析失敗（網路政策封鎖）
+- trumpstruth.org → DNS 解析失敗（網路政策封鎖）
+
+其他嘗試（均 DNS 封鎖）：
+- kadoa.com, rollcall.com, nbcnews.com, thedailybeast.com
+- yahoo.com, showbiz411.com, trumpalert.app 等
+
+【步驟 3 - 比較新舊】
+- 上次記錄 ID: 43646（2026-11-20）
+- 目前可確認的最新存檔 ID: 43643（2026-11-19）
+- 額外資訊: Showbiz411 報導（單一來源）：11月21日川普 Truth Social 帳號疑似消失數小時後恢復，
+  帳號已超過24小時未發表新貼文
+- 結論：截至今日，未發現序號大於 43646 的新貼文
+
+【網路存取限制說明】
+本 session 的網路政策僅允許存取特定網域。
+以下網域無法解析：
+  truthsocial.com, thetrumparchive.com, trumpstruth.org,
+  kadoa.com, rollcall.com, nbcnews.com, thedailybeast.com,
+  yahoo.com, showbiz411.com, seekingalpha.com 等
+
+若需完整功能，請在 session 設定中允許上述網域的出站連線。
+
+【結論】
+無新貼文 → 不建立貼文檔，不更新 last_seen_id.txt，不推播 Telegram/LINE。
