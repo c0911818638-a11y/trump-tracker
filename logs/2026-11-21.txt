@@ -1,0 +1,72 @@
+執行時間：2026-11-21 (UTC)
+狀態：無法取得貼文
+
+=== 錯誤記錄 ===
+
+上次記錄 ID：2026-11-20_43646
+上次記錄 SHA：f71cfce5850605f17abfd9e445ffe5bddec0dff9
+
+=== 嘗試方法記錄 ===
+
+方法 A - WebFetch 直接抓取：
+  [FAIL] https://truthsocial.com/@realDonaldTrump.rss
+         錯誤：getaddrinfo ENOTFOUND truthsocial.com（網域不在允許清單）
+
+  [FAIL] https://www.thetrumparchive.com/
+         錯誤：getaddrinfo ENOTFOUND www.thetrumparchive.com（網域不在允許清單）
+
+方法 B - WebSearch 搜尋：
+  [PARTIAL] 搜尋結果找到關於 2026-11-20 的貼文資訊（川普返回 APEC、Pete Rose 特赦、期中選舉），
+            但無法確認 11/21 的新貼文，且無法取得具體貼文 ID 以與 last_seen_id 比較。
+
+方法 C - 替代存檔網站：
+  [FAIL] https://www.trumpalert.app/latest-trump-truth-social-posts
+         錯誤：getaddrinfo ENOTFOUND www.trumpalert.app（網域不在允許清單）
+
+  [FAIL] https://www.kadoa.com/potus/truth
+         錯誤：getaddrinfo ENOTFOUND www.kadoa.com（網域不在允許清單）
+
+  [FAIL] https://www.trumpstruth.org/
+         錯誤：getaddrinfo ENOTFOUND www.trumpstruth.org（網域不在允許清單）
+
+  [FAIL] https://rollcall.com/factbase/trump/topic/social/
+         錯誤：getaddrinfo ENOTFOUND rollcall.com（網域不在允許清單）
+
+  [FAIL] https://www.presidency.ucsb.edu/node/397018
+         錯誤：getaddrinfo ENOTFOUND www.presidency.ucsb.edu（網域不在允許清單）
+
+新聞網站嘗試（取得貼文全文）：
+  [FAIL] yahoo.com, thedailybeast.com, cbsnews.com, foxnews.com, cnn.com,
+         newsweek.com, thehill.com, www.thewrap.com, rollcall.com, 
+         einpresswire.com, aol.com
+         全部：getaddrinfo ENOTFOUND（均不在允許清單）
+
+=== 搜尋結果摘要（供參考）===
+
+從 WebSearch 結果中找到的 2026-11-20 貼文相關資訊（無法確認是否為 last_seen_id 之後的新貼文）：
+1. 川普從 APEC 返程（Air Force One）：
+   "Heading back to Washington, D.C., from China. It was a Great and Highly Consequential Trip.
+    I will be giving a News Conference tomorrow at 12 P.M., the White House."
+2. Pete Rose 特赦：
+   "I have just given a Complete and Total Pardon to the Late, Great Pete Rose.
+    He was treated terribly by Major League Baseball. Politics, I guess!"
+3. 分享期中選舉歷屆對比圖（標示 preliminary 的過時圖表）
+4. 轉貼 Laura Loomer 關於伊朗戰爭的貼文
+5. 甘迺迪表演藝術中心第 49 屆榮譽名單
+
+無法確認上述貼文 ID 或是否晚於 last_seen_id（2026-11-20_43646）。
+2026-11-21 無確認新貼文。
+
+=== 結論 ===
+
+由於雲端環境網域限制，無法直接存取 Truth Social 或任何可信任的備份存檔。
+此次執行未建立貼文分析檔案，未推播 Telegram 或 LINE 通知。
+
+建議：在雲端環境網域允許清單中加入以下網域以改善未來執行：
+  - truthsocial.com
+  - www.thetrumparchive.com
+  - www.trumpalert.app
+  - www.kadoa.com
+  - www.trumpstruth.org
+  - rollcall.com
+  - www.presidency.ucsb.edu
