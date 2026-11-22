@@ -1,0 +1,31 @@
+日期：2026-11-22
+執行時間：2026-11-22T00:56:43Z
+最後已知 ID：2026-11-21_117656498566433746
+
+執行摘要：
+- truthsocial.com：ENOTFOUND（網路政策封鎖）
+- thetrumparchive.com：ENOTFOUND（網路政策封鎖）
+- trumpstruth.org：ENOTFOUND（網路政策封鎖）
+- 大多數新聞網站（Yahoo、CNN、NBC、The Hill、Daily Beast、Showbiz411 等）：ENOTFOUND
+- GitHub API write：403 被代理封鎖
+- Telegram API（api.telegram.org）：403 被代理封鎖
+
+從 WebSearch 取得的 11 月 21 日貼文資訊（無法取得精確 Truth Social ID）：
+1. 轉發「TrumpCare」醫保卡設計圖（無自行評論），來源：Fox 2 Detroit、Raw Story
+2. 發布與普廷握手照片，附文「My Friend」，來源：UNN.ua
+3. APEC 峰會返程途中發布約 40 篇貼文（與習近平、普廷照片），來源：Irish Star
+4. 帳號曾短暫消失後恢復，恢復後約 24 小時無新貼文，來源：Showbiz411
+
+11 月 22 日（今日）：搜尋未發現任何新貼文報道。
+
+狀態：
+- 由於無法取得精確 Truth Social 貼文 ID，無法確認是否有新貼文超過 last_seen_id
+- last_seen_id.txt 未更新
+- Telegram 推播失敗：api.telegram.org 被代理封鎖（HTTP 403）
+- GitHub push 失敗：API write 被代理封鎖（HTTP 403）
+
+建議：需開放以下網域的存取權限以正常運作：
+- truthsocial.com（主要來源）
+- thetrumparchive.com（備援來源）
+- api.telegram.org（主要通知）
+- github.com API write（儲存貼文）
