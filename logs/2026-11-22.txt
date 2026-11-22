@@ -1,0 +1,24 @@
+【川普 Truth Social 監控日誌】
+日期：2026-11-22 UTC
+執行結果：無新貼文
+
+檢查詳情：
+- 上次記錄貼文 ID：2026-11-21_117656498566433746
+- 資料來源嘗試：
+  * truthsocial.com RSS/API → 被網路政策封鎖（ENOTFOUND）
+  * thetrumparchive.com → 被網路政策封鎖（ENOTFOUND）
+  * WebSearch 搜尋 → 成功取得資訊
+  * 多家新聞網站 WebFetch → 大多被封鎖
+
+搜尋結果：
+- 確認 2026-11-21 川普發布大量 APEC 峰會照片貼文（已記錄）
+- 確認 2026-11-21 TrumpCare 轉發貼文（新增至 posts/2026-11-21_trumpcare_repost.md）
+- 2026-11-22：依報導，川普帳號在 2026-11-21 後約 24 小時無新貼文
+  * Showbiz411 報告帳號短暫消失後恢復，但截至今日上午無新貼文
+
+推播狀態：
+- GitHub push：被 proxy 封鎖（403 Connect Rejected）
+- Telegram 推播：被 proxy 封鎖（403 Connect Rejected）
+- LINE（透過 GitHub Actions）：因 GitHub push 失敗，自動流程未觸發
+
+補充：已補充記錄 2026-11-21 TrumpCare 轉發貼文分析（之前未記錄）。
