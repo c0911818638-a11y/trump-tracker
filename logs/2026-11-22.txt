@@ -1,0 +1,41 @@
+# 監控日誌 2026-11-22
+
+**執行時間：** 2026-11-22 (UTC)
+**上次記錄貼文 ID：** 2026-11-21_117656498566433746
+
+## 執行結果：無新貼文
+
+今日監控未發現新的 Truth Social 貼文。
+
+## 方法嘗試記錄
+
+### 方法 A（WebFetch 直接抓取）
+- truthsocial.com/@realDonaldTrump.rss → 失敗：ENOTFOUND（網域未在允許清單中）
+- truthsocial.com API endpoint → 失敗：同上
+- thetrumparchive.com → 失敗：ENOTFOUND
+
+### 方法 B（WebSearch 搜尋）
+- 搜尋「Trump Truth Social posts November 22 2026」→ 無 11/22 貼文結果
+- 搜尋「Trump Truth Social new post November 22 2026」→ 所有結果均為 11/21 的貼文
+
+### 方法 C（其他新聞/存檔網站）
+- trumpstruth.org、kadoa.com、trumpalert.app、presidency.ucsb.edu → 均 ENOTFOUND
+- rawstory.com、irishstar.com、nbcnews.com、unn.ua → 均 ENOTFOUND
+
+## 11/21 貼文已追蹤（前次執行已處理）
+
+根據 GitHub repo 記錄，前次執行（11/22 00:00 UTC）已分析以下 11/21 貼文：
+- 普廷「My Friend」照片貼文（2026-11-21_putin_my_friend.md）
+- 中國行程40則照片浪潮（2026-11-21_china_photo_spree.md）
+- 農業法案全大寫貼文（2026-11-21_farm_bill_allcaps.md）
+
+## 狀態
+
+- **結論：** 2026-11-22 川普無新 Truth Social 貼文
+- **技術限制：** 本雲端執行環境的網路政策封鎖了大多數外部域名，僅 WebSearch API 可用
+- **建議：** 在環境的網路允許清單中加入 truthsocial.com 以啟用直接 API 存取
+
+## 通知狀態
+
+- Telegram：**未發送**（無新貼文）
+- LINE：**未觸發**（無新 GitHub push）
