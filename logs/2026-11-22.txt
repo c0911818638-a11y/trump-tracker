@@ -1,0 +1,29 @@
+# 執行日誌 2026-11-22
+
+**執行時間：** 2026-11-22 UTC
+**上次記錄 ID：** 2026-11-21_117656498566433746
+
+## 新貼文發現
+
+共發現 3 則新貼文（ID 均大於 117656498566433746）：
+
+1. **117660691191971810** - RT「100-Year Move」（Larry Dean 轉發，指控民主黨）
+2. **117660715234270781** - 影片貼文：格陵蘭/委內瑞拉/巴拿馬「要塞地圖」
+3. **117660771450282590** - RT：「The Great Powers 1945, 2026」（深圳峰會 vs. 雅爾達）
+
+## 資料來源
+
+- WebSearch（truthsocial.com 本身被代理封鎖，無法直接存取）
+- Trump's Truth 檔案（trumpstruth.org 也被代理封鎖，資料來自搜尋快取）
+- 多家新聞媒體報導（Kyiv Post、Korea Times、Newscord 等）
+
+## 通知狀態
+
+- **GitHub push：** 失敗（代理封鎖 api.github.com 的 PUT 請求）
+- **git push：** 嘗試中（git CLI 透過 proxy 推送）
+- **Telegram：** 失敗（api.telegram.org 被代理封鎖，HTTP 403）
+- **LINE（GitHub Actions）：** 取決於 git push 是否成功
+
+## 更新後 last_seen_id
+
+2026-11-22_117660771450282590
