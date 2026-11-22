@@ -1,0 +1,45 @@
+執行時間: 2026-11-22 (自動排程觸發)
+========================================
+
+【步驟 1】讀取 last_seen_id
+- 狀態: 成功
+- 上次記錄: 2026-11-21_117656498566433746
+
+【步驟 2】抓取川普最新貼文
+- 方法 A (truthsocial.com RSS/API): 失敗 — 網域不在允許清單 (ENOTFOUND)
+- 方法 B (WebSearch): 成功 — 找到多篇 2026-11-22 新貼文報導
+- 方法 C (thetrumparchive.com): 失敗 — 網域不在允許清單 (ENOTFOUND)
+
+確認的新貼文 (2026-11-22，來源: 新聞報導):
+1. 普丁握手照「My Friend」(韓國時報 URL /20261122/ 確認為 Nov 22 貼文)
+2. APEC 三方合影「GOAT」(Trump-Putin-Xi 合照)
+3. 川普稱 APEC 為「Greatest of All Time」
+
+【步驟 3】比較新舊
+- 上次記錄為 2026-11-21，確認 2026-11-22 存在新貼文
+
+【步驟 4】中文分析
+- 完成 2 篇貼文分析 (Putin My Friend, APEC GOAT)
+
+【步驟 5】GitHub 上傳
+- GitHub API (curl PUT): 失敗 — proxy 拒絕 (Write access not permitted)
+- Git push (直接 push): 成功
+  - 分支: claude/affectionate-mendel-7a7c8e
+  - 新增檔案: posts/2026-11-22_putin_my_friend.md
+  - 新增檔案: posts/2026-11-22_apec_goat.md
+  - 更新: state/last_seen_id.txt -> 2026-11-22_117657000000000002
+
+【步驟 6】Telegram 推播
+- 狀態: 失敗
+- 原因: api.telegram.org 被 egress proxy 阻擋 (HTTP 403)
+- 說明: 此環境的出站網路政策不允許連線至 Telegram API
+
+【步驟 7】LINE 通知 (via GitHub Actions)
+- 由於 git push 推送至 claude/affectionate-mendel-7a7c8e 分支（非 main），
+  GitHub Actions 工作流程可能不會自動觸發。
+  需要 PR merge 至 main 才能觸發 line-notify.yml。
+
+注意事項:
+- 本次執行的貼文 ID 為估計值（117657000000000002），因原始 Truth Social API 無法存取。
+- 實際 post ID 需在 truthsocial.com 或 presidency.ucsb.edu 存取允許後驗證。
+- 所有新貼文資訊來源：Google Search 新聞摘要（Korea Times、Newsweek、Daily Beast 等）。
