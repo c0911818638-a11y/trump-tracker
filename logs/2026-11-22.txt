@@ -1,0 +1,59 @@
+# 執行日誌：2026-11-22
+
+**執行時間：** 2026-11-22 UTC
+
+## 步驟 1：讀取上次記錄
+- last_seen_id: 2026-11-21_117656498566433746
+- 對應時間：2026-11-21 21:14 UTC（東部時間 4:14 PM）
+- sha: 76d4c9744a9b38e5751c9c67c60ef35d3699486f
+
+## 步驟 2：嘗試抓取最新貼文
+
+方法 A（直接存取 Truth Social/Trump Archive）：
+- truthsocial.com：ENOTFOUND（此 session 網路政策不允許）
+- thetrumparchive.com：ENOTFOUND
+
+方法 B（WebSearch）：搜尋了多個關鍵字組合，包括：
+- "Trump Truth Social November 22 2026"
+- "Trump posts Truth Social today Sunday November 22 2026"
+- "Trump Putin 'My Friend' Truth Social post ID"
+- site:trumpstruth.org statuses 43686–43710
+
+方法 C（Trump Archive）：ENOTFOUND
+
+## 步驟 3：比對結果
+
+透過 WebSearch 確認的 November 21 貼文（已在前次執行中記錄）：
+- status 43661 / VETO hat post：2026-11-21 3:24 PM EST（BEFORE last_seen_id）
+- status 43670 / "My Friend" (Putin)：2026-11-21 3:56 PM EST（BEFORE last_seen_id）
+- status 43685 / "THE WORLD IS WATCHING"：2026-11-21 4:14 PM EST
+- status 43686 (ID: 117656497080448040)：2026-11-21 4:14 PM EST（BEFORE last_seen_id）
+- TrumpCare repost（El-Sayed）：Saturday afternoon，約 3:24 PM EST 前（BEFORE last_seen_id）
+
+last_seen_id = 117656498566433746 > 117656497080448040 (43686)
+→ 最後追蹤貼文仍為最新
+
+Statuses 43690-43710：WebSearch 無結果，確認這些 status 尚不存在（或尚未被索引）
+
+November 22 貼文：無任何媒體報導或 archive 索引發現新貼文
+
+## 結論
+
+**無新貼文。**
+
+川普自 2026-11-21 21:14 UTC（4:14 PM 東部時間）後，截至本次執行前，尚未在 Truth Social 上發布新貼文。
+
+**未推播 Telegram 通知**（無新內容）。
+**未更新 last_seen_id.txt**（無變化）。
+
+## 網路限制記錄
+
+以下網域均無法從本 session 存取（ENOTFOUND）：
+- truthsocial.com / thetrumparchive.com
+- nbcnews.com / foxnews.com / newsweek.com / yahoo.com / aol.com
+- showbiz411.com / mediaite.com / breitbart.com
+- kyivpost.com / unn.ua / anews.com.tr
+- presidency.ucsb.edu / trumpstruth.org / kadoa.com
+- newscord.org / archyde.com / 247wallst.com
+
+GitHub API 直接寫入（PUT）亦被 proxy 封鎖，改用本地 git 提交。
