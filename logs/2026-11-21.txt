@@ -1,0 +1,32 @@
+=== Trump Tracker Run Log: 2026-11-21 ===
+
+Run Status: PARTIAL SUCCESS
+Timestamp: 2026-11-21 (scheduled run)
+
+Step 1 - State Read: SUCCESS
+  Last seen ID: 2026-11-21_117656498566433746
+
+Step 2 - Fetch Posts: PARTIAL (via WebSearch fallback)
+  - truthsocial.com: BLOCKED (ENOTFOUND - not in network allowlist)
+  - trumpstruth.org: BLOCKED (ENOTFOUND)
+  - thetrumparchive.com: BLOCKED (ENOTFOUND)
+  - WebSearch: SUCCESS - Found 3 key posts via news reports
+  
+Key Posts Found (2026-11-21):
+  1. Putin "My Friend" photo post (~21:00 UTC)
+  2. 40-photo China summit spree at ~20:00-21:14 UTC ("Great Powers of 1945 and 2026")
+  3. Farm Bill all-caps post ("IT IS TIME TO DO IT AGAIN, and FAST")
+
+Step 5 - GitHub Push: SUCCESS (git push to main)
+  Files: posts/2026-11-21_putin_my_friend.md
+         posts/2026-11-21_china_photo_spree.md
+         posts/2026-11-21_farm_bill_allcaps.md
+
+Step 6 - Telegram: FAILED
+  Reason: api.telegram.org blocked by proxy (HTTP 403 - no rule allows this host)
+
+Step 7 - LINE (GitHub Actions): PENDING - triggers on this push to main
+
+Note: Post IDs not confirmed (TruthSocial not reachable). 
+      State file not updated due to unknown exact latest post ID.
+      Next run will re-evaluate from last seen ID: 117656498566433746
