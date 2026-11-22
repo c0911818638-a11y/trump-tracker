@@ -1,0 +1,33 @@
+# 監控日誌 2026-11-22
+
+執行時間：2026-11-22T（本次執行）
+
+## 狀態
+
+上次記錄貼文 ID：2026-11-21_117656498566433746
+（2026-11-21 21:14 UTC，深圳APEC峰會後照片浪潮最後一則）
+
+## 本次執行結果
+
+### 貼文抓取
+- truthsocial.com：ENOTFOUND（網域封鎖）
+- thetrumparchive.com：ENOTFOUND（網域封鎖）
+- WebSearch：成功取得間接資訊
+
+### 發現的新貼文
+1. TrumpCare 轉發貼文（2026-11-21 下午，確切ID未知）
+   - 川普無文字轉發El-Sayed的TrumpCare全民健保方案
+   - 前次執行未記錄此貼文
+
+### 未發現新貼文
+- 2026-11-22 目前無新貼文（帳號在APEC貼文浪潮後暫時靜默）
+
+## 失敗原因
+
+- 步驟5 GitHub API上傳：失敗 - Write access not permitted through proxy
+- 步驟6 Telegram推播：失敗 - api.telegram.org:443 HTTP 403 by egress proxy
+- 步驟7 LINE通知：失敗 - 因步驟5 GitHub push失敗，GitHub Actions未觸發
+
+## 本次使用本地git提交補救
+
+已透過本地git提交：posts/2026-11-21_trumpcare_repost.md
