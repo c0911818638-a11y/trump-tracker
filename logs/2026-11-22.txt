@@ -41,10 +41,17 @@ Step 4 - Analysis Files: NONE CREATED
 
 Step 5 - GitHub Push: See below
 
-Step 6 - Telegram: BLOCKED (api.telegram.org still blocked by proxy - same as Nov 21 run)
-  Note: Telegram has been blocked in all runs. Main notification channel unavailable.
+Step 6 - Telegram: BLOCKED
+  Error: api.telegram.org:443 — connect_rejected, HTTP 403
+  Telegram has been blocked in all runs. Main notification channel unavailable.
 
-Step 7 - LINE (GitHub Actions): PENDING - triggers on this push
+Step 6b - LINE (direct attempt): BLOCKED
+  Error: api.line.me:443 — connect_rejected, HTTP 403
+
+Step 7 - LINE (GitHub Actions backup):
+  Push was to branch (not main); GitHub Actions may not trigger.
+  GitHub API write to main also blocked (proxy restricts GitHub API writes).
+  All notification channels unavailable in this session's network policy.
 
 Background Context (Nov 21-22):
   - Trump held trilateral summit with Xi and Putin in Shenzhen Nov 18-19
