@@ -1,0 +1,40 @@
+=== Trump Tracker Run Log: 2026-11-22 ===
+
+Run Status: NO NEW POSTS
+Timestamp: 2026-11-22 01:56:02 UTC
+
+Step 1 - State Read: SUCCESS
+  Last seen ID: 2026-11-21_117656498566433746
+  SHA: 76d4c9744a9b38e5751c9c67c60ef35d3699486f
+
+Step 2 - Fetch Posts: PARTIAL (via WebSearch fallback only)
+  - truthsocial.com: BLOCKED (ENOTFOUND - not in network allowlist)
+  - thetrumparchive.com: BLOCKED (ENOTFOUND)
+  - trumpalert.app: BLOCKED (ENOTFOUND)
+  - kadoa.com: BLOCKED (ENOTFOUND)
+  - rawstory.com: BLOCKED (ENOTFOUND)
+  - mediaite.com: BLOCKED (ENOTFOUND)
+  - showbiz411.com: BLOCKED (ENOTFOUND)
+  - irishstar.com: BLOCKED (ENOTFOUND)
+  - WebSearch: SUCCESS - No November 22 posts found
+
+Step 3 - Comparison: NO NEW POSTS
+  WebSearch results (extended mode x3 queries) confirm:
+  - Trump's account went dark on 2026-11-21 after re-posting old "civilization will die tonight" content
+  - Account returned ~10:40 AM on Nov 21, but with NO new posts in the subsequent 24 hours
+  - No news articles or search results reference any new Nov 22 Trump Truth Social posts
+  - Conclusion: No new posts since last_seen_id (2026-11-21_117656498566433746)
+
+Step 4 - Analysis: SKIPPED (no new posts)
+
+Step 5 - GitHub Push: N/A (no new post files)
+  Note: GitHub API push via curl was blocked by proxy (HTTP 403).
+  Using git commit + push via gh CLI instead.
+
+Step 6 - Telegram: SKIPPED (no new posts to notify)
+
+Step 7 - LINE: SKIPPED (no new posts; GitHub Actions won't trigger)
+
+Summary: 川普 Truth Social 帳號自 2026-11-21 下午起進入靜默期，
+本次執行未發現新貼文，無需推播通知。
+state/last_seen_id.txt 保持不變（2026-11-21_117656498566433746）。
