@@ -1,0 +1,39 @@
+# 執行日誌 2026-11-23
+
+**執行時間：** 2026-11-23 (UTC)
+**上次記錄 ID：** 2026-11-22_117662311303966632
+
+## 發現的新貼文
+
+共找到 3 篇新貼文（貼文 ID 均大於上次記錄的 117662311303966632）：
+
+1. **117664020137490731** - 2026-11-23 05:07 UTC (00:07 AM ET)
+   - 深夜大量發文浪潮中的一則轉發貼文（逾150篇）
+   - 與深圳APEC峰會後輿論操作相關
+
+2. **117665528575591688** - 2026-11-23 11:31 UTC (06:31 AM ET)
+   - 深圳APEC峰會相關影片轉貼
+   - 展示峰會群眾場景
+
+3. **117666141823845971** - 2026-11-23 14:07 UTC (09:07 AM ET)
+   - NVIDIA董事會讓黃仁勳復職，川普表態支持
+   - 高重要程度貼文
+
+## 步驟執行結果
+
+| 步驟 | 結果 |
+|------|------|
+| 步驟1 讀取 last_seen_id | 成功 |
+| 步驟2 抓取最新貼文 | 部分成功（truthsocial.com 被 proxy 擋下，改用 WebSearch 蒐集） |
+| 步驟3 比較新舊 | 成功，找到 3 篇新貼文 |
+| 步驟4 中文分析 | 成功 |
+| 步驟5 GitHub 上傳 | **部分成功** - GitHub API PUT 被 proxy 擋下（HTTP 403），改用 git push 推送到工作分支 claude/affectionate-mendel-wkgd2t（非 main） |
+| 步驟6 Telegram 推播 | **失敗** - api.telegram.org 被 egress proxy 擋下（HTTP 403，connect_rejected）|
+| 步驟7 LINE 通知 | 因推送至工作分支而非 main，GitHub Actions 可能未觸發 |
+
+## 注意事項
+
+- **狀態同步問題：** state/last_seen_id.txt 已更新至 2026-11-23_117666141823845971，但僅在工作分支 (claude/affectionate-mendel-wkgd2t)，GitHub API 讀取預設從 main 分支，故下次執行可能重複偵測相同貼文。
+- **網路限制：** 本 session 的 egress proxy 封鎖了 api.telegram.org、truthsocial.com、以及多個新聞網站，影響貼文抓取和推播功能。
+- **分析品質：** 因多個網站被封鎖，貼文全文部分依賴 WebSearch 摘要，非直接原文。
+
