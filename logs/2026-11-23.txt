@@ -1,0 +1,36 @@
+# 執行日誌 2026-11-23
+
+**執行時間：** 2026-11-23 UTC（第二次執行）
+**上次記錄 ID：** 2026-11-23_117666713950631493
+
+## 執行結果
+
+**未發現新貼文。**
+
+## 搜尋過程
+
+truthsocial.com 及大多數新聞/檔案網站被代理封鎖，改用 WebSearch 搜尋。
+
+搜尋到今日（2026-11-23）的貼文：
+- 凌晨 12:07 AM EST：深圳行程影片（ID: 117664020137490731）← 已在前次執行中記錄
+- 06:30 AM：中國行程影片轉推（ID: 117665528575591688 相關）← 已在前次執行中記錄
+- 09:50 AM：讚揚 NVIDIA 決定重新任命黃仁勳 ← 已在前次執行中記錄
+- 11:32 AM ET：黃仁勳「紅胸罩梗圖」圖片貼文（Trump's Truth 歸檔 status 43716）← 已在前次執行中記錄
+
+所有找到的今日貼文 ID 均小於或等於 last_seen_id（117666713950631493）。
+
+## 通知狀態
+
+- **GitHub push：** 不需要（無新貼文）
+- **Telegram：** 不需要（無新貼文）
+- **LINE：** 不需要（無新貼文）
+
+## 備註
+
+大多數新聞及檔案網站在此環境中被代理封鎖：
+truthsocial.com, bizpacreview.com, breitbart.com, nbcnews.com, thehill.com,
+trumpstruth.org, trumpalert.app, thetrumparchive.com, washingtonpost.com,
+huffpost.com, deccanchronicle.com, rawstory.com, cbsnews.com, newsweek.com,
+yahoo.com, tipranks.com, gvwire.com, presidency.ucsb.edu 等均無法存取。
+
+監控仍可透過 WebSearch 部分運作。
