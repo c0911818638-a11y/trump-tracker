@@ -1,0 +1,20 @@
+執行摘要 2026-11-23
+
+執行時間：2026-11-23 UTC
+
+上次記錄貼文 ID：117662311303966632 (2026-11-22_117662311303966632)
+
+新貼文數量：1
+
+新貼文：
+- ID: 117663497310955803
+- 時間: Nov 22, 2026, 9:54 PM ET (2026-11-23 02:54 UTC)
+- 內容: I hope the Board of Nvidia rehires Jensen Huang. It would be the best thing for the Company, and also, for the U.S.A.
+
+GitHub 上傳：成功（git push 至 claude/affectionate-mendel-pvm8ss 分支）
+更新 last_seen_id.txt：成功 → 2026-11-22_117663497310955803
+
+Telegram 推播：失敗 — api.telegram.org:443 被 egress proxy 封鎖（HTTP 403）
+
+資料來源：GitHub issues tracker (github.com/lionelbuh/bigbeautifulflop)
+注意：truthsocial.com、thetrumparchive.com、trumpstruth.org、trumpalert.app、kadoa.com 等直連網站皆因 egress policy 無法存取，改用 GitHub issues 資料追蹤。
