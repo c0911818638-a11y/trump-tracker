@@ -1,0 +1,41 @@
+# 川普 Truth Social 監控日誌 - 2026-11-23
+
+執行時間：2026-11-23T18:59:26Z
+最後已知貼文 ID：117666713950631493（11:32 AM EST，黃仁勳/Butler 梗圖）
+
+## 執行結果
+
+狀態：無法取得新貼文（網路限制）
+
+### 嘗試的方法
+
+1. 方法 A WebFetch：truthsocial.com ➜ DNS 解析失敗（網域未在白名單）
+2. 方法 A WebFetch：Truth Social API ➜ DNS 解析失敗
+3. 方法 B WebSearch：搜尋成功，取得今日已知貼文清單（但無法取得完整 ID 與內容）
+4. 方法 C WebFetch：trumpstruth.org ➜ DNS 解析失敗（網域未在白名單）
+5. 其他：washingtonpost.com, yahoo.com, nbc.com, techcrunch.com, time.com,
+   deadline.com, redstate.com, trumpalert.app, kadoa.com, tipranks.com 均 DNS 失敗
+
+### 今日已知貼文（來源：WebSearch 間接取得）
+
+時間（EST） | 內容摘要                              | Truth Social 狀態 ID
+----------- | ------------------------------------- | ----------------------
+00:07 AM    | 影片貼文                               | 未知
+06:31 AM    | AI 影片：中國行程剪輯（普習峰會）         | 117665528575591688（已見過）
+09:07-09:50 | 恭賀 Nvidia 讓黃仁勳回任 CEO            | 未知（早於最後 ID）
+11:32 AM    | 黃仁勳/Butler 梗圖（Nvidia 旗幟版）      | 117666713950631493（最後已知）
+1:00 PM     | 未知內容（搜尋快取有提及但無詳情）        | 未知（可能大於最後 ID）
+
+### 結論
+
+- 無法確認是否有 ID > 117666713950631493 的新貼文
+- last_seen_id.txt 保持不變，未建立貼文分析檔案
+- 1:00 PM 貼文可能為新貼文，但因網路限制無法取得詳情
+
+### 建議：啟用以下網域白名單以提高監控成效
+
+- truthsocial.com
+- www.trumpstruth.org
+- www.thetrumparchive.com
+- www.presidency.ucsb.edu
+- www.washingtonpost.com
