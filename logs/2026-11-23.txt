@@ -1,0 +1,30 @@
+【川普 Truth Social 監控 - 2026-11-23 執行記錄】
+
+執行時間：2026-11-23 UTC
+上次記錄 ID：117662311303966632 (2026-11-22)
+
+執行結果：未偵測到新貼文
+
+搜尋方式：
+- WebFetch → truthsocial.com：失敗（域名封鎖）
+- WebFetch → thetrumparchive.com：失敗（域名封鎖）
+- WebFetch → trumpstruth.org：失敗（域名封鎖）
+- WebFetch → kadoa.com：失敗（域名封鎖）
+- WebFetch → trumpalert.app：失敗（域名封鎖）
+- WebFetch → 多家新聞網站：失敗（域名封鎖）
+- WebSearch → 多個關鍵字：部分成功
+
+透過 WebSearch 確認的最近貼文 ID：
+- 117662290160182921 (2026-11-22 16:47 EST) → 低於上次記錄 ID
+- 117661238591305263 (2026-11-22 更早) → 低於上次記錄 ID
+
+確認 2026-11-22 貼文主題（均早於上次記錄 ID）：
+- 關於 Schumer 的批評貼文（週日早晨，「Here we go again!」）
+- TrumpCare/El-Sayed 轉貼（週六 Nov 21）
+- 與普丁合照「My Friend」貼文
+- 市場下跌相關貼文
+
+2026-11-23 無確認新貼文。
+
+GitHub Push：本次無新貼文，不更新 state/last_seen_id.txt。
+Telegram 通知：無新貼文，不推播。
