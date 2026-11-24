@@ -27,19 +27,26 @@
 
 以上貼文均 ≤ last_seen_id，確認已全部處理。
 
-## 2026-11-24 狀況
+## 2026-11-24 狀況（第二次執行更新）
 
-- WebSearch 未找到任何確認為 2026-11-24 的新貼文
-- 推測可能原因：執行時間為 UTC 早晨，川普尚未開始發文（通常美東時間上午開始活動）
-- Thanksgiving（感恩節）為 2026-11-26（週四），本週為節前，可能有相關貼文
+第二次執行透過更廣泛的 WebSearch 發現一則確認為 2026-11-24 的新貼文：
+
+**貼文：2031 女子世界盃由美國等國主辦（2026-11-24 Tuesday）**
+- 川普在 Truth Social 宣布美國、墨西哥、哥斯大黎加、牙買加共同主辦 2031 FIFA 女子世界盃
+- 多家媒體報導（Just the News、Fox Baltimore、WJLA、The National Desk 等）均確認此貼文
+- 貼文 ID 因 truthsocial.com 被封鎖而無法取得
+- 分析檔案已建立：posts/2026-11-24_WWC2031.md
 
 ## 通知狀態
 
-- **新貼文：** 無，不觸發通知
-- **GitHub push：** 推送本日誌
-- **Telegram：** 無須推播
-- **LINE：** 無須推播
+- **新貼文：** 1 則（2031 女子世界盃）
+- **GitHub push（dev branch）：** 成功推送至 claude/affectionate-mendel-fad1uh
+- **Telegram 直接推播：** 失敗——api.telegram.org:443 被 session 網路政策封鎖（HTTP 403）
+- **LINE via GitHub Actions：** 未觸發——LINE/Telegram workflows 僅於 main branch push 時觸發，本次推送至 dev branch 無法觸發
+- **主要備案：** main branch 的 fetch-and-notify.yml 每小時定期執行（UTC 每小時第 3 分），下次執行時將從 main branch 狀態（117667276373895254）重新掃描，可能直接抓取到此貼文並觸發 LINE 通知
 
-## 建議
+## last_seen_id 更新
 
-建議下次執行時重新搜尋，可能發現川普稍後的發文活動。
+- 更新前：2026-11-23_117667276373895254
+- 更新後：2026-11-24_WWC2031（dev branch 已更新）
+- main branch 狀態未變動（由 GitHub Actions 主工作流自行管理）
