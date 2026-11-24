@@ -1,0 +1,31 @@
+監控執行時間: 2026-11-24
+
+狀態: 完成監控，未發現新貼文
+
+上次記錄 ID: 117667276373895254
+上次記錄時間: 2026-11-23 ~13:55 ET（貼文內容：IPCC氣候科學撤回聲明）
+
+抓取方法嘗試結果:
+- 方法 A (WebFetch truthsocial.com): 失敗 - 網域被封鎖 (ENOTFOUND)
+- 方法 A (WebFetch API): 失敗 - 網域被封鎖
+- 方法 B (WebSearch): 部分成功 - 找到 2026-11-23 貼文，但所有 ID 均低於 last_seen_id
+- 方法 C (thetrumparchive.com): 失敗 - 網域被封鎖
+
+搜尋發現的最新貼文（均早於 last_seen_id）:
+- 117667276373895254: IPCC氣候預測聲稱撤回 (Nov 23, 1:55 PM ET) ← 上次記錄
+- 117667060434959655: 愛荷華州爆炸物銷毀計劃 (Nov 23, 10:00 AM ET)
+- 117666313179684854: NVIDIA 重新任命 Jensen Huang 祝賀文
+- 117666141823845971: NVIDIA董事會決定聲明
+- 117665529427047942: 其他貼文
+- 117665528575591688: 其他貼文 (Nov 23, 6:31 AM)
+
+2026-11-23 主要事件:
+- Trump 多次發文支持 NVIDIA 重新任命 Jensen Huang 為 CEO
+- 11:32 AM ET: 發布 Jensen Huang 持紅色胸罩的惡搞圖（Butler 暗殺未遂照片改圖）
+- 1:55 PM ET: 聲稱 IPCC 撤回氣候科學預測
+
+無新貼文確認，不更新 last_seen_id.txt。
+不發送 Telegram 推播。
+
+網路存取限制：本 session 大多數新聞及存檔網站被封鎖，
+僅能通過 WebSearch API 取得部分資訊。
