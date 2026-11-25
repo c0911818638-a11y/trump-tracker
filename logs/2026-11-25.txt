@@ -1,31 +1,43 @@
-# 川普 Truth Social 監控日誌 - 2026-11-25
+# 執行日誌 - 2026-11-25
 
 ## 執行時間
-2026-11-25 00:02 UTC
+2026-11-25 13:58:02 UTC
 
-## 檢查結果
-**狀態：無新貼文**
+## 狀態
+錯誤：無法取得 Truth Social 貼文
 
-## 詳細資訊
-- 上次記錄貼文 ID：117676500000000000（2026-11-24 由上次執行設定）
-- 今日搜尋方法：
-  - WebSearch（truthsocial.com 被 proxy 封鎖，無法直接存取）
-  - GitHub bigbeautifulflop tracker（最後更新：2026-11-24T20:23:16Z）
-  - X.com @TrumpTruthOnX 帳號搜尋
-  - 多家新聞媒體搜尋
+## 嘗試的方法
 
-## 已確認的最新貼文（2026-11-24，已於上次執行處理）
-1. 12:08 PM ET - FIFA 女子世界盃 2031（ID: 117672518077966619）
-2. 12:34 PM ET - 烏茲別克涼亭感謝（ID: 117672619106081295）
-3. 12:40 PM ET - Jim O'Neill 聯邦法官提名（ID: 117672641177788145）
-4. 1:58 PM ET - 攻擊法官 Reyes 阻礙高爾夫球場翻新（ID: ~117672947522305995）
+### 步驟 1：讀取上次記錄
+- 成功
+- 上次 ID：2026-11-24_117676500000000000
+- SHA：0952cfbe74fb8d8d32af593d5c42bac540b8cb3c
 
-## 2026-11-25 搜尋結果
-- 未發現任何 2026-11-25 相關貼文
-- bigbeautifulflop tracker 仍停留在第 80 號 Issue（Nov 24, 1:58 PM ET）
-- 無新聞報導顯示今日有新 Truth Social 貼文
+### 方法 A：直接存取 Truth Social
+- 失敗：truthsocial.com 被 Session 網路政策封鎖（ENOTFOUND）
+
+### 方法 B：WebSearch 搜尋
+- 部分成功：找到 11/22-24 的貼文資訊，但無具體 11/25 新貼文 ID
+
+搜尋摘要（11/22-24 貼文）：
+- 2026-11-22：Trump 發布「Wins of President Trump」清單（ended DEI, ended transgender insanity, secured border, record deportations）
+- 2026-11-23：Trump 發布 Jensen Huang/Nvidia CEO 迷因圖（無文字）
+- 2026-11-24：Trump 貼文關於 Nvidia 重聘 Jensen Huang：「The NVIDIA Board of Directors has made the correct and proper decision to return Jensen Huang to the position of CEO... he is a Great Patriot and National Treasure.」
+
+以上貼文均早於或等於上次 ID（2026-11-24），無法確認是否為新貼文。
+
+### 方法 C：Trump Archive / 其他第三方追蹤器
+- 失敗：thetrumparchive.com, kadoa.com, trumpalert.app, tipranks.com, presidency.ucsb.edu 均被網路政策封鎖
 
 ## 結論
-本次執行未發現新貼文。
-last_seen_id 維持不變：2026-11-24_117676500000000000
-Telegram/LINE 未推播（無新內容）
+因 Session 網路存取政策限制，無法直接存取 Truth Social 或大多數新聞/追蹤器網站。
+本次執行未找到確認的 2026-11-25 新貼文，不更新 last_seen_id.txt，不發送通知。
+GitHub API 直接寫入亦被 proxy 封鎖，改用 git commit/push 寫入日誌。
+
+## 建議
+需要將以下域名加入 Session 允許清單：
+- truthsocial.com
+- thetrumparchive.com
+- kadoa.com
+- thehill.com
+- nbcnews.com
