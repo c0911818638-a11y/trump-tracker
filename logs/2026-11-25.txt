@@ -1,31 +1,56 @@
-# 川普 Truth Social 監控日誌 - 2026-11-25
+=== Trump Tracker Run Log: 2026-11-25 ===
+Timestamp: 2026-11-25T22:57:43Z
+Last seen ID: 2026-11-25_117678202296534723
+Last seen SHA: 4e8eac056935ffa54929a3ffd0160900210791c6
 
-## 執行時間
-2026-11-25 00:02 UTC
+=== Method Attempts ===
+Method A (truthsocial.com RSS): FAILED - getaddrinfo ENOTFOUND (domain blocked by session network policy)
+Method A (truthsocial.com API): FAILED - getaddrinfo ENOTFOUND (domain blocked by session network policy)
+Method B (WebSearch): PARTIAL - news snippets available but no verified exact post text or new post IDs
+Method C (thetrumparchive.com): FAILED - getaddrinfo ENOTFOUND (domain blocked)
+Additional (trumpstruth.org): FAILED - getaddrinfo ENOTFOUND (domain blocked)
+Additional (kadoa.com/potus/truth): FAILED - getaddrinfo ENOTFOUND (domain blocked)
+Additional (x.com @TrumpTruthOnX mirror): FAILED - getaddrinfo ENOTFOUND (domain blocked)
 
-## 檢查結果
-**狀態：無新貼文**
+=== News Context Gathered via WebSearch ===
+Significant political/economic activity detected on 2026-11-25:
 
-## 詳細資訊
-- 上次記錄貼文 ID：117676500000000000（2026-11-24 由上次執行設定）
-- 今日搜尋方法：
-  - WebSearch（truthsocial.com 被 proxy 封鎖，無法直接存取）
-  - GitHub bigbeautifulflop tracker（最後更新：2026-11-24T20:23:16Z）
-  - X.com @TrumpTruthOnX 帳號搜尋
-  - 多家新聞媒體搜尋
+1. NEW TARIFF ANNOUNCEMENT (Section 301):
+   - Trump Administration unveiled new tariffs on 14 trading partners via USTR
+   - Legal basis: Trade Act of 1974, Section 301 (overcapacity investigation)
+   - Background: Supreme Court struck down IEEPA near-global tariffs earlier in 2026
+   - China: up to 20-45% (on top of existing 25% from 2018); could rise to 40-45% if truce fails
+   - EU, Japan, South Korea, Taiwan, Switzerland: 15%
+   - India: 17-25% (depending on trade pact progress)
+   - Singapore: 10%, Vietnam: 20-35% (depending on trade pact)
+   - Taiwan explicitly included at 15% rate
+   - Effective date: January 2027 at earliest (requires public comment period)
+   - US stocks tumbled on the announcement
+   - China rejected the basis for new tariffs via Commerce Ministry spokesperson
 
-## 已確認的最新貼文（2026-11-24，已於上次執行處理）
-1. 12:08 PM ET - FIFA 女子世界盃 2031（ID: 117672518077966619）
-2. 12:34 PM ET - 烏茲別克涼亭感謝（ID: 117672619106081295）
-3. 12:40 PM ET - Jim O'Neill 聯邦法官提名（ID: 117672641177788145）
-4. 1:58 PM ET - 攻擊法官 Reyes 阻礙高爾夫球場翻新（ID: ~117672947522305995）
+2. TRUMP BLAMED MIDTERMS FOR MARKET REACTION:
+   - Reports indicate Trump posted on Truth Social blaming midterm election losses
+     for the stock market decline, per Alternet.org coverage
+   - Exact post text not retrieved (domain blocked)
 
-## 2026-11-25 搜尋結果
-- 未發現任何 2026-11-25 相關貼文
-- bigbeautifulflop tracker 仍停留在第 80 號 Issue（Nov 24, 1:58 PM ET）
-- 無新聞報導顯示今日有新 Truth Social 貼文
+3. JENSEN HUANG / NVIDIA (from Nov 23, likely already recorded):
+   - Trump posted meme + statement supporting Huang's return to Nvidia
+   - "Nvidia made the correct and proper decision"
+   - These posts appear to be from Nov 23, not Nov 25
 
-## 結論
-本次執行未發現新貼文。
-last_seen_id 維持不變：2026-11-24_117676500000000000
-Telegram/LINE 未推播（無新內容）
+=== Result ===
+STATUS: PARTIAL FAILURE - Could not retrieve verified new post IDs or exact post text
+ACTION TAKEN: Log created; no post files created; no Telegram/LINE notifications sent
+REASON: All direct access to Truth Social and third-party archives is blocked by
+         session network policy. WebSearch provides news context but not verified
+         post content suitable for analysis/notification.
+
+=== Action Required ===
+To enable full functionality, allow the following domains in session network settings:
+  - truthsocial.com
+  - thetrumparchive.com
+  - trumpstruth.org
+  OR any accessible Truth Social mirror/aggregator
+
+Telegram notification: NOT SENT (no verified new posts to report)
+GitHub push: Attempted for log file only
