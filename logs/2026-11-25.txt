@@ -1,31 +1,41 @@
-# 川普 Truth Social 監控日誌 - 2026-11-25
+# Trump Truth Social 監控日誌 - 2026-11-25
 
 ## 執行時間
-2026-11-25 00:02 UTC
+UTC: 2026-11-25 12:58:58
 
-## 檢查結果
-**狀態：無新貼文**
+## 上次記錄貼文 ID
+2026-11-24_117676500000000000
 
-## 詳細資訊
-- 上次記錄貼文 ID：117676500000000000（2026-11-24 由上次執行設定）
-- 今日搜尋方法：
-  - WebSearch（truthsocial.com 被 proxy 封鎖，無法直接存取）
-  - GitHub bigbeautifulflop tracker（最後更新：2026-11-24T20:23:16Z）
-  - X.com @TrumpTruthOnX 帳號搜尋
-  - 多家新聞媒體搜尋
+## 本次檢查結果
+未找到比上次記錄更新的貼文。
 
-## 已確認的最新貼文（2026-11-24，已於上次執行處理）
-1. 12:08 PM ET - FIFA 女子世界盃 2031（ID: 117672518077966619）
-2. 12:34 PM ET - 烏茲別克涼亭感謝（ID: 117672619106081295）
-3. 12:40 PM ET - Jim O'Neill 聯邦法官提名（ID: 117672641177788145）
-4. 1:58 PM ET - 攻擊法官 Reyes 阻礙高爾夫球場翻新（ID: ~117672947522305995）
+## 資料來源嘗試結果
 
-## 2026-11-25 搜尋結果
-- 未發現任何 2026-11-25 相關貼文
-- bigbeautifulflop tracker 仍停留在第 80 號 Issue（Nov 24, 1:58 PM ET）
-- 無新聞報導顯示今日有新 Truth Social 貼文
+### 方法 A - 直接訪問
+- truthsocial.com/@realDonaldTrump.rss → DNS 解析失敗（網路政策限制）
+- truthsocial.com API → DNS 解析失敗（網路政策限制）
 
-## 結論
-本次執行未發現新貼文。
-last_seen_id 維持不變：2026-11-24_117676500000000000
-Telegram/LINE 未推播（無新內容）
+### 方法 B - 網路搜尋
+- 搜尋 Trump Truth Social posts November 25 2026 → 最新結果為 2026-11-23/24
+- 搜尋 Trump Truth Social tariff November 25 2026 → 關稅公告預計今日但尚無確認 Truth Social 貼文文字
+- 搜尋多個關鍵字組合 → 均未找到 2026-11-25 的新貼文
+
+### 方法 C - 備用存檔網站
+- thetrumparchive.com → DNS 解析失敗（網路政策限制）
+- trumpstruth.org → DNS 解析失敗（網路政策限制）
+- presidency.ucsb.edu → DNS 解析失敗（網路政策限制）
+- bloomberg.com → DNS 解析失敗（網路政策限制）
+- yahoo.com → DNS 解析失敗（網路政策限制）
+- x.com → DNS 解析失敗（網路政策限制）
+- kadoa.com → DNS 解析失敗（網路政策限制）
+
+## 近期新聞摘要（未確認 Truth Social 原文）
+- 2026-11-24: 關稅計畫 - 預計對中國、EU、日本、韓國等16個經濟體實施新 Section 301 關稅（預計最快本週公布）
+- 2026-11-23: Jensen Huang 重回 Nvidia CEO - Trump 貼文支持，並發布 AI 生成迷因圖（本人持倉獲益）
+- 2026-11-24: Trump 身體名譽道路命名圖片貼文
+
+## 處理結論
+- 無新貼文需分析
+- 未發送 Telegram 通知（無新貼文）
+- 未更新 last_seen_id（維持 2026-11-24_117676500000000000）
+- GitHub API 直接寫入被 proxy 封鎖，改用 git CLI 推送
