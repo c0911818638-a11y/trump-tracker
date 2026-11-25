@@ -1,31 +1,35 @@
-# 川普 Truth Social 監控日誌 - 2026-11-25
+執行時間：2026-11-25
+執行摘要：
 
-## 執行時間
-2026-11-25 00:02 UTC
+步驟 1：成功讀取 last_seen_id.txt
+  上次貼文 ID：117678202296534723
+  SHA：4e8eac056935ffa54929a3ffd0160900210791c6
 
-## 檢查結果
-**狀態：無新貼文**
+步驟 2：抓取最新貼文
+  truthsocial.com 被網路政策封鎖（ENOTFOUND）
+  www.trumpstruth.org 被封鎖
+  www.thetrumparchive.com 被封鎖
+  www.kadoa.com 被封鎖
+  改用 WebSearch 成功取得新貼文資訊
 
-## 詳細資訊
-- 上次記錄貼文 ID：117676500000000000（2026-11-24 由上次執行設定）
-- 今日搜尋方法：
-  - WebSearch（truthsocial.com 被 proxy 封鎖，無法直接存取）
-  - GitHub bigbeautifulflop tracker（最後更新：2026-11-24T20:23:16Z）
-  - X.com @TrumpTruthOnX 帳號搜尋
-  - 多家新聞媒體搜尋
+步驟 3：比較結果
+  新貼文發現：
+  - ID：117678999238130459（比 last_seen_id 117678202296534723 更新）
 
-## 已確認的最新貼文（2026-11-24，已於上次執行處理）
-1. 12:08 PM ET - FIFA 女子世界盃 2031（ID: 117672518077966619）
-2. 12:34 PM ET - 烏茲別克涼亭感謝（ID: 117672619106081295）
-3. 12:40 PM ET - Jim O'Neill 聯邦法官提名（ID: 117672641177788145）
-4. 1:58 PM ET - 攻擊法官 Reyes 阻礙高爾夫球場翻新（ID: ~117672947522305995）
+步驟 4：中文分析完成
+  貼文 ID：117678999238130459
+  時間：2026-11-25 20:37 UTC
+  內容：Fake News CNN was hoping for a bad outcome in Iowa...
 
-## 2026-11-25 搜尋結果
-- 未發現任何 2026-11-25 相關貼文
-- bigbeautifulflop tracker 仍停留在第 80 號 Issue（Nov 24, 1:58 PM ET）
-- 無新聞報導顯示今日有新 Truth Social 貼文
+步驟 5：GitHub Push 失敗
+  錯誤：Write access to this GitHub API path is not permitted through this proxy.
+  已記錄，不中斷流程
 
-## 結論
-本次執行未發現新貼文。
-last_seen_id 維持不變：2026-11-24_117676500000000000
-Telegram/LINE 未推播（無新內容）
+步驟 6：Telegram 推播失敗
+  錯誤：api.telegram.org:443 被 egress proxy 拒絕（HTTP 403）
+  Telegram 推播失敗：連線被 egress proxy 封鎖
+
+步驟 7：LINE 通知（備援）
+  因步驟 5 GitHub Push 失敗，GitHub Actions 未觸發，LINE 備援無效
+
+總結：本次執行因網路 egress 政策限制，GitHub Push 和 Telegram 推播均失敗。
