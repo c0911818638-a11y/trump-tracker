@@ -1,31 +1,47 @@
-# 川普 Truth Social 監控日誌 - 2026-11-25
+執行時間：2026-11-25 (第二次執行)
+========================================
 
-## 執行時間
-2026-11-25 00:02 UTC
+【執行結果：找到 4 篇補漏貼文】
 
-## 檢查結果
-**狀態：無新貼文**
+上次記錄 ID：2026-11-24_117676500000000000（估算值）
+最新實際 ID：2026-11-25_117674380753944672
 
-## 詳細資訊
-- 上次記錄貼文 ID：117676500000000000（2026-11-24 由上次執行設定）
-- 今日搜尋方法：
-  - WebSearch（truthsocial.com 被 proxy 封鎖，無法直接存取）
-  - GitHub bigbeautifulflop tracker（最後更新：2026-11-24T20:23:16Z）
-  - X.com @TrumpTruthOnX 帳號搜尋
-  - 多家新聞媒體搜尋
+【問題說明】
+上次執行使用估算 ID（117676500000000000）作為 last_seen_id 邊界，
+導致 Nov 24 7:57-8:02 PM ET 的 4 篇實際貼文（ID 均約 11767436xxx）被誤判為已處理。
+本次執行已補充處理這 4 篇。
 
-## 已確認的最新貼文（2026-11-24，已於上次執行處理）
-1. 12:08 PM ET - FIFA 女子世界盃 2031（ID: 117672518077966619）
-2. 12:34 PM ET - 烏茲別克涼亭感謝（ID: 117672619106081295）
-3. 12:40 PM ET - Jim O'Neill 聯邦法官提名（ID: 117672641177788145）
-4. 1:58 PM ET - 攻擊法官 Reyes 阻礙高爾夫球場翻新（ID: ~117672947522305995）
+【處理的新貼文】
+1. 2026-11-24 00:57 UTC | ID: 117674361089057724
+   主題: Ilhan Omar's legal reckoning is looming
+   重要程度: 低
 
-## 2026-11-25 搜尋結果
-- 未發現任何 2026-11-25 相關貼文
-- bigbeautifulflop tracker 仍停留在第 80 號 Issue（Nov 24, 1:58 PM ET）
-- 無新聞報導顯示今日有新 Truth Social 貼文
+2. 2026-11-24 00:57 UTC | ID: 117674361691359583
+   主題: RT Newsom's wholesale commutations (加州特赦挑戰)
+   重要程度: 中
 
-## 結論
-本次執行未發現新貼文。
-last_seen_id 維持不變：2026-11-24_117676500000000000
-Telegram/LINE 未推播（無新內容）
+3. 2026-11-24 00:58 UTC | ID: 117674363024208708
+   主題: 圖片/影片貼文（無文字）
+   重要程度: 低
+
+4. 2026-11-24 01:02 UTC | ID: 117674380753944672
+   主題: Vimeo 影片貼文（無文字）
+   重要程度: 低
+
+【步驟執行狀況】
+- 步驟 1 (讀取 last_seen_id)：成功
+- 步驟 2 (抓取貼文)：
+  * 方法 A (truthsocial.com)：失敗（DNS 解析失敗，主機不在允許清單）
+  * 方法 C (thetrumparchive.com)：失敗（DNS 解析失敗）
+  * 方法 B (WebSearch + bigbeautifulflop GitHub tracker)：成功
+- 步驟 3 (比較新舊)：找到 4 篇補漏貼文
+- 步驟 4 (中文分析)：完成（#81, #82 有文字分析；#83, #84 為影片/圖片無文字）
+- 步驟 5 (GitHub 上傳)：
+  * GitHub REST API 寫入：被 proxy 阻擋（HTTP 403）
+  * git push 至 branch claude/affectionate-mendel-wj1h5d：成功
+- 步驟 6 (Telegram 推播)：失敗——api.telegram.org 被組織 egress 政策阻擋（HTTP 403）
+- 步驟 7 (LINE 通知)：branch push 已完成，但 workflow 需在 main branch 觸發
+
+【備註】
+- 建議修正 ID 比較邏輯：當 last_seen_id 為估算值時，應改用時間戳記進行比較
+- 建議更新 GitHub Actions workflow 以支援 claude/ 分支觸發
