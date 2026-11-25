@@ -49,9 +49,15 @@
 - 無新聞報導顯示今日有新 Truth Social 貼文
 
 ## 通知狀態
-- **GitHub push：** 嘗試推送 4 則分析檔案
-- **Telegram：** 嘗試推播（api.telegram.org 可能被 session 網路政策封鎖）
-- **LINE：** 由 GitHub Actions 自動觸發
+- **GitHub push：** 成功推送至 claude/affectionate-mendel-bugmbh 分支
+- **Telegram：** 失敗（api.telegram.org 被 session 網路政策封鎖，exit code 56）
+- **LINE：** 未觸發（GitHub Actions 只監聽 main 分支，本 session 只能推送至 dev 分支）
 
 ## last_seen_id 狀態
 維持 2026-11-24_117676500000000000（確保所有未來 2026-11-25 貼文可被正確偵測）
+
+## 注意事項
+目前本 session 的 git 推送限制為 claude/affectionate-mendel-bugmbh 分支，
+導致 LINE GitHub Actions workflow 無法自動觸發。
+Telegram 亦被網路政策封鎖。
+建議使用者手動確認貼文分析檔案，或將分支合併至 main 以觸發 LINE 通知。
