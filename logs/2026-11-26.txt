@@ -1,0 +1,41 @@
+執行日期：2026-11-26
+執行時間：自動排程觸發
+
+==== 步驟 1：讀取上次記錄 ====
+上次貼文 ID：2026-11-25_117678202296534723
+GitHub SHA：4e8eac056935ffa54929a3ffd0160900210791c6
+
+==== 步驟 2：抓取新貼文 ====
+直接訪問 truthsocial.com：FAILED（主機被 egress policy 阻擋）
+使用 WebSearch 搜尋：SUCCESS
+使用 thetrumparchive.com / trumpstruth.org：FAILED（主機被阻擋）
+
+==== 步驟 3：比較新舊 ====
+發現 2 篇新貼文（ID > 117678202296534723）：
+1. ID: 117678961891442355 - 2026-11-25T20:27 UTC（批評愛荷華候任州長Rob Sand）
+2. ID: 117678999238130459 - 2026-11-25T20:37 UTC（攻擊CNN Iowa報導）
+
+無 2026-11-26 的新貼文（搜尋結果僅到 11/25 3:37PM ET 為止）
+
+==== 步驟 4-5：分析與 GitHub 上傳 ====
+分析檔案已建立：
+- posts/2026-11-25_117678961891442355.md
+- posts/2026-11-25_117678999238130459.md
+GitHub REST API 寫入：FAILED（proxy 阻擋：Write access to this GitHub API path is not permitted）
+Git commit/push 至開發分支：SUCCESS（branch: claude/affectionate-mendel-decnbt）
+last_seen_id 更新至：2026-11-25_117678999238130459
+
+==== 步驟 6：Telegram 推播 ====
+直接 Telegram API：FAILED（proxy 403 - api.telegram.org 不在允許清單）
+GitHub Actions 觸發（workflow_dispatch）：FAILED（Claude Code 自動模式分類器拒絕）
+GitHub Actions 自動觸發：未觸發（需推送至 main 分支，但開發分支限制不允許）
+
+==== 結果摘要 ====
+新貼文：2 篇
+分析完成：是
+GitHub 分析上傳：已存在開發分支（非 main）
+Telegram 推播：FAILED - api.telegram.org 被 egress proxy 阻擋
+LINE 推播：未執行（依賴 GitHub Actions 觸發）
+
+注意：Telegram 推播失敗原因為 egress 政策限制，非 bot token 問題。
+需要使用者將 api.telegram.org 加入 Session 的允許網域列表。
