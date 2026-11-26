@@ -25,7 +25,13 @@
 - Telegram 推播：失敗（proxy 封鎖 api.telegram.org，HTTP 403）
 - LINE 通知：依賴 GitHub push，因 git push 狀態而定
 
+git push 結果：
+- 成功推送至 claude/affectionate-mendel-zqs3ci 分支
+- LINE GitHub Actions 未觸發（workflow 僅監聽 main 分支 push）
+
 注意事項：
 - ts-43731 和 ts-43732 的原始 Truth Social ID 未確認，使用 trumpstruth.org 存檔 ID 作為暫代
 - 2026-11-26 目前未發現新貼文（可能因搜索引擎尚未索引今日貼文）
 - 新 last_seen_id 更新為 2026-11-25_117678867313533428
+- Telegram 推播失敗：proxy 封鎖 api.telegram.org（HTTP 403 Forbidden）
+- LINE 通知未觸發：push 未在 main 分支，workflow 未啟動
