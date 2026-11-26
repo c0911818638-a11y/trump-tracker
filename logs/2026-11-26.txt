@@ -1,0 +1,33 @@
+# 川普 Truth Social 監控日誌 - 2026-11-26
+
+## 執行時間
+2026-11-26 06:57 UTC
+
+## 檢查結果
+**狀態：無新貼文**
+
+## 詳細資訊
+- 上次記錄貼文 ID：117681161738909385（2026-11-26 05:47 UTC，由上次執行設定）
+- 今日搜尋方法：
+  - WebSearch（truthsocial.com 被 proxy 封鎖，無法直接存取）
+  - 多家新聞媒體搜尋（thehill.com、nbcnews.com、alternet.org 等均被封鎖）
+
+## 已確認的最新貼文（2026-11-26，已於上次執行處理）
+1. 05:14 UTC - Iowa 爆破零致癌物聲明（ID: 117681011948883217）
+2. 05:17 UTC - 轉發讚美貼文（ID: 117681028182445943）
+3. 05:19 UTC - RT @MelaniaTrump（ID: 117681042348270942）
+4. 05:47 UTC - 攻擊 NYT 記者桑格、列舉施政成就（ID: 117681161738909385）
+
+## 2026-11-26 後續搜尋結果
+- 未發現任何比 05:47 UTC 更新的貼文
+- 搜尋顯示最新索引貼文仍為上述四則
+- 多個外部域名被 proxy 封鎖：truthsocial.com、thetrumparchive.com、trumpstruth.org、yahoo.com、nbcnews.com 等
+
+## 通知狀態
+- Telegram API（api.telegram.org）：被 proxy 封鎖，無法直接推播
+- GitHub API 寫入：被 proxy 封鎖
+- GitHub Actions（透過 git push）：可用，本次推送將觸發 line-notify workflow
+
+## 結論
+本次執行未發現新貼文。
+last_seen_id 維持不變：2026-11-26_117681161738909385
