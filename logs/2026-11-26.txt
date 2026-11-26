@@ -1,0 +1,15 @@
+Log for monitoring run at 2026-11-26 12:58:37 UTC
+
+Last seen post ID: 2026-11-26_117681161738909385
+(David Sanger attack post at 12:47 AM ET on Thanksgiving Nov 26, 2026 - already captured in previous run)
+
+Fetch attempts:
+- truthsocial.com: BLOCKED (host not in allowed network domains)
+- thetrumparchive.com: BLOCKED
+- Most news sites (Yahoo, HuffPost, Daily Beast, Mediaite, NBC, AOL, etc.): BLOCKED
+
+Data gathered via WebSearch:
+- Confirmed post 117681161738909385 = Trump attacking NYT reporter David Sanger
+- No newer posts found for Nov 26, 2026
+
+Result: No new posts to process. State unchanged.
