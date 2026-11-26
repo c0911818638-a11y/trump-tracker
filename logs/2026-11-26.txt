@@ -1,0 +1,24 @@
+# 監控日誌 - 2026-11-26
+
+執行時間: 2026-11-26T09:58:22Z
+最後確認 ID: 2026-11-26_117681161738909385
+
+## 執行摘要
+
+**方法 A（直接 API）**: 失敗 - truthsocial.com 在此 session 的網路政策中被封鎖
+**方法 B（WebSearch）**: 成功取得部分資訊
+**方法 C（Trump Archive）**: 失敗 - trumpstruth.org、thetrumparchive.com 等被封鎖
+
+## 搜尋結果
+
+透過 WebSearch 確認的 November 26, 2026 貼文：
+- ID: 117681161738909385 (12:47 AM EST) - David Sanger/NYT 攻擊貼文（已為 last_seen_id，非新貼文）
+
+## 結論
+
+**未發現比 last_seen_id 更新的貼文。**
+
+今日（2026-11-26 感恩節）到目前為止，已確認的最新貼文與 state/last_seen_id.txt 中的 ID 相同。
+搜尋結果未顯示任何更新貼文。
+
+**本次執行未觸發 Telegram 或 LINE 推播。**
