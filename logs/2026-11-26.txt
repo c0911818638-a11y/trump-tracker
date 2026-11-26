@@ -1,0 +1,35 @@
+執行時間: 2026-11-26T17:59 UTC
+執行結果: 成功
+
+步驟 1 - 讀取上次 ID: 成功
+  上次記錄 ID: 117683312242798397 (2026-11-26 09:53 AM EST, 川普-北約魯特聯合聲明)
+  SHA: 10878668da5db8e9146bba861a5e4478b2f08b72
+
+步驟 2 - 抓取貼文:
+  - truthsocial.com RSS: 失敗（域名被 proxy 封鎖）
+  - truthsocial.com API: 失敗（域名被 proxy 封鎖）
+  - WebSearch 搜尋: 成功（方法 B）
+  - thetrumparchive.com: 失敗（域名被 proxy 封鎖）
+  - trumpstruth.org: 失敗（域名被 proxy 封鎖）
+  - 新聞媒體 WebFetch: 失敗（大部分域名被 proxy 封鎖）
+
+步驟 3 - 比較新舊:
+  新貼文 1 筆:
+  - ID: 117683512952489451 (2026-11-26 10:45 AM EST)
+    主題: 感恩節長篇貼文 - GDP 數據造假、索馬利亞移民攻擊、Walz 侮辱詞、威脅訊息
+
+步驟 4 - 中文分析: 完成
+
+步驟 5 - GitHub 推送:
+  - GitHub API (PUT): 失敗（proxy 拒絕寫入 API）
+  - git push to main: 成功 (commit e343fdf)
+  - 新增檔案: posts/2026-11-26_117683512952489451.md
+  - 更新: state/last_seen_id.txt → 2026-11-26_117683512952489451
+
+步驟 6 - Telegram 直接推播:
+  - 直接 curl 推播: 失敗（api.telegram.org 被 proxy 封鎖）
+  - 備援: GitHub Actions telegram-notify.yml 已由 push 觸發，應自動發送
+
+步驟 7 - LINE (GitHub Actions):
+  - line-notify.yml 應由 main push 自動觸發
+
