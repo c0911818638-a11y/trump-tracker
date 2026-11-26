@@ -1,0 +1,31 @@
+執行時間：2026-11-26 UTC
+上次記錄 ID：2026-11-25_117678202296534723
+
+抓取方法：WebSearch（主要來源）
+原因：truthsocial.com、trumpstruth.org、各主要新聞網站均受 proxy 封鎖，無法直接 WebFetch。
+
+新貼文發現：3 則（均為 2026-11-25 下午）
+
+1. ID: 117678867313533428（已確認）
+   時間：2026-11-25 20:03 UTC
+   內容："Great job by the Army, and others, in Iowa!!!"
+
+2. ID: ts-43731（trumpstruth.org 存檔，原始 Truth Social ID 未確認）
+   時間：2026-11-25 20:27 UTC
+   內容：攻擊候任州長 Rob Sand（誤拼為 Sands），指其阻礙引爆任務
+
+3. ID: ts-43732（trumpstruth.org 存檔，原始 Truth Social ID 未確認）
+   時間：2026-11-25 20:37 UTC
+   內容：攻擊 CNN 的前期報道
+
+狀態更新：
+- 分析檔案已建立：3 個
+- GitHub API push：失敗（proxy 封鎖 api.github.com PUT 請求）
+- git push（本地 branch）：嘗試中
+- Telegram 推播：失敗（proxy 封鎖 api.telegram.org，HTTP 403）
+- LINE 通知：依賴 GitHub push，因 git push 狀態而定
+
+注意事項：
+- ts-43731 和 ts-43732 的原始 Truth Social ID 未確認，使用 trumpstruth.org 存檔 ID 作為暫代
+- 2026-11-26 目前未發現新貼文（可能因搜索引擎尚未索引今日貼文）
+- 新 last_seen_id 更新為 2026-11-25_117678867313533428
