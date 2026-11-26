@@ -1,0 +1,27 @@
+# 監控日誌 - 2026-11-26
+
+**執行時間：** 2026-11-26 03:57:39 UTC
+**狀態：** 無法取得貼文
+
+## 錯誤記錄
+
+- **方法 A（直接 RSS）：** truthsocial.com 被此 session 的網路政策封鎖（ENOTFOUND）
+- **方法 A（API）：** truthsocial.com 被封鎖
+- **方法 B（WebSearch）：** 搜尋結果未找到 2026-11-26 的具體貼文；找到 2026-11-25 相關報導但無法確認是否為新貼文
+- **方法 C（Trump Archive）：** thetrumparchive.com 被封鎖
+- **其他嘗試：** presidency.ucsb.edu、yahoo.com、axios.com、rawstory.com、rollcall.com、kadoa.com 均被封鎖
+
+## 狀態
+
+- 上次已記錄貼文 ID：2026-11-25_117678202296534723
+- 今日（2026-11-26）為感恩節（Thanksgiving），川普通常會發貼
+- 搜尋結果未找到 2026-11-26 的具體貼文文字或 ID
+- 無法確認是否有新貼文
+
+## 後續建議
+
+請在環境設定中開放以下域名存取：
+- truthsocial.com
+- thetrumparchive.com
+- presidency.ucsb.edu
+- www.kadoa.com
