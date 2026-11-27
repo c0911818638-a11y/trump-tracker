@@ -1,0 +1,64 @@
+====================================
+川普 Truth Social 監控執行摘要
+日期：2026-11-27
+====================================
+
+【步驟 1 - 讀取上次ID】
+成功：last_seen_id = 2026-11-26_117684273895653312
+SHA: 22fe65c1697e6fd7b947245a4554c65708ad568d
+
+【步驟 2 - 抓取貼文】
+方法 A: WebFetch truthsocial.com -> 失敗（DNS解析失敗：主機不在允許清單）
+方法 B: WebFetch thetrumparchive.com -> 失敗（DNS解析失敗）
+方法 C: WebSearch 搜尋 -> 成功（取得摘要資訊）
+
+注意：本次監控環境網路出口政策限制大量外部網站存取，僅 WebSearch 可取得資訊。
+直接存取的被封鎖網站包括：
+- truthsocial.com, thetrumparchive.com
+- yahoo.com, thedailybeast.com, huffpost.com, foxnews.com
+- newsweek.com, reuters.com, time.com, rollingout.com
+- trumpstruth.org, kadoa.com, trumpalert.app
+- rollcall.com, koreatimes.co.kr, timeslive.co.za 等
+
+【步驟 3 - 比較新舊貼文】
+透過搜尋結果時間分析，確認新貼文：
+- 2026-11-26 21:29 UTC（4:29 PM ET）：「Veto Corleone」圖片貼文
+  估計ID：117684868367608312（基於相鄰ID間隔計算）
+
+確認「已追蹤」貼文（早於 last_seen_id ~2:00 PM Nov 26）：
+- 12:47 AM: 攻擊 NYT 記者 David Sanger（LOWLIFE）
+- 9:25 AM: "HAPPY THANKSGIVING TO ALL!"
+- ~9:53 AM: NATO/Rutte 聯合聲明（RT）
+- ~10:45 AM: 感恩節長訊（461字，質疑GDP數據、Somali）
+- ~1:37 PM: Howard Lutnick GDP 轉發
+- ~1:58 PM: 佛州災難宣告
+
+11/27（今日）：無新貼文（尚未被任何索引記錄）
+
+【步驟 4 - 分析完成】
+建立分析檔：posts/2026-11-26_117684868367608312.md
+
+【步驟 5 - GitHub 上傳】
+分析檔上傳至 dev branch claude/affectionate-mendel-ci6y4j：成功
+直接寫入 main 分支 API：失敗（egress proxy 403 拒絕 - api.github.com 不在允許清單）
+注意：state/last_seen_id.txt 已在 dev branch 更新，但 main 未更新
+
+【步驟 6 - Telegram 推播】
+失敗：api.telegram.org:443 被 egress proxy 以 HTTP 403 拒絕
+原因：Telegram API 不在本 session 網路允許清單中
+
+【步驟 7 - LINE 通知】
+失敗：由於步驟 5 的 GitHub push 未在 main 分支，GitHub Actions 未被觸發
+（GitHub Actions 僅在 main 分支有更改時觸發）
+
+【執行結論】
+- 成功找到並分析 1 則新貼文（Veto Corleone, 2026-11-26 4:29 PM ET）
+- 分析檔已存入 dev branch
+- 所有通知管道（Telegram、LINE）均因網路政策限制而失敗
+- 建議：在 Claude Code 環境設定中加入以下允許清單：
+  - api.telegram.org
+  - api.github.com
+  - truthsocial.com
+  - 相關新聞聚合網站
+
+====================================
