@@ -1,0 +1,44 @@
+# 川普 Truth Social 監控錯誤日誌
+日期：2026-11-27
+執行時間：2026-11-27T00:57:38Z
+
+## 錯誤摘要
+
+無法取得 Truth Social 貼文，原因如下：
+
+### 方法 A - 直接 URL 存取失敗
+- truthsocial.com/@realDonaldTrump.rss -> DNS 解析失敗（此雲端環境網絡政策封鎖）
+- truthsocial.com API -> 相同問題
+
+### 方法 B - WebSearch 結果
+- 搜尋到感恩節（2026-11-26）相關報導，確認川普有發貼文
+- 無法取得 2026-11-27（黑色星期五）的具體貼文
+- 無法確認是否有新於 last_seen_id 的貼文：2026-11-26_117684273895653312
+
+### 方法 C - 新聞/存檔網站存取失敗
+以下網站均無法存取（DNS 解析失敗）：
+- www.thetrumparchive.com, www.kadoa.com, www.trumpalert.app
+- www.yahoo.com, newsweek.com, thehill.com, forbes.com
+- rollingstone.com, rollcall.com, newrepublic.com
+- thedailybeast.com, rollingout.com, political.org
+
+## 搜尋到的背景資訊（2026-11-26 感恩節貼文，未確認是否新於 last_seen_id）
+
+川普於感恩節發佈多篇貼文，主題包括：
+- 質疑 GDP 修正數據，要求調查（GDP 由 3.4% 修正至 4.3%）
+- 攻擊「radical far left」及批評者
+- 感謝節祝賀（附帶諷刺性攻擊）
+- 攻擊索馬利亞移民（無具體證據）
+- 讚揚美國國防製造業
+
+## 後續建議
+
+請在 claude.ai/code 環境設定中允許以下網域以恢復正常功能：
+- truthsocial.com
+- thetrumparchive.com
+- thehill.com
+- rollcall.com
+
+## 狀態
+未推播 Telegram 或 LINE（無確認的新貼文）
+last_seen_id 未更新：2026-11-26_117684273895653312
