@@ -1,0 +1,45 @@
+執行時間: 2026-11-27 (UTC)
+監控週期: 2026-11-26 → 2026-11-27
+
+---
+
+步驟 1 - 讀取上次 ID:
+  上次記錄: 2026-11-26_117684273895653312 (SHA: 22fe65c1697e6fd7b947245a4554c65708ad568d)
+  狀態: 成功
+
+步驟 2 - 抓取貼文:
+  方法 A (truthsocial.com RSS): 失敗 - 網路不允許 (ENOTFOUND)
+  方法 A (truthsocial.com API): 失敗 - 網路不允許 (ENOTFOUND)
+  方法 B (WebSearch): 成功 - 透過搜尋找到 Nov 26-27 貼文資訊
+  方法 C (thetrumparchive.com): 失敗 - 網路不允許 (ENOTFOUND)
+  最終使用: trumpstruth.org (透過 WebSearch 間接取得) + 新聞報導交叉驗證
+
+步驟 3 - 比較新舊:
+  上次 ID: 117684273895653312
+  新發現:
+    - trumpstruth.org status 43750 → Truth Social ID 117687912933180934 (2026-11-27 10:23 UTC)
+      標題: We support Iraqi Prime Minister Ali al-Zaidi...
+  新貼文數: 1
+
+步驟 4 - 分析:
+  已完成 1 篇中文分析
+
+步驟 5 - GitHub 上傳:
+  posts/2026-11-27_117687912933180934.md → 成功 (直接 git push 至 main)
+  state/last_seen_id.txt → 更新為 2026-11-27_117687912933180934
+  Commit: 1f19ecd
+  Push 狀態: 成功
+
+步驟 6 - Telegram 推播:
+  狀態: 失敗 - api.telegram.org 被 proxy 政策封鎖 (HTTP 403)
+  原因: 本 session 的 egress proxy 不允許連線至 api.telegram.org
+
+步驟 7 - LINE 通知:
+  狀態: GitHub Actions 自動觸發 (line-notify.yml 偵測到 posts/*.md 變更)
+  預期: 工作流程會自動發送 LINE 通知
+
+---
+執行結果: 部分成功
+  - GitHub push: 成功
+  - LINE 通知: 由 GitHub Actions 處理
+  - Telegram 推播: 失敗 (proxy 政策封鎖)
