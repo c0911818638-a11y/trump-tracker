@@ -1,0 +1,37 @@
+# 川普 Truth Social 監控日誌 - 2026-11-27
+
+執行時間: 2026-11-27T01:58:17Z
+
+狀態: 無法取得貼文（所有方法均失敗）
+
+上次記錄的貼文 ID: 2026-11-26_117684273895653312
+
+嘗試的方法:
+- 方法 A: truthsocial.com RSS → DNS 解析失敗（網域未在允許清單中）
+- 方法 A: thetrumparchive.com → DNS 解析失敗
+- 方法 B: WebSearch 多關鍵字組合搜尋
+  - 只找到 11/26 感恩節貼文片段，無 11/27 貼文
+  - 備選網站均 DNS 解析失敗：
+    newsweek.com, rawstory.com, yahoo.com, thehill.com,
+    mediaite.com, thedailybeast.com, thewrap.com,
+    washingtontimes.com, presidency.ucsb.edu
+- 方法 C: kadoa.com, trumpalert.app, polymarket.com → DNS 解析失敗
+
+搜尋結果摘要（11/26 感恩節相關貼文，僅片段，無完整文字或 Post ID）:
+- 12:47 AM ET 攻擊 NYT 記者 David Sanger
+- 感恩節訊息涉及索馬利亞人、伊斯蘭法律、殺人犯等
+- 質疑 GDP 數據修正（3.4% 上修至 4.3%）
+- 提及烏克蘭戰事和伊朗情勢
+
+11/27 無任何貼文報導。
+
+結論:
+所有外部網站均無法存取，無法確認是否有新貼文。
+本次執行不建立貼文檔，不推播 Telegram 或 LINE 通知。
+
+建議開放以下網域以恢復正常功能:
+- truthsocial.com
+- thetrumparchive.com
+- presidency.ucsb.edu
+- rawstory.com
+- newsweek.com
