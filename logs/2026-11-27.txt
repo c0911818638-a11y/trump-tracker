@@ -1,0 +1,37 @@
+執行時間: 2026-11-27T00:01 UTC（2026-11-27 自動排程執行）
+執行結果: 無新貼文
+
+步驟 1 - 讀取上次 ID: 成功
+  上次記錄 ID: 117684273895653312
+  對應時間: 2026-11-26 18:58 UTC（1:58 PM ET）
+  內容: 佛羅里達洪災緊急救災宣告轉發
+  SHA: 22fe65c1697e6fd7b947245a4554c65708ad568d
+
+步驟 2 - 抓取貼文:
+  - truthsocial.com RSS: 失敗（域名被 proxy 封鎖，ENOTFOUND）
+  - truthsocial.com API: 失敗（域名被 proxy 封鎖，ENOTFOUND）
+  - thetrumparchive.com: 失敗（域名被 proxy 封鎖，ENOTFOUND）
+  - 新聞媒體 WebFetch: 失敗（幾乎所有外部域名被 proxy 封鎖）
+  - WebSearch: 成功（方法 B）
+
+步驟 3 - 比較新舊:
+  搜尋結果顯示今日（2026-11-27 黑色星期五）暫未發現新貼文。
+  昨日感恩節貼文已於先前執行批次中完整處理（共 7 則）。
+  最新可確認貼文時間：2026-11-26 1:58 PM ET（ID: 117684273895653312）
+
+步驟 4 - 無新貼文，無需分析
+
+步驟 5 - GitHub push: 失敗
+  錯誤：proxy 拒絕 api.github.com 寫入（connect_rejected, HTTP 403）
+  本步驟透過 git push 嘗試
+
+步驟 6 - Telegram 推播: 無新貼文，不推播
+
+步驟 7 - LINE (GitHub Actions): 無新貼文，不觸發
+
+---
+網路限制摘要:
+  - api.telegram.org: blocked（403 egress policy）
+  - api.github.com REST PUT: blocked（403 egress policy）
+  - 大多數新聞/媒體網域: ENOTFOUND
+  - git push (HTTPS) 透過 proxy: 嘗試中
