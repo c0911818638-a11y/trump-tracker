@@ -1,0 +1,21 @@
+【川普 Truth Social 監控日誌】2026-11-27
+
+執行時間：2026-11-27 11:00 UTC
+最後記錄貼文 ID：117684273895653312 (2026-11-26 18:58 UTC)
+
+執行結果：未發現新貼文
+
+搜尋方法：
+- 方法A（WebFetch truthsocial.com）：ENOTFOUND（網路政策封鎖）
+- 方法A（WebFetch truthsocial.com API）：ENOTFOUND（網路政策封鎖）
+- 方法B（WebSearch）：找到 2026-11-26 感恩節貼文，ID 均低於 last_seen_id
+- 方法C（WebFetch thetrumparchive.com）：ENOTFOUND（網路政策封鎖）
+- 其他外部網站（factba.se, rollcall.com, trumpstruth.org等）：均 ENOTFOUND
+
+搜尋到的感恩節貼文（2026-11-26，ID 均低於 last_seen_id，已於前次記錄）：
+- 117683199090516818：短版「HAPPY THANKSGIVING TO ALL!」
+- 117684190363972495：長版感恩節（GDP調查、索馬利亞移民）
+
+今日（2026-11-27）：WebSearch 未發現任何 ID 高於 117684273895653312 的新貼文。
+
+結論：無新貼文需要處理，不推播 Telegram/LINE。
