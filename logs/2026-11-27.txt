@@ -1,0 +1,34 @@
+監控執行日誌 - 2026-11-27
+========================
+
+執行時間：2026-11-27 (UTC)
+上次已知貼文 ID：2026-11-26_117684273895653312 (2026-11-26 18:58 UTC)
+
+執行結果：未發現新貼文
+
+搜尋摘要：
+- 透過 WebSearch 搜尋川普 Truth Social 貼文（2026年11月26-27日）
+- 確認所有已知感恩節貼文（11/26）均已在上次執行中收錄
+  - 感恩節主貼文：117683512952489451（已收錄）
+  - David Sanger 攻擊貼文：117681161738909385（已收錄）
+  - 北約/俄烏聯合聲明：117683312242798397（已收錄）
+  - 佛羅里達洪災救援貼文：117684273895653312（已收錄，為最後一則）
+
+網路限制說明：
+- truthsocial.com：此 cloud session 中被代理封鎖，無法直接訪問
+- 新聞網站（Yahoo、Newsweek、MediaIte 等）：同樣被代理封鎖
+- Telegram API（api.telegram.org）：被代理封鎖（403 Forbidden）
+- GitHub REST API：寫入操作被代理封鎖
+
+推播狀態：
+- GitHub push：失敗（代理封鎖）
+- Telegram：失敗（代理封鎖）
+- LINE：無法執行（依賴 GitHub push）
+
+建議：
+- 為確保此監控系統正常運作，需在 claude.ai Remote Execution 環境的網路設定中開放：
+  1. truthsocial.com（直接抓取）
+  2. api.telegram.org（Telegram 推播）
+  3. 或確認 GitHub Actions 可正常觸發 LINE 通知
+
+結論：無新貼文需要處理。系統照常，待下次排程執行。
