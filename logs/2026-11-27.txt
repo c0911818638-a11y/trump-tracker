@@ -1,0 +1,21 @@
+執行時間: 2026-11-27 02:58 UTC
+狀態: 無新貼文
+
+上次記錄貼文 ID: 2026-11-26_117684273895653312
+
+搜尋方法執行結果:
+- 方法 A (WebFetch truthsocial.com): 失敗 - 被網路政策封鎖 (ENOTFOUND)
+- 方法 A (WebFetch thetrumparchive.com): 失敗 - 被網路政策封鎖 (ENOTFOUND)
+- 方法 B (WebSearch): 成功 - 找到 2026-11-26 感恩節貼文
+  - 找到最新 ID: 117683512952489451 (2026-11-26)
+  - 此 ID < last_seen_id 117684273895653312 → 為舊貼文
+- 方法 C (WebFetch trumparchive): 失敗 - 同上
+
+搜尋到的感恩節貼文 (已記錄，非新貼文):
+1. 感恩節訊息: 攻擊 Somali 社群、GDP 數據調查、Sharia 法律批評 (461字長文)
+2. GDP 貼文: 質疑 Q3 GDP 修正 (3.4% → 4.3%)，要求調查
+3. NATO/烏克蘭: 與 Mark Rutte 聯合聲明，要求 Putin 撤回侵略行為
+4. 攻擊 NYT 記者: 凌晨 12:47 AM 貼文怒斥 David E. Sanger
+
+結論: 2026-11-27 (今日) 未發現任何新貼文。所有搜尋到的貼文均已於前次執行中記錄。
+建議: 在 session 網路政策中允許 truthsocial.com 存取以確保直接監控。
