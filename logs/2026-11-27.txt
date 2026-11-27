@@ -1,0 +1,23 @@
+監控日誌 - 2026-11-27
+====================
+執行時間: 2026-11-27T05:56:18Z
+上次記錄 ID: 2026-11-26_117684273895653312
+
+檢索方法嘗試:
+1. WebFetch https://truthsocial.com/@realDonaldTrump.rss -> 失敗 (域名被網路策略阻擋)
+2. WebFetch https://truthsocial.com/api/v1/accounts/107780257626128497/statuses -> 失敗 (域名被網路策略阻擋)
+3. WebSearch "Trump Truth Social posts today 2026-11-27" -> 未找到今日新帖
+4. WebFetch https://www.thetrumparchive.com/ -> 失敗 (域名被網路策略阻擋)
+5. WebFetch kadoa.com/potus/truth -> 失敗 (域名被網路策略阻擋)
+6. WebFetch trumpalert.app -> 失敗 (域名被網路策略阻擋)
+7. WebFetch foxnews.com / newsweek.com / yahoo.com / thedailybeast.com -> 失敗 (域名被網路策略阻擋)
+
+搜尋結果摘要:
+- 搜尋找到的帖子 ID 均早於 last_seen_id (117684273895653312)
+  找到的 ID: 117683512952489451, 117681161738909385, 117666141823845971, 117645456112067286
+- 網路搜尋未回傳任何 2026-11-27 專屬帖子
+- 感恩節 (11/26) 帖子已在前次記錄中處理
+
+結論: 未發現新帖子，無需推播通知。
+環境限制: 本 session 的網路策略阻止存取 truthsocial.com 及大多數新聞網站。
+建議: 在 session 網路設定中允許 truthsocial.com 和 thetrumparchive.com，以提升帖子擷取成功率。
