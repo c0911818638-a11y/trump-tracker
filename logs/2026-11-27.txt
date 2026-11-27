@@ -74,4 +74,16 @@
   state/last_seen_id.txt → 更新為 2026-11-27_117690149130391873
 
 步驟 6 - Telegram 推播:
-  嘗試中...
+  狀態: 失敗 - api.telegram.org 被 proxy 政策封鎖 (HTTP 403，與前次相同)
+
+步驟 7 - LINE 通知:
+  狀態: 推送至 main (3bc2806) → GitHub Actions line-notify.yml 自動觸發
+  觸發條件: posts/**.md 有新增檔案 ✓
+
+---
+本次執行結果:
+  - GitHub push (claude/affectionate-mendel-mjal5l): 成功
+  - GitHub push (main): 成功（觸發 LINE Actions）
+  - LINE 通知: 由 GitHub Actions 處理
+  - Telegram 推播: 失敗 (proxy 政策持續封鎖 api.telegram.org)
+  - 新 last_seen_id: 2026-11-27_117690149130391873
