@@ -1,0 +1,49 @@
+執行時間: 2026-11-27 (排程觸發)
+上次記錄 ID: 2026-11-26_117684273895653312
+
+【步驟 1】讀取 last_seen_id：
+  成功。上次記錄貼文 ID = 117684273895653312（2026-11-26）
+
+【步驟 2】抓取最新貼文：
+  方法 A (WebFetch truthsocial.com RSS)：失敗 — truthsocial.com 不在允許的網路域名內
+  方法 A (WebFetch API)：失敗 — 同上
+  方法 B (WebSearch)：部分成功 — 取得貼文描述及部分 ID，但無完整文字
+  方法 C (WebFetch thetrumparchive.com)：失敗 — 網域封鎖
+
+  補充嘗試失敗的域名（皆因 proxy 403 封鎖）：
+    - yahoo.com, newsweek.com, rawstory.com, washingtontimes.com
+    - thedailybeast.com, trumpalert.app, kadoa.com, thewrap.com
+    - tldrdailynews.com, political.org, rollcall.com, trumpstruth.org
+    - presidency.ucsb.edu, true.news, api.telegram.org
+
+【步驟 3】比較新舊：
+  透過 WebSearch 取得 Truth Social post IDs，與 last_seen_id 比較：
+  新貼文（ID > 117684273895653312）：
+    - 117684866618422751（2026-11-26 15:29 ET / 20:29 UTC）
+      → 媒體貼文（圖片/影片），無文字
+
+  11月27日（今日）貼文：WebSearch 未找到，可能尚未發布或未被索引
+
+【步驟 4】中文分析：
+  已為新貼文 117684866618422751 完成分析
+  見: posts/2026-11-26_117684866618422751.md
+
+【步驟 5】GitHub 上傳：
+  GitHub API PUT（寫入）被 proxy 封鎖（HTTP 403）
+  改用 git commit + push 至 claude/affectionate-mendel-q3edra 分支
+  Commit: 41e5bbc — 成功推送至 origin
+
+【步驟 6】Telegram 推播：
+  失敗 — api.telegram.org 被 egress proxy 封鎖（HTTP 403）
+  Telegram 推播失敗：網路 egress 政策不允許連線至 api.telegram.org
+
+【步驟 7】LINE 通知：
+  依賴 GitHub push 至 main 觸發 workflow，但 push 至 dev branch，
+  GitHub Actions 可能未自動觸發 LINE notify（取決於 workflow 設定）
+
+執行結果摘要：
+  - 發現新貼文：1 則（媒體貼文，無文字）
+  - 貼文分析：已建立
+  - GitHub 推送：成功（dev branch）
+  - Telegram：失敗（網路封鎖）
+  - LINE：未知（依賴 workflow）
