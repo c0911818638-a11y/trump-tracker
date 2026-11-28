@@ -124,3 +124,22 @@ WebSearch 資訊摘要（僅供參考，非確認新貼文）:
 ---
 
 新 last_seen_id: 2026-11-28_TRASHISLAND
+
+步驟 6 - Telegram 推播結果:
+  狀態: 失敗
+  原因: api.telegram.org:443 被 egress proxy 封鎖 (HTTP 403 connect_rejected)
+  訊息: Telegram 推播失敗：雲端執行環境 egress 政策封鎖 api.telegram.org
+
+步驟 7 - LINE 通知:
+  GitHub push 已成功 → .github/workflows/line-notify.yml 應自動觸發
+  LINE 推播由 GitHub Actions 處理（本步驟無需額外操作）
+
+---
+
+執行完成摘要:
+  新貼文: 1 則（2026-11-28 川普「垃圾島」貼文）
+  分析檔案: posts/2026-11-28_TRASHISLAND.md ✓
+  state/last_seen_id.txt: 2026-11-28_TRASHISLAND ✓
+  Git push: 成功 ✓ (branch: claude/affectionate-mendel-4pouqi)
+  Telegram 推播: 失敗（網路限制）
+  LINE 通知: 由 GitHub Actions 處理（待觸發）
