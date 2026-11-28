@@ -1,90 +1,56 @@
-執行時間: 2026-11-28 (UTC)
-監控週期: 2026-11-27 → 2026-11-28
+監控執行日誌 - 2026-11-28
 
----
+執行時間：2026-11-28T11:00:23Z
+最後已知貼文 ID：2026-11-27_117690636694612578
+最後已知貼文時間：2026-11-27 21:56:00 UTC（4:56 PM ET）
+貼文內容：無文字的圖片貼文（aircaft/handshake 場景）
 
-步驟 1 - 讀取上次 ID:
-  上次記錄: 2026-11-27_117690149130391873 (SHA: 7207060e7098e3f851cb659238b4d2f0112bd363)
-  狀態: 成功
+【執行結果】未發現新貼文
 
-步驟 2 - 抓取貼文:
-  方法 A (truthsocial.com RSS): 失敗 - 網路不允許 (ENOTFOUND)
-  方法 A (truthsocial.com API): 失敗 - 網路不允許 (ENOTFOUND)
-  方法 B (WebSearch): 部分成功 - 找到 Nov 26-27 相關報導，但無法確認 Nov 28 新貼文
-  方法 C (thetrumparchive.com): 失敗 - 網路不允許 (ENOTFOUND)
-  trumpstruth.org: 失敗 - 網路不允許 (ENOTFOUND)
-  www.presidency.ucsb.edu: 失敗 - 網路不允許 (ENOTFOUND)
-  kadoa.com: 失敗 - 網路不允許 (ENOTFOUND)
-  trumpalert.app: 失敗 - 網路不允許 (ENOTFOUND)
+【搜尋方法嘗試】
+1. WebFetch https://truthsocial.com/@realDonaldTrump.rss → 失敗：ENOTFOUND（網域未在允許清單）
+2. WebFetch https://truthsocial.com/api/v1/accounts/... → 失敗：ENOTFOUND
+3. WebFetch https://www.thetrumparchive.com/ → 失敗：ENOTFOUND
+4. WebSearch 多次搜尋最新貼文 → 成功，但未找到比 last_seen_id 更新的貼文
+5. WebFetch 多個新聞網站（Yahoo, Time, Rolling Stone, Al Jazeera 等）→ 全部失敗：ENOTFOUND
+6. WebFetch https://www.trumpstruth.org/ → 失敗：ENOTFOUND
+7. WebFetch https://www.presidency.ucsb.edu/ → 失敗：ENOTFOUND
 
-步驟 3 - 比較結果:
-  無法取得帶有明確 Nov 28 貼文 ID 的資料
-  WebSearch 顯示的最新報導為 Nov 26-27（感恩節期間）
-  無法確認是否有超出 last_seen_id 的新貼文
+【網路限制說明】
+此 Cloud Session 的網路政策限制了對外部域名的訪問。
+被封鎖的域名包括：
+- truthsocial.com
+- thetrumparchive.com
+- trumpstruth.org
+- trumpalert.app
+- kadoa.com
+- yahoo.com
+- time.com
+- newsweek.com
+- rollingstone.com
+- thedailybeast.com
+- thehill.com
+- rollcall.com
+- x.com
+- cbsnews.com
+- aninews.in
+- aljazeera.com
+- evrimagaci.org
+- particle.news
+- presidency.ucsb.edu
+（以及其他多個域名）
 
-步驟 5 - GitHub 上傳:
-  GitHub API (curl): 失敗 - proxy 封鎖 (Write access to this GitHub API path is not permitted)
-  使用 git commit + push 替代
+【已確認的近期貼文（供參考）】
+透過 WebSearch 摘要確認的最近貼文（均已在 last_seen_id 之前）：
+1. ID: 117687912933180934（2026-11-27 05:23 AM ET）
+   支持伊拉克總理 Ali al-Zaidi 打擊石油走私努力
+2. ID: 117688960220295521（2026-11-27 09:50 AM ET）
+   圖片貼文
+3. 感恩節貼文（2026-11-26）：攻擊 GDP 數據、移民、媒體
+4. 午夜貼文（2026-11-27 00:47 ET）：攻擊 NYT 記者 David Sanger
 
-步驟 6 - Telegram 推播:
-  未執行 - 無新貼文可推播（無法取得貼文）
+【結論】
+最後已知貼文（2026-11-27 4:56 PM ET 圖片貼文，ID: 117690636694612578）
+之後未找到任何新貼文。
+下次執行時建議確認網路存取權限，或增加可存取的監控來源。
 
-步驟 7 - LINE:
-  未執行 - 無 GitHub push 觸發
-
-步驟 8 - 錯誤記錄:
-  原因: cloud session 網路限制封鎖所有外部貼文來源
-  建議: 在 session 設定中允許 truthsocial.com 或 trumpstruth.org
-
----
-
-WebSearch 資訊摘要（僅供參考，非確認新貼文）:
-  - 感恩節貼文 (Nov 26): GDP 修正調查要求、移民攻擊、感恩節訊息
-  - 晚間貼文 (Nov 26 深夜/27): 攻擊 NYT 記者 David Sanger
-  - Nov 27: 股市下跌歸咎期中選舉結果
-  - Nov 27 下午: 外交儀式系列圖片貼文（已在上次執行中記錄）
-
----
-
-## 第二次執行（本次）
-
-**執行時間：** 2026-11-28 UTC
-
-步驟 1 - 讀取上次 ID:
-  上次記錄: 2026-11-27_117690149130391873
-  狀態: 成功
-
-步驟 2 - 抓取貼文:
-  方法 A (truthsocial.com): 失敗 - 網路封鎖 (ENOTFOUND)
-  方法 B (WebSearch): 成功 - 透過 trumpstruth.org 搜尋索引找到新貼文
-  方法 C (thetrumparchive.com): 失敗 - 網路封鎖 (ENOTFOUND)
-
-步驟 3 - 比較新舊:
-  上次 ID: 117690149130391873 (Nov 27, 19:52 UTC)
-  新發現 (trumpstruth.org statuses 43756-43761):
-    - 43756 → Nov 27, 19:52 UTC (image, ID 未確認)
-    - 43757 → Nov 27, 19:58 UTC (image, ID 未確認)
-    - 43758 → Nov 27, 19:56 UTC (image, ID 未確認)
-    - 43759 → Nov 27, 19:54 UTC (image, ID 未確認)
-    - 43760 → Nov 27, 19:53 UTC (image, ID 未確認)
-    - 43761 → Nov 27, 21:56 UTC (image, ID 117690636694612578 ✓ 確認)
-  新貼文數: 6（均為圖像貼文，無文字，繼續 Nov 27 外交活動系列）
-  Nov 28 貼文: 未找到任何確認的 Nov 28 貼文
-
-步驟 4 - 分析:
-  已完成 1 篇中文分析（status 43761，唯一已知 ID 的新貼文）
-
-步驟 5 - GitHub 上傳:
-  新增 posts/2026-11-27_117690636694612578.md
-  state/last_seen_id.txt → 更新為 2026-11-27_117690636694612578
-  Git push 狀態: 待執行
-
-步驟 6 - Telegram 推播:
-  狀態: 待執行（預期失敗 - proxy 政策持續封鎖 api.telegram.org）
-
----
-本次執行結果: 部分成功
-  - 找到 1 則確認 ID 的新貼文（status 43761，圖片貼文，無文字）
-  - 額外 5 則圖片貼文（43756-43760）ID 未確認
-  - Nov 28 貼文：未找到
-  - 新 last_seen_id: 2026-11-27_117690636694612578
