@@ -88,3 +88,39 @@ WebSearch 資訊摘要（僅供參考，非確認新貼文）:
   - 額外 5 則圖片貼文（43756-43760）ID 未確認
   - Nov 28 貼文：未找到
   - 新 last_seen_id: 2026-11-27_117690636694612578
+
+---
+
+## 第三次執行（2026-11-28 UTC）
+
+步驟 1 - 讀取上次 ID:
+  上次記錄: 2026-11-27_117690636694612578 (GitHub state)
+  狀態: 成功
+
+步驟 2 - 抓取貼文:
+  方法 A (truthsocial.com): 失敗 - 網路封鎖 (ENOTFOUND)
+  方法 B (WebSearch): 成功 - 透過搜尋引擎索引確認 Nov 28 新貼文
+  方法 C (thetrumparchive.com): 失敗 - 網路封鎖 (ENOTFOUND)
+  trumpstruth.org statuses 43763-43769: 透過搜尋找到，但直接訪問失敗
+
+步驟 3 - 比較新舊:
+  上次 ID: 117690636694612578 (Nov 27, 21:56 UTC)
+  新貼文: 2026-11-28 09:21-09:23 EST (trumpstruth status 43763-43769)
+    - statuses 43763-43768: 44 張東波托馬克高爾夫球場洪水圖片
+    - status 43769: 文字貼文 "Trash Island has been completely destroyed by the Storm!"
+  Truth Social ID: 未確認（網路限制）
+  新貼文數: 1 則文字貼文 + 44 張圖片貼文（已確認）
+
+步驟 4 - 分析:
+  已完成中文分析 → posts/2026-11-28_TRASHISLAND.md
+
+步驟 5 - GitHub 上傳:
+  GitHub API (curl): 失敗 - proxy 封鎖 (Write access not permitted)
+  Git commit + push: 執行中
+
+步驟 6 - Telegram 推播:
+  狀態: 執行中
+
+---
+
+新 last_seen_id: 2026-11-28_TRASHISLAND
