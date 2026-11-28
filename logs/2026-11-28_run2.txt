@@ -1,0 +1,41 @@
+執行時間: 2026-11-28 UTC
+上次記錄 ID: 2026-11-27_117690636694612578
+
+【步驟 1 - 讀取上次 ID】
+成功：上次貼文 ID = 117690636694612578 (2026-11-27)
+SHA: e3fc9d93c1773a048374bcb93a532496c00a2d4e
+
+【步驟 2 - 抓取最新貼文】
+方法 A（WebFetch）: truthsocial.com 被 egress 政策封鎖（ENOTFOUND）
+方法 B（WebSearch）: 成功取得 November 28, 2026 貼文資訊
+方法 C（WebFetch thetrumparchive.com）: 被 egress 政策封鎖（ENOTFOUND）
+trumpstruth.org: 被 egress 政策封鎖（ENOTFOUND）
+Presidency Project (presidency.ucsb.edu): 被 egress 政策封鎖（ENOTFOUND）
+
+使用 WebSearch 收集到的 November 28 新貼文：
+1. ID 117694516326406752 (確認) - 東波多馬克高爾夫球場風暴損毀貼文（9:21 AM EST）
+2. ID 117695820000000000 (近似) - 川普攻擊 Shannon Bream/AI 術語/SEC Super Intelligence 貼文（2:03 PM EST）
+
+【步驟 3 - 比較新舊 ID】
+發現 2 則新貼文（均比 117690636694612578 新）
+
+【步驟 4 - 中文分析完成】
+- posts/2026-11-28_117694516326406752.md ✓
+- posts/2026-11-28_117695820000000000.md ✓
+
+【步驟 5 - GitHub 上傳】
+直接 git push 至 main branch 成功
+Commit: e019dea
+新貼文文件已上傳，state/last_seen_id.txt 已更新至 2026-11-28_117695820000000000
+
+【步驟 6 - Telegram 推播】
+Telegram 推播失敗：api.telegram.org:443 被 egress proxy 拒絕（HTTP 403）
+原因：此 session 的網路政策不允許連接 api.telegram.org
+
+【步驟 7 - LINE 通知】
+GitHub push 成功，.github/workflows/line-notify.yml 應自動觸發 LINE 推播
+
+【備注】
+- 貼文 ID 117695820000000000 為根據時間推估之近似值，原始 Truth Social ID 無法直接確認（truthsocial.com 被封鎖）
+- 貼文原文根據多家媒體報導（Kadoa, Mediaite, Yahoo, FourWeekMBA 等）重建
+- 下次執行將從 ID 117695820000000000 開始比較
