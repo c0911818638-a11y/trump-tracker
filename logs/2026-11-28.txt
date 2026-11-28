@@ -88,3 +88,42 @@ WebSearch 資訊摘要（僅供參考，非確認新貼文）:
   - 額外 5 則圖片貼文（43756-43760）ID 未確認
   - Nov 28 貼文：未找到
   - 新 last_seen_id: 2026-11-27_117690636694612578
+
+---
+
+## 第三次執行（本次）
+
+**執行時間：** 2026-11-28 UTC（Black Friday）
+
+步驟 1 - 讀取上次 ID:
+  上次記錄: 2026-11-27_117690636694612578 (GitHub state/last_seen_id.txt)
+  SHA: e3fc9d93c1773a048374bcb93a532496c00a2d4e
+  狀態: 成功
+
+步驟 2 - 抓取貼文:
+  方法 A (truthsocial.com RSS): 失敗 - 網路封鎖 (ENOTFOUND)
+  方法 A (truthsocial.com API): 失敗 - 無回應（curl exit 0 無輸出）
+  方法 B (WebSearch 多次嘗試):
+    - "Trump Truth Social posts today November 28 2026" → 無 Nov 28 新貼文
+    - "Trump Veto Corleone Truth Social November 2026" → 找到 Nov 27 09:50 EST 貼文 (ID 117688960220295521，早於 last_seen_id)
+    - "Trump midnight Truth Social binge November 2026" → 為 2025 年的貼文，非 2026
+    - "Trump Truth Social Russia Ukraine NATO edit November 27 28 2026" → Nov 27 貼文，ID 未確認
+    - "Trump Black Friday November 28 2026 Truth Social" → 無 Nov 28 確認貼文
+  方法 C (thetrumparchive.com): 失敗 - 網路封鎖 (ENOTFOUND)
+
+步驟 3 - 比較結果:
+  所有找到的貼文 ID 均 ≤ 117690636694612578（last_seen_id）
+  WebSearch 未找到任何確認的 Nov 28, 2026 新貼文
+  結論: 目前無新貼文（或網路限制導致無法確認）
+
+步驟 6 - Telegram 推播:
+  測試結果: api.telegram.org → HTTP 403（egress proxy 封鎖）
+  狀態: 失敗，無法推播
+
+步驟 8 - 錯誤記錄（本次執行）:
+  原因: 網路政策持續封鎖 truthsocial.com 及 api.telegram.org
+  今日三次執行均無法取得 Nov 28 新貼文
+  last_seen_id 維持: 2026-11-27_117690636694612578
+
+---
+第三次執行結果: 無新貼文（網路限制）
