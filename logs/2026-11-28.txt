@@ -1,0 +1,22 @@
+=== Trump Tracker Run: 2026-11-28T00:57:49Z ===
+
+Last seen ID: 2026-11-27_117690149130391873
+
+Errors encountered:
+- truthsocial.com: ENOTFOUND (blocked by session network policy)
+- trumpalert.app: ENOTFOUND (blocked)
+- kadoa.com: ENOTFOUND (blocked)
+- thetrumparchive.com: ENOTFOUND (blocked)
+- yahoo.com: ENOTFOUND (blocked)
+- time.com: ENOTFOUND (blocked)
+- washingtonpost.com: ENOTFOUND (blocked)
+- washingtontimes.com: ENOTFOUND (blocked)
+- newsweek.com: ENOTFOUND (blocked)
+- cnbc.com: ENOTFOUND (blocked)
+- thedailybeast.com: ENOTFOUND (blocked)
+- trumpstruth.org: ENOTFOUND (blocked)
+
+WebSearch results: No posts found newer than last seen ID on November 28, 2026.
+Most recent coverage found was from November 27, 2026 (Thanksgiving period).
+
+Result: No new posts detected. No notifications sent.
