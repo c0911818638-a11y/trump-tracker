@@ -1,0 +1,45 @@
+執行時間: 2026-11-28 (UTC)
+監控週期: 2026-11-27 → 2026-11-28
+
+---
+
+步驟 1 - 讀取上次 ID:
+  上次記錄: 2026-11-27_117690149130391873 (SHA: 7207060e7098e3f851cb659238b4d2f0112bd363)
+  狀態: 成功
+
+步驟 2 - 抓取貼文:
+  方法 A (truthsocial.com RSS): 失敗 - 網路不允許 (ENOTFOUND)
+  方法 A (truthsocial.com API): 失敗 - 網路不允許 (ENOTFOUND)
+  方法 B (WebSearch): 部分成功 - 找到 Nov 26-27 相關報導，但無法確認 Nov 28 新貼文
+  方法 C (thetrumparchive.com): 失敗 - 網路不允許 (ENOTFOUND)
+  trumpstruth.org: 失敗 - 網路不允許 (ENOTFOUND)
+  www.presidency.ucsb.edu: 失敗 - 網路不允許 (ENOTFOUND)
+  kadoa.com: 失敗 - 網路不允許 (ENOTFOUND)
+  trumpalert.app: 失敗 - 網路不允許 (ENOTFOUND)
+
+步驟 3 - 比較結果:
+  無法取得帶有明確 Nov 28 貼文 ID 的資料
+  WebSearch 顯示的最新報導為 Nov 26-27（感恩節期間）
+  無法確認是否有超出 last_seen_id 的新貼文
+
+步驟 5 - GitHub 上傳:
+  GitHub API (curl): 失敗 - proxy 封鎖 (Write access to this GitHub API path is not permitted)
+  使用 git commit + push 替代
+
+步驟 6 - Telegram 推播:
+  未執行 - 無新貼文可推播（無法取得貼文）
+
+步驟 7 - LINE:
+  未執行 - 無 GitHub push 觸發
+
+步驟 8 - 錯誤記錄:
+  原因: cloud session 網路限制封鎖所有外部貼文來源
+  建議: 在 session 設定中允許 truthsocial.com 或 trumpstruth.org
+
+---
+
+WebSearch 資訊摘要（僅供參考，非確認新貼文）:
+  - 感恩節貼文 (Nov 26): GDP 修正調查要求、移民攻擊、感恩節訊息
+  - 晚間貼文 (Nov 26 深夜/27): 攻擊 NYT 記者 David Sanger
+  - Nov 27: 股市下跌歸咎期中選舉結果
+  - Nov 27 下午: 外交儀式系列圖片貼文（已在上次執行中記錄）
