@@ -1,90 +1,35 @@
-執行時間: 2026-11-28 (UTC)
-監控週期: 2026-11-27 → 2026-11-28
+# 監控日誌 2026-11-28
 
----
+## 執行時間
+2026-11-28 04:56:51 UTC
 
-步驟 1 - 讀取上次 ID:
-  上次記錄: 2026-11-27_117690149130391873 (SHA: 7207060e7098e3f851cb659238b4d2f0112bd363)
-  狀態: 成功
+## 狀態
+無法取得新貼文
 
-步驟 2 - 抓取貼文:
-  方法 A (truthsocial.com RSS): 失敗 - 網路不允許 (ENOTFOUND)
-  方法 A (truthsocial.com API): 失敗 - 網路不允許 (ENOTFOUND)
-  方法 B (WebSearch): 部分成功 - 找到 Nov 26-27 相關報導，但無法確認 Nov 28 新貼文
-  方法 C (thetrumparchive.com): 失敗 - 網路不允許 (ENOTFOUND)
-  trumpstruth.org: 失敗 - 網路不允許 (ENOTFOUND)
-  www.presidency.ucsb.edu: 失敗 - 網路不允許 (ENOTFOUND)
-  kadoa.com: 失敗 - 網路不允許 (ENOTFOUND)
-  trumpalert.app: 失敗 - 網路不允許 (ENOTFOUND)
+## 上次記錄的貼文 ID
+2026-11-27_117690636694612578
 
-步驟 3 - 比較結果:
-  無法取得帶有明確 Nov 28 貼文 ID 的資料
-  WebSearch 顯示的最新報導為 Nov 26-27（感恩節期間）
-  無法確認是否有超出 last_seen_id 的新貼文
+## 嘗試的方法
 
-步驟 5 - GitHub 上傳:
-  GitHub API (curl): 失敗 - proxy 封鎖 (Write access to this GitHub API path is not permitted)
-  使用 git commit + push 替代
+### 方法 A：WebFetch 直連
+- truthsocial.com RSS → 失敗：域名 DNS 解析失敗（網路政策封鎖）
+- truthsocial.com API → 失敗：域名 DNS 解析失敗
+- www.thetrumparchive.com → 失敗：域名 DNS 解析失敗
 
-步驟 6 - Telegram 推播:
-  未執行 - 無新貼文可推播（無法取得貼文）
+### 方法 B：WebSearch
+- 搜尋「Trump Truth Social posts November 28 2026」→ 僅返回感恩節（11/26-27）貼文報導
+- 多個新聞網站（yahoo.com, cnbc.com, foxnews.com, huffpost.com 等）WebFetch 均被封鎖
 
-步驟 7 - LINE:
-  未執行 - 無 GitHub push 觸發
+### 方法 C：其他追蹤網站
+- kadoa.com, trumpalert.app, particle.news → 均失敗（DNS 解析失敗）
 
-步驟 8 - 錯誤記錄:
-  原因: cloud session 網路限制封鎖所有外部貼文來源
-  建議: 在 session 設定中允許 truthsocial.com 或 trumpstruth.org
+## 結論
+Cloud session 對外網路存取受限，無法直連 truthsocial.com 及大多數新聞網站。
+WebSearch 未找到 2026-11-28 新貼文。
+未更新 last_seen_id.txt，未推播通知。
 
----
-
-WebSearch 資訊摘要（僅供參考，非確認新貼文）:
-  - 感恩節貼文 (Nov 26): GDP 修正調查要求、移民攻擊、感恩節訊息
-  - 晚間貼文 (Nov 26 深夜/27): 攻擊 NYT 記者 David Sanger
-  - Nov 27: 股市下跌歸咎期中選舉結果
-  - Nov 27 下午: 外交儀式系列圖片貼文（已在上次執行中記錄）
-
----
-
-## 第二次執行（本次）
-
-**執行時間：** 2026-11-28 UTC
-
-步驟 1 - 讀取上次 ID:
-  上次記錄: 2026-11-27_117690149130391873
-  狀態: 成功
-
-步驟 2 - 抓取貼文:
-  方法 A (truthsocial.com): 失敗 - 網路封鎖 (ENOTFOUND)
-  方法 B (WebSearch): 成功 - 透過 trumpstruth.org 搜尋索引找到新貼文
-  方法 C (thetrumparchive.com): 失敗 - 網路封鎖 (ENOTFOUND)
-
-步驟 3 - 比較新舊:
-  上次 ID: 117690149130391873 (Nov 27, 19:52 UTC)
-  新發現 (trumpstruth.org statuses 43756-43761):
-    - 43756 → Nov 27, 19:52 UTC (image, ID 未確認)
-    - 43757 → Nov 27, 19:58 UTC (image, ID 未確認)
-    - 43758 → Nov 27, 19:56 UTC (image, ID 未確認)
-    - 43759 → Nov 27, 19:54 UTC (image, ID 未確認)
-    - 43760 → Nov 27, 19:53 UTC (image, ID 未確認)
-    - 43761 → Nov 27, 21:56 UTC (image, ID 117690636694612578 ✓ 確認)
-  新貼文數: 6（均為圖像貼文，無文字，繼續 Nov 27 外交活動系列）
-  Nov 28 貼文: 未找到任何確認的 Nov 28 貼文
-
-步驟 4 - 分析:
-  已完成 1 篇中文分析（status 43761，唯一已知 ID 的新貼文）
-
-步驟 5 - GitHub 上傳:
-  新增 posts/2026-11-27_117690636694612578.md
-  state/last_seen_id.txt → 更新為 2026-11-27_117690636694612578
-  Git push 狀態: 待執行
-
-步驟 6 - Telegram 推播:
-  狀態: 待執行（預期失敗 - proxy 政策持續封鎖 api.telegram.org）
-
----
-本次執行結果: 部分成功
-  - 找到 1 則確認 ID 的新貼文（status 43761，圖片貼文，無文字）
-  - 額外 5 則圖片貼文（43756-43760）ID 未確認
-  - Nov 28 貼文：未找到
-  - 新 last_seen_id: 2026-11-27_117690636694612578
+## 需要允許的域名（建議加入環境設定）
+- truthsocial.com
+- thetrumparchive.com
+- www.trumpalert.app
+- kadoa.com
